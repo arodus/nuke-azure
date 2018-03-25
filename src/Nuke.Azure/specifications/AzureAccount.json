@@ -1,0 +1,255 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
+  "license": [
+    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Distributed under the MIT License.",
+    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+  ],
+  "references": [
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/account.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/account/lock.yml"
+  ],
+  "name": "AzureAccount",
+  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/account.yml",
+  "help": "Manage Azure subscription information.",
+  "pathExecutable": "az",
+  "tasks": [
+    {
+      "postfix": "Clear",
+      "definiteArgument": "account clear",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "GetAccessToken",
+      "definiteArgument": "account get-access-token",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "help": "Azure resource endpoints. Default to Azure Resource Manager Use 'az cloud show' command for other Azure resources."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "List",
+      "definiteArgument": "account list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "All",
+            "type": "string",
+            "format": "--all {value}",
+            "help": "List all subscriptions, rather just 'Enabled' ones."
+          },
+          {
+            "name": "Refresh",
+            "type": "string",
+            "format": "--refresh {value}",
+            "help": "Retrieve up-to-date subscriptions from server."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ListLocations",
+      "definiteArgument": "account list-locations",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "Set",
+      "definiteArgument": "account set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Show",
+      "definiteArgument": "account show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "SdkAuth",
+            "type": "string",
+            "format": "--sdk-auth {value}",
+            "help": "Output result in compatible with Azure SDK auth file."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LockCreate",
+      "definiteArgument": "account lock create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LockType",
+            "type": "AccountLockLockType",
+            "format": "--lock-type {value}",
+            "help": ""
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the lock."
+          },
+          {
+            "name": "Notes",
+            "type": "string",
+            "format": "--notes {value}",
+            "help": "Notes about this lock."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LockDelete",
+      "definiteArgument": "account lock delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "string",
+            "format": "--ids {value}",
+            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the lock."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LockList",
+      "definiteArgument": "account lock list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "FilterString",
+            "type": "string",
+            "format": "--filter-string {value}",
+            "help": "A query filter to use to restrict the results."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LockShow",
+      "definiteArgument": "account lock show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "string",
+            "format": "--ids {value}",
+            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the lock."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LockUpdate",
+      "definiteArgument": "account lock update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "string",
+            "format": "--ids {value}",
+            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
+          },
+          {
+            "name": "LockType",
+            "type": "AccountLockLockType",
+            "format": "--lock-type {value}",
+            "help": ""
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the lock."
+          },
+          {
+            "name": "Notes",
+            "type": "string",
+            "format": "--notes {value}",
+            "help": "Notes about this lock."
+          }
+        ]
+      }
+    }
+  ],
+  "commonTaskProperties": [
+    {
+      "name": "Debug",
+      "type": "string",
+      "format": "--debug {value}",
+      "help": "Increase logging verbosity to show all debug logs."
+    },
+    {
+      "name": "Help",
+      "type": "string",
+      "format": "--help {value}",
+      "help": "Show this help message and exit."
+    },
+    {
+      "name": "Output",
+      "type": "Output",
+      "format": "--output {value}",
+      "help": "Output format."
+    },
+    {
+      "name": "Query",
+      "type": "string",
+      "format": "--query {value}",
+      "help": "JMESPath query string. See &lt;a href=\"http://jmespath.org/\"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples."
+    },
+    {
+      "name": "Verbose",
+      "type": "string",
+      "format": "--verbose {value}",
+      "help": "Increase logging verbosity. Use --debug for full debug logs."
+    }
+  ],
+  "enumerations": [
+    {
+      "name": "AccountLockLockType",
+      "values": [
+        "cannotdelete",
+        "readonly"
+      ]
+    }
+  ]
+}

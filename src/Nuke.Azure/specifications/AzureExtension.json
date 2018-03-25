@@ -1,0 +1,162 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
+  "license": [
+    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Distributed under the MIT License.",
+    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+  ],
+  "references": [
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/extension.yml"
+  ],
+  "name": "AzureExtension",
+  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/extension.yml",
+  "help": "Manage and update CLI extensions.",
+  "pathExecutable": "az",
+  "tasks": [
+    {
+      "postfix": "Add",
+      "definiteArgument": "extension add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of extension."
+          },
+          {
+            "name": "Source",
+            "type": "string",
+            "format": "--source {value}",
+            "help": "Filepath or URL to an extension."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "PipExtraIndexUrls",
+            "type": "List<string>",
+            "format": "--pip-extra-index-urls {value}",
+            "separator": " ",
+            "help": "Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format."
+          },
+          {
+            "name": "PipProxy",
+            "type": "string",
+            "format": "--pip-proxy {value}",
+            "help": "Proxy for pip to use for extension dependencies in the form of [user:passwd@]proxy.server:port."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "List",
+      "definiteArgument": "extension list",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "ListAvailable",
+      "definiteArgument": "extension list-available",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ShowDetails",
+            "type": "bool",
+            "format": "--show-details",
+            "help": "Show the raw data from the extension index."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Remove",
+      "definiteArgument": "extension remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of extension."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Show",
+      "definiteArgument": "extension show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of extension."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Update",
+      "definiteArgument": "extension update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of extension."
+          },
+          {
+            "name": "PipExtraIndexUrls",
+            "type": "List<string>",
+            "format": "--pip-extra-index-urls {value}",
+            "separator": " ",
+            "help": "Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format."
+          },
+          {
+            "name": "PipProxy",
+            "type": "string",
+            "format": "--pip-proxy {value}",
+            "help": "Proxy for pip to use for extension dependencies in the form of [user:passwd@]proxy.server:port."
+          }
+        ]
+      }
+    }
+  ],
+  "commonTaskProperties": [
+    {
+      "name": "Debug",
+      "type": "string",
+      "format": "--debug {value}",
+      "help": "Increase logging verbosity to show all debug logs."
+    },
+    {
+      "name": "Help",
+      "type": "string",
+      "format": "--help {value}",
+      "help": "Show this help message and exit."
+    },
+    {
+      "name": "Output",
+      "type": "Output",
+      "format": "--output {value}",
+      "help": "Output format."
+    },
+    {
+      "name": "Query",
+      "type": "string",
+      "format": "--query {value}",
+      "help": "JMESPath query string. See &lt;a href=\"http://jmespath.org/\"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples."
+    },
+    {
+      "name": "Verbose",
+      "type": "string",
+      "format": "--verbose {value}",
+      "help": "Increase logging verbosity. Use --debug for full debug logs."
+    }
+  ]
+}

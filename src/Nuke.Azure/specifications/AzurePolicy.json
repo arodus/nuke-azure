@@ -1,0 +1,472 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
+  "license": [
+    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Distributed under the MIT License.",
+    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+  ],
+  "references": [
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/policy/assignment.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/policy/definition.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/policy/set-definition.yml"
+  ],
+  "name": "AzurePolicy",
+  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/policy.yml",
+  "help": "Manage resource policies.",
+  "pathExecutable": "az",
+  "tasks": [
+    {
+      "postfix": "",
+      "definiteArgument": "policy",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "AssignmentCreate",
+      "definiteArgument": "policy assignment create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DisplayName",
+            "type": "string",
+            "format": "--display-name {value}",
+            "help": "Display name of the assignment."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the new assignment."
+          },
+          {
+            "name": "NotScopes",
+            "type": "string",
+            "format": "--not-scopes {value}",
+            "help": "Space-separated scopes where the policy assignment does not apply."
+          },
+          {
+            "name": "Params",
+            "type": "string",
+            "format": "--params {value}",
+            "help": "JSON formatted string or path to file with parameter values of policy rule."
+          },
+          {
+            "name": "Policy",
+            "type": "string",
+            "format": "--policy {value}",
+            "help": "Name or id of the policy definition."
+          },
+          {
+            "name": "PolicySetDefinition",
+            "type": "string",
+            "format": "--policy-set-definition {value}",
+            "help": "Name or id of the policy set definition."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "The resource group where the policy will be applied."
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "format": "--scope {value}",
+            "help": "Scope at which this policy assignment applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM."
+          },
+          {
+            "name": "Sku",
+            "type": "PolicyAssignmentCreateSku",
+            "format": "--sku {value}",
+            "help": "Policy sku."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AssignmentDelete",
+      "definiteArgument": "policy assignment delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the assignment."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "The resource group where the policy will be applied."
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "format": "--scope {value}",
+            "help": "Scope at which this policy assignment applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AssignmentList",
+      "definiteArgument": "policy assignment list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DisableScopeStrictMatch",
+            "type": "string",
+            "format": "--disable-scope-strict-match {value}",
+            "help": "Include assignment either inherited from parent scope or at child scope."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "The resource group where the policy will be applied."
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "format": "--scope {value}",
+            "help": "Scope at which this policy assignment applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AssignmentShow",
+      "definiteArgument": "policy assignment show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the assignment."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "The resource group where the policy will be applied."
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "format": "--scope {value}",
+            "help": "Scope at which this policy assignment applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DefinitionCreate",
+      "definiteArgument": "policy definition create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the new policy definition."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "help": "Description of policy definition."
+          },
+          {
+            "name": "DisplayName",
+            "type": "string",
+            "format": "--display-name {value}",
+            "help": "Display name of policy definition."
+          },
+          {
+            "name": "Metadata",
+            "type": "Dictionary<string,string>",
+            "format": "--metadata {value}",
+            "itemFormat": "{key}={value}",
+            "separator": " ",
+            "help": "Metadata in space-separated key=value pairs."
+          },
+          {
+            "name": "Mode",
+            "type": "PolicyDefinitionCreateMode",
+            "format": "--mode {value}",
+            "help": "Mode of the new policy definition."
+          },
+          {
+            "name": "Params",
+            "type": "string",
+            "format": "--params {value}",
+            "help": "JSON formatted string or a path to a file or uri with parameter definitions."
+          },
+          {
+            "name": "Rules",
+            "type": "string",
+            "format": "--rules {value}",
+            "help": "Policy rules in JSON format, or a path to a file containing JSON rules."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DefinitionDelete",
+      "definiteArgument": "policy definition delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The policy definition name."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DefinitionList",
+      "definiteArgument": "policy definition list",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "DefinitionShow",
+      "definiteArgument": "policy definition show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The policy definition name."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DefinitionUpdate",
+      "definiteArgument": "policy definition update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The policy definition name."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "help": "Description of policy definition."
+          },
+          {
+            "name": "DisplayName",
+            "type": "string",
+            "format": "--display-name {value}",
+            "help": "Display name of policy definition."
+          },
+          {
+            "name": "Metadata",
+            "type": "Dictionary<string,string>",
+            "format": "--metadata {value}",
+            "itemFormat": "{key}={value}",
+            "separator": " ",
+            "help": "Metadata in space-separated key=value pairs."
+          },
+          {
+            "name": "Params",
+            "type": "string",
+            "format": "--params {value}",
+            "help": "JSON formatted string or a path to a file or uri with parameter definitions."
+          },
+          {
+            "name": "Rules",
+            "type": "string",
+            "format": "--rules {value}",
+            "help": "JSON formatted string or a path to a file with such content."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SetDefinitionCreate",
+      "definiteArgument": "policy set-definition create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Definitions",
+            "type": "string",
+            "format": "--definitions {value}",
+            "help": "Policy definitions in JSON format, or a path to a file containing JSON rules."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the new policy set definition."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "help": "Description of policy set definition."
+          },
+          {
+            "name": "DisplayName",
+            "type": "string",
+            "format": "--display-name {value}",
+            "help": "Display name of policy set definition."
+          },
+          {
+            "name": "Params",
+            "type": "string",
+            "format": "--params {value}",
+            "help": "JSON formatted string or a path to a file or uri with parameter definitions."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SetDefinitionDelete",
+      "definiteArgument": "policy set-definition delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The policy set definition name."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SetDefinitionList",
+      "definiteArgument": "policy set-definition list",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "SetDefinitionShow",
+      "definiteArgument": "policy set-definition show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The policy set definition name."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SetDefinitionUpdate",
+      "definiteArgument": "policy set-definition update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The policy set definition name."
+          },
+          {
+            "name": "Definitions",
+            "type": "string",
+            "format": "--definitions {value}",
+            "help": "JSON formatted string or a path to a file or uri with such content."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "help": "Description of policy set definition."
+          },
+          {
+            "name": "DisplayName",
+            "type": "string",
+            "format": "--display-name {value}",
+            "help": "Display name of policy set definition."
+          },
+          {
+            "name": "Params",
+            "type": "string",
+            "format": "--params {value}",
+            "help": "JSON formatted string or a path to a file or uri with parameter definitions."
+          }
+        ]
+      }
+    }
+  ],
+  "commonTaskProperties": [
+    {
+      "name": "Debug",
+      "type": "string",
+      "format": "--debug {value}",
+      "help": "Increase logging verbosity to show all debug logs."
+    },
+    {
+      "name": "Help",
+      "type": "string",
+      "format": "--help {value}",
+      "help": "Show this help message and exit."
+    },
+    {
+      "name": "Output",
+      "type": "Output",
+      "format": "--output {value}",
+      "help": "Output format."
+    },
+    {
+      "name": "Query",
+      "type": "string",
+      "format": "--query {value}",
+      "help": "JMESPath query string. See &lt;a href=\"http://jmespath.org/\"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples."
+    },
+    {
+      "name": "Verbose",
+      "type": "string",
+      "format": "--verbose {value}",
+      "help": "Increase logging verbosity. Use --debug for full debug logs."
+    }
+  ],
+  "enumerations": [
+    {
+      "name": "PolicyAssignmentCreateSku",
+      "values": [
+        "free",
+        "standard"
+      ]
+    },
+    {
+      "name": "PolicyDefinitionCreateMode",
+      "values": [
+        "all",
+        "indexed",
+        "notspecified"
+      ]
+    }
+  ]
+}

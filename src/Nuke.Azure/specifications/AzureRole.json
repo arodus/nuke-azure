@@ -1,0 +1,306 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
+  "license": [
+    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Distributed under the MIT License.",
+    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+  ],
+  "references": [
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/role.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/role/assignment.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/role/definition.yml"
+  ],
+  "name": "AzureRole",
+  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/role.yml",
+  "help": "Manage user roles for access control with Azure Active Directory and service principals.",
+  "pathExecutable": "az",
+  "tasks": [
+    {
+      "postfix": "",
+      "definiteArgument": "role",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "AssignmentCreate",
+      "definiteArgument": "role assignment create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Role",
+            "type": "string",
+            "format": "--role {value}",
+            "help": "Role name or id."
+          },
+          {
+            "name": "Assignee",
+            "type": "string",
+            "format": "--assignee {value}",
+            "help": "Represent a user, group, or service principal. supported format: object id, user sign-in name, or service principal name."
+          },
+          {
+            "name": "AssigneeObjectId",
+            "type": "string",
+            "format": "--assignee-object-id {value}",
+            "help": "Assignee's graph object id, such as the 'principal id' from a managed service identity. Use this instead of '--assignee' to bypass graph permission issues."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Use it only if the role or assignment was added at the level of a resource group."
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "format": "--scope {value}",
+            "help": "Scope at which the role assignment or definition applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AssignmentDelete",
+      "definiteArgument": "role assignment delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Assignee",
+            "type": "string",
+            "format": "--assignee {value}",
+            "help": "Represent a user, group, or service principal. supported format: object id, user sign-in name, or service principal name."
+          },
+          {
+            "name": "Ids",
+            "type": "string",
+            "format": "--ids {value}",
+            "help": "Space-separated role assignment ids."
+          },
+          {
+            "name": "IncludeInherited",
+            "type": "string",
+            "format": "--include-inherited {value}",
+            "help": "Include assignments applied on parent scopes."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Use it only if the role or assignment was added at the level of a resource group."
+          },
+          {
+            "name": "Role",
+            "type": "string",
+            "format": "--role {value}",
+            "help": "Role name or id."
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "format": "--scope {value}",
+            "help": "Scope at which the role assignment or definition applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AssignmentList",
+      "definiteArgument": "role assignment list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "All",
+            "type": "string",
+            "format": "--all {value}",
+            "help": "Show all assignments under the current subscription."
+          },
+          {
+            "name": "Assignee",
+            "type": "string",
+            "format": "--assignee {value}",
+            "help": "Represent a user, group, or service principal. supported format: object id, user sign-in name, or service principal name."
+          },
+          {
+            "name": "IncludeClassicAdministrators",
+            "type": "bool",
+            "format": "--include-classic-administrators",
+            "help": "List default role assignments for subscription classic administrators, aka co-admins."
+          },
+          {
+            "name": "IncludeGroups",
+            "type": "string",
+            "format": "--include-groups {value}",
+            "help": "Include extra assignments to the groups of which the user is a member(transitively). Supported only for a user principal."
+          },
+          {
+            "name": "IncludeInherited",
+            "type": "string",
+            "format": "--include-inherited {value}",
+            "help": "Include assignments applied on parent scopes."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Use it only if the role or assignment was added at the level of a resource group."
+          },
+          {
+            "name": "Role",
+            "type": "string",
+            "format": "--role {value}",
+            "help": "Role name or id."
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "format": "--scope {value}",
+            "help": "Scope at which the role assignment or definition applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AssignmentListChangelogs",
+      "definiteArgument": "role assignment list-changelogs",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "EndTime",
+            "type": "string",
+            "format": "--end-time {value}",
+            "help": "The end time of the query in the format of %Y-%m-%dT%H:%M:%SZ, e.g. 2000-12-31T12:59:59Z. Defaults to the current time."
+          },
+          {
+            "name": "StartTime",
+            "type": "string",
+            "format": "--start-time {value}",
+            "help": "The start time of the query in the format of %Y-%m-%dT%H:%M:%SZ, e.g. 2000-12-31T12:59:59Z. Defaults to 1 Hour prior to the current time."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DefinitionCreate",
+      "definiteArgument": "role definition create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "RoleDefinition",
+            "type": "string",
+            "format": "--role-definition {value}",
+            "help": "Description of a role as JSON, or a path to a file containing a JSON description."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DefinitionDelete",
+      "definiteArgument": "role definition delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The role's name."
+          },
+          {
+            "name": "CustomRoleOnly",
+            "type": "bool",
+            "format": "--custom-role-only",
+            "help": "Custom roles only(vs. build-in ones)."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Use it only if the role or assignment was added at the level of a resource group."
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "format": "--scope {value}",
+            "help": "Scope at which the role assignment or definition applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DefinitionList",
+      "definiteArgument": "role definition list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CustomRoleOnly",
+            "type": "bool",
+            "format": "--custom-role-only",
+            "help": "Custom roles only(vs. build-in ones)."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The role's name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Use it only if the role or assignment was added at the level of a resource group."
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "format": "--scope {value}",
+            "help": "Scope at which the role assignment or definition applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DefinitionUpdate",
+      "definiteArgument": "role definition update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "RoleDefinition",
+            "type": "string",
+            "format": "--role-definition {value}",
+            "help": "Description of a role as JSON, or a path to a file containing a JSON description."
+          }
+        ]
+      }
+    }
+  ],
+  "commonTaskProperties": [
+    {
+      "name": "Debug",
+      "type": "string",
+      "format": "--debug {value}",
+      "help": "Increase logging verbosity to show all debug logs."
+    },
+    {
+      "name": "Help",
+      "type": "string",
+      "format": "--help {value}",
+      "help": "Show this help message and exit."
+    },
+    {
+      "name": "Output",
+      "type": "Output",
+      "format": "--output {value}",
+      "help": "Output format."
+    },
+    {
+      "name": "Query",
+      "type": "string",
+      "format": "--query {value}",
+      "help": "JMESPath query string. See &lt;a href=\"http://jmespath.org/\"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples."
+    },
+    {
+      "name": "Verbose",
+      "type": "string",
+      "format": "--verbose {value}",
+      "help": "Increase logging verbosity. Use --debug for full debug logs."
+    }
+  ]
+}

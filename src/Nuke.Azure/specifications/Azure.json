@@ -1,0 +1,194 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
+  "license": [
+    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Distributed under the MIT License.",
+    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+  ],
+  "references": [
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/reference-index.yml"
+  ],
+  "name": "Azure",
+  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/reference-index.yml",
+  "help": "TBA",
+  "pathExecutable": "az",
+  "tasks": [
+    {
+      "postfix": "Configure",
+      "definiteArgument": "configure",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Defaults",
+            "type": "string",
+            "format": "--defaults {value}",
+            "help": "Space-separated 'name=value' pairs for common argument defaults."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Feedback",
+      "definiteArgument": "feedback",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "Find",
+      "definiteArgument": "find",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "SearchQuery",
+            "type": "string",
+            "format": "--search-query {value}",
+            "help": "Query text to find."
+          },
+          {
+            "name": "Reindex",
+            "type": "string",
+            "format": "--reindex {value}",
+            "help": "Clear the current index and reindex the command modules."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Interactive",
+      "definiteArgument": "interactive",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Style",
+            "type": "InteractiveStyle",
+            "format": "--style {value}",
+            "help": "The colors of the shell."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Login",
+      "definiteArgument": "login",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AllowNoSubscriptions",
+            "type": "bool",
+            "format": "--allow-no-subscriptions",
+            "help": "Support access tenants without subscriptions. It's uncommon but useful to run tenant level commands, such as 'az ad'."
+          },
+          {
+            "name": "Password",
+            "type": "string",
+            "format": "--password {value}",
+            "help": "Credentials like user password, or for a service principal, provide client secret or a pem file with key and public certificate. Will prompt if not given."
+          },
+          {
+            "name": "ServicePrincipal",
+            "type": "bool",
+            "format": "--service-principal",
+            "help": "The credential representing a service principal."
+          },
+          {
+            "name": "Tenant",
+            "type": "string",
+            "format": "--tenant {value}",
+            "help": "The AAD tenant, must provide when using service principals."
+          },
+          {
+            "name": "Username",
+            "type": "string",
+            "format": "--username {value}",
+            "help": "User name, service principal, or managed service identity ID."
+          },
+          {
+            "name": "Identity",
+            "type": "bool",
+            "format": "--identity",
+            "help": "Log in using the Virtual Machine's identity."
+          },
+          {
+            "name": "IdentityPort",
+            "type": "string",
+            "format": "--identity-port {value}",
+            "help": "The port to retrieve tokens for login. Default: 50342."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Logout",
+      "definiteArgument": "logout",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Username",
+            "type": "string",
+            "format": "--username {value}",
+            "help": "Account user, if missing, logout the current active account."
+          }
+        ]
+      }
+    }
+  ],
+  "commonTaskProperties": [
+    {
+      "name": "Debug",
+      "type": "string",
+      "format": "--debug {value}",
+      "help": "Increase logging verbosity to show all debug logs."
+    },
+    {
+      "name": "Help",
+      "type": "string",
+      "format": "--help {value}",
+      "help": "Show this help message and exit."
+    },
+    {
+      "name": "Output",
+      "type": "Output",
+      "format": "--output {value}",
+      "help": "Output format."
+    },
+    {
+      "name": "Query",
+      "type": "string",
+      "format": "--query {value}",
+      "help": "JMESPath query string. See &lt;a href=\"http://jmespath.org/\"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples."
+    },
+    {
+      "name": "Verbose",
+      "type": "string",
+      "format": "--verbose {value}",
+      "help": "Increase logging verbosity. Use --debug for full debug logs."
+    }
+  ],
+  "enumerations": [
+    {
+      "name": "InteractiveStyle",
+      "values": [
+        "bg",
+        "br",
+        "contrast",
+        "default",
+        "grey",
+        "halloween",
+        "neon",
+        "none",
+        "pastel",
+        "primary",
+        "purple",
+        "quiet"
+      ]
+    },
+    {
+      "name": "Output",
+      "values": [
+        "json",
+        "jsonc",
+        "table",
+        "tsv"
+      ]
+    }
+  ]
+}

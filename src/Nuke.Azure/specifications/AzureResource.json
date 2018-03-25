@@ -1,0 +1,858 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
+  "license": [
+    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Distributed under the MIT License.",
+    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+  ],
+  "references": [
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/resource.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/resource/link.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/resource/lock.yml"
+  ],
+  "name": "AzureResource",
+  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/resource.yml",
+  "help": "Manage Azure resources.",
+  "pathExecutable": "az",
+  "tasks": [
+    {
+      "postfix": "Create",
+      "definiteArgument": "resource create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Properties",
+            "type": "string",
+            "format": "--properties {value}",
+            "help": "A JSON-formatted string containing resource properties."
+          },
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Resource ID."
+          },
+          {
+            "name": "IsFullObject",
+            "type": "string",
+            "format": "--is-full-object {value}",
+            "help": "Indicates that the properties object includes other options such as location, tags, sku, and/or plan."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "ApiVersion",
+            "type": "string",
+            "format": "--api-version {value}",
+            "help": "The api version of the resource (omit for latest)."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name. (Ex: myC)."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "help": "Provider namespace (Ex: 'Microsoft.Provider')."
+          },
+          {
+            "name": "Parent",
+            "type": "string",
+            "format": "--parent {value}",
+            "help": "The parent path (Ex: 'resA/myA/resB/myB')."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Delete",
+      "definiteArgument": "resource delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ApiVersion",
+            "type": "string",
+            "format": "--api-version {value}",
+            "help": "The api version of the resource (omit for latest)."
+          },
+          {
+            "name": "Ids",
+            "type": "string",
+            "format": "--ids {value}",
+            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name. (Ex: myC)."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "help": "Provider namespace (Ex: 'Microsoft.Provider')."
+          },
+          {
+            "name": "Parent",
+            "type": "string",
+            "format": "--parent {value}",
+            "help": "The parent path (Ex: 'resA/myA/resB/myB')."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "InvokeAction",
+      "definiteArgument": "resource invoke-action",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Action",
+            "type": "string",
+            "format": "--action {value}",
+            "help": "The action that will be invoked on the specified resource."
+          },
+          {
+            "name": "RequestBody",
+            "type": "string",
+            "format": "--request-body {value}",
+            "help": "JSON encoded parameter arguments for the action that will be passed along in the post request body. Use @{file} to load from a file."
+          },
+          {
+            "name": "ApiVersion",
+            "type": "string",
+            "format": "--api-version {value}",
+            "help": "The api version of the resource (omit for latest)."
+          },
+          {
+            "name": "Ids",
+            "type": "string",
+            "format": "--ids {value}",
+            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name. (Ex: myC)."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "help": "Provider namespace (Ex: 'Microsoft.Provider')."
+          },
+          {
+            "name": "Parent",
+            "type": "string",
+            "format": "--parent {value}",
+            "help": "The parent path (Ex: 'resA/myA/resB/myB')."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "List",
+      "definiteArgument": "resource list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name. (Ex: myC)."
+          },
+          {
+            "name": "Tag",
+            "type": "string",
+            "format": "--tag {value}",
+            "help": "A single tag in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "help": "Provider namespace (Ex: 'Microsoft.Provider')."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Move",
+      "definiteArgument": "resource move",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DestinationGroup",
+            "type": "string",
+            "format": "--destination-group {value}",
+            "help": "The destination resource group name."
+          },
+          {
+            "name": "Ids",
+            "type": "string",
+            "format": "--ids {value}",
+            "help": "The space-separated resource ids to be moved."
+          },
+          {
+            "name": "DestinationSubscriptionId",
+            "type": "string",
+            "format": "--destination-subscription-id {value}",
+            "help": "The destination subscription identifier."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Show",
+      "definiteArgument": "resource show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "IncludeResponseBody",
+            "type": "bool",
+            "format": "--include-response-body",
+            "help": "Use if the default command output doesn't capture all of the property data."
+          },
+          {
+            "name": "ApiVersion",
+            "type": "string",
+            "format": "--api-version {value}",
+            "help": "The api version of the resource (omit for latest)."
+          },
+          {
+            "name": "Ids",
+            "type": "string",
+            "format": "--ids {value}",
+            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name. (Ex: myC)."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "help": "Provider namespace (Ex: 'Microsoft.Provider')."
+          },
+          {
+            "name": "Parent",
+            "type": "string",
+            "format": "--parent {value}",
+            "help": "The parent path (Ex: 'resA/myA/resB/myB')."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Tag",
+      "definiteArgument": "resource tag",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "ApiVersion",
+            "type": "string",
+            "format": "--api-version {value}",
+            "help": "The api version of the resource (omit for latest)."
+          },
+          {
+            "name": "Ids",
+            "type": "string",
+            "format": "--ids {value}",
+            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name. (Ex: myC)."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "help": "Provider namespace (Ex: 'Microsoft.Provider')."
+          },
+          {
+            "name": "Parent",
+            "type": "string",
+            "format": "--parent {value}",
+            "help": "The parent path (Ex: 'resA/myA/resB/myB')."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Update",
+      "definiteArgument": "resource update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "IncludeResponseBody",
+            "type": "bool",
+            "format": "--include-response-body",
+            "help": "Use if the default command output doesn't capture all of the property data."
+          },
+          {
+            "name": "ApiVersion",
+            "type": "string",
+            "format": "--api-version {value}",
+            "help": "The api version of the resource (omit for latest)."
+          },
+          {
+            "name": "Ids",
+            "type": "string",
+            "format": "--ids {value}",
+            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name. (Ex: myC)."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "help": "Provider namespace (Ex: 'Microsoft.Provider')."
+          },
+          {
+            "name": "Parent",
+            "type": "string",
+            "format": "--parent {value}",
+            "help": "The parent path (Ex: 'resA/myA/resB/myB')."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LinkCreate",
+      "definiteArgument": "resource link create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LinkId",
+            "type": "string",
+            "format": "--link-id {value}",
+            "help": ""
+          },
+          {
+            "name": "TargetId",
+            "type": "string",
+            "format": "--target-id {value}",
+            "help": "The id of the resource link target."
+          },
+          {
+            "name": "Notes",
+            "type": "string",
+            "format": "--notes {value}",
+            "help": "Notes for this link."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LinkDelete",
+      "definiteArgument": "resource link delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LinkId",
+            "type": "string",
+            "format": "--link-id {value}",
+            "help": "The fully qualified ID of the resource link. Use the format, /subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/{provider-namespace}/{resource-type}/{resource-name}/Microsoft.Resources/links/{link-name}. For example, /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myGroup/Microsoft.Web/sites/mySite/Microsoft.Resources/links/myLink."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LinkList",
+      "definiteArgument": "resource link list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "FilterString",
+            "type": "string",
+            "format": "--filter-string {value}",
+            "help": "A filter for restricting the results."
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "format": "--scope {value}",
+            "help": "The scope for the links."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LinkShow",
+      "definiteArgument": "resource link show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LinkId",
+            "type": "string",
+            "format": "--link-id {value}",
+            "help": "The fully qualified Id of the resource link. For example, /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myGroup/Microsoft.Web/sites/mySite/Microsoft.Resources/links/myLink."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LinkUpdate",
+      "definiteArgument": "resource link update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LinkId",
+            "type": "string",
+            "format": "--link-id {value}",
+            "help": ""
+          },
+          {
+            "name": "Notes",
+            "type": "string",
+            "format": "--notes {value}",
+            "help": "Notes for this link."
+          },
+          {
+            "name": "TargetId",
+            "type": "string",
+            "format": "--target-id {value}",
+            "help": "The id of the resource link target."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LockCreate",
+      "definiteArgument": "resource lock create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LockType",
+            "type": "ResourceLockLockType",
+            "format": "--lock-type {value}",
+            "help": ""
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the lock."
+          },
+          {
+            "name": "Notes",
+            "type": "string",
+            "format": "--notes {value}",
+            "help": "Notes about this lock."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "help": "Provider namespace (Ex: 'Microsoft.Provider')."
+          },
+          {
+            "name": "Parent",
+            "type": "string",
+            "format": "--parent {value}",
+            "help": "The parent path (Ex: 'resA/myA/resB/myB')."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "help": "If an ID is given, other resource arguments should not be given."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LockDelete",
+      "definiteArgument": "resource lock delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "string",
+            "format": "--ids {value}",
+            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the lock."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "help": "Provider namespace (Ex: 'Microsoft.Provider')."
+          },
+          {
+            "name": "Parent",
+            "type": "string",
+            "format": "--parent {value}",
+            "help": "The parent path (Ex: 'resA/myA/resB/myB')."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "help": "If an ID is given, other resource arguments should not be given."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LockList",
+      "definiteArgument": "resource lock list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "FilterString",
+            "type": "string",
+            "format": "--filter-string {value}",
+            "help": "A query filter to use to restrict the results."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "help": "Provider namespace (Ex: 'Microsoft.Provider')."
+          },
+          {
+            "name": "Parent",
+            "type": "string",
+            "format": "--parent {value}",
+            "help": "The parent path (Ex: 'resA/myA/resB/myB')."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "help": "If an ID is given, other resource arguments should not be given."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LockShow",
+      "definiteArgument": "resource lock show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "string",
+            "format": "--ids {value}",
+            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the lock."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "help": "Provider namespace (Ex: 'Microsoft.Provider')."
+          },
+          {
+            "name": "Parent",
+            "type": "string",
+            "format": "--parent {value}",
+            "help": "The parent path (Ex: 'resA/myA/resB/myB')."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "help": "If an ID is given, other resource arguments should not be given."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LockUpdate",
+      "definiteArgument": "resource lock update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "string",
+            "format": "--ids {value}",
+            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
+          },
+          {
+            "name": "LockType",
+            "type": "ResourceLockLockType",
+            "format": "--lock-type {value}",
+            "help": ""
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the lock."
+          },
+          {
+            "name": "Notes",
+            "type": "string",
+            "format": "--notes {value}",
+            "help": "Notes about this lock."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "help": "Provider namespace (Ex: 'Microsoft.Provider')."
+          },
+          {
+            "name": "Parent",
+            "type": "string",
+            "format": "--parent {value}",
+            "help": "The parent path (Ex: 'resA/myA/resB/myB')."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "help": "If an ID is given, other resource arguments should not be given."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          }
+        ]
+      }
+    }
+  ],
+  "commonTaskProperties": [
+    {
+      "name": "Debug",
+      "type": "string",
+      "format": "--debug {value}",
+      "help": "Increase logging verbosity to show all debug logs."
+    },
+    {
+      "name": "Help",
+      "type": "string",
+      "format": "--help {value}",
+      "help": "Show this help message and exit."
+    },
+    {
+      "name": "Output",
+      "type": "Output",
+      "format": "--output {value}",
+      "help": "Output format."
+    },
+    {
+      "name": "Query",
+      "type": "string",
+      "format": "--query {value}",
+      "help": "JMESPath query string. See &lt;a href=\"http://jmespath.org/\"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples."
+    },
+    {
+      "name": "Verbose",
+      "type": "string",
+      "format": "--verbose {value}",
+      "help": "Increase logging verbosity. Use --debug for full debug logs."
+    }
+  ],
+  "enumerations": [
+    {
+      "name": "ResourceLockLockType",
+      "values": [
+        "cannotdelete",
+        "readonly"
+      ]
+    }
+  ]
+}

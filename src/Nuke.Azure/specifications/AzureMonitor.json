@@ -1,0 +1,2316 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
+  "license": [
+    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Distributed under the MIT License.",
+    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+  ],
+  "references": [
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor/action-group.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor/activity-log.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor/alert.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor/autoscale-settings.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor/autoscale.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor/diagnostic-settings.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor/log-profiles.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor/metrics.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor/activity-log/alert.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor/activity-log/alert/action-group.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor/activity-log/alert/scope.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor/autoscale/profile.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor/autoscale/rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor/diagnostic-settings/categories.yml"
+  ],
+  "name": "AzureMonitor",
+  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml",
+  "help": "Manage the Azure Monitor Service.",
+  "pathExecutable": "az",
+  "tasks": [
+    {
+      "postfix": "",
+      "definiteArgument": "monitor",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "ActionGroupCreate",
+      "definiteArgument": "monitor action-group create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the action group."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ShortName",
+            "type": "string",
+            "format": "--short-name {value}",
+            "help": "The short name of the action group."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Action",
+            "type": "string",
+            "format": "--action {value}",
+            "help": "Add receivers to the action group during the creation."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ActionGroupDelete",
+      "definiteArgument": "monitor action-group delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the action group."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ActionGroupEnableReceiver",
+      "definiteArgument": "monitor action-group enable-receiver",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ActionGroup",
+            "type": "string",
+            "format": "--action-group {value}",
+            "help": "The name of the action group."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the receiver to resubscribe."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ActionGroupList",
+      "definiteArgument": "monitor action-group list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of the resource group under which the action groups are being listed. If it is omitted, all the action groups under the current subscription are listed."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ActionGroupShow",
+      "definiteArgument": "monitor action-group show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the action group."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ActionGroupUpdate",
+      "definiteArgument": "monitor action-group update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the action group."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ShortName",
+            "type": "string",
+            "format": "--short-name {value}",
+            "help": "Update the group short name of the action group."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "AddAction",
+            "type": "string",
+            "format": "--add-action {value}",
+            "help": "Add receivers to the action group."
+          },
+          {
+            "name": "RemoveAction",
+            "type": "string",
+            "format": "--remove-action {value}",
+            "help": "Remove receivers from the action group. Accept space-separated list of receiver names."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ActivityLogList",
+      "definiteArgument": "monitor activity-log list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Filters",
+            "type": "string",
+            "format": "--filters {value}",
+            "help": "The OData filter for the list activity logs. If this argument is provided OData Filter Arguments will be ignored."
+          },
+          {
+            "name": "MaxEvents",
+            "type": "string",
+            "format": "--max-events {value}",
+            "help": "The maximum number of records to be returned by the command."
+          },
+          {
+            "name": "Select",
+            "type": "string",
+            "format": "--select {value}",
+            "help": "The list of event names."
+          },
+          {
+            "name": "Caller",
+            "type": "string",
+            "format": "--caller {value}",
+            "help": "The caller to look for when querying."
+          },
+          {
+            "name": "CorrelationId",
+            "type": "string",
+            "format": "--correlation-id {value}",
+            "help": "The correlation id of the query."
+          },
+          {
+            "name": "EndTime",
+            "type": "string",
+            "format": "--end-time {value}",
+            "help": "The end time of the query. In ISO format with explicit indication of timezone: 1970-01-01T00:00:00Z, 1970-01-01T00:00:00-0500. Defaults to current time."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "The resource group."
+          },
+          {
+            "name": "ResourceId",
+            "type": "string",
+            "format": "--resource-id {value}",
+            "help": "The identifier of the resource."
+          },
+          {
+            "name": "ResourceProvider",
+            "type": "string",
+            "format": "--resource-provider {value}",
+            "help": "The resource provider."
+          },
+          {
+            "name": "StartTime",
+            "type": "string",
+            "format": "--start-time {value}",
+            "help": "The start time of the query. In ISO format with explicit indication of timezone: 1970-01-01T00:00:00Z, 1970-01-01T00:00:00-0500. Defaults to 1 Hour prior to the current time."
+          },
+          {
+            "name": "Status",
+            "type": "string",
+            "format": "--status {value}",
+            "help": "The status value to query (ex: Failed)."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ActivityLogListCategories",
+      "definiteArgument": "monitor activity-log list-categories",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "AlertCreate",
+      "definiteArgument": "monitor alert create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Condition",
+            "type": "string",
+            "format": "--condition {value}",
+            "help": "The condition which triggers the rule."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the alert rule."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "help": "Free-text description of the rule. Defaults to the condition expression."
+          },
+          {
+            "name": "Disabled",
+            "type": "bool",
+            "format": "--disabled",
+            "help": "Create the rule in a disabled state."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Action",
+            "type": "string",
+            "format": "--action {value}",
+            "help": "Add an action to fire when the alert is triggered."
+          },
+          {
+            "name": "EmailServiceOwners",
+            "type": "bool",
+            "format": "--email-service-owners",
+            "help": "Email the service owners if an alert is triggered."
+          },
+          {
+            "name": "Target",
+            "type": "string",
+            "format": "--target {value}",
+            "help": "Name or ID of the target resource."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "TargetNamespace",
+            "type": "string",
+            "format": "--target-namespace {value}",
+            "help": "Target resource provider namespace."
+          },
+          {
+            "name": "TargetParent",
+            "type": "string",
+            "format": "--target-parent {value}",
+            "help": "Target resource parent path, if applicable."
+          },
+          {
+            "name": "TargetType",
+            "type": "string",
+            "format": "--target-type {value}",
+            "help": "Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)')."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AlertDelete",
+      "definiteArgument": "monitor alert delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the alert rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AlertList",
+      "definiteArgument": "monitor alert list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AlertListIncidents",
+      "definiteArgument": "monitor alert list-incidents",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "RuleName",
+            "type": "string",
+            "format": "--rule-name {value}",
+            "help": "Name of the alert rule."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AlertShow",
+      "definiteArgument": "monitor alert show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the alert rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AlertShowIncident",
+      "definiteArgument": "monitor alert show-incident",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the incident to retrieve."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "RuleName",
+            "type": "string",
+            "format": "--rule-name {value}",
+            "help": "Name of the alert rule."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AlertUpdate",
+      "definiteArgument": "monitor alert update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the alert rule."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "help": "Description of the rule."
+          },
+          {
+            "name": "Enabled",
+            "type": "string",
+            "format": "--enabled {value}",
+            "help": ""
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "AddAction",
+            "type": "string",
+            "format": "--add-action {value}",
+            "help": "Add an action to fire when the alert is triggered."
+          },
+          {
+            "name": "EmailServiceOwners",
+            "type": "bool",
+            "format": "--email-service-owners",
+            "help": "Email the service owners if an alert is triggered."
+          },
+          {
+            "name": "RemoveAction",
+            "type": "string",
+            "format": "--remove-action {value}",
+            "help": "Remove one or more actions."
+          },
+          {
+            "name": "Aggregation",
+            "type": "MonitorAlertUpdateAggregation",
+            "format": "--aggregation {value}",
+            "help": "Type of aggregation to apply based on --period."
+          },
+          {
+            "name": "Condition",
+            "type": "string",
+            "format": "--condition {value}",
+            "help": "The condition which triggers the rule."
+          },
+          {
+            "name": "Metric",
+            "type": "string",
+            "format": "--metric {value}",
+            "help": "Name of the metric to base the rule on."
+          },
+          {
+            "name": "Operator",
+            "type": "MonitorAlertUpdateOperator",
+            "format": "--operator {value}",
+            "help": "How to compare the metric against the threshold."
+          },
+          {
+            "name": "Period",
+            "type": "string",
+            "format": "--period {value}",
+            "help": "Time span over which to apply --aggregation, in nDnHnMnS shorthand or full ISO8601 format."
+          },
+          {
+            "name": "Threshold",
+            "type": "string",
+            "format": "--threshold {value}",
+            "help": "Numeric threshold at which to trigger the alert."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "help": "Name or ID of the target resource."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceNamespace",
+            "type": "string",
+            "format": "--resource-namespace {value}",
+            "help": "Target resource provider namespace."
+          },
+          {
+            "name": "ResourceParent",
+            "type": "string",
+            "format": "--resource-parent {value}",
+            "help": "Target resource parent path, if applicable."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)')."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AutoscaleSettingsCreate",
+      "definiteArgument": "monitor autoscale-settings create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The autoscale setting name."
+          },
+          {
+            "name": "Parameters",
+            "type": "string",
+            "format": "--parameters {value}",
+            "help": "JSON encoded parameters configuration. Use @{file} to load from a file. Use az autoscale-settings get-parameters-template to export json template."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AutoscaleSettingsDelete",
+      "definiteArgument": "monitor autoscale-settings delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The autoscale setting name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AutoscaleSettingsGetParametersTemplate",
+      "definiteArgument": "monitor autoscale-settings get-parameters-template",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "AutoscaleSettingsList",
+      "definiteArgument": "monitor autoscale-settings list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AutoscaleSettingsShow",
+      "definiteArgument": "monitor autoscale-settings show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The autoscale setting name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AutoscaleSettingsUpdate",
+      "definiteArgument": "monitor autoscale-settings update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The autoscale setting name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AutoscaleCreate",
+      "definiteArgument": "monitor autoscale create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Disabled",
+            "type": "bool",
+            "format": "--disabled",
+            "help": "Create the autoscale settings in a disabled state."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the autoscale settings."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Count",
+            "type": "string",
+            "format": "--count {value}",
+            "help": "The numer of instances to use. If used with --min/max-count, the default number of instances to use."
+          },
+          {
+            "name": "MaxCount",
+            "type": "string",
+            "format": "--max-count {value}",
+            "help": "The maximum number of instances."
+          },
+          {
+            "name": "MinCount",
+            "type": "string",
+            "format": "--min-count {value}",
+            "help": "The minimum number of instances."
+          },
+          {
+            "name": "Action",
+            "type": "string",
+            "format": "--action {value}",
+            "help": "Add an action to fire when a scaling event occurs."
+          },
+          {
+            "name": "EmailAdministrator",
+            "type": "bool",
+            "format": "--email-administrator",
+            "help": "Send email to subscription administrator on scaling."
+          },
+          {
+            "name": "EmailCoadministrators",
+            "type": "bool",
+            "format": "--email-coadministrators",
+            "help": "Send email to subscription co-administrators on scaling."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "help": "Name or ID of the target resource."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceNamespace",
+            "type": "string",
+            "format": "--resource-namespace {value}",
+            "help": "Target resource provider namespace."
+          },
+          {
+            "name": "ResourceParent",
+            "type": "string",
+            "format": "--resource-parent {value}",
+            "help": "Target resource parent path, if applicable."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)')."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AutoscaleDelete",
+      "definiteArgument": "monitor autoscale delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the autoscale settings."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AutoscaleList",
+      "definiteArgument": "monitor autoscale list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AutoscaleShow",
+      "definiteArgument": "monitor autoscale show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the autoscale settings."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AutoscaleUpdate",
+      "definiteArgument": "monitor autoscale update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the autoscale settings."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Enabled",
+            "type": "bool",
+            "format": "--enabled",
+            "help": "Autoscale settings enabled status."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Count",
+            "type": "string",
+            "format": "--count {value}",
+            "help": "The numer of instances to use. If used with --min/max-count, the default number of instances to use."
+          },
+          {
+            "name": "MaxCount",
+            "type": "string",
+            "format": "--max-count {value}",
+            "help": "The maximum number of instances."
+          },
+          {
+            "name": "MinCount",
+            "type": "string",
+            "format": "--min-count {value}",
+            "help": "The minimum number of instances."
+          },
+          {
+            "name": "AddAction",
+            "type": "string",
+            "format": "--add-action {value}",
+            "help": "Add an action to fire when a scaling event occurs."
+          },
+          {
+            "name": "EmailAdministrator",
+            "type": "bool",
+            "format": "--email-administrator",
+            "help": "Send email to subscription administrator on scaling."
+          },
+          {
+            "name": "EmailCoadministrators",
+            "type": "bool",
+            "format": "--email-coadministrators",
+            "help": "Send email to subscription co-administrators on scaling."
+          },
+          {
+            "name": "RemoveAction",
+            "type": "string",
+            "format": "--remove-action {value}",
+            "help": "Remove one or more actions."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DiagnosticSettingsCreate",
+      "definiteArgument": "monitor diagnostic-settings create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the diagnostic settings."
+          },
+          {
+            "name": "EventHub",
+            "type": "string",
+            "format": "--event-hub {value}",
+            "help": "The name of the event hub. If none is specified, the default event hub will be selected."
+          },
+          {
+            "name": "EventHubRule",
+            "type": "string",
+            "format": "--event-hub-rule {value}",
+            "help": "The resource Id for the event hub authorization rule."
+          },
+          {
+            "name": "Logs",
+            "type": "string",
+            "format": "--logs {value}",
+            "help": "JSON encoded list of logs settings. Use '@{file}' to load from a file."
+          },
+          {
+            "name": "Metrics",
+            "type": "string",
+            "format": "--metrics {value}",
+            "help": "JSON encoded list of metric settings. Use '@{file}' to load from a file."
+          },
+          {
+            "name": "StorageAccount",
+            "type": "string",
+            "format": "--storage-account {value}",
+            "help": "Name or ID of the storage account to send diagnostic logs to."
+          },
+          {
+            "name": "Workspace",
+            "type": "string",
+            "format": "--workspace {value}",
+            "help": "Name or ID of the Log Analytics workspace to send diagnostic logs to."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "help": "Name or ID of the target resource."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of the resource group for the Log Analytics and Storage Account when the name of the service instead of a full resource ID is given."
+          },
+          {
+            "name": "ResourceNamespace",
+            "type": "string",
+            "format": "--resource-namespace {value}",
+            "help": "Target resource provider namespace."
+          },
+          {
+            "name": "ResourceParent",
+            "type": "string",
+            "format": "--resource-parent {value}",
+            "help": "Target resource parent path, if applicable."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)')."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DiagnosticSettingsDelete",
+      "definiteArgument": "monitor diagnostic-settings delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the diagnostic setting."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "help": "Name or ID of the target resource."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceNamespace",
+            "type": "string",
+            "format": "--resource-namespace {value}",
+            "help": "Target resource provider namespace."
+          },
+          {
+            "name": "ResourceParent",
+            "type": "string",
+            "format": "--resource-parent {value}",
+            "help": "Target resource parent path, if applicable."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)')."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DiagnosticSettingsList",
+      "definiteArgument": "monitor diagnostic-settings list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "help": "Name or ID of the target resource."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceNamespace",
+            "type": "string",
+            "format": "--resource-namespace {value}",
+            "help": "Target resource provider namespace."
+          },
+          {
+            "name": "ResourceParent",
+            "type": "string",
+            "format": "--resource-parent {value}",
+            "help": "Target resource parent path, if applicable."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)')."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DiagnosticSettingsShow",
+      "definiteArgument": "monitor diagnostic-settings show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the diagnostic setting."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "help": "Name or ID of the target resource."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceNamespace",
+            "type": "string",
+            "format": "--resource-namespace {value}",
+            "help": "Target resource provider namespace."
+          },
+          {
+            "name": "ResourceParent",
+            "type": "string",
+            "format": "--resource-parent {value}",
+            "help": "Target resource parent path, if applicable."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)')."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DiagnosticSettingsUpdate",
+      "definiteArgument": "monitor diagnostic-settings update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the diagnostic setting."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "help": "Name or ID of the target resource."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceNamespace",
+            "type": "string",
+            "format": "--resource-namespace {value}",
+            "help": "Target resource provider namespace."
+          },
+          {
+            "name": "ResourceParent",
+            "type": "string",
+            "format": "--resource-parent {value}",
+            "help": "Target resource parent path, if applicable."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)')."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LogProfilesCreate",
+      "definiteArgument": "monitor log-profiles create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Categories",
+            "type": "string",
+            "format": "--categories {value}",
+            "help": "Space-separated categories of the logs. These categories are created as is convenient to the user. Some values are Write, Delete, and/or Action."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Locations",
+            "type": "List<string>",
+            "format": "--locations {value}",
+            "separator": " ",
+            "help": "Space-separated list of regions for which Activity Log events should be stored."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the log profile."
+          },
+          {
+            "name": "ServiceBusRuleId",
+            "type": "string",
+            "format": "--service-bus-rule-id {value}",
+            "help": "The service bus rule ID of the service bus namespace in which you would like to have Event Hubs created for streaming the Activity Log. The rule ID is of the format '{service bus resource ID}/authorizationrules/{key name}'."
+          },
+          {
+            "name": "StorageAccountId",
+            "type": "string",
+            "format": "--storage-account-id {value}",
+            "help": "The resource id of the storage account to which you would like to send the Activity Log."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Days",
+            "type": "string",
+            "format": "--days {value}",
+            "help": "The number of days for the retention in days. A value of 0 will retain the events indefinitely."
+          },
+          {
+            "name": "Enabled",
+            "type": "bool",
+            "format": "--enabled",
+            "help": "Whether the retention policy is enabled."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LogProfilesDelete",
+      "definiteArgument": "monitor log-profiles delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the log profile."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LogProfilesList",
+      "definiteArgument": "monitor log-profiles list",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "LogProfilesShow",
+      "definiteArgument": "monitor log-profiles show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the log profile."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LogProfilesUpdate",
+      "definiteArgument": "monitor log-profiles update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the log profile."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "MetricsList",
+      "definiteArgument": "monitor metrics list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Aggregation",
+            "type": "MonitorMetricsListAggregation",
+            "format": "--aggregation {value}",
+            "help": "The list of aggregation types (space-separated) to retrieve."
+          },
+          {
+            "name": "Dimension",
+            "type": "string",
+            "format": "--dimension {value}",
+            "help": "The list of dimensions (space-separated) the metrics are queried into."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "help": "A string used to reduce the set of metric data returned. eg. \"BlobType eq '*'\"."
+          },
+          {
+            "name": "Metadata",
+            "type": "string",
+            "format": "--metadata {value}",
+            "help": "Returns the metadata values instead of metric data."
+          },
+          {
+            "name": "Metrics",
+            "type": "List<string>",
+            "format": "--metrics {value}",
+            "separator": " ",
+            "help": "Space-separated list of metric names to retrieve."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "help": "Namespace to query metric definitions for."
+          },
+          {
+            "name": "Orderby",
+            "type": "string",
+            "format": "--orderby {value}",
+            "help": "The aggregation to use for sorting results and the direction of the sort. Only one order can be specified. Examples: sum asc."
+          },
+          {
+            "name": "Top",
+            "type": "string",
+            "format": "--top {value}",
+            "help": "The maximum number of records to retrieve. Valid only if $filter is specified. Defaults to 10."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "help": "Name or ID of the target resource."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceNamespace",
+            "type": "string",
+            "format": "--resource-namespace {value}",
+            "help": "Target resource provider namespace."
+          },
+          {
+            "name": "ResourceParent",
+            "type": "string",
+            "format": "--resource-parent {value}",
+            "help": "Target resource parent path, if applicable."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)')."
+          },
+          {
+            "name": "EndTime",
+            "type": "string",
+            "format": "--end-time {value}",
+            "help": "The end time of the query. In ISO format with explicit indication of timezone, 1970-01-01T00:00:00Z, 1970-01-01T00:00:00-0500. Defaults to the current time."
+          },
+          {
+            "name": "Interval",
+            "type": "string",
+            "format": "--interval {value}",
+            "help": "The interval of the metric query. In ISO 8601 duration format, eg \"PT1M\"."
+          },
+          {
+            "name": "StartTime",
+            "type": "string",
+            "format": "--start-time {value}",
+            "help": "The start time of the query. In ISO format with explicit indication of timezone, 1970-01-01T00:00:00Z, 1970-01-01T00:00:00-0500. Defaults to 1 Hour prior to the current time."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "MetricsListDefinitions",
+      "definiteArgument": "monitor metrics list-definitions",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "help": "Namespace to query metric definitions for."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "help": "Name or ID of the target resource."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceNamespace",
+            "type": "string",
+            "format": "--resource-namespace {value}",
+            "help": "Target resource provider namespace."
+          },
+          {
+            "name": "ResourceParent",
+            "type": "string",
+            "format": "--resource-parent {value}",
+            "help": "Target resource parent path, if applicable."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)')."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ActivityLogAlertCreate",
+      "definiteArgument": "monitor activity-log alert create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the activity log alerts."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ActionGroup",
+            "type": "string",
+            "format": "--action-group {value}",
+            "help": "Add an action group. Accepts space-separated action group identifiers. The identifier can be the action group's name or its resource ID."
+          },
+          {
+            "name": "Condition",
+            "type": "string",
+            "format": "--condition {value}",
+            "help": "The condition that will cause the alert to activate. The format is FIELD=VALUE[ and FIELD=VALUE...]."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "help": "A description of this activity log alert."
+          },
+          {
+            "name": "Disable",
+            "type": "string",
+            "format": "--disable {value}",
+            "help": "Disable the activity log alert after it is created."
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "format": "--scope {value}",
+            "help": "A list of strings that will be used as prefixes."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "WebhookProperties",
+            "type": "string",
+            "format": "--webhook-properties {value}",
+            "help": "Space-separated webhook properties in 'key[=value]' format. These properties are associated with the action groups added in this command."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ActivityLogAlertDelete",
+      "definiteArgument": "monitor activity-log alert delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the activity log alert."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ActivityLogAlertList",
+      "definiteArgument": "monitor activity-log alert list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of the resource group under which the activity log alerts are being listed. If it is omitted, all the activity log alerts under the current subscription are listed."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ActivityLogAlertShow",
+      "definiteArgument": "monitor activity-log alert show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the activity log alert."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ActivityLogAlertUpdate",
+      "definiteArgument": "monitor activity-log alert update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the activity log alert."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Condition",
+            "type": "string",
+            "format": "--condition {value}",
+            "help": "The conditional expression that will cause the alert to activate. The format is FIELD=VALUE[ and FIELD=VALUE...]."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "help": "A description of this activity log alert."
+          },
+          {
+            "name": "Enabled",
+            "type": "bool",
+            "format": "--enabled",
+            "help": ""
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ActivityLogAlertActionGroupAdd",
+      "definiteArgument": "monitor activity-log alert action-group add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ActionGroup",
+            "type": "string",
+            "format": "--action-group {value}",
+            "help": "The names or the resource ids of the action groups to be added."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the activity log alerts."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Reset",
+            "type": "string",
+            "format": "--reset {value}",
+            "help": "Remove all the existing action groups before add new conditions."
+          },
+          {
+            "name": "Strict",
+            "type": "string",
+            "format": "--strict {value}",
+            "help": "Fails the command if an action group to be added will change existing webhook properties."
+          },
+          {
+            "name": "WebhookProperties",
+            "type": "string",
+            "format": "--webhook-properties {value}",
+            "help": "Space-separated webhook properties in 'key[=value]' format. These properties will be associated with the action groups added in this command."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ActivityLogAlertActionGroupRemove",
+      "definiteArgument": "monitor activity-log alert action-group remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ActionGroup",
+            "type": "string",
+            "format": "--action-group {value}",
+            "help": "The names or the resource ids of the action groups to be added."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the activity log alerts."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ActivityLogAlertScopeAdd",
+      "definiteArgument": "monitor activity-log alert scope add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the activity log alerts."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "format": "--scope {value}",
+            "help": "The scopes to add."
+          },
+          {
+            "name": "Reset",
+            "type": "string",
+            "format": "--reset {value}",
+            "help": "Remove all the existing scopes before add new scopes."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ActivityLogAlertScopeRemove",
+      "definiteArgument": "monitor activity-log alert scope remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the activity log alerts."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "format": "--scope {value}",
+            "help": "The scopes to remove."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AutoscaleProfileCreate",
+      "definiteArgument": "monitor autoscale profile create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AutoscaleName",
+            "type": "string",
+            "format": "--autoscale-name {value}",
+            "help": "Name of the autoscale settings."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the autoscale profile."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "CopyRules",
+            "type": "string",
+            "format": "--copy-rules {value}",
+            "help": "Name of an existing schedule from which to copy the scaling rules for the new schedule."
+          },
+          {
+            "name": "Count",
+            "type": "string",
+            "format": "--count {value}",
+            "help": "The numer of instances to use. If used with --min/max-count, the default number of instances to use."
+          },
+          {
+            "name": "MaxCount",
+            "type": "string",
+            "format": "--max-count {value}",
+            "help": "The maximum number of instances."
+          },
+          {
+            "name": "MinCount",
+            "type": "string",
+            "format": "--min-count {value}",
+            "help": "The minimum number of instances."
+          },
+          {
+            "name": "Timezone",
+            "type": "string",
+            "format": "--timezone {value}",
+            "help": "Timezone name."
+          },
+          {
+            "name": "End",
+            "type": "string",
+            "format": "--end {value}",
+            "help": "When the autoscale profile ends. Format depends on the type of profile."
+          },
+          {
+            "name": "Recurrence",
+            "type": "string",
+            "format": "--recurrence {value}",
+            "help": "When the profile recurs. If omitted, a fixed (non-recurring) profile is created."
+          },
+          {
+            "name": "Start",
+            "type": "string",
+            "format": "--start {value}",
+            "help": "When the autoscale profile begins. Format depends on the type of profile."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AutoscaleProfileDelete",
+      "definiteArgument": "monitor autoscale profile delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AutoscaleName",
+            "type": "string",
+            "format": "--autoscale-name {value}",
+            "help": "Name of the autoscale settings."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the autoscale profile."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AutoscaleProfileList",
+      "definiteArgument": "monitor autoscale profile list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AutoscaleName",
+            "type": "string",
+            "format": "--autoscale-name {value}",
+            "help": "Name of the autoscale settings."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AutoscaleProfileListTimezones",
+      "definiteArgument": "monitor autoscale profile list-timezones",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Offset",
+            "type": "string",
+            "format": "--offset {value}",
+            "help": "Filter results based on UTC hour offset."
+          },
+          {
+            "name": "SearchQuery",
+            "type": "string",
+            "format": "--search-query {value}",
+            "help": "Query text to find."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AutoscaleProfileShow",
+      "definiteArgument": "monitor autoscale profile show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AutoscaleName",
+            "type": "string",
+            "format": "--autoscale-name {value}",
+            "help": "Name of the autoscale settings."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the autoscale profile."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AutoscaleRuleCopy",
+      "definiteArgument": "monitor autoscale rule copy",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AutoscaleName",
+            "type": "string",
+            "format": "--autoscale-name {value}",
+            "help": "Name of the autoscale settings."
+          },
+          {
+            "name": "DestSchedule",
+            "type": "string",
+            "format": "--dest-schedule {value}",
+            "help": "Name of the profile to copy rules to."
+          },
+          {
+            "name": "Index",
+            "type": "List<string>",
+            "format": "--index {value}",
+            "separator": " ",
+            "help": "Space-separated list of rule indices to copy, or '*' to copy all rules."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "SourceSchedule",
+            "type": "string",
+            "format": "--source-schedule {value}",
+            "help": "Name of the profile to copy rules from."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AutoscaleRuleCreate",
+      "definiteArgument": "monitor autoscale rule create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AutoscaleName",
+            "type": "string",
+            "format": "--autoscale-name {value}",
+            "help": "Name of the autoscale settings."
+          },
+          {
+            "name": "Condition",
+            "type": "string",
+            "format": "--condition {value}",
+            "help": "The condition which triggers the scaling action."
+          },
+          {
+            "name": "Scale",
+            "type": "string",
+            "format": "--scale {value}",
+            "help": "The direction and amount to scale."
+          },
+          {
+            "name": "Cooldown",
+            "type": "string",
+            "format": "--cooldown {value}",
+            "help": "The number of minutes that must elapse before another scaling event can occur."
+          },
+          {
+            "name": "ProfileName",
+            "type": "string",
+            "format": "--profile-name {value}",
+            "help": "Name of the autoscale profile."
+          },
+          {
+            "name": "Timegrain",
+            "type": "string",
+            "format": "--timegrain {value}",
+            "help": "The way metrics are polled across instances."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "help": "Name or ID of the target resource."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceNamespace",
+            "type": "string",
+            "format": "--resource-namespace {value}",
+            "help": "Target resource provider namespace."
+          },
+          {
+            "name": "ResourceParent",
+            "type": "string",
+            "format": "--resource-parent {value}",
+            "help": "Target resource parent path, if applicable."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)')."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AutoscaleRuleDelete",
+      "definiteArgument": "monitor autoscale rule delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AutoscaleName",
+            "type": "string",
+            "format": "--autoscale-name {value}",
+            "help": "Name of the autoscale settings."
+          },
+          {
+            "name": "Index",
+            "type": "List<string>",
+            "format": "--index {value}",
+            "separator": " ",
+            "help": "Space-separated list of rule indices to remove, or '*' to clear all rules."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ProfileName",
+            "type": "string",
+            "format": "--profile-name {value}",
+            "help": "Name of the autoscale profile."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AutoscaleRuleList",
+      "definiteArgument": "monitor autoscale rule list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AutoscaleName",
+            "type": "string",
+            "format": "--autoscale-name {value}",
+            "help": "Name of the autoscale settings."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ProfileName",
+            "type": "string",
+            "format": "--profile-name {value}",
+            "help": "Name of the autoscale profile."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DiagnosticSettingsCategoriesList",
+      "definiteArgument": "monitor diagnostic-settings categories list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "help": "Name or ID of the target resource."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceNamespace",
+            "type": "string",
+            "format": "--resource-namespace {value}",
+            "help": "Target resource provider namespace."
+          },
+          {
+            "name": "ResourceParent",
+            "type": "string",
+            "format": "--resource-parent {value}",
+            "help": "Target resource parent path, if applicable."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)')."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DiagnosticSettingsCategoriesShow",
+      "definiteArgument": "monitor diagnostic-settings categories show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the diagnostic setting."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "help": "Name or ID of the target resource."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceNamespace",
+            "type": "string",
+            "format": "--resource-namespace {value}",
+            "help": "Target resource provider namespace."
+          },
+          {
+            "name": "ResourceParent",
+            "type": "string",
+            "format": "--resource-parent {value}",
+            "help": "Target resource parent path, if applicable."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)')."
+          }
+        ]
+      }
+    }
+  ],
+  "commonTaskProperties": [
+    {
+      "name": "Debug",
+      "type": "string",
+      "format": "--debug {value}",
+      "help": "Increase logging verbosity to show all debug logs."
+    },
+    {
+      "name": "Help",
+      "type": "string",
+      "format": "--help {value}",
+      "help": "Show this help message and exit."
+    },
+    {
+      "name": "Output",
+      "type": "Output",
+      "format": "--output {value}",
+      "help": "Output format."
+    },
+    {
+      "name": "Query",
+      "type": "string",
+      "format": "--query {value}",
+      "help": "JMESPath query string. See &lt;a href=\"http://jmespath.org/\"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples."
+    },
+    {
+      "name": "Verbose",
+      "type": "string",
+      "format": "--verbose {value}",
+      "help": "Increase logging verbosity. Use --debug for full debug logs."
+    }
+  ],
+  "enumerations": [
+    {
+      "name": "MonitorAlertUpdateAggregation",
+      "values": [
+        "avg",
+        "last",
+        "max",
+        "min",
+        "total"
+      ]
+    },
+    {
+      "name": "MonitorMetricsListAggregation",
+      "values": [
+        "average",
+        "count",
+        "maximum",
+        "minimum",
+        "total"
+      ]
+    },
+    {
+      "name": "MonitorAlertUpdateOperator",
+      "values": [
+        "<",
+        "<=",
+        ">",
+        ">="
+      ]
+    }
+  ]
+}

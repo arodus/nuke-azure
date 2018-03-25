@@ -1,0 +1,641 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
+  "license": [
+    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Distributed under the MIT License.",
+    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+  ],
+  "references": [
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/aks.yml"
+  ],
+  "name": "AzureAks",
+  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/aks.yml",
+  "help": "Manage Azure Kubernetes Services.",
+  "pathExecutable": "az",
+  "tasks": [
+    {
+      "postfix": "Browse",
+      "definiteArgument": "aks browse",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the managed cluster."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "DisableBrowser",
+            "type": "string",
+            "format": "--disable-browser {value}",
+            "help": "Don't launch a web browser after establishing port-forwarding."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Create",
+      "definiteArgument": "aks create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the managed cluster."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "AdminUsername",
+            "type": "string",
+            "format": "--admin-username {value}",
+            "help": "User account to create on node VMs for SSH access."
+          },
+          {
+            "name": "ClientSecret",
+            "type": "string",
+            "format": "--client-secret {value}",
+            "help": "Secret associated with the service principal. This argument is required if `--service-principal` is specified."
+          },
+          {
+            "name": "DnsNamePrefix",
+            "type": "string",
+            "format": "--dns-name-prefix {value}",
+            "help": "Prefix for hostnames that are created. If not specified, gemerate a hostname using the managed cluster and resource group names."
+          },
+          {
+            "name": "GenerateSshKeys",
+            "type": "string",
+            "format": "--generate-ssh-keys {value}",
+            "help": "Generate SSH public and private key files if missing."
+          },
+          {
+            "name": "KubernetesVersion",
+            "type": "string",
+            "format": "--kubernetes-version {value}",
+            "help": "Version of Kubernetes to use for creating the cluster, such as \"1.7.12\" or \"1.8.7\"."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "NoWait",
+            "type": "string",
+            "format": "--no-wait {value}",
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "NodeCount",
+            "type": "int",
+            "format": "--node-count {value}",
+            "help": "Number of nodes in the Kubernetes node pool. After creating a cluster, you can change the size of its node pool with `az aks scale`."
+          },
+          {
+            "name": "NodeOsdiskSize",
+            "type": "string",
+            "format": "--node-osdisk-size {value}",
+            "help": "Size in GB of the OS disk for each node in the node pool."
+          },
+          {
+            "name": "NodeVmSize",
+            "type": "string",
+            "format": "--node-vm-size {value}",
+            "help": "Size of Virtual Machines to create as Kubernetes nodes."
+          },
+          {
+            "name": "ServicePrincipal",
+            "type": "bool",
+            "format": "--service-principal",
+            "help": "Service principal used for authentication to Azure APIs."
+          },
+          {
+            "name": "SshKeyValue",
+            "type": "string",
+            "format": "--ssh-key-value {value}",
+            "help": "Public key path or key contents to install on node VMs for SSH access. For example, 'ssh-rsa AAAAB...snip...UcyupgH azureuser@linuxvm'."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Delete",
+      "definiteArgument": "aks delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the managed cluster."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "NoWait",
+            "type": "string",
+            "format": "--no-wait {value}",
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "help": "Do not prompt for confirmation."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GetCredentials",
+      "definiteArgument": "aks get-credentials",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the managed cluster."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Admin",
+            "type": "string",
+            "format": "--admin {value}",
+            "help": "Get cluster administrator credentials.  Default: cluster user credentials."
+          },
+          {
+            "name": "File",
+            "type": "string",
+            "format": "--file {value}",
+            "help": "Kubernetes configuration file to update. Use \"-\" to print YAML to stdout instead."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GetUpgrades",
+      "definiteArgument": "aks get-upgrades",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the managed cluster."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GetVersions",
+      "definiteArgument": "aks get-versions",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "InstallCli",
+      "definiteArgument": "aks install-cli",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ClientVersion",
+            "type": "string",
+            "format": "--client-version {value}",
+            "help": ""
+          },
+          {
+            "name": "InstallLocation",
+            "type": "string",
+            "format": "--install-location {value}",
+            "help": ""
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "InstallConnector",
+      "definiteArgument": "aks install-connector",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ConnectorName",
+            "type": "string",
+            "format": "--connector-name {value}",
+            "help": "Name of the ACI Connector."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the managed cluster."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "AciResourceGroup",
+            "type": "string",
+            "format": "--aci-resource-group {value}",
+            "help": "The resource group to create the ACI container groups. Use the MC_* resource group if it is not specified."
+          },
+          {
+            "name": "ChartUrl",
+            "type": "string",
+            "format": "--chart-url {value}",
+            "help": "URL of a Helm chart that installs ACI Connector."
+          },
+          {
+            "name": "ClientSecret",
+            "type": "string",
+            "format": "--client-secret {value}",
+            "help": "Secret associated with the service principal. This argument is required if `--service-principal` is specified."
+          },
+          {
+            "name": "ImageTag",
+            "type": "string",
+            "format": "--image-tag {value}",
+            "help": "The image tag of the virtual kubelet. Use 'latest' if it is not specified."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "The location to create the ACI container groups."
+          },
+          {
+            "name": "OsType",
+            "type": "AksOsType",
+            "format": "--os-type {value}",
+            "help": "Install support for deploying ACIs of this operating system type."
+          },
+          {
+            "name": "ServicePrincipal",
+            "type": "bool",
+            "format": "--service-principal",
+            "help": "Service principal used for authentication to Azure APIs."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "List",
+      "definiteArgument": "aks list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RemoveConnector",
+      "definiteArgument": "aks remove-connector",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ConnectorName",
+            "type": "string",
+            "format": "--connector-name {value}",
+            "help": "Name of the ACI Connector."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the managed cluster."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Graceful",
+            "type": "string",
+            "format": "--graceful {value}",
+            "help": "Use a \"cordon and drain\" strategy to evict pods safely before removing the ACI node."
+          },
+          {
+            "name": "OsType",
+            "type": "AksOsType",
+            "format": "--os-type {value}",
+            "help": "Remove support for deploying ACIs of this operating system type."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Scale",
+      "definiteArgument": "aks scale",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the managed cluster."
+          },
+          {
+            "name": "NodeCount",
+            "type": "int",
+            "format": "--node-count {value}",
+            "help": "Number of nodes in the Kubernetes node pool."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "NoWait",
+            "type": "string",
+            "format": "--no-wait {value}",
+            "help": "Do not wait for the long-running operation to finish."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Show",
+      "definiteArgument": "aks show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the managed cluster."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Upgrade",
+      "definiteArgument": "aks upgrade",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "KubernetesVersion",
+            "type": "string",
+            "format": "--kubernetes-version {value}",
+            "help": "Version of Kubernetes to upgrade the cluster to, such as \"1.7.12\" or \"1.8.7\"."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the managed cluster."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "NoWait",
+            "type": "string",
+            "format": "--no-wait {value}",
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "help": "Do not prompt for confirmation."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "UpgradeConnector",
+      "definiteArgument": "aks upgrade-connector",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ConnectorName",
+            "type": "string",
+            "format": "--connector-name {value}",
+            "help": "Name of the ACI Connector."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the managed cluster."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "AciResourceGroup",
+            "type": "string",
+            "format": "--aci-resource-group {value}",
+            "help": "The resource group to create the ACI container groups. Use the MC_* resource group if it is not specified."
+          },
+          {
+            "name": "ChartUrl",
+            "type": "string",
+            "format": "--chart-url {value}",
+            "help": "URL of a Helm chart that installs ACI Connector."
+          },
+          {
+            "name": "ClientSecret",
+            "type": "string",
+            "format": "--client-secret {value}",
+            "help": "Secret associated with the service principal. This argument is required if `--service-principal` is specified."
+          },
+          {
+            "name": "ImageTag",
+            "type": "string",
+            "format": "--image-tag {value}",
+            "help": "The image tag of the virtual kubelet. Use 'latest' if it is not specified."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "OsType",
+            "type": "AksOsType",
+            "format": "--os-type {value}",
+            "help": "Install support for deploying ACIs of this operating system type."
+          },
+          {
+            "name": "ServicePrincipal",
+            "type": "bool",
+            "format": "--service-principal",
+            "help": "Service principal used for authentication to Azure APIs."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Wait",
+      "definiteArgument": "aks wait",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the managed cluster."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Created",
+            "type": "string",
+            "format": "--created {value}",
+            "help": "Wait until created with 'provisioningState' at 'Succeeded'."
+          },
+          {
+            "name": "Custom",
+            "type": "string",
+            "format": "--custom {value}",
+            "help": "Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running']."
+          },
+          {
+            "name": "Deleted",
+            "type": "string",
+            "format": "--deleted {value}",
+            "help": "Wait until deleted."
+          },
+          {
+            "name": "Exists",
+            "type": "string",
+            "format": "--exists {value}",
+            "help": "Wait until the resource exists."
+          },
+          {
+            "name": "Interval",
+            "type": "string",
+            "format": "--interval {value}",
+            "help": "Polling interval in seconds."
+          },
+          {
+            "name": "Timeout",
+            "type": "string",
+            "format": "--timeout {value}",
+            "help": "Maximum wait in seconds."
+          },
+          {
+            "name": "Updated",
+            "type": "string",
+            "format": "--updated {value}",
+            "help": "Wait until updated with provisioningState at 'Succeeded'."
+          }
+        ]
+      }
+    }
+  ],
+  "commonTaskProperties": [
+    {
+      "name": "Debug",
+      "type": "string",
+      "format": "--debug {value}",
+      "help": "Increase logging verbosity to show all debug logs."
+    },
+    {
+      "name": "Help",
+      "type": "string",
+      "format": "--help {value}",
+      "help": "Show this help message and exit."
+    },
+    {
+      "name": "Output",
+      "type": "Output",
+      "format": "--output {value}",
+      "help": "Output format."
+    },
+    {
+      "name": "Query",
+      "type": "string",
+      "format": "--query {value}",
+      "help": "JMESPath query string. See &lt;a href=\"http://jmespath.org/\"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples."
+    },
+    {
+      "name": "Verbose",
+      "type": "string",
+      "format": "--verbose {value}",
+      "help": "Increase logging verbosity. Use --debug for full debug logs."
+    }
+  ],
+  "enumerations": [
+    {
+      "name": "AksOsType",
+      "values": [
+        "both",
+        "linux",
+        "windows"
+      ]
+    }
+  ]
+}

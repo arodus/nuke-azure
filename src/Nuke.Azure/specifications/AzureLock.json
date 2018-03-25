@@ -1,0 +1,320 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
+  "license": [
+    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Distributed under the MIT License.",
+    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+  ],
+  "references": [
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lock.yml"
+  ],
+  "name": "AzureLock",
+  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lock.yml",
+  "help": "Manage Azure locks.",
+  "pathExecutable": "az",
+  "tasks": [
+    {
+      "postfix": "Create",
+      "definiteArgument": "lock create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LockType",
+            "type": "LockLockType",
+            "format": "--lock-type {value}",
+            "help": ""
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the lock."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "help": "Provider namespace (Ex: 'Microsoft.Provider')."
+          },
+          {
+            "name": "Notes",
+            "type": "string",
+            "format": "--notes {value}",
+            "help": "Notes about this lock."
+          },
+          {
+            "name": "Parent",
+            "type": "string",
+            "format": "--parent {value}",
+            "help": "The parent path (Ex: 'resA/myA/resB/myB')."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "help": "Name or ID of the resource being locked. If an ID is given, other resource arguments should not be given."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Delete",
+      "definiteArgument": "lock delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "string",
+            "format": "--ids {value}",
+            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the lock."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "help": "Provider namespace (Ex: 'Microsoft.Provider')."
+          },
+          {
+            "name": "Parent",
+            "type": "string",
+            "format": "--parent {value}",
+            "help": "The parent path (Ex: 'resA/myA/resB/myB')."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "help": "Name or ID of the resource being locked. If an ID is given, other resource arguments should not be given."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "List",
+      "definiteArgument": "lock list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "FilterString",
+            "type": "string",
+            "format": "--filter-string {value}",
+            "help": "A query filter to use to restrict the results."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "help": "Provider namespace (Ex: 'Microsoft.Provider')."
+          },
+          {
+            "name": "Parent",
+            "type": "string",
+            "format": "--parent {value}",
+            "help": "The parent path (Ex: 'resA/myA/resB/myB')."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "help": "Name or ID of the resource being locked. If an ID is given, other resource arguments should not be given."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Show",
+      "definiteArgument": "lock show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "string",
+            "format": "--ids {value}",
+            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the lock."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "help": "Provider namespace (Ex: 'Microsoft.Provider')."
+          },
+          {
+            "name": "Parent",
+            "type": "string",
+            "format": "--parent {value}",
+            "help": "The parent path (Ex: 'resA/myA/resB/myB')."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "help": "Name or ID of the resource being locked. If an ID is given, other resource arguments should not be given."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Update",
+      "definiteArgument": "lock update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "string",
+            "format": "--ids {value}",
+            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
+          },
+          {
+            "name": "LockType",
+            "type": "LockLockType",
+            "format": "--lock-type {value}",
+            "help": ""
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the lock."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "help": "Provider namespace (Ex: 'Microsoft.Provider')."
+          },
+          {
+            "name": "Notes",
+            "type": "string",
+            "format": "--notes {value}",
+            "help": "Notes about this lock."
+          },
+          {
+            "name": "Parent",
+            "type": "string",
+            "format": "--parent {value}",
+            "help": "The parent path (Ex: 'resA/myA/resB/myB')."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "help": "Name or ID of the resource being locked. If an ID is given, other resource arguments should not be given."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          }
+        ]
+      }
+    }
+  ],
+  "commonTaskProperties": [
+    {
+      "name": "Debug",
+      "type": "string",
+      "format": "--debug {value}",
+      "help": "Increase logging verbosity to show all debug logs."
+    },
+    {
+      "name": "Help",
+      "type": "string",
+      "format": "--help {value}",
+      "help": "Show this help message and exit."
+    },
+    {
+      "name": "Output",
+      "type": "Output",
+      "format": "--output {value}",
+      "help": "Output format."
+    },
+    {
+      "name": "Query",
+      "type": "string",
+      "format": "--query {value}",
+      "help": "JMESPath query string. See &lt;a href=\"http://jmespath.org/\"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples."
+    },
+    {
+      "name": "Verbose",
+      "type": "string",
+      "format": "--verbose {value}",
+      "help": "Increase logging verbosity. Use --debug for full debug logs."
+    }
+  ],
+  "enumerations": [
+    {
+      "name": "LockLockType",
+      "values": [
+        "cannotdelete",
+        "readonly"
+      ]
+    }
+  ]
+}

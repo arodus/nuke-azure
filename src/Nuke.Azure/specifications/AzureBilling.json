@@ -1,0 +1,144 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
+  "license": [
+    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Distributed under the MIT License.",
+    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+  ],
+  "references": [
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/billing.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/billing/enrollment-account.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/billing/invoice.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/billing/period.yml"
+  ],
+  "name": "AzureBilling",
+  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/billing.yml",
+  "help": "Manage Azure Billing.",
+  "pathExecutable": "az",
+  "tasks": [
+    {
+      "postfix": "",
+      "definiteArgument": "billing",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "EnrollmentAccountList",
+      "definiteArgument": "billing enrollment-account list",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "EnrollmentAccountShow",
+      "definiteArgument": "billing enrollment-account show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the enrollment account."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "InvoiceList",
+      "definiteArgument": "billing invoice list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "GenerateDownloadUrl",
+            "type": "string",
+            "format": "--generate-download-url {value}",
+            "help": "Generate download url of the invoice."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "InvoiceShow",
+      "definiteArgument": "billing invoice show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the invoice."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PeriodList",
+      "definiteArgument": "billing period list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "help": "May be used to filter billing periods by billingPeriodEndDate. The filter supports 'eq', 'lt', 'gt', 'le', 'ge', and 'and'. It does not currently support 'ne', 'or', or 'not'."
+          },
+          {
+            "name": "Skiptoken",
+            "type": "string",
+            "format": "--skiptoken {value}",
+            "help": "Skiptoken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skiptoken parameter that specifies a starting point to use for subsequent calls."
+          },
+          {
+            "name": "Top",
+            "type": "string",
+            "format": "--top {value}",
+            "help": "May be used to limit the number of results to the most recent N billing periods."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PeriodShow",
+      "definiteArgument": "billing period show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the billing period."
+          }
+        ]
+      }
+    }
+  ],
+  "commonTaskProperties": [
+    {
+      "name": "Debug",
+      "type": "string",
+      "format": "--debug {value}",
+      "help": "Increase logging verbosity to show all debug logs."
+    },
+    {
+      "name": "Help",
+      "type": "string",
+      "format": "--help {value}",
+      "help": "Show this help message and exit."
+    },
+    {
+      "name": "Output",
+      "type": "Output",
+      "format": "--output {value}",
+      "help": "Output format."
+    },
+    {
+      "name": "Query",
+      "type": "string",
+      "format": "--query {value}",
+      "help": "JMESPath query string. See &lt;a href=\"http://jmespath.org/\"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples."
+    },
+    {
+      "name": "Verbose",
+      "type": "string",
+      "format": "--verbose {value}",
+      "help": "Increase logging verbosity. Use --debug for full debug logs."
+    }
+  ]
+}

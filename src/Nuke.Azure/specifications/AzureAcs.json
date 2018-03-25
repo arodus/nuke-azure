@@ -1,0 +1,585 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
+  "license": [
+    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Distributed under the MIT License.",
+    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+  ],
+  "references": [
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/acs.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/acs/dcos.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/acs/kubernetes.yml"
+  ],
+  "name": "AzureAcs",
+  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/acs.yml",
+  "help": "Manage Azure Container Services.",
+  "pathExecutable": "az",
+  "tasks": [
+    {
+      "postfix": "Browse",
+      "definiteArgument": "acs browse",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": ""
+          },
+          {
+            "name": "DisableBrowser",
+            "type": "string",
+            "format": "--disable-browser {value}",
+            "help": "Do not open browser after opening a proxy to the cluster web user interface."
+          },
+          {
+            "name": "SshKeyFile",
+            "type": "string",
+            "format": "--ssh-key-file {value}",
+            "help": "If set a path to an SSH key to use, only applies to DCOS."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Create",
+      "definiteArgument": "acs create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "AdminPassword",
+            "type": "string",
+            "format": "--admin-password {value}",
+            "help": "The adminstration password for Windows nodes. Only available if --windows=true."
+          },
+          {
+            "name": "AdminUsername",
+            "type": "string",
+            "format": "--admin-username {value}",
+            "help": "User name for the Linux Virtual Machines."
+          },
+          {
+            "name": "AgentCount",
+            "type": "string",
+            "format": "--agent-count {value}",
+            "help": ""
+          },
+          {
+            "name": "AgentOsdiskSize",
+            "type": "string",
+            "format": "--agent-osdisk-size {value}",
+            "help": "Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2. Set the default disk size for agent pools vms. Unit in GB. Default: corresponding vmsize disk size."
+          },
+          {
+            "name": "AgentPorts",
+            "type": "string",
+            "format": "--agent-ports {value}",
+            "help": "Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2. Set the default ports exposed on the agent pools. Only usable for non-Kubernetes. Default: 8080,4000,80."
+          },
+          {
+            "name": "AgentProfiles",
+            "type": "string",
+            "format": "--agent-profiles {value}",
+            "help": "Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2. The file or dictionary representation of the agent profiles. Note it will override any agent settings once set."
+          },
+          {
+            "name": "AgentStorageProfile",
+            "type": "AcsCreateAgentStorageProfile",
+            "format": "--agent-storage-profile {value}",
+            "help": "Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2. Set default storage profile for agent pools. Default: varies based on Orchestrator."
+          },
+          {
+            "name": "AgentVmSize",
+            "type": "string",
+            "format": "--agent-vm-size {value}",
+            "help": "Set the default size for agent pools vms."
+          },
+          {
+            "name": "AgentVnetSubnetId",
+            "type": "string",
+            "format": "--agent-vnet-subnet-id {value}",
+            "help": "Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2. Set the default custom vnet subnet id for agent pools. Note agent need to used the same vnet if master set. Default: \"\"."
+          },
+          {
+            "name": "ApiVersion",
+            "type": "string",
+            "format": "--api-version {value}",
+            "help": "Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2. Use API version of ACS to perform az acs operations. Available options: 2017-01-31, 2017-07-01. Default: the latest version for the location."
+          },
+          {
+            "name": "ClientSecret",
+            "type": "string",
+            "format": "--client-secret {value}",
+            "help": ""
+          },
+          {
+            "name": "DnsPrefix",
+            "type": "string",
+            "format": "--dns-prefix {value}",
+            "help": "Sets the Domain name prefix for the cluster. The concatenation of the domain name and the regionalized DNS zone make up the fully qualified domain name associated with the public IP address."
+          },
+          {
+            "name": "GenerateSshKeys",
+            "type": "string",
+            "format": "--generate-ssh-keys {value}",
+            "help": "Generate SSH public and private key files if missing."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "MasterCount",
+            "type": "string",
+            "format": "--master-count {value}",
+            "help": "The number of masters for the cluster."
+          },
+          {
+            "name": "MasterFirstConsecutiveStaticIp",
+            "type": "string",
+            "format": "--master-first-consecutive-static-ip {value}",
+            "help": "Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2. The first consecutive ip used to specify static ip block."
+          },
+          {
+            "name": "MasterOsdiskSize",
+            "type": "string",
+            "format": "--master-osdisk-size {value}",
+            "help": "Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2. The disk size for master pool vms. Unit in GB. Default: corresponding vmsize disk size."
+          },
+          {
+            "name": "MasterProfile",
+            "type": "string",
+            "format": "--master-profile {value}",
+            "help": "Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2. The file or dictionary representation of the master profile. Note it will override any master settings once set."
+          },
+          {
+            "name": "MasterStorageProfile",
+            "type": "AcsCreateAgentStorageProfile",
+            "format": "--master-storage-profile {value}",
+            "help": "Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2. Default: varies based on Orchestrator."
+          },
+          {
+            "name": "MasterVmSize",
+            "type": "string",
+            "format": "--master-vm-size {value}",
+            "help": "Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2."
+          },
+          {
+            "name": "MasterVnetSubnetId",
+            "type": "string",
+            "format": "--master-vnet-subnet-id {value}",
+            "help": "Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2. The custom vnet subnet id. Note agent need to used the same vnet if master set. Default: \"\"."
+          },
+          {
+            "name": "NoWait",
+            "type": "string",
+            "format": "--no-wait {value}",
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "OrchestratorType",
+            "type": "AcsCreateOrchestratorType",
+            "format": "--orchestrator-type {value}",
+            "help": "The type of orchestrator used to manage the applications on the cluster."
+          },
+          {
+            "name": "OrchestratorVersion",
+            "type": "string",
+            "format": "--orchestrator-version {value}",
+            "help": "Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2. Use Orchestrator Version to specify the semantic version for your choice of orchestrator."
+          },
+          {
+            "name": "ServicePrincipal",
+            "type": "bool",
+            "format": "--service-principal",
+            "help": ""
+          },
+          {
+            "name": "SshKeyValue",
+            "type": "string",
+            "format": "--ssh-key-value {value}",
+            "help": "Configure all linux machines with the SSH RSA public key string.  Your key should include three parts, for example 'ssh-rsa AAAAB...snip...UcyupgH azureuser@linuxvm."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Validate",
+            "type": "string",
+            "format": "--validate {value}",
+            "help": "Generate and validate the ARM template without creating any resources."
+          },
+          {
+            "name": "Windows",
+            "type": "string",
+            "format": "--windows {value}",
+            "help": "If true, set the default osType of agent pools to be Windows."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Delete",
+      "definiteArgument": "acs delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "help": "Do not prompt for confirmation."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "List",
+      "definiteArgument": "acs list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ListLocations",
+      "definiteArgument": "acs list-locations",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "Scale",
+      "definiteArgument": "acs scale",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "NewAgentCount",
+            "type": "string",
+            "format": "--new-agent-count {value}",
+            "help": ""
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Show",
+      "definiteArgument": "acs show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Wait",
+      "definiteArgument": "acs wait",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Created",
+            "type": "string",
+            "format": "--created {value}",
+            "help": "Wait until created with 'provisioningState' at 'Succeeded'."
+          },
+          {
+            "name": "Custom",
+            "type": "string",
+            "format": "--custom {value}",
+            "help": "Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running']."
+          },
+          {
+            "name": "Deleted",
+            "type": "string",
+            "format": "--deleted {value}",
+            "help": "Wait until deleted."
+          },
+          {
+            "name": "Exists",
+            "type": "string",
+            "format": "--exists {value}",
+            "help": "Wait until the resource exists."
+          },
+          {
+            "name": "Interval",
+            "type": "string",
+            "format": "--interval {value}",
+            "help": "Polling interval in seconds."
+          },
+          {
+            "name": "Timeout",
+            "type": "string",
+            "format": "--timeout {value}",
+            "help": "Maximum wait in seconds."
+          },
+          {
+            "name": "Updated",
+            "type": "string",
+            "format": "--updated {value}",
+            "help": "Wait until updated with provisioningState at 'Succeeded'."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DcosBrowse",
+      "definiteArgument": "acs dcos browse",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": ""
+          },
+          {
+            "name": "DisableBrowser",
+            "type": "string",
+            "format": "--disable-browser {value}",
+            "help": "Do not open browser after opening a proxy to the cluster web user interface."
+          },
+          {
+            "name": "SshKeyFile",
+            "type": "string",
+            "format": "--ssh-key-file {value}",
+            "help": "Path to an SSH key file to use."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DcosInstallCli",
+      "definiteArgument": "acs dcos install-cli",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ClientVersion",
+            "type": "string",
+            "format": "--client-version {value}",
+            "help": ""
+          },
+          {
+            "name": "InstallLocation",
+            "type": "string",
+            "format": "--install-location {value}",
+            "help": ""
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "KubernetesBrowse",
+      "definiteArgument": "acs kubernetes browse",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": ""
+          },
+          {
+            "name": "DisableBrowser",
+            "type": "string",
+            "format": "--disable-browser {value}",
+            "help": "Do not open browser after opening a proxy to the cluster web user interface."
+          },
+          {
+            "name": "SshKeyFile",
+            "type": "string",
+            "format": "--ssh-key-file {value}",
+            "help": ""
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "KubernetesGetCredentials",
+      "definiteArgument": "acs kubernetes get-credentials",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "File",
+            "type": "string",
+            "format": "--file {value}",
+            "help": "Where to install the kubectl config file."
+          },
+          {
+            "name": "SshKeyFile",
+            "type": "string",
+            "format": "--ssh-key-file {value}",
+            "help": "Path to an SSH key file to use."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "KubernetesInstallCli",
+      "definiteArgument": "acs kubernetes install-cli",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ClientVersion",
+            "type": "string",
+            "format": "--client-version {value}",
+            "help": ""
+          },
+          {
+            "name": "InstallLocation",
+            "type": "string",
+            "format": "--install-location {value}",
+            "help": ""
+          }
+        ]
+      }
+    }
+  ],
+  "commonTaskProperties": [
+    {
+      "name": "Debug",
+      "type": "string",
+      "format": "--debug {value}",
+      "help": "Increase logging verbosity to show all debug logs."
+    },
+    {
+      "name": "Help",
+      "type": "string",
+      "format": "--help {value}",
+      "help": "Show this help message and exit."
+    },
+    {
+      "name": "Output",
+      "type": "Output",
+      "format": "--output {value}",
+      "help": "Output format."
+    },
+    {
+      "name": "Query",
+      "type": "string",
+      "format": "--query {value}",
+      "help": "JMESPath query string. See &lt;a href=\"http://jmespath.org/\"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples."
+    },
+    {
+      "name": "Verbose",
+      "type": "string",
+      "format": "--verbose {value}",
+      "help": "Increase logging verbosity. Use --debug for full debug logs."
+    }
+  ],
+  "enumerations": [
+    {
+      "name": "AcsCreateAgentStorageProfile",
+      "values": [
+        "manageddisks",
+        "storageaccount"
+      ]
+    },
+    {
+      "name": "AcsCreateOrchestratorType",
+      "values": [
+        "custom",
+        "dcos",
+        "dockerce",
+        "kubernetes",
+        "swarm"
+      ]
+    }
+  ]
+}

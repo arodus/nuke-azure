@@ -1,0 +1,351 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
+  "license": [
+    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Distributed under the MIT License.",
+    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+  ],
+  "references": [
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cloud.yml"
+  ],
+  "name": "AzureCloud",
+  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cloud.yml",
+  "help": "Manage registered Azure clouds.",
+  "pathExecutable": "az",
+  "tasks": [
+    {
+      "postfix": "List",
+      "definiteArgument": "cloud list",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "ListProfiles",
+      "definiteArgument": "cloud list-profiles",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of a registered cloud."
+          },
+          {
+            "name": "ShowAll",
+            "type": "string",
+            "format": "--show-all {value}",
+            "help": "Show all available profiles supported in the CLI."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Register",
+      "definiteArgument": "cloud register",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of a registered cloud."
+          },
+          {
+            "name": "CloudConfig",
+            "type": "string",
+            "format": "--cloud-config {value}",
+            "help": "JSON encoded cloud configuration. Use @{file} to load from a file."
+          },
+          {
+            "name": "EndpointActiveDirectory",
+            "type": "string",
+            "format": "--endpoint-active-directory {value}",
+            "help": "The Active Directory login endpoint."
+          },
+          {
+            "name": "EndpointActiveDirectoryDataLakeResourceId",
+            "type": "string",
+            "format": "--endpoint-active-directory-data-lake-resource-id {value}",
+            "help": "The Active Directory resource ID for data lake services."
+          },
+          {
+            "name": "EndpointActiveDirectoryGraphResourceId",
+            "type": "string",
+            "format": "--endpoint-active-directory-graph-resource-id {value}",
+            "help": "The Active Directory resource ID."
+          },
+          {
+            "name": "EndpointActiveDirectoryResourceId",
+            "type": "string",
+            "format": "--endpoint-active-directory-resource-id {value}",
+            "help": "The resource ID to obtain AD tokens for."
+          },
+          {
+            "name": "EndpointGallery",
+            "type": "string",
+            "format": "--endpoint-gallery {value}",
+            "help": "The template gallery endpoint."
+          },
+          {
+            "name": "EndpointManagement",
+            "type": "string",
+            "format": "--endpoint-management {value}",
+            "help": "The management service endpoint."
+          },
+          {
+            "name": "EndpointResourceManager",
+            "type": "string",
+            "format": "--endpoint-resource-manager {value}",
+            "help": "The resource management endpoint."
+          },
+          {
+            "name": "EndpointSqlManagement",
+            "type": "string",
+            "format": "--endpoint-sql-management {value}",
+            "help": "The sql server management endpoint."
+          },
+          {
+            "name": "EndpointVmImageAliasDoc",
+            "type": "string",
+            "format": "--endpoint-vm-image-alias-doc {value}",
+            "help": "The uri of the document which caches commonly used virtual machine images."
+          },
+          {
+            "name": "Profile",
+            "type": "CloudProfile",
+            "format": "--profile {value}",
+            "help": "Profile to use for this cloud."
+          },
+          {
+            "name": "SuffixAzureDatalakeAnalyticsCatalogAndJobEndpoint",
+            "type": "string",
+            "format": "--suffix-azure-datalake-analytics-catalog-and-job-endpoint {value}",
+            "help": "The Data Lake analytics job and catalog service dns suffix."
+          },
+          {
+            "name": "SuffixAzureDatalakeStoreFileSystemEndpoint",
+            "type": "string",
+            "format": "--suffix-azure-datalake-store-file-system-endpoint {value}",
+            "help": "The Data Lake store filesystem service dns suffix."
+          },
+          {
+            "name": "SuffixKeyvaultDns",
+            "type": "string",
+            "format": "--suffix-keyvault-dns {value}",
+            "help": "The Key Vault service dns suffix."
+          },
+          {
+            "name": "SuffixSqlServerHostname",
+            "type": "string",
+            "format": "--suffix-sql-server-hostname {value}",
+            "help": "The dns suffix for sql servers."
+          },
+          {
+            "name": "SuffixStorageEndpoint",
+            "type": "string",
+            "format": "--suffix-storage-endpoint {value}",
+            "help": "The endpoint suffix for storage accounts."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Set",
+      "definiteArgument": "cloud set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of a registered cloud."
+          },
+          {
+            "name": "Profile",
+            "type": "CloudProfile",
+            "format": "--profile {value}",
+            "help": "Profile to use for this cloud."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Show",
+      "definiteArgument": "cloud show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of a registered cloud."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Unregister",
+      "definiteArgument": "cloud unregister",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of a registered cloud."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Update",
+      "definiteArgument": "cloud update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CloudConfig",
+            "type": "string",
+            "format": "--cloud-config {value}",
+            "help": "JSON encoded cloud configuration. Use @{file} to load from a file."
+          },
+          {
+            "name": "EndpointActiveDirectory",
+            "type": "string",
+            "format": "--endpoint-active-directory {value}",
+            "help": "The Active Directory login endpoint."
+          },
+          {
+            "name": "EndpointActiveDirectoryDataLakeResourceId",
+            "type": "string",
+            "format": "--endpoint-active-directory-data-lake-resource-id {value}",
+            "help": "The Active Directory resource ID for data lake services."
+          },
+          {
+            "name": "EndpointActiveDirectoryGraphResourceId",
+            "type": "string",
+            "format": "--endpoint-active-directory-graph-resource-id {value}",
+            "help": "The Active Directory resource ID."
+          },
+          {
+            "name": "EndpointActiveDirectoryResourceId",
+            "type": "string",
+            "format": "--endpoint-active-directory-resource-id {value}",
+            "help": "The resource ID to obtain AD tokens for."
+          },
+          {
+            "name": "EndpointGallery",
+            "type": "string",
+            "format": "--endpoint-gallery {value}",
+            "help": "The template gallery endpoint."
+          },
+          {
+            "name": "EndpointManagement",
+            "type": "string",
+            "format": "--endpoint-management {value}",
+            "help": "The management service endpoint."
+          },
+          {
+            "name": "EndpointResourceManager",
+            "type": "string",
+            "format": "--endpoint-resource-manager {value}",
+            "help": "The resource management endpoint."
+          },
+          {
+            "name": "EndpointSqlManagement",
+            "type": "string",
+            "format": "--endpoint-sql-management {value}",
+            "help": "The sql server management endpoint."
+          },
+          {
+            "name": "EndpointVmImageAliasDoc",
+            "type": "string",
+            "format": "--endpoint-vm-image-alias-doc {value}",
+            "help": "The uri of the document which caches commonly used virtual machine images."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of a registered cloud."
+          },
+          {
+            "name": "Profile",
+            "type": "CloudProfile",
+            "format": "--profile {value}",
+            "help": "Profile to use for this cloud."
+          },
+          {
+            "name": "SuffixAzureDatalakeAnalyticsCatalogAndJobEndpoint",
+            "type": "string",
+            "format": "--suffix-azure-datalake-analytics-catalog-and-job-endpoint {value}",
+            "help": "The Data Lake analytics job and catalog service dns suffix."
+          },
+          {
+            "name": "SuffixAzureDatalakeStoreFileSystemEndpoint",
+            "type": "string",
+            "format": "--suffix-azure-datalake-store-file-system-endpoint {value}",
+            "help": "The Data Lake store filesystem service dns suffix."
+          },
+          {
+            "name": "SuffixKeyvaultDns",
+            "type": "string",
+            "format": "--suffix-keyvault-dns {value}",
+            "help": "The Key Vault service dns suffix."
+          },
+          {
+            "name": "SuffixSqlServerHostname",
+            "type": "string",
+            "format": "--suffix-sql-server-hostname {value}",
+            "help": "The dns suffix for sql servers."
+          },
+          {
+            "name": "SuffixStorageEndpoint",
+            "type": "string",
+            "format": "--suffix-storage-endpoint {value}",
+            "help": "The endpoint suffix for storage accounts."
+          }
+        ]
+      }
+    }
+  ],
+  "commonTaskProperties": [
+    {
+      "name": "Debug",
+      "type": "string",
+      "format": "--debug {value}",
+      "help": "Increase logging verbosity to show all debug logs."
+    },
+    {
+      "name": "Help",
+      "type": "string",
+      "format": "--help {value}",
+      "help": "Show this help message and exit."
+    },
+    {
+      "name": "Output",
+      "type": "Output",
+      "format": "--output {value}",
+      "help": "Output format."
+    },
+    {
+      "name": "Query",
+      "type": "string",
+      "format": "--query {value}",
+      "help": "JMESPath query string. See &lt;a href=\"http://jmespath.org/\"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples."
+    },
+    {
+      "name": "Verbose",
+      "type": "string",
+      "format": "--verbose {value}",
+      "help": "Increase logging verbosity. Use --debug for full debug logs."
+    }
+  ],
+  "enumerations": [
+    {
+      "name": "CloudProfile",
+      "values": [
+        "2017-03-09-profile",
+        "latest"
+      ]
+    }
+  ]
+}

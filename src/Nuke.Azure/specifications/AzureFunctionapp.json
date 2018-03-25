@@ -1,0 +1,975 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
+  "license": [
+    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Distributed under the MIT License.",
+    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+  ],
+  "references": [
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp/config.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp/deployment.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp/identity.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp/config/appsettings.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp/config/hostname.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp/config/ssl.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp/deployment/source.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp/deployment/user.yml"
+  ],
+  "name": "AzureFunctionapp",
+  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml",
+  "help": "Manage function apps.",
+  "pathExecutable": "az",
+  "tasks": [
+    {
+      "postfix": "AssignIdentity",
+      "definiteArgument": "functionapp assign-identity",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "DisableMsi",
+            "type": "string",
+            "format": "--disable-msi {value}",
+            "help": ""
+          },
+          {
+            "name": "Role",
+            "type": "string",
+            "format": "--role {value}",
+            "help": ""
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "format": "--scope {value}",
+            "help": ""
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Create",
+      "definiteArgument": "functionapp create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "StorageAccount",
+            "type": "string",
+            "format": "--storage-account {value}",
+            "help": "Provide a string value of a Storage Account in the provided Resource Group. Or Resource ID of a Storage Account in a different Resource Group."
+          },
+          {
+            "name": "ConsumptionPlanLocation",
+            "type": "string",
+            "format": "--consumption-plan-location {value}",
+            "help": "Geographic location where Function App will be hosted. Use 'functionapp list-consumption-locations' to view available locations."
+          },
+          {
+            "name": "DeploymentContainerImageName",
+            "type": "string",
+            "format": "--deployment-container-image-name {value}",
+            "help": "Linux only. Container image name from Docker Hub, e.g. publisher/image-name:tag."
+          },
+          {
+            "name": "DeploymentLocalGit",
+            "type": "string",
+            "format": "--deployment-local-git {value}",
+            "help": "Enable local git."
+          },
+          {
+            "name": "DeploymentSourceBranch",
+            "type": "string",
+            "format": "--deployment-source-branch {value}",
+            "help": "The branch to deploy."
+          },
+          {
+            "name": "DeploymentSourceUrl",
+            "type": "string",
+            "format": "--deployment-source-url {value}",
+            "help": "Git repository URL to link with manual integration."
+          },
+          {
+            "name": "Plan",
+            "type": "string",
+            "format": "--plan {value}",
+            "help": "Name or resource id of the function app service plan. Use 'appservice plan create' to get one."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Delete",
+      "definiteArgument": "functionapp delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "List",
+      "definiteArgument": "functionapp list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ListConsumptionLocations",
+      "definiteArgument": "functionapp list-consumption-locations",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "Restart",
+      "definiteArgument": "functionapp restart",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Show",
+      "definiteArgument": "functionapp show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Start",
+      "definiteArgument": "functionapp start",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Stop",
+      "definiteArgument": "functionapp stop",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Config",
+      "definiteArgument": "functionapp config",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "DeploymentListPublishingProfiles",
+      "definiteArgument": "functionapp deployment list-publishing-profiles",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "IdentityAssign",
+      "definiteArgument": "functionapp identity assign",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "DisableMsi",
+            "type": "string",
+            "format": "--disable-msi {value}",
+            "help": "Disable the identity."
+          },
+          {
+            "name": "Role",
+            "type": "string",
+            "format": "--role {value}",
+            "help": "Role name or id the managed identity will be assigned."
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "format": "--scope {value}",
+            "help": "The scope the managed identity has access to."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "IdentityShow",
+      "definiteArgument": "functionapp identity show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigAppsettingsDelete",
+      "definiteArgument": "functionapp config appsettings delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "SettingNames",
+            "type": "string",
+            "format": "--setting-names {value}",
+            "help": "Space-separated app setting names."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigAppsettingsList",
+      "definiteArgument": "functionapp config appsettings list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigAppsettingsSet",
+      "definiteArgument": "functionapp config appsettings set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Settings",
+            "type": "string",
+            "format": "--settings {value}",
+            "help": "Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;."
+          },
+          {
+            "name": "SlotSettings",
+            "type": "string",
+            "format": "--slot-settings {value}",
+            "help": ""
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigHostnameAdd",
+      "definiteArgument": "functionapp config hostname add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Hostname",
+            "type": "string",
+            "format": "--hostname {value}",
+            "help": "Hostname assigned to the site, such as custom domains."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigHostnameDelete",
+      "definiteArgument": "functionapp config hostname delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Hostname",
+            "type": "string",
+            "format": "--hostname {value}",
+            "help": "Hostname assigned to the site, such as custom domains."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigHostnameGetExternalIp",
+      "definiteArgument": "functionapp config hostname get-external-ip",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigHostnameList",
+      "definiteArgument": "functionapp config hostname list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigSslBind",
+      "definiteArgument": "functionapp config ssl bind",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CertificateThumbprint",
+            "type": "string",
+            "format": "--certificate-thumbprint {value}",
+            "help": "The ssl cert thumbprint."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "SslType",
+            "type": "FunctionappConfigSslBindSslType",
+            "format": "--ssl-type {value}",
+            "help": "The ssl cert type."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigSslDelete",
+      "definiteArgument": "functionapp config ssl delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CertificateThumbprint",
+            "type": "string",
+            "format": "--certificate-thumbprint {value}",
+            "help": "The ssl cert thumbprint."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigSslList",
+      "definiteArgument": "functionapp config ssl list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigSslUnbind",
+      "definiteArgument": "functionapp config ssl unbind",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CertificateThumbprint",
+            "type": "string",
+            "format": "--certificate-thumbprint {value}",
+            "help": "The ssl cert thumbprint."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigSslUpload",
+      "definiteArgument": "functionapp config ssl upload",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CertificateFile",
+            "type": "string",
+            "format": "--certificate-file {value}",
+            "help": "The filepath for the .pfx file."
+          },
+          {
+            "name": "CertificatePassword",
+            "type": "string",
+            "format": "--certificate-password {value}",
+            "help": "The ssl cert password."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentSourceConfig",
+      "definiteArgument": "functionapp deployment source config",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "RepoUrl",
+            "type": "string",
+            "format": "--repo-url {value}",
+            "help": "Repository url to pull the latest source from, e.g. &lt;a href=\"https://github.com/foo/foo-web\"&gt;https://github.com/foo/foo-web&lt;/a&gt;."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Branch",
+            "type": "string",
+            "format": "--branch {value}",
+            "help": "The branch name of the repository."
+          },
+          {
+            "name": "GitToken",
+            "type": "string",
+            "format": "--git-token {value}",
+            "help": "Git access token required for auto sync."
+          },
+          {
+            "name": "ManualIntegration",
+            "type": "string",
+            "format": "--manual-integration {value}",
+            "help": "Disable automatic sync between source control and web."
+          },
+          {
+            "name": "RepositoryType",
+            "type": "FunctionappDeploymentSourceConfigRepositoryType",
+            "format": "--repository-type {value}",
+            "help": "Repository type."
+          },
+          {
+            "name": "AppWorkingDir",
+            "type": "string",
+            "format": "--app-working-dir {value}",
+            "help": "Working directory of the application. Default will be root of the repo."
+          },
+          {
+            "name": "CdAccountCreate",
+            "type": "string",
+            "format": "--cd-account-create {value}",
+            "help": "To create a new Visual Studio Team Services (VSTS) account if it doesn't exist already."
+          },
+          {
+            "name": "CdAppType",
+            "type": "FunctionappDeploymentSourceConfigCdAppType",
+            "format": "--cd-app-type {value}",
+            "help": "Web application framework you used to develop your app. Default is AspNet."
+          },
+          {
+            "name": "CdProjectUrl",
+            "type": "string",
+            "format": "--cd-project-url {value}",
+            "help": "URL of the Visual Studio Team Services (VSTS) project to use for continuous delivery. URL should be in format https://&amp;lt;accountname&amp;gt;.visualstudio.com/&amp;lt;projectname&amp;gt;."
+          },
+          {
+            "name": "NodejsTaskRunner",
+            "type": "FunctionappDeploymentSourceConfigNodejsTaskRunner",
+            "format": "--nodejs-task-runner {value}",
+            "help": "Task runner for nodejs. Default is None."
+          },
+          {
+            "name": "PrivateRepoPassword",
+            "type": "string",
+            "format": "--private-repo-password {value}",
+            "help": "Password for the private repository."
+          },
+          {
+            "name": "PrivateRepoUsername",
+            "type": "string",
+            "format": "--private-repo-username {value}",
+            "help": "Username for the private repository."
+          },
+          {
+            "name": "PythonFramework",
+            "type": "FunctionappDeploymentSourceConfigPythonFramework",
+            "format": "--python-framework {value}",
+            "help": "Framework used for Python application. Default is Django."
+          },
+          {
+            "name": "PythonVersion",
+            "type": "FunctionappDeploymentSourceConfigPythonVersion",
+            "format": "--python-version {value}",
+            "help": "Python version used for application. Default is Python 3.5.3 x86."
+          },
+          {
+            "name": "SlotSwap",
+            "type": "string",
+            "format": "--slot-swap {value}",
+            "help": "Name of the slot to be used for deployment and later promote to production. If slot is not available, it will be created. Default: Not configured."
+          },
+          {
+            "name": "Test",
+            "type": "string",
+            "format": "--test {value}",
+            "help": "Name of the web app to be used for load testing. If web app is not available, it will be created. Default: Disable."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentSourceConfigLocalGit",
+      "definiteArgument": "functionapp deployment source config-local-git",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentSourceConfigZip",
+      "definiteArgument": "functionapp deployment source config-zip",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Src",
+            "type": "string",
+            "format": "--src {value}",
+            "help": ""
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentSourceDelete",
+      "definiteArgument": "functionapp deployment source delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentSourceShow",
+      "definiteArgument": "functionapp deployment source show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentSourceSync",
+      "definiteArgument": "functionapp deployment source sync",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentSourceUpdateToken",
+      "definiteArgument": "functionapp deployment source update-token",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "GitToken",
+            "type": "string",
+            "format": "--git-token {value}",
+            "help": "Git access token required for auto sync."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentUserSet",
+      "definiteArgument": "functionapp deployment user set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "UserName",
+            "type": "string",
+            "format": "--user-name {value}",
+            "help": "User name."
+          },
+          {
+            "name": "Password",
+            "type": "string",
+            "format": "--password {value}",
+            "help": "Password, will prompt if not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentUserShow",
+      "definiteArgument": "functionapp deployment user show",
+      "settingsClass": {}
+    }
+  ],
+  "commonTaskProperties": [
+    {
+      "name": "Debug",
+      "type": "string",
+      "format": "--debug {value}",
+      "help": "Increase logging verbosity to show all debug logs."
+    },
+    {
+      "name": "Help",
+      "type": "string",
+      "format": "--help {value}",
+      "help": "Show this help message and exit."
+    },
+    {
+      "name": "Output",
+      "type": "Output",
+      "format": "--output {value}",
+      "help": "Output format."
+    },
+    {
+      "name": "Query",
+      "type": "string",
+      "format": "--query {value}",
+      "help": "JMESPath query string. See &lt;a href=\"http://jmespath.org/\"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples."
+    },
+    {
+      "name": "Verbose",
+      "type": "string",
+      "format": "--verbose {value}",
+      "help": "Increase logging verbosity. Use --debug for full debug logs."
+    }
+  ],
+  "enumerations": [
+    {
+      "name": "FunctionappConfigSslBindSslType",
+      "values": [
+        "ip",
+        "sni"
+      ]
+    },
+    {
+      "name": "FunctionappDeploymentSourceConfigRepositoryType",
+      "values": [
+        "externalgit",
+        "git",
+        "github",
+        "localgit",
+        "mercurial",
+        "vsts"
+      ]
+    },
+    {
+      "name": "FunctionappDeploymentSourceConfigCdAppType",
+      "values": [
+        "aspnet",
+        "aspnetcore",
+        "nodejs",
+        "php",
+        "python"
+      ]
+    },
+    {
+      "name": "FunctionappDeploymentSourceConfigNodejsTaskRunner",
+      "values": [
+        "grunt",
+        "gulp",
+        "none"
+      ]
+    },
+    {
+      "name": "FunctionappDeploymentSourceConfigPythonFramework",
+      "values": [
+        "bottle",
+        "django",
+        "flask"
+      ]
+    },
+    {
+      "name": "FunctionappDeploymentSourceConfigPythonVersion",
+      "values": [
+        "python 2.7.12 x64",
+        "python 2.7.12 x86",
+        "python 2.7.13 x64",
+        "python 2.7.13 x86",
+        "python 3.5.3 x64",
+        "python 3.5.3 x86",
+        "python 3.6.0 x64",
+        "python 3.6.0 x86",
+        "python 3.6.1 x86",
+        "python 3.6.2 x64"
+      ]
+    }
+  ]
+}

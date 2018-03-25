@@ -1,0 +1,706 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
+  "license": [
+    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Distributed under the MIT License.",
+    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+  ],
+  "references": [
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/group.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/group/deployment.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/group/lock.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/group/deployment/operation.yml"
+  ],
+  "name": "AzureGroup",
+  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/group.yml",
+  "help": "Manage resource groups and template deployments.",
+  "pathExecutable": "az",
+  "tasks": [
+    {
+      "postfix": "Create",
+      "definiteArgument": "group create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the new resource group."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Delete",
+      "definiteArgument": "group delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "NoWait",
+            "type": "string",
+            "format": "--no-wait {value}",
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "help": "Do not prompt for confirmation."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Exists",
+      "definiteArgument": "group exists",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Export",
+      "definiteArgument": "group export",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "IncludeComments",
+            "type": "string",
+            "format": "--include-comments {value}",
+            "help": "Export template with comments."
+          },
+          {
+            "name": "IncludeParameterDefaultValue",
+            "type": "string",
+            "format": "--include-parameter-default-value {value}",
+            "help": "Export template parameter with default value."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "List",
+      "definiteArgument": "group list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Tag",
+            "type": "string",
+            "format": "--tag {value}",
+            "help": "A single tag in 'key[=value]' format. Use \"\" to clear existing tags."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Show",
+      "definiteArgument": "group show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Update",
+      "definiteArgument": "group update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Wait",
+      "definiteArgument": "group wait",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Created",
+            "type": "string",
+            "format": "--created {value}",
+            "help": "Wait until created with 'provisioningState' at 'Succeeded'."
+          },
+          {
+            "name": "Custom",
+            "type": "string",
+            "format": "--custom {value}",
+            "help": "Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running']."
+          },
+          {
+            "name": "Deleted",
+            "type": "string",
+            "format": "--deleted {value}",
+            "help": "Wait until deleted."
+          },
+          {
+            "name": "Exists",
+            "type": "string",
+            "format": "--exists {value}",
+            "help": "Wait until the resource exists."
+          },
+          {
+            "name": "Interval",
+            "type": "string",
+            "format": "--interval {value}",
+            "help": "Polling interval in seconds."
+          },
+          {
+            "name": "Timeout",
+            "type": "string",
+            "format": "--timeout {value}",
+            "help": "Maximum wait in seconds."
+          },
+          {
+            "name": "Updated",
+            "type": "string",
+            "format": "--updated {value}",
+            "help": "Wait until updated with provisioningState at 'Succeeded'."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentCreate",
+      "definiteArgument": "group deployment create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Mode",
+            "type": "GroupDeploymentMode",
+            "format": "--mode {value}",
+            "help": "Incremental (only add resources to resource group) or Complete (remove extra resources from resource group)."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The deployment name. Default to template file base name."
+          },
+          {
+            "name": "NoWait",
+            "type": "string",
+            "format": "--no-wait {value}",
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "Parameters",
+            "type": "string",
+            "format": "--parameters {value}",
+            "help": "Supply deployment parameter values."
+          },
+          {
+            "name": "TemplateFile",
+            "type": "string",
+            "format": "--template-file {value}",
+            "help": "A template file path in the file system."
+          },
+          {
+            "name": "TemplateUri",
+            "type": "string",
+            "format": "--template-uri {value}",
+            "help": "A uri to a remote template file."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentDelete",
+      "definiteArgument": "group deployment delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The deployment name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentExport",
+      "definiteArgument": "group deployment export",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The deployment name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentList",
+      "definiteArgument": "group deployment list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "help": "The filter to apply on the operation. For example, you can use $filter=provisioningState eq '{state}'."
+          },
+          {
+            "name": "Top",
+            "type": "string",
+            "format": "--top {value}",
+            "help": "The number of results to get. If null is passed, returns all deployments."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentShow",
+      "definiteArgument": "group deployment show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The deployment name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentValidate",
+      "definiteArgument": "group deployment validate",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Mode",
+            "type": "GroupDeploymentMode",
+            "format": "--mode {value}",
+            "help": "Incremental (only add resources to resource group) or Complete (remove extra resources from resource group)."
+          },
+          {
+            "name": "Parameters",
+            "type": "string",
+            "format": "--parameters {value}",
+            "help": "Supply deployment parameter values."
+          },
+          {
+            "name": "TemplateFile",
+            "type": "string",
+            "format": "--template-file {value}",
+            "help": "A template file path in the file system."
+          },
+          {
+            "name": "TemplateUri",
+            "type": "string",
+            "format": "--template-uri {value}",
+            "help": "A uri to a remote template file."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentWait",
+      "definiteArgument": "group deployment wait",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The deployment name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Created",
+            "type": "string",
+            "format": "--created {value}",
+            "help": "Wait until created with 'provisioningState' at 'Succeeded'."
+          },
+          {
+            "name": "Custom",
+            "type": "string",
+            "format": "--custom {value}",
+            "help": "Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running']."
+          },
+          {
+            "name": "Deleted",
+            "type": "string",
+            "format": "--deleted {value}",
+            "help": "Wait until deleted."
+          },
+          {
+            "name": "Exists",
+            "type": "string",
+            "format": "--exists {value}",
+            "help": "Wait until the resource exists."
+          },
+          {
+            "name": "Interval",
+            "type": "string",
+            "format": "--interval {value}",
+            "help": "Polling interval in seconds."
+          },
+          {
+            "name": "Timeout",
+            "type": "string",
+            "format": "--timeout {value}",
+            "help": "Maximum wait in seconds."
+          },
+          {
+            "name": "Updated",
+            "type": "string",
+            "format": "--updated {value}",
+            "help": "Wait until updated with provisioningState at 'Succeeded'."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LockCreate",
+      "definiteArgument": "group lock create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LockType",
+            "type": "GroupLockLockType",
+            "format": "--lock-type {value}",
+            "help": ""
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the lock."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Notes",
+            "type": "string",
+            "format": "--notes {value}",
+            "help": "Notes about this lock."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LockDelete",
+      "definiteArgument": "group lock delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "string",
+            "format": "--ids {value}",
+            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the lock."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LockList",
+      "definiteArgument": "group lock list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "FilterString",
+            "type": "string",
+            "format": "--filter-string {value}",
+            "help": "A query filter to use to restrict the results."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LockShow",
+      "definiteArgument": "group lock show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "string",
+            "format": "--ids {value}",
+            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the lock."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LockUpdate",
+      "definiteArgument": "group lock update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "string",
+            "format": "--ids {value}",
+            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
+          },
+          {
+            "name": "LockType",
+            "type": "GroupLockLockType",
+            "format": "--lock-type {value}",
+            "help": ""
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the lock."
+          },
+          {
+            "name": "Notes",
+            "type": "string",
+            "format": "--notes {value}",
+            "help": "Notes about this lock."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentOperationList",
+      "definiteArgument": "group deployment operation list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The deployment name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Top",
+            "type": "string",
+            "format": "--top {value}",
+            "help": "The number of results to return."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentOperationShow",
+      "definiteArgument": "group deployment operation show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The deployment name."
+          },
+          {
+            "name": "OperationIds",
+            "type": "string",
+            "format": "--operation-ids {value}",
+            "help": "A list of operation ids to show."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    }
+  ],
+  "commonTaskProperties": [
+    {
+      "name": "Debug",
+      "type": "string",
+      "format": "--debug {value}",
+      "help": "Increase logging verbosity to show all debug logs."
+    },
+    {
+      "name": "Help",
+      "type": "string",
+      "format": "--help {value}",
+      "help": "Show this help message and exit."
+    },
+    {
+      "name": "Output",
+      "type": "Output",
+      "format": "--output {value}",
+      "help": "Output format."
+    },
+    {
+      "name": "Query",
+      "type": "string",
+      "format": "--query {value}",
+      "help": "JMESPath query string. See &lt;a href=\"http://jmespath.org/\"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples."
+    },
+    {
+      "name": "Verbose",
+      "type": "string",
+      "format": "--verbose {value}",
+      "help": "Increase logging verbosity. Use --debug for full debug logs."
+    }
+  ],
+  "enumerations": [
+    {
+      "name": "GroupDeploymentMode",
+      "values": [
+        "complete",
+        "incremental"
+      ]
+    },
+    {
+      "name": "GroupLockLockType",
+      "values": [
+        "cannotdelete",
+        "readonly"
+      ]
+    }
+  ]
+}

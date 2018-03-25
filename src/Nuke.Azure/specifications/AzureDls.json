@@ -1,0 +1,1191 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
+  "license": [
+    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Distributed under the MIT License.",
+    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+  ],
+  "references": [
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls/account.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls/fs.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls/account/firewall.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls/account/trusted-provider.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls/fs/access.yml"
+  ],
+  "name": "AzureDls",
+  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml",
+  "help": "(PREVIEW) Manage Data Lake Store accounts and filesystems.",
+  "pathExecutable": "az",
+  "tasks": [
+    {
+      "postfix": "",
+      "definiteArgument": "dls",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "AccountCreate",
+      "definiteArgument": "dls account create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "DefaultGroup",
+            "type": "string",
+            "format": "--default-group {value}",
+            "help": "Name of the default group to give permissions to for freshly created files and folders in the Data Lake Store account."
+          },
+          {
+            "name": "DisableEncryption",
+            "type": "string",
+            "format": "--disable-encryption {value}",
+            "help": "Indicates that the account will not have any form of encryption applied to it."
+          },
+          {
+            "name": "EncryptionType",
+            "type": "DlsAccountCreateEncryptionType",
+            "format": "--encryption-type {value}",
+            "help": "Indicates what type of encryption to provision the account with. By default, encryption is ServiceManaged. If no encryption is desired, it must be explicitly set with the --disable-encryption flag."
+          },
+          {
+            "name": "KeyName",
+            "type": "string",
+            "format": "--key-name {value}",
+            "help": "Key name for the user-assigned encryption type."
+          },
+          {
+            "name": "KeyVaultId",
+            "type": "string",
+            "format": "--key-vault-id {value}",
+            "help": "Key vault for the user-assigned encryption type."
+          },
+          {
+            "name": "KeyVersion",
+            "type": "string",
+            "format": "--key-version {value}",
+            "help": "Key version for the user-assigned encryption type."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Tier",
+            "type": "DlsAccountTier",
+            "format": "--tier {value}",
+            "help": "The desired commitment tier for this account to use."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountDelete",
+      "definiteArgument": "dls account delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountEnableKeyVault",
+      "definiteArgument": "dls account enable-key-vault",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountList",
+      "definiteArgument": "dls account list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountShow",
+      "definiteArgument": "dls account show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountUpdate",
+      "definiteArgument": "dls account update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "AllowAzureIps",
+            "type": "DlsAccountUpdateAllowAzureIps",
+            "format": "--allow-azure-ips {value}",
+            "help": "Allow/block Azure originating IPs through the firewall."
+          },
+          {
+            "name": "DefaultGroup",
+            "type": "string",
+            "format": "--default-group {value}",
+            "help": ""
+          },
+          {
+            "name": "FirewallState",
+            "type": "DlsAccountUpdateAllowAzureIps",
+            "format": "--firewall-state {value}",
+            "help": "Enable/disable existing firewall rules."
+          },
+          {
+            "name": "KeyVersion",
+            "type": "string",
+            "format": "--key-version {value}",
+            "help": ""
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Tier",
+            "type": "DlsAccountTier",
+            "format": "--tier {value}",
+            "help": "The desired commitment tier for this account to use."
+          },
+          {
+            "name": "TrustedIdProviderState",
+            "type": "DlsAccountUpdateAllowAzureIps",
+            "format": "--trusted-id-provider-state {value}",
+            "help": "Enable/disable the existing trusted ID providers."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FsAppend",
+      "definiteArgument": "dls fs append",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Content",
+            "type": "string",
+            "format": "--content {value}",
+            "help": "Content to be appended to the file."
+          },
+          {
+            "name": "Path",
+            "type": "string",
+            "format": "--path {value}",
+            "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FsCreate",
+      "definiteArgument": "dls fs create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Path",
+            "type": "string",
+            "format": "--path {value}",
+            "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
+          },
+          {
+            "name": "Content",
+            "type": "string",
+            "format": "--content {value}",
+            "help": "Content for the file to contain upon creation."
+          },
+          {
+            "name": "Folder",
+            "type": "string",
+            "format": "--folder {value}",
+            "help": "Indicates that this new item is a folder and not a file."
+          },
+          {
+            "name": "Force",
+            "type": "string",
+            "format": "--force {value}",
+            "help": "Indicates that, if the file or folder exists, it should be overwritten."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FsDelete",
+      "definiteArgument": "dls fs delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Path",
+            "type": "string",
+            "format": "--path {value}",
+            "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
+          },
+          {
+            "name": "Recurse",
+            "type": "string",
+            "format": "--recurse {value}",
+            "help": "Indicates this should be a recursive delete of the folder."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FsDownload",
+      "definiteArgument": "dls fs download",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "DestinationPath",
+            "type": "string",
+            "format": "--destination-path {value}",
+            "help": "The local path where the file or folder will be downloaded to."
+          },
+          {
+            "name": "SourcePath",
+            "type": "string",
+            "format": "--source-path {value}",
+            "help": "The full path in the Data Lake Store filesystem to download the file or folder from."
+          },
+          {
+            "name": "BlockSize",
+            "type": "string",
+            "format": "--block-size {value}",
+            "help": "Size of a block, in bytes."
+          },
+          {
+            "name": "BufferSize",
+            "type": "string",
+            "format": "--buffer-size {value}",
+            "help": "Size of the transfer buffer, in bytes."
+          },
+          {
+            "name": "ChunkSize",
+            "type": "string",
+            "format": "--chunk-size {value}",
+            "help": "Size of a chunk, in bytes."
+          },
+          {
+            "name": "Overwrite",
+            "type": "string",
+            "format": "--overwrite {value}",
+            "help": "Indicates that, if the destination file or folder exists, it should be overwritten."
+          },
+          {
+            "name": "ProgressCallback",
+            "type": "string",
+            "format": "--progress-callback {value}",
+            "help": ""
+          },
+          {
+            "name": "ThreadCount",
+            "type": "string",
+            "format": "--thread-count {value}",
+            "help": "Parallelism of the download. Default: The number of cores in the local machine."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FsJoin",
+      "definiteArgument": "dls fs join",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "DestinationPath",
+            "type": "string",
+            "format": "--destination-path {value}",
+            "help": "The destination path in the Data Lake Store account."
+          },
+          {
+            "name": "SourcePaths",
+            "type": "string",
+            "format": "--source-paths {value}",
+            "help": "The space-separated list of files in the Data Lake Store account to join."
+          },
+          {
+            "name": "Force",
+            "type": "string",
+            "format": "--force {value}",
+            "help": "Indicates that, if the destination file already exists, it should be overwritten."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FsList",
+      "definiteArgument": "dls fs list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Path",
+            "type": "string",
+            "format": "--path {value}",
+            "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FsMove",
+      "definiteArgument": "dls fs move",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "DestinationPath",
+            "type": "string",
+            "format": "--destination-path {value}",
+            "help": "The destination path in the Data Lake Store account."
+          },
+          {
+            "name": "SourcePath",
+            "type": "string",
+            "format": "--source-path {value}",
+            "help": "The file or folder to move."
+          },
+          {
+            "name": "Force",
+            "type": "string",
+            "format": "--force {value}",
+            "help": "Indicates that, if the destination file or folder already exists, it should be overwritten and replaced with the file or folder being moved."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FsPreview",
+      "definiteArgument": "dls fs preview",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Path",
+            "type": "string",
+            "format": "--path {value}",
+            "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
+          },
+          {
+            "name": "Force",
+            "type": "string",
+            "format": "--force {value}",
+            "help": "Indicates that, if the preview is larger than 1MB, still retrieve it. This can potentially be very slow, depending on how large the file is."
+          },
+          {
+            "name": "Length",
+            "type": "string",
+            "format": "--length {value}",
+            "help": "The amount of data to preview in bytes."
+          },
+          {
+            "name": "Offset",
+            "type": "string",
+            "format": "--offset {value}",
+            "help": "The position in bytes to start the preview from."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FsRemoveExpiry",
+      "definiteArgument": "dls fs remove-expiry",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Path",
+            "type": "string",
+            "format": "--path {value}",
+            "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FsSetExpiry",
+      "definiteArgument": "dls fs set-expiry",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "ExpirationTime",
+            "type": "string",
+            "format": "--expiration-time {value}",
+            "help": "The absolute value of the expiration time expressed as milliseconds since the epoch."
+          },
+          {
+            "name": "Path",
+            "type": "string",
+            "format": "--path {value}",
+            "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FsShow",
+      "definiteArgument": "dls fs show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Path",
+            "type": "string",
+            "format": "--path {value}",
+            "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FsTest",
+      "definiteArgument": "dls fs test",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Path",
+            "type": "string",
+            "format": "--path {value}",
+            "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FsUpload",
+      "definiteArgument": "dls fs upload",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "DestinationPath",
+            "type": "string",
+            "format": "--destination-path {value}",
+            "help": "The full path in the Data Lake Store filesystem to upload the file or folder to."
+          },
+          {
+            "name": "SourcePath",
+            "type": "string",
+            "format": "--source-path {value}",
+            "help": "The path to the file or folder to upload."
+          },
+          {
+            "name": "BlockSize",
+            "type": "string",
+            "format": "--block-size {value}",
+            "help": "Size of a block, in bytes."
+          },
+          {
+            "name": "BufferSize",
+            "type": "string",
+            "format": "--buffer-size {value}",
+            "help": "Size of the transfer buffer, in bytes."
+          },
+          {
+            "name": "ChunkSize",
+            "type": "string",
+            "format": "--chunk-size {value}",
+            "help": "Size of a chunk, in bytes."
+          },
+          {
+            "name": "Overwrite",
+            "type": "string",
+            "format": "--overwrite {value}",
+            "help": "Indicates that, if the destination file or folder exists, it should be overwritten."
+          },
+          {
+            "name": "ProgressCallback",
+            "type": "string",
+            "format": "--progress-callback {value}",
+            "help": ""
+          },
+          {
+            "name": "ThreadCount",
+            "type": "string",
+            "format": "--thread-count {value}",
+            "help": "Parallelism of the upload. Default: The number of cores in the local machine."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountFirewallCreate",
+      "definiteArgument": "dls account firewall create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "EndIpAddress",
+            "type": "string",
+            "format": "--end-ip-address {value}",
+            "help": "The end of the valid ip range for the firewall rule."
+          },
+          {
+            "name": "FirewallRuleName",
+            "type": "string",
+            "format": "--firewall-rule-name {value}",
+            "help": "The name of the firewall rule."
+          },
+          {
+            "name": "StartIpAddress",
+            "type": "string",
+            "format": "--start-ip-address {value}",
+            "help": "The start of the valid ip range for the firewall rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountFirewallDelete",
+      "definiteArgument": "dls account firewall delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "FirewallRuleName",
+            "type": "string",
+            "format": "--firewall-rule-name {value}",
+            "help": "The name of the firewall rule to delete."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountFirewallList",
+      "definiteArgument": "dls account firewall list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountFirewallShow",
+      "definiteArgument": "dls account firewall show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "FirewallRuleName",
+            "type": "string",
+            "format": "--firewall-rule-name {value}",
+            "help": "The name of the firewall rule to retrieve."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountFirewallUpdate",
+      "definiteArgument": "dls account firewall update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "FirewallRuleName",
+            "type": "string",
+            "format": "--firewall-rule-name {value}",
+            "help": "The name of the firewall rule to update."
+          },
+          {
+            "name": "EndIpAddress",
+            "type": "string",
+            "format": "--end-ip-address {value}",
+            "help": "The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          },
+          {
+            "name": "StartIpAddress",
+            "type": "string",
+            "format": "--start-ip-address {value}",
+            "help": "The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountTrustedProviderCreate",
+      "definiteArgument": "dls account trusted-provider create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "IdProvider",
+            "type": "string",
+            "format": "--id-provider {value}",
+            "help": "The URL of this trusted identity provider."
+          },
+          {
+            "name": "TrustedIdProviderName",
+            "type": "string",
+            "format": "--trusted-id-provider-name {value}",
+            "help": "The name of the trusted identity provider. This is used for differentiation of providers in the account."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Resource name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountTrustedProviderDelete",
+      "definiteArgument": "dls account trusted-provider delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "TrustedIdProviderName",
+            "type": "string",
+            "format": "--trusted-id-provider-name {value}",
+            "help": "The name of the trusted identity provider to delete."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountTrustedProviderList",
+      "definiteArgument": "dls account trusted-provider list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountTrustedProviderShow",
+      "definiteArgument": "dls account trusted-provider show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "TrustedIdProviderName",
+            "type": "string",
+            "format": "--trusted-id-provider-name {value}",
+            "help": "The name of the trusted identity provider to retrieve."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountTrustedProviderUpdate",
+      "definiteArgument": "dls account trusted-provider update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "TrustedIdProviderName",
+            "type": "string",
+            "format": "--trusted-id-provider-name {value}",
+            "help": "The name of the trusted identity provider. This is used for differentiation of providers in the account."
+          },
+          {
+            "name": "IdProvider",
+            "type": "string",
+            "format": "--id-provider {value}",
+            "help": "The URL of this trusted identity provider."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FsAccessRemoveAll",
+      "definiteArgument": "dls fs access remove-all",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Path",
+            "type": "string",
+            "format": "--path {value}",
+            "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
+          },
+          {
+            "name": "DefaultAcl",
+            "type": "string",
+            "format": "--default-acl {value}",
+            "help": "A switch that, if specified, indicates that the remove ACL operation should remove the default ACL of the folder. Otherwise the regular ACL is removed."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FsAccessRemoveEntry",
+      "definiteArgument": "dls fs access remove-entry",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "AclSpec",
+            "type": "string",
+            "format": "--acl-spec {value}",
+            "help": "The ACL specification to set on the path in the format '[default:]user|group|other:[entity id or UPN]:r|-w|-x|-,[default:]user|group|other:[entity id or UPN]:r|-w|-x|-,...'."
+          },
+          {
+            "name": "Path",
+            "type": "string",
+            "format": "--path {value}",
+            "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FsAccessSet",
+      "definiteArgument": "dls fs access set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "AclSpec",
+            "type": "string",
+            "format": "--acl-spec {value}",
+            "help": "The ACL specification to set on the path in the format '[default:]user|group|other:[entity id or UPN]:r|-w|-x|-,[default:]user|group|other:[entity id or UPN]:r|-w|-x|-,...'."
+          },
+          {
+            "name": "Path",
+            "type": "string",
+            "format": "--path {value}",
+            "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FsAccessSetEntry",
+      "definiteArgument": "dls fs access set-entry",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "AclSpec",
+            "type": "string",
+            "format": "--acl-spec {value}",
+            "help": "The ACL specification to set on the path in the format '[default:]user|group|other:[entity id or UPN]:r|-w|-x|-,[default:]user|group|other:[entity id or UPN]:r|-w|-x|-,...'."
+          },
+          {
+            "name": "Path",
+            "type": "string",
+            "format": "--path {value}",
+            "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FsAccessSetOwner",
+      "definiteArgument": "dls fs access set-owner",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Path",
+            "type": "string",
+            "format": "--path {value}",
+            "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
+          },
+          {
+            "name": "Group",
+            "type": "string",
+            "format": "--group {value}",
+            "help": "The group Azure Active Directory object ID or user principal name to set as the owning group."
+          },
+          {
+            "name": "Owner",
+            "type": "string",
+            "format": "--owner {value}",
+            "help": "The user Azure Active Directory object ID or user principal name to set as the owner."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FsAccessSetPermission",
+      "definiteArgument": "dls fs access set-permission",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Path",
+            "type": "string",
+            "format": "--path {value}",
+            "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
+          },
+          {
+            "name": "Permission",
+            "type": "string",
+            "format": "--permission {value}",
+            "help": "The octal representation of the permissions for user, group and mask."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FsAccessShow",
+      "definiteArgument": "dls fs access show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Path",
+            "type": "string",
+            "format": "--path {value}",
+            "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
+          }
+        ]
+      }
+    }
+  ],
+  "commonTaskProperties": [
+    {
+      "name": "Debug",
+      "type": "string",
+      "format": "--debug {value}",
+      "help": "Increase logging verbosity to show all debug logs."
+    },
+    {
+      "name": "Help",
+      "type": "string",
+      "format": "--help {value}",
+      "help": "Show this help message and exit."
+    },
+    {
+      "name": "Output",
+      "type": "Output",
+      "format": "--output {value}",
+      "help": "Output format."
+    },
+    {
+      "name": "Query",
+      "type": "string",
+      "format": "--query {value}",
+      "help": "JMESPath query string. See &lt;a href=\"http://jmespath.org/\"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples."
+    },
+    {
+      "name": "Verbose",
+      "type": "string",
+      "format": "--verbose {value}",
+      "help": "Increase logging verbosity. Use --debug for full debug logs."
+    }
+  ],
+  "enumerations": [
+    {
+      "name": "DlsAccountCreateEncryptionType",
+      "values": [
+        "servicemanaged",
+        "usermanaged"
+      ]
+    },
+    {
+      "name": "DlsAccountTier",
+      "values": [
+        "commitment_100tb",
+        "commitment_10tb",
+        "commitment_1pb",
+        "commitment_1tb",
+        "commitment_500tb",
+        "commitment_5pb",
+        "consumption"
+      ]
+    },
+    {
+      "name": "DlsAccountUpdateAllowAzureIps",
+      "values": [
+        "disabled",
+        "enabled"
+      ]
+    }
+  ]
+}

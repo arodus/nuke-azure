@@ -1,0 +1,322 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
+  "license": [
+    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Distributed under the MIT License.",
+    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+  ],
+  "references": [
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/managedapp.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/managedapp/definition.yml"
+  ],
+  "name": "AzureManagedapp",
+  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/managedapp.yml",
+  "help": "Manage template solutions provided and maintained by Independent Software Vendors (ISVs).",
+  "pathExecutable": "az",
+  "tasks": [
+    {
+      "postfix": "Create",
+      "definiteArgument": "managedapp create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Kind",
+            "type": "string",
+            "format": "--kind {value}",
+            "help": "The managed application kind. can be marketplace or servicecatalog."
+          },
+          {
+            "name": "ManagedRgId",
+            "type": "string",
+            "format": "--managed-rg-id {value}",
+            "help": "The resource group managed by the managed application."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The managed application name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "The resource group of the managed application."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "The managed application location."
+          },
+          {
+            "name": "ManagedappDefinitionId",
+            "type": "string",
+            "format": "--managedapp-definition-id {value}",
+            "help": "The full qualified managed application definition id."
+          },
+          {
+            "name": "Parameters",
+            "type": "string",
+            "format": "--parameters {value}",
+            "help": "JSON formatted string or a path to a file with such content."
+          },
+          {
+            "name": "PlanName",
+            "type": "string",
+            "format": "--plan-name {value}",
+            "help": "The managed application package plan name."
+          },
+          {
+            "name": "PlanProduct",
+            "type": "string",
+            "format": "--plan-product {value}",
+            "help": "The managed application package plan product."
+          },
+          {
+            "name": "PlanPublisher",
+            "type": "string",
+            "format": "--plan-publisher {value}",
+            "help": "The managed application package plan publisher."
+          },
+          {
+            "name": "PlanVersion",
+            "type": "string",
+            "format": "--plan-version {value}",
+            "help": "The managed application package plan version."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Tags in 'a=b c' format."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Delete",
+      "definiteArgument": "managedapp delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the managed application."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "The resource group of the managed application."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "List",
+      "definiteArgument": "managedapp list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "The resource group of the managed application."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Show",
+      "definiteArgument": "managedapp show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The managed application name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "The resource group of the managed application."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DefinitionCreate",
+      "definiteArgument": "managedapp definition create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Authorizations",
+            "type": "string",
+            "format": "--authorizations {value}",
+            "help": "Space-separated authorization pairs in a format of &lt;principalId&gt;:&lt;roleDefinitionId&gt;."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "help": "The managed application definition description."
+          },
+          {
+            "name": "DisplayName",
+            "type": "string",
+            "format": "--display-name {value}",
+            "help": "The managed application definition display name."
+          },
+          {
+            "name": "LockLevel",
+            "type": "ManagedappDefinitionCreateLockLevel",
+            "format": "--lock-level {value}",
+            "help": ""
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The managed application definition name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "The resource group of the managed application definition."
+          },
+          {
+            "name": "CreateUiDefinition",
+            "type": "string",
+            "format": "--create-ui-definition {value}",
+            "help": "The managed application definition create ui definition."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "MainTemplate",
+            "type": "string",
+            "format": "--main-template {value}",
+            "help": "The managed application definition main template."
+          },
+          {
+            "name": "PackageFileUri",
+            "type": "string",
+            "format": "--package-file-uri {value}",
+            "help": "The managed application definition package file uri."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Tags in 'a=b c' format."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DefinitionDelete",
+      "definiteArgument": "managedapp definition delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the managed application definition to delete."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "The resource group of the managed application definition."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DefinitionList",
+      "definiteArgument": "managedapp definition list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "The resource group of the managed application definition."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DefinitionShow",
+      "definiteArgument": "managedapp definition show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The managed application definition name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "The resource group of the managed application definition."
+          }
+        ]
+      }
+    }
+  ],
+  "commonTaskProperties": [
+    {
+      "name": "Debug",
+      "type": "string",
+      "format": "--debug {value}",
+      "help": "Increase logging verbosity to show all debug logs."
+    },
+    {
+      "name": "Help",
+      "type": "string",
+      "format": "--help {value}",
+      "help": "Show this help message and exit."
+    },
+    {
+      "name": "Output",
+      "type": "Output",
+      "format": "--output {value}",
+      "help": "Output format."
+    },
+    {
+      "name": "Query",
+      "type": "string",
+      "format": "--query {value}",
+      "help": "JMESPath query string. See &lt;a href=\"http://jmespath.org/\"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples."
+    },
+    {
+      "name": "Verbose",
+      "type": "string",
+      "format": "--verbose {value}",
+      "help": "Increase logging verbosity. Use --debug for full debug logs."
+    }
+  ],
+  "enumerations": [
+    {
+      "name": "ManagedappDefinitionCreateLockLevel",
+      "values": [
+        "cannotdelete",
+        "none",
+        "readonly"
+      ]
+    }
+  ]
+}

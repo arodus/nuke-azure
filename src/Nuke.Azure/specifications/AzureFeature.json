@@ -1,0 +1,103 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
+  "license": [
+    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Distributed under the MIT License.",
+    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+  ],
+  "references": [
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/feature.yml"
+  ],
+  "name": "AzureFeature",
+  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/feature.yml",
+  "help": "Manage resource provider features.",
+  "pathExecutable": "az",
+  "tasks": [
+    {
+      "postfix": "List",
+      "definiteArgument": "feature list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "help": "The resource namespace, aka 'provider'."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Register",
+      "definiteArgument": "feature register",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The feature name."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "help": "The resource namespace, aka 'provider'."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Show",
+      "definiteArgument": "feature show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The feature name."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "help": "The resource namespace, aka 'provider'."
+          }
+        ]
+      }
+    }
+  ],
+  "commonTaskProperties": [
+    {
+      "name": "Debug",
+      "type": "string",
+      "format": "--debug {value}",
+      "help": "Increase logging verbosity to show all debug logs."
+    },
+    {
+      "name": "Help",
+      "type": "string",
+      "format": "--help {value}",
+      "help": "Show this help message and exit."
+    },
+    {
+      "name": "Output",
+      "type": "Output",
+      "format": "--output {value}",
+      "help": "Output format."
+    },
+    {
+      "name": "Query",
+      "type": "string",
+      "format": "--query {value}",
+      "help": "JMESPath query string. See &lt;a href=\"http://jmespath.org/\"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples."
+    },
+    {
+      "name": "Verbose",
+      "type": "string",
+      "format": "--verbose {value}",
+      "help": "Increase logging verbosity. Use --debug for full debug logs."
+    }
+  ]
+}

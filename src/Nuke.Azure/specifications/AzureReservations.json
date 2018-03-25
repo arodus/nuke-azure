@@ -1,0 +1,249 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
+  "license": [
+    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Distributed under the MIT License.",
+    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+  ],
+  "references": [
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/reservations.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/reservations/catalog.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/reservations/reservation-order-id.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/reservations/reservation-order.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/reservations/reservation.yml"
+  ],
+  "name": "AzureReservations",
+  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/reservations.yml",
+  "help": "Manage Azure Reservations.",
+  "pathExecutable": "az",
+  "tasks": [
+    {
+      "postfix": "",
+      "definiteArgument": "reservations",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "CatalogShow",
+      "definiteArgument": "reservations catalog show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "SubscriptionId",
+            "type": "string",
+            "format": "--subscription-id {value}",
+            "help": "Id of the subscription to get the catalog for."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ReservationOrderIdList",
+      "definiteArgument": "reservations reservation-order-id list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "SubscriptionId",
+            "type": "string",
+            "format": "--subscription-id {value}",
+            "help": "Id of the subscription to look up applied reservations."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ReservationOrderList",
+      "definiteArgument": "reservations reservation-order list",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "ReservationOrderShow",
+      "definiteArgument": "reservations reservation-order show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ReservationOrderId",
+            "type": "string",
+            "format": "--reservation-order-id {value}",
+            "help": "Id of reservation order to look up."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ReservationList",
+      "definiteArgument": "reservations reservation list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ReservationOrderId",
+            "type": "string",
+            "format": "--reservation-order-id {value}",
+            "help": "Id of container reservation order."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ReservationListHistory",
+      "definiteArgument": "reservations reservation list-history",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ReservationId",
+            "type": "string",
+            "format": "--reservation-id {value}",
+            "help": "Reservation id of the reservation."
+          },
+          {
+            "name": "ReservationOrderId",
+            "type": "string",
+            "format": "--reservation-order-id {value}",
+            "help": "Order id of the reservation."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ReservationMerge",
+      "definiteArgument": "reservations reservation merge",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ReservationId1",
+            "type": "string",
+            "format": "--reservation-id-1 {value}",
+            "help": "Id of the first reservation to merge."
+          },
+          {
+            "name": "ReservationId2",
+            "type": "string",
+            "format": "--reservation-id-2 {value}",
+            "help": "Id of the second reservation to merge."
+          },
+          {
+            "name": "ReservationOrderId",
+            "type": "string",
+            "format": "--reservation-order-id {value}",
+            "help": "Order id of original reservation."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ReservationShow",
+      "definiteArgument": "reservations reservation show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ReservationId",
+            "type": "string",
+            "format": "--reservation-id {value}",
+            "help": "Reservation id of reservation to look up."
+          },
+          {
+            "name": "ReservationOrderId",
+            "type": "string",
+            "format": "--reservation-order-id {value}",
+            "help": "Order id of reservation to look up."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ReservationSplit",
+      "definiteArgument": "reservations reservation split",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Quantity1",
+            "type": "string",
+            "format": "--quantity-1 {value}",
+            "help": "Quantity of the first reservation that will be created from split operation."
+          },
+          {
+            "name": "Quantity2",
+            "type": "string",
+            "format": "--quantity-2 {value}",
+            "help": "Quantity of the second reservation that will be created from split operation."
+          },
+          {
+            "name": "ReservationId",
+            "type": "string",
+            "format": "--reservation-id {value}",
+            "help": "Reservation id of original reservation."
+          },
+          {
+            "name": "ReservationOrderId",
+            "type": "string",
+            "format": "--reservation-order-id {value}",
+            "help": "Order id of original reservation."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ReservationUpdate",
+      "definiteArgument": "reservations reservation update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AppliedScopeType",
+            "type": "string",
+            "format": "--applied-scope-type {value}",
+            "help": "Type is either Single or Shared."
+          },
+          {
+            "name": "ReservationId",
+            "type": "string",
+            "format": "--reservation-id {value}",
+            "help": "Reservation id of reservation to update."
+          },
+          {
+            "name": "ReservationOrderId",
+            "type": "string",
+            "format": "--reservation-order-id {value}",
+            "help": "Order id of reservation to update."
+          },
+          {
+            "name": "AppliedScopes",
+            "type": "string",
+            "format": "--applied-scopes {value}",
+            "help": "If applied scope type is Single, this field must be provided."
+          }
+        ]
+      }
+    }
+  ],
+  "commonTaskProperties": [
+    {
+      "name": "Debug",
+      "type": "string",
+      "format": "--debug {value}",
+      "help": "Increase logging verbosity to show all debug logs."
+    },
+    {
+      "name": "Help",
+      "type": "string",
+      "format": "--help {value}",
+      "help": "Show this help message and exit."
+    },
+    {
+      "name": "Output",
+      "type": "Output",
+      "format": "--output {value}",
+      "help": "Output format."
+    },
+    {
+      "name": "Query",
+      "type": "string",
+      "format": "--query {value}",
+      "help": "JMESPath query string. See &lt;a href=\"http://jmespath.org/\"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples."
+    },
+    {
+      "name": "Verbose",
+      "type": "string",
+      "format": "--verbose {value}",
+      "help": "Increase logging verbosity. Use --debug for full debug logs."
+    }
+  ]
+}

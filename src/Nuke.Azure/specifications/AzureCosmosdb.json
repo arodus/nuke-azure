@@ -1,0 +1,888 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
+  "license": [
+    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Distributed under the MIT License.",
+    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+  ],
+  "references": [
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cosmosdb.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cosmosdb/collection.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cosmosdb/database.yml"
+  ],
+  "name": "AzureCosmosdb",
+  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cosmosdb.yml",
+  "help": "Manage Azure Cosmos DB database accounts.",
+  "pathExecutable": "az",
+  "tasks": [
+    {
+      "postfix": "CheckNameExists",
+      "definiteArgument": "cosmosdb check-name-exists",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the Cosmos DB database account."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Create",
+      "definiteArgument": "cosmosdb create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the Cosmos DB database account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Capabilities",
+            "type": "string",
+            "format": "--capabilities {value}",
+            "help": "Set custom capabilities on the Cosmos DB database account."
+          },
+          {
+            "name": "DefaultConsistencyLevel",
+            "type": "CosmosdbDefaultConsistencyLevel",
+            "format": "--default-consistency-level {value}",
+            "help": "Default consistency level of the Cosmos DB database account."
+          },
+          {
+            "name": "EnableAutomaticFailover",
+            "type": "bool",
+            "format": "--enable-automatic-failover",
+            "help": "Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage. Automatic failover will result in a new write region for the account and is chosen based on the failover priorities configured for the account."
+          },
+          {
+            "name": "IpRangeFilter",
+            "type": "List<string>",
+            "format": "--ip-range-filter {value}",
+            "separator": ",",
+            "help": "Firewall support. Specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IPs for a given database account. IP addresses/ranges must be comma-separated and must not contain any spaces."
+          },
+          {
+            "name": "Kind",
+            "type": "CosmosdbCreateKind",
+            "format": "--kind {value}",
+            "help": "The type of Cosmos DB database account to create."
+          },
+          {
+            "name": "Locations",
+            "type": "string",
+            "format": "--locations {value}",
+            "help": "Space-separated locations in 'regionName=failoverPriority' format. E.g eastus=0 westus=1. Failover priority values are 0 for write regions and greater than 0 for read regions. A failover priority value must be unique and less than the total number of regions. Default: single region account in the location of the specified resource group."
+          },
+          {
+            "name": "MaxInterval",
+            "type": "string",
+            "format": "--max-interval {value}",
+            "help": "When used with Bounded Staleness consistency, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 1 - 100."
+          },
+          {
+            "name": "MaxStalenessPrefix",
+            "type": "string",
+            "format": "--max-staleness-prefix {value}",
+            "help": "When used with Bounded Staleness consistency, this value represents the number of stale requests tolerated. Accepted range for this value is 1 - 2,147,483,647."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Delete",
+      "definiteArgument": "cosmosdb delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the Cosmos DB database account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FailoverPriorityChange",
+      "definiteArgument": "cosmosdb failover-priority-change",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "FailoverPolicies",
+            "type": "string",
+            "format": "--failover-policies {value}",
+            "help": "Space-separated failover policies in 'regionName=failoverPriority' format. E.g eastus=0 westus=1."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the Cosmos DB database account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "List",
+      "definiteArgument": "cosmosdb list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ListConnectionStrings",
+      "definiteArgument": "cosmosdb list-connection-strings",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the Cosmos DB database account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ListKeys",
+      "definiteArgument": "cosmosdb list-keys",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the Cosmos DB database account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ListReadOnlyKeys",
+      "definiteArgument": "cosmosdb list-read-only-keys",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the Cosmos DB database account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RegenerateKey",
+      "definiteArgument": "cosmosdb regenerate-key",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "KeyKind",
+            "type": "CosmosdbRegenerateKeyKeyKind",
+            "format": "--key-kind {value}",
+            "help": "The access key to regenerate."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the Cosmos DB database account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Show",
+      "definiteArgument": "cosmosdb show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the Cosmos DB database account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Update",
+      "definiteArgument": "cosmosdb update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the Cosmos DB database account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Capabilities",
+            "type": "string",
+            "format": "--capabilities {value}",
+            "help": "Set custom capabilities on the Cosmos DB database account."
+          },
+          {
+            "name": "DefaultConsistencyLevel",
+            "type": "CosmosdbDefaultConsistencyLevel",
+            "format": "--default-consistency-level {value}",
+            "help": "Default consistency level of the Cosmos DB database account."
+          },
+          {
+            "name": "EnableAutomaticFailover",
+            "type": "bool",
+            "format": "--enable-automatic-failover",
+            "help": "Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage. Automatic failover will result in a new write region for the account and is chosen based on the failover priorities configured for the account."
+          },
+          {
+            "name": "IpRangeFilter",
+            "type": "List<string>",
+            "format": "--ip-range-filter {value}",
+            "separator": ",",
+            "help": "Firewall support. Specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IPs for a given database account. IP addresses/ranges must be comma-separated and must not contain any spaces."
+          },
+          {
+            "name": "Locations",
+            "type": "string",
+            "format": "--locations {value}",
+            "help": "Space-separated locations in 'regionName=failoverPriority' format. E.g eastus=0 westus=1. Failover priority values are 0 for write regions and greater than 0 for read regions. A failover priority value must be unique and less than the total number of regions. Default: single region account in the location of the specified resource group."
+          },
+          {
+            "name": "MaxInterval",
+            "type": "string",
+            "format": "--max-interval {value}",
+            "help": "When used with Bounded Staleness consistency, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 1 - 100."
+          },
+          {
+            "name": "MaxStalenessPrefix",
+            "type": "string",
+            "format": "--max-staleness-prefix {value}",
+            "help": "When used with Bounded Staleness consistency, this value represents the number of stale requests tolerated. Accepted range for this value is 1 - 2,147,483,647."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CollectionCreate",
+      "definiteArgument": "cosmosdb collection create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CollectionName",
+            "type": "string",
+            "format": "--collection-name {value}",
+            "help": "Collection Name."
+          },
+          {
+            "name": "DbName",
+            "type": "string",
+            "format": "--db-name {value}",
+            "help": "Database Name."
+          },
+          {
+            "name": "DefaultTtl",
+            "type": "string",
+            "format": "--default-ttl {value}",
+            "help": "Default TTL."
+          },
+          {
+            "name": "IndexingPolicy",
+            "type": "string",
+            "format": "--indexing-policy {value}",
+            "help": "Indexing Policy, you can enter it as a string or as a file, e.g., --indexing-policy @policy-file.json)."
+          },
+          {
+            "name": "PartitionKeyPath",
+            "type": "string",
+            "format": "--partition-key-path {value}",
+            "help": "Partition Key Path, e.g., '/properties/name'."
+          },
+          {
+            "name": "Throughput",
+            "type": "string",
+            "format": "--throughput {value}",
+            "help": "Offer Throughput."
+          },
+          {
+            "name": "Key",
+            "type": "string",
+            "format": "--key {value}",
+            "help": "Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key."
+          },
+          {
+            "name": "ResourceGroupName",
+            "type": "string",
+            "format": "--resource-group-name {value}",
+            "help": "Name of the resource group. Must be used in conjunction with cosmosdb account name."
+          },
+          {
+            "name": "UrlConnection",
+            "type": "string",
+            "format": "--url-connection {value}",
+            "help": "Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CollectionDelete",
+      "definiteArgument": "cosmosdb collection delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CollectionName",
+            "type": "string",
+            "format": "--collection-name {value}",
+            "help": "Collection Name."
+          },
+          {
+            "name": "DbName",
+            "type": "string",
+            "format": "--db-name {value}",
+            "help": "Database Name."
+          },
+          {
+            "name": "Key",
+            "type": "string",
+            "format": "--key {value}",
+            "help": "Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key."
+          },
+          {
+            "name": "ResourceGroupName",
+            "type": "string",
+            "format": "--resource-group-name {value}",
+            "help": "Name of the resource group. Must be used in conjunction with cosmosdb account name."
+          },
+          {
+            "name": "UrlConnection",
+            "type": "string",
+            "format": "--url-connection {value}",
+            "help": "Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CollectionExists",
+      "definiteArgument": "cosmosdb collection exists",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CollectionName",
+            "type": "string",
+            "format": "--collection-name {value}",
+            "help": "Collection Name."
+          },
+          {
+            "name": "DbName",
+            "type": "string",
+            "format": "--db-name {value}",
+            "help": "Database Name."
+          },
+          {
+            "name": "Key",
+            "type": "string",
+            "format": "--key {value}",
+            "help": "Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key."
+          },
+          {
+            "name": "ResourceGroupName",
+            "type": "string",
+            "format": "--resource-group-name {value}",
+            "help": "Name of the resource group. Must be used in conjunction with cosmosdb account name."
+          },
+          {
+            "name": "UrlConnection",
+            "type": "string",
+            "format": "--url-connection {value}",
+            "help": "Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CollectionList",
+      "definiteArgument": "cosmosdb collection list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DbName",
+            "type": "string",
+            "format": "--db-name {value}",
+            "help": "Database Name."
+          },
+          {
+            "name": "Key",
+            "type": "string",
+            "format": "--key {value}",
+            "help": "Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key."
+          },
+          {
+            "name": "ResourceGroupName",
+            "type": "string",
+            "format": "--resource-group-name {value}",
+            "help": "Name of the resource group. Must be used in conjunction with cosmosdb account name."
+          },
+          {
+            "name": "UrlConnection",
+            "type": "string",
+            "format": "--url-connection {value}",
+            "help": "Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CollectionShow",
+      "definiteArgument": "cosmosdb collection show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CollectionName",
+            "type": "string",
+            "format": "--collection-name {value}",
+            "help": "Collection Name."
+          },
+          {
+            "name": "DbName",
+            "type": "string",
+            "format": "--db-name {value}",
+            "help": "Database Name."
+          },
+          {
+            "name": "Key",
+            "type": "string",
+            "format": "--key {value}",
+            "help": "Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key."
+          },
+          {
+            "name": "ResourceGroupName",
+            "type": "string",
+            "format": "--resource-group-name {value}",
+            "help": "Name of the resource group. Must be used in conjunction with cosmosdb account name."
+          },
+          {
+            "name": "UrlConnection",
+            "type": "string",
+            "format": "--url-connection {value}",
+            "help": "Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CollectionUpdate",
+      "definiteArgument": "cosmosdb collection update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CollectionName",
+            "type": "string",
+            "format": "--collection-name {value}",
+            "help": "Collection Name."
+          },
+          {
+            "name": "DbName",
+            "type": "string",
+            "format": "--db-name {value}",
+            "help": "Database Name."
+          },
+          {
+            "name": "DefaultTtl",
+            "type": "string",
+            "format": "--default-ttl {value}",
+            "help": "Default TTL."
+          },
+          {
+            "name": "IndexingPolicy",
+            "type": "string",
+            "format": "--indexing-policy {value}",
+            "help": "Indexing Policy, you can enter it as a string or as a file, e.g., --indexing-policy @policy-file.json)."
+          },
+          {
+            "name": "Throughput",
+            "type": "string",
+            "format": "--throughput {value}",
+            "help": "Offer Throughput."
+          },
+          {
+            "name": "Key",
+            "type": "string",
+            "format": "--key {value}",
+            "help": "Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key."
+          },
+          {
+            "name": "ResourceGroupName",
+            "type": "string",
+            "format": "--resource-group-name {value}",
+            "help": "Name of the resource group. Must be used in conjunction with cosmosdb account name."
+          },
+          {
+            "name": "UrlConnection",
+            "type": "string",
+            "format": "--url-connection {value}",
+            "help": "Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DatabaseCreate",
+      "definiteArgument": "cosmosdb database create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DbName",
+            "type": "string",
+            "format": "--db-name {value}",
+            "help": "Database Name."
+          },
+          {
+            "name": "Key",
+            "type": "string",
+            "format": "--key {value}",
+            "help": "Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key."
+          },
+          {
+            "name": "ResourceGroupName",
+            "type": "string",
+            "format": "--resource-group-name {value}",
+            "help": "Name of the resource group. Must be used in conjunction with cosmosdb account name."
+          },
+          {
+            "name": "UrlConnection",
+            "type": "string",
+            "format": "--url-connection {value}",
+            "help": "Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DatabaseDelete",
+      "definiteArgument": "cosmosdb database delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DbName",
+            "type": "string",
+            "format": "--db-name {value}",
+            "help": "Database Name."
+          },
+          {
+            "name": "Key",
+            "type": "string",
+            "format": "--key {value}",
+            "help": "Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key."
+          },
+          {
+            "name": "ResourceGroupName",
+            "type": "string",
+            "format": "--resource-group-name {value}",
+            "help": "Name of the resource group. Must be used in conjunction with cosmosdb account name."
+          },
+          {
+            "name": "UrlConnection",
+            "type": "string",
+            "format": "--url-connection {value}",
+            "help": "Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DatabaseExists",
+      "definiteArgument": "cosmosdb database exists",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DbName",
+            "type": "string",
+            "format": "--db-name {value}",
+            "help": "Database Name."
+          },
+          {
+            "name": "Key",
+            "type": "string",
+            "format": "--key {value}",
+            "help": "Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key."
+          },
+          {
+            "name": "ResourceGroupName",
+            "type": "string",
+            "format": "--resource-group-name {value}",
+            "help": "Name of the resource group. Must be used in conjunction with cosmosdb account name."
+          },
+          {
+            "name": "UrlConnection",
+            "type": "string",
+            "format": "--url-connection {value}",
+            "help": "Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DatabaseList",
+      "definiteArgument": "cosmosdb database list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Key",
+            "type": "string",
+            "format": "--key {value}",
+            "help": "Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key."
+          },
+          {
+            "name": "ResourceGroupName",
+            "type": "string",
+            "format": "--resource-group-name {value}",
+            "help": "Name of the resource group. Must be used in conjunction with cosmosdb account name."
+          },
+          {
+            "name": "UrlConnection",
+            "type": "string",
+            "format": "--url-connection {value}",
+            "help": "Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DatabaseShow",
+      "definiteArgument": "cosmosdb database show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DbName",
+            "type": "string",
+            "format": "--db-name {value}",
+            "help": "Database Name."
+          },
+          {
+            "name": "Key",
+            "type": "string",
+            "format": "--key {value}",
+            "help": "Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key."
+          },
+          {
+            "name": "ResourceGroupName",
+            "type": "string",
+            "format": "--resource-group-name {value}",
+            "help": "Name of the resource group. Must be used in conjunction with cosmosdb account name."
+          },
+          {
+            "name": "UrlConnection",
+            "type": "string",
+            "format": "--url-connection {value}",
+            "help": "Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key."
+          }
+        ]
+      }
+    }
+  ],
+  "commonTaskProperties": [
+    {
+      "name": "Debug",
+      "type": "string",
+      "format": "--debug {value}",
+      "help": "Increase logging verbosity to show all debug logs."
+    },
+    {
+      "name": "Help",
+      "type": "string",
+      "format": "--help {value}",
+      "help": "Show this help message and exit."
+    },
+    {
+      "name": "Output",
+      "type": "Output",
+      "format": "--output {value}",
+      "help": "Output format."
+    },
+    {
+      "name": "Query",
+      "type": "string",
+      "format": "--query {value}",
+      "help": "JMESPath query string. See &lt;a href=\"http://jmespath.org/\"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples."
+    },
+    {
+      "name": "Verbose",
+      "type": "string",
+      "format": "--verbose {value}",
+      "help": "Increase logging verbosity. Use --debug for full debug logs."
+    }
+  ],
+  "enumerations": [
+    {
+      "name": "CosmosdbDefaultConsistencyLevel",
+      "values": [
+        "boundedstaleness",
+        "consistentprefix",
+        "eventual",
+        "session",
+        "strong"
+      ]
+    },
+    {
+      "name": "CosmosdbCreateKind",
+      "values": [
+        "globaldocumentdb",
+        "mongodb",
+        "parse"
+      ]
+    },
+    {
+      "name": "CosmosdbRegenerateKeyKeyKind",
+      "values": [
+        "primary",
+        "primaryreadonly",
+        "secondary",
+        "secondaryreadonly"
+      ]
+    }
+  ]
+}
