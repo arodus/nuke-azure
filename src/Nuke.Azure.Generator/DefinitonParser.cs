@@ -1,6 +1,6 @@
 ﻿// Copyright Sebastian Karasek, Matthias Koch 2018.
 // Distributed under the MIT License.
-// https://github.com/nuke-build/azure-cli/blob/master/LICENSE
+// https://github.com/nuke-build/azure/blob/master/LICENSE
 
 using System;
 using System.Collections.Generic;
@@ -78,7 +78,7 @@ namespace Nuke.Azure.Generator
                 var task = new Task
                            {
                                Postfix = postfix,
-                               DefiniteArgument = item.Name.Replace("az",string.Empty).TrimStart(),
+                               DefiniteArgument = item.Name.Replace("az", string.Empty).TrimStart(),
                                Tool = _tool
                            };
                 var settingsClass = new SettingsClass

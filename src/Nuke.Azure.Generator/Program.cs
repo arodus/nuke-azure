@@ -1,6 +1,6 @@
 ﻿// Copyright Sebastian Karasek, Matthias Koch 2018.
 // Distributed under the MIT License.
-// https://github.com/nuke-build/azure-cli/blob/master/LICENSE
+// https://github.com/nuke-build/azure/blob/master/LICENSE
 
 using System;
 using System.Linq;

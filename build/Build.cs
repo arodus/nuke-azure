@@ -1,6 +1,6 @@
 ﻿// Copyright Sebastian Karasek, Matthias Koch 2018.
 // Distributed under the MIT License.
-// https://github.com/nuke-build/azure-cli/blob/master/LICENSE
+// https://github.com/nuke-build/azure/blob/master/LICENSE
 
 using System;
 using System.IO;
@@ -12,7 +12,6 @@ using Nuke.Common.Tools.DotNet;
 using Nuke.Common.Tools.GitVersion;
 using Nuke.Common;
 using Nuke.Common.ProjectModel;
-using Nuke.Common.Tooling;
 using Nuke.Common.Tools.Xunit;
 using Nuke.Common.Tools.OpenCover;
 using Nuke.Common.Utilities;
@@ -53,7 +52,7 @@ class Build : NukeBuild
         ? "https://api.nuget.org/v3/index.json"
         : "https://www.myget.org/F/nukebuild/api/v2/package";
 
-    string SymbolsSource => NuGet
+    string SymbolSource => NuGet
         ? "https://nuget.smbsrc.net"
         : "https://www.myget.org/F/nukebuild/symbols/api/v2/package";
 
@@ -62,11 +61,10 @@ class Build : NukeBuild
         {
             DeleteDirectories(GlobDirectories(SourceDirectory, "**/bin", "**/obj"));
             EnsureCleanDirectory(OutputDirectory);
+            Logger.Info("Deleting generated files ...");
             DeleteDirectory(RepositoryPath);
             DeleteDirectory(SpecificationPath);
             DeleteDirectory(GenerationBaseDirectory);
-            Logger.Info("Deleting generated files ...");
-           
         });
 
     Target Restore => _ => _
@@ -245,7 +243,7 @@ class Build : NukeBuild
                 .ForEach(x => DotNetNuGetPush(s => s
                     .SetTargetPath(x)
                     .SetSource(Source)
-                    .SetSymbolsSource(SymbolsSource)
+                    .SetSymbolSource(SymbolSource)
                     .SetApiKey(ApiKey)));
         });
 }
