@@ -30,8 +30,9 @@ class Build : NukeBuild
 {
     public static int Main() => Execute<Build>(x => x.Pack);
 
-    string ToolNamespace = "Nuke.Azure";
-    string AzureCliDocsRepository = "https://github.com/Azure/azure-docs-cli-python.git";
+    readonly string ToolNamespace = "Nuke.Azure";
+    readonly string AzureCliDocsRepository = "https://github.com/Azure/azure-docs-cli-python.git";
+   
 
     [GitVersion] readonly GitVersion GitVersion;
     [GitRepository] readonly GitRepository GitRepository;
@@ -39,12 +40,13 @@ class Build : NukeBuild
 
     [Parameter("ApiKey for the specified source.")] readonly string ApiKey;
     [Parameter("Indicates to push to nuget.org feed.")] readonly bool NuGet;
-    [Parameter] readonly string AzureCliGitReference = "live";
+    [Parameter] readonly string AzureCliGitBranch = "live";
 
     AbsolutePath SpecificationPath => (AbsolutePath) AzureProject.Directory / "specifications";
     AbsolutePath GenerationBaseDirectory => (AbsolutePath) AzureProject.Directory / "Generated";
-    AbsolutePath RepositoryPath => TemporaryDirectory / "definition-repositories";
+    AbsolutePath DefinitonRepositoryPath => TemporaryDirectory / "definition-repository";
 
+    
     Project AzureProject => Solution.GetProject("Nuke.Azure");
     string ChangelogFile => RootDirectory / "CHANGELOG.md";
 
@@ -62,7 +64,7 @@ class Build : NukeBuild
             DeleteDirectories(GlobDirectories(SourceDirectory, "**/bin", "**/obj"));
             EnsureCleanDirectory(OutputDirectory);
             Logger.Info("Deleting generated files ...");
-            DeleteDirectory(RepositoryPath);
+            DeleteDirectory(DefinitonRepositoryPath);
             DeleteDirectory(SpecificationPath);
             DeleteDirectory(GenerationBaseDirectory);
         });
@@ -103,27 +105,28 @@ class Build : NukeBuild
         .DependsOn(Clean)
         .Executes(() =>
         {
-            var repoPath = RepositoryPath / "azure-docs-repo";
-            Git($"clone {AzureCliDocsRepository} {repoPath}");
-            Git($"checkout {AzureCliGitReference}", repoPath);
+            Git($"clone {AzureCliDocsRepository} {DefinitonRepositoryPath}");
+            Git($"checkout {AzureCliGitBranch}", DefinitonRepositoryPath);
         });
 
     Target GenerateSpecifications => _ => _
         .DependsOn(Clone)
         .Executes(() =>
         {
+            var reference = Git($"rev-parse --short {AzureCliGitBranch}", DefinitonRepositoryPath).Single();
+            Logger.Log($"Generating specifications for {reference}");
             var generationSettings = new SpecificationGeneratorSettings
                                      {
                                          BaseNamespace = AzureProject.Name,
-                                         DefinitonFolder = RepositoryPath / "azure-docs-repo" / "latest" / "docs-ref-autogen",
+                                         DefinitonFolder = DefinitonRepositoryPath / "latest" / "docs-ref-autogen",
                                          OutputFolder = SpecificationPath,
                                          GenerateExtension = false,
                                          MaxDepth = 1,
                                          MinDepthForCategory = 1,
                                          MinSubTasksForCategory = 0,
                                          SingleNamespace = true,
-                                         Reference = AzureCliGitReference
-                                     };
+                                         Reference = reference
+            };
             SpecificationGenerator.GenerateSpecifications(generationSettings);
         });
 
@@ -225,7 +228,7 @@ class Build : NukeBuild
             FinalizeChangelog(ChangelogFile, GitVersion.SemVer, GitRepository);
 
             Git($"add {ChangelogFile}");
-            Git($"commit -m \"Finalize {Path.GetFileName(ChangelogFile)} for {GitVersion.SemVer}.\"");
+            Git($"commit -m \"Finalize {Path.GetFileName(ChangelogFile)} for {GitVersion.SemVer}.\" -m \"+semver: skip\"");
             Git($"tag -f {GitVersion.SemVer}");
         });
 

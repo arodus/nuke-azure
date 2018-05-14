@@ -14,7 +14,7 @@ namespace Nuke.Azure.Generator.Model
 {
     [UsedImplicitly]
     [DebuggerDisplay("Uid: {" + nameof(Uid) + "}")]
-    internal class Item : IDefinition
+    internal class Item : IBrowsableDefinition
 
     {
         [JsonProperty(PropertyName = "uid")] public string Uid { get; set; }
@@ -37,17 +37,18 @@ namespace Nuke.Azure.Generator.Model
         public string DisplayName { get; set; }
 
         [JsonProperty(PropertyName = "items")] public List<Item> Items { get; set; } = new List<Item>();
-        [JsonIgnore] public string ReferencePath { get; internal set; }
 
         [JsonIgnore] public string FullyQualifiedName => Name.ToPascalCase(' ', '-');
 
         [JsonProperty(PropertyName = "name")] public string Name { get; set; }
-        [JsonIgnore] [NotNull] public IDefinition Parent { get; internal set; }
+        [JsonIgnore] [NotNull] public IDefinition Parent { get; set; }
 
         [JsonIgnore] public string InstanceName => Name.Length < 3
             ? string.Empty
             : (Parent.Name == Name ? Name.Substring(startIndex: 3) : Name.Replace(Parent.Name, string.Empty)).Trim().ToPascalCase(' ', '-');
 
         [JsonIgnore] public IDefinition Root => Parent.Root;
+        public string RawUrl { get; set; }
+        public string BrowseUrl { get; set; }
     }
 }

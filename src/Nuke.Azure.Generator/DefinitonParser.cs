@@ -15,7 +15,7 @@ namespace Nuke.Azure.Generator
 {
     internal class DefinitonParser
     {
-        private const string c_defaultHelpText = "TBA";
+        private const string c_defaultHelpText = "General Tasks.";
 
         public static Tool Parse(TableOfContentsEntry toc, string ns, List<Item> items, Parameter[] parameters, TypeResolver typeResolver)
         {
@@ -126,14 +126,29 @@ namespace Nuke.Azure.Generator
                                      {
                                          $"Copyright Sebastian Karasek, Matthias Koch {DateTime.Now.Year}.",
                                          "Distributed under the MIT License.",
-                                         "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+                                         "https://github.com/nuke-build/azure/blob/master/LICENSE"
                                      },
-                           References = new HashSet<string>(_items.Select(x => x.ReferencePath)).ToList(),
+                           References = new HashSet<string>(_items.Select(x => x.RawUrl)).ToList(),
                            Help = help,
-                           OfficialUrl = item.ReferencePath
+                           OfficialUrl = GetOfficialUrl()
                        };
 
             return tool;
+        }
+
+        private string GetOfficialUrl()
+        {
+            var subDir = "reference-index";
+            //var appendix = string.Empty;
+            var uidSplit = _toc.Uid.NotNull().Split('_');
+
+            if (uidSplit.Length >= 2)
+            {
+                subDir = uidSplit[1];
+                //appendix = _toc.Depth == 0 ? _toc.Uid : string.Empty;
+            }
+
+            return $"https://docs.microsoft.com/en-us/cli/azure/{subDir}?view=azure-cli-latest";
         }
     }
 }

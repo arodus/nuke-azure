@@ -3,6 +3,7 @@
 // https://github.com/nuke-build/azure/blob/master/LICENSE
 
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using JetBrains.Annotations;
@@ -11,10 +12,10 @@ using Newtonsoft.Json;
 namespace Nuke.Azure.Generator.Model
 {
     [UsedImplicitly]
-    [DebuggerDisplay("Reference: {" + nameof(ReferenceUrl) + "}")]
-    internal class Definiton : IDefinition
+    [DebuggerDisplay("Reference: {" + nameof(Name) + "}")]
+    internal class Definiton : IBrowsableDefinition
     {
-        [JsonProperty(PropertyName = "items")] public Item[] Items { get; set; }
+        [JsonProperty(PropertyName = "items")] public List<Item> Items { get; set; }
 
         [JsonProperty(PropertyName = "globalParameters")]
         public Parameter[] GlobalParameters { get; set; }
@@ -37,10 +38,14 @@ namespace Nuke.Azure.Generator.Model
         [JsonProperty(PropertyName = "ms.date")]
         public DateTime? MsDate { get; set; }
 
-        [JsonIgnore] public string ReferenceUrl { get; internal set; }
+        [JsonIgnore] public string RawUrl { get; set; }
+        [JsonIgnore] public string BrowseUrl { get; set; }
 
-        public string Name => Items[0].Name;
-        public string InstanceName => Items[0].InstanceName;
+        public string Name => Items[index: 0].Name;
+        public string InstanceName => Items[index: 0].InstanceName;
         public IDefinition Root => this;
+
+        IDefinition IDefinition.Parent { get; set; }
+        List<Parameter> IBrowsableDefinition.Parameters => GlobalParameters.ToList();
     }
 }

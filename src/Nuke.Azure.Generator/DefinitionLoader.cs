@@ -10,6 +10,7 @@ using JetBrains.Annotations;
 using Newtonsoft.Json;
 using Nuke.Azure.Generator.Model;
 using Nuke.Common;
+using Nuke.Common.Git;
 using Nuke.Core.Utilities.Collections;
 using YamlDotNet.Serialization;
 
@@ -34,6 +35,7 @@ namespace Nuke.Azure.Generator
 
         public static List<Definiton> LoadCommandDefinitons(string path, string reference)
         {
+            var repository = GitRepository.FromLocalDirectory(path, reference);
             path = path.Replace(oldChar: '\\', newChar: '/');
             path = path.EndsWith("/") ? path : path + '/';
             var files = Directory.EnumerateFiles(path, $"*{c_definitionFileExtension}", SearchOption.AllDirectories).ToList();
@@ -45,8 +47,7 @@ namespace Nuke.Azure.Generator
                 var fileContent = File.ReadAllText(file);
 
                 var definition = ParseDefinition(fileContent);
-                PopulateDefinitionInfos(definition,
-                    string.Format(c_referenceUrl, reference) + file.Replace(oldChar: '\\', newChar: '/').Replace(path, string.Empty));
+                PopulateDefinitionInfos(definition, file, repository);
                 definitions.Add(definition);
             }
 
@@ -62,21 +63,20 @@ namespace Nuke.Azure.Generator
             return definiton;
         }
 
-        private static void PopulateDefinitionInfos(Definiton defintion, string referencePath)
+        private static void PopulateDefinitionInfos(Definiton defintion, string referencePath, GitRepository repository)
         {
-            defintion.ReferenceUrl = referencePath;
-            foreach (var defintionItem in defintion.Items) PopulateDefinitionInfos(defintionItem, defintion, referencePath);
-
-            foreach (var defintionGlobalParameter in defintion.GlobalParameters) defintionGlobalParameter.Parent = defintion;
+            var rawUrl = repository.GetGitHubDownloadUrl(referencePath);
+            var browseUrl = repository.GetGitHubBrowseUrl(referencePath);
+            PopulateDefinitionInfos(defintion, parent: null, rawUrl: rawUrl, browseUrl: browseUrl);
         }
 
-        private static void PopulateDefinitionInfos(Item item, IDefinition parent, string referencePath)
+        private static void PopulateDefinitionInfos(IBrowsableDefinition item, IDefinition parent, string rawUrl, string browseUrl)
         {
-            item.ReferencePath = referencePath;
             item.Parent = parent;
+            item.RawUrl = rawUrl;
+            item.BrowseUrl = browseUrl;
             foreach (var itemParameter in item.Parameters) itemParameter.Parent = item;
-
-            foreach (var itemItem in item.Items) PopulateDefinitionInfos(itemItem, item, referencePath);
+            foreach (var itemItem in item.Items) PopulateDefinitionInfos(itemItem, item, rawUrl, browseUrl);
         }
 
         private static void PoupuateTocInformation(TableOfContentsEntry toc, [CanBeNull] TableOfContentsEntry parent, out int depth, out int commands)

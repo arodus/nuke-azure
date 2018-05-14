@@ -191,7 +191,8 @@ namespace Nuke.Azure.Generator
 
         private bool IsSpaceSpearatedList(string summary)
         {
-            return !IsDictionary(summary) && summary.IndexOf("Space-separated list of", StringComparison.OrdinalIgnoreCase) == 0;
+            return !IsDictionary(summary) && (summary.IndexOf("Space-separated list of", StringComparison.OrdinalIgnoreCase) == 0
+                                              || summary.Contains("or specify individual disks"));
         }
 
         private bool IsEnumeration(Parameter parameter)
