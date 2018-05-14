@@ -49,7 +49,7 @@ namespace Nuke.Azure.Generator
 
         private void PopulateCommonTaskProperties()
         {
-            _tool.CommonTaskProperties = _parameters.Select(ParseParameter).ToList();
+            _tool.CommonTaskProperties = _parameters.Select(ParseParameter).Where(x => x != null).ToList();
         }
 
         private void PopulateEnumerations()
@@ -85,7 +85,7 @@ namespace Nuke.Azure.Generator
                                     {
                                         Tool = _tool,
                                         Task = task,
-                                        Properties = item.Parameters.Select(ParseParameter).ToList()
+                                        Properties = item.Parameters.Select(ParseParameter).Where(x => x != null).ToList()
                                     };
                 task.SettingsClass = settingsClass;
                 _tool.Tasks.Add(task);
