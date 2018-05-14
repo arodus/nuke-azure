@@ -3,13 +3,13 @@
   "license": [
     "Copyright Sebastian Karasek, Matthias Koch 2018.",
     "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+    "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lock.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/lock.yml"
   ],
   "name": "AzureLock",
-  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lock.yml",
+  "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/lock?view=azure-cli-latest",
   "help": "Manage Azure locks.",
   "pathExecutable": "az",
   "tasks": [

@@ -3,24 +3,24 @@
   "license": [
     "Copyright Sebastian Karasek, Matthias Koch 2018.",
     "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+    "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot/device.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot/dps.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot/hub.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot/device/message.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot/dps/access-policy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot/dps/certificate.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot/dps/linked-hub.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot/hub/certificate.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot/hub/consumer-group.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot/hub/job.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot/hub/policy.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/iot.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/iot/device.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/iot/dps.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/iot/hub.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/iot/device/message.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/iot/dps/access-policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/iot/dps/certificate.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/iot/dps/linked-hub.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/iot/hub/certificate.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/iot/hub/consumer-group.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/iot/hub/job.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/iot/hub/policy.yml"
   ],
   "name": "AzureIot",
-  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml",
+  "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest",
   "help": "(PREVIEW) Manage Internet of Things (IoT) assets.",
   "pathExecutable": "az",
   "tasks": [

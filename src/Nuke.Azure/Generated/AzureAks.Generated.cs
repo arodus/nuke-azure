@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureAks.json.
 
 using JetBrains.Annotations;
@@ -27,7 +27,7 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureAks executable.</p></summary>
         public static string AzureAksPath => ToolPathResolver.GetPathExecutable("az");
-        /// <summary><p>Manage Azure Kubernetes Services.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p></summary>
         public static IEnumerable<string> AzureAks(string arguments, string workingDirectory = null, ProcessSettings processSettings = null)
         {
             var process = ProcessTasks.StartProcess(AzureAksPath, arguments, workingDirectory, processSettings?.EnvironmentVariables, processSettings?.ExecutionTimeout, processSettings?.RedirectOutput ?? true);
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAksBrowseSettings toolSettings);
         static partial void PostProcess(AzureAksBrowseSettings toolSettings);
-        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/aks.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksBrowse(Configure<AzureAksBrowseSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksBrowseSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAksCreateSettings toolSettings);
         static partial void PostProcess(AzureAksCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/aks.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksCreate(Configure<AzureAksCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksCreateSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAksDeleteSettings toolSettings);
         static partial void PostProcess(AzureAksDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/aks.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksDelete(Configure<AzureAksDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksDeleteSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAksGetCredentialsSettings toolSettings);
         static partial void PostProcess(AzureAksGetCredentialsSettings toolSettings);
-        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/aks.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksGetCredentials(Configure<AzureAksGetCredentialsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksGetCredentialsSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAksGetUpgradesSettings toolSettings);
         static partial void PostProcess(AzureAksGetUpgradesSettings toolSettings);
-        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/aks.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksGetUpgrades(Configure<AzureAksGetUpgradesSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksGetUpgradesSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAksGetVersionsSettings toolSettings);
         static partial void PostProcess(AzureAksGetVersionsSettings toolSettings);
-        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/aks.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksGetVersions(Configure<AzureAksGetVersionsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksGetVersionsSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAksInstallCliSettings toolSettings);
         static partial void PostProcess(AzureAksInstallCliSettings toolSettings);
-        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/aks.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksInstallCli(Configure<AzureAksInstallCliSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksInstallCliSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAksInstallConnectorSettings toolSettings);
         static partial void PostProcess(AzureAksInstallConnectorSettings toolSettings);
-        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/aks.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksInstallConnector(Configure<AzureAksInstallConnectorSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksInstallConnectorSettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAksListSettings toolSettings);
         static partial void PostProcess(AzureAksListSettings toolSettings);
-        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/aks.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksList(Configure<AzureAksListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksListSettings());
@@ -135,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAksRemoveConnectorSettings toolSettings);
         static partial void PostProcess(AzureAksRemoveConnectorSettings toolSettings);
-        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/aks.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksRemoveConnector(Configure<AzureAksRemoveConnectorSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksRemoveConnectorSettings());
@@ -146,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAksScaleSettings toolSettings);
         static partial void PostProcess(AzureAksScaleSettings toolSettings);
-        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/aks.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksScale(Configure<AzureAksScaleSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksScaleSettings());
@@ -157,7 +157,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAksShowSettings toolSettings);
         static partial void PostProcess(AzureAksShowSettings toolSettings);
-        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/aks.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksShow(Configure<AzureAksShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksShowSettings());
@@ -168,7 +168,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAksUpgradeSettings toolSettings);
         static partial void PostProcess(AzureAksUpgradeSettings toolSettings);
-        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/aks.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksUpgrade(Configure<AzureAksUpgradeSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksUpgradeSettings());
@@ -179,7 +179,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAksUpgradeConnectorSettings toolSettings);
         static partial void PostProcess(AzureAksUpgradeConnectorSettings toolSettings);
-        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/aks.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksUpgradeConnector(Configure<AzureAksUpgradeConnectorSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksUpgradeConnectorSettings());
@@ -190,7 +190,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAksWaitSettings toolSettings);
         static partial void PostProcess(AzureAksWaitSettings toolSettings);
-        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/aks.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksWait(Configure<AzureAksWaitSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksWaitSettings());
@@ -540,7 +540,7 @@ namespace Nuke.Azure
         public virtual string ClientSecret { get; internal set; }
         /// <summary><p>The image tag of the virtual kubelet. Use 'latest' if it is not specified.</p></summary>
         public virtual string ImageTag { get; internal set; }
-        /// <summary><p>The location to create the ACI container groups.</p></summary>
+        /// <summary><p>The location to create the ACI container groups. Use the location of the MC_* resource group if it is not specified.</p></summary>
         public virtual string Location { get; internal set; }
         /// <summary><p>Install support for deploying ACIs of this operating system type.</p></summary>
         public virtual AksOsType OsType { get; internal set; }
@@ -813,7 +813,7 @@ namespace Nuke.Azure
         public virtual string ClientSecret { get; internal set; }
         /// <summary><p>The image tag of the virtual kubelet. Use 'latest' if it is not specified.</p></summary>
         public virtual string ImageTag { get; internal set; }
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p>The location to create the ACI container groups. Use the location of the MC_* resource group if it is not specified.</p></summary>
         public virtual string Location { get; internal set; }
         /// <summary><p>Install support for deploying ACIs of this operating system type.</p></summary>
         public virtual AksOsType OsType { get; internal set; }
@@ -2312,7 +2312,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Location
-        /// <summary><p><em>Sets <see cref="AzureAksInstallConnectorSettings.Location"/>.</em></p><p>The location to create the ACI container groups.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksInstallConnectorSettings.Location"/>.</em></p><p>The location to create the ACI container groups. Use the location of the MC_* resource group if it is not specified.</p></summary>
         [Pure]
         public static AzureAksInstallConnectorSettings SetLocation(this AzureAksInstallConnectorSettings toolSettings, string location)
         {
@@ -2320,7 +2320,7 @@ namespace Nuke.Azure
             toolSettings.Location = location;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksInstallConnectorSettings.Location"/>.</em></p><p>The location to create the ACI container groups.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksInstallConnectorSettings.Location"/>.</em></p><p>The location to create the ACI container groups. Use the location of the MC_* resource group if it is not specified.</p></summary>
         [Pure]
         public static AzureAksInstallConnectorSettings ResetLocation(this AzureAksInstallConnectorSettings toolSettings)
         {
@@ -3410,7 +3410,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Location
-        /// <summary><p><em>Sets <see cref="AzureAksUpgradeConnectorSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksUpgradeConnectorSettings.Location"/>.</em></p><p>The location to create the ACI container groups. Use the location of the MC_* resource group if it is not specified.</p></summary>
         [Pure]
         public static AzureAksUpgradeConnectorSettings SetLocation(this AzureAksUpgradeConnectorSettings toolSettings, string location)
         {
@@ -3418,7 +3418,7 @@ namespace Nuke.Azure
             toolSettings.Location = location;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksUpgradeConnectorSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksUpgradeConnectorSettings.Location"/>.</em></p><p>The location to create the ACI container groups. Use the location of the MC_* resource group if it is not specified.</p></summary>
         [Pure]
         public static AzureAksUpgradeConnectorSettings ResetLocation(this AzureAksUpgradeConnectorSettings toolSettings)
         {

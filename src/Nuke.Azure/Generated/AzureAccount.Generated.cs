@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureAccount.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAccountClearSettings toolSettings);
         static partial void PostProcess(AzureAccountClearSettings toolSettings);
-        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/account.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAccountClear(Configure<AzureAccountClearSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAccountClearSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAccountGetAccessTokenSettings toolSettings);
         static partial void PostProcess(AzureAccountGetAccessTokenSettings toolSettings);
-        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/account.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAccountGetAccessToken(Configure<AzureAccountGetAccessTokenSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAccountGetAccessTokenSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAccountListSettings toolSettings);
         static partial void PostProcess(AzureAccountListSettings toolSettings);
-        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/account.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAccountList(Configure<AzureAccountListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAccountListSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAccountListLocationsSettings toolSettings);
         static partial void PostProcess(AzureAccountListLocationsSettings toolSettings);
-        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/account.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAccountListLocations(Configure<AzureAccountListLocationsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAccountListLocationsSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAccountSetSettings toolSettings);
         static partial void PostProcess(AzureAccountSetSettings toolSettings);
-        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/account.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAccountSet(Configure<AzureAccountSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAccountSetSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAccountShowSettings toolSettings);
         static partial void PostProcess(AzureAccountShowSettings toolSettings);
-        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/account.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAccountShow(Configure<AzureAccountShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAccountShowSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAccountLockCreateSettings toolSettings);
         static partial void PostProcess(AzureAccountLockCreateSettings toolSettings);
-        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/account.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAccountLockCreate(Configure<AzureAccountLockCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAccountLockCreateSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAccountLockDeleteSettings toolSettings);
         static partial void PostProcess(AzureAccountLockDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/account.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAccountLockDelete(Configure<AzureAccountLockDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAccountLockDeleteSettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAccountLockListSettings toolSettings);
         static partial void PostProcess(AzureAccountLockListSettings toolSettings);
-        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/account.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAccountLockList(Configure<AzureAccountLockListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAccountLockListSettings());
@@ -135,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAccountLockShowSettings toolSettings);
         static partial void PostProcess(AzureAccountLockShowSettings toolSettings);
-        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/account.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAccountLockShow(Configure<AzureAccountLockShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAccountLockShowSettings());
@@ -146,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAccountLockUpdateSettings toolSettings);
         static partial void PostProcess(AzureAccountLockUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/account.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAccountLockUpdate(Configure<AzureAccountLockUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAccountLockUpdateSettings());

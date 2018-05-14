@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureBilling.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBillingSettings toolSettings);
         static partial void PostProcess(AzureBillingSettings toolSettings);
-        /// <summary><p>Manage Azure Billing.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/billing.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Billing.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/billing?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBilling(Configure<AzureBillingSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBillingSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBillingEnrollmentAccountListSettings toolSettings);
         static partial void PostProcess(AzureBillingEnrollmentAccountListSettings toolSettings);
-        /// <summary><p>Manage Azure Billing.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/billing.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Billing.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/billing?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBillingEnrollmentAccountList(Configure<AzureBillingEnrollmentAccountListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBillingEnrollmentAccountListSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBillingEnrollmentAccountShowSettings toolSettings);
         static partial void PostProcess(AzureBillingEnrollmentAccountShowSettings toolSettings);
-        /// <summary><p>Manage Azure Billing.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/billing.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Billing.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/billing?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBillingEnrollmentAccountShow(Configure<AzureBillingEnrollmentAccountShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBillingEnrollmentAccountShowSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBillingInvoiceListSettings toolSettings);
         static partial void PostProcess(AzureBillingInvoiceListSettings toolSettings);
-        /// <summary><p>Manage Azure Billing.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/billing.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Billing.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/billing?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBillingInvoiceList(Configure<AzureBillingInvoiceListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBillingInvoiceListSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBillingInvoiceShowSettings toolSettings);
         static partial void PostProcess(AzureBillingInvoiceShowSettings toolSettings);
-        /// <summary><p>Manage Azure Billing.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/billing.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Billing.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/billing?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBillingInvoiceShow(Configure<AzureBillingInvoiceShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBillingInvoiceShowSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBillingPeriodListSettings toolSettings);
         static partial void PostProcess(AzureBillingPeriodListSettings toolSettings);
-        /// <summary><p>Manage Azure Billing.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/billing.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Billing.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/billing?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBillingPeriodList(Configure<AzureBillingPeriodListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBillingPeriodListSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBillingPeriodShowSettings toolSettings);
         static partial void PostProcess(AzureBillingPeriodShowSettings toolSettings);
-        /// <summary><p>Manage Azure Billing.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/billing.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Billing.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/billing?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBillingPeriodShow(Configure<AzureBillingPeriodShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBillingPeriodShowSettings());

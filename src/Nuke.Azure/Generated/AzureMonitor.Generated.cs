@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureMonitor.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorSettings toolSettings);
         static partial void PostProcess(AzureMonitorSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitor(Configure<AzureMonitorSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorActionGroupCreateSettings toolSettings);
         static partial void PostProcess(AzureMonitorActionGroupCreateSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorActionGroupCreate(Configure<AzureMonitorActionGroupCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorActionGroupCreateSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorActionGroupDeleteSettings toolSettings);
         static partial void PostProcess(AzureMonitorActionGroupDeleteSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorActionGroupDelete(Configure<AzureMonitorActionGroupDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorActionGroupDeleteSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorActionGroupEnableReceiverSettings toolSettings);
         static partial void PostProcess(AzureMonitorActionGroupEnableReceiverSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorActionGroupEnableReceiver(Configure<AzureMonitorActionGroupEnableReceiverSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorActionGroupEnableReceiverSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorActionGroupListSettings toolSettings);
         static partial void PostProcess(AzureMonitorActionGroupListSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorActionGroupList(Configure<AzureMonitorActionGroupListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorActionGroupListSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorActionGroupShowSettings toolSettings);
         static partial void PostProcess(AzureMonitorActionGroupShowSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorActionGroupShow(Configure<AzureMonitorActionGroupShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorActionGroupShowSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorActionGroupUpdateSettings toolSettings);
         static partial void PostProcess(AzureMonitorActionGroupUpdateSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorActionGroupUpdate(Configure<AzureMonitorActionGroupUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorActionGroupUpdateSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorActivityLogListSettings toolSettings);
         static partial void PostProcess(AzureMonitorActivityLogListSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorActivityLogList(Configure<AzureMonitorActivityLogListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorActivityLogListSettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorActivityLogListCategoriesSettings toolSettings);
         static partial void PostProcess(AzureMonitorActivityLogListCategoriesSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorActivityLogListCategories(Configure<AzureMonitorActivityLogListCategoriesSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorActivityLogListCategoriesSettings());
@@ -135,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorAlertCreateSettings toolSettings);
         static partial void PostProcess(AzureMonitorAlertCreateSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorAlertCreate(Configure<AzureMonitorAlertCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorAlertCreateSettings());
@@ -146,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorAlertDeleteSettings toolSettings);
         static partial void PostProcess(AzureMonitorAlertDeleteSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorAlertDelete(Configure<AzureMonitorAlertDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorAlertDeleteSettings());
@@ -157,7 +157,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorAlertListSettings toolSettings);
         static partial void PostProcess(AzureMonitorAlertListSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorAlertList(Configure<AzureMonitorAlertListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorAlertListSettings());
@@ -168,7 +168,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorAlertListIncidentsSettings toolSettings);
         static partial void PostProcess(AzureMonitorAlertListIncidentsSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorAlertListIncidents(Configure<AzureMonitorAlertListIncidentsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorAlertListIncidentsSettings());
@@ -179,7 +179,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorAlertShowSettings toolSettings);
         static partial void PostProcess(AzureMonitorAlertShowSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorAlertShow(Configure<AzureMonitorAlertShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorAlertShowSettings());
@@ -190,7 +190,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorAlertShowIncidentSettings toolSettings);
         static partial void PostProcess(AzureMonitorAlertShowIncidentSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorAlertShowIncident(Configure<AzureMonitorAlertShowIncidentSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorAlertShowIncidentSettings());
@@ -201,7 +201,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorAlertUpdateSettings toolSettings);
         static partial void PostProcess(AzureMonitorAlertUpdateSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorAlertUpdate(Configure<AzureMonitorAlertUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorAlertUpdateSettings());
@@ -212,7 +212,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorAutoscaleSettingsCreateSettings toolSettings);
         static partial void PostProcess(AzureMonitorAutoscaleSettingsCreateSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorAutoscaleSettingsCreate(Configure<AzureMonitorAutoscaleSettingsCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleSettingsCreateSettings());
@@ -223,7 +223,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorAutoscaleSettingsDeleteSettings toolSettings);
         static partial void PostProcess(AzureMonitorAutoscaleSettingsDeleteSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorAutoscaleSettingsDelete(Configure<AzureMonitorAutoscaleSettingsDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleSettingsDeleteSettings());
@@ -234,7 +234,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorAutoscaleSettingsGetParametersTemplateSettings toolSettings);
         static partial void PostProcess(AzureMonitorAutoscaleSettingsGetParametersTemplateSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorAutoscaleSettingsGetParametersTemplate(Configure<AzureMonitorAutoscaleSettingsGetParametersTemplateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleSettingsGetParametersTemplateSettings());
@@ -245,7 +245,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorAutoscaleSettingsListSettings toolSettings);
         static partial void PostProcess(AzureMonitorAutoscaleSettingsListSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorAutoscaleSettingsList(Configure<AzureMonitorAutoscaleSettingsListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleSettingsListSettings());
@@ -256,7 +256,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorAutoscaleSettingsShowSettings toolSettings);
         static partial void PostProcess(AzureMonitorAutoscaleSettingsShowSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorAutoscaleSettingsShow(Configure<AzureMonitorAutoscaleSettingsShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleSettingsShowSettings());
@@ -267,7 +267,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorAutoscaleSettingsUpdateSettings toolSettings);
         static partial void PostProcess(AzureMonitorAutoscaleSettingsUpdateSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorAutoscaleSettingsUpdate(Configure<AzureMonitorAutoscaleSettingsUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleSettingsUpdateSettings());
@@ -278,7 +278,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorAutoscaleCreateSettings toolSettings);
         static partial void PostProcess(AzureMonitorAutoscaleCreateSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorAutoscaleCreate(Configure<AzureMonitorAutoscaleCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleCreateSettings());
@@ -289,7 +289,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorAutoscaleDeleteSettings toolSettings);
         static partial void PostProcess(AzureMonitorAutoscaleDeleteSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorAutoscaleDelete(Configure<AzureMonitorAutoscaleDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleDeleteSettings());
@@ -300,7 +300,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorAutoscaleListSettings toolSettings);
         static partial void PostProcess(AzureMonitorAutoscaleListSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorAutoscaleList(Configure<AzureMonitorAutoscaleListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleListSettings());
@@ -311,7 +311,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorAutoscaleShowSettings toolSettings);
         static partial void PostProcess(AzureMonitorAutoscaleShowSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorAutoscaleShow(Configure<AzureMonitorAutoscaleShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleShowSettings());
@@ -322,7 +322,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorAutoscaleUpdateSettings toolSettings);
         static partial void PostProcess(AzureMonitorAutoscaleUpdateSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorAutoscaleUpdate(Configure<AzureMonitorAutoscaleUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleUpdateSettings());
@@ -333,7 +333,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorDiagnosticSettingsCreateSettings toolSettings);
         static partial void PostProcess(AzureMonitorDiagnosticSettingsCreateSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorDiagnosticSettingsCreate(Configure<AzureMonitorDiagnosticSettingsCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorDiagnosticSettingsCreateSettings());
@@ -344,7 +344,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorDiagnosticSettingsDeleteSettings toolSettings);
         static partial void PostProcess(AzureMonitorDiagnosticSettingsDeleteSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorDiagnosticSettingsDelete(Configure<AzureMonitorDiagnosticSettingsDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorDiagnosticSettingsDeleteSettings());
@@ -355,7 +355,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorDiagnosticSettingsListSettings toolSettings);
         static partial void PostProcess(AzureMonitorDiagnosticSettingsListSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorDiagnosticSettingsList(Configure<AzureMonitorDiagnosticSettingsListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorDiagnosticSettingsListSettings());
@@ -366,7 +366,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorDiagnosticSettingsShowSettings toolSettings);
         static partial void PostProcess(AzureMonitorDiagnosticSettingsShowSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorDiagnosticSettingsShow(Configure<AzureMonitorDiagnosticSettingsShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorDiagnosticSettingsShowSettings());
@@ -377,7 +377,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorDiagnosticSettingsUpdateSettings toolSettings);
         static partial void PostProcess(AzureMonitorDiagnosticSettingsUpdateSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorDiagnosticSettingsUpdate(Configure<AzureMonitorDiagnosticSettingsUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorDiagnosticSettingsUpdateSettings());
@@ -388,7 +388,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorLogProfilesCreateSettings toolSettings);
         static partial void PostProcess(AzureMonitorLogProfilesCreateSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorLogProfilesCreate(Configure<AzureMonitorLogProfilesCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorLogProfilesCreateSettings());
@@ -399,7 +399,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorLogProfilesDeleteSettings toolSettings);
         static partial void PostProcess(AzureMonitorLogProfilesDeleteSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorLogProfilesDelete(Configure<AzureMonitorLogProfilesDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorLogProfilesDeleteSettings());
@@ -410,7 +410,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorLogProfilesListSettings toolSettings);
         static partial void PostProcess(AzureMonitorLogProfilesListSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorLogProfilesList(Configure<AzureMonitorLogProfilesListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorLogProfilesListSettings());
@@ -421,7 +421,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorLogProfilesShowSettings toolSettings);
         static partial void PostProcess(AzureMonitorLogProfilesShowSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorLogProfilesShow(Configure<AzureMonitorLogProfilesShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorLogProfilesShowSettings());
@@ -432,7 +432,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorLogProfilesUpdateSettings toolSettings);
         static partial void PostProcess(AzureMonitorLogProfilesUpdateSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorLogProfilesUpdate(Configure<AzureMonitorLogProfilesUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorLogProfilesUpdateSettings());
@@ -443,7 +443,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorMetricsListSettings toolSettings);
         static partial void PostProcess(AzureMonitorMetricsListSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorMetricsList(Configure<AzureMonitorMetricsListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorMetricsListSettings());
@@ -454,7 +454,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorMetricsListDefinitionsSettings toolSettings);
         static partial void PostProcess(AzureMonitorMetricsListDefinitionsSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorMetricsListDefinitions(Configure<AzureMonitorMetricsListDefinitionsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorMetricsListDefinitionsSettings());
@@ -465,7 +465,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorActivityLogAlertCreateSettings toolSettings);
         static partial void PostProcess(AzureMonitorActivityLogAlertCreateSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorActivityLogAlertCreate(Configure<AzureMonitorActivityLogAlertCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorActivityLogAlertCreateSettings());
@@ -476,7 +476,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorActivityLogAlertDeleteSettings toolSettings);
         static partial void PostProcess(AzureMonitorActivityLogAlertDeleteSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorActivityLogAlertDelete(Configure<AzureMonitorActivityLogAlertDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorActivityLogAlertDeleteSettings());
@@ -487,7 +487,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorActivityLogAlertListSettings toolSettings);
         static partial void PostProcess(AzureMonitorActivityLogAlertListSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorActivityLogAlertList(Configure<AzureMonitorActivityLogAlertListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorActivityLogAlertListSettings());
@@ -498,7 +498,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorActivityLogAlertShowSettings toolSettings);
         static partial void PostProcess(AzureMonitorActivityLogAlertShowSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorActivityLogAlertShow(Configure<AzureMonitorActivityLogAlertShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorActivityLogAlertShowSettings());
@@ -509,7 +509,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorActivityLogAlertUpdateSettings toolSettings);
         static partial void PostProcess(AzureMonitorActivityLogAlertUpdateSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorActivityLogAlertUpdate(Configure<AzureMonitorActivityLogAlertUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorActivityLogAlertUpdateSettings());
@@ -520,7 +520,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings);
         static partial void PostProcess(AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorActivityLogAlertActionGroupAdd(Configure<AzureMonitorActivityLogAlertActionGroupAddSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorActivityLogAlertActionGroupAddSettings());
@@ -531,7 +531,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings);
         static partial void PostProcess(AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorActivityLogAlertActionGroupRemove(Configure<AzureMonitorActivityLogAlertActionGroupRemoveSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorActivityLogAlertActionGroupRemoveSettings());
@@ -542,7 +542,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorActivityLogAlertScopeAddSettings toolSettings);
         static partial void PostProcess(AzureMonitorActivityLogAlertScopeAddSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorActivityLogAlertScopeAdd(Configure<AzureMonitorActivityLogAlertScopeAddSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorActivityLogAlertScopeAddSettings());
@@ -553,7 +553,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings);
         static partial void PostProcess(AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorActivityLogAlertScopeRemove(Configure<AzureMonitorActivityLogAlertScopeRemoveSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorActivityLogAlertScopeRemoveSettings());
@@ -564,7 +564,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorAutoscaleProfileCreateSettings toolSettings);
         static partial void PostProcess(AzureMonitorAutoscaleProfileCreateSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorAutoscaleProfileCreate(Configure<AzureMonitorAutoscaleProfileCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleProfileCreateSettings());
@@ -575,7 +575,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorAutoscaleProfileDeleteSettings toolSettings);
         static partial void PostProcess(AzureMonitorAutoscaleProfileDeleteSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorAutoscaleProfileDelete(Configure<AzureMonitorAutoscaleProfileDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleProfileDeleteSettings());
@@ -586,7 +586,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorAutoscaleProfileListSettings toolSettings);
         static partial void PostProcess(AzureMonitorAutoscaleProfileListSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorAutoscaleProfileList(Configure<AzureMonitorAutoscaleProfileListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleProfileListSettings());
@@ -597,7 +597,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorAutoscaleProfileListTimezonesSettings toolSettings);
         static partial void PostProcess(AzureMonitorAutoscaleProfileListTimezonesSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorAutoscaleProfileListTimezones(Configure<AzureMonitorAutoscaleProfileListTimezonesSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleProfileListTimezonesSettings());
@@ -608,7 +608,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorAutoscaleProfileShowSettings toolSettings);
         static partial void PostProcess(AzureMonitorAutoscaleProfileShowSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorAutoscaleProfileShow(Configure<AzureMonitorAutoscaleProfileShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleProfileShowSettings());
@@ -619,7 +619,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorAutoscaleRuleCopySettings toolSettings);
         static partial void PostProcess(AzureMonitorAutoscaleRuleCopySettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorAutoscaleRuleCopy(Configure<AzureMonitorAutoscaleRuleCopySettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleRuleCopySettings());
@@ -630,7 +630,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorAutoscaleRuleCreateSettings toolSettings);
         static partial void PostProcess(AzureMonitorAutoscaleRuleCreateSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorAutoscaleRuleCreate(Configure<AzureMonitorAutoscaleRuleCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleRuleCreateSettings());
@@ -641,7 +641,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorAutoscaleRuleDeleteSettings toolSettings);
         static partial void PostProcess(AzureMonitorAutoscaleRuleDeleteSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorAutoscaleRuleDelete(Configure<AzureMonitorAutoscaleRuleDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleRuleDeleteSettings());
@@ -652,7 +652,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorAutoscaleRuleListSettings toolSettings);
         static partial void PostProcess(AzureMonitorAutoscaleRuleListSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorAutoscaleRuleList(Configure<AzureMonitorAutoscaleRuleListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleRuleListSettings());
@@ -663,7 +663,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings);
         static partial void PostProcess(AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorDiagnosticSettingsCategoriesList(Configure<AzureMonitorDiagnosticSettingsCategoriesListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorDiagnosticSettingsCategoriesListSettings());
@@ -674,7 +674,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings);
         static partial void PostProcess(AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/monitor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMonitorDiagnosticSettingsCategoriesShow(Configure<AzureMonitorDiagnosticSettingsCategoriesShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorDiagnosticSettingsCategoriesShowSettings());

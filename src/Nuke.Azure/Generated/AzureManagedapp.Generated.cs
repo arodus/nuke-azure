@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureManagedapp.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureManagedappCreateSettings toolSettings);
         static partial void PostProcess(AzureManagedappCreateSettings toolSettings);
-        /// <summary><p>Manage template solutions provided and maintained by Independent Software Vendors (ISVs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/managedapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage template solutions provided and maintained by Independent Software Vendors (ISVs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/managedapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureManagedappCreate(Configure<AzureManagedappCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureManagedappCreateSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureManagedappDeleteSettings toolSettings);
         static partial void PostProcess(AzureManagedappDeleteSettings toolSettings);
-        /// <summary><p>Manage template solutions provided and maintained by Independent Software Vendors (ISVs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/managedapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage template solutions provided and maintained by Independent Software Vendors (ISVs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/managedapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureManagedappDelete(Configure<AzureManagedappDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureManagedappDeleteSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureManagedappListSettings toolSettings);
         static partial void PostProcess(AzureManagedappListSettings toolSettings);
-        /// <summary><p>Manage template solutions provided and maintained by Independent Software Vendors (ISVs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/managedapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage template solutions provided and maintained by Independent Software Vendors (ISVs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/managedapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureManagedappList(Configure<AzureManagedappListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureManagedappListSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureManagedappShowSettings toolSettings);
         static partial void PostProcess(AzureManagedappShowSettings toolSettings);
-        /// <summary><p>Manage template solutions provided and maintained by Independent Software Vendors (ISVs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/managedapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage template solutions provided and maintained by Independent Software Vendors (ISVs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/managedapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureManagedappShow(Configure<AzureManagedappShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureManagedappShowSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureManagedappDefinitionCreateSettings toolSettings);
         static partial void PostProcess(AzureManagedappDefinitionCreateSettings toolSettings);
-        /// <summary><p>Manage template solutions provided and maintained by Independent Software Vendors (ISVs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/managedapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage template solutions provided and maintained by Independent Software Vendors (ISVs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/managedapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureManagedappDefinitionCreate(Configure<AzureManagedappDefinitionCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureManagedappDefinitionCreateSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureManagedappDefinitionDeleteSettings toolSettings);
         static partial void PostProcess(AzureManagedappDefinitionDeleteSettings toolSettings);
-        /// <summary><p>Manage template solutions provided and maintained by Independent Software Vendors (ISVs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/managedapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage template solutions provided and maintained by Independent Software Vendors (ISVs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/managedapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureManagedappDefinitionDelete(Configure<AzureManagedappDefinitionDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureManagedappDefinitionDeleteSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureManagedappDefinitionListSettings toolSettings);
         static partial void PostProcess(AzureManagedappDefinitionListSettings toolSettings);
-        /// <summary><p>Manage template solutions provided and maintained by Independent Software Vendors (ISVs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/managedapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage template solutions provided and maintained by Independent Software Vendors (ISVs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/managedapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureManagedappDefinitionList(Configure<AzureManagedappDefinitionListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureManagedappDefinitionListSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureManagedappDefinitionShowSettings toolSettings);
         static partial void PostProcess(AzureManagedappDefinitionShowSettings toolSettings);
-        /// <summary><p>Manage template solutions provided and maintained by Independent Software Vendors (ISVs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/managedapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage template solutions provided and maintained by Independent Software Vendors (ISVs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/managedapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureManagedappDefinitionShow(Configure<AzureManagedappDefinitionShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureManagedappDefinitionShowSettings());

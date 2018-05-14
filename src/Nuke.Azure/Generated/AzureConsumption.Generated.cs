@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureConsumption.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureConsumptionSettings toolSettings);
         static partial void PostProcess(AzureConsumptionSettings toolSettings);
-        /// <summary><p>Manage consumption of Azure resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/consumption.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage consumption of Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/consumption?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureConsumption(Configure<AzureConsumptionSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureConsumptionSettings());
@@ -45,9 +45,53 @@ namespace Nuke.Azure
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
+        static partial void PreProcess(AzureConsumptionBudgetCreateSettings toolSettings);
+        static partial void PostProcess(AzureConsumptionBudgetCreateSettings toolSettings);
+        /// <summary><p>Manage consumption of Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/consumption?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureConsumptionBudgetCreate(Configure<AzureConsumptionBudgetCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureConsumptionBudgetCreateSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureConsumptionBudgetDeleteSettings toolSettings);
+        static partial void PostProcess(AzureConsumptionBudgetDeleteSettings toolSettings);
+        /// <summary><p>Manage consumption of Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/consumption?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureConsumptionBudgetDelete(Configure<AzureConsumptionBudgetDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureConsumptionBudgetDeleteSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureConsumptionBudgetListSettings toolSettings);
+        static partial void PostProcess(AzureConsumptionBudgetListSettings toolSettings);
+        /// <summary><p>Manage consumption of Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/consumption?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureConsumptionBudgetList(Configure<AzureConsumptionBudgetListSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureConsumptionBudgetListSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureConsumptionBudgetShowSettings toolSettings);
+        static partial void PostProcess(AzureConsumptionBudgetShowSettings toolSettings);
+        /// <summary><p>Manage consumption of Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/consumption?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureConsumptionBudgetShow(Configure<AzureConsumptionBudgetShowSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureConsumptionBudgetShowSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
         static partial void PreProcess(AzureConsumptionMarketplaceListSettings toolSettings);
         static partial void PostProcess(AzureConsumptionMarketplaceListSettings toolSettings);
-        /// <summary><p>Manage consumption of Azure resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/consumption.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage consumption of Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/consumption?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureConsumptionMarketplaceList(Configure<AzureConsumptionMarketplaceListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureConsumptionMarketplaceListSettings());
@@ -58,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureConsumptionPricesheetShowSettings toolSettings);
         static partial void PostProcess(AzureConsumptionPricesheetShowSettings toolSettings);
-        /// <summary><p>Manage consumption of Azure resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/consumption.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage consumption of Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/consumption?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureConsumptionPricesheetShow(Configure<AzureConsumptionPricesheetShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureConsumptionPricesheetShowSettings());
@@ -69,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureConsumptionReservationSettings toolSettings);
         static partial void PostProcess(AzureConsumptionReservationSettings toolSettings);
-        /// <summary><p>Manage consumption of Azure resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/consumption.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage consumption of Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/consumption?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureConsumptionReservation(Configure<AzureConsumptionReservationSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureConsumptionReservationSettings());
@@ -80,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureConsumptionUsageListSettings toolSettings);
         static partial void PostProcess(AzureConsumptionUsageListSettings toolSettings);
-        /// <summary><p>Manage consumption of Azure resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/consumption.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage consumption of Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/consumption?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureConsumptionUsageList(Configure<AzureConsumptionUsageListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureConsumptionUsageListSettings());
@@ -91,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureConsumptionReservationDetailListSettings toolSettings);
         static partial void PostProcess(AzureConsumptionReservationDetailListSettings toolSettings);
-        /// <summary><p>Manage consumption of Azure resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/consumption.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage consumption of Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/consumption?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureConsumptionReservationDetailList(Configure<AzureConsumptionReservationDetailListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureConsumptionReservationDetailListSettings());
@@ -102,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureConsumptionReservationSummaryListSettings toolSettings);
         static partial void PostProcess(AzureConsumptionReservationSummaryListSettings toolSettings);
-        /// <summary><p>Manage consumption of Azure resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/consumption.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage consumption of Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/consumption?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureConsumptionReservationSummaryList(Configure<AzureConsumptionReservationSummaryListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureConsumptionReservationSummaryListSettings());
@@ -135,6 +179,182 @@ namespace Nuke.Azure
         {
             arguments
               .Add("consumption")
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureConsumptionBudgetCreateSettings
+    /// <summary><p>Used within <see cref="AzureConsumptionTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureConsumptionBudgetCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureConsumption executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureConsumptionTasks.AzureConsumptionPath;
+        /// <summary><p>Amount of a budget.</p></summary>
+        public virtual string Amount { get; internal set; }
+        /// <summary><p>Name of a budget.</p></summary>
+        public virtual string BudgetName { get; internal set; }
+        /// <summary><p>Category of the budget can be cost or usage.</p></summary>
+        public virtual ConsumptionBudgetCreateCategory Category { get; internal set; }
+        /// <summary><p>End date (YYYY-MM-DD in UTC) of time period of a budget.</p></summary>
+        public virtual string EndDate { get; internal set; }
+        /// <summary><p>Start date (YYYY-MM-DD in UTC) of time period of a budget.</p></summary>
+        public virtual string StartDate { get; internal set; }
+        /// <summary><p>Time grain of the budget can be monthly, quarterly, or annually.</p></summary>
+        public virtual ConsumptionBudgetCreateTimeGrain TimeGrain { get; internal set; }
+        /// <summary><p>Space-separated list of meters to filter on. Required if category is usage.</p></summary>
+        public virtual IReadOnlyList<string> MeterFilter => MeterFilterInternal.AsReadOnly();
+        internal List<string> MeterFilterInternal { get; set; } = new List<string>();
+        /// <summary><p>Space-separated list of resource instances to filter on.</p></summary>
+        public virtual IReadOnlyList<string> ResourceFilter => ResourceFilterInternal.AsReadOnly();
+        internal List<string> ResourceFilterInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Space-separated list of resource groups to filter on.</p></summary>
+        public virtual IReadOnlyList<string> ResourceGroupFilter => ResourceGroupFilterInternal.AsReadOnly();
+        internal List<string> ResourceGroupFilterInternal { get; set; } = new List<string>();
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("consumption budget create")
+              .Add("--amount {value}", Amount)
+              .Add("--budget-name {value}", BudgetName)
+              .Add("--category {value}", Category)
+              .Add("--end-date {value}", EndDate)
+              .Add("--start-date {value}", StartDate)
+              .Add("--time-grain {value}", TimeGrain)
+              .Add("--meter-filter {value}", MeterFilter, separator: ' ')
+              .Add("--resource-filter {value}", ResourceFilter, separator: ' ')
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--resource-group-filter {value}", ResourceGroupFilter, separator: ' ')
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureConsumptionBudgetDeleteSettings
+    /// <summary><p>Used within <see cref="AzureConsumptionTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureConsumptionBudgetDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureConsumption executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureConsumptionTasks.AzureConsumptionPath;
+        /// <summary><p>Name of a budget.</p></summary>
+        public virtual string BudgetName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("consumption budget delete")
+              .Add("--budget-name {value}", BudgetName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureConsumptionBudgetListSettings
+    /// <summary><p>Used within <see cref="AzureConsumptionTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureConsumptionBudgetListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureConsumption executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureConsumptionTasks.AzureConsumptionPath;
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("consumption budget list")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureConsumptionBudgetShowSettings
+    /// <summary><p>Used within <see cref="AzureConsumptionTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureConsumptionBudgetShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureConsumption executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureConsumptionTasks.AzureConsumptionPath;
+        /// <summary><p>Name of a budget.</p></summary>
+        public virtual string BudgetName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("consumption budget show")
+              .Add("--budget-name {value}", BudgetName)
+              .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -489,6 +709,794 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureConsumptionSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureConsumptionSettings ResetVerbose(this AzureConsumptionSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureConsumptionBudgetCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureConsumptionTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureConsumptionBudgetCreateSettingsExtensions
+    {
+        #region Amount
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetCreateSettings.Amount"/>.</em></p><p>Amount of a budget.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings SetAmount(this AzureConsumptionBudgetCreateSettings toolSettings, string amount)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Amount = amount;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetCreateSettings.Amount"/>.</em></p><p>Amount of a budget.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings ResetAmount(this AzureConsumptionBudgetCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Amount = null;
+            return toolSettings;
+        }
+        #endregion
+        #region BudgetName
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetCreateSettings.BudgetName"/>.</em></p><p>Name of a budget.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings SetBudgetName(this AzureConsumptionBudgetCreateSettings toolSettings, string budgetName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BudgetName = budgetName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetCreateSettings.BudgetName"/>.</em></p><p>Name of a budget.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings ResetBudgetName(this AzureConsumptionBudgetCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BudgetName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Category
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetCreateSettings.Category"/>.</em></p><p>Category of the budget can be cost or usage.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings SetCategory(this AzureConsumptionBudgetCreateSettings toolSettings, ConsumptionBudgetCreateCategory category)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Category = category;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetCreateSettings.Category"/>.</em></p><p>Category of the budget can be cost or usage.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings ResetCategory(this AzureConsumptionBudgetCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Category = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EndDate
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetCreateSettings.EndDate"/>.</em></p><p>End date (YYYY-MM-DD in UTC) of time period of a budget.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings SetEndDate(this AzureConsumptionBudgetCreateSettings toolSettings, string endDate)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndDate = endDate;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetCreateSettings.EndDate"/>.</em></p><p>End date (YYYY-MM-DD in UTC) of time period of a budget.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings ResetEndDate(this AzureConsumptionBudgetCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndDate = null;
+            return toolSettings;
+        }
+        #endregion
+        #region StartDate
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetCreateSettings.StartDate"/>.</em></p><p>Start date (YYYY-MM-DD in UTC) of time period of a budget.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings SetStartDate(this AzureConsumptionBudgetCreateSettings toolSettings, string startDate)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StartDate = startDate;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetCreateSettings.StartDate"/>.</em></p><p>Start date (YYYY-MM-DD in UTC) of time period of a budget.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings ResetStartDate(this AzureConsumptionBudgetCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StartDate = null;
+            return toolSettings;
+        }
+        #endregion
+        #region TimeGrain
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetCreateSettings.TimeGrain"/>.</em></p><p>Time grain of the budget can be monthly, quarterly, or annually.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings SetTimeGrain(this AzureConsumptionBudgetCreateSettings toolSettings, ConsumptionBudgetCreateTimeGrain timeGrain)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TimeGrain = timeGrain;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetCreateSettings.TimeGrain"/>.</em></p><p>Time grain of the budget can be monthly, quarterly, or annually.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings ResetTimeGrain(this AzureConsumptionBudgetCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TimeGrain = null;
+            return toolSettings;
+        }
+        #endregion
+        #region MeterFilter
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetCreateSettings.MeterFilter"/> to a new list.</em></p><p>Space-separated list of meters to filter on. Required if category is usage.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings SetMeterFilter(this AzureConsumptionBudgetCreateSettings toolSettings, params string[] meterFilter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MeterFilterInternal = meterFilter.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetCreateSettings.MeterFilter"/> to a new list.</em></p><p>Space-separated list of meters to filter on. Required if category is usage.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings SetMeterFilter(this AzureConsumptionBudgetCreateSettings toolSettings, IEnumerable<string> meterFilter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MeterFilterInternal = meterFilter.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureConsumptionBudgetCreateSettings.MeterFilter"/>.</em></p><p>Space-separated list of meters to filter on. Required if category is usage.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings AddMeterFilter(this AzureConsumptionBudgetCreateSettings toolSettings, params string[] meterFilter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MeterFilterInternal.AddRange(meterFilter);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureConsumptionBudgetCreateSettings.MeterFilter"/>.</em></p><p>Space-separated list of meters to filter on. Required if category is usage.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings AddMeterFilter(this AzureConsumptionBudgetCreateSettings toolSettings, IEnumerable<string> meterFilter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MeterFilterInternal.AddRange(meterFilter);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureConsumptionBudgetCreateSettings.MeterFilter"/>.</em></p><p>Space-separated list of meters to filter on. Required if category is usage.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings ClearMeterFilter(this AzureConsumptionBudgetCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MeterFilterInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureConsumptionBudgetCreateSettings.MeterFilter"/>.</em></p><p>Space-separated list of meters to filter on. Required if category is usage.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings RemoveMeterFilter(this AzureConsumptionBudgetCreateSettings toolSettings, params string[] meterFilter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(meterFilter);
+            toolSettings.MeterFilterInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureConsumptionBudgetCreateSettings.MeterFilter"/>.</em></p><p>Space-separated list of meters to filter on. Required if category is usage.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings RemoveMeterFilter(this AzureConsumptionBudgetCreateSettings toolSettings, IEnumerable<string> meterFilter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(meterFilter);
+            toolSettings.MeterFilterInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceFilter
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetCreateSettings.ResourceFilter"/> to a new list.</em></p><p>Space-separated list of resource instances to filter on.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings SetResourceFilter(this AzureConsumptionBudgetCreateSettings toolSettings, params string[] resourceFilter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceFilterInternal = resourceFilter.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetCreateSettings.ResourceFilter"/> to a new list.</em></p><p>Space-separated list of resource instances to filter on.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings SetResourceFilter(this AzureConsumptionBudgetCreateSettings toolSettings, IEnumerable<string> resourceFilter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceFilterInternal = resourceFilter.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureConsumptionBudgetCreateSettings.ResourceFilter"/>.</em></p><p>Space-separated list of resource instances to filter on.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings AddResourceFilter(this AzureConsumptionBudgetCreateSettings toolSettings, params string[] resourceFilter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceFilterInternal.AddRange(resourceFilter);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureConsumptionBudgetCreateSettings.ResourceFilter"/>.</em></p><p>Space-separated list of resource instances to filter on.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings AddResourceFilter(this AzureConsumptionBudgetCreateSettings toolSettings, IEnumerable<string> resourceFilter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceFilterInternal.AddRange(resourceFilter);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureConsumptionBudgetCreateSettings.ResourceFilter"/>.</em></p><p>Space-separated list of resource instances to filter on.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings ClearResourceFilter(this AzureConsumptionBudgetCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceFilterInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureConsumptionBudgetCreateSettings.ResourceFilter"/>.</em></p><p>Space-separated list of resource instances to filter on.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings RemoveResourceFilter(this AzureConsumptionBudgetCreateSettings toolSettings, params string[] resourceFilter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(resourceFilter);
+            toolSettings.ResourceFilterInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureConsumptionBudgetCreateSettings.ResourceFilter"/>.</em></p><p>Space-separated list of resource instances to filter on.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings RemoveResourceFilter(this AzureConsumptionBudgetCreateSettings toolSettings, IEnumerable<string> resourceFilter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(resourceFilter);
+            toolSettings.ResourceFilterInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings SetResourceGroup(this AzureConsumptionBudgetCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings ResetResourceGroup(this AzureConsumptionBudgetCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroupFilter
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetCreateSettings.ResourceGroupFilter"/> to a new list.</em></p><p>Space-separated list of resource groups to filter on.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings SetResourceGroupFilter(this AzureConsumptionBudgetCreateSettings toolSettings, params string[] resourceGroupFilter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroupFilterInternal = resourceGroupFilter.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetCreateSettings.ResourceGroupFilter"/> to a new list.</em></p><p>Space-separated list of resource groups to filter on.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings SetResourceGroupFilter(this AzureConsumptionBudgetCreateSettings toolSettings, IEnumerable<string> resourceGroupFilter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroupFilterInternal = resourceGroupFilter.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureConsumptionBudgetCreateSettings.ResourceGroupFilter"/>.</em></p><p>Space-separated list of resource groups to filter on.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings AddResourceGroupFilter(this AzureConsumptionBudgetCreateSettings toolSettings, params string[] resourceGroupFilter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroupFilterInternal.AddRange(resourceGroupFilter);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureConsumptionBudgetCreateSettings.ResourceGroupFilter"/>.</em></p><p>Space-separated list of resource groups to filter on.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings AddResourceGroupFilter(this AzureConsumptionBudgetCreateSettings toolSettings, IEnumerable<string> resourceGroupFilter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroupFilterInternal.AddRange(resourceGroupFilter);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureConsumptionBudgetCreateSettings.ResourceGroupFilter"/>.</em></p><p>Space-separated list of resource groups to filter on.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings ClearResourceGroupFilter(this AzureConsumptionBudgetCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroupFilterInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureConsumptionBudgetCreateSettings.ResourceGroupFilter"/>.</em></p><p>Space-separated list of resource groups to filter on.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings RemoveResourceGroupFilter(this AzureConsumptionBudgetCreateSettings toolSettings, params string[] resourceGroupFilter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(resourceGroupFilter);
+            toolSettings.ResourceGroupFilterInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureConsumptionBudgetCreateSettings.ResourceGroupFilter"/>.</em></p><p>Space-separated list of resource groups to filter on.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings RemoveResourceGroupFilter(this AzureConsumptionBudgetCreateSettings toolSettings, IEnumerable<string> resourceGroupFilter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(resourceGroupFilter);
+            toolSettings.ResourceGroupFilterInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings SetDebug(this AzureConsumptionBudgetCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings ResetDebug(this AzureConsumptionBudgetCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings SetHelp(this AzureConsumptionBudgetCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings ResetHelp(this AzureConsumptionBudgetCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings SetOutput(this AzureConsumptionBudgetCreateSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings ResetOutput(this AzureConsumptionBudgetCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings SetQuery(this AzureConsumptionBudgetCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings ResetQuery(this AzureConsumptionBudgetCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings SetVerbose(this AzureConsumptionBudgetCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetCreateSettings ResetVerbose(this AzureConsumptionBudgetCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureConsumptionBudgetDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureConsumptionTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureConsumptionBudgetDeleteSettingsExtensions
+    {
+        #region BudgetName
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetDeleteSettings.BudgetName"/>.</em></p><p>Name of a budget.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetDeleteSettings SetBudgetName(this AzureConsumptionBudgetDeleteSettings toolSettings, string budgetName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BudgetName = budgetName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetDeleteSettings.BudgetName"/>.</em></p><p>Name of a budget.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetDeleteSettings ResetBudgetName(this AzureConsumptionBudgetDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BudgetName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetDeleteSettings SetResourceGroup(this AzureConsumptionBudgetDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetDeleteSettings ResetResourceGroup(this AzureConsumptionBudgetDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetDeleteSettings SetDebug(this AzureConsumptionBudgetDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetDeleteSettings ResetDebug(this AzureConsumptionBudgetDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetDeleteSettings SetHelp(this AzureConsumptionBudgetDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetDeleteSettings ResetHelp(this AzureConsumptionBudgetDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetDeleteSettings SetOutput(this AzureConsumptionBudgetDeleteSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetDeleteSettings ResetOutput(this AzureConsumptionBudgetDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetDeleteSettings SetQuery(this AzureConsumptionBudgetDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetDeleteSettings ResetQuery(this AzureConsumptionBudgetDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetDeleteSettings SetVerbose(this AzureConsumptionBudgetDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetDeleteSettings ResetVerbose(this AzureConsumptionBudgetDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureConsumptionBudgetListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureConsumptionTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureConsumptionBudgetListSettingsExtensions
+    {
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetListSettings SetResourceGroup(this AzureConsumptionBudgetListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetListSettings ResetResourceGroup(this AzureConsumptionBudgetListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetListSettings SetDebug(this AzureConsumptionBudgetListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetListSettings ResetDebug(this AzureConsumptionBudgetListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetListSettings SetHelp(this AzureConsumptionBudgetListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetListSettings ResetHelp(this AzureConsumptionBudgetListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetListSettings SetOutput(this AzureConsumptionBudgetListSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetListSettings ResetOutput(this AzureConsumptionBudgetListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetListSettings SetQuery(this AzureConsumptionBudgetListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetListSettings ResetQuery(this AzureConsumptionBudgetListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetListSettings SetVerbose(this AzureConsumptionBudgetListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetListSettings ResetVerbose(this AzureConsumptionBudgetListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureConsumptionBudgetShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureConsumptionTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureConsumptionBudgetShowSettingsExtensions
+    {
+        #region BudgetName
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetShowSettings.BudgetName"/>.</em></p><p>Name of a budget.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetShowSettings SetBudgetName(this AzureConsumptionBudgetShowSettings toolSettings, string budgetName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BudgetName = budgetName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetShowSettings.BudgetName"/>.</em></p><p>Name of a budget.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetShowSettings ResetBudgetName(this AzureConsumptionBudgetShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BudgetName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetShowSettings SetResourceGroup(this AzureConsumptionBudgetShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetShowSettings ResetResourceGroup(this AzureConsumptionBudgetShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetShowSettings SetDebug(this AzureConsumptionBudgetShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetShowSettings ResetDebug(this AzureConsumptionBudgetShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetShowSettings SetHelp(this AzureConsumptionBudgetShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetShowSettings ResetHelp(this AzureConsumptionBudgetShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetShowSettings SetOutput(this AzureConsumptionBudgetShowSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetShowSettings ResetOutput(this AzureConsumptionBudgetShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetShowSettings SetQuery(this AzureConsumptionBudgetShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetShowSettings ResetQuery(this AzureConsumptionBudgetShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureConsumptionBudgetShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetShowSettings SetVerbose(this AzureConsumptionBudgetShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureConsumptionBudgetShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureConsumptionBudgetShowSettings ResetVerbose(this AzureConsumptionBudgetShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -1461,6 +2469,27 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+    }
+    #endregion
+    #region ConsumptionBudgetCreateCategory
+    /// <summary><p>Used within <see cref="AzureConsumptionTasks"/>.</p></summary>
+    [PublicAPI]
+    [Serializable]
+    public partial class ConsumptionBudgetCreateCategory : Enumeration
+    {
+        public static ConsumptionBudgetCreateCategory cost = new ConsumptionBudgetCreateCategory { Value = "cost" };
+        public static ConsumptionBudgetCreateCategory usage = new ConsumptionBudgetCreateCategory { Value = "usage" };
+    }
+    #endregion
+    #region ConsumptionBudgetCreateTimeGrain
+    /// <summary><p>Used within <see cref="AzureConsumptionTasks"/>.</p></summary>
+    [PublicAPI]
+    [Serializable]
+    public partial class ConsumptionBudgetCreateTimeGrain : Enumeration
+    {
+        public static ConsumptionBudgetCreateTimeGrain annually = new ConsumptionBudgetCreateTimeGrain { Value = "annually" };
+        public static ConsumptionBudgetCreateTimeGrain monthly = new ConsumptionBudgetCreateTimeGrain { Value = "monthly" };
+        public static ConsumptionBudgetCreateTimeGrain quarterly = new ConsumptionBudgetCreateTimeGrain { Value = "quarterly" };
     }
     #endregion
 }

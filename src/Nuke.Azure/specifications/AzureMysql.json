@@ -3,18 +3,18 @@
   "license": [
     "Copyright Sebastian Karasek, Matthias Koch 2018.",
     "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+    "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/mysql.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/mysql/db.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/mysql/server-logs.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/mysql/server.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/mysql/server/configuration.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/mysql/server/firewall-rule.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/mysql.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/mysql/db.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/mysql/server-logs.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/mysql/server.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/mysql/server/configuration.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/mysql/server/firewall-rule.yml"
   ],
   "name": "AzureMysql",
-  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/mysql.yml",
+  "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest",
   "help": "Manage Azure Database for MySQL servers.",
   "pathExecutable": "az",
   "tasks": [
@@ -255,7 +255,7 @@
             "name": "StorageSize",
             "type": "string",
             "format": "--storage-size {value}",
-            "help": ""
+            "help": "The max storage size of the server. Unit is megabytes."
           },
           {
             "name": "Tags",

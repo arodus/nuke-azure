@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureCdn.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCdnNameExistsSettings toolSettings);
         static partial void PostProcess(AzureCdnNameExistsSettings toolSettings);
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cdn.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCdnNameExists(Configure<AzureCdnNameExistsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCdnNameExistsSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCdnUsageSettings toolSettings);
         static partial void PostProcess(AzureCdnUsageSettings toolSettings);
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cdn.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCdnUsage(Configure<AzureCdnUsageSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCdnUsageSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCdnCustomDomainCreateSettings toolSettings);
         static partial void PostProcess(AzureCdnCustomDomainCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cdn.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCdnCustomDomainCreate(Configure<AzureCdnCustomDomainCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCdnCustomDomainCreateSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCdnCustomDomainDeleteSettings toolSettings);
         static partial void PostProcess(AzureCdnCustomDomainDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cdn.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCdnCustomDomainDelete(Configure<AzureCdnCustomDomainDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCdnCustomDomainDeleteSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCdnCustomDomainDisableHttpsSettings toolSettings);
         static partial void PostProcess(AzureCdnCustomDomainDisableHttpsSettings toolSettings);
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cdn.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCdnCustomDomainDisableHttps(Configure<AzureCdnCustomDomainDisableHttpsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCdnCustomDomainDisableHttpsSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCdnCustomDomainEnableHttpsSettings toolSettings);
         static partial void PostProcess(AzureCdnCustomDomainEnableHttpsSettings toolSettings);
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cdn.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCdnCustomDomainEnableHttps(Configure<AzureCdnCustomDomainEnableHttpsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCdnCustomDomainEnableHttpsSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCdnCustomDomainListSettings toolSettings);
         static partial void PostProcess(AzureCdnCustomDomainListSettings toolSettings);
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cdn.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCdnCustomDomainList(Configure<AzureCdnCustomDomainListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCdnCustomDomainListSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCdnCustomDomainShowSettings toolSettings);
         static partial void PostProcess(AzureCdnCustomDomainShowSettings toolSettings);
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cdn.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCdnCustomDomainShow(Configure<AzureCdnCustomDomainShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCdnCustomDomainShowSettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCdnEdgeNodeListSettings toolSettings);
         static partial void PostProcess(AzureCdnEdgeNodeListSettings toolSettings);
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cdn.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCdnEdgeNodeList(Configure<AzureCdnEdgeNodeListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCdnEdgeNodeListSettings());
@@ -135,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCdnEndpointCreateSettings toolSettings);
         static partial void PostProcess(AzureCdnEndpointCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cdn.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCdnEndpointCreate(Configure<AzureCdnEndpointCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCdnEndpointCreateSettings());
@@ -146,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCdnEndpointDeleteSettings toolSettings);
         static partial void PostProcess(AzureCdnEndpointDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cdn.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCdnEndpointDelete(Configure<AzureCdnEndpointDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCdnEndpointDeleteSettings());
@@ -157,7 +157,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCdnEndpointListSettings toolSettings);
         static partial void PostProcess(AzureCdnEndpointListSettings toolSettings);
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cdn.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCdnEndpointList(Configure<AzureCdnEndpointListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCdnEndpointListSettings());
@@ -168,7 +168,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCdnEndpointLoadSettings toolSettings);
         static partial void PostProcess(AzureCdnEndpointLoadSettings toolSettings);
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cdn.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCdnEndpointLoad(Configure<AzureCdnEndpointLoadSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCdnEndpointLoadSettings());
@@ -179,7 +179,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCdnEndpointPurgeSettings toolSettings);
         static partial void PostProcess(AzureCdnEndpointPurgeSettings toolSettings);
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cdn.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCdnEndpointPurge(Configure<AzureCdnEndpointPurgeSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCdnEndpointPurgeSettings());
@@ -190,7 +190,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCdnEndpointShowSettings toolSettings);
         static partial void PostProcess(AzureCdnEndpointShowSettings toolSettings);
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cdn.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCdnEndpointShow(Configure<AzureCdnEndpointShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCdnEndpointShowSettings());
@@ -201,7 +201,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCdnEndpointStartSettings toolSettings);
         static partial void PostProcess(AzureCdnEndpointStartSettings toolSettings);
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cdn.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCdnEndpointStart(Configure<AzureCdnEndpointStartSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCdnEndpointStartSettings());
@@ -212,7 +212,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCdnEndpointStopSettings toolSettings);
         static partial void PostProcess(AzureCdnEndpointStopSettings toolSettings);
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cdn.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCdnEndpointStop(Configure<AzureCdnEndpointStopSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCdnEndpointStopSettings());
@@ -223,7 +223,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCdnEndpointUpdateSettings toolSettings);
         static partial void PostProcess(AzureCdnEndpointUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cdn.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCdnEndpointUpdate(Configure<AzureCdnEndpointUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCdnEndpointUpdateSettings());
@@ -234,7 +234,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCdnEndpointValidateCustomDomainSettings toolSettings);
         static partial void PostProcess(AzureCdnEndpointValidateCustomDomainSettings toolSettings);
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cdn.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCdnEndpointValidateCustomDomain(Configure<AzureCdnEndpointValidateCustomDomainSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCdnEndpointValidateCustomDomainSettings());
@@ -245,7 +245,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCdnOriginListSettings toolSettings);
         static partial void PostProcess(AzureCdnOriginListSettings toolSettings);
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cdn.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCdnOriginList(Configure<AzureCdnOriginListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCdnOriginListSettings());
@@ -256,7 +256,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCdnOriginShowSettings toolSettings);
         static partial void PostProcess(AzureCdnOriginShowSettings toolSettings);
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cdn.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCdnOriginShow(Configure<AzureCdnOriginShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCdnOriginShowSettings());
@@ -267,7 +267,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCdnProfileCreateSettings toolSettings);
         static partial void PostProcess(AzureCdnProfileCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cdn.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCdnProfileCreate(Configure<AzureCdnProfileCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCdnProfileCreateSettings());
@@ -278,7 +278,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCdnProfileDeleteSettings toolSettings);
         static partial void PostProcess(AzureCdnProfileDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cdn.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCdnProfileDelete(Configure<AzureCdnProfileDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCdnProfileDeleteSettings());
@@ -289,7 +289,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCdnProfileListSettings toolSettings);
         static partial void PostProcess(AzureCdnProfileListSettings toolSettings);
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cdn.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCdnProfileList(Configure<AzureCdnProfileListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCdnProfileListSettings());
@@ -300,7 +300,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCdnProfileShowSettings toolSettings);
         static partial void PostProcess(AzureCdnProfileShowSettings toolSettings);
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cdn.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCdnProfileShow(Configure<AzureCdnProfileShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCdnProfileShowSettings());
@@ -311,7 +311,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCdnProfileUpdateSettings toolSettings);
         static partial void PostProcess(AzureCdnProfileUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cdn.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCdnProfileUpdate(Configure<AzureCdnProfileUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCdnProfileUpdateSettings());
@@ -322,7 +322,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCdnProfileUsageSettings toolSettings);
         static partial void PostProcess(AzureCdnProfileUsageSettings toolSettings);
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cdn.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCdnProfileUsage(Configure<AzureCdnProfileUsageSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCdnProfileUsageSettings());

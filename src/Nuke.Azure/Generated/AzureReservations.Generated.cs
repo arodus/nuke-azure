@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureReservations.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureReservationsSettings toolSettings);
         static partial void PostProcess(AzureReservationsSettings toolSettings);
-        /// <summary><p>Manage Azure Reservations.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/reservations.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Reservations.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reservations?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureReservations(Configure<AzureReservationsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureReservationsSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureReservationsCatalogShowSettings toolSettings);
         static partial void PostProcess(AzureReservationsCatalogShowSettings toolSettings);
-        /// <summary><p>Manage Azure Reservations.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/reservations.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Reservations.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reservations?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureReservationsCatalogShow(Configure<AzureReservationsCatalogShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureReservationsCatalogShowSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureReservationsReservationOrderIdListSettings toolSettings);
         static partial void PostProcess(AzureReservationsReservationOrderIdListSettings toolSettings);
-        /// <summary><p>Manage Azure Reservations.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/reservations.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Reservations.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reservations?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureReservationsReservationOrderIdList(Configure<AzureReservationsReservationOrderIdListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureReservationsReservationOrderIdListSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureReservationsReservationOrderListSettings toolSettings);
         static partial void PostProcess(AzureReservationsReservationOrderListSettings toolSettings);
-        /// <summary><p>Manage Azure Reservations.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/reservations.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Reservations.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reservations?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureReservationsReservationOrderList(Configure<AzureReservationsReservationOrderListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureReservationsReservationOrderListSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureReservationsReservationOrderShowSettings toolSettings);
         static partial void PostProcess(AzureReservationsReservationOrderShowSettings toolSettings);
-        /// <summary><p>Manage Azure Reservations.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/reservations.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Reservations.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reservations?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureReservationsReservationOrderShow(Configure<AzureReservationsReservationOrderShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureReservationsReservationOrderShowSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureReservationsReservationListSettings toolSettings);
         static partial void PostProcess(AzureReservationsReservationListSettings toolSettings);
-        /// <summary><p>Manage Azure Reservations.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/reservations.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Reservations.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reservations?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureReservationsReservationList(Configure<AzureReservationsReservationListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureReservationsReservationListSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureReservationsReservationListHistorySettings toolSettings);
         static partial void PostProcess(AzureReservationsReservationListHistorySettings toolSettings);
-        /// <summary><p>Manage Azure Reservations.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/reservations.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Reservations.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reservations?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureReservationsReservationListHistory(Configure<AzureReservationsReservationListHistorySettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureReservationsReservationListHistorySettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureReservationsReservationMergeSettings toolSettings);
         static partial void PostProcess(AzureReservationsReservationMergeSettings toolSettings);
-        /// <summary><p>Manage Azure Reservations.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/reservations.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Reservations.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reservations?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureReservationsReservationMerge(Configure<AzureReservationsReservationMergeSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureReservationsReservationMergeSettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureReservationsReservationShowSettings toolSettings);
         static partial void PostProcess(AzureReservationsReservationShowSettings toolSettings);
-        /// <summary><p>Manage Azure Reservations.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/reservations.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Reservations.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reservations?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureReservationsReservationShow(Configure<AzureReservationsReservationShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureReservationsReservationShowSettings());
@@ -135,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureReservationsReservationSplitSettings toolSettings);
         static partial void PostProcess(AzureReservationsReservationSplitSettings toolSettings);
-        /// <summary><p>Manage Azure Reservations.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/reservations.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Reservations.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reservations?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureReservationsReservationSplit(Configure<AzureReservationsReservationSplitSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureReservationsReservationSplitSettings());
@@ -146,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureReservationsReservationUpdateSettings toolSettings);
         static partial void PostProcess(AzureReservationsReservationUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Reservations.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/reservations.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Reservations.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reservations?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureReservationsReservationUpdate(Configure<AzureReservationsReservationUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureReservationsReservationUpdateSettings());

@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureContainer.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureContainerAttachSettings toolSettings);
         static partial void PostProcess(AzureContainerAttachSettings toolSettings);
-        /// <summary><p>Manage Azure Container Instances.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/container.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Container Instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/container?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureContainerAttach(Configure<AzureContainerAttachSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureContainerAttachSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureContainerCreateSettings toolSettings);
         static partial void PostProcess(AzureContainerCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Container Instances.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/container.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Container Instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/container?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureContainerCreate(Configure<AzureContainerCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureContainerCreateSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureContainerDeleteSettings toolSettings);
         static partial void PostProcess(AzureContainerDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Container Instances.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/container.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Container Instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/container?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureContainerDelete(Configure<AzureContainerDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureContainerDeleteSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureContainerExecSettings toolSettings);
         static partial void PostProcess(AzureContainerExecSettings toolSettings);
-        /// <summary><p>Manage Azure Container Instances.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/container.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Container Instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/container?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureContainerExec(Configure<AzureContainerExecSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureContainerExecSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureContainerListSettings toolSettings);
         static partial void PostProcess(AzureContainerListSettings toolSettings);
-        /// <summary><p>Manage Azure Container Instances.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/container.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Container Instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/container?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureContainerList(Configure<AzureContainerListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureContainerListSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureContainerLogsSettings toolSettings);
         static partial void PostProcess(AzureContainerLogsSettings toolSettings);
-        /// <summary><p>Manage Azure Container Instances.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/container.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Container Instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/container?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureContainerLogs(Configure<AzureContainerLogsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureContainerLogsSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureContainerShowSettings toolSettings);
         static partial void PostProcess(AzureContainerShowSettings toolSettings);
-        /// <summary><p>Manage Azure Container Instances.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/container.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Container Instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/container?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureContainerShow(Configure<AzureContainerShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureContainerShowSettings());

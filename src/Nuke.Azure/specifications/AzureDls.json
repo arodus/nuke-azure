@@ -3,18 +3,18 @@
   "license": [
     "Copyright Sebastian Karasek, Matthias Koch 2018.",
     "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+    "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls/account.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls/fs.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls/account/firewall.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls/account/trusted-provider.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls/fs/access.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/dls.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/dls/account.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/dls/fs.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/dls/account/firewall.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/dls/account/trusted-provider.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/dls/fs/access.yml"
   ],
   "name": "AzureDls",
-  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml",
+  "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest",
   "help": "(PREVIEW) Manage Data Lake Store accounts and filesystems.",
   "pathExecutable": "az",
   "tasks": [

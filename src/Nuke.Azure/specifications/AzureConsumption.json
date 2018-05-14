@@ -3,19 +3,20 @@
   "license": [
     "Copyright Sebastian Karasek, Matthias Koch 2018.",
     "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+    "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/consumption.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/consumption/marketplace.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/consumption/pricesheet.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/consumption/reservation.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/consumption/usage.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/consumption/reservation/detail.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/consumption/reservation/summary.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/consumption.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/consumption/budget.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/consumption/marketplace.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/consumption/pricesheet.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/consumption/reservation.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/consumption/usage.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/consumption/reservation/detail.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/consumption/reservation/summary.yml"
   ],
   "name": "AzureConsumption",
-  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/consumption.yml",
+  "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/consumption?view=azure-cli-latest",
   "help": "Manage consumption of Azure resources.",
   "pathExecutable": "az",
   "tasks": [
@@ -23,6 +24,131 @@
       "postfix": "",
       "definiteArgument": "consumption",
       "settingsClass": {}
+    },
+    {
+      "postfix": "BudgetCreate",
+      "definiteArgument": "consumption budget create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Amount",
+            "type": "string",
+            "format": "--amount {value}",
+            "help": "Amount of a budget."
+          },
+          {
+            "name": "BudgetName",
+            "type": "string",
+            "format": "--budget-name {value}",
+            "help": "Name of a budget."
+          },
+          {
+            "name": "Category",
+            "type": "ConsumptionBudgetCreateCategory",
+            "format": "--category {value}",
+            "help": "Category of the budget can be cost or usage."
+          },
+          {
+            "name": "EndDate",
+            "type": "string",
+            "format": "--end-date {value}",
+            "help": "End date (YYYY-MM-DD in UTC) of time period of a budget."
+          },
+          {
+            "name": "StartDate",
+            "type": "string",
+            "format": "--start-date {value}",
+            "help": "Start date (YYYY-MM-DD in UTC) of time period of a budget."
+          },
+          {
+            "name": "TimeGrain",
+            "type": "ConsumptionBudgetCreateTimeGrain",
+            "format": "--time-grain {value}",
+            "help": "Time grain of the budget can be monthly, quarterly, or annually."
+          },
+          {
+            "name": "MeterFilter",
+            "type": "List<string>",
+            "format": "--meter-filter {value}",
+            "separator": " ",
+            "help": "Space-separated list of meters to filter on. Required if category is usage."
+          },
+          {
+            "name": "ResourceFilter",
+            "type": "List<string>",
+            "format": "--resource-filter {value}",
+            "separator": " ",
+            "help": "Space-separated list of resource instances to filter on."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroupFilter",
+            "type": "List<string>",
+            "format": "--resource-group-filter {value}",
+            "separator": " ",
+            "help": "Space-separated list of resource groups to filter on."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "BudgetDelete",
+      "definiteArgument": "consumption budget delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "BudgetName",
+            "type": "string",
+            "format": "--budget-name {value}",
+            "help": "Name of a budget."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "BudgetList",
+      "definiteArgument": "consumption budget list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "BudgetShow",
+      "definiteArgument": "consumption budget show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "BudgetName",
+            "type": "string",
+            "format": "--budget-name {value}",
+            "help": "Name of a budget."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
     },
     {
       "postfix": "MarketplaceList",
@@ -226,6 +352,23 @@
       "type": "string",
       "format": "--verbose {value}",
       "help": "Increase logging verbosity. Use --debug for full debug logs."
+    }
+  ],
+  "enumerations": [
+    {
+      "name": "ConsumptionBudgetCreateCategory",
+      "values": [
+        "cost",
+        "usage"
+      ]
+    },
+    {
+      "name": "ConsumptionBudgetCreateTimeGrain",
+      "values": [
+        "annually",
+        "monthly",
+        "quarterly"
+      ]
     }
   ]
 }

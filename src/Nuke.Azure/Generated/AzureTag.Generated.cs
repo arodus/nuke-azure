@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureTag.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureTagAddValueSettings toolSettings);
         static partial void PostProcess(AzureTagAddValueSettings toolSettings);
-        /// <summary><p>Manage resource tags.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/tag.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource tags.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/tag?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureTagAddValue(Configure<AzureTagAddValueSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureTagAddValueSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureTagCreateSettings toolSettings);
         static partial void PostProcess(AzureTagCreateSettings toolSettings);
-        /// <summary><p>Manage resource tags.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/tag.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource tags.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/tag?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureTagCreate(Configure<AzureTagCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureTagCreateSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureTagDeleteSettings toolSettings);
         static partial void PostProcess(AzureTagDeleteSettings toolSettings);
-        /// <summary><p>Manage resource tags.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/tag.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource tags.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/tag?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureTagDelete(Configure<AzureTagDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureTagDeleteSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureTagListSettings toolSettings);
         static partial void PostProcess(AzureTagListSettings toolSettings);
-        /// <summary><p>Manage resource tags.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/tag.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource tags.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/tag?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureTagList(Configure<AzureTagListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureTagListSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureTagRemoveValueSettings toolSettings);
         static partial void PostProcess(AzureTagRemoveValueSettings toolSettings);
-        /// <summary><p>Manage resource tags.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/tag.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource tags.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/tag?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureTagRemoveValue(Configure<AzureTagRemoveValueSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureTagRemoveValueSettings());

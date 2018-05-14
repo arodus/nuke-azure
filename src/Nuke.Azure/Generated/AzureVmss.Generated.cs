@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureVmss.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssCreateSettings toolSettings);
         static partial void PostProcess(AzureVmssCreateSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssCreate(Configure<AzureVmssCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssCreateSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssDeallocateSettings toolSettings);
         static partial void PostProcess(AzureVmssDeallocateSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssDeallocate(Configure<AzureVmssDeallocateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssDeallocateSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssDeleteSettings toolSettings);
         static partial void PostProcess(AzureVmssDeleteSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssDelete(Configure<AzureVmssDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssDeleteSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssDeleteInstancesSettings toolSettings);
         static partial void PostProcess(AzureVmssDeleteInstancesSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssDeleteInstances(Configure<AzureVmssDeleteInstancesSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssDeleteInstancesSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssGetInstanceViewSettings toolSettings);
         static partial void PostProcess(AzureVmssGetInstanceViewSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssGetInstanceView(Configure<AzureVmssGetInstanceViewSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssGetInstanceViewSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssListSettings toolSettings);
         static partial void PostProcess(AzureVmssListSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssList(Configure<AzureVmssListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssListSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssListInstanceConnectionInfoSettings toolSettings);
         static partial void PostProcess(AzureVmssListInstanceConnectionInfoSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssListInstanceConnectionInfo(Configure<AzureVmssListInstanceConnectionInfoSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssListInstanceConnectionInfoSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssListInstancePublicIpsSettings toolSettings);
         static partial void PostProcess(AzureVmssListInstancePublicIpsSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssListInstancePublicIps(Configure<AzureVmssListInstancePublicIpsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssListInstancePublicIpsSettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssListInstancesSettings toolSettings);
         static partial void PostProcess(AzureVmssListInstancesSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssListInstances(Configure<AzureVmssListInstancesSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssListInstancesSettings());
@@ -135,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssListSkusSettings toolSettings);
         static partial void PostProcess(AzureVmssListSkusSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssListSkus(Configure<AzureVmssListSkusSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssListSkusSettings());
@@ -144,9 +144,20 @@ namespace Nuke.Azure
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
+        static partial void PreProcess(AzureVmssPerformMaintenanceSettings toolSettings);
+        static partial void PostProcess(AzureVmssPerformMaintenanceSettings toolSettings);
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureVmssPerformMaintenance(Configure<AzureVmssPerformMaintenanceSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureVmssPerformMaintenanceSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
         static partial void PreProcess(AzureVmssReimageSettings toolSettings);
         static partial void PostProcess(AzureVmssReimageSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssReimage(Configure<AzureVmssReimageSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssReimageSettings());
@@ -157,7 +168,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssRestartSettings toolSettings);
         static partial void PostProcess(AzureVmssRestartSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssRestart(Configure<AzureVmssRestartSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssRestartSettings());
@@ -168,7 +179,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssScaleSettings toolSettings);
         static partial void PostProcess(AzureVmssScaleSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssScale(Configure<AzureVmssScaleSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssScaleSettings());
@@ -179,7 +190,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssShowSettings toolSettings);
         static partial void PostProcess(AzureVmssShowSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssShow(Configure<AzureVmssShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssShowSettings());
@@ -190,7 +201,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssStartSettings toolSettings);
         static partial void PostProcess(AzureVmssStartSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssStart(Configure<AzureVmssStartSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssStartSettings());
@@ -201,7 +212,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssStopSettings toolSettings);
         static partial void PostProcess(AzureVmssStopSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssStop(Configure<AzureVmssStopSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssStopSettings());
@@ -212,7 +223,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssUpdateSettings toolSettings);
         static partial void PostProcess(AzureVmssUpdateSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssUpdate(Configure<AzureVmssUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssUpdateSettings());
@@ -223,7 +234,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssUpdateInstancesSettings toolSettings);
         static partial void PostProcess(AzureVmssUpdateInstancesSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssUpdateInstances(Configure<AzureVmssUpdateInstancesSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssUpdateInstancesSettings());
@@ -234,7 +245,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssWaitSettings toolSettings);
         static partial void PostProcess(AzureVmssWaitSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssWait(Configure<AzureVmssWaitSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssWaitSettings());
@@ -245,7 +256,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssDiagnosticsGetDefaultConfigSettings toolSettings);
         static partial void PostProcess(AzureVmssDiagnosticsGetDefaultConfigSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssDiagnosticsGetDefaultConfig(Configure<AzureVmssDiagnosticsGetDefaultConfigSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssDiagnosticsGetDefaultConfigSettings());
@@ -256,7 +267,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssDiagnosticsSetSettings toolSettings);
         static partial void PostProcess(AzureVmssDiagnosticsSetSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssDiagnosticsSet(Configure<AzureVmssDiagnosticsSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssDiagnosticsSetSettings());
@@ -267,7 +278,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssDiskAttachSettings toolSettings);
         static partial void PostProcess(AzureVmssDiskAttachSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssDiskAttach(Configure<AzureVmssDiskAttachSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssDiskAttachSettings());
@@ -278,7 +289,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssDiskDetachSettings toolSettings);
         static partial void PostProcess(AzureVmssDiskDetachSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssDiskDetach(Configure<AzureVmssDiskDetachSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssDiskDetachSettings());
@@ -289,7 +300,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssEncryptionDisableSettings toolSettings);
         static partial void PostProcess(AzureVmssEncryptionDisableSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssEncryptionDisable(Configure<AzureVmssEncryptionDisableSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssEncryptionDisableSettings());
@@ -300,7 +311,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssEncryptionEnableSettings toolSettings);
         static partial void PostProcess(AzureVmssEncryptionEnableSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssEncryptionEnable(Configure<AzureVmssEncryptionEnableSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssEncryptionEnableSettings());
@@ -311,7 +322,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssEncryptionShowSettings toolSettings);
         static partial void PostProcess(AzureVmssEncryptionShowSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssEncryptionShow(Configure<AzureVmssEncryptionShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssEncryptionShowSettings());
@@ -322,7 +333,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssExtensionDeleteSettings toolSettings);
         static partial void PostProcess(AzureVmssExtensionDeleteSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssExtensionDelete(Configure<AzureVmssExtensionDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssExtensionDeleteSettings());
@@ -333,7 +344,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssExtensionListSettings toolSettings);
         static partial void PostProcess(AzureVmssExtensionListSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssExtensionList(Configure<AzureVmssExtensionListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssExtensionListSettings());
@@ -344,7 +355,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssExtensionSetSettings toolSettings);
         static partial void PostProcess(AzureVmssExtensionSetSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssExtensionSet(Configure<AzureVmssExtensionSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssExtensionSetSettings());
@@ -355,7 +366,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssExtensionShowSettings toolSettings);
         static partial void PostProcess(AzureVmssExtensionShowSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssExtensionShow(Configure<AzureVmssExtensionShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssExtensionShowSettings());
@@ -366,7 +377,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssIdentityAssignSettings toolSettings);
         static partial void PostProcess(AzureVmssIdentityAssignSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssIdentityAssign(Configure<AzureVmssIdentityAssignSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssIdentityAssignSettings());
@@ -377,7 +388,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssIdentityRemoveSettings toolSettings);
         static partial void PostProcess(AzureVmssIdentityRemoveSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssIdentityRemove(Configure<AzureVmssIdentityRemoveSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssIdentityRemoveSettings());
@@ -388,7 +399,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssIdentityShowSettings toolSettings);
         static partial void PostProcess(AzureVmssIdentityShowSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssIdentityShow(Configure<AzureVmssIdentityShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssIdentityShowSettings());
@@ -399,7 +410,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssNicListSettings toolSettings);
         static partial void PostProcess(AzureVmssNicListSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssNicList(Configure<AzureVmssNicListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssNicListSettings());
@@ -410,7 +421,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssNicListVmNicsSettings toolSettings);
         static partial void PostProcess(AzureVmssNicListVmNicsSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssNicListVmNics(Configure<AzureVmssNicListVmNicsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssNicListVmNicsSettings());
@@ -421,7 +432,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssNicShowSettings toolSettings);
         static partial void PostProcess(AzureVmssNicShowSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssNicShow(Configure<AzureVmssNicShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssNicShowSettings());
@@ -432,7 +443,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssRollingUpgradeCancelSettings toolSettings);
         static partial void PostProcess(AzureVmssRollingUpgradeCancelSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssRollingUpgradeCancel(Configure<AzureVmssRollingUpgradeCancelSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssRollingUpgradeCancelSettings());
@@ -443,7 +454,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssRollingUpgradeGetLatestSettings toolSettings);
         static partial void PostProcess(AzureVmssRollingUpgradeGetLatestSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssRollingUpgradeGetLatest(Configure<AzureVmssRollingUpgradeGetLatestSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssRollingUpgradeGetLatestSettings());
@@ -454,7 +465,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssRollingUpgradeStartSettings toolSettings);
         static partial void PostProcess(AzureVmssRollingUpgradeStartSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssRollingUpgradeStart(Configure<AzureVmssRollingUpgradeStartSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssRollingUpgradeStartSettings());
@@ -465,7 +476,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssExtensionImageListSettings toolSettings);
         static partial void PostProcess(AzureVmssExtensionImageListSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssExtensionImageList(Configure<AzureVmssExtensionImageListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssExtensionImageListSettings());
@@ -476,7 +487,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssExtensionImageListNamesSettings toolSettings);
         static partial void PostProcess(AzureVmssExtensionImageListNamesSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssExtensionImageListNames(Configure<AzureVmssExtensionImageListNamesSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssExtensionImageListNamesSettings());
@@ -487,7 +498,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssExtensionImageListVersionsSettings toolSettings);
         static partial void PostProcess(AzureVmssExtensionImageListVersionsSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssExtensionImageListVersions(Configure<AzureVmssExtensionImageListVersionsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssExtensionImageListVersionsSettings());
@@ -498,7 +509,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmssExtensionImageShowSettings toolSettings);
         static partial void PostProcess(AzureVmssExtensionImageShowSettings toolSettings);
-        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmssExtensionImageShow(Configure<AzureVmssExtensionImageShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmssExtensionImageShowSettings());
@@ -527,6 +538,8 @@ namespace Nuke.Azure
         public virtual string CustomData { get; internal set; }
         /// <summary><p>Overprovision option (see &lt;a href="https://azure.microsoft.com/en-us/documentation/articles/virtual-machine-scale-sets-overview/"&gt;https://azure.microsoft.com/en-us/documentation/articles/virtual-machine-scale-sets-overview/&lt;/a&gt; for details).</p></summary>
         public virtual string DisableOverprovision { get; internal set; }
+        /// <summary><p>(PREVIEW) the eviction policy for virtual machines in a low priority scale set.</p></summary>
+        public virtual VmssCreateEvictionPolicy EvictionPolicy { get; internal set; }
         /// <summary><p>(Preview) probe name from the existing load balancer, mainly used for rolling upgrade.</p></summary>
         public virtual string HealthProbe { get; internal set; }
         /// <summary><p>Number of VMs in the scale set.</p></summary>
@@ -659,6 +672,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--custom-data {value}", CustomData)
               .Add("--disable-overprovision {value}", DisableOverprovision)
+              .Add("--eviction-policy {value}", EvictionPolicy)
               .Add("--health-probe {value}", HealthProbe)
               .Add("--instance-count {value}", InstanceCount)
               .Add("--license-type {value}", LicenseType)
@@ -1083,6 +1097,48 @@ namespace Nuke.Azure
               .Add("vmss list-skus")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmssPerformMaintenanceSettings
+    /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmssPerformMaintenanceSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVmss executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
+        /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Space-separated list of IDs (ex: 1 2 3 ...) or * for all instances. If not provided, the action will be applied on the scaleset itself.</p></summary>
+        public virtual IReadOnlyList<string> InstanceIds => InstanceIdsInternal.AsReadOnly();
+        internal List<string> InstanceIdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vmss perform-maintenance")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--instance-ids {value}", InstanceIds, separator: ' ')
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1519,7 +1575,7 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureVmss executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
-        /// <summary><p></p></summary>
+        /// <summary><p>For Windows VMs.</p></summary>
         public virtual string IsWindowsOs { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
@@ -2021,8 +2077,6 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>The identities to assign.</p></summary>
         public virtual string Identities { get; internal set; }
-        /// <summary><p>The port to fetch AAD token. Default: 50342.</p></summary>
-        public virtual string Port { get; internal set; }
         /// <summary><p>Role name or id the system assigned identity will have.</p></summary>
         public virtual string Role { get; internal set; }
         /// <summary><p>Scope that the system assigned identity can access.</p></summary>
@@ -2044,7 +2098,6 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--identities {value}", Identities)
-              .Add("--port {value}", Port)
               .Add("--role {value}", Role)
               .Add("--scope {value}", Scope)
               .Add("--debug {value}", Debug)
@@ -2146,7 +2199,7 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureVmssTasks.AzureVmssPath;
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Scale set name.</p></summary>
+        /// <summary><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string VmssName { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
@@ -2477,9 +2530,9 @@ namespace Nuke.Azure
         public virtual string Publisher { get; internal set; }
         /// <summary><p>The filter to apply on the operation.</p></summary>
         public virtual string Filter { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>The $orderby odata query option.</p></summary>
         public virtual string Orderby { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>The $top odata query option.</p></summary>
         public virtual string Top { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
@@ -2647,6 +2700,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.DisableOverprovision = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EvictionPolicy
+        /// <summary><p><em>Sets <see cref="AzureVmssCreateSettings.EvictionPolicy"/>.</em></p><p>(PREVIEW) the eviction policy for virtual machines in a low priority scale set.</p></summary>
+        [Pure]
+        public static AzureVmssCreateSettings SetEvictionPolicy(this AzureVmssCreateSettings toolSettings, VmssCreateEvictionPolicy evictionPolicy)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EvictionPolicy = evictionPolicy;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssCreateSettings.EvictionPolicy"/>.</em></p><p>(PREVIEW) the eviction policy for virtual machines in a low priority scale set.</p></summary>
+        [Pure]
+        public static AzureVmssCreateSettings ResetEvictionPolicy(this AzureVmssCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EvictionPolicy = null;
             return toolSettings;
         }
         #endregion
@@ -5250,6 +5321,200 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureVmssPerformMaintenanceSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmssPerformMaintenanceSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmssPerformMaintenanceSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings SetName(this AzureVmssPerformMaintenanceSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssPerformMaintenanceSettings.Name"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings ResetName(this AzureVmssPerformMaintenanceSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmssPerformMaintenanceSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings SetResourceGroup(this AzureVmssPerformMaintenanceSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssPerformMaintenanceSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings ResetResourceGroup(this AzureVmssPerformMaintenanceSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region InstanceIds
+        /// <summary><p><em>Sets <see cref="AzureVmssPerformMaintenanceSettings.InstanceIds"/> to a new list.</em></p><p>Space-separated list of IDs (ex: 1 2 3 ...) or * for all instances. If not provided, the action will be applied on the scaleset itself.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings SetInstanceIds(this AzureVmssPerformMaintenanceSettings toolSettings, params string[] instanceIds)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.InstanceIdsInternal = instanceIds.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureVmssPerformMaintenanceSettings.InstanceIds"/> to a new list.</em></p><p>Space-separated list of IDs (ex: 1 2 3 ...) or * for all instances. If not provided, the action will be applied on the scaleset itself.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings SetInstanceIds(this AzureVmssPerformMaintenanceSettings toolSettings, IEnumerable<string> instanceIds)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.InstanceIdsInternal = instanceIds.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssPerformMaintenanceSettings.InstanceIds"/>.</em></p><p>Space-separated list of IDs (ex: 1 2 3 ...) or * for all instances. If not provided, the action will be applied on the scaleset itself.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings AddInstanceIds(this AzureVmssPerformMaintenanceSettings toolSettings, params string[] instanceIds)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.InstanceIdsInternal.AddRange(instanceIds);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmssPerformMaintenanceSettings.InstanceIds"/>.</em></p><p>Space-separated list of IDs (ex: 1 2 3 ...) or * for all instances. If not provided, the action will be applied on the scaleset itself.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings AddInstanceIds(this AzureVmssPerformMaintenanceSettings toolSettings, IEnumerable<string> instanceIds)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.InstanceIdsInternal.AddRange(instanceIds);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureVmssPerformMaintenanceSettings.InstanceIds"/>.</em></p><p>Space-separated list of IDs (ex: 1 2 3 ...) or * for all instances. If not provided, the action will be applied on the scaleset itself.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings ClearInstanceIds(this AzureVmssPerformMaintenanceSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.InstanceIdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssPerformMaintenanceSettings.InstanceIds"/>.</em></p><p>Space-separated list of IDs (ex: 1 2 3 ...) or * for all instances. If not provided, the action will be applied on the scaleset itself.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings RemoveInstanceIds(this AzureVmssPerformMaintenanceSettings toolSettings, params string[] instanceIds)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(instanceIds);
+            toolSettings.InstanceIdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmssPerformMaintenanceSettings.InstanceIds"/>.</em></p><p>Space-separated list of IDs (ex: 1 2 3 ...) or * for all instances. If not provided, the action will be applied on the scaleset itself.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings RemoveInstanceIds(this AzureVmssPerformMaintenanceSettings toolSettings, IEnumerable<string> instanceIds)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(instanceIds);
+            toolSettings.InstanceIdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmssPerformMaintenanceSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings SetDebug(this AzureVmssPerformMaintenanceSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssPerformMaintenanceSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings ResetDebug(this AzureVmssPerformMaintenanceSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmssPerformMaintenanceSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings SetHelp(this AzureVmssPerformMaintenanceSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssPerformMaintenanceSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings ResetHelp(this AzureVmssPerformMaintenanceSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmssPerformMaintenanceSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings SetOutput(this AzureVmssPerformMaintenanceSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssPerformMaintenanceSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings ResetOutput(this AzureVmssPerformMaintenanceSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmssPerformMaintenanceSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings SetQuery(this AzureVmssPerformMaintenanceSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssPerformMaintenanceSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings ResetQuery(this AzureVmssPerformMaintenanceSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmssPerformMaintenanceSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings SetVerbose(this AzureVmssPerformMaintenanceSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssPerformMaintenanceSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmssPerformMaintenanceSettings ResetVerbose(this AzureVmssPerformMaintenanceSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureVmssReimageSettingsExtensions
     /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
     [PublicAPI]
@@ -7063,7 +7328,7 @@ namespace Nuke.Azure
     public static partial class AzureVmssDiagnosticsGetDefaultConfigSettingsExtensions
     {
         #region IsWindowsOs
-        /// <summary><p><em>Sets <see cref="AzureVmssDiagnosticsGetDefaultConfigSettings.IsWindowsOs"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmssDiagnosticsGetDefaultConfigSettings.IsWindowsOs"/>.</em></p><p>For Windows VMs.</p></summary>
         [Pure]
         public static AzureVmssDiagnosticsGetDefaultConfigSettings SetIsWindowsOs(this AzureVmssDiagnosticsGetDefaultConfigSettings toolSettings, string isWindowsOs)
         {
@@ -7071,7 +7336,7 @@ namespace Nuke.Azure
             toolSettings.IsWindowsOs = isWindowsOs;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmssDiagnosticsGetDefaultConfigSettings.IsWindowsOs"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmssDiagnosticsGetDefaultConfigSettings.IsWindowsOs"/>.</em></p><p>For Windows VMs.</p></summary>
         [Pure]
         public static AzureVmssDiagnosticsGetDefaultConfigSettings ResetIsWindowsOs(this AzureVmssDiagnosticsGetDefaultConfigSettings toolSettings)
         {
@@ -9058,24 +9323,6 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Port
-        /// <summary><p><em>Sets <see cref="AzureVmssIdentityAssignSettings.Port"/>.</em></p><p>The port to fetch AAD token. Default: 50342.</p></summary>
-        [Pure]
-        public static AzureVmssIdentityAssignSettings SetPort(this AzureVmssIdentityAssignSettings toolSettings, string port)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Port = port;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmssIdentityAssignSettings.Port"/>.</em></p><p>The port to fetch AAD token. Default: 50342.</p></summary>
-        [Pure]
-        public static AzureVmssIdentityAssignSettings ResetPort(this AzureVmssIdentityAssignSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Port = null;
-            return toolSettings;
-        }
-        #endregion
         #region Role
         /// <summary><p><em>Sets <see cref="AzureVmssIdentityAssignSettings.Role"/>.</em></p><p>Role name or id the system assigned identity will have.</p></summary>
         [Pure]
@@ -9515,7 +9762,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region VmssName
-        /// <summary><p><em>Sets <see cref="AzureVmssNicListSettings.VmssName"/>.</em></p><p>Scale set name.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmssNicListSettings.VmssName"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
         public static AzureVmssNicListSettings SetVmssName(this AzureVmssNicListSettings toolSettings, string vmssName)
         {
@@ -9523,7 +9770,7 @@ namespace Nuke.Azure
             toolSettings.VmssName = vmssName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmssNicListSettings.VmssName"/>.</em></p><p>Scale set name.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmssNicListSettings.VmssName"/>.</em></p><p>Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
         public static AzureVmssNicListSettings ResetVmssName(this AzureVmssNicListSettings toolSettings)
         {
@@ -10791,7 +11038,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Orderby
-        /// <summary><p><em>Sets <see cref="AzureVmssExtensionImageListVersionsSettings.Orderby"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmssExtensionImageListVersionsSettings.Orderby"/>.</em></p><p>The $orderby odata query option.</p></summary>
         [Pure]
         public static AzureVmssExtensionImageListVersionsSettings SetOrderby(this AzureVmssExtensionImageListVersionsSettings toolSettings, string orderby)
         {
@@ -10799,7 +11046,7 @@ namespace Nuke.Azure
             toolSettings.Orderby = orderby;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmssExtensionImageListVersionsSettings.Orderby"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmssExtensionImageListVersionsSettings.Orderby"/>.</em></p><p>The $orderby odata query option.</p></summary>
         [Pure]
         public static AzureVmssExtensionImageListVersionsSettings ResetOrderby(this AzureVmssExtensionImageListVersionsSettings toolSettings)
         {
@@ -10809,7 +11056,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Top
-        /// <summary><p><em>Sets <see cref="AzureVmssExtensionImageListVersionsSettings.Top"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmssExtensionImageListVersionsSettings.Top"/>.</em></p><p>The $top odata query option.</p></summary>
         [Pure]
         public static AzureVmssExtensionImageListVersionsSettings SetTop(this AzureVmssExtensionImageListVersionsSettings toolSettings, string top)
         {
@@ -10817,7 +11064,7 @@ namespace Nuke.Azure
             toolSettings.Top = top;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmssExtensionImageListVersionsSettings.Top"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmssExtensionImageListVersionsSettings.Top"/>.</em></p><p>The $top odata query option.</p></summary>
         [Pure]
         public static AzureVmssExtensionImageListVersionsSettings ResetTop(this AzureVmssExtensionImageListVersionsSettings toolSettings)
         {
@@ -11086,6 +11333,16 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+    }
+    #endregion
+    #region VmssCreateEvictionPolicy
+    /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
+    [PublicAPI]
+    [Serializable]
+    public partial class VmssCreateEvictionPolicy : Enumeration
+    {
+        public static VmssCreateEvictionPolicy deallocate = new VmssCreateEvictionPolicy { Value = "deallocate" };
+        public static VmssCreateEvictionPolicy delete = new VmssCreateEvictionPolicy { Value = "delete" };
     }
     #endregion
     #region VmssCreateLicenseType

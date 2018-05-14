@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureFeature.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFeatureListSettings toolSettings);
         static partial void PostProcess(AzureFeatureListSettings toolSettings);
-        /// <summary><p>Manage resource provider features.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/feature.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource provider features.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/feature?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFeatureList(Configure<AzureFeatureListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFeatureListSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFeatureRegisterSettings toolSettings);
         static partial void PostProcess(AzureFeatureRegisterSettings toolSettings);
-        /// <summary><p>Manage resource provider features.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/feature.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource provider features.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/feature?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFeatureRegister(Configure<AzureFeatureRegisterSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFeatureRegisterSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFeatureShowSettings toolSettings);
         static partial void PostProcess(AzureFeatureShowSettings toolSettings);
-        /// <summary><p>Manage resource provider features.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/feature.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource provider features.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/feature?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFeatureShow(Configure<AzureFeatureShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFeatureShowSettings());

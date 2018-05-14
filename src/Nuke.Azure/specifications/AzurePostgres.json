@@ -3,18 +3,18 @@
   "license": [
     "Copyright Sebastian Karasek, Matthias Koch 2018.",
     "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+    "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/postgres.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/postgres/db.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/postgres/server-logs.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/postgres/server.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/postgres/server/configuration.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/postgres/server/firewall-rule.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/postgres.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/postgres/db.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/postgres/server-logs.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/postgres/server.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/postgres/server/configuration.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/postgres/server/firewall-rule.yml"
   ],
   "name": "AzurePostgres",
-  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/postgres.yml",
+  "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest",
   "help": "Manage Azure Database for PostgreSQL servers.",
   "pathExecutable": "az",
   "tasks": [
@@ -255,7 +255,7 @@
             "name": "StorageSize",
             "type": "string",
             "format": "--storage-size {value}",
-            "help": ""
+            "help": "The max storage size of the server. Unit is megabytes."
           },
           {
             "name": "Tags",

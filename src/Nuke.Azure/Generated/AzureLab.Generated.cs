@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureLab.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabDeleteSettings toolSettings);
         static partial void PostProcess(AzureLabDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabDelete(Configure<AzureLabDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabDeleteSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabGetSettings toolSettings);
         static partial void PostProcess(AzureLabGetSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabGet(Configure<AzureLabGetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabGetSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabArmTemplateListSettings toolSettings);
         static partial void PostProcess(AzureLabArmTemplateListSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabArmTemplateList(Configure<AzureLabArmTemplateListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabArmTemplateListSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabArmTemplateShowSettings toolSettings);
         static partial void PostProcess(AzureLabArmTemplateShowSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabArmTemplateShow(Configure<AzureLabArmTemplateShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabArmTemplateShowSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabArtifactSourceListSettings toolSettings);
         static partial void PostProcess(AzureLabArtifactSourceListSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabArtifactSourceList(Configure<AzureLabArtifactSourceListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabArtifactSourceListSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabArtifactSourceShowSettings toolSettings);
         static partial void PostProcess(AzureLabArtifactSourceShowSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabArtifactSourceShow(Configure<AzureLabArtifactSourceShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabArtifactSourceShowSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabArtifactListSettings toolSettings);
         static partial void PostProcess(AzureLabArtifactListSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabArtifactList(Configure<AzureLabArtifactListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabArtifactListSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabCustomImageCreateSettings toolSettings);
         static partial void PostProcess(AzureLabCustomImageCreateSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabCustomImageCreate(Configure<AzureLabCustomImageCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabCustomImageCreateSettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabCustomImageDeleteSettings toolSettings);
         static partial void PostProcess(AzureLabCustomImageDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabCustomImageDelete(Configure<AzureLabCustomImageDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabCustomImageDeleteSettings());
@@ -135,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabCustomImageListSettings toolSettings);
         static partial void PostProcess(AzureLabCustomImageListSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabCustomImageList(Configure<AzureLabCustomImageListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabCustomImageListSettings());
@@ -146,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabCustomImageShowSettings toolSettings);
         static partial void PostProcess(AzureLabCustomImageShowSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabCustomImageShow(Configure<AzureLabCustomImageShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabCustomImageShowSettings());
@@ -157,7 +157,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabEnvironmentCreateSettings toolSettings);
         static partial void PostProcess(AzureLabEnvironmentCreateSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabEnvironmentCreate(Configure<AzureLabEnvironmentCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabEnvironmentCreateSettings());
@@ -168,7 +168,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabEnvironmentDeleteSettings toolSettings);
         static partial void PostProcess(AzureLabEnvironmentDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabEnvironmentDelete(Configure<AzureLabEnvironmentDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabEnvironmentDeleteSettings());
@@ -179,7 +179,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabEnvironmentListSettings toolSettings);
         static partial void PostProcess(AzureLabEnvironmentListSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabEnvironmentList(Configure<AzureLabEnvironmentListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabEnvironmentListSettings());
@@ -190,7 +190,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabEnvironmentShowSettings toolSettings);
         static partial void PostProcess(AzureLabEnvironmentShowSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabEnvironmentShow(Configure<AzureLabEnvironmentShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabEnvironmentShowSettings());
@@ -201,7 +201,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabFormulaDeleteSettings toolSettings);
         static partial void PostProcess(AzureLabFormulaDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabFormulaDelete(Configure<AzureLabFormulaDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabFormulaDeleteSettings());
@@ -212,7 +212,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabFormulaExportArtifactsSettings toolSettings);
         static partial void PostProcess(AzureLabFormulaExportArtifactsSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabFormulaExportArtifacts(Configure<AzureLabFormulaExportArtifactsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabFormulaExportArtifactsSettings());
@@ -223,7 +223,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabFormulaListSettings toolSettings);
         static partial void PostProcess(AzureLabFormulaListSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabFormulaList(Configure<AzureLabFormulaListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabFormulaListSettings());
@@ -234,7 +234,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabFormulaShowSettings toolSettings);
         static partial void PostProcess(AzureLabFormulaShowSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabFormulaShow(Configure<AzureLabFormulaShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabFormulaShowSettings());
@@ -245,7 +245,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabGalleryImageListSettings toolSettings);
         static partial void PostProcess(AzureLabGalleryImageListSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabGalleryImageList(Configure<AzureLabGalleryImageListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabGalleryImageListSettings());
@@ -256,7 +256,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabSecretDeleteSettings toolSettings);
         static partial void PostProcess(AzureLabSecretDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabSecretDelete(Configure<AzureLabSecretDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabSecretDeleteSettings());
@@ -267,7 +267,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabSecretListSettings toolSettings);
         static partial void PostProcess(AzureLabSecretListSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabSecretList(Configure<AzureLabSecretListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabSecretListSettings());
@@ -278,7 +278,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabSecretSetSettings toolSettings);
         static partial void PostProcess(AzureLabSecretSetSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabSecretSet(Configure<AzureLabSecretSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabSecretSetSettings());
@@ -289,7 +289,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabSecretShowSettings toolSettings);
         static partial void PostProcess(AzureLabSecretShowSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabSecretShow(Configure<AzureLabSecretShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabSecretShowSettings());
@@ -300,7 +300,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabVmApplyArtifactsSettings toolSettings);
         static partial void PostProcess(AzureLabVmApplyArtifactsSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabVmApplyArtifacts(Configure<AzureLabVmApplyArtifactsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabVmApplyArtifactsSettings());
@@ -311,7 +311,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabVmClaimSettings toolSettings);
         static partial void PostProcess(AzureLabVmClaimSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabVmClaim(Configure<AzureLabVmClaimSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabVmClaimSettings());
@@ -322,7 +322,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabVmCreateSettings toolSettings);
         static partial void PostProcess(AzureLabVmCreateSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabVmCreate(Configure<AzureLabVmCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabVmCreateSettings());
@@ -333,7 +333,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabVmDeleteSettings toolSettings);
         static partial void PostProcess(AzureLabVmDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabVmDelete(Configure<AzureLabVmDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabVmDeleteSettings());
@@ -344,7 +344,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabVmListSettings toolSettings);
         static partial void PostProcess(AzureLabVmListSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabVmList(Configure<AzureLabVmListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabVmListSettings());
@@ -355,7 +355,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabVmShowSettings toolSettings);
         static partial void PostProcess(AzureLabVmShowSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabVmShow(Configure<AzureLabVmShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabVmShowSettings());
@@ -366,7 +366,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabVmStartSettings toolSettings);
         static partial void PostProcess(AzureLabVmStartSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabVmStart(Configure<AzureLabVmStartSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabVmStartSettings());
@@ -377,7 +377,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabVmStopSettings toolSettings);
         static partial void PostProcess(AzureLabVmStopSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabVmStop(Configure<AzureLabVmStopSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabVmStopSettings());
@@ -388,7 +388,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabVnetGetSettings toolSettings);
         static partial void PostProcess(AzureLabVnetGetSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabVnetGet(Configure<AzureLabVnetGetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabVnetGetSettings());
@@ -399,7 +399,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLabVnetListSettings toolSettings);
         static partial void PostProcess(AzureLabVnetListSettings toolSettings);
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lab.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLabVnetList(Configure<AzureLabVnetListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabVnetListSettings());

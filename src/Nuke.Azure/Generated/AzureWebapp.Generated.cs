@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureWebapp.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappBrowseSettings toolSettings);
         static partial void PostProcess(AzureWebappBrowseSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappBrowse(Configure<AzureWebappBrowseSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappBrowseSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappCreateSettings toolSettings);
         static partial void PostProcess(AzureWebappCreateSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappCreate(Configure<AzureWebappCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappCreateSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappDeleteSettings toolSettings);
         static partial void PostProcess(AzureWebappDeleteSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappDelete(Configure<AzureWebappDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappDeleteSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappListSettings toolSettings);
         static partial void PostProcess(AzureWebappListSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappList(Configure<AzureWebappListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappListSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappListRuntimesSettings toolSettings);
         static partial void PostProcess(AzureWebappListRuntimesSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappListRuntimes(Configure<AzureWebappListRuntimesSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappListRuntimesSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappRestartSettings toolSettings);
         static partial void PostProcess(AzureWebappRestartSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappRestart(Configure<AzureWebappRestartSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappRestartSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappShowSettings toolSettings);
         static partial void PostProcess(AzureWebappShowSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappShow(Configure<AzureWebappShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappShowSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappStartSettings toolSettings);
         static partial void PostProcess(AzureWebappStartSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappStart(Configure<AzureWebappStartSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappStartSettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappStopSettings toolSettings);
         static partial void PostProcess(AzureWebappStopSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappStop(Configure<AzureWebappStopSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappStopSettings());
@@ -135,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappUpdateSettings toolSettings);
         static partial void PostProcess(AzureWebappUpdateSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappUpdate(Configure<AzureWebappUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappUpdateSettings());
@@ -146,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappAuthShowSettings toolSettings);
         static partial void PostProcess(AzureWebappAuthShowSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappAuthShow(Configure<AzureWebappAuthShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappAuthShowSettings());
@@ -157,7 +157,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappAuthUpdateSettings toolSettings);
         static partial void PostProcess(AzureWebappAuthUpdateSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappAuthUpdate(Configure<AzureWebappAuthUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappAuthUpdateSettings());
@@ -168,7 +168,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappConfigSetSettings toolSettings);
         static partial void PostProcess(AzureWebappConfigSetSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappConfigSet(Configure<AzureWebappConfigSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappConfigSetSettings());
@@ -179,7 +179,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappConfigShowSettings toolSettings);
         static partial void PostProcess(AzureWebappConfigShowSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappConfigShow(Configure<AzureWebappConfigShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappConfigShowSettings());
@@ -190,7 +190,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappDeploymentListPublishingProfilesSettings toolSettings);
         static partial void PostProcess(AzureWebappDeploymentListPublishingProfilesSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappDeploymentListPublishingProfiles(Configure<AzureWebappDeploymentListPublishingProfilesSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappDeploymentListPublishingProfilesSettings());
@@ -201,7 +201,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappIdentityAssignSettings toolSettings);
         static partial void PostProcess(AzureWebappIdentityAssignSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappIdentityAssign(Configure<AzureWebappIdentityAssignSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappIdentityAssignSettings());
@@ -212,7 +212,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappIdentityShowSettings toolSettings);
         static partial void PostProcess(AzureWebappIdentityShowSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappIdentityShow(Configure<AzureWebappIdentityShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappIdentityShowSettings());
@@ -223,7 +223,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappLogConfigSettings toolSettings);
         static partial void PostProcess(AzureWebappLogConfigSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappLogConfig(Configure<AzureWebappLogConfigSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappLogConfigSettings());
@@ -234,7 +234,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappLogDownloadSettings toolSettings);
         static partial void PostProcess(AzureWebappLogDownloadSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappLogDownload(Configure<AzureWebappLogDownloadSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappLogDownloadSettings());
@@ -245,7 +245,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappLogShowSettings toolSettings);
         static partial void PostProcess(AzureWebappLogShowSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappLogShow(Configure<AzureWebappLogShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappLogShowSettings());
@@ -256,7 +256,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappLogTailSettings toolSettings);
         static partial void PostProcess(AzureWebappLogTailSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappLogTail(Configure<AzureWebappLogTailSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappLogTailSettings());
@@ -267,7 +267,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappTrafficRoutingClearSettings toolSettings);
         static partial void PostProcess(AzureWebappTrafficRoutingClearSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappTrafficRoutingClear(Configure<AzureWebappTrafficRoutingClearSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappTrafficRoutingClearSettings());
@@ -278,7 +278,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappTrafficRoutingSetSettings toolSettings);
         static partial void PostProcess(AzureWebappTrafficRoutingSetSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappTrafficRoutingSet(Configure<AzureWebappTrafficRoutingSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappTrafficRoutingSetSettings());
@@ -289,7 +289,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappTrafficRoutingShowSettings toolSettings);
         static partial void PostProcess(AzureWebappTrafficRoutingShowSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappTrafficRoutingShow(Configure<AzureWebappTrafficRoutingShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappTrafficRoutingShowSettings());
@@ -300,7 +300,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappConfigAppsettingsDeleteSettings toolSettings);
         static partial void PostProcess(AzureWebappConfigAppsettingsDeleteSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappConfigAppsettingsDelete(Configure<AzureWebappConfigAppsettingsDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappConfigAppsettingsDeleteSettings());
@@ -311,7 +311,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappConfigAppsettingsListSettings toolSettings);
         static partial void PostProcess(AzureWebappConfigAppsettingsListSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappConfigAppsettingsList(Configure<AzureWebappConfigAppsettingsListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappConfigAppsettingsListSettings());
@@ -322,7 +322,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappConfigAppsettingsSetSettings toolSettings);
         static partial void PostProcess(AzureWebappConfigAppsettingsSetSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappConfigAppsettingsSet(Configure<AzureWebappConfigAppsettingsSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappConfigAppsettingsSetSettings());
@@ -333,7 +333,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappConfigBackupCreateSettings toolSettings);
         static partial void PostProcess(AzureWebappConfigBackupCreateSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappConfigBackupCreate(Configure<AzureWebappConfigBackupCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappConfigBackupCreateSettings());
@@ -344,7 +344,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappConfigBackupListSettings toolSettings);
         static partial void PostProcess(AzureWebappConfigBackupListSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappConfigBackupList(Configure<AzureWebappConfigBackupListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappConfigBackupListSettings());
@@ -355,7 +355,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappConfigBackupRestoreSettings toolSettings);
         static partial void PostProcess(AzureWebappConfigBackupRestoreSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappConfigBackupRestore(Configure<AzureWebappConfigBackupRestoreSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappConfigBackupRestoreSettings());
@@ -366,7 +366,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappConfigBackupShowSettings toolSettings);
         static partial void PostProcess(AzureWebappConfigBackupShowSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappConfigBackupShow(Configure<AzureWebappConfigBackupShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappConfigBackupShowSettings());
@@ -377,7 +377,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappConfigBackupUpdateSettings toolSettings);
         static partial void PostProcess(AzureWebappConfigBackupUpdateSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappConfigBackupUpdate(Configure<AzureWebappConfigBackupUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappConfigBackupUpdateSettings());
@@ -388,7 +388,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappConfigConnectionStringDeleteSettings toolSettings);
         static partial void PostProcess(AzureWebappConfigConnectionStringDeleteSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappConfigConnectionStringDelete(Configure<AzureWebappConfigConnectionStringDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappConfigConnectionStringDeleteSettings());
@@ -399,7 +399,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappConfigConnectionStringListSettings toolSettings);
         static partial void PostProcess(AzureWebappConfigConnectionStringListSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappConfigConnectionStringList(Configure<AzureWebappConfigConnectionStringListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappConfigConnectionStringListSettings());
@@ -410,7 +410,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappConfigConnectionStringSetSettings toolSettings);
         static partial void PostProcess(AzureWebappConfigConnectionStringSetSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappConfigConnectionStringSet(Configure<AzureWebappConfigConnectionStringSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappConfigConnectionStringSetSettings());
@@ -421,7 +421,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappConfigContainerDeleteSettings toolSettings);
         static partial void PostProcess(AzureWebappConfigContainerDeleteSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappConfigContainerDelete(Configure<AzureWebappConfigContainerDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappConfigContainerDeleteSettings());
@@ -432,7 +432,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappConfigContainerSetSettings toolSettings);
         static partial void PostProcess(AzureWebappConfigContainerSetSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappConfigContainerSet(Configure<AzureWebappConfigContainerSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappConfigContainerSetSettings());
@@ -443,7 +443,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappConfigContainerShowSettings toolSettings);
         static partial void PostProcess(AzureWebappConfigContainerShowSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappConfigContainerShow(Configure<AzureWebappConfigContainerShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappConfigContainerShowSettings());
@@ -454,7 +454,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappConfigHostnameAddSettings toolSettings);
         static partial void PostProcess(AzureWebappConfigHostnameAddSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappConfigHostnameAdd(Configure<AzureWebappConfigHostnameAddSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappConfigHostnameAddSettings());
@@ -465,7 +465,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappConfigHostnameDeleteSettings toolSettings);
         static partial void PostProcess(AzureWebappConfigHostnameDeleteSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappConfigHostnameDelete(Configure<AzureWebappConfigHostnameDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappConfigHostnameDeleteSettings());
@@ -476,7 +476,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappConfigHostnameGetExternalIpSettings toolSettings);
         static partial void PostProcess(AzureWebappConfigHostnameGetExternalIpSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappConfigHostnameGetExternalIp(Configure<AzureWebappConfigHostnameGetExternalIpSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappConfigHostnameGetExternalIpSettings());
@@ -487,7 +487,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappConfigHostnameListSettings toolSettings);
         static partial void PostProcess(AzureWebappConfigHostnameListSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappConfigHostnameList(Configure<AzureWebappConfigHostnameListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappConfigHostnameListSettings());
@@ -498,7 +498,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappConfigSslBindSettings toolSettings);
         static partial void PostProcess(AzureWebappConfigSslBindSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappConfigSslBind(Configure<AzureWebappConfigSslBindSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappConfigSslBindSettings());
@@ -509,7 +509,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappConfigSslDeleteSettings toolSettings);
         static partial void PostProcess(AzureWebappConfigSslDeleteSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappConfigSslDelete(Configure<AzureWebappConfigSslDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappConfigSslDeleteSettings());
@@ -520,7 +520,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappConfigSslListSettings toolSettings);
         static partial void PostProcess(AzureWebappConfigSslListSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappConfigSslList(Configure<AzureWebappConfigSslListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappConfigSslListSettings());
@@ -531,7 +531,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappConfigSslUnbindSettings toolSettings);
         static partial void PostProcess(AzureWebappConfigSslUnbindSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappConfigSslUnbind(Configure<AzureWebappConfigSslUnbindSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappConfigSslUnbindSettings());
@@ -542,7 +542,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappConfigSslUploadSettings toolSettings);
         static partial void PostProcess(AzureWebappConfigSslUploadSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappConfigSslUpload(Configure<AzureWebappConfigSslUploadSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappConfigSslUploadSettings());
@@ -553,7 +553,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappDeploymentContainerConfigSettings toolSettings);
         static partial void PostProcess(AzureWebappDeploymentContainerConfigSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappDeploymentContainerConfig(Configure<AzureWebappDeploymentContainerConfigSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappDeploymentContainerConfigSettings());
@@ -564,7 +564,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappDeploymentContainerShowCdUrlSettings toolSettings);
         static partial void PostProcess(AzureWebappDeploymentContainerShowCdUrlSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappDeploymentContainerShowCdUrl(Configure<AzureWebappDeploymentContainerShowCdUrlSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappDeploymentContainerShowCdUrlSettings());
@@ -575,7 +575,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappDeploymentSlotAutoSwapSettings toolSettings);
         static partial void PostProcess(AzureWebappDeploymentSlotAutoSwapSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappDeploymentSlotAutoSwap(Configure<AzureWebappDeploymentSlotAutoSwapSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappDeploymentSlotAutoSwapSettings());
@@ -586,7 +586,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappDeploymentSlotCreateSettings toolSettings);
         static partial void PostProcess(AzureWebappDeploymentSlotCreateSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappDeploymentSlotCreate(Configure<AzureWebappDeploymentSlotCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappDeploymentSlotCreateSettings());
@@ -597,7 +597,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappDeploymentSlotDeleteSettings toolSettings);
         static partial void PostProcess(AzureWebappDeploymentSlotDeleteSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappDeploymentSlotDelete(Configure<AzureWebappDeploymentSlotDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappDeploymentSlotDeleteSettings());
@@ -608,7 +608,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappDeploymentSlotListSettings toolSettings);
         static partial void PostProcess(AzureWebappDeploymentSlotListSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappDeploymentSlotList(Configure<AzureWebappDeploymentSlotListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappDeploymentSlotListSettings());
@@ -619,7 +619,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappDeploymentSlotSwapSettings toolSettings);
         static partial void PostProcess(AzureWebappDeploymentSlotSwapSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappDeploymentSlotSwap(Configure<AzureWebappDeploymentSlotSwapSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappDeploymentSlotSwapSettings());
@@ -630,7 +630,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappDeploymentSourceConfigSettings toolSettings);
         static partial void PostProcess(AzureWebappDeploymentSourceConfigSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappDeploymentSourceConfig(Configure<AzureWebappDeploymentSourceConfigSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappDeploymentSourceConfigSettings());
@@ -641,7 +641,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappDeploymentSourceConfigLocalGitSettings toolSettings);
         static partial void PostProcess(AzureWebappDeploymentSourceConfigLocalGitSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappDeploymentSourceConfigLocalGit(Configure<AzureWebappDeploymentSourceConfigLocalGitSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappDeploymentSourceConfigLocalGitSettings());
@@ -652,7 +652,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappDeploymentSourceConfigZipSettings toolSettings);
         static partial void PostProcess(AzureWebappDeploymentSourceConfigZipSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappDeploymentSourceConfigZip(Configure<AzureWebappDeploymentSourceConfigZipSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappDeploymentSourceConfigZipSettings());
@@ -663,7 +663,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappDeploymentSourceDeleteSettings toolSettings);
         static partial void PostProcess(AzureWebappDeploymentSourceDeleteSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappDeploymentSourceDelete(Configure<AzureWebappDeploymentSourceDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappDeploymentSourceDeleteSettings());
@@ -674,7 +674,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappDeploymentSourceShowSettings toolSettings);
         static partial void PostProcess(AzureWebappDeploymentSourceShowSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappDeploymentSourceShow(Configure<AzureWebappDeploymentSourceShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappDeploymentSourceShowSettings());
@@ -685,7 +685,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappDeploymentSourceSyncSettings toolSettings);
         static partial void PostProcess(AzureWebappDeploymentSourceSyncSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappDeploymentSourceSync(Configure<AzureWebappDeploymentSourceSyncSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappDeploymentSourceSyncSettings());
@@ -696,7 +696,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappDeploymentSourceUpdateTokenSettings toolSettings);
         static partial void PostProcess(AzureWebappDeploymentSourceUpdateTokenSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappDeploymentSourceUpdateToken(Configure<AzureWebappDeploymentSourceUpdateTokenSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappDeploymentSourceUpdateTokenSettings());
@@ -707,7 +707,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappDeploymentUserSetSettings toolSettings);
         static partial void PostProcess(AzureWebappDeploymentUserSetSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappDeploymentUserSet(Configure<AzureWebappDeploymentUserSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappDeploymentUserSetSettings());
@@ -718,7 +718,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureWebappDeploymentUserShowSettings toolSettings);
         static partial void PostProcess(AzureWebappDeploymentUserShowSettings toolSettings);
-        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage web apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureWebappDeploymentUserShow(Configure<AzureWebappDeploymentUserShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureWebappDeploymentUserShowSettings());
@@ -795,6 +795,10 @@ namespace Nuke.Azure
         public virtual string DeploymentSourceBranch { get; internal set; }
         /// <summary><p>Git repository URL to link with manual integration.</p></summary>
         public virtual string DeploymentSourceUrl { get; internal set; }
+        /// <summary><p>Linux only. Config file for multicontainer apps. (local or remote).</p></summary>
+        public virtual string MulticontainerConfigFile { get; internal set; }
+        /// <summary><p>Linux only.</p></summary>
+        public virtual WebappMulticontainerConfigType MulticontainerConfigType { get; internal set; }
         /// <summary><p>Canonicalized web runtime in the format of Framework|Version, e.g. "PHP|5.6". Use 'az webapp list-runtimes' for available list.</p></summary>
         public virtual string Runtime { get; internal set; }
         /// <summary><p>Linux only. The web's startup file.</p></summary>
@@ -820,6 +824,8 @@ namespace Nuke.Azure
               .Add("--deployment-local-git {value}", DeploymentLocalGit)
               .Add("--deployment-source-branch {value}", DeploymentSourceBranch)
               .Add("--deployment-source-url {value}", DeploymentSourceUrl)
+              .Add("--multicontainer-config-file {value}", MulticontainerConfigFile)
+              .Add("--multicontainer-config-type {value}", MulticontainerConfigType)
               .Add("--runtime {value}", Runtime)
               .Add("--startup-file {value}", StartupFile)
               .Add("--debug {value}", Debug)
@@ -1240,43 +1246,41 @@ namespace Nuke.Azure
         public virtual string AllowedExternalRedirectUrls { get; internal set; }
         /// <summary><p></p></summary>
         public virtual bool? Enabled { get; internal set; }
-        /// <summary><p></p></summary>
-        public virtual string RuntimeVersion { get; internal set; }
         /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         public virtual string Slot { get; internal set; }
         /// <summary><p>Hours, must be formattable into a float.</p></summary>
         public virtual string TokenRefreshExtensionHours { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>Use App Service Token Store.</p></summary>
         public virtual bool? TokenStore { get; internal set; }
         /// <summary><p>One or more token audiences (space-delimited).</p></summary>
         public virtual string AadAllowedTokenAudiences { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>Application ID to integrate AAD organization account Sign-in into your web app.</p></summary>
         public virtual string AadClientId { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>AAD application secret.</p></summary>
         public virtual string AadClientSecret { get; internal set; }
         /// <summary><p>This url can be found in the JSON output returned from your active directory endpoint using your tenantID. The endpoint can be queried from 'az cloud show' at "endpoints.activeDirectory". The tenantID can be found using 'az account show'. Get the "issuer" from the JSON at &lt;active directory endpoint&gt;/&lt;tenantId&gt;/.well-known/openid-configuration.</p></summary>
         public virtual string AadTokenIssuerUrl { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>Application ID to integrate Facebook Sign-in into your web app.</p></summary>
         public virtual string FacebookAppId { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>Facebook Application client secret.</p></summary>
         public virtual string FacebookAppSecret { get; internal set; }
         /// <summary><p>One or more facebook authentication scopes (space-delimited).</p></summary>
         public virtual string FacebookOauthScopes { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>Application ID to integrate Google Sign-in into your web app.</p></summary>
         public virtual string GoogleClientId { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>Google Application client secret.</p></summary>
         public virtual string GoogleClientSecret { get; internal set; }
         /// <summary><p>One or more Google authentication scopes (space-delimited).</p></summary>
         public virtual string GoogleOauthScopes { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>AAD V2 Application ID to integrate Microsoft account Sign-in into your web app.</p></summary>
         public virtual string MicrosoftAccountClientId { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>AAD V2 Application client secret.</p></summary>
         public virtual string MicrosoftAccountClientSecret { get; internal set; }
         /// <summary><p>One or more Microsoft authentification scopes (space-delimited).</p></summary>
         public virtual string MicrosoftAccountOauthScopes { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>Application ID to integrate Twitter Sign-in into your web app.</p></summary>
         public virtual string TwitterConsumerKey { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>Twitter Application client secret.</p></summary>
         public virtual string TwitterConsumerSecret { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
@@ -1297,7 +1301,6 @@ namespace Nuke.Azure
               .Add("--action {value}", Action)
               .Add("--allowed-external-redirect-urls {value}", AllowedExternalRedirectUrls)
               .Add("--enabled", Enabled)
-              .Add("--runtime-version {value}", RuntimeVersion)
               .Add("--slot {value}", Slot)
               .Add("--token-refresh-extension-hours {value}", TokenRefreshExtensionHours)
               .Add("--token-store", TokenStore)
@@ -1342,6 +1345,8 @@ namespace Nuke.Azure
         public virtual bool? AlwaysOn { get; internal set; }
         /// <summary><p>Enable or disable auto heal.</p></summary>
         public virtual bool? AutoHealEnabled { get; internal set; }
+        /// <summary><p>Configures a web site to allow clients to connect over http2.0.</p></summary>
+        public virtual bool? Http20Enabled { get; internal set; }
         /// <summary><p>The java container, e.g., Tomcat, Jetty.</p></summary>
         public virtual string JavaContainer { get; internal set; }
         /// <summary><p>The version of the java container, e.g., '8.0.23' for Tomcat.</p></summary>
@@ -1350,6 +1355,8 @@ namespace Nuke.Azure
         public virtual string JavaVersion { get; internal set; }
         /// <summary><p>The runtime stack used for your linux-based webapp, e.g., "RUBY|2.3", "NODE|6.6", "PHP|5.6", "DOTNETCORE|1.1.0". See &lt;a href="https://aka.ms/linux-stacks"&gt;https://aka.ms/linux-stacks&lt;/a&gt; for more info.</p></summary>
         public virtual string LinuxFxVersion { get; internal set; }
+        /// <summary><p>The minimum version of TLS required for SSL requests, e.g., '1.0', '1.1', '1.2'.</p></summary>
+        public virtual string MinTlsVersion { get; internal set; }
         /// <summary><p>The version used to run your web app if using .NET Framework, e.g., 'v4.0' for .NET 4.6 and 'v3.0' for .NET 3.5.</p></summary>
         public virtual string NetFrameworkVersion { get; internal set; }
         /// <summary><p>The version used to run your web app if using PHP, e.g., 5.5, 5.6, 7.0.</p></summary>
@@ -1384,10 +1391,12 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--always-on", AlwaysOn)
               .Add("--auto-heal-enabled", AutoHealEnabled)
+              .Add("--http20-enabled", Http20Enabled)
               .Add("--java-container {value}", JavaContainer)
               .Add("--java-container-version {value}", JavaContainerVersion)
               .Add("--java-version {value}", JavaVersion)
               .Add("--linux-fx-version {value}", LinuxFxVersion)
+              .Add("--min-tls-version {value}", MinTlsVersion)
               .Add("--net-framework-version {value}", NetFrameworkVersion)
               .Add("--php-version {value}", PhpVersion)
               .Add("--python-version {value}", PythonVersion)
@@ -2482,6 +2491,10 @@ namespace Nuke.Azure
         public virtual string DockerRegistryServerUser { get; internal set; }
         /// <summary><p>Enables platform storage (custom container only).</p></summary>
         public virtual bool? EnableAppServiceStorage { get; internal set; }
+        /// <summary><p>Config file for multicontainer apps.</p></summary>
+        public virtual string MulticontainerConfigFile { get; internal set; }
+        /// <summary><p>Config type.</p></summary>
+        public virtual WebappMulticontainerConfigType MulticontainerConfigType { get; internal set; }
         /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         public virtual string Slot { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
@@ -2505,6 +2518,8 @@ namespace Nuke.Azure
               .Add("--docker-registry-server-url {value}", DockerRegistryServerUrl)
               .Add("--docker-registry-server-user {value}", DockerRegistryServerUser)
               .Add("--enable-app-service-storage", EnableAppServiceStorage)
+              .Add("--multicontainer-config-file {value}", MulticontainerConfigFile)
+              .Add("--multicontainer-config-type {value}", MulticontainerConfigType)
               .Add("--slot {value}", Slot)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -2528,6 +2543,8 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Shows decoded config if a multicontainer config is set.</p></summary>
+        public virtual string ShowMulticontainerConfig { get; internal set; }
         /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         public virtual string Slot { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
@@ -2546,6 +2563,7 @@ namespace Nuke.Azure
               .Add("webapp config container show")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--show-multicontainer-config {value}", ShowMulticontainerConfig)
               .Add("--slot {value}", Slot)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -2693,7 +2711,7 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureWebappTasks.AzureWebappPath;
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Webapp name. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        /// <summary><p>Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
         public virtual string WebappName { get; internal set; }
         /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         public virtual string Slot { get; internal set; }
@@ -3376,7 +3394,7 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>A zip file path for deployment.</p></summary>
         public virtual string Src { get; internal set; }
         /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         public virtual string Slot { get; internal set; }
@@ -3934,6 +3952,42 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.DeploymentSourceUrl = null;
+            return toolSettings;
+        }
+        #endregion
+        #region MulticontainerConfigFile
+        /// <summary><p><em>Sets <see cref="AzureWebappCreateSettings.MulticontainerConfigFile"/>.</em></p><p>Linux only. Config file for multicontainer apps. (local or remote).</p></summary>
+        [Pure]
+        public static AzureWebappCreateSettings SetMulticontainerConfigFile(this AzureWebappCreateSettings toolSettings, string multicontainerConfigFile)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MulticontainerConfigFile = multicontainerConfigFile;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappCreateSettings.MulticontainerConfigFile"/>.</em></p><p>Linux only. Config file for multicontainer apps. (local or remote).</p></summary>
+        [Pure]
+        public static AzureWebappCreateSettings ResetMulticontainerConfigFile(this AzureWebappCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MulticontainerConfigFile = null;
+            return toolSettings;
+        }
+        #endregion
+        #region MulticontainerConfigType
+        /// <summary><p><em>Sets <see cref="AzureWebappCreateSettings.MulticontainerConfigType"/>.</em></p><p>Linux only.</p></summary>
+        [Pure]
+        public static AzureWebappCreateSettings SetMulticontainerConfigType(this AzureWebappCreateSettings toolSettings, WebappMulticontainerConfigType multicontainerConfigType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MulticontainerConfigType = multicontainerConfigType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappCreateSettings.MulticontainerConfigType"/>.</em></p><p>Linux only.</p></summary>
+        [Pure]
+        public static AzureWebappCreateSettings ResetMulticontainerConfigType(this AzureWebappCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MulticontainerConfigType = null;
             return toolSettings;
         }
         #endregion
@@ -5727,24 +5781,6 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region RuntimeVersion
-        /// <summary><p><em>Sets <see cref="AzureWebappAuthUpdateSettings.RuntimeVersion"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureWebappAuthUpdateSettings SetRuntimeVersion(this AzureWebappAuthUpdateSettings toolSettings, string runtimeVersion)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RuntimeVersion = runtimeVersion;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureWebappAuthUpdateSettings.RuntimeVersion"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureWebappAuthUpdateSettings ResetRuntimeVersion(this AzureWebappAuthUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RuntimeVersion = null;
-            return toolSettings;
-        }
-        #endregion
         #region Slot
         /// <summary><p><em>Sets <see cref="AzureWebappAuthUpdateSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         [Pure]
@@ -5782,7 +5818,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region TokenStore
-        /// <summary><p><em>Sets <see cref="AzureWebappAuthUpdateSettings.TokenStore"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappAuthUpdateSettings.TokenStore"/>.</em></p><p>Use App Service Token Store.</p></summary>
         [Pure]
         public static AzureWebappAuthUpdateSettings SetTokenStore(this AzureWebappAuthUpdateSettings toolSettings, bool? tokenStore)
         {
@@ -5790,7 +5826,7 @@ namespace Nuke.Azure
             toolSettings.TokenStore = tokenStore;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappAuthUpdateSettings.TokenStore"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappAuthUpdateSettings.TokenStore"/>.</em></p><p>Use App Service Token Store.</p></summary>
         [Pure]
         public static AzureWebappAuthUpdateSettings ResetTokenStore(this AzureWebappAuthUpdateSettings toolSettings)
         {
@@ -5798,7 +5834,7 @@ namespace Nuke.Azure
             toolSettings.TokenStore = null;
             return toolSettings;
         }
-        /// <summary><p><em>Enables <see cref="AzureWebappAuthUpdateSettings.TokenStore"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Enables <see cref="AzureWebappAuthUpdateSettings.TokenStore"/>.</em></p><p>Use App Service Token Store.</p></summary>
         [Pure]
         public static AzureWebappAuthUpdateSettings EnableTokenStore(this AzureWebappAuthUpdateSettings toolSettings)
         {
@@ -5806,7 +5842,7 @@ namespace Nuke.Azure
             toolSettings.TokenStore = true;
             return toolSettings;
         }
-        /// <summary><p><em>Disables <see cref="AzureWebappAuthUpdateSettings.TokenStore"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Disables <see cref="AzureWebappAuthUpdateSettings.TokenStore"/>.</em></p><p>Use App Service Token Store.</p></summary>
         [Pure]
         public static AzureWebappAuthUpdateSettings DisableTokenStore(this AzureWebappAuthUpdateSettings toolSettings)
         {
@@ -5814,7 +5850,7 @@ namespace Nuke.Azure
             toolSettings.TokenStore = false;
             return toolSettings;
         }
-        /// <summary><p><em>Toggles <see cref="AzureWebappAuthUpdateSettings.TokenStore"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Toggles <see cref="AzureWebappAuthUpdateSettings.TokenStore"/>.</em></p><p>Use App Service Token Store.</p></summary>
         [Pure]
         public static AzureWebappAuthUpdateSettings ToggleTokenStore(this AzureWebappAuthUpdateSettings toolSettings)
         {
@@ -5842,7 +5878,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region AadClientId
-        /// <summary><p><em>Sets <see cref="AzureWebappAuthUpdateSettings.AadClientId"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappAuthUpdateSettings.AadClientId"/>.</em></p><p>Application ID to integrate AAD organization account Sign-in into your web app.</p></summary>
         [Pure]
         public static AzureWebappAuthUpdateSettings SetAadClientId(this AzureWebappAuthUpdateSettings toolSettings, string aadClientId)
         {
@@ -5850,7 +5886,7 @@ namespace Nuke.Azure
             toolSettings.AadClientId = aadClientId;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappAuthUpdateSettings.AadClientId"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappAuthUpdateSettings.AadClientId"/>.</em></p><p>Application ID to integrate AAD organization account Sign-in into your web app.</p></summary>
         [Pure]
         public static AzureWebappAuthUpdateSettings ResetAadClientId(this AzureWebappAuthUpdateSettings toolSettings)
         {
@@ -5860,7 +5896,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region AadClientSecret
-        /// <summary><p><em>Sets <see cref="AzureWebappAuthUpdateSettings.AadClientSecret"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappAuthUpdateSettings.AadClientSecret"/>.</em></p><p>AAD application secret.</p></summary>
         [Pure]
         public static AzureWebappAuthUpdateSettings SetAadClientSecret(this AzureWebappAuthUpdateSettings toolSettings, string aadClientSecret)
         {
@@ -5868,7 +5904,7 @@ namespace Nuke.Azure
             toolSettings.AadClientSecret = aadClientSecret;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappAuthUpdateSettings.AadClientSecret"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappAuthUpdateSettings.AadClientSecret"/>.</em></p><p>AAD application secret.</p></summary>
         [Pure]
         public static AzureWebappAuthUpdateSettings ResetAadClientSecret(this AzureWebappAuthUpdateSettings toolSettings)
         {
@@ -5896,7 +5932,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region FacebookAppId
-        /// <summary><p><em>Sets <see cref="AzureWebappAuthUpdateSettings.FacebookAppId"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappAuthUpdateSettings.FacebookAppId"/>.</em></p><p>Application ID to integrate Facebook Sign-in into your web app.</p></summary>
         [Pure]
         public static AzureWebappAuthUpdateSettings SetFacebookAppId(this AzureWebappAuthUpdateSettings toolSettings, string facebookAppId)
         {
@@ -5904,7 +5940,7 @@ namespace Nuke.Azure
             toolSettings.FacebookAppId = facebookAppId;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappAuthUpdateSettings.FacebookAppId"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappAuthUpdateSettings.FacebookAppId"/>.</em></p><p>Application ID to integrate Facebook Sign-in into your web app.</p></summary>
         [Pure]
         public static AzureWebappAuthUpdateSettings ResetFacebookAppId(this AzureWebappAuthUpdateSettings toolSettings)
         {
@@ -5914,7 +5950,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region FacebookAppSecret
-        /// <summary><p><em>Sets <see cref="AzureWebappAuthUpdateSettings.FacebookAppSecret"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappAuthUpdateSettings.FacebookAppSecret"/>.</em></p><p>Facebook Application client secret.</p></summary>
         [Pure]
         public static AzureWebappAuthUpdateSettings SetFacebookAppSecret(this AzureWebappAuthUpdateSettings toolSettings, string facebookAppSecret)
         {
@@ -5922,7 +5958,7 @@ namespace Nuke.Azure
             toolSettings.FacebookAppSecret = facebookAppSecret;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappAuthUpdateSettings.FacebookAppSecret"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappAuthUpdateSettings.FacebookAppSecret"/>.</em></p><p>Facebook Application client secret.</p></summary>
         [Pure]
         public static AzureWebappAuthUpdateSettings ResetFacebookAppSecret(this AzureWebappAuthUpdateSettings toolSettings)
         {
@@ -5950,7 +5986,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region GoogleClientId
-        /// <summary><p><em>Sets <see cref="AzureWebappAuthUpdateSettings.GoogleClientId"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappAuthUpdateSettings.GoogleClientId"/>.</em></p><p>Application ID to integrate Google Sign-in into your web app.</p></summary>
         [Pure]
         public static AzureWebappAuthUpdateSettings SetGoogleClientId(this AzureWebappAuthUpdateSettings toolSettings, string googleClientId)
         {
@@ -5958,7 +5994,7 @@ namespace Nuke.Azure
             toolSettings.GoogleClientId = googleClientId;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappAuthUpdateSettings.GoogleClientId"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappAuthUpdateSettings.GoogleClientId"/>.</em></p><p>Application ID to integrate Google Sign-in into your web app.</p></summary>
         [Pure]
         public static AzureWebappAuthUpdateSettings ResetGoogleClientId(this AzureWebappAuthUpdateSettings toolSettings)
         {
@@ -5968,7 +6004,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region GoogleClientSecret
-        /// <summary><p><em>Sets <see cref="AzureWebappAuthUpdateSettings.GoogleClientSecret"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappAuthUpdateSettings.GoogleClientSecret"/>.</em></p><p>Google Application client secret.</p></summary>
         [Pure]
         public static AzureWebappAuthUpdateSettings SetGoogleClientSecret(this AzureWebappAuthUpdateSettings toolSettings, string googleClientSecret)
         {
@@ -5976,7 +6012,7 @@ namespace Nuke.Azure
             toolSettings.GoogleClientSecret = googleClientSecret;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappAuthUpdateSettings.GoogleClientSecret"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappAuthUpdateSettings.GoogleClientSecret"/>.</em></p><p>Google Application client secret.</p></summary>
         [Pure]
         public static AzureWebappAuthUpdateSettings ResetGoogleClientSecret(this AzureWebappAuthUpdateSettings toolSettings)
         {
@@ -6004,7 +6040,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region MicrosoftAccountClientId
-        /// <summary><p><em>Sets <see cref="AzureWebappAuthUpdateSettings.MicrosoftAccountClientId"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappAuthUpdateSettings.MicrosoftAccountClientId"/>.</em></p><p>AAD V2 Application ID to integrate Microsoft account Sign-in into your web app.</p></summary>
         [Pure]
         public static AzureWebappAuthUpdateSettings SetMicrosoftAccountClientId(this AzureWebappAuthUpdateSettings toolSettings, string microsoftAccountClientId)
         {
@@ -6012,7 +6048,7 @@ namespace Nuke.Azure
             toolSettings.MicrosoftAccountClientId = microsoftAccountClientId;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappAuthUpdateSettings.MicrosoftAccountClientId"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappAuthUpdateSettings.MicrosoftAccountClientId"/>.</em></p><p>AAD V2 Application ID to integrate Microsoft account Sign-in into your web app.</p></summary>
         [Pure]
         public static AzureWebappAuthUpdateSettings ResetMicrosoftAccountClientId(this AzureWebappAuthUpdateSettings toolSettings)
         {
@@ -6022,7 +6058,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region MicrosoftAccountClientSecret
-        /// <summary><p><em>Sets <see cref="AzureWebappAuthUpdateSettings.MicrosoftAccountClientSecret"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappAuthUpdateSettings.MicrosoftAccountClientSecret"/>.</em></p><p>AAD V2 Application client secret.</p></summary>
         [Pure]
         public static AzureWebappAuthUpdateSettings SetMicrosoftAccountClientSecret(this AzureWebappAuthUpdateSettings toolSettings, string microsoftAccountClientSecret)
         {
@@ -6030,7 +6066,7 @@ namespace Nuke.Azure
             toolSettings.MicrosoftAccountClientSecret = microsoftAccountClientSecret;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappAuthUpdateSettings.MicrosoftAccountClientSecret"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappAuthUpdateSettings.MicrosoftAccountClientSecret"/>.</em></p><p>AAD V2 Application client secret.</p></summary>
         [Pure]
         public static AzureWebappAuthUpdateSettings ResetMicrosoftAccountClientSecret(this AzureWebappAuthUpdateSettings toolSettings)
         {
@@ -6058,7 +6094,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region TwitterConsumerKey
-        /// <summary><p><em>Sets <see cref="AzureWebappAuthUpdateSettings.TwitterConsumerKey"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappAuthUpdateSettings.TwitterConsumerKey"/>.</em></p><p>Application ID to integrate Twitter Sign-in into your web app.</p></summary>
         [Pure]
         public static AzureWebappAuthUpdateSettings SetTwitterConsumerKey(this AzureWebappAuthUpdateSettings toolSettings, string twitterConsumerKey)
         {
@@ -6066,7 +6102,7 @@ namespace Nuke.Azure
             toolSettings.TwitterConsumerKey = twitterConsumerKey;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappAuthUpdateSettings.TwitterConsumerKey"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappAuthUpdateSettings.TwitterConsumerKey"/>.</em></p><p>Application ID to integrate Twitter Sign-in into your web app.</p></summary>
         [Pure]
         public static AzureWebappAuthUpdateSettings ResetTwitterConsumerKey(this AzureWebappAuthUpdateSettings toolSettings)
         {
@@ -6076,7 +6112,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region TwitterConsumerSecret
-        /// <summary><p><em>Sets <see cref="AzureWebappAuthUpdateSettings.TwitterConsumerSecret"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappAuthUpdateSettings.TwitterConsumerSecret"/>.</em></p><p>Twitter Application client secret.</p></summary>
         [Pure]
         public static AzureWebappAuthUpdateSettings SetTwitterConsumerSecret(this AzureWebappAuthUpdateSettings toolSettings, string twitterConsumerSecret)
         {
@@ -6084,7 +6120,7 @@ namespace Nuke.Azure
             toolSettings.TwitterConsumerSecret = twitterConsumerSecret;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappAuthUpdateSettings.TwitterConsumerSecret"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappAuthUpdateSettings.TwitterConsumerSecret"/>.</em></p><p>Twitter Application client secret.</p></summary>
         [Pure]
         public static AzureWebappAuthUpdateSettings ResetTwitterConsumerSecret(this AzureWebappAuthUpdateSettings toolSettings)
         {
@@ -6311,6 +6347,48 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Http20Enabled
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigSetSettings.Http20Enabled"/>.</em></p><p>Configures a web site to allow clients to connect over http2.0.</p></summary>
+        [Pure]
+        public static AzureWebappConfigSetSettings SetHttp20Enabled(this AzureWebappConfigSetSettings toolSettings, bool? http20Enabled)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Http20Enabled = http20Enabled;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigSetSettings.Http20Enabled"/>.</em></p><p>Configures a web site to allow clients to connect over http2.0.</p></summary>
+        [Pure]
+        public static AzureWebappConfigSetSettings ResetHttp20Enabled(this AzureWebappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Http20Enabled = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureWebappConfigSetSettings.Http20Enabled"/>.</em></p><p>Configures a web site to allow clients to connect over http2.0.</p></summary>
+        [Pure]
+        public static AzureWebappConfigSetSettings EnableHttp20Enabled(this AzureWebappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Http20Enabled = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureWebappConfigSetSettings.Http20Enabled"/>.</em></p><p>Configures a web site to allow clients to connect over http2.0.</p></summary>
+        [Pure]
+        public static AzureWebappConfigSetSettings DisableHttp20Enabled(this AzureWebappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Http20Enabled = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureWebappConfigSetSettings.Http20Enabled"/>.</em></p><p>Configures a web site to allow clients to connect over http2.0.</p></summary>
+        [Pure]
+        public static AzureWebappConfigSetSettings ToggleHttp20Enabled(this AzureWebappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Http20Enabled = !toolSettings.Http20Enabled;
+            return toolSettings;
+        }
+        #endregion
         #region JavaContainer
         /// <summary><p><em>Sets <see cref="AzureWebappConfigSetSettings.JavaContainer"/>.</em></p><p>The java container, e.g., Tomcat, Jetty.</p></summary>
         [Pure]
@@ -6380,6 +6458,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.LinuxFxVersion = null;
+            return toolSettings;
+        }
+        #endregion
+        #region MinTlsVersion
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigSetSettings.MinTlsVersion"/>.</em></p><p>The minimum version of TLS required for SSL requests, e.g., '1.0', '1.1', '1.2'.</p></summary>
+        [Pure]
+        public static AzureWebappConfigSetSettings SetMinTlsVersion(this AzureWebappConfigSetSettings toolSettings, string minTlsVersion)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MinTlsVersion = minTlsVersion;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigSetSettings.MinTlsVersion"/>.</em></p><p>The minimum version of TLS required for SSL requests, e.g., '1.0', '1.1', '1.2'.</p></summary>
+        [Pure]
+        public static AzureWebappConfigSetSettings ResetMinTlsVersion(this AzureWebappConfigSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MinTlsVersion = null;
             return toolSettings;
         }
         #endregion
@@ -11105,6 +11201,42 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region MulticontainerConfigFile
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.MulticontainerConfigFile"/>.</em></p><p>Config file for multicontainer apps.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings SetMulticontainerConfigFile(this AzureWebappConfigContainerSetSettings toolSettings, string multicontainerConfigFile)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MulticontainerConfigFile = multicontainerConfigFile;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.MulticontainerConfigFile"/>.</em></p><p>Config file for multicontainer apps.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings ResetMulticontainerConfigFile(this AzureWebappConfigContainerSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MulticontainerConfigFile = null;
+            return toolSettings;
+        }
+        #endregion
+        #region MulticontainerConfigType
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.MulticontainerConfigType"/>.</em></p><p>Config type.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings SetMulticontainerConfigType(this AzureWebappConfigContainerSetSettings toolSettings, WebappMulticontainerConfigType multicontainerConfigType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MulticontainerConfigType = multicontainerConfigType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerSetSettings.MulticontainerConfigType"/>.</em></p><p>Config type.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerSetSettings ResetMulticontainerConfigType(this AzureWebappConfigContainerSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MulticontainerConfigType = null;
+            return toolSettings;
+        }
+        #endregion
         #region Slot
         /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerSetSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         [Pure]
@@ -11254,6 +11386,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ShowMulticontainerConfig
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigContainerShowSettings.ShowMulticontainerConfig"/>.</em></p><p>Shows decoded config if a multicontainer config is set.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerShowSettings SetShowMulticontainerConfig(this AzureWebappConfigContainerShowSettings toolSettings, string showMulticontainerConfig)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowMulticontainerConfig = showMulticontainerConfig;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigContainerShowSettings.ShowMulticontainerConfig"/>.</em></p><p>Shows decoded config if a multicontainer config is set.</p></summary>
+        [Pure]
+        public static AzureWebappConfigContainerShowSettings ResetShowMulticontainerConfig(this AzureWebappConfigContainerShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShowMulticontainerConfig = null;
             return toolSettings;
         }
         #endregion
@@ -11866,7 +12016,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region WebappName
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigHostnameListSettings.WebappName"/>.</em></p><p>Webapp name. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigHostnameListSettings.WebappName"/>.</em></p><p>Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
         [Pure]
         public static AzureWebappConfigHostnameListSettings SetWebappName(this AzureWebappConfigHostnameListSettings toolSettings, string webappName)
         {
@@ -11874,7 +12024,7 @@ namespace Nuke.Azure
             toolSettings.WebappName = webappName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigHostnameListSettings.WebappName"/>.</em></p><p>Webapp name. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappConfigHostnameListSettings.WebappName"/>.</em></p><p>Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
         [Pure]
         public static AzureWebappConfigHostnameListSettings ResetWebappName(this AzureWebappConfigHostnameListSettings toolSettings)
         {
@@ -14584,7 +14734,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Src
-        /// <summary><p><em>Sets <see cref="AzureWebappDeploymentSourceConfigZipSettings.Src"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappDeploymentSourceConfigZipSettings.Src"/>.</em></p><p>A zip file path for deployment.</p></summary>
         [Pure]
         public static AzureWebappDeploymentSourceConfigZipSettings SetSrc(this AzureWebappDeploymentSourceConfigZipSettings toolSettings, string src)
         {
@@ -14592,7 +14742,7 @@ namespace Nuke.Azure
             toolSettings.Src = src;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappDeploymentSourceConfigZipSettings.Src"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappDeploymentSourceConfigZipSettings.Src"/>.</em></p><p>A zip file path for deployment.</p></summary>
         [Pure]
         public static AzureWebappDeploymentSourceConfigZipSettings ResetSrc(this AzureWebappDeploymentSourceConfigZipSettings toolSettings)
         {
@@ -15513,6 +15663,16 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+    }
+    #endregion
+    #region WebappMulticontainerConfigType
+    /// <summary><p>Used within <see cref="AzureWebappTasks"/>.</p></summary>
+    [PublicAPI]
+    [Serializable]
+    public partial class WebappMulticontainerConfigType : Enumeration
+    {
+        public static WebappMulticontainerConfigType compose = new WebappMulticontainerConfigType { Value = "compose" };
+        public static WebappMulticontainerConfigType kube = new WebappMulticontainerConfigType { Value = "kube" };
     }
     #endregion
     #region WebappAuthUpdateAction

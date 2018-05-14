@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzurePostgres.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePostgresSettings toolSettings);
         static partial void PostProcess(AzurePostgresSettings toolSettings);
-        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/postgres.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePostgres(Configure<AzurePostgresSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePostgresSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePostgresDbCreateSettings toolSettings);
         static partial void PostProcess(AzurePostgresDbCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/postgres.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePostgresDbCreate(Configure<AzurePostgresDbCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePostgresDbCreateSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePostgresDbDeleteSettings toolSettings);
         static partial void PostProcess(AzurePostgresDbDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/postgres.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePostgresDbDelete(Configure<AzurePostgresDbDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePostgresDbDeleteSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePostgresDbListSettings toolSettings);
         static partial void PostProcess(AzurePostgresDbListSettings toolSettings);
-        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/postgres.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePostgresDbList(Configure<AzurePostgresDbListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePostgresDbListSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePostgresDbShowSettings toolSettings);
         static partial void PostProcess(AzurePostgresDbShowSettings toolSettings);
-        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/postgres.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePostgresDbShow(Configure<AzurePostgresDbShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePostgresDbShowSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePostgresServerLogsDownloadSettings toolSettings);
         static partial void PostProcess(AzurePostgresServerLogsDownloadSettings toolSettings);
-        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/postgres.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePostgresServerLogsDownload(Configure<AzurePostgresServerLogsDownloadSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePostgresServerLogsDownloadSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePostgresServerLogsListSettings toolSettings);
         static partial void PostProcess(AzurePostgresServerLogsListSettings toolSettings);
-        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/postgres.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePostgresServerLogsList(Configure<AzurePostgresServerLogsListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePostgresServerLogsListSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePostgresServerCreateSettings toolSettings);
         static partial void PostProcess(AzurePostgresServerCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/postgres.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePostgresServerCreate(Configure<AzurePostgresServerCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePostgresServerCreateSettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePostgresServerDeleteSettings toolSettings);
         static partial void PostProcess(AzurePostgresServerDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/postgres.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePostgresServerDelete(Configure<AzurePostgresServerDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePostgresServerDeleteSettings());
@@ -135,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePostgresServerGeorestoreSettings toolSettings);
         static partial void PostProcess(AzurePostgresServerGeorestoreSettings toolSettings);
-        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/postgres.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePostgresServerGeorestore(Configure<AzurePostgresServerGeorestoreSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePostgresServerGeorestoreSettings());
@@ -146,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePostgresServerListSettings toolSettings);
         static partial void PostProcess(AzurePostgresServerListSettings toolSettings);
-        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/postgres.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePostgresServerList(Configure<AzurePostgresServerListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePostgresServerListSettings());
@@ -157,7 +157,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePostgresServerRestoreSettings toolSettings);
         static partial void PostProcess(AzurePostgresServerRestoreSettings toolSettings);
-        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/postgres.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePostgresServerRestore(Configure<AzurePostgresServerRestoreSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePostgresServerRestoreSettings());
@@ -168,7 +168,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePostgresServerShowSettings toolSettings);
         static partial void PostProcess(AzurePostgresServerShowSettings toolSettings);
-        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/postgres.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePostgresServerShow(Configure<AzurePostgresServerShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePostgresServerShowSettings());
@@ -179,7 +179,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePostgresServerUpdateSettings toolSettings);
         static partial void PostProcess(AzurePostgresServerUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/postgres.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePostgresServerUpdate(Configure<AzurePostgresServerUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePostgresServerUpdateSettings());
@@ -190,7 +190,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePostgresServerWaitSettings toolSettings);
         static partial void PostProcess(AzurePostgresServerWaitSettings toolSettings);
-        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/postgres.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePostgresServerWait(Configure<AzurePostgresServerWaitSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePostgresServerWaitSettings());
@@ -201,7 +201,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePostgresServerConfigurationListSettings toolSettings);
         static partial void PostProcess(AzurePostgresServerConfigurationListSettings toolSettings);
-        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/postgres.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePostgresServerConfigurationList(Configure<AzurePostgresServerConfigurationListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePostgresServerConfigurationListSettings());
@@ -212,7 +212,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePostgresServerConfigurationSetSettings toolSettings);
         static partial void PostProcess(AzurePostgresServerConfigurationSetSettings toolSettings);
-        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/postgres.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePostgresServerConfigurationSet(Configure<AzurePostgresServerConfigurationSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePostgresServerConfigurationSetSettings());
@@ -223,7 +223,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePostgresServerConfigurationShowSettings toolSettings);
         static partial void PostProcess(AzurePostgresServerConfigurationShowSettings toolSettings);
-        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/postgres.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePostgresServerConfigurationShow(Configure<AzurePostgresServerConfigurationShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePostgresServerConfigurationShowSettings());
@@ -234,7 +234,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePostgresServerFirewallRuleCreateSettings toolSettings);
         static partial void PostProcess(AzurePostgresServerFirewallRuleCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/postgres.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePostgresServerFirewallRuleCreate(Configure<AzurePostgresServerFirewallRuleCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePostgresServerFirewallRuleCreateSettings());
@@ -245,7 +245,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePostgresServerFirewallRuleDeleteSettings toolSettings);
         static partial void PostProcess(AzurePostgresServerFirewallRuleDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/postgres.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePostgresServerFirewallRuleDelete(Configure<AzurePostgresServerFirewallRuleDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePostgresServerFirewallRuleDeleteSettings());
@@ -256,7 +256,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePostgresServerFirewallRuleListSettings toolSettings);
         static partial void PostProcess(AzurePostgresServerFirewallRuleListSettings toolSettings);
-        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/postgres.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePostgresServerFirewallRuleList(Configure<AzurePostgresServerFirewallRuleListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePostgresServerFirewallRuleListSettings());
@@ -267,7 +267,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePostgresServerFirewallRuleShowSettings toolSettings);
         static partial void PostProcess(AzurePostgresServerFirewallRuleShowSettings toolSettings);
-        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/postgres.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePostgresServerFirewallRuleShow(Configure<AzurePostgresServerFirewallRuleShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePostgresServerFirewallRuleShowSettings());
@@ -278,7 +278,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePostgresServerFirewallRuleUpdateSettings toolSettings);
         static partial void PostProcess(AzurePostgresServerFirewallRuleUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/postgres.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePostgresServerFirewallRuleUpdate(Configure<AzurePostgresServerFirewallRuleUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePostgresServerFirewallRuleUpdateSettings());
@@ -602,7 +602,7 @@ namespace Nuke.Azure
         public virtual string Location { get; internal set; }
         /// <summary><p>Enable ssl enforcement or not when connect to server.</p></summary>
         public virtual PostgresServerSslEnforcement SslEnforcement { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>The max storage size of the server. Unit is megabytes.</p></summary>
         public virtual string StorageSize { get; internal set; }
         /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
@@ -2585,7 +2585,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region StorageSize
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerCreateSettings.StorageSize"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerCreateSettings.StorageSize"/>.</em></p><p>The max storage size of the server. Unit is megabytes.</p></summary>
         [Pure]
         public static AzurePostgresServerCreateSettings SetStorageSize(this AzurePostgresServerCreateSettings toolSettings, string storageSize)
         {
@@ -2593,7 +2593,7 @@ namespace Nuke.Azure
             toolSettings.StorageSize = storageSize;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerCreateSettings.StorageSize"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerCreateSettings.StorageSize"/>.</em></p><p>The max storage size of the server. Unit is megabytes.</p></summary>
         [Pure]
         public static AzurePostgresServerCreateSettings ResetStorageSize(this AzurePostgresServerCreateSettings toolSettings)
         {

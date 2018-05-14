@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzurePolicy.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePolicySettings toolSettings);
         static partial void PostProcess(AzurePolicySettings toolSettings);
-        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/policy.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/policy?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePolicy(Configure<AzurePolicySettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePolicySettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePolicyAssignmentCreateSettings toolSettings);
         static partial void PostProcess(AzurePolicyAssignmentCreateSettings toolSettings);
-        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/policy.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/policy?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePolicyAssignmentCreate(Configure<AzurePolicyAssignmentCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePolicyAssignmentCreateSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePolicyAssignmentDeleteSettings toolSettings);
         static partial void PostProcess(AzurePolicyAssignmentDeleteSettings toolSettings);
-        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/policy.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/policy?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePolicyAssignmentDelete(Configure<AzurePolicyAssignmentDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePolicyAssignmentDeleteSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePolicyAssignmentListSettings toolSettings);
         static partial void PostProcess(AzurePolicyAssignmentListSettings toolSettings);
-        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/policy.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/policy?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePolicyAssignmentList(Configure<AzurePolicyAssignmentListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePolicyAssignmentListSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePolicyAssignmentShowSettings toolSettings);
         static partial void PostProcess(AzurePolicyAssignmentShowSettings toolSettings);
-        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/policy.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/policy?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePolicyAssignmentShow(Configure<AzurePolicyAssignmentShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePolicyAssignmentShowSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePolicyDefinitionCreateSettings toolSettings);
         static partial void PostProcess(AzurePolicyDefinitionCreateSettings toolSettings);
-        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/policy.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/policy?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePolicyDefinitionCreate(Configure<AzurePolicyDefinitionCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePolicyDefinitionCreateSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePolicyDefinitionDeleteSettings toolSettings);
         static partial void PostProcess(AzurePolicyDefinitionDeleteSettings toolSettings);
-        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/policy.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/policy?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePolicyDefinitionDelete(Configure<AzurePolicyDefinitionDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePolicyDefinitionDeleteSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePolicyDefinitionListSettings toolSettings);
         static partial void PostProcess(AzurePolicyDefinitionListSettings toolSettings);
-        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/policy.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/policy?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePolicyDefinitionList(Configure<AzurePolicyDefinitionListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePolicyDefinitionListSettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePolicyDefinitionShowSettings toolSettings);
         static partial void PostProcess(AzurePolicyDefinitionShowSettings toolSettings);
-        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/policy.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/policy?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePolicyDefinitionShow(Configure<AzurePolicyDefinitionShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePolicyDefinitionShowSettings());
@@ -135,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePolicyDefinitionUpdateSettings toolSettings);
         static partial void PostProcess(AzurePolicyDefinitionUpdateSettings toolSettings);
-        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/policy.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/policy?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePolicyDefinitionUpdate(Configure<AzurePolicyDefinitionUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePolicyDefinitionUpdateSettings());
@@ -146,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePolicySetDefinitionCreateSettings toolSettings);
         static partial void PostProcess(AzurePolicySetDefinitionCreateSettings toolSettings);
-        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/policy.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/policy?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePolicySetDefinitionCreate(Configure<AzurePolicySetDefinitionCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePolicySetDefinitionCreateSettings());
@@ -157,7 +157,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePolicySetDefinitionDeleteSettings toolSettings);
         static partial void PostProcess(AzurePolicySetDefinitionDeleteSettings toolSettings);
-        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/policy.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/policy?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePolicySetDefinitionDelete(Configure<AzurePolicySetDefinitionDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePolicySetDefinitionDeleteSettings());
@@ -168,7 +168,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePolicySetDefinitionListSettings toolSettings);
         static partial void PostProcess(AzurePolicySetDefinitionListSettings toolSettings);
-        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/policy.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/policy?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePolicySetDefinitionList(Configure<AzurePolicySetDefinitionListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePolicySetDefinitionListSettings());
@@ -179,7 +179,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePolicySetDefinitionShowSettings toolSettings);
         static partial void PostProcess(AzurePolicySetDefinitionShowSettings toolSettings);
-        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/policy.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/policy?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePolicySetDefinitionShow(Configure<AzurePolicySetDefinitionShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePolicySetDefinitionShowSettings());
@@ -190,7 +190,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzurePolicySetDefinitionUpdateSettings toolSettings);
         static partial void PostProcess(AzurePolicySetDefinitionUpdateSettings toolSettings);
-        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/policy.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/policy?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzurePolicySetDefinitionUpdate(Configure<AzurePolicySetDefinitionUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePolicySetDefinitionUpdateSettings());

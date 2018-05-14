@@ -1,0 +1,738 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
+  "license": [
+    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Distributed under the MIT License.",
+    "https://github.com/nuke-build/azure/blob/master/LICENSE"
+  ],
+  "references": [
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/dms.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/dms/project.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/dms/project/task.yml"
+  ],
+  "name": "AzureDms",
+  "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/dms?view=azure-cli-latest",
+  "help": "Manage Azure Data Migration Service (DMS) instances.",
+  "pathExecutable": "az",
+  "tasks": [
+    {
+      "postfix": "CheckName",
+      "definiteArgument": "dms check-name",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The Service name to check."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CheckStatus",
+      "definiteArgument": "dms check-status",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Service."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Create",
+      "definiteArgument": "dms create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Service."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "SkuName",
+            "type": "string",
+            "format": "--sku-name {value}",
+            "help": "The name of the CPU SKU on which the service's Virtual Machine will run. Check the name and the availability of SKUs in your area with \"az dms list-skus\"."
+          },
+          {
+            "name": "Subnet",
+            "type": "string",
+            "format": "--subnet {value}",
+            "help": "The Resource ID of the VNet's Subnet you will use to connect the source and target DBs. Use \"az network vnet subnet show -h\" for help to get your subnet's ID."
+          },
+          {
+            "name": "NoWait",
+            "type": "string",
+            "format": "--no-wait {value}",
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "A space-delimited list of tags in \"tag1[=value1]\" format."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Delete",
+      "definiteArgument": "dms delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Service."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "DeleteRunningTasks",
+            "type": "string",
+            "format": "--delete-running-tasks {value}",
+            "help": "Cancel any running tasks before deleting the service."
+          },
+          {
+            "name": "NoWait",
+            "type": "string",
+            "format": "--no-wait {value}",
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "help": "Do not prompt for confirmation."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "List",
+      "definiteArgument": "dms list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ListSkus",
+      "definiteArgument": "dms list-skus",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "Show",
+      "definiteArgument": "dms show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Service."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Start",
+      "definiteArgument": "dms start",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Service."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "NoWait",
+            "type": "string",
+            "format": "--no-wait {value}",
+            "help": "Do not wait for the long-running operation to finish."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Stop",
+      "definiteArgument": "dms stop",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Service."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "NoWait",
+            "type": "string",
+            "format": "--no-wait {value}",
+            "help": "Do not wait for the long-running operation to finish."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Wait",
+      "definiteArgument": "dms wait",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Service."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Created",
+            "type": "string",
+            "format": "--created {value}",
+            "help": "Wait until created with 'provisioningState' at 'Succeeded'."
+          },
+          {
+            "name": "Custom",
+            "type": "string",
+            "format": "--custom {value}",
+            "help": "Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running']."
+          },
+          {
+            "name": "Deleted",
+            "type": "string",
+            "format": "--deleted {value}",
+            "help": "Wait until deleted."
+          },
+          {
+            "name": "Exists",
+            "type": "string",
+            "format": "--exists {value}",
+            "help": "Wait until the resource exists."
+          },
+          {
+            "name": "Interval",
+            "type": "string",
+            "format": "--interval {value}",
+            "help": "Polling interval in seconds."
+          },
+          {
+            "name": "Timeout",
+            "type": "string",
+            "format": "--timeout {value}",
+            "help": "Maximum wait in seconds."
+          },
+          {
+            "name": "Updated",
+            "type": "string",
+            "format": "--updated {value}",
+            "help": "Wait until updated with provisioningState at 'Succeeded'."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ProjectCheckName",
+      "definiteArgument": "dms project check-name",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The Project name to check."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServiceName",
+            "type": "string",
+            "format": "--service-name {value}",
+            "help": "The name of the Service."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ProjectCreate",
+      "definiteArgument": "dms project create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Project."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServiceName",
+            "type": "string",
+            "format": "--service-name {value}",
+            "help": "The name of the Service."
+          },
+          {
+            "name": "SourcePlatform",
+            "type": "string",
+            "format": "--source-platform {value}",
+            "help": "The type of server for the source database. The supported types are: SQL."
+          },
+          {
+            "name": "TargetPlatform",
+            "type": "string",
+            "format": "--target-platform {value}",
+            "help": "The type of service for the target database. The supported types are: SQLDB."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "A space-delimited list of tags in \"tag1[=value1]\" format."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ProjectDelete",
+      "definiteArgument": "dms project delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Project."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServiceName",
+            "type": "string",
+            "format": "--service-name {value}",
+            "help": "The name of the Service."
+          },
+          {
+            "name": "DeleteRunningTasks",
+            "type": "string",
+            "format": "--delete-running-tasks {value}",
+            "help": "Cancel any running tasks before deleting the Project."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "help": "Do not prompt for confirmation."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ProjectList",
+      "definiteArgument": "dms project list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServiceName",
+            "type": "string",
+            "format": "--service-name {value}",
+            "help": "The name of the Service."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ProjectShow",
+      "definiteArgument": "dms project show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Project."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServiceName",
+            "type": "string",
+            "format": "--service-name {value}",
+            "help": "The name of the Service."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ProjectTaskCancel",
+      "definiteArgument": "dms project task cancel",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Task."
+          },
+          {
+            "name": "ProjectName",
+            "type": "string",
+            "format": "--project-name {value}",
+            "help": "The name of the Project."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServiceName",
+            "type": "string",
+            "format": "--service-name {value}",
+            "help": "The name of the Service."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ProjectTaskCheckName",
+      "definiteArgument": "dms project task check-name",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The Task name to check."
+          },
+          {
+            "name": "ProjectName",
+            "type": "string",
+            "format": "--project-name {value}",
+            "help": "The name of the Project."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServiceName",
+            "type": "string",
+            "format": "--service-name {value}",
+            "help": "The name of the Service."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ProjectTaskCreate",
+      "definiteArgument": "dms project task create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DatabaseOptionsJson",
+            "type": "string",
+            "format": "--database-options-json {value}",
+            "help": "Database and table information. This can be either a JSON-formatted string or the location to a file containing the JSON object. See example below for the format."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Task."
+          },
+          {
+            "name": "ProjectName",
+            "type": "string",
+            "format": "--project-name {value}",
+            "help": "The name of the Project."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServiceName",
+            "type": "string",
+            "format": "--service-name {value}",
+            "help": "The name of the Service."
+          },
+          {
+            "name": "SourceConnectionJson",
+            "type": "string",
+            "format": "--source-connection-json {value}",
+            "help": "The connection information to the source server. This can be either a JSON-formatted string or the location to a file containing the JSON object. See example below for the format."
+          },
+          {
+            "name": "TargetConnectionJson",
+            "type": "string",
+            "format": "--target-connection-json {value}",
+            "help": "The connection information to the target server. This can be either a JSON-formatted string or the location to a file containing the JSON object. See example below for the format."
+          },
+          {
+            "name": "EnableDataIntegrityValidation",
+            "type": "string",
+            "format": "--enable-data-integrity-validation {value}",
+            "help": "Whether to perform a checksum based data integrity validation between source and target for the selected database and tables."
+          },
+          {
+            "name": "EnableQueryAnalysisValidation",
+            "type": "string",
+            "format": "--enable-query-analysis-validation {value}",
+            "help": "Whether to perform a quick and intelligent query analysis by retrieving queries from the source database and executing them in the target. The result will have execution statistics for executions in source and target databases for the extracted queries."
+          },
+          {
+            "name": "EnableSchemaValidation",
+            "type": "string",
+            "format": "--enable-schema-validation {value}",
+            "help": "Whether to compare the schema information between source and target."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ProjectTaskDelete",
+      "definiteArgument": "dms project task delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Task."
+          },
+          {
+            "name": "ProjectName",
+            "type": "string",
+            "format": "--project-name {value}",
+            "help": "The name of the Project."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServiceName",
+            "type": "string",
+            "format": "--service-name {value}",
+            "help": "The name of the Service."
+          },
+          {
+            "name": "DeleteRunningTasks",
+            "type": "string",
+            "format": "--delete-running-tasks {value}",
+            "help": "If the Task is currently running, cancel the Task before deleting the Project."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "help": "Do not prompt for confirmation."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ProjectTaskList",
+      "definiteArgument": "dms project task list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ProjectName",
+            "type": "string",
+            "format": "--project-name {value}",
+            "help": "The name of the Project."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServiceName",
+            "type": "string",
+            "format": "--service-name {value}",
+            "help": "The name of the Service."
+          },
+          {
+            "name": "TaskType",
+            "type": "string",
+            "format": "--task-type {value}",
+            "help": "Filters the list by the type of task. For the list of possible types see \"az dms check-status\"."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ProjectTaskShow",
+      "definiteArgument": "dms project task show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Task."
+          },
+          {
+            "name": "ProjectName",
+            "type": "string",
+            "format": "--project-name {value}",
+            "help": "The name of the Project."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServiceName",
+            "type": "string",
+            "format": "--service-name {value}",
+            "help": "The name of the Service."
+          },
+          {
+            "name": "Expand",
+            "type": "string",
+            "format": "--expand {value}",
+            "help": "Expand the response to provide more details. Use with \"command\" to see more details of the Task. Use with \"output\" to see the results of the Task's migration."
+          }
+        ]
+      }
+    }
+  ],
+  "commonTaskProperties": [
+    {
+      "name": "Debug",
+      "type": "string",
+      "format": "--debug {value}",
+      "help": "Increase logging verbosity to show all debug logs."
+    },
+    {
+      "name": "Help",
+      "type": "string",
+      "format": "--help {value}",
+      "help": "Show this help message and exit."
+    },
+    {
+      "name": "Output",
+      "type": "Output",
+      "format": "--output {value}",
+      "help": "Output format."
+    },
+    {
+      "name": "Query",
+      "type": "string",
+      "format": "--query {value}",
+      "help": "JMESPath query string. See &lt;a href=\"http://jmespath.org/\"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples."
+    },
+    {
+      "name": "Verbose",
+      "type": "string",
+      "format": "--verbose {value}",
+      "help": "Increase logging verbosity. Use --debug for full debug logs."
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureIdentity.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIdentityCreateSettings toolSettings);
         static partial void PostProcess(AzureIdentityCreateSettings toolSettings);
-        /// <summary><p>Managed Service Identities.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/identity.yml">official website</a>.</p></summary>
+        /// <summary><p>Managed Service Identities.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/identity?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIdentityCreate(Configure<AzureIdentityCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIdentityCreateSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIdentityDeleteSettings toolSettings);
         static partial void PostProcess(AzureIdentityDeleteSettings toolSettings);
-        /// <summary><p>Managed Service Identities.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/identity.yml">official website</a>.</p></summary>
+        /// <summary><p>Managed Service Identities.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/identity?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIdentityDelete(Configure<AzureIdentityDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIdentityDeleteSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIdentityListSettings toolSettings);
         static partial void PostProcess(AzureIdentityListSettings toolSettings);
-        /// <summary><p>Managed Service Identities.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/identity.yml">official website</a>.</p></summary>
+        /// <summary><p>Managed Service Identities.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/identity?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIdentityList(Configure<AzureIdentityListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIdentityListSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIdentityListOperationsSettings toolSettings);
         static partial void PostProcess(AzureIdentityListOperationsSettings toolSettings);
-        /// <summary><p>Managed Service Identities.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/identity.yml">official website</a>.</p></summary>
+        /// <summary><p>Managed Service Identities.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/identity?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIdentityListOperations(Configure<AzureIdentityListOperationsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIdentityListOperationsSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIdentityShowSettings toolSettings);
         static partial void PostProcess(AzureIdentityShowSettings toolSettings);
-        /// <summary><p>Managed Service Identities.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/identity.yml">official website</a>.</p></summary>
+        /// <summary><p>Managed Service Identities.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/identity?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIdentityShow(Configure<AzureIdentityShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIdentityShowSettings());

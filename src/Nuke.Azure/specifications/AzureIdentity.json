@@ -3,13 +3,13 @@
   "license": [
     "Copyright Sebastian Karasek, Matthias Koch 2018.",
     "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+    "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/identity.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/identity.yml"
   ],
   "name": "AzureIdentity",
-  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/identity.yml",
+  "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/identity?view=azure-cli-latest",
   "help": "Managed Service Identities.",
   "pathExecutable": "az",
   "tasks": [

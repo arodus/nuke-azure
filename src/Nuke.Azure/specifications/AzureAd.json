@@ -3,19 +3,19 @@
   "license": [
     "Copyright Sebastian Karasek, Matthias Koch 2018.",
     "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+    "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad/app.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad/group.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad/sp.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad/user.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad/group/member.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad/sp/credential.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/ad.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/ad/app.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/ad/group.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/ad/sp.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/ad/user.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/ad/group/member.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/ad/sp/credential.yml"
   ],
   "name": "AzureAd",
-  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad.yml",
+  "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest",
   "help": "Manage Azure Active Directory Graph entities needed for Role Based Access Control.",
   "pathExecutable": "az",
   "tasks": [
@@ -480,56 +480,6 @@
       }
     },
     {
-      "postfix": "SpResetCredentials",
-      "definiteArgument": "ad sp reset-credentials",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": ""
-          },
-          {
-            "name": "Append",
-            "type": "string",
-            "format": "--append {value}",
-            "help": "Append the new credential instead of overwriting."
-          },
-          {
-            "name": "Cert",
-            "type": "string",
-            "format": "--cert {value}",
-            "help": ""
-          },
-          {
-            "name": "CreateCert",
-            "type": "string",
-            "format": "--create-cert {value}",
-            "help": ""
-          },
-          {
-            "name": "Keyvault",
-            "type": "string",
-            "format": "--keyvault {value}",
-            "help": ""
-          },
-          {
-            "name": "Password",
-            "type": "string",
-            "format": "--password {value}",
-            "help": ""
-          },
-          {
-            "name": "Years",
-            "type": "string",
-            "format": "--years {value}",
-            "help": ""
-          }
-        ]
-      }
-    },
-    {
       "postfix": "SpShow",
       "definiteArgument": "ad sp show",
       "settingsClass": {
@@ -730,13 +680,13 @@
             "name": "KeyId",
             "type": "string",
             "format": "--key-id {value}",
-            "help": ""
+            "help": "Credential key id."
           },
           {
             "name": "Cert",
             "type": "string",
             "format": "--cert {value}",
-            "help": ""
+            "help": "A certificate based credential."
           }
         ]
       }
@@ -756,7 +706,7 @@
             "name": "Cert",
             "type": "string",
             "format": "--cert {value}",
-            "help": ""
+            "help": "A certificate based credential."
           }
         ]
       }
@@ -770,13 +720,13 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": ""
+            "help": "Name or app URI for the credential."
           },
           {
             "name": "Append",
             "type": "string",
             "format": "--append {value}",
-            "help": ""
+            "help": "Append the new credential instead of overwriting."
           },
           {
             "name": "Cert",
@@ -800,7 +750,7 @@
             "name": "Password",
             "type": "string",
             "format": "--password {value}",
-            "help": ""
+            "help": "The password used to log in."
           },
           {
             "name": "Years",

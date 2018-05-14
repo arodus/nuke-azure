@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureDla.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaSettings toolSettings);
         static partial void PostProcess(AzureDlaSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDla(Configure<AzureDlaSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaAccountCreateSettings toolSettings);
         static partial void PostProcess(AzureDlaAccountCreateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaAccountCreate(Configure<AzureDlaAccountCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaAccountCreateSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaAccountDeleteSettings toolSettings);
         static partial void PostProcess(AzureDlaAccountDeleteSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaAccountDelete(Configure<AzureDlaAccountDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaAccountDeleteSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaAccountListSettings toolSettings);
         static partial void PostProcess(AzureDlaAccountListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaAccountList(Configure<AzureDlaAccountListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaAccountListSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaAccountShowSettings toolSettings);
         static partial void PostProcess(AzureDlaAccountShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaAccountShow(Configure<AzureDlaAccountShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaAccountShowSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaAccountUpdateSettings toolSettings);
         static partial void PostProcess(AzureDlaAccountUpdateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaAccountUpdate(Configure<AzureDlaAccountUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaAccountUpdateSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaCatalogSettings toolSettings);
         static partial void PostProcess(AzureDlaCatalogSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaCatalog(Configure<AzureDlaCatalogSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaJobCancelSettings toolSettings);
         static partial void PostProcess(AzureDlaJobCancelSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaJobCancel(Configure<AzureDlaJobCancelSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaJobCancelSettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaJobListSettings toolSettings);
         static partial void PostProcess(AzureDlaJobListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaJobList(Configure<AzureDlaJobListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaJobListSettings());
@@ -135,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaJobShowSettings toolSettings);
         static partial void PostProcess(AzureDlaJobShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaJobShow(Configure<AzureDlaJobShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaJobShowSettings());
@@ -146,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaJobSubmitSettings toolSettings);
         static partial void PostProcess(AzureDlaJobSubmitSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaJobSubmit(Configure<AzureDlaJobSubmitSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaJobSubmitSettings());
@@ -157,7 +157,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaJobWaitSettings toolSettings);
         static partial void PostProcess(AzureDlaJobWaitSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaJobWait(Configure<AzureDlaJobWaitSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaJobWaitSettings());
@@ -168,7 +168,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaAccountBlobStorageAddSettings toolSettings);
         static partial void PostProcess(AzureDlaAccountBlobStorageAddSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaAccountBlobStorageAdd(Configure<AzureDlaAccountBlobStorageAddSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaAccountBlobStorageAddSettings());
@@ -179,7 +179,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaAccountBlobStorageDeleteSettings toolSettings);
         static partial void PostProcess(AzureDlaAccountBlobStorageDeleteSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaAccountBlobStorageDelete(Configure<AzureDlaAccountBlobStorageDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaAccountBlobStorageDeleteSettings());
@@ -190,7 +190,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaAccountBlobStorageListSettings toolSettings);
         static partial void PostProcess(AzureDlaAccountBlobStorageListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaAccountBlobStorageList(Configure<AzureDlaAccountBlobStorageListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaAccountBlobStorageListSettings());
@@ -201,7 +201,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaAccountBlobStorageShowSettings toolSettings);
         static partial void PostProcess(AzureDlaAccountBlobStorageShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaAccountBlobStorageShow(Configure<AzureDlaAccountBlobStorageShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaAccountBlobStorageShowSettings());
@@ -212,7 +212,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaAccountBlobStorageUpdateSettings toolSettings);
         static partial void PostProcess(AzureDlaAccountBlobStorageUpdateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaAccountBlobStorageUpdate(Configure<AzureDlaAccountBlobStorageUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaAccountBlobStorageUpdateSettings());
@@ -223,7 +223,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaAccountComputePolicyCreateSettings toolSettings);
         static partial void PostProcess(AzureDlaAccountComputePolicyCreateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaAccountComputePolicyCreate(Configure<AzureDlaAccountComputePolicyCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaAccountComputePolicyCreateSettings());
@@ -234,7 +234,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaAccountComputePolicyDeleteSettings toolSettings);
         static partial void PostProcess(AzureDlaAccountComputePolicyDeleteSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaAccountComputePolicyDelete(Configure<AzureDlaAccountComputePolicyDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaAccountComputePolicyDeleteSettings());
@@ -245,7 +245,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaAccountComputePolicyListSettings toolSettings);
         static partial void PostProcess(AzureDlaAccountComputePolicyListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaAccountComputePolicyList(Configure<AzureDlaAccountComputePolicyListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaAccountComputePolicyListSettings());
@@ -256,7 +256,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaAccountComputePolicyShowSettings toolSettings);
         static partial void PostProcess(AzureDlaAccountComputePolicyShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaAccountComputePolicyShow(Configure<AzureDlaAccountComputePolicyShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaAccountComputePolicyShowSettings());
@@ -267,7 +267,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaAccountComputePolicyUpdateSettings toolSettings);
         static partial void PostProcess(AzureDlaAccountComputePolicyUpdateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaAccountComputePolicyUpdate(Configure<AzureDlaAccountComputePolicyUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaAccountComputePolicyUpdateSettings());
@@ -278,7 +278,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaAccountDataLakeStoreAddSettings toolSettings);
         static partial void PostProcess(AzureDlaAccountDataLakeStoreAddSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaAccountDataLakeStoreAdd(Configure<AzureDlaAccountDataLakeStoreAddSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaAccountDataLakeStoreAddSettings());
@@ -289,7 +289,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaAccountDataLakeStoreDeleteSettings toolSettings);
         static partial void PostProcess(AzureDlaAccountDataLakeStoreDeleteSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaAccountDataLakeStoreDelete(Configure<AzureDlaAccountDataLakeStoreDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaAccountDataLakeStoreDeleteSettings());
@@ -300,7 +300,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaAccountDataLakeStoreListSettings toolSettings);
         static partial void PostProcess(AzureDlaAccountDataLakeStoreListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaAccountDataLakeStoreList(Configure<AzureDlaAccountDataLakeStoreListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaAccountDataLakeStoreListSettings());
@@ -311,7 +311,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaAccountDataLakeStoreShowSettings toolSettings);
         static partial void PostProcess(AzureDlaAccountDataLakeStoreShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaAccountDataLakeStoreShow(Configure<AzureDlaAccountDataLakeStoreShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaAccountDataLakeStoreShowSettings());
@@ -322,7 +322,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaAccountFirewallCreateSettings toolSettings);
         static partial void PostProcess(AzureDlaAccountFirewallCreateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaAccountFirewallCreate(Configure<AzureDlaAccountFirewallCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaAccountFirewallCreateSettings());
@@ -333,7 +333,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaAccountFirewallDeleteSettings toolSettings);
         static partial void PostProcess(AzureDlaAccountFirewallDeleteSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaAccountFirewallDelete(Configure<AzureDlaAccountFirewallDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaAccountFirewallDeleteSettings());
@@ -344,7 +344,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaAccountFirewallListSettings toolSettings);
         static partial void PostProcess(AzureDlaAccountFirewallListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaAccountFirewallList(Configure<AzureDlaAccountFirewallListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaAccountFirewallListSettings());
@@ -355,7 +355,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaAccountFirewallShowSettings toolSettings);
         static partial void PostProcess(AzureDlaAccountFirewallShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaAccountFirewallShow(Configure<AzureDlaAccountFirewallShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaAccountFirewallShowSettings());
@@ -366,7 +366,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaAccountFirewallUpdateSettings toolSettings);
         static partial void PostProcess(AzureDlaAccountFirewallUpdateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaAccountFirewallUpdate(Configure<AzureDlaAccountFirewallUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaAccountFirewallUpdateSettings());
@@ -377,7 +377,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaCatalogAssemblyListSettings toolSettings);
         static partial void PostProcess(AzureDlaCatalogAssemblyListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaCatalogAssemblyList(Configure<AzureDlaCatalogAssemblyListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogAssemblyListSettings());
@@ -388,7 +388,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaCatalogAssemblyShowSettings toolSettings);
         static partial void PostProcess(AzureDlaCatalogAssemblyShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaCatalogAssemblyShow(Configure<AzureDlaCatalogAssemblyShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogAssemblyShowSettings());
@@ -399,7 +399,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaCatalogCredentialCreateSettings toolSettings);
         static partial void PostProcess(AzureDlaCatalogCredentialCreateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaCatalogCredentialCreate(Configure<AzureDlaCatalogCredentialCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogCredentialCreateSettings());
@@ -410,7 +410,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaCatalogCredentialDeleteSettings toolSettings);
         static partial void PostProcess(AzureDlaCatalogCredentialDeleteSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaCatalogCredentialDelete(Configure<AzureDlaCatalogCredentialDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogCredentialDeleteSettings());
@@ -421,7 +421,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaCatalogCredentialListSettings toolSettings);
         static partial void PostProcess(AzureDlaCatalogCredentialListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaCatalogCredentialList(Configure<AzureDlaCatalogCredentialListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogCredentialListSettings());
@@ -432,7 +432,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaCatalogCredentialShowSettings toolSettings);
         static partial void PostProcess(AzureDlaCatalogCredentialShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaCatalogCredentialShow(Configure<AzureDlaCatalogCredentialShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogCredentialShowSettings());
@@ -443,7 +443,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaCatalogCredentialUpdateSettings toolSettings);
         static partial void PostProcess(AzureDlaCatalogCredentialUpdateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaCatalogCredentialUpdate(Configure<AzureDlaCatalogCredentialUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogCredentialUpdateSettings());
@@ -454,7 +454,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaCatalogDatabaseListSettings toolSettings);
         static partial void PostProcess(AzureDlaCatalogDatabaseListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaCatalogDatabaseList(Configure<AzureDlaCatalogDatabaseListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogDatabaseListSettings());
@@ -465,7 +465,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaCatalogDatabaseShowSettings toolSettings);
         static partial void PostProcess(AzureDlaCatalogDatabaseShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaCatalogDatabaseShow(Configure<AzureDlaCatalogDatabaseShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogDatabaseShowSettings());
@@ -476,7 +476,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaCatalogExternalDataSourceListSettings toolSettings);
         static partial void PostProcess(AzureDlaCatalogExternalDataSourceListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaCatalogExternalDataSourceList(Configure<AzureDlaCatalogExternalDataSourceListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogExternalDataSourceListSettings());
@@ -487,7 +487,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaCatalogExternalDataSourceShowSettings toolSettings);
         static partial void PostProcess(AzureDlaCatalogExternalDataSourceShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaCatalogExternalDataSourceShow(Configure<AzureDlaCatalogExternalDataSourceShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogExternalDataSourceShowSettings());
@@ -498,7 +498,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaCatalogPackageListSettings toolSettings);
         static partial void PostProcess(AzureDlaCatalogPackageListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaCatalogPackageList(Configure<AzureDlaCatalogPackageListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogPackageListSettings());
@@ -509,7 +509,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaCatalogPackageShowSettings toolSettings);
         static partial void PostProcess(AzureDlaCatalogPackageShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaCatalogPackageShow(Configure<AzureDlaCatalogPackageShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogPackageShowSettings());
@@ -520,7 +520,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaCatalogProcedureListSettings toolSettings);
         static partial void PostProcess(AzureDlaCatalogProcedureListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaCatalogProcedureList(Configure<AzureDlaCatalogProcedureListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogProcedureListSettings());
@@ -531,7 +531,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaCatalogProcedureShowSettings toolSettings);
         static partial void PostProcess(AzureDlaCatalogProcedureShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaCatalogProcedureShow(Configure<AzureDlaCatalogProcedureShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogProcedureShowSettings());
@@ -542,7 +542,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaCatalogSchemaListSettings toolSettings);
         static partial void PostProcess(AzureDlaCatalogSchemaListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaCatalogSchemaList(Configure<AzureDlaCatalogSchemaListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogSchemaListSettings());
@@ -553,7 +553,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaCatalogSchemaShowSettings toolSettings);
         static partial void PostProcess(AzureDlaCatalogSchemaShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaCatalogSchemaShow(Configure<AzureDlaCatalogSchemaShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogSchemaShowSettings());
@@ -564,7 +564,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaCatalogTablePartitionListSettings toolSettings);
         static partial void PostProcess(AzureDlaCatalogTablePartitionListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaCatalogTablePartitionList(Configure<AzureDlaCatalogTablePartitionListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogTablePartitionListSettings());
@@ -575,7 +575,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaCatalogTablePartitionShowSettings toolSettings);
         static partial void PostProcess(AzureDlaCatalogTablePartitionShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaCatalogTablePartitionShow(Configure<AzureDlaCatalogTablePartitionShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogTablePartitionShowSettings());
@@ -586,7 +586,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaCatalogTableStatsListSettings toolSettings);
         static partial void PostProcess(AzureDlaCatalogTableStatsListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaCatalogTableStatsList(Configure<AzureDlaCatalogTableStatsListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogTableStatsListSettings());
@@ -597,7 +597,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaCatalogTableStatsShowSettings toolSettings);
         static partial void PostProcess(AzureDlaCatalogTableStatsShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaCatalogTableStatsShow(Configure<AzureDlaCatalogTableStatsShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogTableStatsShowSettings());
@@ -608,7 +608,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaCatalogTableTypeListSettings toolSettings);
         static partial void PostProcess(AzureDlaCatalogTableTypeListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaCatalogTableTypeList(Configure<AzureDlaCatalogTableTypeListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogTableTypeListSettings());
@@ -619,7 +619,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaCatalogTableTypeShowSettings toolSettings);
         static partial void PostProcess(AzureDlaCatalogTableTypeShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaCatalogTableTypeShow(Configure<AzureDlaCatalogTableTypeShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogTableTypeShowSettings());
@@ -630,7 +630,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaCatalogTableListSettings toolSettings);
         static partial void PostProcess(AzureDlaCatalogTableListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaCatalogTableList(Configure<AzureDlaCatalogTableListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogTableListSettings());
@@ -641,7 +641,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaCatalogTableShowSettings toolSettings);
         static partial void PostProcess(AzureDlaCatalogTableShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaCatalogTableShow(Configure<AzureDlaCatalogTableShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogTableShowSettings());
@@ -652,7 +652,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaCatalogTvfListSettings toolSettings);
         static partial void PostProcess(AzureDlaCatalogTvfListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaCatalogTvfList(Configure<AzureDlaCatalogTvfListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogTvfListSettings());
@@ -663,7 +663,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaCatalogTvfShowSettings toolSettings);
         static partial void PostProcess(AzureDlaCatalogTvfShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaCatalogTvfShow(Configure<AzureDlaCatalogTvfShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogTvfShowSettings());
@@ -674,7 +674,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaCatalogViewListSettings toolSettings);
         static partial void PostProcess(AzureDlaCatalogViewListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaCatalogViewList(Configure<AzureDlaCatalogViewListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogViewListSettings());
@@ -685,7 +685,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaCatalogViewShowSettings toolSettings);
         static partial void PostProcess(AzureDlaCatalogViewShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaCatalogViewShow(Configure<AzureDlaCatalogViewShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaCatalogViewShowSettings());
@@ -696,7 +696,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaJobPipelineListSettings toolSettings);
         static partial void PostProcess(AzureDlaJobPipelineListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaJobPipelineList(Configure<AzureDlaJobPipelineListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaJobPipelineListSettings());
@@ -707,7 +707,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaJobPipelineShowSettings toolSettings);
         static partial void PostProcess(AzureDlaJobPipelineShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaJobPipelineShow(Configure<AzureDlaJobPipelineShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaJobPipelineShowSettings());
@@ -718,7 +718,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaJobRecurrenceListSettings toolSettings);
         static partial void PostProcess(AzureDlaJobRecurrenceListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaJobRecurrenceList(Configure<AzureDlaJobRecurrenceListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaJobRecurrenceListSettings());
@@ -729,7 +729,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlaJobRecurrenceShowSettings toolSettings);
         static partial void PostProcess(AzureDlaJobRecurrenceShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dla.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlaJobRecurrenceShow(Configure<AzureDlaJobRecurrenceShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlaJobRecurrenceShowSettings());

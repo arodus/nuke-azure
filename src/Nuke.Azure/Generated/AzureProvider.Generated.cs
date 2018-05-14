@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureProvider.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureProviderListSettings toolSettings);
         static partial void PostProcess(AzureProviderListSettings toolSettings);
-        /// <summary><p>Manage resource providers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/provider.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource providers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/provider?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureProviderList(Configure<AzureProviderListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureProviderListSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureProviderRegisterSettings toolSettings);
         static partial void PostProcess(AzureProviderRegisterSettings toolSettings);
-        /// <summary><p>Manage resource providers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/provider.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource providers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/provider?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureProviderRegister(Configure<AzureProviderRegisterSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureProviderRegisterSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureProviderShowSettings toolSettings);
         static partial void PostProcess(AzureProviderShowSettings toolSettings);
-        /// <summary><p>Manage resource providers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/provider.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource providers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/provider?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureProviderShow(Configure<AzureProviderShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureProviderShowSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureProviderUnregisterSettings toolSettings);
         static partial void PostProcess(AzureProviderUnregisterSettings toolSettings);
-        /// <summary><p>Manage resource providers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/provider.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource providers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/provider?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureProviderUnregister(Configure<AzureProviderUnregisterSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureProviderUnregisterSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureProviderOperationListSettings toolSettings);
         static partial void PostProcess(AzureProviderOperationListSettings toolSettings);
-        /// <summary><p>Manage resource providers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/provider.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource providers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/provider?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureProviderOperationList(Configure<AzureProviderOperationListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureProviderOperationListSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureProviderOperationShowSettings toolSettings);
         static partial void PostProcess(AzureProviderOperationShowSettings toolSettings);
-        /// <summary><p>Manage resource providers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/provider.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource providers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/provider?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureProviderOperationShow(Configure<AzureProviderOperationShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureProviderOperationShowSettings());

@@ -3,14 +3,14 @@
   "license": [
     "Copyright Sebastian Karasek, Matthias Koch 2018.",
     "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+    "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/reference-index.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/reference-index.yml"
   ],
   "name": "Azure",
-  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/reference-index.yml",
-  "help": "TBA",
+  "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest",
+  "help": "General Tasks.",
   "pathExecutable": "az",
   "tasks": [
     {
@@ -106,12 +106,6 @@
             "type": "bool",
             "format": "--identity",
             "help": "Log in using the Virtual Machine's identity."
-          },
-          {
-            "name": "IdentityPort",
-            "type": "string",
-            "format": "--identity-port {value}",
-            "help": "The port to retrieve tokens for login. Default: 50342."
           }
         ]
       }

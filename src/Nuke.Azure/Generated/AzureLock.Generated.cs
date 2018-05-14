@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureLock.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLockCreateSettings toolSettings);
         static partial void PostProcess(AzureLockCreateSettings toolSettings);
-        /// <summary><p>Manage Azure locks.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lock.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure locks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lock?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLockCreate(Configure<AzureLockCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLockCreateSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLockDeleteSettings toolSettings);
         static partial void PostProcess(AzureLockDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure locks.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lock.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure locks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lock?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLockDelete(Configure<AzureLockDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLockDeleteSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLockListSettings toolSettings);
         static partial void PostProcess(AzureLockListSettings toolSettings);
-        /// <summary><p>Manage Azure locks.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lock.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure locks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lock?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLockList(Configure<AzureLockListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLockListSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLockShowSettings toolSettings);
         static partial void PostProcess(AzureLockShowSettings toolSettings);
-        /// <summary><p>Manage Azure locks.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lock.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure locks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lock?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLockShow(Configure<AzureLockShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLockShowSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLockUpdateSettings toolSettings);
         static partial void PostProcess(AzureLockUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure locks.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/lock.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure locks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lock?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLockUpdate(Configure<AzureLockUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLockUpdateSettings());

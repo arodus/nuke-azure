@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureEventhubs.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsSettings toolSettings);
         static partial void PostProcess(AzureEventhubsSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubs(Configure<AzureEventhubsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsEventhubCreateSettings toolSettings);
         static partial void PostProcess(AzureEventhubsEventhubCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsEventhubCreate(Configure<AzureEventhubsEventhubCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubCreateSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsEventhubDeleteSettings toolSettings);
         static partial void PostProcess(AzureEventhubsEventhubDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsEventhubDelete(Configure<AzureEventhubsEventhubDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubDeleteSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsEventhubListSettings toolSettings);
         static partial void PostProcess(AzureEventhubsEventhubListSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsEventhubList(Configure<AzureEventhubsEventhubListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubListSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsEventhubShowSettings toolSettings);
         static partial void PostProcess(AzureEventhubsEventhubShowSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsEventhubShow(Configure<AzureEventhubsEventhubShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubShowSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsEventhubUpdateSettings toolSettings);
         static partial void PostProcess(AzureEventhubsEventhubUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsEventhubUpdate(Configure<AzureEventhubsEventhubUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubUpdateSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings);
         static partial void PostProcess(AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsGeorecoveryAliasBreakPair(Configure<AzureEventhubsGeorecoveryAliasBreakPairSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsGeorecoveryAliasBreakPairSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings);
         static partial void PostProcess(AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsGeorecoveryAliasDelete(Configure<AzureEventhubsGeorecoveryAliasDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsGeorecoveryAliasDeleteSettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsGeorecoveryAliasExistsSettings toolSettings);
         static partial void PostProcess(AzureEventhubsGeorecoveryAliasExistsSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsGeorecoveryAliasExists(Configure<AzureEventhubsGeorecoveryAliasExistsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsGeorecoveryAliasExistsSettings());
@@ -135,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings);
         static partial void PostProcess(AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsGeorecoveryAliasFailOver(Configure<AzureEventhubsGeorecoveryAliasFailOverSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsGeorecoveryAliasFailOverSettings());
@@ -146,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsGeorecoveryAliasListSettings toolSettings);
         static partial void PostProcess(AzureEventhubsGeorecoveryAliasListSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsGeorecoveryAliasList(Configure<AzureEventhubsGeorecoveryAliasListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsGeorecoveryAliasListSettings());
@@ -157,7 +157,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsGeorecoveryAliasSetSettings toolSettings);
         static partial void PostProcess(AzureEventhubsGeorecoveryAliasSetSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsGeorecoveryAliasSet(Configure<AzureEventhubsGeorecoveryAliasSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsGeorecoveryAliasSetSettings());
@@ -168,7 +168,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsGeorecoveryAliasShowSettings toolSettings);
         static partial void PostProcess(AzureEventhubsGeorecoveryAliasShowSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsGeorecoveryAliasShow(Configure<AzureEventhubsGeorecoveryAliasShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsGeorecoveryAliasShowSettings());
@@ -179,7 +179,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsNamespaceCreateSettings toolSettings);
         static partial void PostProcess(AzureEventhubsNamespaceCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsNamespaceCreate(Configure<AzureEventhubsNamespaceCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsNamespaceCreateSettings());
@@ -190,7 +190,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsNamespaceDeleteSettings toolSettings);
         static partial void PostProcess(AzureEventhubsNamespaceDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsNamespaceDelete(Configure<AzureEventhubsNamespaceDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsNamespaceDeleteSettings());
@@ -201,7 +201,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsNamespaceExistsSettings toolSettings);
         static partial void PostProcess(AzureEventhubsNamespaceExistsSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsNamespaceExists(Configure<AzureEventhubsNamespaceExistsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsNamespaceExistsSettings());
@@ -212,7 +212,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsNamespaceListSettings toolSettings);
         static partial void PostProcess(AzureEventhubsNamespaceListSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsNamespaceList(Configure<AzureEventhubsNamespaceListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsNamespaceListSettings());
@@ -223,7 +223,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsNamespaceShowSettings toolSettings);
         static partial void PostProcess(AzureEventhubsNamespaceShowSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsNamespaceShow(Configure<AzureEventhubsNamespaceShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsNamespaceShowSettings());
@@ -234,7 +234,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsNamespaceUpdateSettings toolSettings);
         static partial void PostProcess(AzureEventhubsNamespaceUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsNamespaceUpdate(Configure<AzureEventhubsNamespaceUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsNamespaceUpdateSettings());
@@ -245,7 +245,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings);
         static partial void PostProcess(AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsEventhubAuthorizationRuleCreate(Configure<AzureEventhubsEventhubAuthorizationRuleCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubAuthorizationRuleCreateSettings());
@@ -256,7 +256,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings);
         static partial void PostProcess(AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsEventhubAuthorizationRuleDelete(Configure<AzureEventhubsEventhubAuthorizationRuleDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubAuthorizationRuleDeleteSettings());
@@ -267,7 +267,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings);
         static partial void PostProcess(AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsEventhubAuthorizationRuleList(Configure<AzureEventhubsEventhubAuthorizationRuleListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubAuthorizationRuleListSettings());
@@ -278,7 +278,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings);
         static partial void PostProcess(AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsEventhubAuthorizationRuleShow(Configure<AzureEventhubsEventhubAuthorizationRuleShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubAuthorizationRuleShowSettings());
@@ -289,7 +289,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings);
         static partial void PostProcess(AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsEventhubAuthorizationRuleUpdate(Configure<AzureEventhubsEventhubAuthorizationRuleUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubAuthorizationRuleUpdateSettings());
@@ -300,7 +300,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsEventhubConsumerGroupCreateSettings toolSettings);
         static partial void PostProcess(AzureEventhubsEventhubConsumerGroupCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsEventhubConsumerGroupCreate(Configure<AzureEventhubsEventhubConsumerGroupCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubConsumerGroupCreateSettings());
@@ -311,7 +311,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsEventhubConsumerGroupDeleteSettings toolSettings);
         static partial void PostProcess(AzureEventhubsEventhubConsumerGroupDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsEventhubConsumerGroupDelete(Configure<AzureEventhubsEventhubConsumerGroupDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubConsumerGroupDeleteSettings());
@@ -322,7 +322,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsEventhubConsumerGroupListSettings toolSettings);
         static partial void PostProcess(AzureEventhubsEventhubConsumerGroupListSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsEventhubConsumerGroupList(Configure<AzureEventhubsEventhubConsumerGroupListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubConsumerGroupListSettings());
@@ -333,7 +333,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsEventhubConsumerGroupShowSettings toolSettings);
         static partial void PostProcess(AzureEventhubsEventhubConsumerGroupShowSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsEventhubConsumerGroupShow(Configure<AzureEventhubsEventhubConsumerGroupShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubConsumerGroupShowSettings());
@@ -344,7 +344,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsEventhubConsumerGroupUpdateSettings toolSettings);
         static partial void PostProcess(AzureEventhubsEventhubConsumerGroupUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsEventhubConsumerGroupUpdate(Configure<AzureEventhubsEventhubConsumerGroupUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubConsumerGroupUpdateSettings());
@@ -355,7 +355,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings);
         static partial void PostProcess(AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsEventhubAuthorizationRuleKeysList(Configure<AzureEventhubsEventhubAuthorizationRuleKeysListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubAuthorizationRuleKeysListSettings());
@@ -366,7 +366,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings);
         static partial void PostProcess(AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsEventhubAuthorizationRuleKeysRenew(Configure<AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings());
@@ -377,7 +377,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings);
         static partial void PostProcess(AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsGeorecoveryAliasAuthorizationRuleList(Configure<AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings());
@@ -388,7 +388,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings);
         static partial void PostProcess(AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsGeorecoveryAliasAuthorizationRuleShow(Configure<AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings());
@@ -399,7 +399,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings);
         static partial void PostProcess(AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysList(Configure<AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings());
@@ -410,7 +410,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings);
         static partial void PostProcess(AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsNamespaceAuthorizationRuleCreate(Configure<AzureEventhubsNamespaceAuthorizationRuleCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsNamespaceAuthorizationRuleCreateSettings());
@@ -421,7 +421,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings);
         static partial void PostProcess(AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsNamespaceAuthorizationRuleDelete(Configure<AzureEventhubsNamespaceAuthorizationRuleDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsNamespaceAuthorizationRuleDeleteSettings());
@@ -432,7 +432,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings);
         static partial void PostProcess(AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsNamespaceAuthorizationRuleList(Configure<AzureEventhubsNamespaceAuthorizationRuleListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsNamespaceAuthorizationRuleListSettings());
@@ -443,7 +443,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings);
         static partial void PostProcess(AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsNamespaceAuthorizationRuleShow(Configure<AzureEventhubsNamespaceAuthorizationRuleShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsNamespaceAuthorizationRuleShowSettings());
@@ -454,7 +454,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings);
         static partial void PostProcess(AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsNamespaceAuthorizationRuleUpdate(Configure<AzureEventhubsNamespaceAuthorizationRuleUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsNamespaceAuthorizationRuleUpdateSettings());
@@ -465,7 +465,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsNamespaceAuthorizationRuleKeysListSettings toolSettings);
         static partial void PostProcess(AzureEventhubsNamespaceAuthorizationRuleKeysListSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsNamespaceAuthorizationRuleKeysList(Configure<AzureEventhubsNamespaceAuthorizationRuleKeysListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsNamespaceAuthorizationRuleKeysListSettings());
@@ -476,7 +476,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings toolSettings);
         static partial void PostProcess(AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings toolSettings);
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventhubs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventhubsNamespaceAuthorizationRuleKeysRenew(Configure<AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings());

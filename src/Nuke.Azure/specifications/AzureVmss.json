@@ -3,21 +3,21 @@
   "license": [
     "Copyright Sebastian Karasek, Matthias Koch 2018.",
     "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+    "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss/diagnostics.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss/disk.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss/encryption.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss/extension.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss/identity.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss/nic.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss/rolling-upgrade.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss/extension/image.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vmss.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vmss/diagnostics.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vmss/disk.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vmss/encryption.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vmss/extension.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vmss/identity.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vmss/nic.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vmss/rolling-upgrade.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vmss/extension/image.yml"
   ],
   "name": "AzureVmss",
-  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vmss.yml",
+  "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest",
   "help": "Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).",
   "pathExecutable": "az",
   "tasks": [
@@ -55,6 +55,12 @@
             "type": "string",
             "format": "--disable-overprovision {value}",
             "help": "Overprovision option (see &lt;a href=\"https://azure.microsoft.com/en-us/documentation/articles/virtual-machine-scale-sets-overview/\"&gt;https://azure.microsoft.com/en-us/documentation/articles/virtual-machine-scale-sets-overview/&lt;/a&gt; for details)."
+          },
+          {
+            "name": "EvictionPolicy",
+            "type": "VmssCreateEvictionPolicy",
+            "format": "--eviction-policy {value}",
+            "help": "(PREVIEW) the eviction policy for virtual machines in a low priority scale set."
           },
           {
             "name": "HealthProbe",
@@ -627,6 +633,33 @@
       }
     },
     {
+      "postfix": "PerformMaintenance",
+      "definiteArgument": "vmss perform-maintenance",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "InstanceIds",
+            "type": "List<string>",
+            "format": "--instance-ids {value}",
+            "separator": " ",
+            "help": "Space-separated list of IDs (ex: 1 2 3 ...) or * for all instances. If not provided, the action will be applied on the scaleset itself."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "Reimage",
       "definiteArgument": "vmss reimage",
       "settingsClass": {
@@ -963,7 +996,7 @@
             "name": "IsWindowsOs",
             "type": "string",
             "format": "--is-windows-os {value}",
-            "help": ""
+            "help": "For Windows VMs."
           }
         ]
       }
@@ -1354,12 +1387,6 @@
             "help": "The identities to assign."
           },
           {
-            "name": "Port",
-            "type": "string",
-            "format": "--port {value}",
-            "help": "The port to fetch AAD token. Default: 50342."
-          },
-          {
             "name": "Role",
             "type": "string",
             "format": "--role {value}",
@@ -1435,7 +1462,7 @@
             "name": "VmssName",
             "type": "string",
             "format": "--vmss-name {value}",
-            "help": "Scale set name."
+            "help": "Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`."
           }
         ]
       }
@@ -1655,13 +1682,13 @@
             "name": "Orderby",
             "type": "string",
             "format": "--orderby {value}",
-            "help": ""
+            "help": "The $orderby odata query option."
           },
           {
             "name": "Top",
             "type": "string",
             "format": "--top {value}",
-            "help": ""
+            "help": "The $top odata query option."
           }
         ]
       }
@@ -1732,6 +1759,13 @@
     }
   ],
   "enumerations": [
+    {
+      "name": "VmssCreateEvictionPolicy",
+      "values": [
+        "deallocate",
+        "delete"
+      ]
+    },
     {
       "name": "VmssCreateLicenseType",
       "values": [

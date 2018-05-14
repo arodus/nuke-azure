@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureBatchai.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchaiListUsagesSettings toolSettings);
         static partial void PostProcess(AzureBatchaiListUsagesSettings toolSettings);
-        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batchai.yml">official website</a>.</p></summary>
+        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchaiListUsages(Configure<AzureBatchaiListUsagesSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchaiListUsagesSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchaiClusterAutoScaleSettings toolSettings);
         static partial void PostProcess(AzureBatchaiClusterAutoScaleSettings toolSettings);
-        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batchai.yml">official website</a>.</p></summary>
+        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchaiClusterAutoScale(Configure<AzureBatchaiClusterAutoScaleSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchaiClusterAutoScaleSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchaiClusterCreateSettings toolSettings);
         static partial void PostProcess(AzureBatchaiClusterCreateSettings toolSettings);
-        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batchai.yml">official website</a>.</p></summary>
+        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchaiClusterCreate(Configure<AzureBatchaiClusterCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchaiClusterCreateSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchaiClusterDeleteSettings toolSettings);
         static partial void PostProcess(AzureBatchaiClusterDeleteSettings toolSettings);
-        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batchai.yml">official website</a>.</p></summary>
+        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchaiClusterDelete(Configure<AzureBatchaiClusterDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchaiClusterDeleteSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchaiClusterListSettings toolSettings);
         static partial void PostProcess(AzureBatchaiClusterListSettings toolSettings);
-        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batchai.yml">official website</a>.</p></summary>
+        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchaiClusterList(Configure<AzureBatchaiClusterListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchaiClusterListSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchaiClusterListFilesSettings toolSettings);
         static partial void PostProcess(AzureBatchaiClusterListFilesSettings toolSettings);
-        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batchai.yml">official website</a>.</p></summary>
+        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchaiClusterListFiles(Configure<AzureBatchaiClusterListFilesSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchaiClusterListFilesSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchaiClusterListNodesSettings toolSettings);
         static partial void PostProcess(AzureBatchaiClusterListNodesSettings toolSettings);
-        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batchai.yml">official website</a>.</p></summary>
+        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchaiClusterListNodes(Configure<AzureBatchaiClusterListNodesSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchaiClusterListNodesSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchaiClusterResizeSettings toolSettings);
         static partial void PostProcess(AzureBatchaiClusterResizeSettings toolSettings);
-        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batchai.yml">official website</a>.</p></summary>
+        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchaiClusterResize(Configure<AzureBatchaiClusterResizeSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchaiClusterResizeSettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchaiClusterShowSettings toolSettings);
         static partial void PostProcess(AzureBatchaiClusterShowSettings toolSettings);
-        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batchai.yml">official website</a>.</p></summary>
+        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchaiClusterShow(Configure<AzureBatchaiClusterShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchaiClusterShowSettings());
@@ -135,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchaiFileServerCreateSettings toolSettings);
         static partial void PostProcess(AzureBatchaiFileServerCreateSettings toolSettings);
-        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batchai.yml">official website</a>.</p></summary>
+        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchaiFileServerCreate(Configure<AzureBatchaiFileServerCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchaiFileServerCreateSettings());
@@ -146,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchaiFileServerDeleteSettings toolSettings);
         static partial void PostProcess(AzureBatchaiFileServerDeleteSettings toolSettings);
-        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batchai.yml">official website</a>.</p></summary>
+        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchaiFileServerDelete(Configure<AzureBatchaiFileServerDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchaiFileServerDeleteSettings());
@@ -157,7 +157,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchaiFileServerListSettings toolSettings);
         static partial void PostProcess(AzureBatchaiFileServerListSettings toolSettings);
-        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batchai.yml">official website</a>.</p></summary>
+        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchaiFileServerList(Configure<AzureBatchaiFileServerListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchaiFileServerListSettings());
@@ -168,7 +168,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchaiFileServerShowSettings toolSettings);
         static partial void PostProcess(AzureBatchaiFileServerShowSettings toolSettings);
-        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batchai.yml">official website</a>.</p></summary>
+        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchaiFileServerShow(Configure<AzureBatchaiFileServerShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchaiFileServerShowSettings());
@@ -179,7 +179,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchaiJobCreateSettings toolSettings);
         static partial void PostProcess(AzureBatchaiJobCreateSettings toolSettings);
-        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batchai.yml">official website</a>.</p></summary>
+        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchaiJobCreate(Configure<AzureBatchaiJobCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchaiJobCreateSettings());
@@ -190,7 +190,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchaiJobDeleteSettings toolSettings);
         static partial void PostProcess(AzureBatchaiJobDeleteSettings toolSettings);
-        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batchai.yml">official website</a>.</p></summary>
+        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchaiJobDelete(Configure<AzureBatchaiJobDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchaiJobDeleteSettings());
@@ -201,7 +201,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchaiJobListSettings toolSettings);
         static partial void PostProcess(AzureBatchaiJobListSettings toolSettings);
-        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batchai.yml">official website</a>.</p></summary>
+        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchaiJobList(Configure<AzureBatchaiJobListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchaiJobListSettings());
@@ -212,7 +212,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchaiJobListNodesSettings toolSettings);
         static partial void PostProcess(AzureBatchaiJobListNodesSettings toolSettings);
-        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batchai.yml">official website</a>.</p></summary>
+        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchaiJobListNodes(Configure<AzureBatchaiJobListNodesSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchaiJobListNodesSettings());
@@ -223,7 +223,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchaiJobShowSettings toolSettings);
         static partial void PostProcess(AzureBatchaiJobShowSettings toolSettings);
-        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batchai.yml">official website</a>.</p></summary>
+        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchaiJobShow(Configure<AzureBatchaiJobShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchaiJobShowSettings());
@@ -234,7 +234,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchaiJobTerminateSettings toolSettings);
         static partial void PostProcess(AzureBatchaiJobTerminateSettings toolSettings);
-        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batchai.yml">official website</a>.</p></summary>
+        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchaiJobTerminate(Configure<AzureBatchaiJobTerminateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchaiJobTerminateSettings());
@@ -245,7 +245,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchaiJobWaitSettings toolSettings);
         static partial void PostProcess(AzureBatchaiJobWaitSettings toolSettings);
-        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batchai.yml">official website</a>.</p></summary>
+        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchaiJobWait(Configure<AzureBatchaiJobWaitSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchaiJobWaitSettings());
@@ -256,7 +256,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchaiJobFileListSettings toolSettings);
         static partial void PostProcess(AzureBatchaiJobFileListSettings toolSettings);
-        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batchai.yml">official website</a>.</p></summary>
+        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchaiJobFileList(Configure<AzureBatchaiJobFileListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchaiJobFileListSettings());
@@ -267,7 +267,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchaiJobFileStreamSettings toolSettings);
         static partial void PostProcess(AzureBatchaiJobFileStreamSettings toolSettings);
-        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batchai.yml">official website</a>.</p></summary>
+        /// <summary><p>Batch AI.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchaiJobFileStream(Configure<AzureBatchaiJobFileStreamSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchaiJobFileStreamSettings());

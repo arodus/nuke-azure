@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureKeyvault.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultCreateSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultCreateSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultCreate(Configure<AzureKeyvaultCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCreateSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultDeleteSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultDeleteSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultDelete(Configure<AzureKeyvaultDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultDeleteSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultDeletePolicySettings toolSettings);
         static partial void PostProcess(AzureKeyvaultDeletePolicySettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultDeletePolicy(Configure<AzureKeyvaultDeletePolicySettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultDeletePolicySettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultListSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultListSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultList(Configure<AzureKeyvaultListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultListSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultListDeletedSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultListDeletedSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultListDeleted(Configure<AzureKeyvaultListDeletedSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultListDeletedSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultPurgeSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultPurgeSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultPurge(Configure<AzureKeyvaultPurgeSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultPurgeSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultRecoverSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultRecoverSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultRecover(Configure<AzureKeyvaultRecoverSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultRecoverSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultSetPolicySettings toolSettings);
         static partial void PostProcess(AzureKeyvaultSetPolicySettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultSetPolicy(Configure<AzureKeyvaultSetPolicySettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSetPolicySettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultShowSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultShowSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultShow(Configure<AzureKeyvaultShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultShowSettings());
@@ -135,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultUpdateSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultUpdateSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultUpdate(Configure<AzureKeyvaultUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultUpdateSettings());
@@ -146,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultCertificateCreateSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultCertificateCreateSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultCertificateCreate(Configure<AzureKeyvaultCertificateCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificateCreateSettings());
@@ -157,7 +157,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultCertificateDeleteSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultCertificateDeleteSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultCertificateDelete(Configure<AzureKeyvaultCertificateDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificateDeleteSettings());
@@ -168,7 +168,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultCertificateDownloadSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultCertificateDownloadSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultCertificateDownload(Configure<AzureKeyvaultCertificateDownloadSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificateDownloadSettings());
@@ -179,7 +179,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultCertificateGetDefaultPolicySettings toolSettings);
         static partial void PostProcess(AzureKeyvaultCertificateGetDefaultPolicySettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultCertificateGetDefaultPolicy(Configure<AzureKeyvaultCertificateGetDefaultPolicySettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificateGetDefaultPolicySettings());
@@ -190,7 +190,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultCertificateImportSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultCertificateImportSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultCertificateImport(Configure<AzureKeyvaultCertificateImportSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificateImportSettings());
@@ -201,7 +201,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultCertificateListSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultCertificateListSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultCertificateList(Configure<AzureKeyvaultCertificateListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificateListSettings());
@@ -212,7 +212,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultCertificateListDeletedSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultCertificateListDeletedSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultCertificateListDeleted(Configure<AzureKeyvaultCertificateListDeletedSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificateListDeletedSettings());
@@ -223,7 +223,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultCertificateListVersionsSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultCertificateListVersionsSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultCertificateListVersions(Configure<AzureKeyvaultCertificateListVersionsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificateListVersionsSettings());
@@ -234,7 +234,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultCertificatePurgeSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultCertificatePurgeSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultCertificatePurge(Configure<AzureKeyvaultCertificatePurgeSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificatePurgeSettings());
@@ -245,7 +245,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultCertificateRecoverSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultCertificateRecoverSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultCertificateRecover(Configure<AzureKeyvaultCertificateRecoverSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificateRecoverSettings());
@@ -256,7 +256,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultCertificateSetAttributesSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultCertificateSetAttributesSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultCertificateSetAttributes(Configure<AzureKeyvaultCertificateSetAttributesSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificateSetAttributesSettings());
@@ -267,7 +267,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultCertificateShowSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultCertificateShowSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultCertificateShow(Configure<AzureKeyvaultCertificateShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificateShowSettings());
@@ -278,7 +278,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultCertificateShowDeletedSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultCertificateShowDeletedSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultCertificateShowDeleted(Configure<AzureKeyvaultCertificateShowDeletedSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificateShowDeletedSettings());
@@ -289,7 +289,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultKeyBackupSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultKeyBackupSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultKeyBackup(Configure<AzureKeyvaultKeyBackupSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultKeyBackupSettings());
@@ -300,7 +300,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultKeyCreateSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultKeyCreateSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultKeyCreate(Configure<AzureKeyvaultKeyCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultKeyCreateSettings());
@@ -311,7 +311,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultKeyDeleteSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultKeyDeleteSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultKeyDelete(Configure<AzureKeyvaultKeyDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultKeyDeleteSettings());
@@ -322,7 +322,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultKeyImportSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultKeyImportSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultKeyImport(Configure<AzureKeyvaultKeyImportSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultKeyImportSettings());
@@ -333,7 +333,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultKeyListSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultKeyListSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultKeyList(Configure<AzureKeyvaultKeyListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultKeyListSettings());
@@ -344,7 +344,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultKeyListDeletedSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultKeyListDeletedSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultKeyListDeleted(Configure<AzureKeyvaultKeyListDeletedSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultKeyListDeletedSettings());
@@ -355,7 +355,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultKeyListVersionsSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultKeyListVersionsSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultKeyListVersions(Configure<AzureKeyvaultKeyListVersionsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultKeyListVersionsSettings());
@@ -366,7 +366,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultKeyPurgeSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultKeyPurgeSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultKeyPurge(Configure<AzureKeyvaultKeyPurgeSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultKeyPurgeSettings());
@@ -377,7 +377,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultKeyRecoverSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultKeyRecoverSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultKeyRecover(Configure<AzureKeyvaultKeyRecoverSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultKeyRecoverSettings());
@@ -388,7 +388,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultKeyRestoreSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultKeyRestoreSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultKeyRestore(Configure<AzureKeyvaultKeyRestoreSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultKeyRestoreSettings());
@@ -399,7 +399,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultKeySetAttributesSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultKeySetAttributesSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultKeySetAttributes(Configure<AzureKeyvaultKeySetAttributesSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultKeySetAttributesSettings());
@@ -410,7 +410,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultKeyShowSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultKeyShowSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultKeyShow(Configure<AzureKeyvaultKeyShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultKeyShowSettings());
@@ -421,7 +421,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultKeyShowDeletedSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultKeyShowDeletedSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultKeyShowDeleted(Configure<AzureKeyvaultKeyShowDeletedSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultKeyShowDeletedSettings());
@@ -432,7 +432,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultSecretBackupSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultSecretBackupSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultSecretBackup(Configure<AzureKeyvaultSecretBackupSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretBackupSettings());
@@ -443,7 +443,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultSecretDeleteSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultSecretDeleteSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultSecretDelete(Configure<AzureKeyvaultSecretDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretDeleteSettings());
@@ -454,7 +454,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultSecretDownloadSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultSecretDownloadSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultSecretDownload(Configure<AzureKeyvaultSecretDownloadSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretDownloadSettings());
@@ -465,7 +465,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultSecretListSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultSecretListSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultSecretList(Configure<AzureKeyvaultSecretListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretListSettings());
@@ -476,7 +476,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultSecretListDeletedSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultSecretListDeletedSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultSecretListDeleted(Configure<AzureKeyvaultSecretListDeletedSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretListDeletedSettings());
@@ -487,7 +487,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultSecretListVersionsSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultSecretListVersionsSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultSecretListVersions(Configure<AzureKeyvaultSecretListVersionsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretListVersionsSettings());
@@ -498,7 +498,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultSecretPurgeSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultSecretPurgeSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultSecretPurge(Configure<AzureKeyvaultSecretPurgeSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretPurgeSettings());
@@ -509,7 +509,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultSecretRecoverSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultSecretRecoverSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultSecretRecover(Configure<AzureKeyvaultSecretRecoverSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretRecoverSettings());
@@ -520,7 +520,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultSecretRestoreSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultSecretRestoreSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultSecretRestore(Configure<AzureKeyvaultSecretRestoreSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretRestoreSettings());
@@ -531,7 +531,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultSecretSetSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultSecretSetSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultSecretSet(Configure<AzureKeyvaultSecretSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretSetSettings());
@@ -542,7 +542,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultSecretSetAttributesSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultSecretSetAttributesSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultSecretSetAttributes(Configure<AzureKeyvaultSecretSetAttributesSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretSetAttributesSettings());
@@ -553,7 +553,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultSecretShowSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultSecretShowSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultSecretShow(Configure<AzureKeyvaultSecretShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretShowSettings());
@@ -564,7 +564,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultSecretShowDeletedSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultSecretShowDeletedSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultSecretShowDeleted(Configure<AzureKeyvaultSecretShowDeletedSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultSecretShowDeletedSettings());
@@ -575,7 +575,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultCertificateContactAddSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultCertificateContactAddSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultCertificateContactAdd(Configure<AzureKeyvaultCertificateContactAddSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificateContactAddSettings());
@@ -586,7 +586,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultCertificateContactDeleteSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultCertificateContactDeleteSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultCertificateContactDelete(Configure<AzureKeyvaultCertificateContactDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificateContactDeleteSettings());
@@ -597,7 +597,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultCertificateContactListSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultCertificateContactListSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultCertificateContactList(Configure<AzureKeyvaultCertificateContactListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificateContactListSettings());
@@ -608,7 +608,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultCertificateIssuerCreateSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultCertificateIssuerCreateSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultCertificateIssuerCreate(Configure<AzureKeyvaultCertificateIssuerCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificateIssuerCreateSettings());
@@ -619,7 +619,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultCertificateIssuerDeleteSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultCertificateIssuerDeleteSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultCertificateIssuerDelete(Configure<AzureKeyvaultCertificateIssuerDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificateIssuerDeleteSettings());
@@ -630,7 +630,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultCertificateIssuerListSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultCertificateIssuerListSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultCertificateIssuerList(Configure<AzureKeyvaultCertificateIssuerListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificateIssuerListSettings());
@@ -641,7 +641,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultCertificateIssuerShowSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultCertificateIssuerShowSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultCertificateIssuerShow(Configure<AzureKeyvaultCertificateIssuerShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificateIssuerShowSettings());
@@ -652,7 +652,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultCertificateIssuerUpdateSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultCertificateIssuerUpdateSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultCertificateIssuerUpdate(Configure<AzureKeyvaultCertificateIssuerUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificateIssuerUpdateSettings());
@@ -663,7 +663,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultCertificatePendingDeleteSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultCertificatePendingDeleteSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultCertificatePendingDelete(Configure<AzureKeyvaultCertificatePendingDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificatePendingDeleteSettings());
@@ -674,7 +674,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultCertificatePendingMergeSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultCertificatePendingMergeSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultCertificatePendingMerge(Configure<AzureKeyvaultCertificatePendingMergeSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificatePendingMergeSettings());
@@ -685,7 +685,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultCertificatePendingShowSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultCertificatePendingShowSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultCertificatePendingShow(Configure<AzureKeyvaultCertificatePendingShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificatePendingShowSettings());
@@ -696,7 +696,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultCertificateIssuerAdminAddSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultCertificateIssuerAdminAddSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultCertificateIssuerAdminAdd(Configure<AzureKeyvaultCertificateIssuerAdminAddSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificateIssuerAdminAddSettings());
@@ -707,7 +707,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultCertificateIssuerAdminDeleteSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultCertificateIssuerAdminDeleteSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultCertificateIssuerAdminDelete(Configure<AzureKeyvaultCertificateIssuerAdminDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificateIssuerAdminDeleteSettings());
@@ -718,7 +718,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureKeyvaultCertificateIssuerAdminListSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultCertificateIssuerAdminListSettings toolSettings);
-        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/keyvault.yml">official website</a>.</p></summary>
+        /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureKeyvaultCertificateIssuerAdminList(Configure<AzureKeyvaultCertificateIssuerAdminListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureKeyvaultCertificateIssuerAdminListSettings());

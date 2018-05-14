@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureRole.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureRoleSettings toolSettings);
         static partial void PostProcess(AzureRoleSettings toolSettings);
-        /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/role.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/role?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureRole(Configure<AzureRoleSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRoleSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureRoleAssignmentCreateSettings toolSettings);
         static partial void PostProcess(AzureRoleAssignmentCreateSettings toolSettings);
-        /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/role.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/role?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureRoleAssignmentCreate(Configure<AzureRoleAssignmentCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRoleAssignmentCreateSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureRoleAssignmentDeleteSettings toolSettings);
         static partial void PostProcess(AzureRoleAssignmentDeleteSettings toolSettings);
-        /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/role.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/role?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureRoleAssignmentDelete(Configure<AzureRoleAssignmentDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRoleAssignmentDeleteSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureRoleAssignmentListSettings toolSettings);
         static partial void PostProcess(AzureRoleAssignmentListSettings toolSettings);
-        /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/role.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/role?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureRoleAssignmentList(Configure<AzureRoleAssignmentListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRoleAssignmentListSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureRoleAssignmentListChangelogsSettings toolSettings);
         static partial void PostProcess(AzureRoleAssignmentListChangelogsSettings toolSettings);
-        /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/role.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/role?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureRoleAssignmentListChangelogs(Configure<AzureRoleAssignmentListChangelogsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRoleAssignmentListChangelogsSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureRoleDefinitionCreateSettings toolSettings);
         static partial void PostProcess(AzureRoleDefinitionCreateSettings toolSettings);
-        /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/role.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/role?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureRoleDefinitionCreate(Configure<AzureRoleDefinitionCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRoleDefinitionCreateSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureRoleDefinitionDeleteSettings toolSettings);
         static partial void PostProcess(AzureRoleDefinitionDeleteSettings toolSettings);
-        /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/role.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/role?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureRoleDefinitionDelete(Configure<AzureRoleDefinitionDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRoleDefinitionDeleteSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureRoleDefinitionListSettings toolSettings);
         static partial void PostProcess(AzureRoleDefinitionListSettings toolSettings);
-        /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/role.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/role?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureRoleDefinitionList(Configure<AzureRoleDefinitionListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRoleDefinitionListSettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureRoleDefinitionUpdateSettings toolSettings);
         static partial void PostProcess(AzureRoleDefinitionUpdateSettings toolSettings);
-        /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/role.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/role?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureRoleDefinitionUpdate(Configure<AzureRoleDefinitionUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRoleDefinitionUpdateSettings());

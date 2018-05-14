@@ -3,29 +3,29 @@
   "license": [
     "Copyright Sebastian Karasek, Matthias Koch 2018.",
     "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+    "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp/auth.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp/config.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp/deployment.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp/identity.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp/log.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp/traffic-routing.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp/config/appsettings.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp/config/backup.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp/config/connection-string.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp/config/container.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp/config/hostname.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp/config/ssl.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp/deployment/container.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp/deployment/slot.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp/deployment/source.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp/deployment/user.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/webapp.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/webapp/auth.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/webapp/config.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/webapp/deployment.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/webapp/identity.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/webapp/log.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/webapp/traffic-routing.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/webapp/config/appsettings.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/webapp/config/backup.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/webapp/config/connection-string.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/webapp/config/container.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/webapp/config/hostname.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/webapp/config/ssl.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/webapp/deployment/container.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/webapp/deployment/slot.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/webapp/deployment/source.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/webapp/deployment/user.yml"
   ],
   "name": "AzureWebapp",
-  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/webapp.yml",
+  "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest",
   "help": "Manage web apps.",
   "pathExecutable": "az",
   "tasks": [
@@ -107,6 +107,18 @@
             "type": "string",
             "format": "--deployment-source-url {value}",
             "help": "Git repository URL to link with manual integration."
+          },
+          {
+            "name": "MulticontainerConfigFile",
+            "type": "string",
+            "format": "--multicontainer-config-file {value}",
+            "help": "Linux only. Config file for multicontainer apps. (local or remote)."
+          },
+          {
+            "name": "MulticontainerConfigType",
+            "type": "WebappMulticontainerConfigType",
+            "format": "--multicontainer-config-type {value}",
+            "help": "Linux only."
           },
           {
             "name": "Runtime",
@@ -435,12 +447,6 @@
             "help": ""
           },
           {
-            "name": "RuntimeVersion",
-            "type": "string",
-            "format": "--runtime-version {value}",
-            "help": ""
-          },
-          {
             "name": "Slot",
             "type": "string",
             "format": "--slot {value}",
@@ -456,7 +462,7 @@
             "name": "TokenStore",
             "type": "bool",
             "format": "--token-store",
-            "help": ""
+            "help": "Use App Service Token Store."
           },
           {
             "name": "AadAllowedTokenAudiences",
@@ -468,13 +474,13 @@
             "name": "AadClientId",
             "type": "string",
             "format": "--aad-client-id {value}",
-            "help": ""
+            "help": "Application ID to integrate AAD organization account Sign-in into your web app."
           },
           {
             "name": "AadClientSecret",
             "type": "string",
             "format": "--aad-client-secret {value}",
-            "help": ""
+            "help": "AAD application secret."
           },
           {
             "name": "AadTokenIssuerUrl",
@@ -486,13 +492,13 @@
             "name": "FacebookAppId",
             "type": "string",
             "format": "--facebook-app-id {value}",
-            "help": ""
+            "help": "Application ID to integrate Facebook Sign-in into your web app."
           },
           {
             "name": "FacebookAppSecret",
             "type": "string",
             "format": "--facebook-app-secret {value}",
-            "help": ""
+            "help": "Facebook Application client secret."
           },
           {
             "name": "FacebookOauthScopes",
@@ -504,13 +510,13 @@
             "name": "GoogleClientId",
             "type": "string",
             "format": "--google-client-id {value}",
-            "help": ""
+            "help": "Application ID to integrate Google Sign-in into your web app."
           },
           {
             "name": "GoogleClientSecret",
             "type": "string",
             "format": "--google-client-secret {value}",
-            "help": ""
+            "help": "Google Application client secret."
           },
           {
             "name": "GoogleOauthScopes",
@@ -522,13 +528,13 @@
             "name": "MicrosoftAccountClientId",
             "type": "string",
             "format": "--microsoft-account-client-id {value}",
-            "help": ""
+            "help": "AAD V2 Application ID to integrate Microsoft account Sign-in into your web app."
           },
           {
             "name": "MicrosoftAccountClientSecret",
             "type": "string",
             "format": "--microsoft-account-client-secret {value}",
-            "help": ""
+            "help": "AAD V2 Application client secret."
           },
           {
             "name": "MicrosoftAccountOauthScopes",
@@ -540,13 +546,13 @@
             "name": "TwitterConsumerKey",
             "type": "string",
             "format": "--twitter-consumer-key {value}",
-            "help": ""
+            "help": "Application ID to integrate Twitter Sign-in into your web app."
           },
           {
             "name": "TwitterConsumerSecret",
             "type": "string",
             "format": "--twitter-consumer-secret {value}",
-            "help": ""
+            "help": "Twitter Application client secret."
           }
         ]
       }
@@ -581,6 +587,12 @@
             "help": "Enable or disable auto heal."
           },
           {
+            "name": "Http20Enabled",
+            "type": "bool",
+            "format": "--http20-enabled",
+            "help": "Configures a web site to allow clients to connect over http2.0."
+          },
+          {
             "name": "JavaContainer",
             "type": "string",
             "format": "--java-container {value}",
@@ -603,6 +615,12 @@
             "type": "string",
             "format": "--linux-fx-version {value}",
             "help": "The runtime stack used for your linux-based webapp, e.g., \"RUBY|2.3\", \"NODE|6.6\", \"PHP|5.6\", \"DOTNETCORE|1.1.0\". See &lt;a href=\"https://aka.ms/linux-stacks\"&gt;https://aka.ms/linux-stacks&lt;/a&gt; for more info."
+          },
+          {
+            "name": "MinTlsVersion",
+            "type": "string",
+            "format": "--min-tls-version {value}",
+            "help": "The minimum version of TLS required for SSL requests, e.g., '1.0', '1.1', '1.2'."
           },
           {
             "name": "NetFrameworkVersion",
@@ -1523,6 +1541,18 @@
             "help": "Enables platform storage (custom container only)."
           },
           {
+            "name": "MulticontainerConfigFile",
+            "type": "string",
+            "format": "--multicontainer-config-file {value}",
+            "help": "Config file for multicontainer apps."
+          },
+          {
+            "name": "MulticontainerConfigType",
+            "type": "WebappMulticontainerConfigType",
+            "format": "--multicontainer-config-type {value}",
+            "help": "Config type."
+          },
+          {
             "name": "Slot",
             "type": "string",
             "format": "--slot {value}",
@@ -1547,6 +1577,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ShowMulticontainerConfig",
+            "type": "string",
+            "format": "--show-multicontainer-config {value}",
+            "help": "Shows decoded config if a multicontainer config is set."
           },
           {
             "name": "Slot",
@@ -1656,7 +1692,7 @@
             "name": "WebappName",
             "type": "string",
             "format": "--webapp-name {value}",
-            "help": "Webapp name. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "Slot",
@@ -2184,7 +2220,7 @@
             "name": "Src",
             "type": "string",
             "format": "--src {value}",
-            "help": ""
+            "help": "A zip file path for deployment."
           },
           {
             "name": "Slot",
@@ -2346,6 +2382,13 @@
     }
   ],
   "enumerations": [
+    {
+      "name": "WebappMulticontainerConfigType",
+      "values": [
+        "compose",
+        "kube"
+      ]
+    },
     {
       "name": "WebappAuthUpdateAction",
       "values": [

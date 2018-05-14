@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureAdvisor.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdvisorSettings toolSettings);
         static partial void PostProcess(AzureAdvisorSettings toolSettings);
-        /// <summary><p>Manage Azure Advisor.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/advisor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Advisor.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/advisor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdvisor(Configure<AzureAdvisorSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdvisorSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdvisorConfigurationListSettings toolSettings);
         static partial void PostProcess(AzureAdvisorConfigurationListSettings toolSettings);
-        /// <summary><p>Manage Azure Advisor.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/advisor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Advisor.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/advisor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdvisorConfigurationList(Configure<AzureAdvisorConfigurationListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdvisorConfigurationListSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdvisorConfigurationShowSettings toolSettings);
         static partial void PostProcess(AzureAdvisorConfigurationShowSettings toolSettings);
-        /// <summary><p>Manage Azure Advisor.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/advisor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Advisor.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/advisor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdvisorConfigurationShow(Configure<AzureAdvisorConfigurationShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdvisorConfigurationShowSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdvisorConfigurationUpdateSettings toolSettings);
         static partial void PostProcess(AzureAdvisorConfigurationUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Advisor.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/advisor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Advisor.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/advisor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdvisorConfigurationUpdate(Configure<AzureAdvisorConfigurationUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdvisorConfigurationUpdateSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdvisorRecommendationDisableSettings toolSettings);
         static partial void PostProcess(AzureAdvisorRecommendationDisableSettings toolSettings);
-        /// <summary><p>Manage Azure Advisor.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/advisor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Advisor.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/advisor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdvisorRecommendationDisable(Configure<AzureAdvisorRecommendationDisableSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdvisorRecommendationDisableSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdvisorRecommendationEnableSettings toolSettings);
         static partial void PostProcess(AzureAdvisorRecommendationEnableSettings toolSettings);
-        /// <summary><p>Manage Azure Advisor.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/advisor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Advisor.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/advisor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdvisorRecommendationEnable(Configure<AzureAdvisorRecommendationEnableSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdvisorRecommendationEnableSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdvisorRecommendationListSettings toolSettings);
         static partial void PostProcess(AzureAdvisorRecommendationListSettings toolSettings);
-        /// <summary><p>Manage Azure Advisor.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/advisor.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Advisor.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/advisor?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdvisorRecommendationList(Configure<AzureAdvisorRecommendationListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdvisorRecommendationListSettings());

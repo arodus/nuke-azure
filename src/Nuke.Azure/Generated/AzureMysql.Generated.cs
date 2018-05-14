@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureMysql.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMysqlSettings toolSettings);
         static partial void PostProcess(AzureMysqlSettings toolSettings);
-        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/mysql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMysql(Configure<AzureMysqlSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMysqlSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMysqlDbCreateSettings toolSettings);
         static partial void PostProcess(AzureMysqlDbCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/mysql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMysqlDbCreate(Configure<AzureMysqlDbCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMysqlDbCreateSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMysqlDbDeleteSettings toolSettings);
         static partial void PostProcess(AzureMysqlDbDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/mysql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMysqlDbDelete(Configure<AzureMysqlDbDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMysqlDbDeleteSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMysqlDbListSettings toolSettings);
         static partial void PostProcess(AzureMysqlDbListSettings toolSettings);
-        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/mysql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMysqlDbList(Configure<AzureMysqlDbListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMysqlDbListSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMysqlDbShowSettings toolSettings);
         static partial void PostProcess(AzureMysqlDbShowSettings toolSettings);
-        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/mysql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMysqlDbShow(Configure<AzureMysqlDbShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMysqlDbShowSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMysqlServerLogsDownloadSettings toolSettings);
         static partial void PostProcess(AzureMysqlServerLogsDownloadSettings toolSettings);
-        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/mysql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMysqlServerLogsDownload(Configure<AzureMysqlServerLogsDownloadSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMysqlServerLogsDownloadSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMysqlServerLogsListSettings toolSettings);
         static partial void PostProcess(AzureMysqlServerLogsListSettings toolSettings);
-        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/mysql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMysqlServerLogsList(Configure<AzureMysqlServerLogsListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMysqlServerLogsListSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMysqlServerCreateSettings toolSettings);
         static partial void PostProcess(AzureMysqlServerCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/mysql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMysqlServerCreate(Configure<AzureMysqlServerCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMysqlServerCreateSettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMysqlServerDeleteSettings toolSettings);
         static partial void PostProcess(AzureMysqlServerDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/mysql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMysqlServerDelete(Configure<AzureMysqlServerDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMysqlServerDeleteSettings());
@@ -135,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMysqlServerGeorestoreSettings toolSettings);
         static partial void PostProcess(AzureMysqlServerGeorestoreSettings toolSettings);
-        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/mysql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMysqlServerGeorestore(Configure<AzureMysqlServerGeorestoreSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMysqlServerGeorestoreSettings());
@@ -146,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMysqlServerListSettings toolSettings);
         static partial void PostProcess(AzureMysqlServerListSettings toolSettings);
-        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/mysql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMysqlServerList(Configure<AzureMysqlServerListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMysqlServerListSettings());
@@ -157,7 +157,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMysqlServerRestoreSettings toolSettings);
         static partial void PostProcess(AzureMysqlServerRestoreSettings toolSettings);
-        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/mysql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMysqlServerRestore(Configure<AzureMysqlServerRestoreSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMysqlServerRestoreSettings());
@@ -168,7 +168,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMysqlServerShowSettings toolSettings);
         static partial void PostProcess(AzureMysqlServerShowSettings toolSettings);
-        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/mysql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMysqlServerShow(Configure<AzureMysqlServerShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMysqlServerShowSettings());
@@ -179,7 +179,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMysqlServerUpdateSettings toolSettings);
         static partial void PostProcess(AzureMysqlServerUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/mysql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMysqlServerUpdate(Configure<AzureMysqlServerUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMysqlServerUpdateSettings());
@@ -190,7 +190,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMysqlServerWaitSettings toolSettings);
         static partial void PostProcess(AzureMysqlServerWaitSettings toolSettings);
-        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/mysql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMysqlServerWait(Configure<AzureMysqlServerWaitSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMysqlServerWaitSettings());
@@ -201,7 +201,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMysqlServerConfigurationListSettings toolSettings);
         static partial void PostProcess(AzureMysqlServerConfigurationListSettings toolSettings);
-        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/mysql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMysqlServerConfigurationList(Configure<AzureMysqlServerConfigurationListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMysqlServerConfigurationListSettings());
@@ -212,7 +212,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMysqlServerConfigurationSetSettings toolSettings);
         static partial void PostProcess(AzureMysqlServerConfigurationSetSettings toolSettings);
-        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/mysql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMysqlServerConfigurationSet(Configure<AzureMysqlServerConfigurationSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMysqlServerConfigurationSetSettings());
@@ -223,7 +223,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMysqlServerConfigurationShowSettings toolSettings);
         static partial void PostProcess(AzureMysqlServerConfigurationShowSettings toolSettings);
-        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/mysql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMysqlServerConfigurationShow(Configure<AzureMysqlServerConfigurationShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMysqlServerConfigurationShowSettings());
@@ -234,7 +234,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMysqlServerFirewallRuleCreateSettings toolSettings);
         static partial void PostProcess(AzureMysqlServerFirewallRuleCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/mysql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMysqlServerFirewallRuleCreate(Configure<AzureMysqlServerFirewallRuleCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMysqlServerFirewallRuleCreateSettings());
@@ -245,7 +245,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMysqlServerFirewallRuleDeleteSettings toolSettings);
         static partial void PostProcess(AzureMysqlServerFirewallRuleDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/mysql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMysqlServerFirewallRuleDelete(Configure<AzureMysqlServerFirewallRuleDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMysqlServerFirewallRuleDeleteSettings());
@@ -256,7 +256,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMysqlServerFirewallRuleListSettings toolSettings);
         static partial void PostProcess(AzureMysqlServerFirewallRuleListSettings toolSettings);
-        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/mysql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMysqlServerFirewallRuleList(Configure<AzureMysqlServerFirewallRuleListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMysqlServerFirewallRuleListSettings());
@@ -267,7 +267,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMysqlServerFirewallRuleShowSettings toolSettings);
         static partial void PostProcess(AzureMysqlServerFirewallRuleShowSettings toolSettings);
-        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/mysql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMysqlServerFirewallRuleShow(Configure<AzureMysqlServerFirewallRuleShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMysqlServerFirewallRuleShowSettings());
@@ -278,7 +278,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureMysqlServerFirewallRuleUpdateSettings toolSettings);
         static partial void PostProcess(AzureMysqlServerFirewallRuleUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/mysql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureMysqlServerFirewallRuleUpdate(Configure<AzureMysqlServerFirewallRuleUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMysqlServerFirewallRuleUpdateSettings());
@@ -602,7 +602,7 @@ namespace Nuke.Azure
         public virtual string Location { get; internal set; }
         /// <summary><p>Enable ssl enforcement or not when connect to server.</p></summary>
         public virtual MysqlServerSslEnforcement SslEnforcement { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>The max storage size of the server. Unit is megabytes.</p></summary>
         public virtual string StorageSize { get; internal set; }
         /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
@@ -2585,7 +2585,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region StorageSize
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.StorageSize"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.StorageSize"/>.</em></p><p>The max storage size of the server. Unit is megabytes.</p></summary>
         [Pure]
         public static AzureMysqlServerCreateSettings SetStorageSize(this AzureMysqlServerCreateSettings toolSettings, string storageSize)
         {
@@ -2593,7 +2593,7 @@ namespace Nuke.Azure
             toolSettings.StorageSize = storageSize;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.StorageSize"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.StorageSize"/>.</em></p><p>The max storage size of the server. Unit is megabytes.</p></summary>
         [Pure]
         public static AzureMysqlServerCreateSettings ResetStorageSize(this AzureMysqlServerCreateSettings toolSettings)
         {

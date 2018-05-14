@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureVm.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmCaptureSettings toolSettings);
         static partial void PostProcess(AzureVmCaptureSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmCapture(Configure<AzureVmCaptureSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmCaptureSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmConvertSettings toolSettings);
         static partial void PostProcess(AzureVmConvertSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmConvert(Configure<AzureVmConvertSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmConvertSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmCreateSettings toolSettings);
         static partial void PostProcess(AzureVmCreateSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmCreate(Configure<AzureVmCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmCreateSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmDeallocateSettings toolSettings);
         static partial void PostProcess(AzureVmDeallocateSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmDeallocate(Configure<AzureVmDeallocateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmDeallocateSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmDeleteSettings toolSettings);
         static partial void PostProcess(AzureVmDeleteSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmDelete(Configure<AzureVmDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmDeleteSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmGeneralizeSettings toolSettings);
         static partial void PostProcess(AzureVmGeneralizeSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmGeneralize(Configure<AzureVmGeneralizeSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmGeneralizeSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmGetInstanceViewSettings toolSettings);
         static partial void PostProcess(AzureVmGetInstanceViewSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmGetInstanceView(Configure<AzureVmGetInstanceViewSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmGetInstanceViewSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmListSettings toolSettings);
         static partial void PostProcess(AzureVmListSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmList(Configure<AzureVmListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmListSettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmListIpAddressesSettings toolSettings);
         static partial void PostProcess(AzureVmListIpAddressesSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmListIpAddresses(Configure<AzureVmListIpAddressesSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmListIpAddressesSettings());
@@ -135,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmListSizesSettings toolSettings);
         static partial void PostProcess(AzureVmListSizesSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmListSizes(Configure<AzureVmListSizesSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmListSizesSettings());
@@ -146,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmListSkusSettings toolSettings);
         static partial void PostProcess(AzureVmListSkusSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmListSkus(Configure<AzureVmListSkusSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmListSkusSettings());
@@ -157,7 +157,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmListUsageSettings toolSettings);
         static partial void PostProcess(AzureVmListUsageSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmListUsage(Configure<AzureVmListUsageSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmListUsageSettings());
@@ -168,7 +168,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmListVmResizeOptionsSettings toolSettings);
         static partial void PostProcess(AzureVmListVmResizeOptionsSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmListVmResizeOptions(Configure<AzureVmListVmResizeOptionsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmListVmResizeOptionsSettings());
@@ -179,7 +179,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmOpenPortSettings toolSettings);
         static partial void PostProcess(AzureVmOpenPortSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmOpenPort(Configure<AzureVmOpenPortSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmOpenPortSettings());
@@ -190,7 +190,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmPerformMaintenanceSettings toolSettings);
         static partial void PostProcess(AzureVmPerformMaintenanceSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmPerformMaintenance(Configure<AzureVmPerformMaintenanceSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmPerformMaintenanceSettings());
@@ -201,7 +201,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmRedeploySettings toolSettings);
         static partial void PostProcess(AzureVmRedeploySettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmRedeploy(Configure<AzureVmRedeploySettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmRedeploySettings());
@@ -212,7 +212,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmResizeSettings toolSettings);
         static partial void PostProcess(AzureVmResizeSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmResize(Configure<AzureVmResizeSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmResizeSettings());
@@ -223,7 +223,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmRestartSettings toolSettings);
         static partial void PostProcess(AzureVmRestartSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmRestart(Configure<AzureVmRestartSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmRestartSettings());
@@ -234,7 +234,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmShowSettings toolSettings);
         static partial void PostProcess(AzureVmShowSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmShow(Configure<AzureVmShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmShowSettings());
@@ -245,7 +245,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmStartSettings toolSettings);
         static partial void PostProcess(AzureVmStartSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmStart(Configure<AzureVmStartSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmStartSettings());
@@ -256,7 +256,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmStopSettings toolSettings);
         static partial void PostProcess(AzureVmStopSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmStop(Configure<AzureVmStopSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmStopSettings());
@@ -267,7 +267,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmUpdateSettings toolSettings);
         static partial void PostProcess(AzureVmUpdateSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmUpdate(Configure<AzureVmUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmUpdateSettings());
@@ -278,7 +278,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmWaitSettings toolSettings);
         static partial void PostProcess(AzureVmWaitSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmWait(Configure<AzureVmWaitSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmWaitSettings());
@@ -289,7 +289,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmAvailabilitySetConvertSettings toolSettings);
         static partial void PostProcess(AzureVmAvailabilitySetConvertSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmAvailabilitySetConvert(Configure<AzureVmAvailabilitySetConvertSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmAvailabilitySetConvertSettings());
@@ -300,7 +300,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmAvailabilitySetCreateSettings toolSettings);
         static partial void PostProcess(AzureVmAvailabilitySetCreateSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmAvailabilitySetCreate(Configure<AzureVmAvailabilitySetCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmAvailabilitySetCreateSettings());
@@ -311,7 +311,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmAvailabilitySetDeleteSettings toolSettings);
         static partial void PostProcess(AzureVmAvailabilitySetDeleteSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmAvailabilitySetDelete(Configure<AzureVmAvailabilitySetDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmAvailabilitySetDeleteSettings());
@@ -322,7 +322,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmAvailabilitySetListSettings toolSettings);
         static partial void PostProcess(AzureVmAvailabilitySetListSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmAvailabilitySetList(Configure<AzureVmAvailabilitySetListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmAvailabilitySetListSettings());
@@ -333,7 +333,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmAvailabilitySetListSizesSettings toolSettings);
         static partial void PostProcess(AzureVmAvailabilitySetListSizesSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmAvailabilitySetListSizes(Configure<AzureVmAvailabilitySetListSizesSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmAvailabilitySetListSizesSettings());
@@ -344,7 +344,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmAvailabilitySetShowSettings toolSettings);
         static partial void PostProcess(AzureVmAvailabilitySetShowSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmAvailabilitySetShow(Configure<AzureVmAvailabilitySetShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmAvailabilitySetShowSettings());
@@ -355,7 +355,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmAvailabilitySetUpdateSettings toolSettings);
         static partial void PostProcess(AzureVmAvailabilitySetUpdateSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmAvailabilitySetUpdate(Configure<AzureVmAvailabilitySetUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmAvailabilitySetUpdateSettings());
@@ -366,7 +366,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmBootDiagnosticsDisableSettings toolSettings);
         static partial void PostProcess(AzureVmBootDiagnosticsDisableSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmBootDiagnosticsDisable(Configure<AzureVmBootDiagnosticsDisableSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmBootDiagnosticsDisableSettings());
@@ -377,7 +377,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmBootDiagnosticsEnableSettings toolSettings);
         static partial void PostProcess(AzureVmBootDiagnosticsEnableSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmBootDiagnosticsEnable(Configure<AzureVmBootDiagnosticsEnableSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmBootDiagnosticsEnableSettings());
@@ -388,7 +388,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmBootDiagnosticsGetBootLogSettings toolSettings);
         static partial void PostProcess(AzureVmBootDiagnosticsGetBootLogSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmBootDiagnosticsGetBootLog(Configure<AzureVmBootDiagnosticsGetBootLogSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmBootDiagnosticsGetBootLogSettings());
@@ -399,7 +399,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmDiagnosticsGetDefaultConfigSettings toolSettings);
         static partial void PostProcess(AzureVmDiagnosticsGetDefaultConfigSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmDiagnosticsGetDefaultConfig(Configure<AzureVmDiagnosticsGetDefaultConfigSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmDiagnosticsGetDefaultConfigSettings());
@@ -410,7 +410,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmDiagnosticsSetSettings toolSettings);
         static partial void PostProcess(AzureVmDiagnosticsSetSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmDiagnosticsSet(Configure<AzureVmDiagnosticsSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmDiagnosticsSetSettings());
@@ -421,7 +421,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmDiskAttachSettings toolSettings);
         static partial void PostProcess(AzureVmDiskAttachSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmDiskAttach(Configure<AzureVmDiskAttachSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmDiskAttachSettings());
@@ -432,7 +432,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmDiskDetachSettings toolSettings);
         static partial void PostProcess(AzureVmDiskDetachSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmDiskDetach(Configure<AzureVmDiskDetachSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmDiskDetachSettings());
@@ -443,7 +443,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmEncryptionDisableSettings toolSettings);
         static partial void PostProcess(AzureVmEncryptionDisableSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmEncryptionDisable(Configure<AzureVmEncryptionDisableSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmEncryptionDisableSettings());
@@ -454,7 +454,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmEncryptionEnableSettings toolSettings);
         static partial void PostProcess(AzureVmEncryptionEnableSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmEncryptionEnable(Configure<AzureVmEncryptionEnableSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmEncryptionEnableSettings());
@@ -465,7 +465,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmEncryptionShowSettings toolSettings);
         static partial void PostProcess(AzureVmEncryptionShowSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmEncryptionShow(Configure<AzureVmEncryptionShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmEncryptionShowSettings());
@@ -476,7 +476,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmExtensionDeleteSettings toolSettings);
         static partial void PostProcess(AzureVmExtensionDeleteSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmExtensionDelete(Configure<AzureVmExtensionDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmExtensionDeleteSettings());
@@ -487,7 +487,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmExtensionListSettings toolSettings);
         static partial void PostProcess(AzureVmExtensionListSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmExtensionList(Configure<AzureVmExtensionListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmExtensionListSettings());
@@ -498,7 +498,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmExtensionSetSettings toolSettings);
         static partial void PostProcess(AzureVmExtensionSetSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmExtensionSet(Configure<AzureVmExtensionSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmExtensionSetSettings());
@@ -509,7 +509,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmExtensionShowSettings toolSettings);
         static partial void PostProcess(AzureVmExtensionShowSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmExtensionShow(Configure<AzureVmExtensionShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmExtensionShowSettings());
@@ -520,7 +520,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmIdentityAssignSettings toolSettings);
         static partial void PostProcess(AzureVmIdentityAssignSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmIdentityAssign(Configure<AzureVmIdentityAssignSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmIdentityAssignSettings());
@@ -531,7 +531,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmIdentityRemoveSettings toolSettings);
         static partial void PostProcess(AzureVmIdentityRemoveSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmIdentityRemove(Configure<AzureVmIdentityRemoveSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmIdentityRemoveSettings());
@@ -542,7 +542,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmIdentityShowSettings toolSettings);
         static partial void PostProcess(AzureVmIdentityShowSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmIdentityShow(Configure<AzureVmIdentityShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmIdentityShowSettings());
@@ -553,7 +553,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmImageAcceptTermsSettings toolSettings);
         static partial void PostProcess(AzureVmImageAcceptTermsSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmImageAcceptTerms(Configure<AzureVmImageAcceptTermsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmImageAcceptTermsSettings());
@@ -564,7 +564,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmImageListSettings toolSettings);
         static partial void PostProcess(AzureVmImageListSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmImageList(Configure<AzureVmImageListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmImageListSettings());
@@ -575,7 +575,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmImageListOffersSettings toolSettings);
         static partial void PostProcess(AzureVmImageListOffersSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmImageListOffers(Configure<AzureVmImageListOffersSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmImageListOffersSettings());
@@ -586,7 +586,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmImageListPublishersSettings toolSettings);
         static partial void PostProcess(AzureVmImageListPublishersSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmImageListPublishers(Configure<AzureVmImageListPublishersSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmImageListPublishersSettings());
@@ -597,7 +597,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmImageListSkusSettings toolSettings);
         static partial void PostProcess(AzureVmImageListSkusSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmImageListSkus(Configure<AzureVmImageListSkusSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmImageListSkusSettings());
@@ -608,7 +608,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmImageShowSettings toolSettings);
         static partial void PostProcess(AzureVmImageShowSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmImageShow(Configure<AzureVmImageShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmImageShowSettings());
@@ -619,7 +619,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmNicAddSettings toolSettings);
         static partial void PostProcess(AzureVmNicAddSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmNicAdd(Configure<AzureVmNicAddSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmNicAddSettings());
@@ -630,7 +630,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmNicListSettings toolSettings);
         static partial void PostProcess(AzureVmNicListSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmNicList(Configure<AzureVmNicListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmNicListSettings());
@@ -641,7 +641,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmNicRemoveSettings toolSettings);
         static partial void PostProcess(AzureVmNicRemoveSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmNicRemove(Configure<AzureVmNicRemoveSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmNicRemoveSettings());
@@ -652,7 +652,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmNicSetSettings toolSettings);
         static partial void PostProcess(AzureVmNicSetSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmNicSet(Configure<AzureVmNicSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmNicSetSettings());
@@ -663,7 +663,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmNicShowSettings toolSettings);
         static partial void PostProcess(AzureVmNicShowSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmNicShow(Configure<AzureVmNicShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmNicShowSettings());
@@ -674,7 +674,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmRunCommandInvokeSettings toolSettings);
         static partial void PostProcess(AzureVmRunCommandInvokeSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmRunCommandInvoke(Configure<AzureVmRunCommandInvokeSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmRunCommandInvokeSettings());
@@ -685,7 +685,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmRunCommandListSettings toolSettings);
         static partial void PostProcess(AzureVmRunCommandListSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmRunCommandList(Configure<AzureVmRunCommandListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmRunCommandListSettings());
@@ -696,7 +696,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmRunCommandShowSettings toolSettings);
         static partial void PostProcess(AzureVmRunCommandShowSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmRunCommandShow(Configure<AzureVmRunCommandShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmRunCommandShowSettings());
@@ -707,7 +707,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmSecretAddSettings toolSettings);
         static partial void PostProcess(AzureVmSecretAddSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmSecretAdd(Configure<AzureVmSecretAddSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmSecretAddSettings());
@@ -718,7 +718,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmSecretFormatSettings toolSettings);
         static partial void PostProcess(AzureVmSecretFormatSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmSecretFormat(Configure<AzureVmSecretFormatSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmSecretFormatSettings());
@@ -729,7 +729,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmSecretListSettings toolSettings);
         static partial void PostProcess(AzureVmSecretListSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmSecretList(Configure<AzureVmSecretListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmSecretListSettings());
@@ -740,7 +740,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmSecretRemoveSettings toolSettings);
         static partial void PostProcess(AzureVmSecretRemoveSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmSecretRemove(Configure<AzureVmSecretRemoveSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmSecretRemoveSettings());
@@ -751,7 +751,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmUnmanagedDiskAttachSettings toolSettings);
         static partial void PostProcess(AzureVmUnmanagedDiskAttachSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmUnmanagedDiskAttach(Configure<AzureVmUnmanagedDiskAttachSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmUnmanagedDiskAttachSettings());
@@ -762,7 +762,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmUnmanagedDiskDetachSettings toolSettings);
         static partial void PostProcess(AzureVmUnmanagedDiskDetachSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmUnmanagedDiskDetach(Configure<AzureVmUnmanagedDiskDetachSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmUnmanagedDiskDetachSettings());
@@ -773,7 +773,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmUnmanagedDiskListSettings toolSettings);
         static partial void PostProcess(AzureVmUnmanagedDiskListSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmUnmanagedDiskList(Configure<AzureVmUnmanagedDiskListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmUnmanagedDiskListSettings());
@@ -784,7 +784,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmUserDeleteSettings toolSettings);
         static partial void PostProcess(AzureVmUserDeleteSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmUserDelete(Configure<AzureVmUserDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmUserDeleteSettings());
@@ -795,7 +795,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmUserResetSshSettings toolSettings);
         static partial void PostProcess(AzureVmUserResetSshSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmUserResetSsh(Configure<AzureVmUserResetSshSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmUserResetSshSettings());
@@ -806,7 +806,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmUserUpdateSettings toolSettings);
         static partial void PostProcess(AzureVmUserUpdateSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmUserUpdate(Configure<AzureVmUserUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmUserUpdateSettings());
@@ -817,7 +817,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmExtensionImageListSettings toolSettings);
         static partial void PostProcess(AzureVmExtensionImageListSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmExtensionImageList(Configure<AzureVmExtensionImageListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmExtensionImageListSettings());
@@ -828,7 +828,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmExtensionImageListNamesSettings toolSettings);
         static partial void PostProcess(AzureVmExtensionImageListNamesSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmExtensionImageListNames(Configure<AzureVmExtensionImageListNamesSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmExtensionImageListNamesSettings());
@@ -839,7 +839,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmExtensionImageListVersionsSettings toolSettings);
         static partial void PostProcess(AzureVmExtensionImageListVersionsSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmExtensionImageListVersions(Configure<AzureVmExtensionImageListVersionsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmExtensionImageListVersionsSettings());
@@ -850,7 +850,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureVmExtensionImageShowSettings toolSettings);
         static partial void PostProcess(AzureVmExtensionImageShowSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml">official website</a>.</p></summary>
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureVmExtensionImageShow(Configure<AzureVmExtensionImageShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmExtensionImageShowSettings());
@@ -1057,6 +1057,9 @@ namespace Nuke.Azure
         public virtual VmCreateStorageSku StorageSku { get; internal set; }
         /// <summary><p>Do not use managed disk to persist VM.</p></summary>
         public virtual string UseUnmanagedDisk { get; internal set; }
+        /// <summary><p>Enable/disable disk write accelerator. Use singular value 'true/false' to apply across, or specify individual disks, e.g.'os=true 1=true 2=true' for os disk and data disks with lun of 1 &amp; 2.</p></summary>
+        public virtual IReadOnlyList<string> WriteAccelerator => WriteAcceleratorInternal.AsReadOnly();
+        internal List<string> WriteAcceleratorInternal { get; set; } = new List<string>();
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1122,6 +1125,7 @@ namespace Nuke.Azure
               .Add("--storage-container-name {value}", StorageContainerName)
               .Add("--storage-sku {value}", StorageSku)
               .Add("--use-unmanaged-disk {value}", UseUnmanagedDisk)
+              .Add("--write-accelerator {value}", WriteAccelerator, separator: ' ')
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1864,10 +1868,16 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Use singular value to apply across, or specify individual disks, e.g. 'os=ReadWrite 0=None 1=ReadOnly' should enable update os disk and 2 data disks.</p></summary>
+        public virtual IReadOnlyList<string> DiskCaching => DiskCachingInternal.AsReadOnly();
+        internal List<string> DiskCachingInternal { get; set; } = new List<string>();
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual string NoWait { get; internal set; }
         /// <summary><p>Managed OS disk ID or name to swap to. Feature registration for 'Microsoft.Compute/AllowManagedDisksReplaceOSDisk' is needed.</p></summary>
         public virtual string OsDisk { get; internal set; }
+        /// <summary><p>Enable/disable disk write accelerator. Use singular value 'true/false' to apply across, or specify individual disks, e.g.'os=true 1=true 2=true' for os disk and data disks with lun of 1 &amp; 2.</p></summary>
+        public virtual IReadOnlyList<string> WriteAccelerator => WriteAcceleratorInternal.AsReadOnly();
+        internal List<string> WriteAcceleratorInternal { get; set; } = new List<string>();
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
         /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
@@ -1890,8 +1900,10 @@ namespace Nuke.Azure
               .Add("vm update")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--disk-caching {value}", DiskCaching, separator: ' ')
               .Add("--no-wait {value}", NoWait)
               .Add("--os-disk {value}", OsDisk)
+              .Add("--write-accelerator {value}", WriteAccelerator, separator: ' ')
               .Add("--add {value}", Add)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
@@ -2382,7 +2394,7 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureVm executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p></p></summary>
+        /// <summary><p>For Windows VMs.</p></summary>
         public virtual string IsWindowsOs { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
@@ -2475,6 +2487,8 @@ namespace Nuke.Azure
         public virtual string VmName { get; internal set; }
         /// <summary><p>Disk caching policy.</p></summary>
         public virtual VmCreateOsDiskCaching Caching { get; internal set; }
+        /// <summary><p>Enable write accelerator.</p></summary>
+        public virtual string EnableWriteAccelerator { get; internal set; }
         /// <summary><p>0-based logical unit number (LUN). Max value depends on the Virtual Machine size.</p></summary>
         public virtual string Lun { get; internal set; }
         /// <summary><p>Create a new disk.</p></summary>
@@ -2501,6 +2515,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--vm-name {value}", VmName)
               .Add("--caching {value}", Caching)
+              .Add("--enable-write-accelerator {value}", EnableWriteAccelerator)
               .Add("--lun {value}", Lun)
               .Add("--new {value}", New)
               .Add("--size-gb {value}", SizeGb)
@@ -2608,8 +2623,6 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureVm executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>Client ID of an AAD app with permissions to write secrets to the key vault.</p></summary>
-        public virtual string AadClientId { get; internal set; }
         /// <summary><p>The key vault where the generated encryption key will be placed.</p></summary>
         public virtual string DiskEncryptionKeyvault { get; internal set; }
         /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
@@ -2618,6 +2631,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Thumbprint of the AAD app certificate with permissions to write secrets to the key vault.</p></summary>
         public virtual string AadClientCertThumbprint { get; internal set; }
+        /// <summary><p>Client ID of an AAD app with permissions to write secrets to the key vault.</p></summary>
+        public virtual string AadClientId { get; internal set; }
         /// <summary><p>Client secret of the AAD app with permissions to write secrets to the key vault.</p></summary>
         public virtual string AadClientSecret { get; internal set; }
         /// <summary><p>Encrypts-formats data disks instead of encrypting them. Encrypt-formatting is a lot faster than in-place encryption but wipes out the partition getting encrypt-formatted.</p></summary>
@@ -2644,11 +2659,11 @@ namespace Nuke.Azure
         {
             arguments
               .Add("vm encryption enable")
-              .Add("--aad-client-id {value}", AadClientId)
               .Add("--disk-encryption-keyvault {value}", DiskEncryptionKeyvault)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--aad-client-cert-thumbprint {value}", AadClientCertThumbprint)
+              .Add("--aad-client-id {value}", AadClientId)
               .Add("--aad-client-secret {value}", AadClientSecret)
               .Add("--encrypt-format-all {value}", EncryptFormatAll)
               .Add("--key-encryption-algorithm {value}", KeyEncryptionAlgorithm)
@@ -2711,7 +2726,7 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureVm executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>The name of the virtual machine extension.</p></summary>
+        /// <summary><p>Extension name.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
@@ -2790,7 +2805,7 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureVm executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p></p></summary>
+        /// <summary><p>Extension name.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>The name of the extension publisher.</p></summary>
         public virtual string Publisher { get; internal set; }
@@ -2846,7 +2861,7 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureVm executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>The name of the virtual machine extension.</p></summary>
+        /// <summary><p>Extension name.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
@@ -2896,8 +2911,6 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>The identities to assign.</p></summary>
         public virtual string Identities { get; internal set; }
-        /// <summary><p>The port to fetch AAD token. Default: 50342.</p></summary>
-        public virtual string Port { get; internal set; }
         /// <summary><p>Role name or id the system assigned identity will have.</p></summary>
         public virtual string Role { get; internal set; }
         /// <summary><p>Scope that the system assigned identity can access.</p></summary>
@@ -2919,7 +2932,6 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--identities {value}", Identities)
-              .Add("--port {value}", Port)
               .Add("--role {value}", Role)
               .Add("--scope {value}", Scope)
               .Add("--debug {value}", Debug)
@@ -4142,9 +4154,9 @@ namespace Nuke.Azure
         public virtual string Publisher { get; internal set; }
         /// <summary><p>The filter to apply on the operation.</p></summary>
         public virtual string Filter { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>The $orderby odata query option.</p></summary>
         public virtual string Orderby { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>The $top odata query option.</p></summary>
         public virtual string Top { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
@@ -5504,6 +5516,66 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.UseUnmanagedDisk = null;
+            return toolSettings;
+        }
+        #endregion
+        #region WriteAccelerator
+        /// <summary><p><em>Sets <see cref="AzureVmCreateSettings.WriteAccelerator"/> to a new list.</em></p><p>Enable/disable disk write accelerator. Use singular value 'true/false' to apply across, or specify individual disks, e.g.'os=true 1=true 2=true' for os disk and data disks with lun of 1 &amp; 2.</p></summary>
+        [Pure]
+        public static AzureVmCreateSettings SetWriteAccelerator(this AzureVmCreateSettings toolSettings, params string[] writeAccelerator)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WriteAcceleratorInternal = writeAccelerator.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureVmCreateSettings.WriteAccelerator"/> to a new list.</em></p><p>Enable/disable disk write accelerator. Use singular value 'true/false' to apply across, or specify individual disks, e.g.'os=true 1=true 2=true' for os disk and data disks with lun of 1 &amp; 2.</p></summary>
+        [Pure]
+        public static AzureVmCreateSettings SetWriteAccelerator(this AzureVmCreateSettings toolSettings, IEnumerable<string> writeAccelerator)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WriteAcceleratorInternal = writeAccelerator.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmCreateSettings.WriteAccelerator"/>.</em></p><p>Enable/disable disk write accelerator. Use singular value 'true/false' to apply across, or specify individual disks, e.g.'os=true 1=true 2=true' for os disk and data disks with lun of 1 &amp; 2.</p></summary>
+        [Pure]
+        public static AzureVmCreateSettings AddWriteAccelerator(this AzureVmCreateSettings toolSettings, params string[] writeAccelerator)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WriteAcceleratorInternal.AddRange(writeAccelerator);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmCreateSettings.WriteAccelerator"/>.</em></p><p>Enable/disable disk write accelerator. Use singular value 'true/false' to apply across, or specify individual disks, e.g.'os=true 1=true 2=true' for os disk and data disks with lun of 1 &amp; 2.</p></summary>
+        [Pure]
+        public static AzureVmCreateSettings AddWriteAccelerator(this AzureVmCreateSettings toolSettings, IEnumerable<string> writeAccelerator)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WriteAcceleratorInternal.AddRange(writeAccelerator);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureVmCreateSettings.WriteAccelerator"/>.</em></p><p>Enable/disable disk write accelerator. Use singular value 'true/false' to apply across, or specify individual disks, e.g.'os=true 1=true 2=true' for os disk and data disks with lun of 1 &amp; 2.</p></summary>
+        [Pure]
+        public static AzureVmCreateSettings ClearWriteAccelerator(this AzureVmCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WriteAcceleratorInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmCreateSettings.WriteAccelerator"/>.</em></p><p>Enable/disable disk write accelerator. Use singular value 'true/false' to apply across, or specify individual disks, e.g.'os=true 1=true 2=true' for os disk and data disks with lun of 1 &amp; 2.</p></summary>
+        [Pure]
+        public static AzureVmCreateSettings RemoveWriteAccelerator(this AzureVmCreateSettings toolSettings, params string[] writeAccelerator)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(writeAccelerator);
+            toolSettings.WriteAcceleratorInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmCreateSettings.WriteAccelerator"/>.</em></p><p>Enable/disable disk write accelerator. Use singular value 'true/false' to apply across, or specify individual disks, e.g.'os=true 1=true 2=true' for os disk and data disks with lun of 1 &amp; 2.</p></summary>
+        [Pure]
+        public static AzureVmCreateSettings RemoveWriteAccelerator(this AzureVmCreateSettings toolSettings, IEnumerable<string> writeAccelerator)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(writeAccelerator);
+            toolSettings.WriteAcceleratorInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
         #endregion
@@ -8317,6 +8389,66 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region DiskCaching
+        /// <summary><p><em>Sets <see cref="AzureVmUpdateSettings.DiskCaching"/> to a new list.</em></p><p>Use singular value to apply across, or specify individual disks, e.g. 'os=ReadWrite 0=None 1=ReadOnly' should enable update os disk and 2 data disks.</p></summary>
+        [Pure]
+        public static AzureVmUpdateSettings SetDiskCaching(this AzureVmUpdateSettings toolSettings, params string[] diskCaching)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DiskCachingInternal = diskCaching.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureVmUpdateSettings.DiskCaching"/> to a new list.</em></p><p>Use singular value to apply across, or specify individual disks, e.g. 'os=ReadWrite 0=None 1=ReadOnly' should enable update os disk and 2 data disks.</p></summary>
+        [Pure]
+        public static AzureVmUpdateSettings SetDiskCaching(this AzureVmUpdateSettings toolSettings, IEnumerable<string> diskCaching)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DiskCachingInternal = diskCaching.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmUpdateSettings.DiskCaching"/>.</em></p><p>Use singular value to apply across, or specify individual disks, e.g. 'os=ReadWrite 0=None 1=ReadOnly' should enable update os disk and 2 data disks.</p></summary>
+        [Pure]
+        public static AzureVmUpdateSettings AddDiskCaching(this AzureVmUpdateSettings toolSettings, params string[] diskCaching)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DiskCachingInternal.AddRange(diskCaching);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmUpdateSettings.DiskCaching"/>.</em></p><p>Use singular value to apply across, or specify individual disks, e.g. 'os=ReadWrite 0=None 1=ReadOnly' should enable update os disk and 2 data disks.</p></summary>
+        [Pure]
+        public static AzureVmUpdateSettings AddDiskCaching(this AzureVmUpdateSettings toolSettings, IEnumerable<string> diskCaching)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DiskCachingInternal.AddRange(diskCaching);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureVmUpdateSettings.DiskCaching"/>.</em></p><p>Use singular value to apply across, or specify individual disks, e.g. 'os=ReadWrite 0=None 1=ReadOnly' should enable update os disk and 2 data disks.</p></summary>
+        [Pure]
+        public static AzureVmUpdateSettings ClearDiskCaching(this AzureVmUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DiskCachingInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmUpdateSettings.DiskCaching"/>.</em></p><p>Use singular value to apply across, or specify individual disks, e.g. 'os=ReadWrite 0=None 1=ReadOnly' should enable update os disk and 2 data disks.</p></summary>
+        [Pure]
+        public static AzureVmUpdateSettings RemoveDiskCaching(this AzureVmUpdateSettings toolSettings, params string[] diskCaching)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(diskCaching);
+            toolSettings.DiskCachingInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmUpdateSettings.DiskCaching"/>.</em></p><p>Use singular value to apply across, or specify individual disks, e.g. 'os=ReadWrite 0=None 1=ReadOnly' should enable update os disk and 2 data disks.</p></summary>
+        [Pure]
+        public static AzureVmUpdateSettings RemoveDiskCaching(this AzureVmUpdateSettings toolSettings, IEnumerable<string> diskCaching)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(diskCaching);
+            toolSettings.DiskCachingInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region NoWait
         /// <summary><p><em>Sets <see cref="AzureVmUpdateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
         [Pure]
@@ -8350,6 +8482,66 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.OsDisk = null;
+            return toolSettings;
+        }
+        #endregion
+        #region WriteAccelerator
+        /// <summary><p><em>Sets <see cref="AzureVmUpdateSettings.WriteAccelerator"/> to a new list.</em></p><p>Enable/disable disk write accelerator. Use singular value 'true/false' to apply across, or specify individual disks, e.g.'os=true 1=true 2=true' for os disk and data disks with lun of 1 &amp; 2.</p></summary>
+        [Pure]
+        public static AzureVmUpdateSettings SetWriteAccelerator(this AzureVmUpdateSettings toolSettings, params string[] writeAccelerator)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WriteAcceleratorInternal = writeAccelerator.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureVmUpdateSettings.WriteAccelerator"/> to a new list.</em></p><p>Enable/disable disk write accelerator. Use singular value 'true/false' to apply across, or specify individual disks, e.g.'os=true 1=true 2=true' for os disk and data disks with lun of 1 &amp; 2.</p></summary>
+        [Pure]
+        public static AzureVmUpdateSettings SetWriteAccelerator(this AzureVmUpdateSettings toolSettings, IEnumerable<string> writeAccelerator)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WriteAcceleratorInternal = writeAccelerator.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmUpdateSettings.WriteAccelerator"/>.</em></p><p>Enable/disable disk write accelerator. Use singular value 'true/false' to apply across, or specify individual disks, e.g.'os=true 1=true 2=true' for os disk and data disks with lun of 1 &amp; 2.</p></summary>
+        [Pure]
+        public static AzureVmUpdateSettings AddWriteAccelerator(this AzureVmUpdateSettings toolSettings, params string[] writeAccelerator)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WriteAcceleratorInternal.AddRange(writeAccelerator);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmUpdateSettings.WriteAccelerator"/>.</em></p><p>Enable/disable disk write accelerator. Use singular value 'true/false' to apply across, or specify individual disks, e.g.'os=true 1=true 2=true' for os disk and data disks with lun of 1 &amp; 2.</p></summary>
+        [Pure]
+        public static AzureVmUpdateSettings AddWriteAccelerator(this AzureVmUpdateSettings toolSettings, IEnumerable<string> writeAccelerator)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WriteAcceleratorInternal.AddRange(writeAccelerator);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureVmUpdateSettings.WriteAccelerator"/>.</em></p><p>Enable/disable disk write accelerator. Use singular value 'true/false' to apply across, or specify individual disks, e.g.'os=true 1=true 2=true' for os disk and data disks with lun of 1 &amp; 2.</p></summary>
+        [Pure]
+        public static AzureVmUpdateSettings ClearWriteAccelerator(this AzureVmUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WriteAcceleratorInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmUpdateSettings.WriteAccelerator"/>.</em></p><p>Enable/disable disk write accelerator. Use singular value 'true/false' to apply across, or specify individual disks, e.g.'os=true 1=true 2=true' for os disk and data disks with lun of 1 &amp; 2.</p></summary>
+        [Pure]
+        public static AzureVmUpdateSettings RemoveWriteAccelerator(this AzureVmUpdateSettings toolSettings, params string[] writeAccelerator)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(writeAccelerator);
+            toolSettings.WriteAcceleratorInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmUpdateSettings.WriteAccelerator"/>.</em></p><p>Enable/disable disk write accelerator. Use singular value 'true/false' to apply across, or specify individual disks, e.g.'os=true 1=true 2=true' for os disk and data disks with lun of 1 &amp; 2.</p></summary>
+        [Pure]
+        public static AzureVmUpdateSettings RemoveWriteAccelerator(this AzureVmUpdateSettings toolSettings, IEnumerable<string> writeAccelerator)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(writeAccelerator);
+            toolSettings.WriteAcceleratorInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
         #endregion
@@ -10286,7 +10478,7 @@ namespace Nuke.Azure
     public static partial class AzureVmDiagnosticsGetDefaultConfigSettingsExtensions
     {
         #region IsWindowsOs
-        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsGetDefaultConfigSettings.IsWindowsOs"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsGetDefaultConfigSettings.IsWindowsOs"/>.</em></p><p>For Windows VMs.</p></summary>
         [Pure]
         public static AzureVmDiagnosticsGetDefaultConfigSettings SetIsWindowsOs(this AzureVmDiagnosticsGetDefaultConfigSettings toolSettings, string isWindowsOs)
         {
@@ -10294,7 +10486,7 @@ namespace Nuke.Azure
             toolSettings.IsWindowsOs = isWindowsOs;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsGetDefaultConfigSettings.IsWindowsOs"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsGetDefaultConfigSettings.IsWindowsOs"/>.</em></p><p>For Windows VMs.</p></summary>
         [Pure]
         public static AzureVmDiagnosticsGetDefaultConfigSettings ResetIsWindowsOs(this AzureVmDiagnosticsGetDefaultConfigSettings toolSettings)
         {
@@ -10676,6 +10868,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Caching = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EnableWriteAccelerator
+        /// <summary><p><em>Sets <see cref="AzureVmDiskAttachSettings.EnableWriteAccelerator"/>.</em></p><p>Enable write accelerator.</p></summary>
+        [Pure]
+        public static AzureVmDiskAttachSettings SetEnableWriteAccelerator(this AzureVmDiskAttachSettings toolSettings, string enableWriteAccelerator)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableWriteAccelerator = enableWriteAccelerator;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmDiskAttachSettings.EnableWriteAccelerator"/>.</em></p><p>Enable write accelerator.</p></summary>
+        [Pure]
+        public static AzureVmDiskAttachSettings ResetEnableWriteAccelerator(this AzureVmDiskAttachSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableWriteAccelerator = null;
             return toolSettings;
         }
         #endregion
@@ -11171,24 +11381,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureVmEncryptionEnableSettingsExtensions
     {
-        #region AadClientId
-        /// <summary><p><em>Sets <see cref="AzureVmEncryptionEnableSettings.AadClientId"/>.</em></p><p>Client ID of an AAD app with permissions to write secrets to the key vault.</p></summary>
-        [Pure]
-        public static AzureVmEncryptionEnableSettings SetAadClientId(this AzureVmEncryptionEnableSettings toolSettings, string aadClientId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AadClientId = aadClientId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmEncryptionEnableSettings.AadClientId"/>.</em></p><p>Client ID of an AAD app with permissions to write secrets to the key vault.</p></summary>
-        [Pure]
-        public static AzureVmEncryptionEnableSettings ResetAadClientId(this AzureVmEncryptionEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AadClientId = null;
-            return toolSettings;
-        }
-        #endregion
         #region DiskEncryptionKeyvault
         /// <summary><p><em>Sets <see cref="AzureVmEncryptionEnableSettings.DiskEncryptionKeyvault"/>.</em></p><p>The key vault where the generated encryption key will be placed.</p></summary>
         [Pure]
@@ -11258,6 +11450,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.AadClientCertThumbprint = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AadClientId
+        /// <summary><p><em>Sets <see cref="AzureVmEncryptionEnableSettings.AadClientId"/>.</em></p><p>Client ID of an AAD app with permissions to write secrets to the key vault.</p></summary>
+        [Pure]
+        public static AzureVmEncryptionEnableSettings SetAadClientId(this AzureVmEncryptionEnableSettings toolSettings, string aadClientId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AadClientId = aadClientId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmEncryptionEnableSettings.AadClientId"/>.</em></p><p>Client ID of an AAD app with permissions to write secrets to the key vault.</p></summary>
+        [Pure]
+        public static AzureVmEncryptionEnableSettings ResetAadClientId(this AzureVmEncryptionEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AadClientId = null;
             return toolSettings;
         }
         #endregion
@@ -11602,7 +11812,7 @@ namespace Nuke.Azure
     public static partial class AzureVmExtensionDeleteSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionDeleteSettings.Name"/>.</em></p><p>The name of the virtual machine extension.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionDeleteSettings.Name"/>.</em></p><p>Extension name.</p></summary>
         [Pure]
         public static AzureVmExtensionDeleteSettings SetName(this AzureVmExtensionDeleteSettings toolSettings, string name)
         {
@@ -11610,7 +11820,7 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionDeleteSettings.Name"/>.</em></p><p>The name of the virtual machine extension.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionDeleteSettings.Name"/>.</em></p><p>Extension name.</p></summary>
         [Pure]
         public static AzureVmExtensionDeleteSettings ResetName(this AzureVmExtensionDeleteSettings toolSettings)
         {
@@ -11888,7 +12098,7 @@ namespace Nuke.Azure
     public static partial class AzureVmExtensionSetSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionSetSettings.Name"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionSetSettings.Name"/>.</em></p><p>Extension name.</p></summary>
         [Pure]
         public static AzureVmExtensionSetSettings SetName(this AzureVmExtensionSetSettings toolSettings, string name)
         {
@@ -11896,7 +12106,7 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionSetSettings.Name"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionSetSettings.Name"/>.</em></p><p>Extension name.</p></summary>
         [Pure]
         public static AzureVmExtensionSetSettings ResetName(this AzureVmExtensionSetSettings toolSettings)
         {
@@ -12130,7 +12340,7 @@ namespace Nuke.Azure
     public static partial class AzureVmExtensionShowSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionShowSettings.Name"/>.</em></p><p>The name of the virtual machine extension.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionShowSettings.Name"/>.</em></p><p>Extension name.</p></summary>
         [Pure]
         public static AzureVmExtensionShowSettings SetName(this AzureVmExtensionShowSettings toolSettings, string name)
         {
@@ -12138,7 +12348,7 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionShowSettings.Name"/>.</em></p><p>The name of the virtual machine extension.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionShowSettings.Name"/>.</em></p><p>Extension name.</p></summary>
         [Pure]
         public static AzureVmExtensionShowSettings ResetName(this AzureVmExtensionShowSettings toolSettings)
         {
@@ -12350,24 +12560,6 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Identities = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Port
-        /// <summary><p><em>Sets <see cref="AzureVmIdentityAssignSettings.Port"/>.</em></p><p>The port to fetch AAD token. Default: 50342.</p></summary>
-        [Pure]
-        public static AzureVmIdentityAssignSettings SetPort(this AzureVmIdentityAssignSettings toolSettings, string port)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Port = port;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmIdentityAssignSettings.Port"/>.</em></p><p>The port to fetch AAD token. Default: 50342.</p></summary>
-        [Pure]
-        public static AzureVmIdentityAssignSettings ResetPort(this AzureVmIdentityAssignSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Port = null;
             return toolSettings;
         }
         #endregion
@@ -17170,7 +17362,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Orderby
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionImageListVersionsSettings.Orderby"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionImageListVersionsSettings.Orderby"/>.</em></p><p>The $orderby odata query option.</p></summary>
         [Pure]
         public static AzureVmExtensionImageListVersionsSettings SetOrderby(this AzureVmExtensionImageListVersionsSettings toolSettings, string orderby)
         {
@@ -17178,7 +17370,7 @@ namespace Nuke.Azure
             toolSettings.Orderby = orderby;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionImageListVersionsSettings.Orderby"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionImageListVersionsSettings.Orderby"/>.</em></p><p>The $orderby odata query option.</p></summary>
         [Pure]
         public static AzureVmExtensionImageListVersionsSettings ResetOrderby(this AzureVmExtensionImageListVersionsSettings toolSettings)
         {
@@ -17188,7 +17380,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Top
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionImageListVersionsSettings.Top"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionImageListVersionsSettings.Top"/>.</em></p><p>The $top odata query option.</p></summary>
         [Pure]
         public static AzureVmExtensionImageListVersionsSettings SetTop(this AzureVmExtensionImageListVersionsSettings toolSettings, string top)
         {
@@ -17196,7 +17388,7 @@ namespace Nuke.Azure
             toolSettings.Top = top;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionImageListVersionsSettings.Top"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionImageListVersionsSettings.Top"/>.</em></p><p>The $top odata query option.</p></summary>
         [Pure]
         public static AzureVmExtensionImageListVersionsSettings ResetTop(this AzureVmExtensionImageListVersionsSettings toolSettings)
         {

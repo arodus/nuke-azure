@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureExtension.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureExtensionAddSettings toolSettings);
         static partial void PostProcess(AzureExtensionAddSettings toolSettings);
-        /// <summary><p>Manage and update CLI extensions.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/extension.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage and update CLI extensions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureExtensionAdd(Configure<AzureExtensionAddSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureExtensionAddSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureExtensionListSettings toolSettings);
         static partial void PostProcess(AzureExtensionListSettings toolSettings);
-        /// <summary><p>Manage and update CLI extensions.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/extension.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage and update CLI extensions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureExtensionList(Configure<AzureExtensionListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureExtensionListSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureExtensionListAvailableSettings toolSettings);
         static partial void PostProcess(AzureExtensionListAvailableSettings toolSettings);
-        /// <summary><p>Manage and update CLI extensions.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/extension.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage and update CLI extensions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureExtensionListAvailable(Configure<AzureExtensionListAvailableSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureExtensionListAvailableSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureExtensionRemoveSettings toolSettings);
         static partial void PostProcess(AzureExtensionRemoveSettings toolSettings);
-        /// <summary><p>Manage and update CLI extensions.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/extension.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage and update CLI extensions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureExtensionRemove(Configure<AzureExtensionRemoveSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureExtensionRemoveSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureExtensionShowSettings toolSettings);
         static partial void PostProcess(AzureExtensionShowSettings toolSettings);
-        /// <summary><p>Manage and update CLI extensions.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/extension.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage and update CLI extensions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureExtensionShow(Configure<AzureExtensionShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureExtensionShowSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureExtensionUpdateSettings toolSettings);
         static partial void PostProcess(AzureExtensionUpdateSettings toolSettings);
-        /// <summary><p>Manage and update CLI extensions.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/extension.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage and update CLI extensions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureExtensionUpdate(Configure<AzureExtensionUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureExtensionUpdateSettings());

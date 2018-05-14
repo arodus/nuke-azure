@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureBackup.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBackupSettings toolSettings);
         static partial void PostProcess(AzureBackupSettings toolSettings);
-        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/backup.yml">official website</a>.</p></summary>
+        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBackup(Configure<AzureBackupSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBackupContainerListSettings toolSettings);
         static partial void PostProcess(AzureBackupContainerListSettings toolSettings);
-        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/backup.yml">official website</a>.</p></summary>
+        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBackupContainerList(Configure<AzureBackupContainerListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupContainerListSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBackupContainerShowSettings toolSettings);
         static partial void PostProcess(AzureBackupContainerShowSettings toolSettings);
-        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/backup.yml">official website</a>.</p></summary>
+        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBackupContainerShow(Configure<AzureBackupContainerShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupContainerShowSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBackupItemListSettings toolSettings);
         static partial void PostProcess(AzureBackupItemListSettings toolSettings);
-        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/backup.yml">official website</a>.</p></summary>
+        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBackupItemList(Configure<AzureBackupItemListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupItemListSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBackupItemSetPolicySettings toolSettings);
         static partial void PostProcess(AzureBackupItemSetPolicySettings toolSettings);
-        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/backup.yml">official website</a>.</p></summary>
+        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBackupItemSetPolicy(Configure<AzureBackupItemSetPolicySettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupItemSetPolicySettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBackupItemShowSettings toolSettings);
         static partial void PostProcess(AzureBackupItemShowSettings toolSettings);
-        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/backup.yml">official website</a>.</p></summary>
+        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBackupItemShow(Configure<AzureBackupItemShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupItemShowSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBackupJobListSettings toolSettings);
         static partial void PostProcess(AzureBackupJobListSettings toolSettings);
-        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/backup.yml">official website</a>.</p></summary>
+        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBackupJobList(Configure<AzureBackupJobListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupJobListSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBackupJobShowSettings toolSettings);
         static partial void PostProcess(AzureBackupJobShowSettings toolSettings);
-        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/backup.yml">official website</a>.</p></summary>
+        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBackupJobShow(Configure<AzureBackupJobShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupJobShowSettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBackupJobStopSettings toolSettings);
         static partial void PostProcess(AzureBackupJobStopSettings toolSettings);
-        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/backup.yml">official website</a>.</p></summary>
+        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBackupJobStop(Configure<AzureBackupJobStopSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupJobStopSettings());
@@ -135,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBackupJobWaitSettings toolSettings);
         static partial void PostProcess(AzureBackupJobWaitSettings toolSettings);
-        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/backup.yml">official website</a>.</p></summary>
+        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBackupJobWait(Configure<AzureBackupJobWaitSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupJobWaitSettings());
@@ -146,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBackupPolicyDeleteSettings toolSettings);
         static partial void PostProcess(AzureBackupPolicyDeleteSettings toolSettings);
-        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/backup.yml">official website</a>.</p></summary>
+        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBackupPolicyDelete(Configure<AzureBackupPolicyDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupPolicyDeleteSettings());
@@ -157,7 +157,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBackupPolicyGetDefaultForVmSettings toolSettings);
         static partial void PostProcess(AzureBackupPolicyGetDefaultForVmSettings toolSettings);
-        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/backup.yml">official website</a>.</p></summary>
+        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBackupPolicyGetDefaultForVm(Configure<AzureBackupPolicyGetDefaultForVmSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupPolicyGetDefaultForVmSettings());
@@ -168,7 +168,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBackupPolicyListSettings toolSettings);
         static partial void PostProcess(AzureBackupPolicyListSettings toolSettings);
-        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/backup.yml">official website</a>.</p></summary>
+        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBackupPolicyList(Configure<AzureBackupPolicyListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupPolicyListSettings());
@@ -179,7 +179,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBackupPolicyListAssociatedItemsSettings toolSettings);
         static partial void PostProcess(AzureBackupPolicyListAssociatedItemsSettings toolSettings);
-        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/backup.yml">official website</a>.</p></summary>
+        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBackupPolicyListAssociatedItems(Configure<AzureBackupPolicyListAssociatedItemsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupPolicyListAssociatedItemsSettings());
@@ -190,7 +190,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBackupPolicySetSettings toolSettings);
         static partial void PostProcess(AzureBackupPolicySetSettings toolSettings);
-        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/backup.yml">official website</a>.</p></summary>
+        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBackupPolicySet(Configure<AzureBackupPolicySetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupPolicySetSettings());
@@ -201,7 +201,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBackupPolicyShowSettings toolSettings);
         static partial void PostProcess(AzureBackupPolicyShowSettings toolSettings);
-        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/backup.yml">official website</a>.</p></summary>
+        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBackupPolicyShow(Configure<AzureBackupPolicyShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupPolicyShowSettings());
@@ -212,7 +212,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBackupProtectionBackupNowSettings toolSettings);
         static partial void PostProcess(AzureBackupProtectionBackupNowSettings toolSettings);
-        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/backup.yml">official website</a>.</p></summary>
+        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBackupProtectionBackupNow(Configure<AzureBackupProtectionBackupNowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupProtectionBackupNowSettings());
@@ -223,7 +223,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBackupProtectionCheckVmSettings toolSettings);
         static partial void PostProcess(AzureBackupProtectionCheckVmSettings toolSettings);
-        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/backup.yml">official website</a>.</p></summary>
+        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBackupProtectionCheckVm(Configure<AzureBackupProtectionCheckVmSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupProtectionCheckVmSettings());
@@ -234,7 +234,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBackupProtectionDisableSettings toolSettings);
         static partial void PostProcess(AzureBackupProtectionDisableSettings toolSettings);
-        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/backup.yml">official website</a>.</p></summary>
+        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBackupProtectionDisable(Configure<AzureBackupProtectionDisableSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupProtectionDisableSettings());
@@ -245,7 +245,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBackupProtectionEnableForVmSettings toolSettings);
         static partial void PostProcess(AzureBackupProtectionEnableForVmSettings toolSettings);
-        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/backup.yml">official website</a>.</p></summary>
+        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBackupProtectionEnableForVm(Configure<AzureBackupProtectionEnableForVmSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupProtectionEnableForVmSettings());
@@ -256,7 +256,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBackupRecoverypointListSettings toolSettings);
         static partial void PostProcess(AzureBackupRecoverypointListSettings toolSettings);
-        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/backup.yml">official website</a>.</p></summary>
+        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBackupRecoverypointList(Configure<AzureBackupRecoverypointListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupRecoverypointListSettings());
@@ -267,7 +267,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBackupRecoverypointShowSettings toolSettings);
         static partial void PostProcess(AzureBackupRecoverypointShowSettings toolSettings);
-        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/backup.yml">official website</a>.</p></summary>
+        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBackupRecoverypointShow(Configure<AzureBackupRecoverypointShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupRecoverypointShowSettings());
@@ -278,7 +278,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBackupRestoreRestoreDisksSettings toolSettings);
         static partial void PostProcess(AzureBackupRestoreRestoreDisksSettings toolSettings);
-        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/backup.yml">official website</a>.</p></summary>
+        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBackupRestoreRestoreDisks(Configure<AzureBackupRestoreRestoreDisksSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupRestoreRestoreDisksSettings());
@@ -289,7 +289,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBackupVaultCreateSettings toolSettings);
         static partial void PostProcess(AzureBackupVaultCreateSettings toolSettings);
-        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/backup.yml">official website</a>.</p></summary>
+        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBackupVaultCreate(Configure<AzureBackupVaultCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupVaultCreateSettings());
@@ -300,7 +300,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBackupVaultDeleteSettings toolSettings);
         static partial void PostProcess(AzureBackupVaultDeleteSettings toolSettings);
-        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/backup.yml">official website</a>.</p></summary>
+        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBackupVaultDelete(Configure<AzureBackupVaultDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupVaultDeleteSettings());
@@ -311,7 +311,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBackupVaultListSettings toolSettings);
         static partial void PostProcess(AzureBackupVaultListSettings toolSettings);
-        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/backup.yml">official website</a>.</p></summary>
+        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBackupVaultList(Configure<AzureBackupVaultListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupVaultListSettings());
@@ -322,7 +322,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBackupVaultShowSettings toolSettings);
         static partial void PostProcess(AzureBackupVaultShowSettings toolSettings);
-        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/backup.yml">official website</a>.</p></summary>
+        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBackupVaultShow(Configure<AzureBackupVaultShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupVaultShowSettings());
@@ -333,7 +333,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBackupRestoreFilesMountRpSettings toolSettings);
         static partial void PostProcess(AzureBackupRestoreFilesMountRpSettings toolSettings);
-        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/backup.yml">official website</a>.</p></summary>
+        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBackupRestoreFilesMountRp(Configure<AzureBackupRestoreFilesMountRpSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupRestoreFilesMountRpSettings());
@@ -344,7 +344,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBackupRestoreFilesUnmountRpSettings toolSettings);
         static partial void PostProcess(AzureBackupRestoreFilesUnmountRpSettings toolSettings);
-        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/backup.yml">official website</a>.</p></summary>
+        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBackupRestoreFilesUnmountRp(Configure<AzureBackupRestoreFilesUnmountRpSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupRestoreFilesUnmountRpSettings());
@@ -355,7 +355,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBackupVaultBackupPropertiesSetSettings toolSettings);
         static partial void PostProcess(AzureBackupVaultBackupPropertiesSetSettings toolSettings);
-        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/backup.yml">official website</a>.</p></summary>
+        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBackupVaultBackupPropertiesSet(Configure<AzureBackupVaultBackupPropertiesSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupVaultBackupPropertiesSetSettings());
@@ -366,7 +366,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBackupVaultBackupPropertiesShowSettings toolSettings);
         static partial void PostProcess(AzureBackupVaultBackupPropertiesShowSettings toolSettings);
-        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/backup.yml">official website</a>.</p></summary>
+        /// <summary><p>Commands to manage Azure Backups.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBackupVaultBackupPropertiesShow(Configure<AzureBackupVaultBackupPropertiesShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBackupVaultBackupPropertiesShowSettings());

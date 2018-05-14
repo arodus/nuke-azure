@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureDls.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsSettings toolSettings);
         static partial void PostProcess(AzureDlsSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDls(Configure<AzureDlsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsAccountCreateSettings toolSettings);
         static partial void PostProcess(AzureDlsAccountCreateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsAccountCreate(Configure<AzureDlsAccountCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsAccountCreateSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsAccountDeleteSettings toolSettings);
         static partial void PostProcess(AzureDlsAccountDeleteSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsAccountDelete(Configure<AzureDlsAccountDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsAccountDeleteSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsAccountEnableKeyVaultSettings toolSettings);
         static partial void PostProcess(AzureDlsAccountEnableKeyVaultSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsAccountEnableKeyVault(Configure<AzureDlsAccountEnableKeyVaultSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsAccountEnableKeyVaultSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsAccountListSettings toolSettings);
         static partial void PostProcess(AzureDlsAccountListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsAccountList(Configure<AzureDlsAccountListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsAccountListSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsAccountShowSettings toolSettings);
         static partial void PostProcess(AzureDlsAccountShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsAccountShow(Configure<AzureDlsAccountShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsAccountShowSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsAccountUpdateSettings toolSettings);
         static partial void PostProcess(AzureDlsAccountUpdateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsAccountUpdate(Configure<AzureDlsAccountUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsAccountUpdateSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsFsAppendSettings toolSettings);
         static partial void PostProcess(AzureDlsFsAppendSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsFsAppend(Configure<AzureDlsFsAppendSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsFsAppendSettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsFsCreateSettings toolSettings);
         static partial void PostProcess(AzureDlsFsCreateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsFsCreate(Configure<AzureDlsFsCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsFsCreateSettings());
@@ -135,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsFsDeleteSettings toolSettings);
         static partial void PostProcess(AzureDlsFsDeleteSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsFsDelete(Configure<AzureDlsFsDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsFsDeleteSettings());
@@ -146,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsFsDownloadSettings toolSettings);
         static partial void PostProcess(AzureDlsFsDownloadSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsFsDownload(Configure<AzureDlsFsDownloadSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsFsDownloadSettings());
@@ -157,7 +157,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsFsJoinSettings toolSettings);
         static partial void PostProcess(AzureDlsFsJoinSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsFsJoin(Configure<AzureDlsFsJoinSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsFsJoinSettings());
@@ -168,7 +168,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsFsListSettings toolSettings);
         static partial void PostProcess(AzureDlsFsListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsFsList(Configure<AzureDlsFsListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsFsListSettings());
@@ -179,7 +179,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsFsMoveSettings toolSettings);
         static partial void PostProcess(AzureDlsFsMoveSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsFsMove(Configure<AzureDlsFsMoveSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsFsMoveSettings());
@@ -190,7 +190,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsFsPreviewSettings toolSettings);
         static partial void PostProcess(AzureDlsFsPreviewSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsFsPreview(Configure<AzureDlsFsPreviewSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsFsPreviewSettings());
@@ -201,7 +201,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsFsRemoveExpirySettings toolSettings);
         static partial void PostProcess(AzureDlsFsRemoveExpirySettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsFsRemoveExpiry(Configure<AzureDlsFsRemoveExpirySettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsFsRemoveExpirySettings());
@@ -212,7 +212,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsFsSetExpirySettings toolSettings);
         static partial void PostProcess(AzureDlsFsSetExpirySettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsFsSetExpiry(Configure<AzureDlsFsSetExpirySettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsFsSetExpirySettings());
@@ -223,7 +223,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsFsShowSettings toolSettings);
         static partial void PostProcess(AzureDlsFsShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsFsShow(Configure<AzureDlsFsShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsFsShowSettings());
@@ -234,7 +234,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsFsTestSettings toolSettings);
         static partial void PostProcess(AzureDlsFsTestSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsFsTest(Configure<AzureDlsFsTestSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsFsTestSettings());
@@ -245,7 +245,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsFsUploadSettings toolSettings);
         static partial void PostProcess(AzureDlsFsUploadSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsFsUpload(Configure<AzureDlsFsUploadSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsFsUploadSettings());
@@ -256,7 +256,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsAccountFirewallCreateSettings toolSettings);
         static partial void PostProcess(AzureDlsAccountFirewallCreateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsAccountFirewallCreate(Configure<AzureDlsAccountFirewallCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsAccountFirewallCreateSettings());
@@ -267,7 +267,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsAccountFirewallDeleteSettings toolSettings);
         static partial void PostProcess(AzureDlsAccountFirewallDeleteSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsAccountFirewallDelete(Configure<AzureDlsAccountFirewallDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsAccountFirewallDeleteSettings());
@@ -278,7 +278,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsAccountFirewallListSettings toolSettings);
         static partial void PostProcess(AzureDlsAccountFirewallListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsAccountFirewallList(Configure<AzureDlsAccountFirewallListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsAccountFirewallListSettings());
@@ -289,7 +289,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsAccountFirewallShowSettings toolSettings);
         static partial void PostProcess(AzureDlsAccountFirewallShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsAccountFirewallShow(Configure<AzureDlsAccountFirewallShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsAccountFirewallShowSettings());
@@ -300,7 +300,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsAccountFirewallUpdateSettings toolSettings);
         static partial void PostProcess(AzureDlsAccountFirewallUpdateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsAccountFirewallUpdate(Configure<AzureDlsAccountFirewallUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsAccountFirewallUpdateSettings());
@@ -311,7 +311,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsAccountTrustedProviderCreateSettings toolSettings);
         static partial void PostProcess(AzureDlsAccountTrustedProviderCreateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsAccountTrustedProviderCreate(Configure<AzureDlsAccountTrustedProviderCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsAccountTrustedProviderCreateSettings());
@@ -322,7 +322,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsAccountTrustedProviderDeleteSettings toolSettings);
         static partial void PostProcess(AzureDlsAccountTrustedProviderDeleteSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsAccountTrustedProviderDelete(Configure<AzureDlsAccountTrustedProviderDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsAccountTrustedProviderDeleteSettings());
@@ -333,7 +333,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsAccountTrustedProviderListSettings toolSettings);
         static partial void PostProcess(AzureDlsAccountTrustedProviderListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsAccountTrustedProviderList(Configure<AzureDlsAccountTrustedProviderListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsAccountTrustedProviderListSettings());
@@ -344,7 +344,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsAccountTrustedProviderShowSettings toolSettings);
         static partial void PostProcess(AzureDlsAccountTrustedProviderShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsAccountTrustedProviderShow(Configure<AzureDlsAccountTrustedProviderShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsAccountTrustedProviderShowSettings());
@@ -355,7 +355,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsAccountTrustedProviderUpdateSettings toolSettings);
         static partial void PostProcess(AzureDlsAccountTrustedProviderUpdateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsAccountTrustedProviderUpdate(Configure<AzureDlsAccountTrustedProviderUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsAccountTrustedProviderUpdateSettings());
@@ -366,7 +366,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsFsAccessRemoveAllSettings toolSettings);
         static partial void PostProcess(AzureDlsFsAccessRemoveAllSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsFsAccessRemoveAll(Configure<AzureDlsFsAccessRemoveAllSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsFsAccessRemoveAllSettings());
@@ -377,7 +377,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsFsAccessRemoveEntrySettings toolSettings);
         static partial void PostProcess(AzureDlsFsAccessRemoveEntrySettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsFsAccessRemoveEntry(Configure<AzureDlsFsAccessRemoveEntrySettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsFsAccessRemoveEntrySettings());
@@ -388,7 +388,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsFsAccessSetSettings toolSettings);
         static partial void PostProcess(AzureDlsFsAccessSetSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsFsAccessSet(Configure<AzureDlsFsAccessSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsFsAccessSetSettings());
@@ -399,7 +399,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsFsAccessSetEntrySettings toolSettings);
         static partial void PostProcess(AzureDlsFsAccessSetEntrySettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsFsAccessSetEntry(Configure<AzureDlsFsAccessSetEntrySettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsFsAccessSetEntrySettings());
@@ -410,7 +410,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsFsAccessSetOwnerSettings toolSettings);
         static partial void PostProcess(AzureDlsFsAccessSetOwnerSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsFsAccessSetOwner(Configure<AzureDlsFsAccessSetOwnerSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsFsAccessSetOwnerSettings());
@@ -421,7 +421,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsFsAccessSetPermissionSettings toolSettings);
         static partial void PostProcess(AzureDlsFsAccessSetPermissionSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsFsAccessSetPermission(Configure<AzureDlsFsAccessSetPermissionSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsFsAccessSetPermissionSettings());
@@ -432,7 +432,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDlsFsAccessShowSettings toolSettings);
         static partial void PostProcess(AzureDlsFsAccessShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/dls.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDlsFsAccessShow(Configure<AzureDlsFsAccessShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsFsAccessShowSettings());

@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureCognitiveservices.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCognitiveservicesListSettings toolSettings);
         static partial void PostProcess(AzureCognitiveservicesListSettings toolSettings);
-        /// <summary><p>Manage Azure Cognitive Services accounts.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cognitiveservices.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cognitive Services accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cognitiveservices?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCognitiveservicesList(Configure<AzureCognitiveservicesListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCognitiveservicesListSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCognitiveservicesAccountCreateSettings toolSettings);
         static partial void PostProcess(AzureCognitiveservicesAccountCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Cognitive Services accounts.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cognitiveservices.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cognitive Services accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cognitiveservices?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCognitiveservicesAccountCreate(Configure<AzureCognitiveservicesAccountCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCognitiveservicesAccountCreateSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCognitiveservicesAccountDeleteSettings toolSettings);
         static partial void PostProcess(AzureCognitiveservicesAccountDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Cognitive Services accounts.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cognitiveservices.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cognitive Services accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cognitiveservices?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCognitiveservicesAccountDelete(Configure<AzureCognitiveservicesAccountDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCognitiveservicesAccountDeleteSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCognitiveservicesAccountListSkusSettings toolSettings);
         static partial void PostProcess(AzureCognitiveservicesAccountListSkusSettings toolSettings);
-        /// <summary><p>Manage Azure Cognitive Services accounts.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cognitiveservices.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cognitive Services accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cognitiveservices?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCognitiveservicesAccountListSkus(Configure<AzureCognitiveservicesAccountListSkusSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCognitiveservicesAccountListSkusSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCognitiveservicesAccountShowSettings toolSettings);
         static partial void PostProcess(AzureCognitiveservicesAccountShowSettings toolSettings);
-        /// <summary><p>Manage Azure Cognitive Services accounts.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cognitiveservices.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cognitive Services accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cognitiveservices?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCognitiveservicesAccountShow(Configure<AzureCognitiveservicesAccountShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCognitiveservicesAccountShowSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCognitiveservicesAccountUpdateSettings toolSettings);
         static partial void PostProcess(AzureCognitiveservicesAccountUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Cognitive Services accounts.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cognitiveservices.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cognitive Services accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cognitiveservices?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCognitiveservicesAccountUpdate(Configure<AzureCognitiveservicesAccountUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCognitiveservicesAccountUpdateSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCognitiveservicesAccountKeysListSettings toolSettings);
         static partial void PostProcess(AzureCognitiveservicesAccountKeysListSettings toolSettings);
-        /// <summary><p>Manage Azure Cognitive Services accounts.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cognitiveservices.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cognitive Services accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cognitiveservices?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCognitiveservicesAccountKeysList(Configure<AzureCognitiveservicesAccountKeysListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCognitiveservicesAccountKeysListSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCognitiveservicesAccountKeysRegenerateSettings toolSettings);
         static partial void PostProcess(AzureCognitiveservicesAccountKeysRegenerateSettings toolSettings);
-        /// <summary><p>Manage Azure Cognitive Services accounts.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cognitiveservices.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cognitive Services accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cognitiveservices?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCognitiveservicesAccountKeysRegenerate(Configure<AzureCognitiveservicesAccountKeysRegenerateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCognitiveservicesAccountKeysRegenerateSettings());

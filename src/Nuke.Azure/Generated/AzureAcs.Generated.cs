@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureAcs.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAcsBrowseSettings toolSettings);
         static partial void PostProcess(AzureAcsBrowseSettings toolSettings);
-        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/acs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAcsBrowse(Configure<AzureAcsBrowseSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcsBrowseSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAcsCreateSettings toolSettings);
         static partial void PostProcess(AzureAcsCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/acs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAcsCreate(Configure<AzureAcsCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcsCreateSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAcsDeleteSettings toolSettings);
         static partial void PostProcess(AzureAcsDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/acs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAcsDelete(Configure<AzureAcsDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcsDeleteSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAcsListSettings toolSettings);
         static partial void PostProcess(AzureAcsListSettings toolSettings);
-        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/acs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAcsList(Configure<AzureAcsListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcsListSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAcsListLocationsSettings toolSettings);
         static partial void PostProcess(AzureAcsListLocationsSettings toolSettings);
-        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/acs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAcsListLocations(Configure<AzureAcsListLocationsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcsListLocationsSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAcsScaleSettings toolSettings);
         static partial void PostProcess(AzureAcsScaleSettings toolSettings);
-        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/acs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAcsScale(Configure<AzureAcsScaleSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcsScaleSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAcsShowSettings toolSettings);
         static partial void PostProcess(AzureAcsShowSettings toolSettings);
-        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/acs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAcsShow(Configure<AzureAcsShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcsShowSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAcsWaitSettings toolSettings);
         static partial void PostProcess(AzureAcsWaitSettings toolSettings);
-        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/acs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAcsWait(Configure<AzureAcsWaitSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcsWaitSettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAcsDcosBrowseSettings toolSettings);
         static partial void PostProcess(AzureAcsDcosBrowseSettings toolSettings);
-        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/acs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAcsDcosBrowse(Configure<AzureAcsDcosBrowseSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcsDcosBrowseSettings());
@@ -135,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAcsDcosInstallCliSettings toolSettings);
         static partial void PostProcess(AzureAcsDcosInstallCliSettings toolSettings);
-        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/acs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAcsDcosInstallCli(Configure<AzureAcsDcosInstallCliSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcsDcosInstallCliSettings());
@@ -146,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAcsKubernetesBrowseSettings toolSettings);
         static partial void PostProcess(AzureAcsKubernetesBrowseSettings toolSettings);
-        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/acs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAcsKubernetesBrowse(Configure<AzureAcsKubernetesBrowseSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcsKubernetesBrowseSettings());
@@ -157,7 +157,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAcsKubernetesGetCredentialsSettings toolSettings);
         static partial void PostProcess(AzureAcsKubernetesGetCredentialsSettings toolSettings);
-        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/acs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAcsKubernetesGetCredentials(Configure<AzureAcsKubernetesGetCredentialsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcsKubernetesGetCredentialsSettings());
@@ -168,7 +168,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAcsKubernetesInstallCliSettings toolSettings);
         static partial void PostProcess(AzureAcsKubernetesInstallCliSettings toolSettings);
-        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/acs.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAcsKubernetesInstallCli(Configure<AzureAcsKubernetesInstallCliSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcsKubernetesInstallCliSettings());

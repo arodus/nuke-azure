@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureAd.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdSettings toolSettings);
         static partial void PostProcess(AzureAdSettings toolSettings);
-        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAd(Configure<AzureAdSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdAppCreateSettings toolSettings);
         static partial void PostProcess(AzureAdAppCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdAppCreate(Configure<AzureAdAppCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdAppCreateSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdAppDeleteSettings toolSettings);
         static partial void PostProcess(AzureAdAppDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdAppDelete(Configure<AzureAdAppDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdAppDeleteSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdAppListSettings toolSettings);
         static partial void PostProcess(AzureAdAppListSettings toolSettings);
-        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdAppList(Configure<AzureAdAppListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdAppListSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdAppShowSettings toolSettings);
         static partial void PostProcess(AzureAdAppShowSettings toolSettings);
-        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdAppShow(Configure<AzureAdAppShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdAppShowSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdAppUpdateSettings toolSettings);
         static partial void PostProcess(AzureAdAppUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdAppUpdate(Configure<AzureAdAppUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdAppUpdateSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdGroupCreateSettings toolSettings);
         static partial void PostProcess(AzureAdGroupCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdGroupCreate(Configure<AzureAdGroupCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdGroupCreateSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdGroupDeleteSettings toolSettings);
         static partial void PostProcess(AzureAdGroupDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdGroupDelete(Configure<AzureAdGroupDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdGroupDeleteSettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdGroupGetMemberGroupsSettings toolSettings);
         static partial void PostProcess(AzureAdGroupGetMemberGroupsSettings toolSettings);
-        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdGroupGetMemberGroups(Configure<AzureAdGroupGetMemberGroupsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdGroupGetMemberGroupsSettings());
@@ -135,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdGroupListSettings toolSettings);
         static partial void PostProcess(AzureAdGroupListSettings toolSettings);
-        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdGroupList(Configure<AzureAdGroupListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdGroupListSettings());
@@ -146,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdGroupShowSettings toolSettings);
         static partial void PostProcess(AzureAdGroupShowSettings toolSettings);
-        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdGroupShow(Configure<AzureAdGroupShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdGroupShowSettings());
@@ -157,7 +157,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdSpCreateSettings toolSettings);
         static partial void PostProcess(AzureAdSpCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdSpCreate(Configure<AzureAdSpCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdSpCreateSettings());
@@ -168,7 +168,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdSpCreateForRbacSettings toolSettings);
         static partial void PostProcess(AzureAdSpCreateForRbacSettings toolSettings);
-        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdSpCreateForRbac(Configure<AzureAdSpCreateForRbacSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdSpCreateForRbacSettings());
@@ -179,7 +179,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdSpDeleteSettings toolSettings);
         static partial void PostProcess(AzureAdSpDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdSpDelete(Configure<AzureAdSpDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdSpDeleteSettings());
@@ -190,7 +190,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdSpListSettings toolSettings);
         static partial void PostProcess(AzureAdSpListSettings toolSettings);
-        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdSpList(Configure<AzureAdSpListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdSpListSettings());
@@ -199,20 +199,9 @@ namespace Nuke.Azure
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
-        static partial void PreProcess(AzureAdSpResetCredentialsSettings toolSettings);
-        static partial void PostProcess(AzureAdSpResetCredentialsSettings toolSettings);
-        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad.yml">official website</a>.</p></summary>
-        public static void AzureAdSpResetCredentials(Configure<AzureAdSpResetCredentialsSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAdSpResetCredentialsSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
         static partial void PreProcess(AzureAdSpShowSettings toolSettings);
         static partial void PostProcess(AzureAdSpShowSettings toolSettings);
-        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdSpShow(Configure<AzureAdSpShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdSpShowSettings());
@@ -223,7 +212,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdUserCreateSettings toolSettings);
         static partial void PostProcess(AzureAdUserCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdUserCreate(Configure<AzureAdUserCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdUserCreateSettings());
@@ -234,7 +223,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdUserDeleteSettings toolSettings);
         static partial void PostProcess(AzureAdUserDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdUserDelete(Configure<AzureAdUserDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdUserDeleteSettings());
@@ -245,7 +234,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdUserListSettings toolSettings);
         static partial void PostProcess(AzureAdUserListSettings toolSettings);
-        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdUserList(Configure<AzureAdUserListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdUserListSettings());
@@ -256,7 +245,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdUserShowSettings toolSettings);
         static partial void PostProcess(AzureAdUserShowSettings toolSettings);
-        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdUserShow(Configure<AzureAdUserShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdUserShowSettings());
@@ -267,7 +256,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdGroupMemberAddSettings toolSettings);
         static partial void PostProcess(AzureAdGroupMemberAddSettings toolSettings);
-        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdGroupMemberAdd(Configure<AzureAdGroupMemberAddSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdGroupMemberAddSettings());
@@ -278,7 +267,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdGroupMemberCheckSettings toolSettings);
         static partial void PostProcess(AzureAdGroupMemberCheckSettings toolSettings);
-        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdGroupMemberCheck(Configure<AzureAdGroupMemberCheckSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdGroupMemberCheckSettings());
@@ -289,7 +278,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdGroupMemberListSettings toolSettings);
         static partial void PostProcess(AzureAdGroupMemberListSettings toolSettings);
-        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdGroupMemberList(Configure<AzureAdGroupMemberListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdGroupMemberListSettings());
@@ -300,7 +289,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdGroupMemberRemoveSettings toolSettings);
         static partial void PostProcess(AzureAdGroupMemberRemoveSettings toolSettings);
-        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdGroupMemberRemove(Configure<AzureAdGroupMemberRemoveSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdGroupMemberRemoveSettings());
@@ -311,7 +300,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdSpCredentialDeleteSettings toolSettings);
         static partial void PostProcess(AzureAdSpCredentialDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdSpCredentialDelete(Configure<AzureAdSpCredentialDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdSpCredentialDeleteSettings());
@@ -322,7 +311,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdSpCredentialListSettings toolSettings);
         static partial void PostProcess(AzureAdSpCredentialListSettings toolSettings);
-        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdSpCredentialList(Configure<AzureAdSpCredentialListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdSpCredentialListSettings());
@@ -333,7 +322,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAdSpCredentialResetSettings toolSettings);
         static partial void PostProcess(AzureAdSpCredentialResetSettings toolSettings);
-        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/ad.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAdSpCredentialReset(Configure<AzureAdSpCredentialResetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdSpCredentialResetSettings());
@@ -995,59 +984,6 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureAdSpResetCredentialsSettings
-    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAdSpResetCredentialsSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAd executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAdTasks.AzureAdPath;
-        /// <summary><p></p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Append the new credential instead of overwriting.</p></summary>
-        public virtual string Append { get; internal set; }
-        /// <summary><p></p></summary>
-        public virtual string Cert { get; internal set; }
-        /// <summary><p></p></summary>
-        public virtual string CreateCert { get; internal set; }
-        /// <summary><p></p></summary>
-        public virtual string Keyvault { get; internal set; }
-        /// <summary><p></p></summary>
-        public virtual string Password { get; internal set; }
-        /// <summary><p></p></summary>
-        public virtual string Years { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("ad sp reset-credentials")
-              .Add("--name {value}", Name)
-              .Add("--append {value}", Append)
-              .Add("--cert {value}", Cert)
-              .Add("--create-cert {value}", CreateCert)
-              .Add("--keyvault {value}", Keyvault)
-              .Add("--password {value}", Password)
-              .Add("--years {value}", Years)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
     #region AzureAdSpShowSettings
     /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
     [PublicAPI]
@@ -1404,9 +1340,9 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureAdTasks.AzureAdPath;
         /// <summary><p>Service principal name, or object id.</p></summary>
         public virtual string Id { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>Credential key id.</p></summary>
         public virtual string KeyId { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>A certificate based credential.</p></summary>
         public virtual string Cert { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
@@ -1445,7 +1381,7 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureAdTasks.AzureAdPath;
         /// <summary><p>Service principal name, or object id.</p></summary>
         public virtual string Id { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>A certificate based credential.</p></summary>
         public virtual string Cert { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
@@ -1481,9 +1417,9 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureAd executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureAdTasks.AzureAdPath;
-        /// <summary><p></p></summary>
+        /// <summary><p>Name or app URI for the credential.</p></summary>
         public virtual string Name { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>Append the new credential instead of overwriting.</p></summary>
         public virtual string Append { get; internal set; }
         /// <summary><p>Certificate to use for credentials.</p></summary>
         public virtual string Cert { get; internal set; }
@@ -1491,7 +1427,7 @@ namespace Nuke.Azure
         public virtual string CreateCert { get; internal set; }
         /// <summary><p>Name or ID of a KeyVault to use for creating or retrieving certificates.</p></summary>
         public virtual string Keyvault { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>The password used to log in.</p></summary>
         public virtual string Password { get; internal set; }
         /// <summary><p>Number of years for which the credentials will be valid. Default: 1 year.</p></summary>
         public virtual int? Years { get; internal set; }
@@ -4255,230 +4191,6 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureAdSpResetCredentialsSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAdSpResetCredentialsSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAdSpResetCredentialsSettings.Name"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureAdSpResetCredentialsSettings SetName(this AzureAdSpResetCredentialsSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdSpResetCredentialsSettings.Name"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureAdSpResetCredentialsSettings ResetName(this AzureAdSpResetCredentialsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Append
-        /// <summary><p><em>Sets <see cref="AzureAdSpResetCredentialsSettings.Append"/>.</em></p><p>Append the new credential instead of overwriting.</p></summary>
-        [Pure]
-        public static AzureAdSpResetCredentialsSettings SetAppend(this AzureAdSpResetCredentialsSettings toolSettings, string append)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Append = append;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdSpResetCredentialsSettings.Append"/>.</em></p><p>Append the new credential instead of overwriting.</p></summary>
-        [Pure]
-        public static AzureAdSpResetCredentialsSettings ResetAppend(this AzureAdSpResetCredentialsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Append = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Cert
-        /// <summary><p><em>Sets <see cref="AzureAdSpResetCredentialsSettings.Cert"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureAdSpResetCredentialsSettings SetCert(this AzureAdSpResetCredentialsSettings toolSettings, string cert)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Cert = cert;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdSpResetCredentialsSettings.Cert"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureAdSpResetCredentialsSettings ResetCert(this AzureAdSpResetCredentialsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Cert = null;
-            return toolSettings;
-        }
-        #endregion
-        #region CreateCert
-        /// <summary><p><em>Sets <see cref="AzureAdSpResetCredentialsSettings.CreateCert"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureAdSpResetCredentialsSettings SetCreateCert(this AzureAdSpResetCredentialsSettings toolSettings, string createCert)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CreateCert = createCert;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdSpResetCredentialsSettings.CreateCert"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureAdSpResetCredentialsSettings ResetCreateCert(this AzureAdSpResetCredentialsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CreateCert = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Keyvault
-        /// <summary><p><em>Sets <see cref="AzureAdSpResetCredentialsSettings.Keyvault"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureAdSpResetCredentialsSettings SetKeyvault(this AzureAdSpResetCredentialsSettings toolSettings, string keyvault)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Keyvault = keyvault;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdSpResetCredentialsSettings.Keyvault"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureAdSpResetCredentialsSettings ResetKeyvault(this AzureAdSpResetCredentialsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Keyvault = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Password
-        /// <summary><p><em>Sets <see cref="AzureAdSpResetCredentialsSettings.Password"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureAdSpResetCredentialsSettings SetPassword(this AzureAdSpResetCredentialsSettings toolSettings, string password)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Password = password;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdSpResetCredentialsSettings.Password"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureAdSpResetCredentialsSettings ResetPassword(this AzureAdSpResetCredentialsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Password = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Years
-        /// <summary><p><em>Sets <see cref="AzureAdSpResetCredentialsSettings.Years"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureAdSpResetCredentialsSettings SetYears(this AzureAdSpResetCredentialsSettings toolSettings, string years)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Years = years;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdSpResetCredentialsSettings.Years"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureAdSpResetCredentialsSettings ResetYears(this AzureAdSpResetCredentialsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Years = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAdSpResetCredentialsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAdSpResetCredentialsSettings SetDebug(this AzureAdSpResetCredentialsSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdSpResetCredentialsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAdSpResetCredentialsSettings ResetDebug(this AzureAdSpResetCredentialsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAdSpResetCredentialsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAdSpResetCredentialsSettings SetHelp(this AzureAdSpResetCredentialsSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdSpResetCredentialsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAdSpResetCredentialsSettings ResetHelp(this AzureAdSpResetCredentialsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAdSpResetCredentialsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAdSpResetCredentialsSettings SetOutput(this AzureAdSpResetCredentialsSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdSpResetCredentialsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAdSpResetCredentialsSettings ResetOutput(this AzureAdSpResetCredentialsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAdSpResetCredentialsSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAdSpResetCredentialsSettings SetQuery(this AzureAdSpResetCredentialsSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdSpResetCredentialsSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAdSpResetCredentialsSettings ResetQuery(this AzureAdSpResetCredentialsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAdSpResetCredentialsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAdSpResetCredentialsSettings SetVerbose(this AzureAdSpResetCredentialsSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdSpResetCredentialsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAdSpResetCredentialsSettings ResetVerbose(this AzureAdSpResetCredentialsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region AzureAdSpShowSettingsExtensions
     /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
     [PublicAPI]
@@ -5752,7 +5464,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region KeyId
-        /// <summary><p><em>Sets <see cref="AzureAdSpCredentialDeleteSettings.KeyId"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAdSpCredentialDeleteSettings.KeyId"/>.</em></p><p>Credential key id.</p></summary>
         [Pure]
         public static AzureAdSpCredentialDeleteSettings SetKeyId(this AzureAdSpCredentialDeleteSettings toolSettings, string keyId)
         {
@@ -5760,7 +5472,7 @@ namespace Nuke.Azure
             toolSettings.KeyId = keyId;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAdSpCredentialDeleteSettings.KeyId"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAdSpCredentialDeleteSettings.KeyId"/>.</em></p><p>Credential key id.</p></summary>
         [Pure]
         public static AzureAdSpCredentialDeleteSettings ResetKeyId(this AzureAdSpCredentialDeleteSettings toolSettings)
         {
@@ -5770,7 +5482,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Cert
-        /// <summary><p><em>Sets <see cref="AzureAdSpCredentialDeleteSettings.Cert"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAdSpCredentialDeleteSettings.Cert"/>.</em></p><p>A certificate based credential.</p></summary>
         [Pure]
         public static AzureAdSpCredentialDeleteSettings SetCert(this AzureAdSpCredentialDeleteSettings toolSettings, string cert)
         {
@@ -5778,7 +5490,7 @@ namespace Nuke.Azure
             toolSettings.Cert = cert;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAdSpCredentialDeleteSettings.Cert"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAdSpCredentialDeleteSettings.Cert"/>.</em></p><p>A certificate based credential.</p></summary>
         [Pure]
         public static AzureAdSpCredentialDeleteSettings ResetCert(this AzureAdSpCredentialDeleteSettings toolSettings)
         {
@@ -5904,7 +5616,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Cert
-        /// <summary><p><em>Sets <see cref="AzureAdSpCredentialListSettings.Cert"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAdSpCredentialListSettings.Cert"/>.</em></p><p>A certificate based credential.</p></summary>
         [Pure]
         public static AzureAdSpCredentialListSettings SetCert(this AzureAdSpCredentialListSettings toolSettings, string cert)
         {
@@ -5912,7 +5624,7 @@ namespace Nuke.Azure
             toolSettings.Cert = cert;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAdSpCredentialListSettings.Cert"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAdSpCredentialListSettings.Cert"/>.</em></p><p>A certificate based credential.</p></summary>
         [Pure]
         public static AzureAdSpCredentialListSettings ResetCert(this AzureAdSpCredentialListSettings toolSettings)
         {
@@ -6020,7 +5732,7 @@ namespace Nuke.Azure
     public static partial class AzureAdSpCredentialResetSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureAdSpCredentialResetSettings.Name"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAdSpCredentialResetSettings.Name"/>.</em></p><p>Name or app URI for the credential.</p></summary>
         [Pure]
         public static AzureAdSpCredentialResetSettings SetName(this AzureAdSpCredentialResetSettings toolSettings, string name)
         {
@@ -6028,7 +5740,7 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAdSpCredentialResetSettings.Name"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAdSpCredentialResetSettings.Name"/>.</em></p><p>Name or app URI for the credential.</p></summary>
         [Pure]
         public static AzureAdSpCredentialResetSettings ResetName(this AzureAdSpCredentialResetSettings toolSettings)
         {
@@ -6038,7 +5750,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Append
-        /// <summary><p><em>Sets <see cref="AzureAdSpCredentialResetSettings.Append"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAdSpCredentialResetSettings.Append"/>.</em></p><p>Append the new credential instead of overwriting.</p></summary>
         [Pure]
         public static AzureAdSpCredentialResetSettings SetAppend(this AzureAdSpCredentialResetSettings toolSettings, string append)
         {
@@ -6046,7 +5758,7 @@ namespace Nuke.Azure
             toolSettings.Append = append;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAdSpCredentialResetSettings.Append"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAdSpCredentialResetSettings.Append"/>.</em></p><p>Append the new credential instead of overwriting.</p></summary>
         [Pure]
         public static AzureAdSpCredentialResetSettings ResetAppend(this AzureAdSpCredentialResetSettings toolSettings)
         {
@@ -6110,7 +5822,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Password
-        /// <summary><p><em>Sets <see cref="AzureAdSpCredentialResetSettings.Password"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAdSpCredentialResetSettings.Password"/>.</em></p><p>The password used to log in.</p></summary>
         [Pure]
         public static AzureAdSpCredentialResetSettings SetPassword(this AzureAdSpCredentialResetSettings toolSettings, string password)
         {
@@ -6118,7 +5830,7 @@ namespace Nuke.Azure
             toolSettings.Password = password;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAdSpCredentialResetSettings.Password"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAdSpCredentialResetSettings.Password"/>.</em></p><p>The password used to log in.</p></summary>
         [Pure]
         public static AzureAdSpCredentialResetSettings ResetPassword(this AzureAdSpCredentialResetSettings toolSettings)
         {

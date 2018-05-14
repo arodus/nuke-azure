@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureGroup.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureGroupCreateSettings toolSettings);
         static partial void PostProcess(AzureGroupCreateSettings toolSettings);
-        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/group.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureGroupCreate(Configure<AzureGroupCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupCreateSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureGroupDeleteSettings toolSettings);
         static partial void PostProcess(AzureGroupDeleteSettings toolSettings);
-        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/group.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureGroupDelete(Configure<AzureGroupDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupDeleteSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureGroupExistsSettings toolSettings);
         static partial void PostProcess(AzureGroupExistsSettings toolSettings);
-        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/group.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureGroupExists(Configure<AzureGroupExistsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupExistsSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureGroupExportSettings toolSettings);
         static partial void PostProcess(AzureGroupExportSettings toolSettings);
-        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/group.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureGroupExport(Configure<AzureGroupExportSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupExportSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureGroupListSettings toolSettings);
         static partial void PostProcess(AzureGroupListSettings toolSettings);
-        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/group.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureGroupList(Configure<AzureGroupListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupListSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureGroupShowSettings toolSettings);
         static partial void PostProcess(AzureGroupShowSettings toolSettings);
-        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/group.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureGroupShow(Configure<AzureGroupShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupShowSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureGroupUpdateSettings toolSettings);
         static partial void PostProcess(AzureGroupUpdateSettings toolSettings);
-        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/group.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureGroupUpdate(Configure<AzureGroupUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupUpdateSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureGroupWaitSettings toolSettings);
         static partial void PostProcess(AzureGroupWaitSettings toolSettings);
-        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/group.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureGroupWait(Configure<AzureGroupWaitSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupWaitSettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureGroupDeploymentCreateSettings toolSettings);
         static partial void PostProcess(AzureGroupDeploymentCreateSettings toolSettings);
-        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/group.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureGroupDeploymentCreate(Configure<AzureGroupDeploymentCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupDeploymentCreateSettings());
@@ -135,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureGroupDeploymentDeleteSettings toolSettings);
         static partial void PostProcess(AzureGroupDeploymentDeleteSettings toolSettings);
-        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/group.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureGroupDeploymentDelete(Configure<AzureGroupDeploymentDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupDeploymentDeleteSettings());
@@ -146,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureGroupDeploymentExportSettings toolSettings);
         static partial void PostProcess(AzureGroupDeploymentExportSettings toolSettings);
-        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/group.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureGroupDeploymentExport(Configure<AzureGroupDeploymentExportSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupDeploymentExportSettings());
@@ -157,7 +157,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureGroupDeploymentListSettings toolSettings);
         static partial void PostProcess(AzureGroupDeploymentListSettings toolSettings);
-        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/group.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureGroupDeploymentList(Configure<AzureGroupDeploymentListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupDeploymentListSettings());
@@ -168,7 +168,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureGroupDeploymentShowSettings toolSettings);
         static partial void PostProcess(AzureGroupDeploymentShowSettings toolSettings);
-        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/group.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureGroupDeploymentShow(Configure<AzureGroupDeploymentShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupDeploymentShowSettings());
@@ -179,7 +179,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureGroupDeploymentValidateSettings toolSettings);
         static partial void PostProcess(AzureGroupDeploymentValidateSettings toolSettings);
-        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/group.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureGroupDeploymentValidate(Configure<AzureGroupDeploymentValidateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupDeploymentValidateSettings());
@@ -190,7 +190,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureGroupDeploymentWaitSettings toolSettings);
         static partial void PostProcess(AzureGroupDeploymentWaitSettings toolSettings);
-        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/group.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureGroupDeploymentWait(Configure<AzureGroupDeploymentWaitSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupDeploymentWaitSettings());
@@ -201,7 +201,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureGroupLockCreateSettings toolSettings);
         static partial void PostProcess(AzureGroupLockCreateSettings toolSettings);
-        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/group.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureGroupLockCreate(Configure<AzureGroupLockCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupLockCreateSettings());
@@ -212,7 +212,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureGroupLockDeleteSettings toolSettings);
         static partial void PostProcess(AzureGroupLockDeleteSettings toolSettings);
-        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/group.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureGroupLockDelete(Configure<AzureGroupLockDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupLockDeleteSettings());
@@ -223,7 +223,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureGroupLockListSettings toolSettings);
         static partial void PostProcess(AzureGroupLockListSettings toolSettings);
-        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/group.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureGroupLockList(Configure<AzureGroupLockListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupLockListSettings());
@@ -234,7 +234,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureGroupLockShowSettings toolSettings);
         static partial void PostProcess(AzureGroupLockShowSettings toolSettings);
-        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/group.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureGroupLockShow(Configure<AzureGroupLockShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupLockShowSettings());
@@ -245,7 +245,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureGroupLockUpdateSettings toolSettings);
         static partial void PostProcess(AzureGroupLockUpdateSettings toolSettings);
-        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/group.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureGroupLockUpdate(Configure<AzureGroupLockUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupLockUpdateSettings());
@@ -256,7 +256,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureGroupDeploymentOperationListSettings toolSettings);
         static partial void PostProcess(AzureGroupDeploymentOperationListSettings toolSettings);
-        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/group.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureGroupDeploymentOperationList(Configure<AzureGroupDeploymentOperationListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupDeploymentOperationListSettings());
@@ -267,7 +267,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureGroupDeploymentOperationShowSettings toolSettings);
         static partial void PostProcess(AzureGroupDeploymentOperationShowSettings toolSettings);
-        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/group.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureGroupDeploymentOperationShow(Configure<AzureGroupDeploymentOperationShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupDeploymentOperationShowSettings());

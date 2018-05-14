@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureCosmosdb.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCosmosdbCheckNameExistsSettings toolSettings);
         static partial void PostProcess(AzureCosmosdbCheckNameExistsSettings toolSettings);
-        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cosmosdb.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCosmosdbCheckNameExists(Configure<AzureCosmosdbCheckNameExistsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbCheckNameExistsSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCosmosdbCreateSettings toolSettings);
         static partial void PostProcess(AzureCosmosdbCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cosmosdb.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCosmosdbCreate(Configure<AzureCosmosdbCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbCreateSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCosmosdbDeleteSettings toolSettings);
         static partial void PostProcess(AzureCosmosdbDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cosmosdb.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCosmosdbDelete(Configure<AzureCosmosdbDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbDeleteSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCosmosdbFailoverPriorityChangeSettings toolSettings);
         static partial void PostProcess(AzureCosmosdbFailoverPriorityChangeSettings toolSettings);
-        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cosmosdb.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCosmosdbFailoverPriorityChange(Configure<AzureCosmosdbFailoverPriorityChangeSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbFailoverPriorityChangeSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCosmosdbListSettings toolSettings);
         static partial void PostProcess(AzureCosmosdbListSettings toolSettings);
-        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cosmosdb.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCosmosdbList(Configure<AzureCosmosdbListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbListSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCosmosdbListConnectionStringsSettings toolSettings);
         static partial void PostProcess(AzureCosmosdbListConnectionStringsSettings toolSettings);
-        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cosmosdb.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCosmosdbListConnectionStrings(Configure<AzureCosmosdbListConnectionStringsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbListConnectionStringsSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCosmosdbListKeysSettings toolSettings);
         static partial void PostProcess(AzureCosmosdbListKeysSettings toolSettings);
-        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cosmosdb.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCosmosdbListKeys(Configure<AzureCosmosdbListKeysSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbListKeysSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCosmosdbListReadOnlyKeysSettings toolSettings);
         static partial void PostProcess(AzureCosmosdbListReadOnlyKeysSettings toolSettings);
-        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cosmosdb.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCosmosdbListReadOnlyKeys(Configure<AzureCosmosdbListReadOnlyKeysSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbListReadOnlyKeysSettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCosmosdbRegenerateKeySettings toolSettings);
         static partial void PostProcess(AzureCosmosdbRegenerateKeySettings toolSettings);
-        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cosmosdb.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCosmosdbRegenerateKey(Configure<AzureCosmosdbRegenerateKeySettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbRegenerateKeySettings());
@@ -135,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCosmosdbShowSettings toolSettings);
         static partial void PostProcess(AzureCosmosdbShowSettings toolSettings);
-        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cosmosdb.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCosmosdbShow(Configure<AzureCosmosdbShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbShowSettings());
@@ -146,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCosmosdbUpdateSettings toolSettings);
         static partial void PostProcess(AzureCosmosdbUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cosmosdb.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCosmosdbUpdate(Configure<AzureCosmosdbUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbUpdateSettings());
@@ -157,7 +157,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCosmosdbCollectionCreateSettings toolSettings);
         static partial void PostProcess(AzureCosmosdbCollectionCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cosmosdb.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCosmosdbCollectionCreate(Configure<AzureCosmosdbCollectionCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbCollectionCreateSettings());
@@ -168,7 +168,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCosmosdbCollectionDeleteSettings toolSettings);
         static partial void PostProcess(AzureCosmosdbCollectionDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cosmosdb.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCosmosdbCollectionDelete(Configure<AzureCosmosdbCollectionDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbCollectionDeleteSettings());
@@ -179,7 +179,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCosmosdbCollectionExistsSettings toolSettings);
         static partial void PostProcess(AzureCosmosdbCollectionExistsSettings toolSettings);
-        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cosmosdb.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCosmosdbCollectionExists(Configure<AzureCosmosdbCollectionExistsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbCollectionExistsSettings());
@@ -190,7 +190,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCosmosdbCollectionListSettings toolSettings);
         static partial void PostProcess(AzureCosmosdbCollectionListSettings toolSettings);
-        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cosmosdb.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCosmosdbCollectionList(Configure<AzureCosmosdbCollectionListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbCollectionListSettings());
@@ -201,7 +201,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCosmosdbCollectionShowSettings toolSettings);
         static partial void PostProcess(AzureCosmosdbCollectionShowSettings toolSettings);
-        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cosmosdb.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCosmosdbCollectionShow(Configure<AzureCosmosdbCollectionShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbCollectionShowSettings());
@@ -212,7 +212,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCosmosdbCollectionUpdateSettings toolSettings);
         static partial void PostProcess(AzureCosmosdbCollectionUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cosmosdb.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCosmosdbCollectionUpdate(Configure<AzureCosmosdbCollectionUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbCollectionUpdateSettings());
@@ -223,7 +223,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCosmosdbDatabaseCreateSettings toolSettings);
         static partial void PostProcess(AzureCosmosdbDatabaseCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cosmosdb.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCosmosdbDatabaseCreate(Configure<AzureCosmosdbDatabaseCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbDatabaseCreateSettings());
@@ -234,7 +234,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCosmosdbDatabaseDeleteSettings toolSettings);
         static partial void PostProcess(AzureCosmosdbDatabaseDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cosmosdb.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCosmosdbDatabaseDelete(Configure<AzureCosmosdbDatabaseDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbDatabaseDeleteSettings());
@@ -245,7 +245,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCosmosdbDatabaseExistsSettings toolSettings);
         static partial void PostProcess(AzureCosmosdbDatabaseExistsSettings toolSettings);
-        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cosmosdb.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCosmosdbDatabaseExists(Configure<AzureCosmosdbDatabaseExistsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbDatabaseExistsSettings());
@@ -256,7 +256,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCosmosdbDatabaseListSettings toolSettings);
         static partial void PostProcess(AzureCosmosdbDatabaseListSettings toolSettings);
-        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cosmosdb.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCosmosdbDatabaseList(Configure<AzureCosmosdbDatabaseListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbDatabaseListSettings());
@@ -267,7 +267,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureCosmosdbDatabaseShowSettings toolSettings);
         static partial void PostProcess(AzureCosmosdbDatabaseShowSettings toolSettings);
-        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cosmosdb.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureCosmosdbDatabaseShow(Configure<AzureCosmosdbDatabaseShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbDatabaseShowSettings());
@@ -331,6 +331,8 @@ namespace Nuke.Azure
         public virtual CosmosdbDefaultConsistencyLevel DefaultConsistencyLevel { get; internal set; }
         /// <summary><p>Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage. Automatic failover will result in a new write region for the account and is chosen based on the failover priorities configured for the account.</p></summary>
         public virtual bool? EnableAutomaticFailover { get; internal set; }
+        /// <summary><p>Enables virtual network on the Cosmos DB database account.</p></summary>
+        public virtual bool? EnableVirtualNetwork { get; internal set; }
         /// <summary><p>Firewall support. Specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IPs for a given database account. IP addresses/ranges must be comma-separated and must not contain any spaces.</p></summary>
         public virtual IReadOnlyList<string> IpRangeFilter => IpRangeFilterInternal.AsReadOnly();
         internal List<string> IpRangeFilterInternal { get; set; } = new List<string>();
@@ -344,6 +346,8 @@ namespace Nuke.Azure
         public virtual string MaxStalenessPrefix { get; internal set; }
         /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
+        /// <summary><p>ACL's for virtual network.</p></summary>
+        public virtual string VirtualNetworkRules { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -363,12 +367,14 @@ namespace Nuke.Azure
               .Add("--capabilities {value}", Capabilities)
               .Add("--default-consistency-level {value}", DefaultConsistencyLevel)
               .Add("--enable-automatic-failover", EnableAutomaticFailover)
+              .Add("--enable-virtual-network", EnableVirtualNetwork)
               .Add("--ip-range-filter {value}", IpRangeFilter, separator: ',')
               .Add("--kind {value}", Kind)
               .Add("--locations {value}", Locations)
               .Add("--max-interval {value}", MaxInterval)
               .Add("--max-staleness-prefix {value}", MaxStalenessPrefix)
               .Add("--tags {value}", Tags)
+              .Add("--virtual-network-rules {value}", VirtualNetworkRules)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -704,6 +710,8 @@ namespace Nuke.Azure
         public virtual CosmosdbDefaultConsistencyLevel DefaultConsistencyLevel { get; internal set; }
         /// <summary><p>Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage. Automatic failover will result in a new write region for the account and is chosen based on the failover priorities configured for the account.</p></summary>
         public virtual bool? EnableAutomaticFailover { get; internal set; }
+        /// <summary><p>Enables virtual network on the Cosmos DB database account.</p></summary>
+        public virtual bool? EnableVirtualNetwork { get; internal set; }
         /// <summary><p>Firewall support. Specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IPs for a given database account. IP addresses/ranges must be comma-separated and must not contain any spaces.</p></summary>
         public virtual IReadOnlyList<string> IpRangeFilter => IpRangeFilterInternal.AsReadOnly();
         internal List<string> IpRangeFilterInternal { get; set; } = new List<string>();
@@ -715,6 +723,8 @@ namespace Nuke.Azure
         public virtual string MaxStalenessPrefix { get; internal set; }
         /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
+        /// <summary><p>ACL's for virtual network.</p></summary>
+        public virtual string VirtualNetworkRules { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -734,11 +744,13 @@ namespace Nuke.Azure
               .Add("--capabilities {value}", Capabilities)
               .Add("--default-consistency-level {value}", DefaultConsistencyLevel)
               .Add("--enable-automatic-failover", EnableAutomaticFailover)
+              .Add("--enable-virtual-network", EnableVirtualNetwork)
               .Add("--ip-range-filter {value}", IpRangeFilter, separator: ',')
               .Add("--locations {value}", Locations)
               .Add("--max-interval {value}", MaxInterval)
               .Add("--max-staleness-prefix {value}", MaxStalenessPrefix)
               .Add("--tags {value}", Tags)
+              .Add("--virtual-network-rules {value}", VirtualNetworkRules)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1534,6 +1546,48 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region EnableVirtualNetwork
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbCreateSettings.EnableVirtualNetwork"/>.</em></p><p>Enables virtual network on the Cosmos DB database account.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCreateSettings SetEnableVirtualNetwork(this AzureCosmosdbCreateSettings toolSettings, bool? enableVirtualNetwork)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableVirtualNetwork = enableVirtualNetwork;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbCreateSettings.EnableVirtualNetwork"/>.</em></p><p>Enables virtual network on the Cosmos DB database account.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCreateSettings ResetEnableVirtualNetwork(this AzureCosmosdbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableVirtualNetwork = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureCosmosdbCreateSettings.EnableVirtualNetwork"/>.</em></p><p>Enables virtual network on the Cosmos DB database account.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCreateSettings EnableEnableVirtualNetwork(this AzureCosmosdbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableVirtualNetwork = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureCosmosdbCreateSettings.EnableVirtualNetwork"/>.</em></p><p>Enables virtual network on the Cosmos DB database account.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCreateSettings DisableEnableVirtualNetwork(this AzureCosmosdbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableVirtualNetwork = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureCosmosdbCreateSettings.EnableVirtualNetwork"/>.</em></p><p>Enables virtual network on the Cosmos DB database account.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCreateSettings ToggleEnableVirtualNetwork(this AzureCosmosdbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableVirtualNetwork = !toolSettings.EnableVirtualNetwork;
+            return toolSettings;
+        }
+        #endregion
         #region IpRangeFilter
         /// <summary><p><em>Sets <see cref="AzureCosmosdbCreateSettings.IpRangeFilter"/> to a new list.</em></p><p>Firewall support. Specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IPs for a given database account. IP addresses/ranges must be comma-separated and must not contain any spaces.</p></summary>
         [Pure]
@@ -1681,6 +1735,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VirtualNetworkRules
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbCreateSettings.VirtualNetworkRules"/>.</em></p><p>ACL's for virtual network.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCreateSettings SetVirtualNetworkRules(this AzureCosmosdbCreateSettings toolSettings, string virtualNetworkRules)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VirtualNetworkRules = virtualNetworkRules;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbCreateSettings.VirtualNetworkRules"/>.</em></p><p>ACL's for virtual network.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCreateSettings ResetVirtualNetworkRules(this AzureCosmosdbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VirtualNetworkRules = null;
             return toolSettings;
         }
         #endregion
@@ -2986,6 +3058,48 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region EnableVirtualNetwork
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbUpdateSettings.EnableVirtualNetwork"/>.</em></p><p>Enables virtual network on the Cosmos DB database account.</p></summary>
+        [Pure]
+        public static AzureCosmosdbUpdateSettings SetEnableVirtualNetwork(this AzureCosmosdbUpdateSettings toolSettings, bool? enableVirtualNetwork)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableVirtualNetwork = enableVirtualNetwork;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbUpdateSettings.EnableVirtualNetwork"/>.</em></p><p>Enables virtual network on the Cosmos DB database account.</p></summary>
+        [Pure]
+        public static AzureCosmosdbUpdateSettings ResetEnableVirtualNetwork(this AzureCosmosdbUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableVirtualNetwork = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureCosmosdbUpdateSettings.EnableVirtualNetwork"/>.</em></p><p>Enables virtual network on the Cosmos DB database account.</p></summary>
+        [Pure]
+        public static AzureCosmosdbUpdateSettings EnableEnableVirtualNetwork(this AzureCosmosdbUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableVirtualNetwork = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureCosmosdbUpdateSettings.EnableVirtualNetwork"/>.</em></p><p>Enables virtual network on the Cosmos DB database account.</p></summary>
+        [Pure]
+        public static AzureCosmosdbUpdateSettings DisableEnableVirtualNetwork(this AzureCosmosdbUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableVirtualNetwork = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureCosmosdbUpdateSettings.EnableVirtualNetwork"/>.</em></p><p>Enables virtual network on the Cosmos DB database account.</p></summary>
+        [Pure]
+        public static AzureCosmosdbUpdateSettings ToggleEnableVirtualNetwork(this AzureCosmosdbUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableVirtualNetwork = !toolSettings.EnableVirtualNetwork;
+            return toolSettings;
+        }
+        #endregion
         #region IpRangeFilter
         /// <summary><p><em>Sets <see cref="AzureCosmosdbUpdateSettings.IpRangeFilter"/> to a new list.</em></p><p>Firewall support. Specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IPs for a given database account. IP addresses/ranges must be comma-separated and must not contain any spaces.</p></summary>
         [Pure]
@@ -3115,6 +3229,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VirtualNetworkRules
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbUpdateSettings.VirtualNetworkRules"/>.</em></p><p>ACL's for virtual network.</p></summary>
+        [Pure]
+        public static AzureCosmosdbUpdateSettings SetVirtualNetworkRules(this AzureCosmosdbUpdateSettings toolSettings, string virtualNetworkRules)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VirtualNetworkRules = virtualNetworkRules;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbUpdateSettings.VirtualNetworkRules"/>.</em></p><p>ACL's for virtual network.</p></summary>
+        [Pure]
+        public static AzureCosmosdbUpdateSettings ResetVirtualNetworkRules(this AzureCosmosdbUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VirtualNetworkRules = null;
             return toolSettings;
         }
         #endregion

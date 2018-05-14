@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureEventgrid.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventgridSettings toolSettings);
         static partial void PostProcess(AzureEventgridSettings toolSettings);
-        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventgrid.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventgrid(Configure<AzureEventgridSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventgridEventSubscriptionCreateSettings toolSettings);
         static partial void PostProcess(AzureEventgridEventSubscriptionCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventgrid.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventgridEventSubscriptionCreate(Configure<AzureEventgridEventSubscriptionCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridEventSubscriptionCreateSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventgridEventSubscriptionDeleteSettings toolSettings);
         static partial void PostProcess(AzureEventgridEventSubscriptionDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventgrid.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventgridEventSubscriptionDelete(Configure<AzureEventgridEventSubscriptionDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridEventSubscriptionDeleteSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventgridEventSubscriptionListSettings toolSettings);
         static partial void PostProcess(AzureEventgridEventSubscriptionListSettings toolSettings);
-        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventgrid.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventgridEventSubscriptionList(Configure<AzureEventgridEventSubscriptionListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridEventSubscriptionListSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventgridEventSubscriptionShowSettings toolSettings);
         static partial void PostProcess(AzureEventgridEventSubscriptionShowSettings toolSettings);
-        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventgrid.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventgridEventSubscriptionShow(Configure<AzureEventgridEventSubscriptionShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridEventSubscriptionShowSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventgridEventSubscriptionUpdateSettings toolSettings);
         static partial void PostProcess(AzureEventgridEventSubscriptionUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventgrid.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventgridEventSubscriptionUpdate(Configure<AzureEventgridEventSubscriptionUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridEventSubscriptionUpdateSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventgridTopicTypeListSettings toolSettings);
         static partial void PostProcess(AzureEventgridTopicTypeListSettings toolSettings);
-        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventgrid.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventgridTopicTypeList(Configure<AzureEventgridTopicTypeListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridTopicTypeListSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventgridTopicTypeListEventTypesSettings toolSettings);
         static partial void PostProcess(AzureEventgridTopicTypeListEventTypesSettings toolSettings);
-        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventgrid.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventgridTopicTypeListEventTypes(Configure<AzureEventgridTopicTypeListEventTypesSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridTopicTypeListEventTypesSettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventgridTopicTypeShowSettings toolSettings);
         static partial void PostProcess(AzureEventgridTopicTypeShowSettings toolSettings);
-        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventgrid.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventgridTopicTypeShow(Configure<AzureEventgridTopicTypeShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridTopicTypeShowSettings());
@@ -135,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventgridTopicCreateSettings toolSettings);
         static partial void PostProcess(AzureEventgridTopicCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventgrid.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventgridTopicCreate(Configure<AzureEventgridTopicCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridTopicCreateSettings());
@@ -146,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventgridTopicDeleteSettings toolSettings);
         static partial void PostProcess(AzureEventgridTopicDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventgrid.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventgridTopicDelete(Configure<AzureEventgridTopicDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridTopicDeleteSettings());
@@ -157,7 +157,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventgridTopicListSettings toolSettings);
         static partial void PostProcess(AzureEventgridTopicListSettings toolSettings);
-        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventgrid.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventgridTopicList(Configure<AzureEventgridTopicListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridTopicListSettings());
@@ -168,7 +168,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventgridTopicShowSettings toolSettings);
         static partial void PostProcess(AzureEventgridTopicShowSettings toolSettings);
-        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventgrid.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventgridTopicShow(Configure<AzureEventgridTopicShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridTopicShowSettings());
@@ -179,7 +179,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventgridTopicUpdateSettings toolSettings);
         static partial void PostProcess(AzureEventgridTopicUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventgrid.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventgridTopicUpdate(Configure<AzureEventgridTopicUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridTopicUpdateSettings());
@@ -190,7 +190,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventgridTopicKeyListSettings toolSettings);
         static partial void PostProcess(AzureEventgridTopicKeyListSettings toolSettings);
-        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventgrid.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventgridTopicKeyList(Configure<AzureEventgridTopicKeyListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridTopicKeyListSettings());
@@ -201,7 +201,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureEventgridTopicKeyRegenerateSettings toolSettings);
         static partial void PostProcess(AzureEventgridTopicKeyRegenerateSettings toolSettings);
-        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/eventgrid.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureEventgridTopicKeyRegenerate(Configure<AzureEventgridTopicKeyRegenerateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridTopicKeyRegenerateSettings());

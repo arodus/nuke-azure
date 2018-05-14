@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureAppservice.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAppserviceListLocationsSettings toolSettings);
         static partial void PostProcess(AzureAppserviceListLocationsSettings toolSettings);
-        /// <summary><p>Manage App Service plans.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/appservice.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage App Service plans.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/appservice?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAppserviceListLocations(Configure<AzureAppserviceListLocationsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAppserviceListLocationsSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAppservicePlanCreateSettings toolSettings);
         static partial void PostProcess(AzureAppservicePlanCreateSettings toolSettings);
-        /// <summary><p>Manage App Service plans.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/appservice.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage App Service plans.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/appservice?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAppservicePlanCreate(Configure<AzureAppservicePlanCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAppservicePlanCreateSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAppservicePlanDeleteSettings toolSettings);
         static partial void PostProcess(AzureAppservicePlanDeleteSettings toolSettings);
-        /// <summary><p>Manage App Service plans.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/appservice.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage App Service plans.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/appservice?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAppservicePlanDelete(Configure<AzureAppservicePlanDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAppservicePlanDeleteSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAppservicePlanListSettings toolSettings);
         static partial void PostProcess(AzureAppservicePlanListSettings toolSettings);
-        /// <summary><p>Manage App Service plans.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/appservice.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage App Service plans.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/appservice?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAppservicePlanList(Configure<AzureAppservicePlanListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAppservicePlanListSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAppservicePlanShowSettings toolSettings);
         static partial void PostProcess(AzureAppservicePlanShowSettings toolSettings);
-        /// <summary><p>Manage App Service plans.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/appservice.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage App Service plans.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/appservice?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAppservicePlanShow(Configure<AzureAppservicePlanShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAppservicePlanShowSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAppservicePlanUpdateSettings toolSettings);
         static partial void PostProcess(AzureAppservicePlanUpdateSettings toolSettings);
-        /// <summary><p>Manage App Service plans.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/appservice.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage App Service plans.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/appservice?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAppservicePlanUpdate(Configure<AzureAppservicePlanUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAppservicePlanUpdateSettings());

@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureSf.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSfSettings toolSettings);
         static partial void PostProcess(AzureSfSettings toolSettings);
-        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sf.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSf(Configure<AzureSfSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSfSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSfApplicationSettings toolSettings);
         static partial void PostProcess(AzureSfApplicationSettings toolSettings);
-        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sf.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSfApplication(Configure<AzureSfApplicationSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSfApplicationSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSfClusterCreateSettings toolSettings);
         static partial void PostProcess(AzureSfClusterCreateSettings toolSettings);
-        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sf.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSfClusterCreate(Configure<AzureSfClusterCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSfClusterCreateSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSfClusterListSettings toolSettings);
         static partial void PostProcess(AzureSfClusterListSettings toolSettings);
-        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sf.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSfClusterList(Configure<AzureSfClusterListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSfClusterListSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSfClusterShowSettings toolSettings);
         static partial void PostProcess(AzureSfClusterShowSettings toolSettings);
-        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sf.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSfClusterShow(Configure<AzureSfClusterShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSfClusterShowSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSfApplicationCertificateAddSettings toolSettings);
         static partial void PostProcess(AzureSfApplicationCertificateAddSettings toolSettings);
-        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sf.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSfApplicationCertificateAdd(Configure<AzureSfApplicationCertificateAddSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSfApplicationCertificateAddSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSfClusterCertificateAddSettings toolSettings);
         static partial void PostProcess(AzureSfClusterCertificateAddSettings toolSettings);
-        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sf.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSfClusterCertificateAdd(Configure<AzureSfClusterCertificateAddSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSfClusterCertificateAddSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSfClusterCertificateRemoveSettings toolSettings);
         static partial void PostProcess(AzureSfClusterCertificateRemoveSettings toolSettings);
-        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sf.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSfClusterCertificateRemove(Configure<AzureSfClusterCertificateRemoveSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSfClusterCertificateRemoveSettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSfClusterClientCertificateAddSettings toolSettings);
         static partial void PostProcess(AzureSfClusterClientCertificateAddSettings toolSettings);
-        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sf.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSfClusterClientCertificateAdd(Configure<AzureSfClusterClientCertificateAddSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSfClusterClientCertificateAddSettings());
@@ -135,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSfClusterClientCertificateRemoveSettings toolSettings);
         static partial void PostProcess(AzureSfClusterClientCertificateRemoveSettings toolSettings);
-        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sf.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSfClusterClientCertificateRemove(Configure<AzureSfClusterClientCertificateRemoveSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSfClusterClientCertificateRemoveSettings());
@@ -146,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSfClusterDurabilityUpdateSettings toolSettings);
         static partial void PostProcess(AzureSfClusterDurabilityUpdateSettings toolSettings);
-        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sf.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSfClusterDurabilityUpdate(Configure<AzureSfClusterDurabilityUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSfClusterDurabilityUpdateSettings());
@@ -157,7 +157,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSfClusterNodeTypeAddSettings toolSettings);
         static partial void PostProcess(AzureSfClusterNodeTypeAddSettings toolSettings);
-        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sf.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSfClusterNodeTypeAdd(Configure<AzureSfClusterNodeTypeAddSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSfClusterNodeTypeAddSettings());
@@ -168,7 +168,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSfClusterNodeAddSettings toolSettings);
         static partial void PostProcess(AzureSfClusterNodeAddSettings toolSettings);
-        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sf.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSfClusterNodeAdd(Configure<AzureSfClusterNodeAddSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSfClusterNodeAddSettings());
@@ -179,7 +179,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSfClusterNodeRemoveSettings toolSettings);
         static partial void PostProcess(AzureSfClusterNodeRemoveSettings toolSettings);
-        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sf.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSfClusterNodeRemove(Configure<AzureSfClusterNodeRemoveSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSfClusterNodeRemoveSettings());
@@ -190,7 +190,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSfClusterReliabilityUpdateSettings toolSettings);
         static partial void PostProcess(AzureSfClusterReliabilityUpdateSettings toolSettings);
-        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sf.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSfClusterReliabilityUpdate(Configure<AzureSfClusterReliabilityUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSfClusterReliabilityUpdateSettings());
@@ -201,7 +201,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSfClusterSettingRemoveSettings toolSettings);
         static partial void PostProcess(AzureSfClusterSettingRemoveSettings toolSettings);
-        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sf.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSfClusterSettingRemove(Configure<AzureSfClusterSettingRemoveSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSfClusterSettingRemoveSettings());
@@ -212,7 +212,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSfClusterSettingSetSettings toolSettings);
         static partial void PostProcess(AzureSfClusterSettingSetSettings toolSettings);
-        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sf.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSfClusterSettingSet(Configure<AzureSfClusterSettingSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSfClusterSettingSetSettings());
@@ -223,7 +223,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSfClusterUpgradeTypeSetSettings toolSettings);
         static partial void PostProcess(AzureSfClusterUpgradeTypeSetSettings toolSettings);
-        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sf.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSfClusterUpgradeTypeSet(Configure<AzureSfClusterUpgradeTypeSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSfClusterUpgradeTypeSetSettings());

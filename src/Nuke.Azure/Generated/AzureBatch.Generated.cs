@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureBatch.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchSettings toolSettings);
         static partial void PostProcess(AzureBatchSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatch(Configure<AzureBatchSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchAccountCreateSettings toolSettings);
         static partial void PostProcess(AzureBatchAccountCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchAccountCreate(Configure<AzureBatchAccountCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchAccountCreateSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchAccountDeleteSettings toolSettings);
         static partial void PostProcess(AzureBatchAccountDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchAccountDelete(Configure<AzureBatchAccountDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchAccountDeleteSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchAccountListSettings toolSettings);
         static partial void PostProcess(AzureBatchAccountListSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchAccountList(Configure<AzureBatchAccountListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchAccountListSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchAccountLoginSettings toolSettings);
         static partial void PostProcess(AzureBatchAccountLoginSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchAccountLogin(Configure<AzureBatchAccountLoginSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchAccountLoginSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchAccountSetSettings toolSettings);
         static partial void PostProcess(AzureBatchAccountSetSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchAccountSet(Configure<AzureBatchAccountSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchAccountSetSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchAccountShowSettings toolSettings);
         static partial void PostProcess(AzureBatchAccountShowSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchAccountShow(Configure<AzureBatchAccountShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchAccountShowSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchApplicationCreateSettings toolSettings);
         static partial void PostProcess(AzureBatchApplicationCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchApplicationCreate(Configure<AzureBatchApplicationCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchApplicationCreateSettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchApplicationDeleteSettings toolSettings);
         static partial void PostProcess(AzureBatchApplicationDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchApplicationDelete(Configure<AzureBatchApplicationDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchApplicationDeleteSettings());
@@ -135,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchApplicationListSettings toolSettings);
         static partial void PostProcess(AzureBatchApplicationListSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchApplicationList(Configure<AzureBatchApplicationListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchApplicationListSettings());
@@ -146,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchApplicationSetSettings toolSettings);
         static partial void PostProcess(AzureBatchApplicationSetSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchApplicationSet(Configure<AzureBatchApplicationSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchApplicationSetSettings());
@@ -157,7 +157,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchApplicationShowSettings toolSettings);
         static partial void PostProcess(AzureBatchApplicationShowSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchApplicationShow(Configure<AzureBatchApplicationShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchApplicationShowSettings());
@@ -168,7 +168,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchCertificateCreateSettings toolSettings);
         static partial void PostProcess(AzureBatchCertificateCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchCertificateCreate(Configure<AzureBatchCertificateCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchCertificateCreateSettings());
@@ -179,7 +179,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchCertificateDeleteSettings toolSettings);
         static partial void PostProcess(AzureBatchCertificateDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchCertificateDelete(Configure<AzureBatchCertificateDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchCertificateDeleteSettings());
@@ -190,7 +190,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchCertificateListSettings toolSettings);
         static partial void PostProcess(AzureBatchCertificateListSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchCertificateList(Configure<AzureBatchCertificateListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchCertificateListSettings());
@@ -201,7 +201,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchCertificateShowSettings toolSettings);
         static partial void PostProcess(AzureBatchCertificateShowSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchCertificateShow(Configure<AzureBatchCertificateShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchCertificateShowSettings());
@@ -212,7 +212,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchJobScheduleCreateSettings toolSettings);
         static partial void PostProcess(AzureBatchJobScheduleCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchJobScheduleCreate(Configure<AzureBatchJobScheduleCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchJobScheduleCreateSettings());
@@ -223,7 +223,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchJobScheduleDeleteSettings toolSettings);
         static partial void PostProcess(AzureBatchJobScheduleDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchJobScheduleDelete(Configure<AzureBatchJobScheduleDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchJobScheduleDeleteSettings());
@@ -234,7 +234,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchJobScheduleDisableSettings toolSettings);
         static partial void PostProcess(AzureBatchJobScheduleDisableSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchJobScheduleDisable(Configure<AzureBatchJobScheduleDisableSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchJobScheduleDisableSettings());
@@ -245,7 +245,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchJobScheduleEnableSettings toolSettings);
         static partial void PostProcess(AzureBatchJobScheduleEnableSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchJobScheduleEnable(Configure<AzureBatchJobScheduleEnableSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchJobScheduleEnableSettings());
@@ -256,7 +256,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchJobScheduleListSettings toolSettings);
         static partial void PostProcess(AzureBatchJobScheduleListSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchJobScheduleList(Configure<AzureBatchJobScheduleListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchJobScheduleListSettings());
@@ -267,7 +267,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchJobScheduleResetSettings toolSettings);
         static partial void PostProcess(AzureBatchJobScheduleResetSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchJobScheduleReset(Configure<AzureBatchJobScheduleResetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchJobScheduleResetSettings());
@@ -278,7 +278,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchJobScheduleSetSettings toolSettings);
         static partial void PostProcess(AzureBatchJobScheduleSetSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchJobScheduleSet(Configure<AzureBatchJobScheduleSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchJobScheduleSetSettings());
@@ -289,7 +289,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchJobScheduleShowSettings toolSettings);
         static partial void PostProcess(AzureBatchJobScheduleShowSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchJobScheduleShow(Configure<AzureBatchJobScheduleShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchJobScheduleShowSettings());
@@ -300,7 +300,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchJobScheduleStopSettings toolSettings);
         static partial void PostProcess(AzureBatchJobScheduleStopSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchJobScheduleStop(Configure<AzureBatchJobScheduleStopSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchJobScheduleStopSettings());
@@ -311,7 +311,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchJobCreateSettings toolSettings);
         static partial void PostProcess(AzureBatchJobCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchJobCreate(Configure<AzureBatchJobCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchJobCreateSettings());
@@ -322,7 +322,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchJobDeleteSettings toolSettings);
         static partial void PostProcess(AzureBatchJobDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchJobDelete(Configure<AzureBatchJobDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchJobDeleteSettings());
@@ -333,7 +333,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchJobDisableSettings toolSettings);
         static partial void PostProcess(AzureBatchJobDisableSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchJobDisable(Configure<AzureBatchJobDisableSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchJobDisableSettings());
@@ -344,7 +344,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchJobEnableSettings toolSettings);
         static partial void PostProcess(AzureBatchJobEnableSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchJobEnable(Configure<AzureBatchJobEnableSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchJobEnableSettings());
@@ -355,7 +355,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchJobListSettings toolSettings);
         static partial void PostProcess(AzureBatchJobListSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchJobList(Configure<AzureBatchJobListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchJobListSettings());
@@ -366,7 +366,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchJobResetSettings toolSettings);
         static partial void PostProcess(AzureBatchJobResetSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchJobReset(Configure<AzureBatchJobResetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchJobResetSettings());
@@ -377,7 +377,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchJobSetSettings toolSettings);
         static partial void PostProcess(AzureBatchJobSetSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchJobSet(Configure<AzureBatchJobSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchJobSetSettings());
@@ -388,7 +388,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchJobShowSettings toolSettings);
         static partial void PostProcess(AzureBatchJobShowSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchJobShow(Configure<AzureBatchJobShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchJobShowSettings());
@@ -399,7 +399,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchJobStopSettings toolSettings);
         static partial void PostProcess(AzureBatchJobStopSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchJobStop(Configure<AzureBatchJobStopSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchJobStopSettings());
@@ -410,7 +410,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchLocationSettings toolSettings);
         static partial void PostProcess(AzureBatchLocationSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchLocation(Configure<AzureBatchLocationSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchLocationSettings());
@@ -421,7 +421,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchNodeDeleteSettings toolSettings);
         static partial void PostProcess(AzureBatchNodeDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchNodeDelete(Configure<AzureBatchNodeDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchNodeDeleteSettings());
@@ -432,7 +432,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchNodeListSettings toolSettings);
         static partial void PostProcess(AzureBatchNodeListSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchNodeList(Configure<AzureBatchNodeListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchNodeListSettings());
@@ -443,7 +443,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchNodeRebootSettings toolSettings);
         static partial void PostProcess(AzureBatchNodeRebootSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchNodeReboot(Configure<AzureBatchNodeRebootSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchNodeRebootSettings());
@@ -454,7 +454,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchNodeReimageSettings toolSettings);
         static partial void PostProcess(AzureBatchNodeReimageSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchNodeReimage(Configure<AzureBatchNodeReimageSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchNodeReimageSettings());
@@ -465,7 +465,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchNodeShowSettings toolSettings);
         static partial void PostProcess(AzureBatchNodeShowSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchNodeShow(Configure<AzureBatchNodeShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchNodeShowSettings());
@@ -476,7 +476,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchPoolCreateSettings toolSettings);
         static partial void PostProcess(AzureBatchPoolCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchPoolCreate(Configure<AzureBatchPoolCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchPoolCreateSettings());
@@ -487,7 +487,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchPoolDeleteSettings toolSettings);
         static partial void PostProcess(AzureBatchPoolDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchPoolDelete(Configure<AzureBatchPoolDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchPoolDeleteSettings());
@@ -498,7 +498,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchPoolListSettings toolSettings);
         static partial void PostProcess(AzureBatchPoolListSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchPoolList(Configure<AzureBatchPoolListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchPoolListSettings());
@@ -509,7 +509,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchPoolResetSettings toolSettings);
         static partial void PostProcess(AzureBatchPoolResetSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchPoolReset(Configure<AzureBatchPoolResetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchPoolResetSettings());
@@ -520,7 +520,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchPoolResizeSettings toolSettings);
         static partial void PostProcess(AzureBatchPoolResizeSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchPoolResize(Configure<AzureBatchPoolResizeSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchPoolResizeSettings());
@@ -531,7 +531,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchPoolSetSettings toolSettings);
         static partial void PostProcess(AzureBatchPoolSetSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchPoolSet(Configure<AzureBatchPoolSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchPoolSetSettings());
@@ -542,7 +542,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchPoolShowSettings toolSettings);
         static partial void PostProcess(AzureBatchPoolShowSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchPoolShow(Configure<AzureBatchPoolShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchPoolShowSettings());
@@ -553,7 +553,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchTaskCreateSettings toolSettings);
         static partial void PostProcess(AzureBatchTaskCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchTaskCreate(Configure<AzureBatchTaskCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchTaskCreateSettings());
@@ -564,7 +564,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchTaskDeleteSettings toolSettings);
         static partial void PostProcess(AzureBatchTaskDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchTaskDelete(Configure<AzureBatchTaskDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchTaskDeleteSettings());
@@ -575,7 +575,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchTaskListSettings toolSettings);
         static partial void PostProcess(AzureBatchTaskListSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchTaskList(Configure<AzureBatchTaskListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchTaskListSettings());
@@ -586,7 +586,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchTaskReactivateSettings toolSettings);
         static partial void PostProcess(AzureBatchTaskReactivateSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchTaskReactivate(Configure<AzureBatchTaskReactivateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchTaskReactivateSettings());
@@ -597,7 +597,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchTaskResetSettings toolSettings);
         static partial void PostProcess(AzureBatchTaskResetSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchTaskReset(Configure<AzureBatchTaskResetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchTaskResetSettings());
@@ -608,7 +608,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchTaskShowSettings toolSettings);
         static partial void PostProcess(AzureBatchTaskShowSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchTaskShow(Configure<AzureBatchTaskShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchTaskShowSettings());
@@ -619,7 +619,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchTaskStopSettings toolSettings);
         static partial void PostProcess(AzureBatchTaskStopSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchTaskStop(Configure<AzureBatchTaskStopSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchTaskStopSettings());
@@ -630,7 +630,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchAccountAutostorageKeysSyncSettings toolSettings);
         static partial void PostProcess(AzureBatchAccountAutostorageKeysSyncSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchAccountAutostorageKeysSync(Configure<AzureBatchAccountAutostorageKeysSyncSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchAccountAutostorageKeysSyncSettings());
@@ -641,7 +641,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchAccountKeysListSettings toolSettings);
         static partial void PostProcess(AzureBatchAccountKeysListSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchAccountKeysList(Configure<AzureBatchAccountKeysListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchAccountKeysListSettings());
@@ -652,7 +652,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchAccountKeysRenewSettings toolSettings);
         static partial void PostProcess(AzureBatchAccountKeysRenewSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchAccountKeysRenew(Configure<AzureBatchAccountKeysRenewSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchAccountKeysRenewSettings());
@@ -663,7 +663,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchApplicationPackageActivateSettings toolSettings);
         static partial void PostProcess(AzureBatchApplicationPackageActivateSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchApplicationPackageActivate(Configure<AzureBatchApplicationPackageActivateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchApplicationPackageActivateSettings());
@@ -674,7 +674,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchApplicationPackageCreateSettings toolSettings);
         static partial void PostProcess(AzureBatchApplicationPackageCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchApplicationPackageCreate(Configure<AzureBatchApplicationPackageCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchApplicationPackageCreateSettings());
@@ -685,7 +685,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchApplicationPackageDeleteSettings toolSettings);
         static partial void PostProcess(AzureBatchApplicationPackageDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchApplicationPackageDelete(Configure<AzureBatchApplicationPackageDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchApplicationPackageDeleteSettings());
@@ -696,7 +696,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchApplicationPackageShowSettings toolSettings);
         static partial void PostProcess(AzureBatchApplicationPackageShowSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchApplicationPackageShow(Configure<AzureBatchApplicationPackageShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchApplicationPackageShowSettings());
@@ -707,7 +707,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchApplicationSummaryListSettings toolSettings);
         static partial void PostProcess(AzureBatchApplicationSummaryListSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchApplicationSummaryList(Configure<AzureBatchApplicationSummaryListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchApplicationSummaryListSettings());
@@ -718,7 +718,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchApplicationSummaryShowSettings toolSettings);
         static partial void PostProcess(AzureBatchApplicationSummaryShowSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchApplicationSummaryShow(Configure<AzureBatchApplicationSummaryShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchApplicationSummaryShowSettings());
@@ -729,7 +729,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchJobAllStatisticsShowSettings toolSettings);
         static partial void PostProcess(AzureBatchJobAllStatisticsShowSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchJobAllStatisticsShow(Configure<AzureBatchJobAllStatisticsShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchJobAllStatisticsShowSettings());
@@ -740,7 +740,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchJobPrepReleaseStatusListSettings toolSettings);
         static partial void PostProcess(AzureBatchJobPrepReleaseStatusListSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchJobPrepReleaseStatusList(Configure<AzureBatchJobPrepReleaseStatusListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchJobPrepReleaseStatusListSettings());
@@ -751,7 +751,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchJobTaskCountsShowSettings toolSettings);
         static partial void PostProcess(AzureBatchJobTaskCountsShowSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchJobTaskCountsShow(Configure<AzureBatchJobTaskCountsShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchJobTaskCountsShowSettings());
@@ -762,7 +762,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchLocationQuotasShowSettings toolSettings);
         static partial void PostProcess(AzureBatchLocationQuotasShowSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchLocationQuotasShow(Configure<AzureBatchLocationQuotasShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchLocationQuotasShowSettings());
@@ -773,7 +773,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchNodeFileDeleteSettings toolSettings);
         static partial void PostProcess(AzureBatchNodeFileDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchNodeFileDelete(Configure<AzureBatchNodeFileDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchNodeFileDeleteSettings());
@@ -784,7 +784,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchNodeFileDownloadSettings toolSettings);
         static partial void PostProcess(AzureBatchNodeFileDownloadSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchNodeFileDownload(Configure<AzureBatchNodeFileDownloadSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchNodeFileDownloadSettings());
@@ -795,7 +795,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchNodeFileListSettings toolSettings);
         static partial void PostProcess(AzureBatchNodeFileListSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchNodeFileList(Configure<AzureBatchNodeFileListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchNodeFileListSettings());
@@ -806,7 +806,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchNodeFileShowSettings toolSettings);
         static partial void PostProcess(AzureBatchNodeFileShowSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchNodeFileShow(Configure<AzureBatchNodeFileShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchNodeFileShowSettings());
@@ -817,7 +817,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchNodeRemoteDesktopDownloadSettings toolSettings);
         static partial void PostProcess(AzureBatchNodeRemoteDesktopDownloadSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchNodeRemoteDesktopDownload(Configure<AzureBatchNodeRemoteDesktopDownloadSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchNodeRemoteDesktopDownloadSettings());
@@ -828,7 +828,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchNodeRemoteLoginSettingsShowSettings toolSettings);
         static partial void PostProcess(AzureBatchNodeRemoteLoginSettingsShowSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchNodeRemoteLoginSettingsShow(Configure<AzureBatchNodeRemoteLoginSettingsShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchNodeRemoteLoginSettingsShowSettings());
@@ -839,7 +839,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchNodeSchedulingDisableSettings toolSettings);
         static partial void PostProcess(AzureBatchNodeSchedulingDisableSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchNodeSchedulingDisable(Configure<AzureBatchNodeSchedulingDisableSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchNodeSchedulingDisableSettings());
@@ -850,7 +850,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchNodeSchedulingEnableSettings toolSettings);
         static partial void PostProcess(AzureBatchNodeSchedulingEnableSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchNodeSchedulingEnable(Configure<AzureBatchNodeSchedulingEnableSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchNodeSchedulingEnableSettings());
@@ -861,7 +861,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchNodeServiceLogsUploadSettings toolSettings);
         static partial void PostProcess(AzureBatchNodeServiceLogsUploadSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchNodeServiceLogsUpload(Configure<AzureBatchNodeServiceLogsUploadSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchNodeServiceLogsUploadSettings());
@@ -872,7 +872,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchNodeUserCreateSettings toolSettings);
         static partial void PostProcess(AzureBatchNodeUserCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchNodeUserCreate(Configure<AzureBatchNodeUserCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchNodeUserCreateSettings());
@@ -883,7 +883,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchNodeUserDeleteSettings toolSettings);
         static partial void PostProcess(AzureBatchNodeUserDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchNodeUserDelete(Configure<AzureBatchNodeUserDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchNodeUserDeleteSettings());
@@ -894,7 +894,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchNodeUserResetSettings toolSettings);
         static partial void PostProcess(AzureBatchNodeUserResetSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchNodeUserReset(Configure<AzureBatchNodeUserResetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchNodeUserResetSettings());
@@ -905,7 +905,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchPoolAllStatisticsShowSettings toolSettings);
         static partial void PostProcess(AzureBatchPoolAllStatisticsShowSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchPoolAllStatisticsShow(Configure<AzureBatchPoolAllStatisticsShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchPoolAllStatisticsShowSettings());
@@ -916,7 +916,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchPoolAutoscaleDisableSettings toolSettings);
         static partial void PostProcess(AzureBatchPoolAutoscaleDisableSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchPoolAutoscaleDisable(Configure<AzureBatchPoolAutoscaleDisableSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchPoolAutoscaleDisableSettings());
@@ -927,7 +927,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchPoolAutoscaleEnableSettings toolSettings);
         static partial void PostProcess(AzureBatchPoolAutoscaleEnableSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchPoolAutoscaleEnable(Configure<AzureBatchPoolAutoscaleEnableSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchPoolAutoscaleEnableSettings());
@@ -938,7 +938,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchPoolAutoscaleEvaluateSettings toolSettings);
         static partial void PostProcess(AzureBatchPoolAutoscaleEvaluateSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchPoolAutoscaleEvaluate(Configure<AzureBatchPoolAutoscaleEvaluateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchPoolAutoscaleEvaluateSettings());
@@ -949,7 +949,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchPoolNodeAgentSkusListSettings toolSettings);
         static partial void PostProcess(AzureBatchPoolNodeAgentSkusListSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchPoolNodeAgentSkusList(Configure<AzureBatchPoolNodeAgentSkusListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchPoolNodeAgentSkusListSettings());
@@ -960,7 +960,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchPoolNodeCountsListSettings toolSettings);
         static partial void PostProcess(AzureBatchPoolNodeCountsListSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchPoolNodeCountsList(Configure<AzureBatchPoolNodeCountsListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchPoolNodeCountsListSettings());
@@ -971,7 +971,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchPoolOsUpgradeSettings toolSettings);
         static partial void PostProcess(AzureBatchPoolOsUpgradeSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchPoolOsUpgrade(Configure<AzureBatchPoolOsUpgradeSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchPoolOsUpgradeSettings());
@@ -982,7 +982,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchPoolUsageMetricsListSettings toolSettings);
         static partial void PostProcess(AzureBatchPoolUsageMetricsListSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchPoolUsageMetricsList(Configure<AzureBatchPoolUsageMetricsListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchPoolUsageMetricsListSettings());
@@ -993,7 +993,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchTaskFileDeleteSettings toolSettings);
         static partial void PostProcess(AzureBatchTaskFileDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchTaskFileDelete(Configure<AzureBatchTaskFileDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchTaskFileDeleteSettings());
@@ -1004,7 +1004,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchTaskFileDownloadSettings toolSettings);
         static partial void PostProcess(AzureBatchTaskFileDownloadSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchTaskFileDownload(Configure<AzureBatchTaskFileDownloadSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchTaskFileDownloadSettings());
@@ -1015,7 +1015,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchTaskFileListSettings toolSettings);
         static partial void PostProcess(AzureBatchTaskFileListSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchTaskFileList(Configure<AzureBatchTaskFileListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchTaskFileListSettings());
@@ -1026,7 +1026,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchTaskFileShowSettings toolSettings);
         static partial void PostProcess(AzureBatchTaskFileShowSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchTaskFileShow(Configure<AzureBatchTaskFileShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchTaskFileShowSettings());
@@ -1037,7 +1037,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureBatchTaskSubtaskListSettings toolSettings);
         static partial void PostProcess(AzureBatchTaskSubtaskListSettings toolSettings);
-        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/batch.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Batch.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureBatchTaskSubtaskList(Configure<AzureBatchTaskSubtaskListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchTaskSubtaskListSettings());
@@ -1786,7 +1786,7 @@ namespace Nuke.Azure
         public virtual string JobMaxTaskRetryCount { get; internal set; }
         /// <summary><p>The maximum elapsed time that the job may run, measured from the time the job is created. If the job does not complete within the time limit, the Batch service terminates it and any tasks that are still running. In this case, the termination reason will be MaxWallClockTimeExpiry. If this property is not specified, there is no time limit on how long the job may run. Expected format is an ISO-8601 duration.</p></summary>
         public virtual string JobMaxWallClockTime { get; internal set; }
-        /// <summary><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</p></summary>
+        /// <summary><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (&lt;a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables"&gt;https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables&lt;/a&gt;).</p></summary>
         public virtual string JobManagerTaskCommandLine { get; internal set; }
         /// <summary><p>A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</p></summary>
         public virtual string JobManagerTaskId { get; internal set; }
@@ -2098,7 +2098,7 @@ namespace Nuke.Azure
         public virtual string UsesTaskDependencies { get; internal set; }
         /// <summary><p>A list of application packages that the Batch service will deploy to the compute node before running the command line. Application packages are downloaded and deployed to a shared directory, not the task working directory. Therefore, if a referenced package is already on the compute node, and is up to date, then it is not re-downloaded; the existing copy on the compute node is used. If a referenced application package cannot be installed, for example because the package has been deleted or because download failed, the task fails. Space-separated application IDs with optional version in 'id[#version]' format.</p></summary>
         public virtual string JobManagerTaskApplicationPackageReferences { get; internal set; }
-        /// <summary><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</p></summary>
+        /// <summary><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (&lt;a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables"&gt;https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables&lt;/a&gt;).</p></summary>
         public virtual string JobManagerTaskCommandLine { get; internal set; }
         /// <summary><p>A list of environment variable settings for the Job Manager task. Space-separated values in 'key=value' format.</p></summary>
         public virtual IReadOnlyDictionary<string, string> JobManagerTaskEnvironmentSettings => JobManagerTaskEnvironmentSettingsInternal.AsReadOnly();
@@ -2205,7 +2205,7 @@ namespace Nuke.Azure
         public virtual string UsesTaskDependencies { get; internal set; }
         /// <summary><p>A list of application packages that the Batch service will deploy to the compute node before running the command line. Application packages are downloaded and deployed to a shared directory, not the task working directory. Therefore, if a referenced package is already on the compute node, and is up to date, then it is not re-downloaded; the existing copy on the compute node is used. If a referenced application package cannot be installed, for example because the package has been deleted or because download failed, the task fails. Space-separated application IDs with optional version in 'id[#version]' format.</p></summary>
         public virtual string JobManagerTaskApplicationPackageReferences { get; internal set; }
-        /// <summary><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</p></summary>
+        /// <summary><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (&lt;a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables"&gt;https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables&lt;/a&gt;).</p></summary>
         public virtual string JobManagerTaskCommandLine { get; internal set; }
         /// <summary><p>A list of environment variable settings for the Job Manager task. Space-separated values in 'key=value' format.</p></summary>
         public virtual IReadOnlyDictionary<string, string> JobManagerTaskEnvironmentSettings => JobManagerTaskEnvironmentSettingsInternal.AsReadOnly();
@@ -2427,7 +2427,7 @@ namespace Nuke.Azure
         public virtual string JobMaxTaskRetryCount { get; internal set; }
         /// <summary><p>The maximum elapsed time that the job may run, measured from the time the job is created. If the job does not complete within the time limit, the Batch service terminates it and any tasks that are still running. In this case, the termination reason will be MaxWallClockTimeExpiry. If this property is not specified, there is no time limit on how long the job may run. Expected format is an ISO-8601 duration.</p></summary>
         public virtual string JobMaxWallClockTime { get; internal set; }
-        /// <summary><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</p></summary>
+        /// <summary><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (&lt;a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables"&gt;https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables&lt;/a&gt;).</p></summary>
         public virtual string JobManagerTaskCommandLine { get; internal set; }
         /// <summary><p>A list of environment variable settings for the Job Manager task. Space-separated values in 'key=value' format.</p></summary>
         public virtual IReadOnlyDictionary<string, string> JobManagerTaskEnvironmentSettings => JobManagerTaskEnvironmentSettingsInternal.AsReadOnly();
@@ -3318,11 +3318,11 @@ namespace Nuke.Azure
         public virtual string TargetDedicatedNodes { get; internal set; }
         /// <summary><p>The desired number of low-priority compute nodes in the pool. This property must not be specified if enableAutoScale is set to true. If enableAutoScale is set to false, then you must set either targetDedicatedNodes, targetLowPriorityNodes, or both.</p></summary>
         public virtual string TargetLowPriorityNodes { get; internal set; }
-        /// <summary><p>The size of virtual machines in the pool. All virtual machines in a pool are the same size. For information about available sizes of virtual machines for Cloud Services pools (pools created with cloudServiceConfiguration), see Sizes for Cloud Services (&lt;a href="http://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/"&gt;http://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/&lt;/a&gt;). Batch supports all Cloud Services VM sizes except ExtraSmall, A1V2 and A2V2. For information about available VM sizes for pools using images from the Virtual Machines Marketplace (pools created with virtualMachineConfiguration) see Sizes for Virtual Machines (Linux) (&lt;a href="https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/"&gt;https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/&lt;/a&gt;) or Sizes for Virtual Machines (Windows) (&lt;a href="https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/"&gt;https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/&lt;/a&gt;). Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).</p></summary>
+        /// <summary><p>The size of virtual machines in the pool. All virtual machines in a pool are the same size. For information about available sizes of virtual machines for Cloud Services pools (pools created with cloudServiceConfiguration), see Sizes for Cloud Services (&lt;a href="https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/"&gt;https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/&lt;/a&gt;). Batch supports all Cloud Services VM sizes except ExtraSmall, A1V2 and A2V2. For information about available VM sizes for pools using images from the Virtual Machines Marketplace (pools created with virtualMachineConfiguration) see Sizes for Virtual Machines (Linux) (&lt;a href="https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/"&gt;https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/&lt;/a&gt;) or Sizes for Virtual Machines (Windows) (&lt;a href="https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/"&gt;https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/&lt;/a&gt;). Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).</p></summary>
         public virtual string VmSize { get; internal set; }
         /// <summary><p>The Azure Guest OS family to be installed on the virtual machines in the pool. Possible values are: 2 - OS Family 2, equivalent to Windows Server 2008 R2 SP1. 3 - OS Family 3, equivalent to Windows Server 2012. 4 - OS Family 4, equivalent to Windows Server 2012 R2. 5 - OS Family 5, equivalent to Windows Server 2016. For more information, see Azure Guest OS Releases (&lt;a href="https://azure.microsoft.com/documentation/articles/cloud-services-guestos-update-matrix/#releases"&gt;https://azure.microsoft.com/documentation/articles/cloud-services-guestos-update-matrix/#releases&lt;/a&gt;).</p></summary>
         public virtual BatchPoolCreateOsFamily OsFamily { get; internal set; }
-        /// <summary><p>The command line of the start task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</p></summary>
+        /// <summary><p>The command line of the start task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (&lt;a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables"&gt;https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables&lt;/a&gt;).</p></summary>
         public virtual string StartTaskCommandLine { get; internal set; }
         /// <summary><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format.</p></summary>
         public virtual string StartTaskResourceFiles { get; internal set; }
@@ -3652,7 +3652,7 @@ namespace Nuke.Azure
         /// <summary><p>A list of name-value pairs associated with the pool as metadata. If this element is present, it replaces any existing metadata configured on the pool. If you specify an empty collection, any metadata is removed from the pool. If omitted, any existing metadata is left unchanged. Space-separated values in 'key=value' format.</p></summary>
         public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
         internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
-        /// <summary><p>The command line of the start task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</p></summary>
+        /// <summary><p>The command line of the start task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (&lt;a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables"&gt;https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables&lt;/a&gt;).</p></summary>
         public virtual string StartTaskCommandLine { get; internal set; }
         /// <summary><p>A list of environment variable settings for the start task. Space-separated values in 'key=value' format.</p></summary>
         public virtual IReadOnlyDictionary<string, string> StartTaskEnvironmentSettings => StartTaskEnvironmentSettingsInternal.AsReadOnly();
@@ -3795,7 +3795,7 @@ namespace Nuke.Azure
         internal Dictionary<string,string> EnvironmentSettingsInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>The file containing the task(s) to create in JSON format, if this parameter is specified, all other parameters are ignored.</p></summary>
         public virtual string JsonFile { get; internal set; }
-        /// <summary><p>The maximum number of times the task may be retried. The Batch service retries a task if its exit code is nonzero. Note that this value specifically controls the number of retries. The Batch service will try the task once, and may then retry up to this limit. For example, if the maximum retry count is 3, Batch tries the task up to 4 times (one initial try and 3 retries). If the maximum retry count is 0, the Batch service does not retry the task. If the maximum retry count is -1, the Batch service retries the task without limit.</p></summary>
+        /// <summary><p>The maximum number of times the task may be retried. The Batch service retries a task if its exit code is nonzero. Note that this value specifically controls the number of retries for the task executable due to a nonzero exit code. The Batch service will try the task once, and may then retry up to this limit. For example, if the maximum retry count is 3, Batch tries the task up to 4 times (one initial try and 3 retries). If the maximum retry count is 0, the Batch service does not retry the task after the first attempt. If the maximum retry count is -1, the Batch service retries the task without limit. Resource files and application packages are only downloaded again if the task is retried on a new compute node.</p></summary>
         public virtual string MaxTaskRetryCount { get; internal set; }
         /// <summary><p>The maximum elapsed time that the task may run, measured from the time the task starts. If the task does not complete within the time limit, the Batch service terminates it. If this is not specified, there is no time limit on how long the task may run.</p></summary>
         public virtual string MaxWallClockTime { get; internal set; }
@@ -4043,7 +4043,7 @@ namespace Nuke.Azure
         public virtual string AccountKey { get; internal set; }
         /// <summary><p>Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT.</p></summary>
         public virtual string AccountName { get; internal set; }
-        /// <summary><p>The maximum number of times the task may be retried. The Batch service retries a task if its exit code is nonzero. Note that this value specifically controls the number of retries. The Batch service will try the task once, and may then retry up to this limit. For example, if the maximum retry count is 3, Batch tries the task up to 4 times (one initial try and 3 retries). If the maximum retry count is 0, the Batch service does not retry the task. If the maximum retry count is -1, the Batch service retries the task without limit.</p></summary>
+        /// <summary><p>The maximum number of times the task may be retried. The Batch service retries a task if its exit code is nonzero. Note that this value specifically controls the number of retries for the task executable due to a nonzero exit code. The Batch service will try the task once, and may then retry up to this limit. For example, if the maximum retry count is 3, Batch tries the task up to 4 times (one initial try and 3 retries). If the maximum retry count is 0, the Batch service does not retry the task after the first attempt. If the maximum retry count is -1, the Batch service retries the task without limit. Resource files and application packages are only downloaded again if the task is retried on a new compute node.</p></summary>
         public virtual string MaxTaskRetryCount { get; internal set; }
         /// <summary><p>The maximum elapsed time that the task may run, measured from the time the task starts. If the task does not complete within the time limit, the Batch service terminates it. If this is not specified, there is no time limit on how long the task may run. Expected format is an ISO-8601 duration.</p></summary>
         public virtual string MaxWallClockTime { get; internal set; }
@@ -9075,7 +9075,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region JobManagerTaskCommandLine
-        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleCreateSettings.JobManagerTaskCommandLine"/>.</em></p><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleCreateSettings.JobManagerTaskCommandLine"/>.</em></p><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (&lt;a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables"&gt;https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables&lt;/a&gt;).</p></summary>
         [Pure]
         public static AzureBatchJobScheduleCreateSettings SetJobManagerTaskCommandLine(this AzureBatchJobScheduleCreateSettings toolSettings, string jobManagerTaskCommandLine)
         {
@@ -9083,7 +9083,7 @@ namespace Nuke.Azure
             toolSettings.JobManagerTaskCommandLine = jobManagerTaskCommandLine;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleCreateSettings.JobManagerTaskCommandLine"/>.</em></p><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleCreateSettings.JobManagerTaskCommandLine"/>.</em></p><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (&lt;a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables"&gt;https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables&lt;/a&gt;).</p></summary>
         [Pure]
         public static AzureBatchJobScheduleCreateSettings ResetJobManagerTaskCommandLine(this AzureBatchJobScheduleCreateSettings toolSettings)
         {
@@ -10513,7 +10513,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region JobManagerTaskCommandLine
-        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleResetSettings.JobManagerTaskCommandLine"/>.</em></p><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleResetSettings.JobManagerTaskCommandLine"/>.</em></p><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (&lt;a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables"&gt;https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables&lt;/a&gt;).</p></summary>
         [Pure]
         public static AzureBatchJobScheduleResetSettings SetJobManagerTaskCommandLine(this AzureBatchJobScheduleResetSettings toolSettings, string jobManagerTaskCommandLine)
         {
@@ -10521,7 +10521,7 @@ namespace Nuke.Azure
             toolSettings.JobManagerTaskCommandLine = jobManagerTaskCommandLine;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleResetSettings.JobManagerTaskCommandLine"/>.</em></p><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleResetSettings.JobManagerTaskCommandLine"/>.</em></p><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (&lt;a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables"&gt;https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables&lt;/a&gt;).</p></summary>
         [Pure]
         public static AzureBatchJobScheduleResetSettings ResetJobManagerTaskCommandLine(this AzureBatchJobScheduleResetSettings toolSettings)
         {
@@ -11115,7 +11115,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region JobManagerTaskCommandLine
-        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleSetSettings.JobManagerTaskCommandLine"/>.</em></p><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleSetSettings.JobManagerTaskCommandLine"/>.</em></p><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (&lt;a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables"&gt;https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables&lt;/a&gt;).</p></summary>
         [Pure]
         public static AzureBatchJobScheduleSetSettings SetJobManagerTaskCommandLine(this AzureBatchJobScheduleSetSettings toolSettings, string jobManagerTaskCommandLine)
         {
@@ -11123,7 +11123,7 @@ namespace Nuke.Azure
             toolSettings.JobManagerTaskCommandLine = jobManagerTaskCommandLine;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleSetSettings.JobManagerTaskCommandLine"/>.</em></p><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchJobScheduleSetSettings.JobManagerTaskCommandLine"/>.</em></p><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (&lt;a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables"&gt;https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables&lt;/a&gt;).</p></summary>
         [Pure]
         public static AzureBatchJobScheduleSetSettings ResetJobManagerTaskCommandLine(this AzureBatchJobScheduleSetSettings toolSettings)
         {
@@ -12195,7 +12195,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region JobManagerTaskCommandLine
-        /// <summary><p><em>Sets <see cref="AzureBatchJobCreateSettings.JobManagerTaskCommandLine"/>.</em></p><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchJobCreateSettings.JobManagerTaskCommandLine"/>.</em></p><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (&lt;a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables"&gt;https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables&lt;/a&gt;).</p></summary>
         [Pure]
         public static AzureBatchJobCreateSettings SetJobManagerTaskCommandLine(this AzureBatchJobCreateSettings toolSettings, string jobManagerTaskCommandLine)
         {
@@ -12203,7 +12203,7 @@ namespace Nuke.Azure
             toolSettings.JobManagerTaskCommandLine = jobManagerTaskCommandLine;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchJobCreateSettings.JobManagerTaskCommandLine"/>.</em></p><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchJobCreateSettings.JobManagerTaskCommandLine"/>.</em></p><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (&lt;a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables"&gt;https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables&lt;/a&gt;).</p></summary>
         [Pure]
         public static AzureBatchJobCreateSettings ResetJobManagerTaskCommandLine(this AzureBatchJobCreateSettings toolSettings)
         {
@@ -16227,7 +16227,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region VmSize
-        /// <summary><p><em>Sets <see cref="AzureBatchPoolCreateSettings.VmSize"/>.</em></p><p>The size of virtual machines in the pool. All virtual machines in a pool are the same size. For information about available sizes of virtual machines for Cloud Services pools (pools created with cloudServiceConfiguration), see Sizes for Cloud Services (&lt;a href="http://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/"&gt;http://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/&lt;/a&gt;). Batch supports all Cloud Services VM sizes except ExtraSmall, A1V2 and A2V2. For information about available VM sizes for pools using images from the Virtual Machines Marketplace (pools created with virtualMachineConfiguration) see Sizes for Virtual Machines (Linux) (&lt;a href="https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/"&gt;https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/&lt;/a&gt;) or Sizes for Virtual Machines (Windows) (&lt;a href="https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/"&gt;https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/&lt;/a&gt;). Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchPoolCreateSettings.VmSize"/>.</em></p><p>The size of virtual machines in the pool. All virtual machines in a pool are the same size. For information about available sizes of virtual machines for Cloud Services pools (pools created with cloudServiceConfiguration), see Sizes for Cloud Services (&lt;a href="https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/"&gt;https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/&lt;/a&gt;). Batch supports all Cloud Services VM sizes except ExtraSmall, A1V2 and A2V2. For information about available VM sizes for pools using images from the Virtual Machines Marketplace (pools created with virtualMachineConfiguration) see Sizes for Virtual Machines (Linux) (&lt;a href="https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/"&gt;https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/&lt;/a&gt;) or Sizes for Virtual Machines (Windows) (&lt;a href="https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/"&gt;https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/&lt;/a&gt;). Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).</p></summary>
         [Pure]
         public static AzureBatchPoolCreateSettings SetVmSize(this AzureBatchPoolCreateSettings toolSettings, string vmSize)
         {
@@ -16235,7 +16235,7 @@ namespace Nuke.Azure
             toolSettings.VmSize = vmSize;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchPoolCreateSettings.VmSize"/>.</em></p><p>The size of virtual machines in the pool. All virtual machines in a pool are the same size. For information about available sizes of virtual machines for Cloud Services pools (pools created with cloudServiceConfiguration), see Sizes for Cloud Services (&lt;a href="http://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/"&gt;http://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/&lt;/a&gt;). Batch supports all Cloud Services VM sizes except ExtraSmall, A1V2 and A2V2. For information about available VM sizes for pools using images from the Virtual Machines Marketplace (pools created with virtualMachineConfiguration) see Sizes for Virtual Machines (Linux) (&lt;a href="https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/"&gt;https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/&lt;/a&gt;) or Sizes for Virtual Machines (Windows) (&lt;a href="https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/"&gt;https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/&lt;/a&gt;). Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchPoolCreateSettings.VmSize"/>.</em></p><p>The size of virtual machines in the pool. All virtual machines in a pool are the same size. For information about available sizes of virtual machines for Cloud Services pools (pools created with cloudServiceConfiguration), see Sizes for Cloud Services (&lt;a href="https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/"&gt;https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/&lt;/a&gt;). Batch supports all Cloud Services VM sizes except ExtraSmall, A1V2 and A2V2. For information about available VM sizes for pools using images from the Virtual Machines Marketplace (pools created with virtualMachineConfiguration) see Sizes for Virtual Machines (Linux) (&lt;a href="https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/"&gt;https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/&lt;/a&gt;) or Sizes for Virtual Machines (Windows) (&lt;a href="https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/"&gt;https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/&lt;/a&gt;). Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).</p></summary>
         [Pure]
         public static AzureBatchPoolCreateSettings ResetVmSize(this AzureBatchPoolCreateSettings toolSettings)
         {
@@ -16263,7 +16263,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region StartTaskCommandLine
-        /// <summary><p><em>Sets <see cref="AzureBatchPoolCreateSettings.StartTaskCommandLine"/>.</em></p><p>The command line of the start task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchPoolCreateSettings.StartTaskCommandLine"/>.</em></p><p>The command line of the start task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (&lt;a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables"&gt;https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables&lt;/a&gt;).</p></summary>
         [Pure]
         public static AzureBatchPoolCreateSettings SetStartTaskCommandLine(this AzureBatchPoolCreateSettings toolSettings, string startTaskCommandLine)
         {
@@ -16271,7 +16271,7 @@ namespace Nuke.Azure
             toolSettings.StartTaskCommandLine = startTaskCommandLine;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchPoolCreateSettings.StartTaskCommandLine"/>.</em></p><p>The command line of the start task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchPoolCreateSettings.StartTaskCommandLine"/>.</em></p><p>The command line of the start task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (&lt;a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables"&gt;https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables&lt;/a&gt;).</p></summary>
         [Pure]
         public static AzureBatchPoolCreateSettings ResetStartTaskCommandLine(this AzureBatchPoolCreateSettings toolSettings)
         {
@@ -17779,7 +17779,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region StartTaskCommandLine
-        /// <summary><p><em>Sets <see cref="AzureBatchPoolSetSettings.StartTaskCommandLine"/>.</em></p><p>The command line of the start task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchPoolSetSettings.StartTaskCommandLine"/>.</em></p><p>The command line of the start task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (&lt;a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables"&gt;https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables&lt;/a&gt;).</p></summary>
         [Pure]
         public static AzureBatchPoolSetSettings SetStartTaskCommandLine(this AzureBatchPoolSetSettings toolSettings, string startTaskCommandLine)
         {
@@ -17787,7 +17787,7 @@ namespace Nuke.Azure
             toolSettings.StartTaskCommandLine = startTaskCommandLine;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchPoolSetSettings.StartTaskCommandLine"/>.</em></p><p>The command line of the start task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchPoolSetSettings.StartTaskCommandLine"/>.</em></p><p>The command line of the start task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (&lt;a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables"&gt;https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables&lt;/a&gt;).</p></summary>
         [Pure]
         public static AzureBatchPoolSetSettings ResetStartTaskCommandLine(this AzureBatchPoolSetSettings toolSettings)
         {
@@ -18473,7 +18473,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region MaxTaskRetryCount
-        /// <summary><p><em>Sets <see cref="AzureBatchTaskCreateSettings.MaxTaskRetryCount"/>.</em></p><p>The maximum number of times the task may be retried. The Batch service retries a task if its exit code is nonzero. Note that this value specifically controls the number of retries. The Batch service will try the task once, and may then retry up to this limit. For example, if the maximum retry count is 3, Batch tries the task up to 4 times (one initial try and 3 retries). If the maximum retry count is 0, the Batch service does not retry the task. If the maximum retry count is -1, the Batch service retries the task without limit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchTaskCreateSettings.MaxTaskRetryCount"/>.</em></p><p>The maximum number of times the task may be retried. The Batch service retries a task if its exit code is nonzero. Note that this value specifically controls the number of retries for the task executable due to a nonzero exit code. The Batch service will try the task once, and may then retry up to this limit. For example, if the maximum retry count is 3, Batch tries the task up to 4 times (one initial try and 3 retries). If the maximum retry count is 0, the Batch service does not retry the task after the first attempt. If the maximum retry count is -1, the Batch service retries the task without limit. Resource files and application packages are only downloaded again if the task is retried on a new compute node.</p></summary>
         [Pure]
         public static AzureBatchTaskCreateSettings SetMaxTaskRetryCount(this AzureBatchTaskCreateSettings toolSettings, string maxTaskRetryCount)
         {
@@ -18481,7 +18481,7 @@ namespace Nuke.Azure
             toolSettings.MaxTaskRetryCount = maxTaskRetryCount;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchTaskCreateSettings.MaxTaskRetryCount"/>.</em></p><p>The maximum number of times the task may be retried. The Batch service retries a task if its exit code is nonzero. Note that this value specifically controls the number of retries. The Batch service will try the task once, and may then retry up to this limit. For example, if the maximum retry count is 3, Batch tries the task up to 4 times (one initial try and 3 retries). If the maximum retry count is 0, the Batch service does not retry the task. If the maximum retry count is -1, the Batch service retries the task without limit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchTaskCreateSettings.MaxTaskRetryCount"/>.</em></p><p>The maximum number of times the task may be retried. The Batch service retries a task if its exit code is nonzero. Note that this value specifically controls the number of retries for the task executable due to a nonzero exit code. The Batch service will try the task once, and may then retry up to this limit. For example, if the maximum retry count is 3, Batch tries the task up to 4 times (one initial try and 3 retries). If the maximum retry count is 0, the Batch service does not retry the task after the first attempt. If the maximum retry count is -1, the Batch service retries the task without limit. Resource files and application packages are only downloaded again if the task is retried on a new compute node.</p></summary>
         [Pure]
         public static AzureBatchTaskCreateSettings ResetMaxTaskRetryCount(this AzureBatchTaskCreateSettings toolSettings)
         {
@@ -19585,7 +19585,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region MaxTaskRetryCount
-        /// <summary><p><em>Sets <see cref="AzureBatchTaskResetSettings.MaxTaskRetryCount"/>.</em></p><p>The maximum number of times the task may be retried. The Batch service retries a task if its exit code is nonzero. Note that this value specifically controls the number of retries. The Batch service will try the task once, and may then retry up to this limit. For example, if the maximum retry count is 3, Batch tries the task up to 4 times (one initial try and 3 retries). If the maximum retry count is 0, the Batch service does not retry the task. If the maximum retry count is -1, the Batch service retries the task without limit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchTaskResetSettings.MaxTaskRetryCount"/>.</em></p><p>The maximum number of times the task may be retried. The Batch service retries a task if its exit code is nonzero. Note that this value specifically controls the number of retries for the task executable due to a nonzero exit code. The Batch service will try the task once, and may then retry up to this limit. For example, if the maximum retry count is 3, Batch tries the task up to 4 times (one initial try and 3 retries). If the maximum retry count is 0, the Batch service does not retry the task after the first attempt. If the maximum retry count is -1, the Batch service retries the task without limit. Resource files and application packages are only downloaded again if the task is retried on a new compute node.</p></summary>
         [Pure]
         public static AzureBatchTaskResetSettings SetMaxTaskRetryCount(this AzureBatchTaskResetSettings toolSettings, string maxTaskRetryCount)
         {
@@ -19593,7 +19593,7 @@ namespace Nuke.Azure
             toolSettings.MaxTaskRetryCount = maxTaskRetryCount;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchTaskResetSettings.MaxTaskRetryCount"/>.</em></p><p>The maximum number of times the task may be retried. The Batch service retries a task if its exit code is nonzero. Note that this value specifically controls the number of retries. The Batch service will try the task once, and may then retry up to this limit. For example, if the maximum retry count is 3, Batch tries the task up to 4 times (one initial try and 3 retries). If the maximum retry count is 0, the Batch service does not retry the task. If the maximum retry count is -1, the Batch service retries the task without limit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchTaskResetSettings.MaxTaskRetryCount"/>.</em></p><p>The maximum number of times the task may be retried. The Batch service retries a task if its exit code is nonzero. Note that this value specifically controls the number of retries for the task executable due to a nonzero exit code. The Batch service will try the task once, and may then retry up to this limit. For example, if the maximum retry count is 3, Batch tries the task up to 4 times (one initial try and 3 retries). If the maximum retry count is 0, the Batch service does not retry the task after the first attempt. If the maximum retry count is -1, the Batch service retries the task without limit. Resource files and application packages are only downloaded again if the task is retried on a new compute node.</p></summary>
         [Pure]
         public static AzureBatchTaskResetSettings ResetMaxTaskRetryCount(this AzureBatchTaskResetSettings toolSettings)
         {

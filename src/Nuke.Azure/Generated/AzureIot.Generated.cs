@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureIot.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotSettings toolSettings);
         static partial void PostProcess(AzureIotSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIot(Configure<AzureIotSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDeviceCreateSettings toolSettings);
         static partial void PostProcess(AzureIotDeviceCreateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDeviceCreate(Configure<AzureIotDeviceCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDeviceCreateSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDeviceDeleteSettings toolSettings);
         static partial void PostProcess(AzureIotDeviceDeleteSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDeviceDelete(Configure<AzureIotDeviceDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDeviceDeleteSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDeviceExportSettings toolSettings);
         static partial void PostProcess(AzureIotDeviceExportSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDeviceExport(Configure<AzureIotDeviceExportSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDeviceExportSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDeviceImportSettings toolSettings);
         static partial void PostProcess(AzureIotDeviceImportSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDeviceImport(Configure<AzureIotDeviceImportSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDeviceImportSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDeviceListSettings toolSettings);
         static partial void PostProcess(AzureIotDeviceListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDeviceList(Configure<AzureIotDeviceListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDeviceListSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDeviceShowSettings toolSettings);
         static partial void PostProcess(AzureIotDeviceShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDeviceShow(Configure<AzureIotDeviceShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDeviceShowSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDeviceShowConnectionStringSettings toolSettings);
         static partial void PostProcess(AzureIotDeviceShowConnectionStringSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDeviceShowConnectionString(Configure<AzureIotDeviceShowConnectionStringSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDeviceShowConnectionStringSettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDeviceUpdateSettings toolSettings);
         static partial void PostProcess(AzureIotDeviceUpdateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDeviceUpdate(Configure<AzureIotDeviceUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDeviceUpdateSettings());
@@ -135,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDpsCreateSettings toolSettings);
         static partial void PostProcess(AzureIotDpsCreateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDpsCreate(Configure<AzureIotDpsCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDpsCreateSettings());
@@ -146,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDpsDeleteSettings toolSettings);
         static partial void PostProcess(AzureIotDpsDeleteSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDpsDelete(Configure<AzureIotDpsDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDpsDeleteSettings());
@@ -157,7 +157,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDpsListSettings toolSettings);
         static partial void PostProcess(AzureIotDpsListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDpsList(Configure<AzureIotDpsListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDpsListSettings());
@@ -168,7 +168,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDpsShowSettings toolSettings);
         static partial void PostProcess(AzureIotDpsShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDpsShow(Configure<AzureIotDpsShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDpsShowSettings());
@@ -179,7 +179,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDpsUpdateSettings toolSettings);
         static partial void PostProcess(AzureIotDpsUpdateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDpsUpdate(Configure<AzureIotDpsUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDpsUpdateSettings());
@@ -190,7 +190,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotHubCreateSettings toolSettings);
         static partial void PostProcess(AzureIotHubCreateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotHubCreate(Configure<AzureIotHubCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotHubCreateSettings());
@@ -201,7 +201,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotHubDeleteSettings toolSettings);
         static partial void PostProcess(AzureIotHubDeleteSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotHubDelete(Configure<AzureIotHubDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotHubDeleteSettings());
@@ -212,7 +212,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotHubListSettings toolSettings);
         static partial void PostProcess(AzureIotHubListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotHubList(Configure<AzureIotHubListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotHubListSettings());
@@ -223,7 +223,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotHubListSkusSettings toolSettings);
         static partial void PostProcess(AzureIotHubListSkusSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotHubListSkus(Configure<AzureIotHubListSkusSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotHubListSkusSettings());
@@ -234,7 +234,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotHubShowSettings toolSettings);
         static partial void PostProcess(AzureIotHubShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotHubShow(Configure<AzureIotHubShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotHubShowSettings());
@@ -245,7 +245,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotHubShowConnectionStringSettings toolSettings);
         static partial void PostProcess(AzureIotHubShowConnectionStringSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotHubShowConnectionString(Configure<AzureIotHubShowConnectionStringSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotHubShowConnectionStringSettings());
@@ -256,7 +256,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotHubShowQuotaMetricsSettings toolSettings);
         static partial void PostProcess(AzureIotHubShowQuotaMetricsSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotHubShowQuotaMetrics(Configure<AzureIotHubShowQuotaMetricsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotHubShowQuotaMetricsSettings());
@@ -267,7 +267,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotHubShowStatsSettings toolSettings);
         static partial void PostProcess(AzureIotHubShowStatsSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotHubShowStats(Configure<AzureIotHubShowStatsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotHubShowStatsSettings());
@@ -278,7 +278,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotHubUpdateSettings toolSettings);
         static partial void PostProcess(AzureIotHubUpdateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotHubUpdate(Configure<AzureIotHubUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotHubUpdateSettings());
@@ -289,7 +289,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDeviceMessageAbandonSettings toolSettings);
         static partial void PostProcess(AzureIotDeviceMessageAbandonSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDeviceMessageAbandon(Configure<AzureIotDeviceMessageAbandonSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDeviceMessageAbandonSettings());
@@ -300,7 +300,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDeviceMessageCompleteSettings toolSettings);
         static partial void PostProcess(AzureIotDeviceMessageCompleteSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDeviceMessageComplete(Configure<AzureIotDeviceMessageCompleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDeviceMessageCompleteSettings());
@@ -311,7 +311,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDeviceMessageReceiveSettings toolSettings);
         static partial void PostProcess(AzureIotDeviceMessageReceiveSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDeviceMessageReceive(Configure<AzureIotDeviceMessageReceiveSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDeviceMessageReceiveSettings());
@@ -322,7 +322,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDeviceMessageRejectSettings toolSettings);
         static partial void PostProcess(AzureIotDeviceMessageRejectSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDeviceMessageReject(Configure<AzureIotDeviceMessageRejectSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDeviceMessageRejectSettings());
@@ -333,7 +333,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDeviceMessageSendSettings toolSettings);
         static partial void PostProcess(AzureIotDeviceMessageSendSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDeviceMessageSend(Configure<AzureIotDeviceMessageSendSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDeviceMessageSendSettings());
@@ -344,7 +344,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDpsAccessPolicyCreateSettings toolSettings);
         static partial void PostProcess(AzureIotDpsAccessPolicyCreateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDpsAccessPolicyCreate(Configure<AzureIotDpsAccessPolicyCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDpsAccessPolicyCreateSettings());
@@ -355,7 +355,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDpsAccessPolicyDeleteSettings toolSettings);
         static partial void PostProcess(AzureIotDpsAccessPolicyDeleteSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDpsAccessPolicyDelete(Configure<AzureIotDpsAccessPolicyDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDpsAccessPolicyDeleteSettings());
@@ -366,7 +366,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDpsAccessPolicyListSettings toolSettings);
         static partial void PostProcess(AzureIotDpsAccessPolicyListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDpsAccessPolicyList(Configure<AzureIotDpsAccessPolicyListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDpsAccessPolicyListSettings());
@@ -377,7 +377,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDpsAccessPolicyShowSettings toolSettings);
         static partial void PostProcess(AzureIotDpsAccessPolicyShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDpsAccessPolicyShow(Configure<AzureIotDpsAccessPolicyShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDpsAccessPolicyShowSettings());
@@ -388,7 +388,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDpsAccessPolicyUpdateSettings toolSettings);
         static partial void PostProcess(AzureIotDpsAccessPolicyUpdateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDpsAccessPolicyUpdate(Configure<AzureIotDpsAccessPolicyUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDpsAccessPolicyUpdateSettings());
@@ -399,7 +399,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDpsCertificateCreateSettings toolSettings);
         static partial void PostProcess(AzureIotDpsCertificateCreateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDpsCertificateCreate(Configure<AzureIotDpsCertificateCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDpsCertificateCreateSettings());
@@ -410,7 +410,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDpsCertificateDeleteSettings toolSettings);
         static partial void PostProcess(AzureIotDpsCertificateDeleteSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDpsCertificateDelete(Configure<AzureIotDpsCertificateDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDpsCertificateDeleteSettings());
@@ -421,7 +421,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDpsCertificateGenerateVerificationCodeSettings toolSettings);
         static partial void PostProcess(AzureIotDpsCertificateGenerateVerificationCodeSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDpsCertificateGenerateVerificationCode(Configure<AzureIotDpsCertificateGenerateVerificationCodeSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDpsCertificateGenerateVerificationCodeSettings());
@@ -432,7 +432,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDpsCertificateListSettings toolSettings);
         static partial void PostProcess(AzureIotDpsCertificateListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDpsCertificateList(Configure<AzureIotDpsCertificateListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDpsCertificateListSettings());
@@ -443,7 +443,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDpsCertificateShowSettings toolSettings);
         static partial void PostProcess(AzureIotDpsCertificateShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDpsCertificateShow(Configure<AzureIotDpsCertificateShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDpsCertificateShowSettings());
@@ -454,7 +454,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDpsCertificateUpdateSettings toolSettings);
         static partial void PostProcess(AzureIotDpsCertificateUpdateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDpsCertificateUpdate(Configure<AzureIotDpsCertificateUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDpsCertificateUpdateSettings());
@@ -465,7 +465,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDpsCertificateVerifySettings toolSettings);
         static partial void PostProcess(AzureIotDpsCertificateVerifySettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDpsCertificateVerify(Configure<AzureIotDpsCertificateVerifySettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDpsCertificateVerifySettings());
@@ -476,7 +476,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDpsLinkedHubCreateSettings toolSettings);
         static partial void PostProcess(AzureIotDpsLinkedHubCreateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDpsLinkedHubCreate(Configure<AzureIotDpsLinkedHubCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDpsLinkedHubCreateSettings());
@@ -487,7 +487,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDpsLinkedHubDeleteSettings toolSettings);
         static partial void PostProcess(AzureIotDpsLinkedHubDeleteSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDpsLinkedHubDelete(Configure<AzureIotDpsLinkedHubDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDpsLinkedHubDeleteSettings());
@@ -498,7 +498,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDpsLinkedHubListSettings toolSettings);
         static partial void PostProcess(AzureIotDpsLinkedHubListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDpsLinkedHubList(Configure<AzureIotDpsLinkedHubListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDpsLinkedHubListSettings());
@@ -509,7 +509,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDpsLinkedHubShowSettings toolSettings);
         static partial void PostProcess(AzureIotDpsLinkedHubShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDpsLinkedHubShow(Configure<AzureIotDpsLinkedHubShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDpsLinkedHubShowSettings());
@@ -520,7 +520,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotDpsLinkedHubUpdateSettings toolSettings);
         static partial void PostProcess(AzureIotDpsLinkedHubUpdateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotDpsLinkedHubUpdate(Configure<AzureIotDpsLinkedHubUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotDpsLinkedHubUpdateSettings());
@@ -531,7 +531,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotHubCertificateCreateSettings toolSettings);
         static partial void PostProcess(AzureIotHubCertificateCreateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotHubCertificateCreate(Configure<AzureIotHubCertificateCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotHubCertificateCreateSettings());
@@ -542,7 +542,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotHubCertificateDeleteSettings toolSettings);
         static partial void PostProcess(AzureIotHubCertificateDeleteSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotHubCertificateDelete(Configure<AzureIotHubCertificateDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotHubCertificateDeleteSettings());
@@ -553,7 +553,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotHubCertificateGenerateVerificationCodeSettings toolSettings);
         static partial void PostProcess(AzureIotHubCertificateGenerateVerificationCodeSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotHubCertificateGenerateVerificationCode(Configure<AzureIotHubCertificateGenerateVerificationCodeSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotHubCertificateGenerateVerificationCodeSettings());
@@ -564,7 +564,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotHubCertificateListSettings toolSettings);
         static partial void PostProcess(AzureIotHubCertificateListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotHubCertificateList(Configure<AzureIotHubCertificateListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotHubCertificateListSettings());
@@ -575,7 +575,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotHubCertificateShowSettings toolSettings);
         static partial void PostProcess(AzureIotHubCertificateShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotHubCertificateShow(Configure<AzureIotHubCertificateShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotHubCertificateShowSettings());
@@ -586,7 +586,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotHubCertificateUpdateSettings toolSettings);
         static partial void PostProcess(AzureIotHubCertificateUpdateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotHubCertificateUpdate(Configure<AzureIotHubCertificateUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotHubCertificateUpdateSettings());
@@ -597,7 +597,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotHubCertificateVerifySettings toolSettings);
         static partial void PostProcess(AzureIotHubCertificateVerifySettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotHubCertificateVerify(Configure<AzureIotHubCertificateVerifySettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotHubCertificateVerifySettings());
@@ -608,7 +608,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotHubConsumerGroupCreateSettings toolSettings);
         static partial void PostProcess(AzureIotHubConsumerGroupCreateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotHubConsumerGroupCreate(Configure<AzureIotHubConsumerGroupCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotHubConsumerGroupCreateSettings());
@@ -619,7 +619,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotHubConsumerGroupDeleteSettings toolSettings);
         static partial void PostProcess(AzureIotHubConsumerGroupDeleteSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotHubConsumerGroupDelete(Configure<AzureIotHubConsumerGroupDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotHubConsumerGroupDeleteSettings());
@@ -630,7 +630,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotHubConsumerGroupListSettings toolSettings);
         static partial void PostProcess(AzureIotHubConsumerGroupListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotHubConsumerGroupList(Configure<AzureIotHubConsumerGroupListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotHubConsumerGroupListSettings());
@@ -641,7 +641,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotHubConsumerGroupShowSettings toolSettings);
         static partial void PostProcess(AzureIotHubConsumerGroupShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotHubConsumerGroupShow(Configure<AzureIotHubConsumerGroupShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotHubConsumerGroupShowSettings());
@@ -652,7 +652,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotHubJobCancelSettings toolSettings);
         static partial void PostProcess(AzureIotHubJobCancelSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotHubJobCancel(Configure<AzureIotHubJobCancelSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotHubJobCancelSettings());
@@ -663,7 +663,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotHubJobListSettings toolSettings);
         static partial void PostProcess(AzureIotHubJobListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotHubJobList(Configure<AzureIotHubJobListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotHubJobListSettings());
@@ -674,7 +674,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotHubJobShowSettings toolSettings);
         static partial void PostProcess(AzureIotHubJobShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotHubJobShow(Configure<AzureIotHubJobShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotHubJobShowSettings());
@@ -685,7 +685,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotHubPolicyCreateSettings toolSettings);
         static partial void PostProcess(AzureIotHubPolicyCreateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotHubPolicyCreate(Configure<AzureIotHubPolicyCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotHubPolicyCreateSettings());
@@ -696,7 +696,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotHubPolicyDeleteSettings toolSettings);
         static partial void PostProcess(AzureIotHubPolicyDeleteSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotHubPolicyDelete(Configure<AzureIotHubPolicyDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotHubPolicyDeleteSettings());
@@ -707,7 +707,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotHubPolicyListSettings toolSettings);
         static partial void PostProcess(AzureIotHubPolicyListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotHubPolicyList(Configure<AzureIotHubPolicyListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotHubPolicyListSettings());
@@ -718,7 +718,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureIotHubPolicyShowSettings toolSettings);
         static partial void PostProcess(AzureIotHubPolicyShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/iot.yml">official website</a>.</p></summary>
+        /// <summary><p>(PREVIEW) Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureIotHubPolicyShow(Configure<AzureIotHubPolicyShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotHubPolicyShowSettings());

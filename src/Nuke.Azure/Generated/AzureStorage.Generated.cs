@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureStorage.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageSettings toolSettings);
         static partial void PostProcess(AzureStorageSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorage(Configure<AzureStorageSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageAccountCheckNameSettings toolSettings);
         static partial void PostProcess(AzureStorageAccountCheckNameSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageAccountCheckName(Configure<AzureStorageAccountCheckNameSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageAccountCheckNameSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageAccountCreateSettings toolSettings);
         static partial void PostProcess(AzureStorageAccountCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageAccountCreate(Configure<AzureStorageAccountCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageAccountCreateSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageAccountDeleteSettings toolSettings);
         static partial void PostProcess(AzureStorageAccountDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageAccountDelete(Configure<AzureStorageAccountDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageAccountDeleteSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageAccountGenerateSasSettings toolSettings);
         static partial void PostProcess(AzureStorageAccountGenerateSasSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageAccountGenerateSas(Configure<AzureStorageAccountGenerateSasSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageAccountGenerateSasSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageAccountListSettings toolSettings);
         static partial void PostProcess(AzureStorageAccountListSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageAccountList(Configure<AzureStorageAccountListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageAccountListSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageAccountShowSettings toolSettings);
         static partial void PostProcess(AzureStorageAccountShowSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageAccountShow(Configure<AzureStorageAccountShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageAccountShowSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageAccountShowConnectionStringSettings toolSettings);
         static partial void PostProcess(AzureStorageAccountShowConnectionStringSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageAccountShowConnectionString(Configure<AzureStorageAccountShowConnectionStringSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageAccountShowConnectionStringSettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageAccountShowUsageSettings toolSettings);
         static partial void PostProcess(AzureStorageAccountShowUsageSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageAccountShowUsage(Configure<AzureStorageAccountShowUsageSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageAccountShowUsageSettings());
@@ -135,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageAccountUpdateSettings toolSettings);
         static partial void PostProcess(AzureStorageAccountUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageAccountUpdate(Configure<AzureStorageAccountUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageAccountUpdateSettings());
@@ -146,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageBlobDeleteSettings toolSettings);
         static partial void PostProcess(AzureStorageBlobDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageBlobDelete(Configure<AzureStorageBlobDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageBlobDeleteSettings());
@@ -157,7 +157,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageBlobDeleteBatchSettings toolSettings);
         static partial void PostProcess(AzureStorageBlobDeleteBatchSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageBlobDeleteBatch(Configure<AzureStorageBlobDeleteBatchSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageBlobDeleteBatchSettings());
@@ -168,7 +168,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageBlobDownloadSettings toolSettings);
         static partial void PostProcess(AzureStorageBlobDownloadSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageBlobDownload(Configure<AzureStorageBlobDownloadSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageBlobDownloadSettings());
@@ -179,7 +179,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageBlobDownloadBatchSettings toolSettings);
         static partial void PostProcess(AzureStorageBlobDownloadBatchSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageBlobDownloadBatch(Configure<AzureStorageBlobDownloadBatchSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageBlobDownloadBatchSettings());
@@ -190,7 +190,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageBlobExistsSettings toolSettings);
         static partial void PostProcess(AzureStorageBlobExistsSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageBlobExists(Configure<AzureStorageBlobExistsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageBlobExistsSettings());
@@ -201,7 +201,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageBlobGenerateSasSettings toolSettings);
         static partial void PostProcess(AzureStorageBlobGenerateSasSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageBlobGenerateSas(Configure<AzureStorageBlobGenerateSasSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageBlobGenerateSasSettings());
@@ -212,7 +212,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageBlobListSettings toolSettings);
         static partial void PostProcess(AzureStorageBlobListSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageBlobList(Configure<AzureStorageBlobListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageBlobListSettings());
@@ -223,7 +223,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageBlobSetTierSettings toolSettings);
         static partial void PostProcess(AzureStorageBlobSetTierSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageBlobSetTier(Configure<AzureStorageBlobSetTierSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageBlobSetTierSettings());
@@ -234,7 +234,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageBlobShowSettings toolSettings);
         static partial void PostProcess(AzureStorageBlobShowSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageBlobShow(Configure<AzureStorageBlobShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageBlobShowSettings());
@@ -245,7 +245,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageBlobSnapshotSettings toolSettings);
         static partial void PostProcess(AzureStorageBlobSnapshotSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageBlobSnapshot(Configure<AzureStorageBlobSnapshotSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageBlobSnapshotSettings());
@@ -256,7 +256,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageBlobUndeleteSettings toolSettings);
         static partial void PostProcess(AzureStorageBlobUndeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageBlobUndelete(Configure<AzureStorageBlobUndeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageBlobUndeleteSettings());
@@ -267,7 +267,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageBlobUpdateSettings toolSettings);
         static partial void PostProcess(AzureStorageBlobUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageBlobUpdate(Configure<AzureStorageBlobUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageBlobUpdateSettings());
@@ -278,7 +278,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageBlobUploadSettings toolSettings);
         static partial void PostProcess(AzureStorageBlobUploadSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageBlobUpload(Configure<AzureStorageBlobUploadSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageBlobUploadSettings());
@@ -289,7 +289,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageBlobUploadBatchSettings toolSettings);
         static partial void PostProcess(AzureStorageBlobUploadBatchSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageBlobUploadBatch(Configure<AzureStorageBlobUploadBatchSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageBlobUploadBatchSettings());
@@ -300,7 +300,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageBlobUrlSettings toolSettings);
         static partial void PostProcess(AzureStorageBlobUrlSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageBlobUrl(Configure<AzureStorageBlobUrlSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageBlobUrlSettings());
@@ -311,7 +311,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageContainerCreateSettings toolSettings);
         static partial void PostProcess(AzureStorageContainerCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageContainerCreate(Configure<AzureStorageContainerCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageContainerCreateSettings());
@@ -322,7 +322,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageContainerDeleteSettings toolSettings);
         static partial void PostProcess(AzureStorageContainerDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageContainerDelete(Configure<AzureStorageContainerDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageContainerDeleteSettings());
@@ -333,7 +333,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageContainerExistsSettings toolSettings);
         static partial void PostProcess(AzureStorageContainerExistsSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageContainerExists(Configure<AzureStorageContainerExistsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageContainerExistsSettings());
@@ -344,7 +344,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageContainerGenerateSasSettings toolSettings);
         static partial void PostProcess(AzureStorageContainerGenerateSasSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageContainerGenerateSas(Configure<AzureStorageContainerGenerateSasSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageContainerGenerateSasSettings());
@@ -355,7 +355,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageContainerListSettings toolSettings);
         static partial void PostProcess(AzureStorageContainerListSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageContainerList(Configure<AzureStorageContainerListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageContainerListSettings());
@@ -366,7 +366,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageContainerSetPermissionSettings toolSettings);
         static partial void PostProcess(AzureStorageContainerSetPermissionSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageContainerSetPermission(Configure<AzureStorageContainerSetPermissionSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageContainerSetPermissionSettings());
@@ -377,7 +377,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageContainerShowSettings toolSettings);
         static partial void PostProcess(AzureStorageContainerShowSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageContainerShow(Configure<AzureStorageContainerShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageContainerShowSettings());
@@ -388,7 +388,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageContainerShowPermissionSettings toolSettings);
         static partial void PostProcess(AzureStorageContainerShowPermissionSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageContainerShowPermission(Configure<AzureStorageContainerShowPermissionSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageContainerShowPermissionSettings());
@@ -399,7 +399,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageCorsAddSettings toolSettings);
         static partial void PostProcess(AzureStorageCorsAddSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageCorsAdd(Configure<AzureStorageCorsAddSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageCorsAddSettings());
@@ -410,7 +410,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageCorsClearSettings toolSettings);
         static partial void PostProcess(AzureStorageCorsClearSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageCorsClear(Configure<AzureStorageCorsClearSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageCorsClearSettings());
@@ -421,7 +421,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageCorsListSettings toolSettings);
         static partial void PostProcess(AzureStorageCorsListSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageCorsList(Configure<AzureStorageCorsListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageCorsListSettings());
@@ -432,7 +432,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageDirectoryCreateSettings toolSettings);
         static partial void PostProcess(AzureStorageDirectoryCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageDirectoryCreate(Configure<AzureStorageDirectoryCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageDirectoryCreateSettings());
@@ -443,7 +443,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageDirectoryDeleteSettings toolSettings);
         static partial void PostProcess(AzureStorageDirectoryDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageDirectoryDelete(Configure<AzureStorageDirectoryDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageDirectoryDeleteSettings());
@@ -454,7 +454,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageDirectoryExistsSettings toolSettings);
         static partial void PostProcess(AzureStorageDirectoryExistsSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageDirectoryExists(Configure<AzureStorageDirectoryExistsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageDirectoryExistsSettings());
@@ -465,7 +465,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageDirectoryListSettings toolSettings);
         static partial void PostProcess(AzureStorageDirectoryListSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageDirectoryList(Configure<AzureStorageDirectoryListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageDirectoryListSettings());
@@ -476,7 +476,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageDirectoryShowSettings toolSettings);
         static partial void PostProcess(AzureStorageDirectoryShowSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageDirectoryShow(Configure<AzureStorageDirectoryShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageDirectoryShowSettings());
@@ -487,7 +487,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageEntityDeleteSettings toolSettings);
         static partial void PostProcess(AzureStorageEntityDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageEntityDelete(Configure<AzureStorageEntityDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageEntityDeleteSettings());
@@ -498,7 +498,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageEntityInsertSettings toolSettings);
         static partial void PostProcess(AzureStorageEntityInsertSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageEntityInsert(Configure<AzureStorageEntityInsertSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageEntityInsertSettings());
@@ -509,7 +509,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageEntityMergeSettings toolSettings);
         static partial void PostProcess(AzureStorageEntityMergeSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageEntityMerge(Configure<AzureStorageEntityMergeSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageEntityMergeSettings());
@@ -520,7 +520,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageEntityQuerySettings toolSettings);
         static partial void PostProcess(AzureStorageEntityQuerySettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageEntityQuery(Configure<AzureStorageEntityQuerySettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageEntityQuerySettings());
@@ -531,7 +531,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageEntityReplaceSettings toolSettings);
         static partial void PostProcess(AzureStorageEntityReplaceSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageEntityReplace(Configure<AzureStorageEntityReplaceSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageEntityReplaceSettings());
@@ -542,7 +542,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageEntityShowSettings toolSettings);
         static partial void PostProcess(AzureStorageEntityShowSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageEntityShow(Configure<AzureStorageEntityShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageEntityShowSettings());
@@ -553,7 +553,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageFileDeleteSettings toolSettings);
         static partial void PostProcess(AzureStorageFileDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageFileDelete(Configure<AzureStorageFileDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageFileDeleteSettings());
@@ -564,7 +564,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageFileDeleteBatchSettings toolSettings);
         static partial void PostProcess(AzureStorageFileDeleteBatchSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageFileDeleteBatch(Configure<AzureStorageFileDeleteBatchSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageFileDeleteBatchSettings());
@@ -575,7 +575,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageFileDownloadSettings toolSettings);
         static partial void PostProcess(AzureStorageFileDownloadSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageFileDownload(Configure<AzureStorageFileDownloadSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageFileDownloadSettings());
@@ -586,7 +586,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageFileDownloadBatchSettings toolSettings);
         static partial void PostProcess(AzureStorageFileDownloadBatchSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageFileDownloadBatch(Configure<AzureStorageFileDownloadBatchSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageFileDownloadBatchSettings());
@@ -597,7 +597,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageFileExistsSettings toolSettings);
         static partial void PostProcess(AzureStorageFileExistsSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageFileExists(Configure<AzureStorageFileExistsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageFileExistsSettings());
@@ -608,7 +608,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageFileGenerateSasSettings toolSettings);
         static partial void PostProcess(AzureStorageFileGenerateSasSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageFileGenerateSas(Configure<AzureStorageFileGenerateSasSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageFileGenerateSasSettings());
@@ -619,7 +619,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageFileListSettings toolSettings);
         static partial void PostProcess(AzureStorageFileListSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageFileList(Configure<AzureStorageFileListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageFileListSettings());
@@ -630,7 +630,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageFileResizeSettings toolSettings);
         static partial void PostProcess(AzureStorageFileResizeSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageFileResize(Configure<AzureStorageFileResizeSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageFileResizeSettings());
@@ -641,7 +641,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageFileShowSettings toolSettings);
         static partial void PostProcess(AzureStorageFileShowSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageFileShow(Configure<AzureStorageFileShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageFileShowSettings());
@@ -652,7 +652,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageFileUpdateSettings toolSettings);
         static partial void PostProcess(AzureStorageFileUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageFileUpdate(Configure<AzureStorageFileUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageFileUpdateSettings());
@@ -663,7 +663,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageFileUploadSettings toolSettings);
         static partial void PostProcess(AzureStorageFileUploadSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageFileUpload(Configure<AzureStorageFileUploadSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageFileUploadSettings());
@@ -674,7 +674,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageFileUploadBatchSettings toolSettings);
         static partial void PostProcess(AzureStorageFileUploadBatchSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageFileUploadBatch(Configure<AzureStorageFileUploadBatchSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageFileUploadBatchSettings());
@@ -685,7 +685,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageFileUrlSettings toolSettings);
         static partial void PostProcess(AzureStorageFileUrlSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageFileUrl(Configure<AzureStorageFileUrlSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageFileUrlSettings());
@@ -696,7 +696,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageLoggingShowSettings toolSettings);
         static partial void PostProcess(AzureStorageLoggingShowSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageLoggingShow(Configure<AzureStorageLoggingShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageLoggingShowSettings());
@@ -707,7 +707,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageLoggingUpdateSettings toolSettings);
         static partial void PostProcess(AzureStorageLoggingUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageLoggingUpdate(Configure<AzureStorageLoggingUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageLoggingUpdateSettings());
@@ -718,7 +718,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageMessageClearSettings toolSettings);
         static partial void PostProcess(AzureStorageMessageClearSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageMessageClear(Configure<AzureStorageMessageClearSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageMessageClearSettings());
@@ -729,7 +729,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageMessageDeleteSettings toolSettings);
         static partial void PostProcess(AzureStorageMessageDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageMessageDelete(Configure<AzureStorageMessageDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageMessageDeleteSettings());
@@ -740,7 +740,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageMessageGetSettings toolSettings);
         static partial void PostProcess(AzureStorageMessageGetSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageMessageGet(Configure<AzureStorageMessageGetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageMessageGetSettings());
@@ -751,7 +751,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageMessagePeekSettings toolSettings);
         static partial void PostProcess(AzureStorageMessagePeekSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageMessagePeek(Configure<AzureStorageMessagePeekSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageMessagePeekSettings());
@@ -762,7 +762,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageMessagePutSettings toolSettings);
         static partial void PostProcess(AzureStorageMessagePutSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageMessagePut(Configure<AzureStorageMessagePutSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageMessagePutSettings());
@@ -773,7 +773,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageMessageUpdateSettings toolSettings);
         static partial void PostProcess(AzureStorageMessageUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageMessageUpdate(Configure<AzureStorageMessageUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageMessageUpdateSettings());
@@ -784,7 +784,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageMetricsShowSettings toolSettings);
         static partial void PostProcess(AzureStorageMetricsShowSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageMetricsShow(Configure<AzureStorageMetricsShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageMetricsShowSettings());
@@ -795,7 +795,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageMetricsUpdateSettings toolSettings);
         static partial void PostProcess(AzureStorageMetricsUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageMetricsUpdate(Configure<AzureStorageMetricsUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageMetricsUpdateSettings());
@@ -806,7 +806,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageQueueCreateSettings toolSettings);
         static partial void PostProcess(AzureStorageQueueCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageQueueCreate(Configure<AzureStorageQueueCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageQueueCreateSettings());
@@ -817,7 +817,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageQueueDeleteSettings toolSettings);
         static partial void PostProcess(AzureStorageQueueDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageQueueDelete(Configure<AzureStorageQueueDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageQueueDeleteSettings());
@@ -828,7 +828,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageQueueExistsSettings toolSettings);
         static partial void PostProcess(AzureStorageQueueExistsSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageQueueExists(Configure<AzureStorageQueueExistsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageQueueExistsSettings());
@@ -839,7 +839,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageQueueGenerateSasSettings toolSettings);
         static partial void PostProcess(AzureStorageQueueGenerateSasSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageQueueGenerateSas(Configure<AzureStorageQueueGenerateSasSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageQueueGenerateSasSettings());
@@ -850,7 +850,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageQueueListSettings toolSettings);
         static partial void PostProcess(AzureStorageQueueListSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageQueueList(Configure<AzureStorageQueueListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageQueueListSettings());
@@ -861,7 +861,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageQueueStatsSettings toolSettings);
         static partial void PostProcess(AzureStorageQueueStatsSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageQueueStats(Configure<AzureStorageQueueStatsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageQueueStatsSettings());
@@ -872,7 +872,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageShareCreateSettings toolSettings);
         static partial void PostProcess(AzureStorageShareCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageShareCreate(Configure<AzureStorageShareCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageShareCreateSettings());
@@ -883,7 +883,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageShareDeleteSettings toolSettings);
         static partial void PostProcess(AzureStorageShareDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageShareDelete(Configure<AzureStorageShareDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageShareDeleteSettings());
@@ -894,7 +894,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageShareExistsSettings toolSettings);
         static partial void PostProcess(AzureStorageShareExistsSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageShareExists(Configure<AzureStorageShareExistsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageShareExistsSettings());
@@ -905,7 +905,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageShareGenerateSasSettings toolSettings);
         static partial void PostProcess(AzureStorageShareGenerateSasSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageShareGenerateSas(Configure<AzureStorageShareGenerateSasSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageShareGenerateSasSettings());
@@ -916,7 +916,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageShareListSettings toolSettings);
         static partial void PostProcess(AzureStorageShareListSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageShareList(Configure<AzureStorageShareListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageShareListSettings());
@@ -927,7 +927,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageShareShowSettings toolSettings);
         static partial void PostProcess(AzureStorageShareShowSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageShareShow(Configure<AzureStorageShareShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageShareShowSettings());
@@ -938,7 +938,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageShareSnapshotSettings toolSettings);
         static partial void PostProcess(AzureStorageShareSnapshotSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageShareSnapshot(Configure<AzureStorageShareSnapshotSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageShareSnapshotSettings());
@@ -949,7 +949,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageShareStatsSettings toolSettings);
         static partial void PostProcess(AzureStorageShareStatsSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageShareStats(Configure<AzureStorageShareStatsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageShareStatsSettings());
@@ -960,7 +960,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageShareUpdateSettings toolSettings);
         static partial void PostProcess(AzureStorageShareUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageShareUpdate(Configure<AzureStorageShareUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageShareUpdateSettings());
@@ -971,7 +971,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageTableCreateSettings toolSettings);
         static partial void PostProcess(AzureStorageTableCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageTableCreate(Configure<AzureStorageTableCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageTableCreateSettings());
@@ -982,7 +982,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageTableDeleteSettings toolSettings);
         static partial void PostProcess(AzureStorageTableDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageTableDelete(Configure<AzureStorageTableDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageTableDeleteSettings());
@@ -993,7 +993,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageTableExistsSettings toolSettings);
         static partial void PostProcess(AzureStorageTableExistsSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageTableExists(Configure<AzureStorageTableExistsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageTableExistsSettings());
@@ -1004,7 +1004,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageTableGenerateSasSettings toolSettings);
         static partial void PostProcess(AzureStorageTableGenerateSasSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageTableGenerateSas(Configure<AzureStorageTableGenerateSasSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageTableGenerateSasSettings());
@@ -1015,7 +1015,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageTableListSettings toolSettings);
         static partial void PostProcess(AzureStorageTableListSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageTableList(Configure<AzureStorageTableListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageTableListSettings());
@@ -1026,7 +1026,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageTableStatsSettings toolSettings);
         static partial void PostProcess(AzureStorageTableStatsSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageTableStats(Configure<AzureStorageTableStatsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageTableStatsSettings());
@@ -1037,7 +1037,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageAccountKeysListSettings toolSettings);
         static partial void PostProcess(AzureStorageAccountKeysListSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageAccountKeysList(Configure<AzureStorageAccountKeysListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageAccountKeysListSettings());
@@ -1048,7 +1048,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageAccountKeysRenewSettings toolSettings);
         static partial void PostProcess(AzureStorageAccountKeysRenewSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageAccountKeysRenew(Configure<AzureStorageAccountKeysRenewSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageAccountKeysRenewSettings());
@@ -1059,7 +1059,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageAccountNetworkRuleAddSettings toolSettings);
         static partial void PostProcess(AzureStorageAccountNetworkRuleAddSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageAccountNetworkRuleAdd(Configure<AzureStorageAccountNetworkRuleAddSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageAccountNetworkRuleAddSettings());
@@ -1070,7 +1070,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageAccountNetworkRuleListSettings toolSettings);
         static partial void PostProcess(AzureStorageAccountNetworkRuleListSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageAccountNetworkRuleList(Configure<AzureStorageAccountNetworkRuleListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageAccountNetworkRuleListSettings());
@@ -1081,7 +1081,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageAccountNetworkRuleRemoveSettings toolSettings);
         static partial void PostProcess(AzureStorageAccountNetworkRuleRemoveSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageAccountNetworkRuleRemove(Configure<AzureStorageAccountNetworkRuleRemoveSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageAccountNetworkRuleRemoveSettings());
@@ -1092,7 +1092,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageBlobCopyCancelSettings toolSettings);
         static partial void PostProcess(AzureStorageBlobCopyCancelSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageBlobCopyCancel(Configure<AzureStorageBlobCopyCancelSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageBlobCopyCancelSettings());
@@ -1103,7 +1103,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageBlobCopyStartSettings toolSettings);
         static partial void PostProcess(AzureStorageBlobCopyStartSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageBlobCopyStart(Configure<AzureStorageBlobCopyStartSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageBlobCopyStartSettings());
@@ -1114,7 +1114,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageBlobCopyStartBatchSettings toolSettings);
         static partial void PostProcess(AzureStorageBlobCopyStartBatchSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageBlobCopyStartBatch(Configure<AzureStorageBlobCopyStartBatchSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageBlobCopyStartBatchSettings());
@@ -1125,7 +1125,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageBlobIncrementalCopyCancelSettings toolSettings);
         static partial void PostProcess(AzureStorageBlobIncrementalCopyCancelSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageBlobIncrementalCopyCancel(Configure<AzureStorageBlobIncrementalCopyCancelSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageBlobIncrementalCopyCancelSettings());
@@ -1136,7 +1136,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageBlobIncrementalCopyStartSettings toolSettings);
         static partial void PostProcess(AzureStorageBlobIncrementalCopyStartSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageBlobIncrementalCopyStart(Configure<AzureStorageBlobIncrementalCopyStartSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageBlobIncrementalCopyStartSettings());
@@ -1147,7 +1147,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageBlobLeaseAcquireSettings toolSettings);
         static partial void PostProcess(AzureStorageBlobLeaseAcquireSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageBlobLeaseAcquire(Configure<AzureStorageBlobLeaseAcquireSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageBlobLeaseAcquireSettings());
@@ -1158,7 +1158,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageBlobLeaseBreakSettings toolSettings);
         static partial void PostProcess(AzureStorageBlobLeaseBreakSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageBlobLeaseBreak(Configure<AzureStorageBlobLeaseBreakSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageBlobLeaseBreakSettings());
@@ -1169,7 +1169,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageBlobLeaseChangeSettings toolSettings);
         static partial void PostProcess(AzureStorageBlobLeaseChangeSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageBlobLeaseChange(Configure<AzureStorageBlobLeaseChangeSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageBlobLeaseChangeSettings());
@@ -1180,7 +1180,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageBlobLeaseReleaseSettings toolSettings);
         static partial void PostProcess(AzureStorageBlobLeaseReleaseSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageBlobLeaseRelease(Configure<AzureStorageBlobLeaseReleaseSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageBlobLeaseReleaseSettings());
@@ -1191,7 +1191,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageBlobLeaseRenewSettings toolSettings);
         static partial void PostProcess(AzureStorageBlobLeaseRenewSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageBlobLeaseRenew(Configure<AzureStorageBlobLeaseRenewSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageBlobLeaseRenewSettings());
@@ -1202,7 +1202,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageBlobMetadataShowSettings toolSettings);
         static partial void PostProcess(AzureStorageBlobMetadataShowSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageBlobMetadataShow(Configure<AzureStorageBlobMetadataShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageBlobMetadataShowSettings());
@@ -1213,7 +1213,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageBlobMetadataUpdateSettings toolSettings);
         static partial void PostProcess(AzureStorageBlobMetadataUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageBlobMetadataUpdate(Configure<AzureStorageBlobMetadataUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageBlobMetadataUpdateSettings());
@@ -1224,7 +1224,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageBlobServicePropertiesShowSettings toolSettings);
         static partial void PostProcess(AzureStorageBlobServicePropertiesShowSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageBlobServicePropertiesShow(Configure<AzureStorageBlobServicePropertiesShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageBlobServicePropertiesShowSettings());
@@ -1235,7 +1235,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings);
         static partial void PostProcess(AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageBlobServicePropertiesDeletePolicyShow(Configure<AzureStorageBlobServicePropertiesDeletePolicyShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageBlobServicePropertiesDeletePolicyShowSettings());
@@ -1246,7 +1246,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings);
         static partial void PostProcess(AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageBlobServicePropertiesDeletePolicyUpdate(Configure<AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings());
@@ -1257,7 +1257,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageContainerLeaseAcquireSettings toolSettings);
         static partial void PostProcess(AzureStorageContainerLeaseAcquireSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageContainerLeaseAcquire(Configure<AzureStorageContainerLeaseAcquireSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageContainerLeaseAcquireSettings());
@@ -1268,7 +1268,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageContainerLeaseBreakSettings toolSettings);
         static partial void PostProcess(AzureStorageContainerLeaseBreakSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageContainerLeaseBreak(Configure<AzureStorageContainerLeaseBreakSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageContainerLeaseBreakSettings());
@@ -1279,7 +1279,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageContainerLeaseChangeSettings toolSettings);
         static partial void PostProcess(AzureStorageContainerLeaseChangeSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageContainerLeaseChange(Configure<AzureStorageContainerLeaseChangeSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageContainerLeaseChangeSettings());
@@ -1290,7 +1290,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageContainerLeaseReleaseSettings toolSettings);
         static partial void PostProcess(AzureStorageContainerLeaseReleaseSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageContainerLeaseRelease(Configure<AzureStorageContainerLeaseReleaseSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageContainerLeaseReleaseSettings());
@@ -1301,7 +1301,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageContainerLeaseRenewSettings toolSettings);
         static partial void PostProcess(AzureStorageContainerLeaseRenewSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageContainerLeaseRenew(Configure<AzureStorageContainerLeaseRenewSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageContainerLeaseRenewSettings());
@@ -1312,7 +1312,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageContainerMetadataShowSettings toolSettings);
         static partial void PostProcess(AzureStorageContainerMetadataShowSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageContainerMetadataShow(Configure<AzureStorageContainerMetadataShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageContainerMetadataShowSettings());
@@ -1323,7 +1323,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageContainerMetadataUpdateSettings toolSettings);
         static partial void PostProcess(AzureStorageContainerMetadataUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageContainerMetadataUpdate(Configure<AzureStorageContainerMetadataUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageContainerMetadataUpdateSettings());
@@ -1334,7 +1334,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageContainerPolicyCreateSettings toolSettings);
         static partial void PostProcess(AzureStorageContainerPolicyCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageContainerPolicyCreate(Configure<AzureStorageContainerPolicyCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageContainerPolicyCreateSettings());
@@ -1345,7 +1345,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageContainerPolicyDeleteSettings toolSettings);
         static partial void PostProcess(AzureStorageContainerPolicyDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageContainerPolicyDelete(Configure<AzureStorageContainerPolicyDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageContainerPolicyDeleteSettings());
@@ -1356,7 +1356,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageContainerPolicyListSettings toolSettings);
         static partial void PostProcess(AzureStorageContainerPolicyListSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageContainerPolicyList(Configure<AzureStorageContainerPolicyListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageContainerPolicyListSettings());
@@ -1367,7 +1367,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageContainerPolicyShowSettings toolSettings);
         static partial void PostProcess(AzureStorageContainerPolicyShowSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageContainerPolicyShow(Configure<AzureStorageContainerPolicyShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageContainerPolicyShowSettings());
@@ -1378,7 +1378,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageContainerPolicyUpdateSettings toolSettings);
         static partial void PostProcess(AzureStorageContainerPolicyUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageContainerPolicyUpdate(Configure<AzureStorageContainerPolicyUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageContainerPolicyUpdateSettings());
@@ -1389,7 +1389,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageDirectoryMetadataShowSettings toolSettings);
         static partial void PostProcess(AzureStorageDirectoryMetadataShowSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageDirectoryMetadataShow(Configure<AzureStorageDirectoryMetadataShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageDirectoryMetadataShowSettings());
@@ -1400,7 +1400,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageDirectoryMetadataUpdateSettings toolSettings);
         static partial void PostProcess(AzureStorageDirectoryMetadataUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageDirectoryMetadataUpdate(Configure<AzureStorageDirectoryMetadataUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageDirectoryMetadataUpdateSettings());
@@ -1411,7 +1411,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageFileCopyCancelSettings toolSettings);
         static partial void PostProcess(AzureStorageFileCopyCancelSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageFileCopyCancel(Configure<AzureStorageFileCopyCancelSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageFileCopyCancelSettings());
@@ -1422,7 +1422,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageFileCopyStartSettings toolSettings);
         static partial void PostProcess(AzureStorageFileCopyStartSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageFileCopyStart(Configure<AzureStorageFileCopyStartSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageFileCopyStartSettings());
@@ -1433,7 +1433,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageFileCopyStartBatchSettings toolSettings);
         static partial void PostProcess(AzureStorageFileCopyStartBatchSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageFileCopyStartBatch(Configure<AzureStorageFileCopyStartBatchSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageFileCopyStartBatchSettings());
@@ -1444,7 +1444,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageFileMetadataShowSettings toolSettings);
         static partial void PostProcess(AzureStorageFileMetadataShowSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageFileMetadataShow(Configure<AzureStorageFileMetadataShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageFileMetadataShowSettings());
@@ -1455,7 +1455,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageFileMetadataUpdateSettings toolSettings);
         static partial void PostProcess(AzureStorageFileMetadataUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageFileMetadataUpdate(Configure<AzureStorageFileMetadataUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageFileMetadataUpdateSettings());
@@ -1466,7 +1466,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageQueueMetadataShowSettings toolSettings);
         static partial void PostProcess(AzureStorageQueueMetadataShowSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageQueueMetadataShow(Configure<AzureStorageQueueMetadataShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageQueueMetadataShowSettings());
@@ -1477,7 +1477,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageQueueMetadataUpdateSettings toolSettings);
         static partial void PostProcess(AzureStorageQueueMetadataUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageQueueMetadataUpdate(Configure<AzureStorageQueueMetadataUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageQueueMetadataUpdateSettings());
@@ -1488,7 +1488,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageQueuePolicyCreateSettings toolSettings);
         static partial void PostProcess(AzureStorageQueuePolicyCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageQueuePolicyCreate(Configure<AzureStorageQueuePolicyCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageQueuePolicyCreateSettings());
@@ -1499,7 +1499,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageQueuePolicyDeleteSettings toolSettings);
         static partial void PostProcess(AzureStorageQueuePolicyDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageQueuePolicyDelete(Configure<AzureStorageQueuePolicyDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageQueuePolicyDeleteSettings());
@@ -1510,7 +1510,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageQueuePolicyListSettings toolSettings);
         static partial void PostProcess(AzureStorageQueuePolicyListSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageQueuePolicyList(Configure<AzureStorageQueuePolicyListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageQueuePolicyListSettings());
@@ -1521,7 +1521,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageQueuePolicyShowSettings toolSettings);
         static partial void PostProcess(AzureStorageQueuePolicyShowSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageQueuePolicyShow(Configure<AzureStorageQueuePolicyShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageQueuePolicyShowSettings());
@@ -1532,7 +1532,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageQueuePolicyUpdateSettings toolSettings);
         static partial void PostProcess(AzureStorageQueuePolicyUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageQueuePolicyUpdate(Configure<AzureStorageQueuePolicyUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageQueuePolicyUpdateSettings());
@@ -1543,7 +1543,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageShareMetadataShowSettings toolSettings);
         static partial void PostProcess(AzureStorageShareMetadataShowSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageShareMetadataShow(Configure<AzureStorageShareMetadataShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageShareMetadataShowSettings());
@@ -1554,7 +1554,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageShareMetadataUpdateSettings toolSettings);
         static partial void PostProcess(AzureStorageShareMetadataUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageShareMetadataUpdate(Configure<AzureStorageShareMetadataUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageShareMetadataUpdateSettings());
@@ -1565,7 +1565,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageSharePolicyCreateSettings toolSettings);
         static partial void PostProcess(AzureStorageSharePolicyCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageSharePolicyCreate(Configure<AzureStorageSharePolicyCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageSharePolicyCreateSettings());
@@ -1576,7 +1576,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageSharePolicyDeleteSettings toolSettings);
         static partial void PostProcess(AzureStorageSharePolicyDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageSharePolicyDelete(Configure<AzureStorageSharePolicyDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageSharePolicyDeleteSettings());
@@ -1587,7 +1587,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageSharePolicyListSettings toolSettings);
         static partial void PostProcess(AzureStorageSharePolicyListSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageSharePolicyList(Configure<AzureStorageSharePolicyListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageSharePolicyListSettings());
@@ -1598,7 +1598,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageSharePolicyShowSettings toolSettings);
         static partial void PostProcess(AzureStorageSharePolicyShowSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageSharePolicyShow(Configure<AzureStorageSharePolicyShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageSharePolicyShowSettings());
@@ -1609,7 +1609,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageSharePolicyUpdateSettings toolSettings);
         static partial void PostProcess(AzureStorageSharePolicyUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageSharePolicyUpdate(Configure<AzureStorageSharePolicyUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageSharePolicyUpdateSettings());
@@ -1620,7 +1620,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageTablePolicyCreateSettings toolSettings);
         static partial void PostProcess(AzureStorageTablePolicyCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageTablePolicyCreate(Configure<AzureStorageTablePolicyCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageTablePolicyCreateSettings());
@@ -1631,7 +1631,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageTablePolicyDeleteSettings toolSettings);
         static partial void PostProcess(AzureStorageTablePolicyDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageTablePolicyDelete(Configure<AzureStorageTablePolicyDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageTablePolicyDeleteSettings());
@@ -1642,7 +1642,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageTablePolicyListSettings toolSettings);
         static partial void PostProcess(AzureStorageTablePolicyListSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageTablePolicyList(Configure<AzureStorageTablePolicyListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageTablePolicyListSettings());
@@ -1653,7 +1653,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageTablePolicyShowSettings toolSettings);
         static partial void PostProcess(AzureStorageTablePolicyShowSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageTablePolicyShow(Configure<AzureStorageTablePolicyShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageTablePolicyShowSettings());
@@ -1664,7 +1664,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureStorageTablePolicyUpdateSettings toolSettings);
         static partial void PostProcess(AzureStorageTablePolicyUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/storage.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureStorageTablePolicyUpdate(Configure<AzureStorageTablePolicyUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageTablePolicyUpdateSettings());
@@ -2250,11 +2250,11 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
         /// <summary><p>The blob container from where the files will be deleted.</p></summary>
         public virtual string Source { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>Required if the blob has associated snapshots.</p></summary>
         public virtual StorageBlobDeleteSnapshots DeleteSnapshots { get; internal set; }
         /// <summary><p>Show the summary of the operations to be taken instead of actually deleting the file(s).</p></summary>
         public virtual bool? Dryrun { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>Required if the blob has an active lease.</p></summary>
         public virtual string LeaseId { get; internal set; }
         /// <summary><p>The pattern used for globbing files or blobs in the source. The supported patterns are '*', '?', '[seq]', and '[!seq]'.</p></summary>
         public virtual string Pattern { get; internal set; }
@@ -2340,6 +2340,8 @@ namespace Nuke.Azure
         public virtual string OpenMode { get; internal set; }
         /// <summary><p>The snapshot parameter is an opaque DateTime value that, when present, specifies the blob snapshot to retrieve.</p></summary>
         public virtual string Snapshot { get; internal set; }
+        /// <summary><p>The socket timeout(secs), used by the service to regulate data flow.</p></summary>
+        public virtual string SocketTimeout { get; internal set; }
         /// <summary><p>Start of byte range to use for downloading a section of the blob. If no end_range is given, all bytes after the start_range will be downloaded. The start_range and end_range params are inclusive. Ex: start_range=0, end_range=511 will download first 512 bytes of blob.</p></summary>
         public virtual string StartRange { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
@@ -2385,6 +2387,7 @@ namespace Nuke.Azure
               .Add("--no-progress {value}", NoProgress)
               .Add("--open-mode {value}", OpenMode)
               .Add("--snapshot {value}", Snapshot)
+              .Add("--socket-timeout {value}", SocketTimeout)
               .Add("--start-range {value}", StartRange)
               .Add("--timeout {value}", Timeout)
               .Add("--validate-content {value}", ValidateContent)
@@ -2420,12 +2423,14 @@ namespace Nuke.Azure
         public virtual string Source { get; internal set; }
         /// <summary><p>Show the summary of the operations to be taken instead of actually downloading the file(s).</p></summary>
         public virtual bool? Dryrun { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>Maximum number of parallel connections to use when the blob size exceeds 64MB.</p></summary>
         public virtual string MaxConnections { get; internal set; }
         /// <summary><p>Include this flag to disable progress reporting for the command.</p></summary>
         public virtual string NoProgress { get; internal set; }
         /// <summary><p>The pattern used for globbing files or blobs in the source. The supported patterns are '*', '?', '[seq]', and '[!seq]'.</p></summary>
         public virtual string Pattern { get; internal set; }
+        /// <summary><p>The socket timeout(secs), used by the service to regulate data flow.</p></summary>
+        public virtual string SocketTimeout { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
         public virtual string AccountKey { get; internal set; }
         /// <summary><p>Storage account name. Related environment variable: AZURE_STORAGE_ACCOUNT. Must be used in conjunction with either storage account key or a SAS token. If neither are present, the command will try to query the storage account key using the authenticated Azure account. If a large number of storage commands are executed the API quota may be hit.</p></summary>
@@ -2454,6 +2459,7 @@ namespace Nuke.Azure
               .Add("--max-connections {value}", MaxConnections)
               .Add("--no-progress {value}", NoProgress)
               .Add("--pattern {value}", Pattern)
+              .Add("--socket-timeout {value}", SocketTimeout)
               .Add("--account-key {value}", AccountKey)
               .Add("--account-name {value}", AccountName)
               .Add("--connection-string {value}", ConnectionString)
@@ -3047,6 +3053,8 @@ namespace Nuke.Azure
         internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>Include this flag to disable progress reporting for the command.</p></summary>
         public virtual string NoProgress { get; internal set; }
+        /// <summary><p>The socket timeout(secs), used by the service to regulate data flow.</p></summary>
+        public virtual string SocketTimeout { get; internal set; }
         /// <summary><p>A page blob tier value to set the blob to. The tier correlates to the size of the blob and number of allowed IOPS. This is only applicable to page blobs on premium storage accounts.</p></summary>
         public virtual StorageBlobUploadTier Tier { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
@@ -3099,6 +3107,7 @@ namespace Nuke.Azure
               .Add("--maxsize-condition {value}", MaxsizeCondition)
               .Add("--metadata {value}", Metadata, "{key}={value}", separator: ' ')
               .Add("--no-progress {value}", NoProgress)
+              .Add("--socket-timeout {value}", SocketTimeout)
               .Add("--tier {value}", Tier)
               .Add("--timeout {value}", Timeout)
               .Add("--type {value}", Type)
@@ -3139,7 +3148,7 @@ namespace Nuke.Azure
         public virtual bool? Dryrun { get; internal set; }
         /// <summary><p>Required if the blob has an active lease.</p></summary>
         public virtual string LeaseId { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>Maximum number of parallel connections to use when the blob size exceeds 64MB.</p></summary>
         public virtual string MaxConnections { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
@@ -3148,6 +3157,8 @@ namespace Nuke.Azure
         public virtual string NoProgress { get; internal set; }
         /// <summary><p>The pattern used for globbing files or blobs in the source. The supported patterns are '*', '?', '[seq]', and '[!seq]'.</p></summary>
         public virtual string Pattern { get; internal set; }
+        /// <summary><p>The socket timeout(secs), used by the service to regulate data flow.</p></summary>
+        public virtual string SocketTimeout { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
         /// <summary><p>Defaults to 'page' for *.vhd files, or 'block' otherwise. The setting will override blob types for every file.</p></summary>
@@ -3207,6 +3218,7 @@ namespace Nuke.Azure
               .Add("--metadata {value}", Metadata, "{key}={value}", separator: ' ')
               .Add("--no-progress {value}", NoProgress)
               .Add("--pattern {value}", Pattern)
+              .Add("--socket-timeout {value}", SocketTimeout)
               .Add("--timeout {value}", Timeout)
               .Add("--type {value}", Type)
               .Add("--content-cache-control {value}", ContentCacheControl)
@@ -4403,8 +4415,9 @@ namespace Nuke.Azure
         public virtual StorageEntityQueryAccept Accept { get; internal set; }
         /// <summary><p>Returns only entities that satisfy the specified filter. Note that no more than 15 discrete comparisons are permitted within a $filter string. See &lt;a href="http://msdn.microsoft.com/en-us/library/windowsazure/dd894031.aspx"&gt;http://msdn.microsoft.com/en-us/library/windowsazure/dd894031.aspx&lt;/a&gt; for more information on constructing filters.</p></summary>
         public virtual string Filter { get; internal set; }
-        /// <summary><p>An opaque continuation object. This value can be retrieved from the next_marker field of a previous generator object if max_results was specified and that generator has finished enumerating results. If specified, this generator will begin returning results from the point where the previous generator stopped.</p></summary>
-        public virtual string Marker { get; internal set; }
+        /// <summary><p>Space-separated list of key=value pairs. Must contain a nextpartitionkey and a nextrowkey.</p></summary>
+        public virtual IReadOnlyDictionary<string, string> Marker => MarkerInternal.AsReadOnly();
+        internal Dictionary<string,string> MarkerInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>The maximum number of entities to return.</p></summary>
         public virtual string NumResults { get; internal set; }
         /// <summary><p>Space-separated list of properties to return for each entity.</p></summary>
@@ -4437,7 +4450,7 @@ namespace Nuke.Azure
               .Add("--table-name {value}", TableName)
               .Add("--accept {value}", Accept)
               .Add("--filter {value}", Filter)
-              .Add("--marker {value}", Marker)
+              .Add("--marker {value}", Marker, "{key}={value}", separator: ' ')
               .Add("--num-results {value}", NumResults)
               .Add("--select {value}", Select, separator: ' ')
               .Add("--timeout {value}", Timeout)
@@ -7272,7 +7285,7 @@ namespace Nuke.Azure
         public virtual string AccountName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>The action of virtual network rule.</p></summary>
         public virtual string Action { get; internal set; }
         /// <summary><p>IPv4 address or CIDR range.</p></summary>
         public virtual string IpAddress { get; internal set; }
@@ -13029,7 +13042,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region DeleteSnapshots
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobDeleteBatchSettings.DeleteSnapshots"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobDeleteBatchSettings.DeleteSnapshots"/>.</em></p><p>Required if the blob has associated snapshots.</p></summary>
         [Pure]
         public static AzureStorageBlobDeleteBatchSettings SetDeleteSnapshots(this AzureStorageBlobDeleteBatchSettings toolSettings, StorageBlobDeleteSnapshots deleteSnapshots)
         {
@@ -13037,7 +13050,7 @@ namespace Nuke.Azure
             toolSettings.DeleteSnapshots = deleteSnapshots;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobDeleteBatchSettings.DeleteSnapshots"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobDeleteBatchSettings.DeleteSnapshots"/>.</em></p><p>Required if the blob has associated snapshots.</p></summary>
         [Pure]
         public static AzureStorageBlobDeleteBatchSettings ResetDeleteSnapshots(this AzureStorageBlobDeleteBatchSettings toolSettings)
         {
@@ -13089,7 +13102,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region LeaseId
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobDeleteBatchSettings.LeaseId"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobDeleteBatchSettings.LeaseId"/>.</em></p><p>Required if the blob has an active lease.</p></summary>
         [Pure]
         public static AzureStorageBlobDeleteBatchSettings SetLeaseId(this AzureStorageBlobDeleteBatchSettings toolSettings, string leaseId)
         {
@@ -13097,7 +13110,7 @@ namespace Nuke.Azure
             toolSettings.LeaseId = leaseId;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobDeleteBatchSettings.LeaseId"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobDeleteBatchSettings.LeaseId"/>.</em></p><p>Required if the blob has an active lease.</p></summary>
         [Pure]
         public static AzureStorageBlobDeleteBatchSettings ResetLeaseId(this AzureStorageBlobDeleteBatchSettings toolSettings)
         {
@@ -13546,6 +13559,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region SocketTimeout
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobDownloadSettings.SocketTimeout"/>.</em></p><p>The socket timeout(secs), used by the service to regulate data flow.</p></summary>
+        [Pure]
+        public static AzureStorageBlobDownloadSettings SetSocketTimeout(this AzureStorageBlobDownloadSettings toolSettings, string socketTimeout)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SocketTimeout = socketTimeout;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobDownloadSettings.SocketTimeout"/>.</em></p><p>The socket timeout(secs), used by the service to regulate data flow.</p></summary>
+        [Pure]
+        public static AzureStorageBlobDownloadSettings ResetSocketTimeout(this AzureStorageBlobDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SocketTimeout = null;
+            return toolSettings;
+        }
+        #endregion
         #region StartRange
         /// <summary><p><em>Sets <see cref="AzureStorageBlobDownloadSettings.StartRange"/>.</em></p><p>Start of byte range to use for downloading a section of the blob. If no end_range is given, all bytes after the start_range will be downloaded. The start_range and end_range params are inclusive. Ex: start_range=0, end_range=511 will download first 512 bytes of blob.</p></summary>
         [Pure]
@@ -13921,7 +13952,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region MaxConnections
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobDownloadBatchSettings.MaxConnections"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobDownloadBatchSettings.MaxConnections"/>.</em></p><p>Maximum number of parallel connections to use when the blob size exceeds 64MB.</p></summary>
         [Pure]
         public static AzureStorageBlobDownloadBatchSettings SetMaxConnections(this AzureStorageBlobDownloadBatchSettings toolSettings, string maxConnections)
         {
@@ -13929,7 +13960,7 @@ namespace Nuke.Azure
             toolSettings.MaxConnections = maxConnections;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobDownloadBatchSettings.MaxConnections"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobDownloadBatchSettings.MaxConnections"/>.</em></p><p>Maximum number of parallel connections to use when the blob size exceeds 64MB.</p></summary>
         [Pure]
         public static AzureStorageBlobDownloadBatchSettings ResetMaxConnections(this AzureStorageBlobDownloadBatchSettings toolSettings)
         {
@@ -13971,6 +14002,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Pattern = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SocketTimeout
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobDownloadBatchSettings.SocketTimeout"/>.</em></p><p>The socket timeout(secs), used by the service to regulate data flow.</p></summary>
+        [Pure]
+        public static AzureStorageBlobDownloadBatchSettings SetSocketTimeout(this AzureStorageBlobDownloadBatchSettings toolSettings, string socketTimeout)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SocketTimeout = socketTimeout;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobDownloadBatchSettings.SocketTimeout"/>.</em></p><p>The socket timeout(secs), used by the service to regulate data flow.</p></summary>
+        [Pure]
+        public static AzureStorageBlobDownloadBatchSettings ResetSocketTimeout(this AzureStorageBlobDownloadBatchSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SocketTimeout = null;
             return toolSettings;
         }
         #endregion
@@ -16938,6 +16987,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region SocketTimeout
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobUploadSettings.SocketTimeout"/>.</em></p><p>The socket timeout(secs), used by the service to regulate data flow.</p></summary>
+        [Pure]
+        public static AzureStorageBlobUploadSettings SetSocketTimeout(this AzureStorageBlobUploadSettings toolSettings, string socketTimeout)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SocketTimeout = socketTimeout;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobUploadSettings.SocketTimeout"/>.</em></p><p>The socket timeout(secs), used by the service to regulate data flow.</p></summary>
+        [Pure]
+        public static AzureStorageBlobUploadSettings ResetSocketTimeout(this AzureStorageBlobUploadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SocketTimeout = null;
+            return toolSettings;
+        }
+        #endregion
         #region Tier
         /// <summary><p><em>Sets <see cref="AzureStorageBlobUploadSettings.Tier"/>.</em></p><p>A page blob tier value to set the blob to. The tier correlates to the size of the blob and number of allowed IOPS. This is only applicable to page blobs on premium storage accounts.</p></summary>
         [Pure]
@@ -17367,7 +17434,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region MaxConnections
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobUploadBatchSettings.MaxConnections"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobUploadBatchSettings.MaxConnections"/>.</em></p><p>Maximum number of parallel connections to use when the blob size exceeds 64MB.</p></summary>
         [Pure]
         public static AzureStorageBlobUploadBatchSettings SetMaxConnections(this AzureStorageBlobUploadBatchSettings toolSettings, string maxConnections)
         {
@@ -17375,7 +17442,7 @@ namespace Nuke.Azure
             toolSettings.MaxConnections = maxConnections;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobUploadBatchSettings.MaxConnections"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobUploadBatchSettings.MaxConnections"/>.</em></p><p>Maximum number of parallel connections to use when the blob size exceeds 64MB.</p></summary>
         [Pure]
         public static AzureStorageBlobUploadBatchSettings ResetMaxConnections(this AzureStorageBlobUploadBatchSettings toolSettings)
         {
@@ -17459,6 +17526,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Pattern = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SocketTimeout
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobUploadBatchSettings.SocketTimeout"/>.</em></p><p>The socket timeout(secs), used by the service to regulate data flow.</p></summary>
+        [Pure]
+        public static AzureStorageBlobUploadBatchSettings SetSocketTimeout(this AzureStorageBlobUploadBatchSettings toolSettings, string socketTimeout)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SocketTimeout = socketTimeout;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobUploadBatchSettings.SocketTimeout"/>.</em></p><p>The socket timeout(secs), used by the service to regulate data flow.</p></summary>
+        [Pure]
+        public static AzureStorageBlobUploadBatchSettings ResetSocketTimeout(this AzureStorageBlobUploadBatchSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SocketTimeout = null;
             return toolSettings;
         }
         #endregion
@@ -23229,20 +23314,44 @@ namespace Nuke.Azure
         }
         #endregion
         #region Marker
-        /// <summary><p><em>Sets <see cref="AzureStorageEntityQuerySettings.Marker"/>.</em></p><p>An opaque continuation object. This value can be retrieved from the next_marker field of a previous generator object if max_results was specified and that generator has finished enumerating results. If specified, this generator will begin returning results from the point where the previous generator stopped.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageEntityQuerySettings.Marker"/> to a new dictionary.</em></p><p>Space-separated list of key=value pairs. Must contain a nextpartitionkey and a nextrowkey.</p></summary>
         [Pure]
-        public static AzureStorageEntityQuerySettings SetMarker(this AzureStorageEntityQuerySettings toolSettings, string marker)
+        public static AzureStorageEntityQuerySettings SetMarker(this AzureStorageEntityQuerySettings toolSettings, IDictionary<string, string> marker)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Marker = marker;
+            toolSettings.MarkerInternal = marker.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageEntityQuerySettings.Marker"/>.</em></p><p>An opaque continuation object. This value can be retrieved from the next_marker field of a previous generator object if max_results was specified and that generator has finished enumerating results. If specified, this generator will begin returning results from the point where the previous generator stopped.</p></summary>
+        /// <summary><p><em>Clears <see cref="AzureStorageEntityQuerySettings.Marker"/>.</em></p><p>Space-separated list of key=value pairs. Must contain a nextpartitionkey and a nextrowkey.</p></summary>
         [Pure]
-        public static AzureStorageEntityQuerySettings ResetMarker(this AzureStorageEntityQuerySettings toolSettings)
+        public static AzureStorageEntityQuerySettings ClearMarker(this AzureStorageEntityQuerySettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Marker = null;
+            toolSettings.MarkerInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds a new key-value-pair <see cref="AzureStorageEntityQuerySettings.Marker"/>.</em></p><p>Space-separated list of key=value pairs. Must contain a nextpartitionkey and a nextrowkey.</p></summary>
+        [Pure]
+        public static AzureStorageEntityQuerySettings AddMarker(this AzureStorageEntityQuerySettings toolSettings, string markerKey, string markerValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MarkerInternal.Add(markerKey, markerValue);
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes a key-value-pair from <see cref="AzureStorageEntityQuerySettings.Marker"/>.</em></p><p>Space-separated list of key=value pairs. Must contain a nextpartitionkey and a nextrowkey.</p></summary>
+        [Pure]
+        public static AzureStorageEntityQuerySettings RemoveMarker(this AzureStorageEntityQuerySettings toolSettings, string markerKey)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MarkerInternal.Remove(markerKey);
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets a key-value-pair in <see cref="AzureStorageEntityQuerySettings.Marker"/>.</em></p><p>Space-separated list of key=value pairs. Must contain a nextpartitionkey and a nextrowkey.</p></summary>
+        [Pure]
+        public static AzureStorageEntityQuerySettings SetMarker(this AzureStorageEntityQuerySettings toolSettings, string markerKey, string markerValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MarkerInternal[markerKey] = markerValue;
             return toolSettings;
         }
         #endregion
@@ -36137,7 +36246,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Action
-        /// <summary><p><em>Sets <see cref="AzureStorageAccountNetworkRuleAddSettings.Action"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureStorageAccountNetworkRuleAddSettings.Action"/>.</em></p><p>The action of virtual network rule.</p></summary>
         [Pure]
         public static AzureStorageAccountNetworkRuleAddSettings SetAction(this AzureStorageAccountNetworkRuleAddSettings toolSettings, string action)
         {
@@ -36145,7 +36254,7 @@ namespace Nuke.Azure
             toolSettings.Action = action;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureStorageAccountNetworkRuleAddSettings.Action"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureStorageAccountNetworkRuleAddSettings.Action"/>.</em></p><p>The action of virtual network rule.</p></summary>
         [Pure]
         public static AzureStorageAccountNetworkRuleAddSettings ResetAction(this AzureStorageAccountNetworkRuleAddSettings toolSettings)
         {

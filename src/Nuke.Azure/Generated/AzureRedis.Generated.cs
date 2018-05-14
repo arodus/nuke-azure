@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureRedis.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureRedisCreateSettings toolSettings);
         static partial void PostProcess(AzureRedisCreateSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/redis.yml">official website</a>.</p></summary>
+        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureRedisCreate(Configure<AzureRedisCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRedisCreateSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureRedisDeleteSettings toolSettings);
         static partial void PostProcess(AzureRedisDeleteSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/redis.yml">official website</a>.</p></summary>
+        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureRedisDelete(Configure<AzureRedisDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRedisDeleteSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureRedisExportSettings toolSettings);
         static partial void PostProcess(AzureRedisExportSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/redis.yml">official website</a>.</p></summary>
+        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureRedisExport(Configure<AzureRedisExportSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRedisExportSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureRedisForceRebootSettings toolSettings);
         static partial void PostProcess(AzureRedisForceRebootSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/redis.yml">official website</a>.</p></summary>
+        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureRedisForceReboot(Configure<AzureRedisForceRebootSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRedisForceRebootSettings());
@@ -78,9 +78,20 @@ namespace Nuke.Azure
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
+        static partial void PreProcess(AzureRedisImportSettings toolSettings);
+        static partial void PostProcess(AzureRedisImportSettings toolSettings);
+        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureRedisImport(Configure<AzureRedisImportSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureRedisImportSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
         static partial void PreProcess(AzureRedisImportMethodSettings toolSettings);
         static partial void PostProcess(AzureRedisImportMethodSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/redis.yml">official website</a>.</p></summary>
+        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureRedisImportMethod(Configure<AzureRedisImportMethodSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRedisImportMethodSettings());
@@ -91,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureRedisListSettings toolSettings);
         static partial void PostProcess(AzureRedisListSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/redis.yml">official website</a>.</p></summary>
+        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureRedisList(Configure<AzureRedisListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRedisListSettings());
@@ -102,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureRedisListAllSettings toolSettings);
         static partial void PostProcess(AzureRedisListAllSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/redis.yml">official website</a>.</p></summary>
+        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureRedisListAll(Configure<AzureRedisListAllSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRedisListAllSettings());
@@ -113,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureRedisListKeysSettings toolSettings);
         static partial void PostProcess(AzureRedisListKeysSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/redis.yml">official website</a>.</p></summary>
+        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureRedisListKeys(Configure<AzureRedisListKeysSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRedisListKeysSettings());
@@ -124,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureRedisRegenerateKeysSettings toolSettings);
         static partial void PostProcess(AzureRedisRegenerateKeysSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/redis.yml">official website</a>.</p></summary>
+        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureRedisRegenerateKeys(Configure<AzureRedisRegenerateKeysSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRedisRegenerateKeysSettings());
@@ -135,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureRedisShowSettings toolSettings);
         static partial void PostProcess(AzureRedisShowSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/redis.yml">official website</a>.</p></summary>
+        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureRedisShow(Configure<AzureRedisShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRedisShowSettings());
@@ -146,7 +157,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureRedisUpdateSettings toolSettings);
         static partial void PostProcess(AzureRedisUpdateSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/redis.yml">official website</a>.</p></summary>
+        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureRedisUpdate(Configure<AzureRedisUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRedisUpdateSettings());
@@ -157,7 +168,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureRedisUpdateSettingsSettings toolSettings);
         static partial void PostProcess(AzureRedisUpdateSettingsSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/redis.yml">official website</a>.</p></summary>
+        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureRedisUpdateSettings(Configure<AzureRedisUpdateSettingsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRedisUpdateSettingsSettings());
@@ -168,7 +179,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureRedisPatchScheduleDeleteSettings toolSettings);
         static partial void PostProcess(AzureRedisPatchScheduleDeleteSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/redis.yml">official website</a>.</p></summary>
+        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureRedisPatchScheduleDelete(Configure<AzureRedisPatchScheduleDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRedisPatchScheduleDeleteSettings());
@@ -179,7 +190,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureRedisPatchScheduleSetSettings toolSettings);
         static partial void PostProcess(AzureRedisPatchScheduleSetSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/redis.yml">official website</a>.</p></summary>
+        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureRedisPatchScheduleSet(Configure<AzureRedisPatchScheduleSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRedisPatchScheduleSetSettings());
@@ -188,9 +199,20 @@ namespace Nuke.Azure
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
+        static partial void PreProcess(AzureRedisPatchScheduleShowSettings toolSettings);
+        static partial void PostProcess(AzureRedisPatchScheduleShowSettings toolSettings);
+        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureRedisPatchScheduleShow(Configure<AzureRedisPatchScheduleShowSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureRedisPatchScheduleShowSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
         static partial void PreProcess(AzureRedisPatchSchedulePatchScheduleShowSettings toolSettings);
         static partial void PostProcess(AzureRedisPatchSchedulePatchScheduleShowSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/redis.yml">official website</a>.</p></summary>
+        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureRedisPatchSchedulePatchScheduleShow(Configure<AzureRedisPatchSchedulePatchScheduleShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRedisPatchSchedulePatchScheduleShowSettings());
@@ -215,13 +237,13 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>What type of redis cache to deploy. Valid values: (Basic, Standard, Premium).</p></summary>
+        /// <summary><p>Type of Redis cache.</p></summary>
         public virtual RedisSku Sku { get; internal set; }
-        /// <summary><p>Size of redis cache to deploy. Example : values for C family (C0, C1, C2, C3, C4, C5, C6). For P family (P1, P2, P3, P4).</p></summary>
+        /// <summary><p>Size of Redis cache to deploy. Example : values for C family (C0, C1, C2, C3, C4, C5, C6). For P family (P1, P2, P3, P4).</p></summary>
         public virtual string VmSize { get; internal set; }
         /// <summary><p>If the value is true, then the non-ssl redis server port (6379) will be enabled.</p></summary>
         public virtual string EnableNonSslPort { get; internal set; }
-        /// <summary><p>All Redis Settings. Few possible keys rdb-backup-enabled, rdb-storage-connection-string, rdb-backup-frequency, maxmemory-delta, maxmemory-policy, notify-keyspace-events, maxmemory-samples, slowlog-log-slower-than, slowlog-max-len, list-max-ziplist-entries, list-max-ziplist-value, hash-max-ziplist-entries, hash-max-ziplist-value, set-max-intset-entries, zset-max-ziplist-entries, zset-max-ziplist-value etc.</p></summary>
+        /// <summary><p>JSON encoded configuration settings. Use @{file} to load from a file.</p></summary>
         public virtual string RedisConfiguration { get; internal set; }
         /// <summary><p>The number of shards to be created on a Premium Cluster Cache.</p></summary>
         public virtual string ShardCount { get; internal set; }
@@ -229,7 +251,7 @@ namespace Nuke.Azure
         public virtual string StaticIp { get; internal set; }
         /// <summary><p>The full resource ID of a subnet in a virtual network to deploy the redis cache in. Example format /subscriptions/{subid}/resourceGroups/{resourceGroupName}/Microsoft.{Network|ClassicNetwork}/VirtualNetworks/vnet1/subnets/subnet1.</p></summary>
         public virtual string SubnetId { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
         /// <summary><p>Json dictionary with tenant settings.</p></summary>
         public virtual string TenantSettings { get; internal set; }
@@ -277,7 +299,7 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureRedis executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
-        /// <summary><p>Name of the redis cache.</p></summary>
+        /// <summary><p>Name of the Redis cache.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
@@ -315,15 +337,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureRedis executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
-        /// <summary><p></p></summary>
+        /// <summary><p>Container name to export to.</p></summary>
         public virtual string Container { get; internal set; }
-        /// <summary><p>Name of the redis cache.</p></summary>
+        /// <summary><p>Name of the Redis cache.</p></summary>
         public virtual string Name { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>Prefix to use for exported files.</p></summary>
         public virtual string Prefix { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>File format to export.</p></summary>
         public virtual string FileFormat { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
@@ -362,7 +384,7 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureRedis executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
-        /// <summary><p>Name of the redis cache.</p></summary>
+        /// <summary><p>Name of the Redis cache.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Which Redis node(s) to reboot. Depending on this value data loss is possible.</p></summary>
         public virtual RedisForceRebootRebootType RebootType { get; internal set; }
@@ -397,6 +419,51 @@ namespace Nuke.Azure
         }
     }
     #endregion
+    #region AzureRedisImportSettings
+    /// <summary><p>Used within <see cref="AzureRedisTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureRedisImportSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureRedis executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
+        /// <summary><p>File format to import.</p></summary>
+        public virtual string FileFormat { get; internal set; }
+        /// <summary><p>Space-separated list of files to import.</p></summary>
+        public virtual IReadOnlyList<string> Files => FilesInternal.AsReadOnly();
+        internal List<string> FilesInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of the Redis cache.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("redis import")
+              .Add("--file-format {value}", FileFormat)
+              .Add("--files {value}", Files, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
     #region AzureRedisImportMethodSettings
     /// <summary><p>Used within <see cref="AzureRedisTasks"/>.</p></summary>
     [PublicAPI]
@@ -406,11 +473,12 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureRedis executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
-        /// <summary><p></p></summary>
+        /// <summary><p>File format to import.</p></summary>
         public virtual string FileFormat { get; internal set; }
-        /// <summary><p></p></summary>
-        public virtual string Files { get; internal set; }
-        /// <summary><p>Name of the redis cache.</p></summary>
+        /// <summary><p>Space-separated list of files to import.</p></summary>
+        public virtual IReadOnlyList<string> Files => FilesInternal.AsReadOnly();
+        internal List<string> FilesInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of the Redis cache.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
@@ -429,7 +497,7 @@ namespace Nuke.Azure
             arguments
               .Add("redis import-method")
               .Add("--file-format {value}", FileFormat)
-              .Add("--files {value}", Files)
+              .Add("--files {value}", Files, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
@@ -517,7 +585,7 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureRedis executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
-        /// <summary><p>Name of the redis cache.</p></summary>
+        /// <summary><p>Name of the Redis cache.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
@@ -557,7 +625,7 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
         /// <summary><p>The Redis access key to regenerate.</p></summary>
         public virtual RedisRegenerateKeysKeyType KeyType { get; internal set; }
-        /// <summary><p>Name of the redis cache.</p></summary>
+        /// <summary><p>Name of the Redis cache.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
@@ -596,7 +664,7 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureRedis executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
-        /// <summary><p>Name of the redis cache.</p></summary>
+        /// <summary><p>Name of the Redis cache.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
@@ -634,13 +702,13 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureRedis executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
-        /// <summary><p>Name of the redis cache.</p></summary>
+        /// <summary><p>Name of the Redis cache.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>Type of Redis cache.</p></summary>
         public virtual RedisSku Sku { get; internal set; }
-        /// <summary><p>Size of redis cache to deploy. Example : values for C family (C0, C1, C2, C3, C4, C5, C6). For P family (P1, P2, P3, P4).</p></summary>
+        /// <summary><p>Size of Redis cache to deploy. Example : values for C family (C0, C1, C2, C3, C4, C5, C6). For P family (P1, P2, P3, P4).</p></summary>
         public virtual string VmSize { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
@@ -687,9 +755,9 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureRedis executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
-        /// <summary><p>Name of the redis cache.</p></summary>
+        /// <summary><p>Name of the Redis cache.</p></summary>
         public virtual string Name { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>JSON encoded configuration settings. Use @{file} to load from a file.</p></summary>
         public virtual string RedisConfiguration { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
@@ -728,7 +796,7 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureRedis executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
-        /// <summary><p>Name of the redis cache.</p></summary>
+        /// <summary><p>Name of the Redis cache.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
@@ -766,7 +834,7 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureRedis executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
-        /// <summary><p>Name of the redis cache.</p></summary>
+        /// <summary><p>Name of the Redis cache.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
@@ -798,6 +866,44 @@ namespace Nuke.Azure
         }
     }
     #endregion
+    #region AzureRedisPatchScheduleShowSettings
+    /// <summary><p>Used within <see cref="AzureRedisTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureRedisPatchScheduleShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureRedis executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
+        /// <summary><p>Name of the Redis cache.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("redis patch-schedule show")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
     #region AzureRedisPatchSchedulePatchScheduleShowSettings
     /// <summary><p>Used within <see cref="AzureRedisTasks"/>.</p></summary>
     [PublicAPI]
@@ -807,7 +913,7 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureRedis executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
-        /// <summary><p>Name of the redis cache.</p></summary>
+        /// <summary><p>Name of the Redis cache.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
@@ -897,7 +1003,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Sku
-        /// <summary><p><em>Sets <see cref="AzureRedisCreateSettings.Sku"/>.</em></p><p>What type of redis cache to deploy. Valid values: (Basic, Standard, Premium).</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisCreateSettings.Sku"/>.</em></p><p>Type of Redis cache.</p></summary>
         [Pure]
         public static AzureRedisCreateSettings SetSku(this AzureRedisCreateSettings toolSettings, RedisSku sku)
         {
@@ -905,7 +1011,7 @@ namespace Nuke.Azure
             toolSettings.Sku = sku;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisCreateSettings.Sku"/>.</em></p><p>What type of redis cache to deploy. Valid values: (Basic, Standard, Premium).</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisCreateSettings.Sku"/>.</em></p><p>Type of Redis cache.</p></summary>
         [Pure]
         public static AzureRedisCreateSettings ResetSku(this AzureRedisCreateSettings toolSettings)
         {
@@ -915,7 +1021,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region VmSize
-        /// <summary><p><em>Sets <see cref="AzureRedisCreateSettings.VmSize"/>.</em></p><p>Size of redis cache to deploy. Example : values for C family (C0, C1, C2, C3, C4, C5, C6). For P family (P1, P2, P3, P4).</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisCreateSettings.VmSize"/>.</em></p><p>Size of Redis cache to deploy. Example : values for C family (C0, C1, C2, C3, C4, C5, C6). For P family (P1, P2, P3, P4).</p></summary>
         [Pure]
         public static AzureRedisCreateSettings SetVmSize(this AzureRedisCreateSettings toolSettings, string vmSize)
         {
@@ -923,7 +1029,7 @@ namespace Nuke.Azure
             toolSettings.VmSize = vmSize;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisCreateSettings.VmSize"/>.</em></p><p>Size of redis cache to deploy. Example : values for C family (C0, C1, C2, C3, C4, C5, C6). For P family (P1, P2, P3, P4).</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisCreateSettings.VmSize"/>.</em></p><p>Size of Redis cache to deploy. Example : values for C family (C0, C1, C2, C3, C4, C5, C6). For P family (P1, P2, P3, P4).</p></summary>
         [Pure]
         public static AzureRedisCreateSettings ResetVmSize(this AzureRedisCreateSettings toolSettings)
         {
@@ -951,7 +1057,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region RedisConfiguration
-        /// <summary><p><em>Sets <see cref="AzureRedisCreateSettings.RedisConfiguration"/>.</em></p><p>All Redis Settings. Few possible keys rdb-backup-enabled, rdb-storage-connection-string, rdb-backup-frequency, maxmemory-delta, maxmemory-policy, notify-keyspace-events, maxmemory-samples, slowlog-log-slower-than, slowlog-max-len, list-max-ziplist-entries, list-max-ziplist-value, hash-max-ziplist-entries, hash-max-ziplist-value, set-max-intset-entries, zset-max-ziplist-entries, zset-max-ziplist-value etc.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisCreateSettings.RedisConfiguration"/>.</em></p><p>JSON encoded configuration settings. Use @{file} to load from a file.</p></summary>
         [Pure]
         public static AzureRedisCreateSettings SetRedisConfiguration(this AzureRedisCreateSettings toolSettings, string redisConfiguration)
         {
@@ -959,7 +1065,7 @@ namespace Nuke.Azure
             toolSettings.RedisConfiguration = redisConfiguration;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisCreateSettings.RedisConfiguration"/>.</em></p><p>All Redis Settings. Few possible keys rdb-backup-enabled, rdb-storage-connection-string, rdb-backup-frequency, maxmemory-delta, maxmemory-policy, notify-keyspace-events, maxmemory-samples, slowlog-log-slower-than, slowlog-max-len, list-max-ziplist-entries, list-max-ziplist-value, hash-max-ziplist-entries, hash-max-ziplist-value, set-max-intset-entries, zset-max-ziplist-entries, zset-max-ziplist-value etc.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisCreateSettings.RedisConfiguration"/>.</em></p><p>JSON encoded configuration settings. Use @{file} to load from a file.</p></summary>
         [Pure]
         public static AzureRedisCreateSettings ResetRedisConfiguration(this AzureRedisCreateSettings toolSettings)
         {
@@ -1023,7 +1129,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Tags
-        /// <summary><p><em>Sets <see cref="AzureRedisCreateSettings.Tags"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         [Pure]
         public static AzureRedisCreateSettings SetTags(this AzureRedisCreateSettings toolSettings, string tags)
         {
@@ -1031,7 +1137,7 @@ namespace Nuke.Azure
             toolSettings.Tags = tags;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisCreateSettings.Tags"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         [Pure]
         public static AzureRedisCreateSettings ResetTags(this AzureRedisCreateSettings toolSettings)
         {
@@ -1157,7 +1263,7 @@ namespace Nuke.Azure
     public static partial class AzureRedisDeleteSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureRedisDeleteSettings.Name"/>.</em></p><p>Name of the redis cache.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisDeleteSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
         public static AzureRedisDeleteSettings SetName(this AzureRedisDeleteSettings toolSettings, string name)
         {
@@ -1165,7 +1271,7 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisDeleteSettings.Name"/>.</em></p><p>Name of the redis cache.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisDeleteSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
         public static AzureRedisDeleteSettings ResetName(this AzureRedisDeleteSettings toolSettings)
         {
@@ -1291,7 +1397,7 @@ namespace Nuke.Azure
     public static partial class AzureRedisExportSettingsExtensions
     {
         #region Container
-        /// <summary><p><em>Sets <see cref="AzureRedisExportSettings.Container"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisExportSettings.Container"/>.</em></p><p>Container name to export to.</p></summary>
         [Pure]
         public static AzureRedisExportSettings SetContainer(this AzureRedisExportSettings toolSettings, string container)
         {
@@ -1299,7 +1405,7 @@ namespace Nuke.Azure
             toolSettings.Container = container;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisExportSettings.Container"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisExportSettings.Container"/>.</em></p><p>Container name to export to.</p></summary>
         [Pure]
         public static AzureRedisExportSettings ResetContainer(this AzureRedisExportSettings toolSettings)
         {
@@ -1309,7 +1415,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureRedisExportSettings.Name"/>.</em></p><p>Name of the redis cache.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisExportSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
         public static AzureRedisExportSettings SetName(this AzureRedisExportSettings toolSettings, string name)
         {
@@ -1317,7 +1423,7 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisExportSettings.Name"/>.</em></p><p>Name of the redis cache.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisExportSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
         public static AzureRedisExportSettings ResetName(this AzureRedisExportSettings toolSettings)
         {
@@ -1327,7 +1433,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Prefix
-        /// <summary><p><em>Sets <see cref="AzureRedisExportSettings.Prefix"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisExportSettings.Prefix"/>.</em></p><p>Prefix to use for exported files.</p></summary>
         [Pure]
         public static AzureRedisExportSettings SetPrefix(this AzureRedisExportSettings toolSettings, string prefix)
         {
@@ -1335,7 +1441,7 @@ namespace Nuke.Azure
             toolSettings.Prefix = prefix;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisExportSettings.Prefix"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisExportSettings.Prefix"/>.</em></p><p>Prefix to use for exported files.</p></summary>
         [Pure]
         public static AzureRedisExportSettings ResetPrefix(this AzureRedisExportSettings toolSettings)
         {
@@ -1363,7 +1469,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region FileFormat
-        /// <summary><p><em>Sets <see cref="AzureRedisExportSettings.FileFormat"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisExportSettings.FileFormat"/>.</em></p><p>File format to export.</p></summary>
         [Pure]
         public static AzureRedisExportSettings SetFileFormat(this AzureRedisExportSettings toolSettings, string fileFormat)
         {
@@ -1371,7 +1477,7 @@ namespace Nuke.Azure
             toolSettings.FileFormat = fileFormat;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisExportSettings.FileFormat"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisExportSettings.FileFormat"/>.</em></p><p>File format to export.</p></summary>
         [Pure]
         public static AzureRedisExportSettings ResetFileFormat(this AzureRedisExportSettings toolSettings)
         {
@@ -1479,7 +1585,7 @@ namespace Nuke.Azure
     public static partial class AzureRedisForceRebootSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureRedisForceRebootSettings.Name"/>.</em></p><p>Name of the redis cache.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisForceRebootSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
         public static AzureRedisForceRebootSettings SetName(this AzureRedisForceRebootSettings toolSettings, string name)
         {
@@ -1487,7 +1593,7 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisForceRebootSettings.Name"/>.</em></p><p>Name of the redis cache.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisForceRebootSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
         public static AzureRedisForceRebootSettings ResetName(this AzureRedisForceRebootSettings toolSettings)
         {
@@ -1642,6 +1748,218 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureRedisImportSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureRedisTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureRedisImportSettingsExtensions
+    {
+        #region FileFormat
+        /// <summary><p><em>Sets <see cref="AzureRedisImportSettings.FileFormat"/>.</em></p><p>File format to import.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings SetFileFormat(this AzureRedisImportSettings toolSettings, string fileFormat)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FileFormat = fileFormat;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisImportSettings.FileFormat"/>.</em></p><p>File format to import.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings ResetFileFormat(this AzureRedisImportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FileFormat = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Files
+        /// <summary><p><em>Sets <see cref="AzureRedisImportSettings.Files"/> to a new list.</em></p><p>Space-separated list of files to import.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings SetFiles(this AzureRedisImportSettings toolSettings, params string[] files)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FilesInternal = files.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureRedisImportSettings.Files"/> to a new list.</em></p><p>Space-separated list of files to import.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings SetFiles(this AzureRedisImportSettings toolSettings, IEnumerable<string> files)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FilesInternal = files.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRedisImportSettings.Files"/>.</em></p><p>Space-separated list of files to import.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings AddFiles(this AzureRedisImportSettings toolSettings, params string[] files)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FilesInternal.AddRange(files);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRedisImportSettings.Files"/>.</em></p><p>Space-separated list of files to import.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings AddFiles(this AzureRedisImportSettings toolSettings, IEnumerable<string> files)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FilesInternal.AddRange(files);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureRedisImportSettings.Files"/>.</em></p><p>Space-separated list of files to import.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings ClearFiles(this AzureRedisImportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FilesInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRedisImportSettings.Files"/>.</em></p><p>Space-separated list of files to import.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings RemoveFiles(this AzureRedisImportSettings toolSettings, params string[] files)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(files);
+            toolSettings.FilesInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRedisImportSettings.Files"/>.</em></p><p>Space-separated list of files to import.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings RemoveFiles(this AzureRedisImportSettings toolSettings, IEnumerable<string> files)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(files);
+            toolSettings.FilesInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureRedisImportSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings SetName(this AzureRedisImportSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisImportSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings ResetName(this AzureRedisImportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureRedisImportSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings SetResourceGroup(this AzureRedisImportSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisImportSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings ResetResourceGroup(this AzureRedisImportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureRedisImportSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings SetDebug(this AzureRedisImportSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisImportSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings ResetDebug(this AzureRedisImportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureRedisImportSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings SetHelp(this AzureRedisImportSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisImportSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings ResetHelp(this AzureRedisImportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureRedisImportSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings SetOutput(this AzureRedisImportSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisImportSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings ResetOutput(this AzureRedisImportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureRedisImportSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings SetQuery(this AzureRedisImportSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisImportSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings ResetQuery(this AzureRedisImportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureRedisImportSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings SetVerbose(this AzureRedisImportSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisImportSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings ResetVerbose(this AzureRedisImportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureRedisImportMethodSettingsExtensions
     /// <summary><p>Used within <see cref="AzureRedisTasks"/>.</p></summary>
     [PublicAPI]
@@ -1649,7 +1967,7 @@ namespace Nuke.Azure
     public static partial class AzureRedisImportMethodSettingsExtensions
     {
         #region FileFormat
-        /// <summary><p><em>Sets <see cref="AzureRedisImportMethodSettings.FileFormat"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisImportMethodSettings.FileFormat"/>.</em></p><p>File format to import.</p></summary>
         [Pure]
         public static AzureRedisImportMethodSettings SetFileFormat(this AzureRedisImportMethodSettings toolSettings, string fileFormat)
         {
@@ -1657,7 +1975,7 @@ namespace Nuke.Azure
             toolSettings.FileFormat = fileFormat;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisImportMethodSettings.FileFormat"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisImportMethodSettings.FileFormat"/>.</em></p><p>File format to import.</p></summary>
         [Pure]
         public static AzureRedisImportMethodSettings ResetFileFormat(this AzureRedisImportMethodSettings toolSettings)
         {
@@ -1667,25 +1985,67 @@ namespace Nuke.Azure
         }
         #endregion
         #region Files
-        /// <summary><p><em>Sets <see cref="AzureRedisImportMethodSettings.Files"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisImportMethodSettings.Files"/> to a new list.</em></p><p>Space-separated list of files to import.</p></summary>
         [Pure]
-        public static AzureRedisImportMethodSettings SetFiles(this AzureRedisImportMethodSettings toolSettings, string files)
+        public static AzureRedisImportMethodSettings SetFiles(this AzureRedisImportMethodSettings toolSettings, params string[] files)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Files = files;
+            toolSettings.FilesInternal = files.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisImportMethodSettings.Files"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisImportMethodSettings.Files"/> to a new list.</em></p><p>Space-separated list of files to import.</p></summary>
         [Pure]
-        public static AzureRedisImportMethodSettings ResetFiles(this AzureRedisImportMethodSettings toolSettings)
+        public static AzureRedisImportMethodSettings SetFiles(this AzureRedisImportMethodSettings toolSettings, IEnumerable<string> files)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Files = null;
+            toolSettings.FilesInternal = files.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRedisImportMethodSettings.Files"/>.</em></p><p>Space-separated list of files to import.</p></summary>
+        [Pure]
+        public static AzureRedisImportMethodSettings AddFiles(this AzureRedisImportMethodSettings toolSettings, params string[] files)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FilesInternal.AddRange(files);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRedisImportMethodSettings.Files"/>.</em></p><p>Space-separated list of files to import.</p></summary>
+        [Pure]
+        public static AzureRedisImportMethodSettings AddFiles(this AzureRedisImportMethodSettings toolSettings, IEnumerable<string> files)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FilesInternal.AddRange(files);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureRedisImportMethodSettings.Files"/>.</em></p><p>Space-separated list of files to import.</p></summary>
+        [Pure]
+        public static AzureRedisImportMethodSettings ClearFiles(this AzureRedisImportMethodSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FilesInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRedisImportMethodSettings.Files"/>.</em></p><p>Space-separated list of files to import.</p></summary>
+        [Pure]
+        public static AzureRedisImportMethodSettings RemoveFiles(this AzureRedisImportMethodSettings toolSettings, params string[] files)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(files);
+            toolSettings.FilesInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRedisImportMethodSettings.Files"/>.</em></p><p>Space-separated list of files to import.</p></summary>
+        [Pure]
+        public static AzureRedisImportMethodSettings RemoveFiles(this AzureRedisImportMethodSettings toolSettings, IEnumerable<string> files)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(files);
+            toolSettings.FilesInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
         #endregion
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureRedisImportMethodSettings.Name"/>.</em></p><p>Name of the redis cache.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisImportMethodSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
         public static AzureRedisImportMethodSettings SetName(this AzureRedisImportMethodSettings toolSettings, string name)
         {
@@ -1693,7 +2053,7 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisImportMethodSettings.Name"/>.</em></p><p>Name of the redis cache.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisImportMethodSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
         public static AzureRedisImportMethodSettings ResetName(this AzureRedisImportMethodSettings toolSettings)
         {
@@ -2033,7 +2393,7 @@ namespace Nuke.Azure
     public static partial class AzureRedisListKeysSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureRedisListKeysSettings.Name"/>.</em></p><p>Name of the redis cache.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisListKeysSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
         public static AzureRedisListKeysSettings SetName(this AzureRedisListKeysSettings toolSettings, string name)
         {
@@ -2041,7 +2401,7 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisListKeysSettings.Name"/>.</em></p><p>Name of the redis cache.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisListKeysSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
         public static AzureRedisListKeysSettings ResetName(this AzureRedisListKeysSettings toolSettings)
         {
@@ -2185,7 +2545,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureRedisRegenerateKeysSettings.Name"/>.</em></p><p>Name of the redis cache.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisRegenerateKeysSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
         public static AzureRedisRegenerateKeysSettings SetName(this AzureRedisRegenerateKeysSettings toolSettings, string name)
         {
@@ -2193,7 +2553,7 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisRegenerateKeysSettings.Name"/>.</em></p><p>Name of the redis cache.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisRegenerateKeysSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
         public static AzureRedisRegenerateKeysSettings ResetName(this AzureRedisRegenerateKeysSettings toolSettings)
         {
@@ -2319,7 +2679,7 @@ namespace Nuke.Azure
     public static partial class AzureRedisShowSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureRedisShowSettings.Name"/>.</em></p><p>Name of the redis cache.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisShowSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
         public static AzureRedisShowSettings SetName(this AzureRedisShowSettings toolSettings, string name)
         {
@@ -2327,7 +2687,7 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisShowSettings.Name"/>.</em></p><p>Name of the redis cache.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisShowSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
         public static AzureRedisShowSettings ResetName(this AzureRedisShowSettings toolSettings)
         {
@@ -2453,7 +2813,7 @@ namespace Nuke.Azure
     public static partial class AzureRedisUpdateSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettings.Name"/>.</em></p><p>Name of the redis cache.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
         public static AzureRedisUpdateSettings SetName(this AzureRedisUpdateSettings toolSettings, string name)
         {
@@ -2461,7 +2821,7 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisUpdateSettings.Name"/>.</em></p><p>Name of the redis cache.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisUpdateSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
         public static AzureRedisUpdateSettings ResetName(this AzureRedisUpdateSettings toolSettings)
         {
@@ -2489,7 +2849,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Sku
-        /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettings.Sku"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettings.Sku"/>.</em></p><p>Type of Redis cache.</p></summary>
         [Pure]
         public static AzureRedisUpdateSettings SetSku(this AzureRedisUpdateSettings toolSettings, RedisSku sku)
         {
@@ -2497,7 +2857,7 @@ namespace Nuke.Azure
             toolSettings.Sku = sku;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisUpdateSettings.Sku"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisUpdateSettings.Sku"/>.</em></p><p>Type of Redis cache.</p></summary>
         [Pure]
         public static AzureRedisUpdateSettings ResetSku(this AzureRedisUpdateSettings toolSettings)
         {
@@ -2507,7 +2867,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region VmSize
-        /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettings.VmSize"/>.</em></p><p>Size of redis cache to deploy. Example : values for C family (C0, C1, C2, C3, C4, C5, C6). For P family (P1, P2, P3, P4).</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettings.VmSize"/>.</em></p><p>Size of Redis cache to deploy. Example : values for C family (C0, C1, C2, C3, C4, C5, C6). For P family (P1, P2, P3, P4).</p></summary>
         [Pure]
         public static AzureRedisUpdateSettings SetVmSize(this AzureRedisUpdateSettings toolSettings, string vmSize)
         {
@@ -2515,7 +2875,7 @@ namespace Nuke.Azure
             toolSettings.VmSize = vmSize;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisUpdateSettings.VmSize"/>.</em></p><p>Size of redis cache to deploy. Example : values for C family (C0, C1, C2, C3, C4, C5, C6). For P family (P1, P2, P3, P4).</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisUpdateSettings.VmSize"/>.</em></p><p>Size of Redis cache to deploy. Example : values for C family (C0, C1, C2, C3, C4, C5, C6). For P family (P1, P2, P3, P4).</p></summary>
         [Pure]
         public static AzureRedisUpdateSettings ResetVmSize(this AzureRedisUpdateSettings toolSettings)
         {
@@ -2677,7 +3037,7 @@ namespace Nuke.Azure
     public static partial class AzureRedisUpdateSettingsSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettingsSettings.Name"/>.</em></p><p>Name of the redis cache.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettingsSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
         public static AzureRedisUpdateSettingsSettings SetName(this AzureRedisUpdateSettingsSettings toolSettings, string name)
         {
@@ -2685,7 +3045,7 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisUpdateSettingsSettings.Name"/>.</em></p><p>Name of the redis cache.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisUpdateSettingsSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
         public static AzureRedisUpdateSettingsSettings ResetName(this AzureRedisUpdateSettingsSettings toolSettings)
         {
@@ -2695,7 +3055,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region RedisConfiguration
-        /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettingsSettings.RedisConfiguration"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettingsSettings.RedisConfiguration"/>.</em></p><p>JSON encoded configuration settings. Use @{file} to load from a file.</p></summary>
         [Pure]
         public static AzureRedisUpdateSettingsSettings SetRedisConfiguration(this AzureRedisUpdateSettingsSettings toolSettings, string redisConfiguration)
         {
@@ -2703,7 +3063,7 @@ namespace Nuke.Azure
             toolSettings.RedisConfiguration = redisConfiguration;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisUpdateSettingsSettings.RedisConfiguration"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisUpdateSettingsSettings.RedisConfiguration"/>.</em></p><p>JSON encoded configuration settings. Use @{file} to load from a file.</p></summary>
         [Pure]
         public static AzureRedisUpdateSettingsSettings ResetRedisConfiguration(this AzureRedisUpdateSettingsSettings toolSettings)
         {
@@ -2829,7 +3189,7 @@ namespace Nuke.Azure
     public static partial class AzureRedisPatchScheduleDeleteSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleDeleteSettings.Name"/>.</em></p><p>Name of the redis cache.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleDeleteSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
         public static AzureRedisPatchScheduleDeleteSettings SetName(this AzureRedisPatchScheduleDeleteSettings toolSettings, string name)
         {
@@ -2837,7 +3197,7 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisPatchScheduleDeleteSettings.Name"/>.</em></p><p>Name of the redis cache.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisPatchScheduleDeleteSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
         public static AzureRedisPatchScheduleDeleteSettings ResetName(this AzureRedisPatchScheduleDeleteSettings toolSettings)
         {
@@ -2963,7 +3323,7 @@ namespace Nuke.Azure
     public static partial class AzureRedisPatchScheduleSetSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleSetSettings.Name"/>.</em></p><p>Name of the redis cache.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleSetSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
         public static AzureRedisPatchScheduleSetSettings SetName(this AzureRedisPatchScheduleSetSettings toolSettings, string name)
         {
@@ -2971,7 +3331,7 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisPatchScheduleSetSettings.Name"/>.</em></p><p>Name of the redis cache.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisPatchScheduleSetSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
         public static AzureRedisPatchScheduleSetSettings ResetName(this AzureRedisPatchScheduleSetSettings toolSettings)
         {
@@ -3108,6 +3468,140 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureRedisPatchScheduleShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureRedisTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureRedisPatchScheduleShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleShowSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings SetName(this AzureRedisPatchScheduleShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisPatchScheduleShowSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings ResetName(this AzureRedisPatchScheduleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings SetResourceGroup(this AzureRedisPatchScheduleShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisPatchScheduleShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings ResetResourceGroup(this AzureRedisPatchScheduleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings SetDebug(this AzureRedisPatchScheduleShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisPatchScheduleShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings ResetDebug(this AzureRedisPatchScheduleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings SetHelp(this AzureRedisPatchScheduleShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisPatchScheduleShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings ResetHelp(this AzureRedisPatchScheduleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings SetOutput(this AzureRedisPatchScheduleShowSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisPatchScheduleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings ResetOutput(this AzureRedisPatchScheduleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings SetQuery(this AzureRedisPatchScheduleShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisPatchScheduleShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings ResetQuery(this AzureRedisPatchScheduleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings SetVerbose(this AzureRedisPatchScheduleShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisPatchScheduleShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings ResetVerbose(this AzureRedisPatchScheduleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureRedisPatchSchedulePatchScheduleShowSettingsExtensions
     /// <summary><p>Used within <see cref="AzureRedisTasks"/>.</p></summary>
     [PublicAPI]
@@ -3115,7 +3609,7 @@ namespace Nuke.Azure
     public static partial class AzureRedisPatchSchedulePatchScheduleShowSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureRedisPatchSchedulePatchScheduleShowSettings.Name"/>.</em></p><p>Name of the redis cache.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisPatchSchedulePatchScheduleShowSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
         public static AzureRedisPatchSchedulePatchScheduleShowSettings SetName(this AzureRedisPatchSchedulePatchScheduleShowSettings toolSettings, string name)
         {
@@ -3123,7 +3617,7 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisPatchSchedulePatchScheduleShowSettings.Name"/>.</em></p><p>Name of the redis cache.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisPatchSchedulePatchScheduleShowSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
         public static AzureRedisPatchSchedulePatchScheduleShowSettings ResetName(this AzureRedisPatchSchedulePatchScheduleShowSettings toolSettings)
         {

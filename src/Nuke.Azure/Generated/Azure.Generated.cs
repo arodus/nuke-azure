@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/Azure.json.
 
 using JetBrains.Annotations;
@@ -27,7 +27,7 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the Azure executable.</p></summary>
         public static string AzurePath => ToolPathResolver.GetPathExecutable("az");
-        /// <summary><p>TBA</p></summary>
+        /// <summary><p>General Tasks.</p></summary>
         public static IEnumerable<string> Azure(string arguments, string workingDirectory = null, ProcessSettings processSettings = null)
         {
             var process = ProcessTasks.StartProcess(AzurePath, arguments, workingDirectory, processSettings?.EnvironmentVariables, processSettings?.ExecutionTimeout, processSettings?.RedirectOutput ?? true);
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureConfigureSettings toolSettings);
         static partial void PostProcess(AzureConfigureSettings toolSettings);
-        /// <summary><p>TBA</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/reference-index.yml">official website</a>.</p></summary>
+        /// <summary><p>General Tasks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureConfigure(Configure<AzureConfigureSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureConfigureSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFeedbackSettings toolSettings);
         static partial void PostProcess(AzureFeedbackSettings toolSettings);
-        /// <summary><p>TBA</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/reference-index.yml">official website</a>.</p></summary>
+        /// <summary><p>General Tasks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFeedback(Configure<AzureFeedbackSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFeedbackSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFindSettings toolSettings);
         static partial void PostProcess(AzureFindSettings toolSettings);
-        /// <summary><p>TBA</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/reference-index.yml">official website</a>.</p></summary>
+        /// <summary><p>General Tasks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFind(Configure<AzureFindSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFindSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureInteractiveSettings toolSettings);
         static partial void PostProcess(AzureInteractiveSettings toolSettings);
-        /// <summary><p>TBA</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/reference-index.yml">official website</a>.</p></summary>
+        /// <summary><p>General Tasks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureInteractive(Configure<AzureInteractiveSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureInteractiveSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLoginSettings toolSettings);
         static partial void PostProcess(AzureLoginSettings toolSettings);
-        /// <summary><p>TBA</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/reference-index.yml">official website</a>.</p></summary>
+        /// <summary><p>General Tasks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLogin(Configure<AzureLoginSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLoginSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureLogoutSettings toolSettings);
         static partial void PostProcess(AzureLogoutSettings toolSettings);
-        /// <summary><p>TBA</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/reference-index.yml">official website</a>.</p></summary>
+        /// <summary><p>General Tasks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureLogout(Configure<AzureLogoutSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLogoutSettings());
@@ -262,8 +262,6 @@ namespace Nuke.Azure
         public virtual string Username { get; internal set; }
         /// <summary><p>Log in using the Virtual Machine's identity.</p></summary>
         public virtual bool? Identity { get; internal set; }
-        /// <summary><p>The port to retrieve tokens for login. Default: 50342.</p></summary>
-        public virtual string IdentityPort { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -284,7 +282,6 @@ namespace Nuke.Azure
               .Add("--tenant {value}", Tenant)
               .Add("--username {value}", Username)
               .Add("--identity", Identity)
-              .Add("--identity-port {value}", IdentityPort)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -976,24 +973,6 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Identity = !toolSettings.Identity;
-            return toolSettings;
-        }
-        #endregion
-        #region IdentityPort
-        /// <summary><p><em>Sets <see cref="AzureLoginSettings.IdentityPort"/>.</em></p><p>The port to retrieve tokens for login. Default: 50342.</p></summary>
-        [Pure]
-        public static AzureLoginSettings SetIdentityPort(this AzureLoginSettings toolSettings, string identityPort)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdentityPort = identityPort;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLoginSettings.IdentityPort"/>.</em></p><p>The port to retrieve tokens for login. Default: 50342.</p></summary>
-        [Pure]
-        public static AzureLoginSettings ResetIdentityPort(this AzureLoginSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdentityPort = null;
             return toolSettings;
         }
         #endregion

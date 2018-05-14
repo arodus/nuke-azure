@@ -3,14 +3,14 @@
   "license": [
     "Copyright Sebastian Karasek, Matthias Koch 2018.",
     "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+    "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/aks.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/aks.yml"
   ],
   "name": "AzureAks",
-  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/aks.yml",
-  "help": "Manage Azure Kubernetes Services.",
+  "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest",
+  "help": "(PREVIEW) Manage Azure Kubernetes Services.",
   "pathExecutable": "az",
   "tasks": [
     {
@@ -306,7 +306,7 @@
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "The location to create the ACI container groups."
+            "help": "The location to create the ACI container groups. Use the location of the MC_* resource group if it is not specified."
           },
           {
             "name": "OsType",
@@ -516,7 +516,7 @@
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "help": "The location to create the ACI container groups. Use the location of the MC_* resource group if it is not specified."
           },
           {
             "name": "OsType",

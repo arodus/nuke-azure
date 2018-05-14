@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureResource.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureResourceCreateSettings toolSettings);
         static partial void PostProcess(AzureResourceCreateSettings toolSettings);
-        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/resource.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureResourceCreate(Configure<AzureResourceCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceCreateSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureResourceDeleteSettings toolSettings);
         static partial void PostProcess(AzureResourceDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/resource.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureResourceDelete(Configure<AzureResourceDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceDeleteSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureResourceInvokeActionSettings toolSettings);
         static partial void PostProcess(AzureResourceInvokeActionSettings toolSettings);
-        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/resource.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureResourceInvokeAction(Configure<AzureResourceInvokeActionSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceInvokeActionSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureResourceListSettings toolSettings);
         static partial void PostProcess(AzureResourceListSettings toolSettings);
-        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/resource.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureResourceList(Configure<AzureResourceListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceListSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureResourceMoveSettings toolSettings);
         static partial void PostProcess(AzureResourceMoveSettings toolSettings);
-        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/resource.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureResourceMove(Configure<AzureResourceMoveSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceMoveSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureResourceShowSettings toolSettings);
         static partial void PostProcess(AzureResourceShowSettings toolSettings);
-        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/resource.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureResourceShow(Configure<AzureResourceShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceShowSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureResourceTagSettings toolSettings);
         static partial void PostProcess(AzureResourceTagSettings toolSettings);
-        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/resource.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureResourceTag(Configure<AzureResourceTagSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceTagSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureResourceUpdateSettings toolSettings);
         static partial void PostProcess(AzureResourceUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/resource.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureResourceUpdate(Configure<AzureResourceUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceUpdateSettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureResourceLinkCreateSettings toolSettings);
         static partial void PostProcess(AzureResourceLinkCreateSettings toolSettings);
-        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/resource.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureResourceLinkCreate(Configure<AzureResourceLinkCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceLinkCreateSettings());
@@ -135,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureResourceLinkDeleteSettings toolSettings);
         static partial void PostProcess(AzureResourceLinkDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/resource.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureResourceLinkDelete(Configure<AzureResourceLinkDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceLinkDeleteSettings());
@@ -146,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureResourceLinkListSettings toolSettings);
         static partial void PostProcess(AzureResourceLinkListSettings toolSettings);
-        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/resource.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureResourceLinkList(Configure<AzureResourceLinkListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceLinkListSettings());
@@ -157,7 +157,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureResourceLinkShowSettings toolSettings);
         static partial void PostProcess(AzureResourceLinkShowSettings toolSettings);
-        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/resource.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureResourceLinkShow(Configure<AzureResourceLinkShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceLinkShowSettings());
@@ -168,7 +168,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureResourceLinkUpdateSettings toolSettings);
         static partial void PostProcess(AzureResourceLinkUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/resource.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureResourceLinkUpdate(Configure<AzureResourceLinkUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceLinkUpdateSettings());
@@ -179,7 +179,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureResourceLockCreateSettings toolSettings);
         static partial void PostProcess(AzureResourceLockCreateSettings toolSettings);
-        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/resource.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureResourceLockCreate(Configure<AzureResourceLockCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceLockCreateSettings());
@@ -190,7 +190,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureResourceLockDeleteSettings toolSettings);
         static partial void PostProcess(AzureResourceLockDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/resource.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureResourceLockDelete(Configure<AzureResourceLockDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceLockDeleteSettings());
@@ -201,7 +201,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureResourceLockListSettings toolSettings);
         static partial void PostProcess(AzureResourceLockListSettings toolSettings);
-        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/resource.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureResourceLockList(Configure<AzureResourceLockListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceLockListSettings());
@@ -212,7 +212,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureResourceLockShowSettings toolSettings);
         static partial void PostProcess(AzureResourceLockShowSettings toolSettings);
-        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/resource.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureResourceLockShow(Configure<AzureResourceLockShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceLockShowSettings());
@@ -223,7 +223,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureResourceLockUpdateSettings toolSettings);
         static partial void PostProcess(AzureResourceLockUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/resource.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureResourceLockUpdate(Configure<AzureResourceLockUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceLockUpdateSettings());

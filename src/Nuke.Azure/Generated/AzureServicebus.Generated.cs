@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureServicebus.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusSettings toolSettings);
         static partial void PostProcess(AzureServicebusSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebus(Configure<AzureServicebusSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings);
         static partial void PostProcess(AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusGeorecoveryAliasBreakPair(Configure<AzureServicebusGeorecoveryAliasBreakPairSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusGeorecoveryAliasBreakPairSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusGeorecoveryAliasDeleteSettings toolSettings);
         static partial void PostProcess(AzureServicebusGeorecoveryAliasDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusGeorecoveryAliasDelete(Configure<AzureServicebusGeorecoveryAliasDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusGeorecoveryAliasDeleteSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusGeorecoveryAliasExistsSettings toolSettings);
         static partial void PostProcess(AzureServicebusGeorecoveryAliasExistsSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusGeorecoveryAliasExists(Configure<AzureServicebusGeorecoveryAliasExistsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusGeorecoveryAliasExistsSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusGeorecoveryAliasFailOverSettings toolSettings);
         static partial void PostProcess(AzureServicebusGeorecoveryAliasFailOverSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusGeorecoveryAliasFailOver(Configure<AzureServicebusGeorecoveryAliasFailOverSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusGeorecoveryAliasFailOverSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusGeorecoveryAliasListSettings toolSettings);
         static partial void PostProcess(AzureServicebusGeorecoveryAliasListSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusGeorecoveryAliasList(Configure<AzureServicebusGeorecoveryAliasListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusGeorecoveryAliasListSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusGeorecoveryAliasSetSettings toolSettings);
         static partial void PostProcess(AzureServicebusGeorecoveryAliasSetSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusGeorecoveryAliasSet(Configure<AzureServicebusGeorecoveryAliasSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusGeorecoveryAliasSetSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusGeorecoveryAliasShowSettings toolSettings);
         static partial void PostProcess(AzureServicebusGeorecoveryAliasShowSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusGeorecoveryAliasShow(Configure<AzureServicebusGeorecoveryAliasShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusGeorecoveryAliasShowSettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusNamespaceCreateSettings toolSettings);
         static partial void PostProcess(AzureServicebusNamespaceCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusNamespaceCreate(Configure<AzureServicebusNamespaceCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceCreateSettings());
@@ -135,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusNamespaceDeleteSettings toolSettings);
         static partial void PostProcess(AzureServicebusNamespaceDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusNamespaceDelete(Configure<AzureServicebusNamespaceDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceDeleteSettings());
@@ -146,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusNamespaceExistsSettings toolSettings);
         static partial void PostProcess(AzureServicebusNamespaceExistsSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusNamespaceExists(Configure<AzureServicebusNamespaceExistsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceExistsSettings());
@@ -157,7 +157,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusNamespaceListSettings toolSettings);
         static partial void PostProcess(AzureServicebusNamespaceListSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusNamespaceList(Configure<AzureServicebusNamespaceListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceListSettings());
@@ -168,7 +168,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusNamespaceShowSettings toolSettings);
         static partial void PostProcess(AzureServicebusNamespaceShowSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusNamespaceShow(Configure<AzureServicebusNamespaceShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceShowSettings());
@@ -179,7 +179,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusNamespaceUpdateSettings toolSettings);
         static partial void PostProcess(AzureServicebusNamespaceUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusNamespaceUpdate(Configure<AzureServicebusNamespaceUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceUpdateSettings());
@@ -190,7 +190,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusQueueCreateSettings toolSettings);
         static partial void PostProcess(AzureServicebusQueueCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusQueueCreate(Configure<AzureServicebusQueueCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueCreateSettings());
@@ -201,7 +201,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusQueueDeleteSettings toolSettings);
         static partial void PostProcess(AzureServicebusQueueDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusQueueDelete(Configure<AzureServicebusQueueDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueDeleteSettings());
@@ -212,7 +212,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusQueueListSettings toolSettings);
         static partial void PostProcess(AzureServicebusQueueListSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusQueueList(Configure<AzureServicebusQueueListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueListSettings());
@@ -223,7 +223,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusQueueShowSettings toolSettings);
         static partial void PostProcess(AzureServicebusQueueShowSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusQueueShow(Configure<AzureServicebusQueueShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueShowSettings());
@@ -234,7 +234,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusQueueUpdateSettings toolSettings);
         static partial void PostProcess(AzureServicebusQueueUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusQueueUpdate(Configure<AzureServicebusQueueUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueUpdateSettings());
@@ -245,7 +245,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusTopicCreateSettings toolSettings);
         static partial void PostProcess(AzureServicebusTopicCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusTopicCreate(Configure<AzureServicebusTopicCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicCreateSettings());
@@ -256,7 +256,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusTopicDeleteSettings toolSettings);
         static partial void PostProcess(AzureServicebusTopicDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusTopicDelete(Configure<AzureServicebusTopicDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicDeleteSettings());
@@ -267,7 +267,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusTopicListSettings toolSettings);
         static partial void PostProcess(AzureServicebusTopicListSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusTopicList(Configure<AzureServicebusTopicListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicListSettings());
@@ -278,7 +278,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusTopicShowSettings toolSettings);
         static partial void PostProcess(AzureServicebusTopicShowSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusTopicShow(Configure<AzureServicebusTopicShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicShowSettings());
@@ -289,7 +289,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusTopicUpdateSettings toolSettings);
         static partial void PostProcess(AzureServicebusTopicUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusTopicUpdate(Configure<AzureServicebusTopicUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicUpdateSettings());
@@ -300,7 +300,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings);
         static partial void PostProcess(AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusGeorecoveryAliasAuthorizationRuleList(Configure<AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings());
@@ -311,7 +311,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings);
         static partial void PostProcess(AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusGeorecoveryAliasAuthorizationRuleShow(Configure<AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings());
@@ -322,7 +322,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings);
         static partial void PostProcess(AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusGeorecoveryAliasAuthorizationRuleKeysList(Configure<AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings());
@@ -333,7 +333,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusNamespaceAuthorizationRuleCreateSettings toolSettings);
         static partial void PostProcess(AzureServicebusNamespaceAuthorizationRuleCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusNamespaceAuthorizationRuleCreate(Configure<AzureServicebusNamespaceAuthorizationRuleCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceAuthorizationRuleCreateSettings());
@@ -344,7 +344,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusNamespaceAuthorizationRuleDeleteSettings toolSettings);
         static partial void PostProcess(AzureServicebusNamespaceAuthorizationRuleDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusNamespaceAuthorizationRuleDelete(Configure<AzureServicebusNamespaceAuthorizationRuleDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceAuthorizationRuleDeleteSettings());
@@ -355,7 +355,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusNamespaceAuthorizationRuleListSettings toolSettings);
         static partial void PostProcess(AzureServicebusNamespaceAuthorizationRuleListSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusNamespaceAuthorizationRuleList(Configure<AzureServicebusNamespaceAuthorizationRuleListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceAuthorizationRuleListSettings());
@@ -366,7 +366,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusNamespaceAuthorizationRuleShowSettings toolSettings);
         static partial void PostProcess(AzureServicebusNamespaceAuthorizationRuleShowSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusNamespaceAuthorizationRuleShow(Configure<AzureServicebusNamespaceAuthorizationRuleShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceAuthorizationRuleShowSettings());
@@ -377,7 +377,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusNamespaceAuthorizationRuleUpdateSettings toolSettings);
         static partial void PostProcess(AzureServicebusNamespaceAuthorizationRuleUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusNamespaceAuthorizationRuleUpdate(Configure<AzureServicebusNamespaceAuthorizationRuleUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceAuthorizationRuleUpdateSettings());
@@ -388,7 +388,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings);
         static partial void PostProcess(AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusNamespaceAuthorizationRuleKeysList(Configure<AzureServicebusNamespaceAuthorizationRuleKeysListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceAuthorizationRuleKeysListSettings());
@@ -399,7 +399,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings);
         static partial void PostProcess(AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusNamespaceAuthorizationRuleKeysRenew(Configure<AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings());
@@ -410,7 +410,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings);
         static partial void PostProcess(AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusQueueAuthorizationRuleCreate(Configure<AzureServicebusQueueAuthorizationRuleCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueAuthorizationRuleCreateSettings());
@@ -421,7 +421,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings);
         static partial void PostProcess(AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusQueueAuthorizationRuleDelete(Configure<AzureServicebusQueueAuthorizationRuleDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueAuthorizationRuleDeleteSettings());
@@ -432,7 +432,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusQueueAuthorizationRuleListSettings toolSettings);
         static partial void PostProcess(AzureServicebusQueueAuthorizationRuleListSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusQueueAuthorizationRuleList(Configure<AzureServicebusQueueAuthorizationRuleListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueAuthorizationRuleListSettings());
@@ -443,7 +443,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusQueueAuthorizationRuleShowSettings toolSettings);
         static partial void PostProcess(AzureServicebusQueueAuthorizationRuleShowSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusQueueAuthorizationRuleShow(Configure<AzureServicebusQueueAuthorizationRuleShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueAuthorizationRuleShowSettings());
@@ -454,7 +454,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings);
         static partial void PostProcess(AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusQueueAuthorizationRuleUpdate(Configure<AzureServicebusQueueAuthorizationRuleUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueAuthorizationRuleUpdateSettings());
@@ -465,7 +465,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings);
         static partial void PostProcess(AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusQueueAuthorizationRuleKeysList(Configure<AzureServicebusQueueAuthorizationRuleKeysListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueAuthorizationRuleKeysListSettings());
@@ -476,7 +476,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings);
         static partial void PostProcess(AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusQueueAuthorizationRuleKeysRenew(Configure<AzureServicebusQueueAuthorizationRuleKeysRenewSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueAuthorizationRuleKeysRenewSettings());
@@ -487,7 +487,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings);
         static partial void PostProcess(AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusTopicAuthorizationRuleCreate(Configure<AzureServicebusTopicAuthorizationRuleCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicAuthorizationRuleCreateSettings());
@@ -498,7 +498,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings);
         static partial void PostProcess(AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusTopicAuthorizationRuleDelete(Configure<AzureServicebusTopicAuthorizationRuleDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicAuthorizationRuleDeleteSettings());
@@ -509,7 +509,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusTopicAuthorizationRuleListSettings toolSettings);
         static partial void PostProcess(AzureServicebusTopicAuthorizationRuleListSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusTopicAuthorizationRuleList(Configure<AzureServicebusTopicAuthorizationRuleListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicAuthorizationRuleListSettings());
@@ -520,7 +520,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusTopicAuthorizationRuleShowSettings toolSettings);
         static partial void PostProcess(AzureServicebusTopicAuthorizationRuleShowSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusTopicAuthorizationRuleShow(Configure<AzureServicebusTopicAuthorizationRuleShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicAuthorizationRuleShowSettings());
@@ -531,7 +531,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings);
         static partial void PostProcess(AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusTopicAuthorizationRuleUpdate(Configure<AzureServicebusTopicAuthorizationRuleUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicAuthorizationRuleUpdateSettings());
@@ -542,7 +542,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusTopicSubscriptionCreateSettings toolSettings);
         static partial void PostProcess(AzureServicebusTopicSubscriptionCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusTopicSubscriptionCreate(Configure<AzureServicebusTopicSubscriptionCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicSubscriptionCreateSettings());
@@ -553,7 +553,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusTopicSubscriptionDeleteSettings toolSettings);
         static partial void PostProcess(AzureServicebusTopicSubscriptionDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusTopicSubscriptionDelete(Configure<AzureServicebusTopicSubscriptionDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicSubscriptionDeleteSettings());
@@ -564,7 +564,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusTopicSubscriptionListSettings toolSettings);
         static partial void PostProcess(AzureServicebusTopicSubscriptionListSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusTopicSubscriptionList(Configure<AzureServicebusTopicSubscriptionListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicSubscriptionListSettings());
@@ -575,7 +575,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusTopicSubscriptionShowSettings toolSettings);
         static partial void PostProcess(AzureServicebusTopicSubscriptionShowSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusTopicSubscriptionShow(Configure<AzureServicebusTopicSubscriptionShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicSubscriptionShowSettings());
@@ -586,7 +586,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusTopicSubscriptionUpdateSettings toolSettings);
         static partial void PostProcess(AzureServicebusTopicSubscriptionUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusTopicSubscriptionUpdate(Configure<AzureServicebusTopicSubscriptionUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicSubscriptionUpdateSettings());
@@ -597,7 +597,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusTopicAuthorizationRuleKeysListSettings toolSettings);
         static partial void PostProcess(AzureServicebusTopicAuthorizationRuleKeysListSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusTopicAuthorizationRuleKeysList(Configure<AzureServicebusTopicAuthorizationRuleKeysListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicAuthorizationRuleKeysListSettings());
@@ -608,7 +608,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusTopicAuthorizationRuleKeysRenewSettings toolSettings);
         static partial void PostProcess(AzureServicebusTopicAuthorizationRuleKeysRenewSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusTopicAuthorizationRuleKeysRenew(Configure<AzureServicebusTopicAuthorizationRuleKeysRenewSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicAuthorizationRuleKeysRenewSettings());
@@ -619,7 +619,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusTopicSubscriptionRuleCreateSettings toolSettings);
         static partial void PostProcess(AzureServicebusTopicSubscriptionRuleCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusTopicSubscriptionRuleCreate(Configure<AzureServicebusTopicSubscriptionRuleCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicSubscriptionRuleCreateSettings());
@@ -630,7 +630,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusTopicSubscriptionRuleDeleteSettings toolSettings);
         static partial void PostProcess(AzureServicebusTopicSubscriptionRuleDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusTopicSubscriptionRuleDelete(Configure<AzureServicebusTopicSubscriptionRuleDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicSubscriptionRuleDeleteSettings());
@@ -641,7 +641,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusTopicSubscriptionRuleListSettings toolSettings);
         static partial void PostProcess(AzureServicebusTopicSubscriptionRuleListSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusTopicSubscriptionRuleList(Configure<AzureServicebusTopicSubscriptionRuleListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicSubscriptionRuleListSettings());
@@ -652,7 +652,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusTopicSubscriptionRuleShowSettings toolSettings);
         static partial void PostProcess(AzureServicebusTopicSubscriptionRuleShowSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusTopicSubscriptionRuleShow(Configure<AzureServicebusTopicSubscriptionRuleShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicSubscriptionRuleShowSettings());
@@ -663,7 +663,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureServicebusTopicSubscriptionRuleUpdateSettings toolSettings);
         static partial void PostProcess(AzureServicebusTopicSubscriptionRuleUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/servicebus.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureServicebusTopicSubscriptionRuleUpdate(Configure<AzureServicebusTopicSubscriptionRuleUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicSubscriptionRuleUpdateSettings());

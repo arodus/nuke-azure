@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureImage.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureImageCreateSettings toolSettings);
         static partial void PostProcess(AzureImageCreateSettings toolSettings);
-        /// <summary><p>Manage custom virtual machine images.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/image.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage custom virtual machine images.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/image?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureImageCreate(Configure<AzureImageCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureImageCreateSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureImageDeleteSettings toolSettings);
         static partial void PostProcess(AzureImageDeleteSettings toolSettings);
-        /// <summary><p>Manage custom virtual machine images.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/image.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage custom virtual machine images.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/image?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureImageDelete(Configure<AzureImageDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureImageDeleteSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureImageListSettings toolSettings);
         static partial void PostProcess(AzureImageListSettings toolSettings);
-        /// <summary><p>Manage custom virtual machine images.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/image.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage custom virtual machine images.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/image?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureImageList(Configure<AzureImageListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureImageListSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureImageShowSettings toolSettings);
         static partial void PostProcess(AzureImageShowSettings toolSettings);
-        /// <summary><p>Manage custom virtual machine images.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/image.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage custom virtual machine images.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/image?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureImageShow(Configure<AzureImageShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureImageShowSettings());

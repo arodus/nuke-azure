@@ -3,13 +3,13 @@
   "license": [
     "Copyright Sebastian Karasek, Matthias Koch 2018.",
     "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+    "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/snapshot.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/snapshot.yml"
   ],
   "name": "AzureSnapshot",
-  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/snapshot.yml",
+  "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/snapshot?view=azure-cli-latest",
   "help": "Manage point-in-time copies of managed disks, native blobs, or other snapshots.",
   "pathExecutable": "az",
   "tasks": [

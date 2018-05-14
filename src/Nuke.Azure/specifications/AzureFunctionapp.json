@@ -3,62 +3,24 @@
   "license": [
     "Copyright Sebastian Karasek, Matthias Koch 2018.",
     "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+    "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp/config.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp/deployment.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp/identity.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp/config/appsettings.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp/config/hostname.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp/config/ssl.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp/deployment/source.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp/deployment/user.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/functionapp.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/functionapp/config.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/functionapp/deployment.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/functionapp/identity.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/functionapp/config/appsettings.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/functionapp/config/hostname.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/functionapp/config/ssl.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/functionapp/deployment/source.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/functionapp/deployment/user.yml"
   ],
   "name": "AzureFunctionapp",
-  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml",
+  "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest",
   "help": "Manage function apps.",
   "pathExecutable": "az",
   "tasks": [
-    {
-      "postfix": "AssignIdentity",
-      "definiteArgument": "functionapp assign-identity",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the function app."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "DisableMsi",
-            "type": "string",
-            "format": "--disable-msi {value}",
-            "help": ""
-          },
-          {
-            "name": "Role",
-            "type": "string",
-            "format": "--role {value}",
-            "help": ""
-          },
-          {
-            "name": "Scope",
-            "type": "string",
-            "format": "--scope {value}",
-            "help": ""
-          }
-        ]
-      }
-    },
     {
       "postfix": "Create",
       "definiteArgument": "functionapp create",
@@ -358,7 +320,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the function app."
+            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "ResourceGroup",
@@ -396,7 +358,7 @@
             "name": "SlotSettings",
             "type": "string",
             "format": "--slot-settings {value}",
-            "help": ""
+            "help": "Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;."
           }
         ]
       }
@@ -479,16 +441,16 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the function app."
-          },
-          {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "WebappName",
+            "type": "string",
+            "format": "--webapp-name {value}",
+            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           }
         ]
       }
@@ -774,7 +736,7 @@
             "name": "Src",
             "type": "string",
             "format": "--src {value}",
-            "help": ""
+            "help": "A zip file path for deployment."
           }
         ]
       }

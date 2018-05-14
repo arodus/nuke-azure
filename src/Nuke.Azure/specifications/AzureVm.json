@@ -3,27 +3,27 @@
   "license": [
     "Copyright Sebastian Karasek, Matthias Koch 2018.",
     "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+    "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm/availability-set.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm/boot-diagnostics.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm/diagnostics.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm/disk.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm/encryption.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm/extension.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm/identity.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm/image.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm/nic.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm/run-command.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm/secret.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm/unmanaged-disk.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm/user.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm/extension/image.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vm.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vm/availability-set.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vm/boot-diagnostics.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vm/diagnostics.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vm/disk.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vm/encryption.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vm/extension.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vm/identity.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vm/image.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vm/nic.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vm/run-command.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vm/secret.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vm/unmanaged-disk.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vm/user.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vm/extension/image.yml"
   ],
   "name": "AzureVm",
-  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/vm.yml",
+  "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest",
   "help": "Provision Linux or Windows virtual machines.",
   "pathExecutable": "az",
   "tasks": [
@@ -396,6 +396,13 @@
             "type": "string",
             "format": "--use-unmanaged-disk {value}",
             "help": "Do not use managed disk to persist VM."
+          },
+          {
+            "name": "WriteAccelerator",
+            "type": "List<string>",
+            "format": "--write-accelerator {value}",
+            "separator": " ",
+            "help": "Enable/disable disk write accelerator. Use singular value 'true/false' to apply across, or specify individual disks, e.g.'os=true 1=true 2=true' for os disk and data disks with lun of 1 &amp; 2."
           }
         ]
       }
@@ -850,6 +857,13 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
+            "name": "DiskCaching",
+            "type": "List<string>",
+            "format": "--disk-caching {value}",
+            "separator": " ",
+            "help": "Use singular value to apply across, or specify individual disks, e.g. 'os=ReadWrite 0=None 1=ReadOnly' should enable update os disk and 2 data disks."
+          },
+          {
             "name": "NoWait",
             "type": "string",
             "format": "--no-wait {value}",
@@ -860,6 +874,13 @@
             "type": "string",
             "format": "--os-disk {value}",
             "help": "Managed OS disk ID or name to swap to. Feature registration for 'Microsoft.Compute/AllowManagedDisksReplaceOSDisk' is needed."
+          },
+          {
+            "name": "WriteAccelerator",
+            "type": "List<string>",
+            "format": "--write-accelerator {value}",
+            "separator": " ",
+            "help": "Enable/disable disk write accelerator. Use singular value 'true/false' to apply across, or specify individual disks, e.g.'os=true 1=true 2=true' for os disk and data disks with lun of 1 &amp; 2."
           },
           {
             "name": "Add",
@@ -1213,7 +1234,7 @@
             "name": "IsWindowsOs",
             "type": "string",
             "format": "--is-windows-os {value}",
-            "help": ""
+            "help": "For Windows VMs."
           }
         ]
       }
@@ -1290,6 +1311,12 @@
             "type": "VmCreateOsDiskCaching",
             "format": "--caching {value}",
             "help": "Disk caching policy."
+          },
+          {
+            "name": "EnableWriteAccelerator",
+            "type": "string",
+            "format": "--enable-write-accelerator {value}",
+            "help": "Enable write accelerator."
           },
           {
             "name": "Lun",
@@ -1382,12 +1409,6 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "AadClientId",
-            "type": "string",
-            "format": "--aad-client-id {value}",
-            "help": "Client ID of an AAD app with permissions to write secrets to the key vault."
-          },
-          {
             "name": "DiskEncryptionKeyvault",
             "type": "string",
             "format": "--disk-encryption-keyvault {value}",
@@ -1410,6 +1431,12 @@
             "type": "string",
             "format": "--aad-client-cert-thumbprint {value}",
             "help": "Thumbprint of the AAD app certificate with permissions to write secrets to the key vault."
+          },
+          {
+            "name": "AadClientId",
+            "type": "string",
+            "format": "--aad-client-id {value}",
+            "help": "Client ID of an AAD app with permissions to write secrets to the key vault."
           },
           {
             "name": "AadClientSecret",
@@ -1479,7 +1506,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The name of the virtual machine extension."
+            "help": "Extension name."
           },
           {
             "name": "ResourceGroup",
@@ -1525,7 +1552,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": ""
+            "help": "Extension name."
           },
           {
             "name": "Publisher",
@@ -1581,7 +1608,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The name of the virtual machine extension."
+            "help": "Extension name."
           },
           {
             "name": "ResourceGroup",
@@ -1626,12 +1653,6 @@
             "type": "string",
             "format": "--identities {value}",
             "help": "The identities to assign."
-          },
-          {
-            "name": "Port",
-            "type": "string",
-            "format": "--port {value}",
-            "help": "The port to fetch AAD token. Default: 50342."
           },
           {
             "name": "Role",
@@ -2500,13 +2521,13 @@
             "name": "Orderby",
             "type": "string",
             "format": "--orderby {value}",
-            "help": ""
+            "help": "The $orderby odata query option."
           },
           {
             "name": "Top",
             "type": "string",
             "format": "--top {value}",
-            "help": ""
+            "help": "The $top odata query option."
           }
         ]
       }

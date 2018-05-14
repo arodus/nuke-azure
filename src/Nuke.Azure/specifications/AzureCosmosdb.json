@@ -3,15 +3,15 @@
   "license": [
     "Copyright Sebastian Karasek, Matthias Koch 2018.",
     "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure-cli/blob/master/LICENSE"
+    "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cosmosdb.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cosmosdb/collection.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cosmosdb/database.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/cosmosdb.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/cosmosdb/collection.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/cosmosdb/database.yml"
   ],
   "name": "AzureCosmosdb",
-  "officialUrl": "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/cosmosdb.yml",
+  "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest",
   "help": "Manage Azure Cosmos DB database accounts.",
   "pathExecutable": "az",
   "tasks": [
@@ -65,6 +65,12 @@
             "help": "Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage. Automatic failover will result in a new write region for the account and is chosen based on the failover priorities configured for the account."
           },
           {
+            "name": "EnableVirtualNetwork",
+            "type": "bool",
+            "format": "--enable-virtual-network",
+            "help": "Enables virtual network on the Cosmos DB database account."
+          },
+          {
             "name": "IpRangeFilter",
             "type": "List<string>",
             "format": "--ip-range-filter {value}",
@@ -100,6 +106,12 @@
             "type": "string",
             "format": "--tags {value}",
             "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "VirtualNetworkRules",
+            "type": "string",
+            "format": "--virtual-network-rules {value}",
+            "help": "ACL's for virtual network."
           }
         ]
       }
@@ -306,6 +318,12 @@
             "help": "Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage. Automatic failover will result in a new write region for the account and is chosen based on the failover priorities configured for the account."
           },
           {
+            "name": "EnableVirtualNetwork",
+            "type": "bool",
+            "format": "--enable-virtual-network",
+            "help": "Enables virtual network on the Cosmos DB database account."
+          },
+          {
             "name": "IpRangeFilter",
             "type": "List<string>",
             "format": "--ip-range-filter {value}",
@@ -335,6 +353,12 @@
             "type": "string",
             "format": "--tags {value}",
             "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "VirtualNetworkRules",
+            "type": "string",
+            "format": "--virtual-network-rules {value}",
+            "help": "ACL's for virtual network."
           }
         ]
       }

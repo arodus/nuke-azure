@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureDisk.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDiskCreateSettings toolSettings);
         static partial void PostProcess(AzureDiskCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Managed Disks.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/disk.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Managed Disks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/disk?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDiskCreate(Configure<AzureDiskCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDiskCreateSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDiskDeleteSettings toolSettings);
         static partial void PostProcess(AzureDiskDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Managed Disks.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/disk.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Managed Disks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/disk?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDiskDelete(Configure<AzureDiskDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDiskDeleteSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDiskGrantAccessSettings toolSettings);
         static partial void PostProcess(AzureDiskGrantAccessSettings toolSettings);
-        /// <summary><p>Manage Azure Managed Disks.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/disk.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Managed Disks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/disk?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDiskGrantAccess(Configure<AzureDiskGrantAccessSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDiskGrantAccessSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDiskListSettings toolSettings);
         static partial void PostProcess(AzureDiskListSettings toolSettings);
-        /// <summary><p>Manage Azure Managed Disks.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/disk.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Managed Disks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/disk?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDiskList(Configure<AzureDiskListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDiskListSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDiskRevokeAccessSettings toolSettings);
         static partial void PostProcess(AzureDiskRevokeAccessSettings toolSettings);
-        /// <summary><p>Manage Azure Managed Disks.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/disk.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Managed Disks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/disk?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDiskRevokeAccess(Configure<AzureDiskRevokeAccessSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDiskRevokeAccessSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDiskShowSettings toolSettings);
         static partial void PostProcess(AzureDiskShowSettings toolSettings);
-        /// <summary><p>Manage Azure Managed Disks.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/disk.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Managed Disks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/disk?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDiskShow(Configure<AzureDiskShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDiskShowSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDiskUpdateSettings toolSettings);
         static partial void PostProcess(AzureDiskUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Managed Disks.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/disk.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Managed Disks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/disk?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDiskUpdate(Configure<AzureDiskUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDiskUpdateSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureDiskWaitSettings toolSettings);
         static partial void PostProcess(AzureDiskWaitSettings toolSettings);
-        /// <summary><p>Manage Azure Managed Disks.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/disk.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Managed Disks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/disk?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureDiskWait(Configure<AzureDiskWaitSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDiskWaitSettings());

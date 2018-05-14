@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureSql.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlListUsagesSettings toolSettings);
         static partial void PostProcess(AzureSqlListUsagesSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlListUsages(Configure<AzureSqlListUsagesSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlListUsagesSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlShowUsageSettings toolSettings);
         static partial void PostProcess(AzureSqlShowUsageSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlShowUsage(Configure<AzureSqlShowUsageSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlShowUsageSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDbCopySettings toolSettings);
         static partial void PostProcess(AzureSqlDbCopySettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDbCopy(Configure<AzureSqlDbCopySettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDbCopySettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDbCreateSettings toolSettings);
         static partial void PostProcess(AzureSqlDbCreateSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDbCreate(Configure<AzureSqlDbCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDbCreateSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDbDeleteSettings toolSettings);
         static partial void PostProcess(AzureSqlDbDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDbDelete(Configure<AzureSqlDbDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDbDeleteSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDbExportSettings toolSettings);
         static partial void PostProcess(AzureSqlDbExportSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDbExport(Configure<AzureSqlDbExportSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDbExportSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDbImportSettings toolSettings);
         static partial void PostProcess(AzureSqlDbImportSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDbImport(Configure<AzureSqlDbImportSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDbImportSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDbListSettings toolSettings);
         static partial void PostProcess(AzureSqlDbListSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDbList(Configure<AzureSqlDbListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDbListSettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDbListDeletedSettings toolSettings);
         static partial void PostProcess(AzureSqlDbListDeletedSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDbListDeleted(Configure<AzureSqlDbListDeletedSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDbListDeletedSettings());
@@ -135,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDbListEditionsSettings toolSettings);
         static partial void PostProcess(AzureSqlDbListEditionsSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDbListEditions(Configure<AzureSqlDbListEditionsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDbListEditionsSettings());
@@ -146,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDbListUsagesSettings toolSettings);
         static partial void PostProcess(AzureSqlDbListUsagesSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDbListUsages(Configure<AzureSqlDbListUsagesSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDbListUsagesSettings());
@@ -157,7 +157,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDbRenameSettings toolSettings);
         static partial void PostProcess(AzureSqlDbRenameSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDbRename(Configure<AzureSqlDbRenameSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDbRenameSettings());
@@ -168,7 +168,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDbRestoreSettings toolSettings);
         static partial void PostProcess(AzureSqlDbRestoreSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDbRestore(Configure<AzureSqlDbRestoreSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDbRestoreSettings());
@@ -179,7 +179,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDbShowSettings toolSettings);
         static partial void PostProcess(AzureSqlDbShowSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDbShow(Configure<AzureSqlDbShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDbShowSettings());
@@ -190,7 +190,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDbShowConnectionStringSettings toolSettings);
         static partial void PostProcess(AzureSqlDbShowConnectionStringSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDbShowConnectionString(Configure<AzureSqlDbShowConnectionStringSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDbShowConnectionStringSettings());
@@ -201,7 +201,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDbUpdateSettings toolSettings);
         static partial void PostProcess(AzureSqlDbUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDbUpdate(Configure<AzureSqlDbUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDbUpdateSettings());
@@ -212,7 +212,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDwCreateSettings toolSettings);
         static partial void PostProcess(AzureSqlDwCreateSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDwCreate(Configure<AzureSqlDwCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDwCreateSettings());
@@ -223,7 +223,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDwDeleteSettings toolSettings);
         static partial void PostProcess(AzureSqlDwDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDwDelete(Configure<AzureSqlDwDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDwDeleteSettings());
@@ -234,7 +234,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDwListSettings toolSettings);
         static partial void PostProcess(AzureSqlDwListSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDwList(Configure<AzureSqlDwListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDwListSettings());
@@ -245,7 +245,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDwPauseSettings toolSettings);
         static partial void PostProcess(AzureSqlDwPauseSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDwPause(Configure<AzureSqlDwPauseSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDwPauseSettings());
@@ -256,7 +256,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDwResumeSettings toolSettings);
         static partial void PostProcess(AzureSqlDwResumeSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDwResume(Configure<AzureSqlDwResumeSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDwResumeSettings());
@@ -267,7 +267,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDwShowSettings toolSettings);
         static partial void PostProcess(AzureSqlDwShowSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDwShow(Configure<AzureSqlDwShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDwShowSettings());
@@ -278,7 +278,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDwUpdateSettings toolSettings);
         static partial void PostProcess(AzureSqlDwUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDwUpdate(Configure<AzureSqlDwUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDwUpdateSettings());
@@ -289,7 +289,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlElasticPoolCreateSettings toolSettings);
         static partial void PostProcess(AzureSqlElasticPoolCreateSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlElasticPoolCreate(Configure<AzureSqlElasticPoolCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlElasticPoolCreateSettings());
@@ -300,7 +300,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlElasticPoolDeleteSettings toolSettings);
         static partial void PostProcess(AzureSqlElasticPoolDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlElasticPoolDelete(Configure<AzureSqlElasticPoolDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlElasticPoolDeleteSettings());
@@ -311,7 +311,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlElasticPoolListSettings toolSettings);
         static partial void PostProcess(AzureSqlElasticPoolListSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlElasticPoolList(Configure<AzureSqlElasticPoolListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlElasticPoolListSettings());
@@ -322,7 +322,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlElasticPoolListDbsSettings toolSettings);
         static partial void PostProcess(AzureSqlElasticPoolListDbsSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlElasticPoolListDbs(Configure<AzureSqlElasticPoolListDbsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlElasticPoolListDbsSettings());
@@ -333,7 +333,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlElasticPoolListEditionsSettings toolSettings);
         static partial void PostProcess(AzureSqlElasticPoolListEditionsSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlElasticPoolListEditions(Configure<AzureSqlElasticPoolListEditionsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlElasticPoolListEditionsSettings());
@@ -344,7 +344,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlElasticPoolShowSettings toolSettings);
         static partial void PostProcess(AzureSqlElasticPoolShowSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlElasticPoolShow(Configure<AzureSqlElasticPoolShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlElasticPoolShowSettings());
@@ -355,7 +355,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlElasticPoolUpdateSettings toolSettings);
         static partial void PostProcess(AzureSqlElasticPoolUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlElasticPoolUpdate(Configure<AzureSqlElasticPoolUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlElasticPoolUpdateSettings());
@@ -366,7 +366,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerCreateSettings toolSettings);
         static partial void PostProcess(AzureSqlServerCreateSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerCreate(Configure<AzureSqlServerCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerCreateSettings());
@@ -377,7 +377,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerDeleteSettings toolSettings);
         static partial void PostProcess(AzureSqlServerDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerDelete(Configure<AzureSqlServerDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerDeleteSettings());
@@ -388,7 +388,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerListSettings toolSettings);
         static partial void PostProcess(AzureSqlServerListSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerList(Configure<AzureSqlServerListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerListSettings());
@@ -399,7 +399,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerListUsagesSettings toolSettings);
         static partial void PostProcess(AzureSqlServerListUsagesSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerListUsages(Configure<AzureSqlServerListUsagesSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerListUsagesSettings());
@@ -410,7 +410,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerShowSettings toolSettings);
         static partial void PostProcess(AzureSqlServerShowSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerShow(Configure<AzureSqlServerShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerShowSettings());
@@ -421,7 +421,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerUpdateSettings toolSettings);
         static partial void PostProcess(AzureSqlServerUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerUpdate(Configure<AzureSqlServerUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerUpdateSettings());
@@ -432,7 +432,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDbAuditPolicyShowSettings toolSettings);
         static partial void PostProcess(AzureSqlDbAuditPolicyShowSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDbAuditPolicyShow(Configure<AzureSqlDbAuditPolicyShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDbAuditPolicyShowSettings());
@@ -443,7 +443,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDbAuditPolicyUpdateSettings toolSettings);
         static partial void PostProcess(AzureSqlDbAuditPolicyUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDbAuditPolicyUpdate(Configure<AzureSqlDbAuditPolicyUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDbAuditPolicyUpdateSettings());
@@ -454,7 +454,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDbOpCancelSettings toolSettings);
         static partial void PostProcess(AzureSqlDbOpCancelSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDbOpCancel(Configure<AzureSqlDbOpCancelSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDbOpCancelSettings());
@@ -465,7 +465,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDbOpListSettings toolSettings);
         static partial void PostProcess(AzureSqlDbOpListSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDbOpList(Configure<AzureSqlDbOpListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDbOpListSettings());
@@ -476,7 +476,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDbReplicaCreateSettings toolSettings);
         static partial void PostProcess(AzureSqlDbReplicaCreateSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDbReplicaCreate(Configure<AzureSqlDbReplicaCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDbReplicaCreateSettings());
@@ -487,7 +487,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDbReplicaDeleteLinkSettings toolSettings);
         static partial void PostProcess(AzureSqlDbReplicaDeleteLinkSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDbReplicaDeleteLink(Configure<AzureSqlDbReplicaDeleteLinkSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDbReplicaDeleteLinkSettings());
@@ -498,7 +498,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDbReplicaListLinksSettings toolSettings);
         static partial void PostProcess(AzureSqlDbReplicaListLinksSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDbReplicaListLinks(Configure<AzureSqlDbReplicaListLinksSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDbReplicaListLinksSettings());
@@ -509,7 +509,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDbReplicaSetPrimarySettings toolSettings);
         static partial void PostProcess(AzureSqlDbReplicaSetPrimarySettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDbReplicaSetPrimary(Configure<AzureSqlDbReplicaSetPrimarySettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDbReplicaSetPrimarySettings());
@@ -520,7 +520,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDbTdeListActivitySettings toolSettings);
         static partial void PostProcess(AzureSqlDbTdeListActivitySettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDbTdeListActivity(Configure<AzureSqlDbTdeListActivitySettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDbTdeListActivitySettings());
@@ -531,7 +531,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDbTdeSetSettings toolSettings);
         static partial void PostProcess(AzureSqlDbTdeSetSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDbTdeSet(Configure<AzureSqlDbTdeSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDbTdeSetSettings());
@@ -542,7 +542,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDbTdeShowSettings toolSettings);
         static partial void PostProcess(AzureSqlDbTdeShowSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDbTdeShow(Configure<AzureSqlDbTdeShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDbTdeShowSettings());
@@ -553,7 +553,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDbThreatPolicyShowSettings toolSettings);
         static partial void PostProcess(AzureSqlDbThreatPolicyShowSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDbThreatPolicyShow(Configure<AzureSqlDbThreatPolicyShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDbThreatPolicyShowSettings());
@@ -564,7 +564,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlDbThreatPolicyUpdateSettings toolSettings);
         static partial void PostProcess(AzureSqlDbThreatPolicyUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlDbThreatPolicyUpdate(Configure<AzureSqlDbThreatPolicyUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlDbThreatPolicyUpdateSettings());
@@ -575,7 +575,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlElasticPoolOpCancelSettings toolSettings);
         static partial void PostProcess(AzureSqlElasticPoolOpCancelSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlElasticPoolOpCancel(Configure<AzureSqlElasticPoolOpCancelSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlElasticPoolOpCancelSettings());
@@ -586,7 +586,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlElasticPoolOpListSettings toolSettings);
         static partial void PostProcess(AzureSqlElasticPoolOpListSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlElasticPoolOpList(Configure<AzureSqlElasticPoolOpListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlElasticPoolOpListSettings());
@@ -597,7 +597,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerAdAdminCreateSettings toolSettings);
         static partial void PostProcess(AzureSqlServerAdAdminCreateSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerAdAdminCreate(Configure<AzureSqlServerAdAdminCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerAdAdminCreateSettings());
@@ -608,7 +608,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerAdAdminDeleteSettings toolSettings);
         static partial void PostProcess(AzureSqlServerAdAdminDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerAdAdminDelete(Configure<AzureSqlServerAdAdminDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerAdAdminDeleteSettings());
@@ -619,7 +619,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerAdAdminListSettings toolSettings);
         static partial void PostProcess(AzureSqlServerAdAdminListSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerAdAdminList(Configure<AzureSqlServerAdAdminListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerAdAdminListSettings());
@@ -630,7 +630,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerAdAdminUpdateSettings toolSettings);
         static partial void PostProcess(AzureSqlServerAdAdminUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerAdAdminUpdate(Configure<AzureSqlServerAdAdminUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerAdAdminUpdateSettings());
@@ -641,7 +641,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerConnPolicyShowSettings toolSettings);
         static partial void PostProcess(AzureSqlServerConnPolicyShowSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerConnPolicyShow(Configure<AzureSqlServerConnPolicyShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerConnPolicyShowSettings());
@@ -652,7 +652,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerConnPolicyUpdateSettings toolSettings);
         static partial void PostProcess(AzureSqlServerConnPolicyUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerConnPolicyUpdate(Configure<AzureSqlServerConnPolicyUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerConnPolicyUpdateSettings());
@@ -663,7 +663,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerDnsAliasCreateSettings toolSettings);
         static partial void PostProcess(AzureSqlServerDnsAliasCreateSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerDnsAliasCreate(Configure<AzureSqlServerDnsAliasCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerDnsAliasCreateSettings());
@@ -674,7 +674,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerDnsAliasDeleteSettings toolSettings);
         static partial void PostProcess(AzureSqlServerDnsAliasDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerDnsAliasDelete(Configure<AzureSqlServerDnsAliasDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerDnsAliasDeleteSettings());
@@ -685,7 +685,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerDnsAliasListSettings toolSettings);
         static partial void PostProcess(AzureSqlServerDnsAliasListSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerDnsAliasList(Configure<AzureSqlServerDnsAliasListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerDnsAliasListSettings());
@@ -696,7 +696,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerDnsAliasSetSettings toolSettings);
         static partial void PostProcess(AzureSqlServerDnsAliasSetSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerDnsAliasSet(Configure<AzureSqlServerDnsAliasSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerDnsAliasSetSettings());
@@ -707,7 +707,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerDnsAliasShowSettings toolSettings);
         static partial void PostProcess(AzureSqlServerDnsAliasShowSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerDnsAliasShow(Configure<AzureSqlServerDnsAliasShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerDnsAliasShowSettings());
@@ -718,7 +718,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerFirewallRuleCreateSettings toolSettings);
         static partial void PostProcess(AzureSqlServerFirewallRuleCreateSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerFirewallRuleCreate(Configure<AzureSqlServerFirewallRuleCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerFirewallRuleCreateSettings());
@@ -729,7 +729,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerFirewallRuleDeleteSettings toolSettings);
         static partial void PostProcess(AzureSqlServerFirewallRuleDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerFirewallRuleDelete(Configure<AzureSqlServerFirewallRuleDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerFirewallRuleDeleteSettings());
@@ -740,7 +740,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerFirewallRuleListSettings toolSettings);
         static partial void PostProcess(AzureSqlServerFirewallRuleListSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerFirewallRuleList(Configure<AzureSqlServerFirewallRuleListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerFirewallRuleListSettings());
@@ -751,7 +751,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerFirewallRuleShowSettings toolSettings);
         static partial void PostProcess(AzureSqlServerFirewallRuleShowSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerFirewallRuleShow(Configure<AzureSqlServerFirewallRuleShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerFirewallRuleShowSettings());
@@ -762,7 +762,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerFirewallRuleUpdateSettings toolSettings);
         static partial void PostProcess(AzureSqlServerFirewallRuleUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerFirewallRuleUpdate(Configure<AzureSqlServerFirewallRuleUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerFirewallRuleUpdateSettings());
@@ -773,7 +773,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerKeyCreateSettings toolSettings);
         static partial void PostProcess(AzureSqlServerKeyCreateSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerKeyCreate(Configure<AzureSqlServerKeyCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerKeyCreateSettings());
@@ -784,7 +784,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerKeyDeleteSettings toolSettings);
         static partial void PostProcess(AzureSqlServerKeyDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerKeyDelete(Configure<AzureSqlServerKeyDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerKeyDeleteSettings());
@@ -795,7 +795,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerKeyListSettings toolSettings);
         static partial void PostProcess(AzureSqlServerKeyListSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerKeyList(Configure<AzureSqlServerKeyListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerKeyListSettings());
@@ -806,7 +806,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerKeyShowSettings toolSettings);
         static partial void PostProcess(AzureSqlServerKeyShowSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerKeyShow(Configure<AzureSqlServerKeyShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerKeyShowSettings());
@@ -817,7 +817,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerTdeKeySetSettings toolSettings);
         static partial void PostProcess(AzureSqlServerTdeKeySetSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerTdeKeySet(Configure<AzureSqlServerTdeKeySetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerTdeKeySetSettings());
@@ -828,7 +828,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerTdeKeyShowSettings toolSettings);
         static partial void PostProcess(AzureSqlServerTdeKeyShowSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerTdeKeyShow(Configure<AzureSqlServerTdeKeyShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerTdeKeyShowSettings());
@@ -839,7 +839,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerVnetRuleCreateSettings toolSettings);
         static partial void PostProcess(AzureSqlServerVnetRuleCreateSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerVnetRuleCreate(Configure<AzureSqlServerVnetRuleCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerVnetRuleCreateSettings());
@@ -850,7 +850,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerVnetRuleDeleteSettings toolSettings);
         static partial void PostProcess(AzureSqlServerVnetRuleDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerVnetRuleDelete(Configure<AzureSqlServerVnetRuleDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerVnetRuleDeleteSettings());
@@ -861,7 +861,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerVnetRuleListSettings toolSettings);
         static partial void PostProcess(AzureSqlServerVnetRuleListSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerVnetRuleList(Configure<AzureSqlServerVnetRuleListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerVnetRuleListSettings());
@@ -872,7 +872,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerVnetRuleShowSettings toolSettings);
         static partial void PostProcess(AzureSqlServerVnetRuleShowSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerVnetRuleShow(Configure<AzureSqlServerVnetRuleShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerVnetRuleShowSettings());
@@ -883,7 +883,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSqlServerVnetRuleUpdateSettings toolSettings);
         static partial void PostProcess(AzureSqlServerVnetRuleUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/sql.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSqlServerVnetRuleUpdate(Configure<AzureSqlServerVnetRuleUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlServerVnetRuleUpdateSettings());

@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureFunctionapp.json.
 
 using JetBrains.Annotations;
@@ -34,20 +34,9 @@ namespace Nuke.Azure
             process.AssertZeroExitCode();
             return process.Output.Select(x => x.Text);
         }
-        static partial void PreProcess(AzureFunctionappAssignIdentitySettings toolSettings);
-        static partial void PostProcess(AzureFunctionappAssignIdentitySettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
-        public static void AzureFunctionappAssignIdentity(Configure<AzureFunctionappAssignIdentitySettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureFunctionappAssignIdentitySettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
         static partial void PreProcess(AzureFunctionappCreateSettings toolSettings);
         static partial void PostProcess(AzureFunctionappCreateSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappCreate(Configure<AzureFunctionappCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappCreateSettings());
@@ -58,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappDeleteSettings toolSettings);
         static partial void PostProcess(AzureFunctionappDeleteSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappDelete(Configure<AzureFunctionappDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappDeleteSettings());
@@ -69,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappListSettings toolSettings);
         static partial void PostProcess(AzureFunctionappListSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappList(Configure<AzureFunctionappListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappListSettings());
@@ -80,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappListConsumptionLocationsSettings toolSettings);
         static partial void PostProcess(AzureFunctionappListConsumptionLocationsSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappListConsumptionLocations(Configure<AzureFunctionappListConsumptionLocationsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappListConsumptionLocationsSettings());
@@ -91,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappRestartSettings toolSettings);
         static partial void PostProcess(AzureFunctionappRestartSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappRestart(Configure<AzureFunctionappRestartSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappRestartSettings());
@@ -102,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappShowSettings toolSettings);
         static partial void PostProcess(AzureFunctionappShowSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappShow(Configure<AzureFunctionappShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappShowSettings());
@@ -113,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappStartSettings toolSettings);
         static partial void PostProcess(AzureFunctionappStartSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappStart(Configure<AzureFunctionappStartSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappStartSettings());
@@ -124,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappStopSettings toolSettings);
         static partial void PostProcess(AzureFunctionappStopSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappStop(Configure<AzureFunctionappStopSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappStopSettings());
@@ -135,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappConfigSettings toolSettings);
         static partial void PostProcess(AzureFunctionappConfigSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappConfig(Configure<AzureFunctionappConfigSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigSettings());
@@ -146,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappDeploymentListPublishingProfilesSettings toolSettings);
         static partial void PostProcess(AzureFunctionappDeploymentListPublishingProfilesSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappDeploymentListPublishingProfiles(Configure<AzureFunctionappDeploymentListPublishingProfilesSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappDeploymentListPublishingProfilesSettings());
@@ -157,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappIdentityAssignSettings toolSettings);
         static partial void PostProcess(AzureFunctionappIdentityAssignSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappIdentityAssign(Configure<AzureFunctionappIdentityAssignSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappIdentityAssignSettings());
@@ -168,7 +157,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappIdentityShowSettings toolSettings);
         static partial void PostProcess(AzureFunctionappIdentityShowSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappIdentityShow(Configure<AzureFunctionappIdentityShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappIdentityShowSettings());
@@ -179,7 +168,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappConfigAppsettingsDeleteSettings toolSettings);
         static partial void PostProcess(AzureFunctionappConfigAppsettingsDeleteSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappConfigAppsettingsDelete(Configure<AzureFunctionappConfigAppsettingsDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigAppsettingsDeleteSettings());
@@ -190,7 +179,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappConfigAppsettingsListSettings toolSettings);
         static partial void PostProcess(AzureFunctionappConfigAppsettingsListSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappConfigAppsettingsList(Configure<AzureFunctionappConfigAppsettingsListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigAppsettingsListSettings());
@@ -201,7 +190,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappConfigAppsettingsSetSettings toolSettings);
         static partial void PostProcess(AzureFunctionappConfigAppsettingsSetSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappConfigAppsettingsSet(Configure<AzureFunctionappConfigAppsettingsSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigAppsettingsSetSettings());
@@ -212,7 +201,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappConfigHostnameAddSettings toolSettings);
         static partial void PostProcess(AzureFunctionappConfigHostnameAddSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappConfigHostnameAdd(Configure<AzureFunctionappConfigHostnameAddSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigHostnameAddSettings());
@@ -223,7 +212,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappConfigHostnameDeleteSettings toolSettings);
         static partial void PostProcess(AzureFunctionappConfigHostnameDeleteSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappConfigHostnameDelete(Configure<AzureFunctionappConfigHostnameDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigHostnameDeleteSettings());
@@ -234,7 +223,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappConfigHostnameGetExternalIpSettings toolSettings);
         static partial void PostProcess(AzureFunctionappConfigHostnameGetExternalIpSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappConfigHostnameGetExternalIp(Configure<AzureFunctionappConfigHostnameGetExternalIpSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigHostnameGetExternalIpSettings());
@@ -245,7 +234,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappConfigHostnameListSettings toolSettings);
         static partial void PostProcess(AzureFunctionappConfigHostnameListSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappConfigHostnameList(Configure<AzureFunctionappConfigHostnameListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigHostnameListSettings());
@@ -256,7 +245,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappConfigSslBindSettings toolSettings);
         static partial void PostProcess(AzureFunctionappConfigSslBindSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappConfigSslBind(Configure<AzureFunctionappConfigSslBindSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigSslBindSettings());
@@ -267,7 +256,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappConfigSslDeleteSettings toolSettings);
         static partial void PostProcess(AzureFunctionappConfigSslDeleteSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappConfigSslDelete(Configure<AzureFunctionappConfigSslDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigSslDeleteSettings());
@@ -278,7 +267,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappConfigSslListSettings toolSettings);
         static partial void PostProcess(AzureFunctionappConfigSslListSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappConfigSslList(Configure<AzureFunctionappConfigSslListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigSslListSettings());
@@ -289,7 +278,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappConfigSslUnbindSettings toolSettings);
         static partial void PostProcess(AzureFunctionappConfigSslUnbindSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappConfigSslUnbind(Configure<AzureFunctionappConfigSslUnbindSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigSslUnbindSettings());
@@ -300,7 +289,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappConfigSslUploadSettings toolSettings);
         static partial void PostProcess(AzureFunctionappConfigSslUploadSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappConfigSslUpload(Configure<AzureFunctionappConfigSslUploadSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappConfigSslUploadSettings());
@@ -311,7 +300,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappDeploymentSourceConfigSettings toolSettings);
         static partial void PostProcess(AzureFunctionappDeploymentSourceConfigSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappDeploymentSourceConfig(Configure<AzureFunctionappDeploymentSourceConfigSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappDeploymentSourceConfigSettings());
@@ -322,7 +311,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappDeploymentSourceConfigLocalGitSettings toolSettings);
         static partial void PostProcess(AzureFunctionappDeploymentSourceConfigLocalGitSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappDeploymentSourceConfigLocalGit(Configure<AzureFunctionappDeploymentSourceConfigLocalGitSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappDeploymentSourceConfigLocalGitSettings());
@@ -333,7 +322,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappDeploymentSourceConfigZipSettings toolSettings);
         static partial void PostProcess(AzureFunctionappDeploymentSourceConfigZipSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappDeploymentSourceConfigZip(Configure<AzureFunctionappDeploymentSourceConfigZipSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappDeploymentSourceConfigZipSettings());
@@ -344,7 +333,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappDeploymentSourceDeleteSettings toolSettings);
         static partial void PostProcess(AzureFunctionappDeploymentSourceDeleteSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappDeploymentSourceDelete(Configure<AzureFunctionappDeploymentSourceDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappDeploymentSourceDeleteSettings());
@@ -355,7 +344,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappDeploymentSourceShowSettings toolSettings);
         static partial void PostProcess(AzureFunctionappDeploymentSourceShowSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappDeploymentSourceShow(Configure<AzureFunctionappDeploymentSourceShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappDeploymentSourceShowSettings());
@@ -366,7 +355,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappDeploymentSourceSyncSettings toolSettings);
         static partial void PostProcess(AzureFunctionappDeploymentSourceSyncSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappDeploymentSourceSync(Configure<AzureFunctionappDeploymentSourceSyncSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappDeploymentSourceSyncSettings());
@@ -377,7 +366,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappDeploymentSourceUpdateTokenSettings toolSettings);
         static partial void PostProcess(AzureFunctionappDeploymentSourceUpdateTokenSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappDeploymentSourceUpdateToken(Configure<AzureFunctionappDeploymentSourceUpdateTokenSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappDeploymentSourceUpdateTokenSettings());
@@ -388,7 +377,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappDeploymentUserSetSettings toolSettings);
         static partial void PostProcess(AzureFunctionappDeploymentUserSetSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappDeploymentUserSet(Configure<AzureFunctionappDeploymentUserSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappDeploymentUserSetSettings());
@@ -399,7 +388,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureFunctionappDeploymentUserShowSettings toolSettings);
         static partial void PostProcess(AzureFunctionappDeploymentUserShowSettings toolSettings);
-        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/functionapp.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage function apps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureFunctionappDeploymentUserShow(Configure<AzureFunctionappDeploymentUserShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFunctionappDeploymentUserShowSettings());
@@ -409,53 +398,6 @@ namespace Nuke.Azure
             PostProcess(toolSettings);
         }
     }
-    #region AzureFunctionappAssignIdentitySettings
-    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureFunctionappAssignIdentitySettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureFunctionapp executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureFunctionappTasks.AzureFunctionappPath;
-        /// <summary><p>Name of the function app.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p></p></summary>
-        public virtual string DisableMsi { get; internal set; }
-        /// <summary><p></p></summary>
-        public virtual string Role { get; internal set; }
-        /// <summary><p></p></summary>
-        public virtual string Scope { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("functionapp assign-identity")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--disable-msi {value}", DisableMsi)
-              .Add("--role {value}", Role)
-              .Add("--scope {value}", Scope)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
     #region AzureFunctionappCreateSettings
     /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
     [PublicAPI]
@@ -977,7 +919,7 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureFunctionapp executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureFunctionappTasks.AzureFunctionappPath;
-        /// <summary><p>Name of the function app.</p></summary>
+        /// <summary><p>Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
@@ -1021,7 +963,7 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
         public virtual string Settings { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
         public virtual string SlotSettings { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
@@ -1179,10 +1121,10 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureFunctionapp executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureFunctionappTasks.AzureFunctionappPath;
-        /// <summary><p>Name of the function app.</p></summary>
-        public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        public virtual string WebappName { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1197,8 +1139,8 @@ namespace Nuke.Azure
         {
             arguments
               .Add("functionapp config hostname list")
-              .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--webapp-name {value}", WebappName)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1547,7 +1489,7 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>A zip file path for deployment.</p></summary>
         public virtual string Src { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
@@ -1792,194 +1734,6 @@ namespace Nuke.Azure
               .Add("--verbose {value}", Verbose);
             return base.ConfigureArguments(arguments);
         }
-    }
-    #endregion
-    #region AzureFunctionappAssignIdentitySettingsExtensions
-    /// <summary><p>Used within <see cref="AzureFunctionappTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureFunctionappAssignIdentitySettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureFunctionappAssignIdentitySettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
-        [Pure]
-        public static AzureFunctionappAssignIdentitySettings SetName(this AzureFunctionappAssignIdentitySettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappAssignIdentitySettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
-        [Pure]
-        public static AzureFunctionappAssignIdentitySettings ResetName(this AzureFunctionappAssignIdentitySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureFunctionappAssignIdentitySettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureFunctionappAssignIdentitySettings SetResourceGroup(this AzureFunctionappAssignIdentitySettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappAssignIdentitySettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureFunctionappAssignIdentitySettings ResetResourceGroup(this AzureFunctionappAssignIdentitySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DisableMsi
-        /// <summary><p><em>Sets <see cref="AzureFunctionappAssignIdentitySettings.DisableMsi"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureFunctionappAssignIdentitySettings SetDisableMsi(this AzureFunctionappAssignIdentitySettings toolSettings, string disableMsi)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DisableMsi = disableMsi;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappAssignIdentitySettings.DisableMsi"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureFunctionappAssignIdentitySettings ResetDisableMsi(this AzureFunctionappAssignIdentitySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DisableMsi = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Role
-        /// <summary><p><em>Sets <see cref="AzureFunctionappAssignIdentitySettings.Role"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureFunctionappAssignIdentitySettings SetRole(this AzureFunctionappAssignIdentitySettings toolSettings, string role)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Role = role;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappAssignIdentitySettings.Role"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureFunctionappAssignIdentitySettings ResetRole(this AzureFunctionappAssignIdentitySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Role = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Scope
-        /// <summary><p><em>Sets <see cref="AzureFunctionappAssignIdentitySettings.Scope"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureFunctionappAssignIdentitySettings SetScope(this AzureFunctionappAssignIdentitySettings toolSettings, string scope)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Scope = scope;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappAssignIdentitySettings.Scope"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureFunctionappAssignIdentitySettings ResetScope(this AzureFunctionappAssignIdentitySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Scope = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureFunctionappAssignIdentitySettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappAssignIdentitySettings SetDebug(this AzureFunctionappAssignIdentitySettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappAssignIdentitySettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappAssignIdentitySettings ResetDebug(this AzureFunctionappAssignIdentitySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureFunctionappAssignIdentitySettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureFunctionappAssignIdentitySettings SetHelp(this AzureFunctionappAssignIdentitySettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappAssignIdentitySettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureFunctionappAssignIdentitySettings ResetHelp(this AzureFunctionappAssignIdentitySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureFunctionappAssignIdentitySettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureFunctionappAssignIdentitySettings SetOutput(this AzureFunctionappAssignIdentitySettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappAssignIdentitySettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureFunctionappAssignIdentitySettings ResetOutput(this AzureFunctionappAssignIdentitySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureFunctionappAssignIdentitySettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureFunctionappAssignIdentitySettings SetQuery(this AzureFunctionappAssignIdentitySettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappAssignIdentitySettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureFunctionappAssignIdentitySettings ResetQuery(this AzureFunctionappAssignIdentitySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureFunctionappAssignIdentitySettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappAssignIdentitySettings SetVerbose(this AzureFunctionappAssignIdentitySettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappAssignIdentitySettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureFunctionappAssignIdentitySettings ResetVerbose(this AzureFunctionappAssignIdentitySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
     }
     #endregion
     #region AzureFunctionappCreateSettingsExtensions
@@ -3839,7 +3593,7 @@ namespace Nuke.Azure
     public static partial class AzureFunctionappConfigAppsettingsListSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsListSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsListSettings.Name"/>.</em></p><p>Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
         [Pure]
         public static AzureFunctionappConfigAppsettingsListSettings SetName(this AzureFunctionappConfigAppsettingsListSettings toolSettings, string name)
         {
@@ -3847,7 +3601,7 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsListSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsListSettings.Name"/>.</em></p><p>Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
         [Pure]
         public static AzureFunctionappConfigAppsettingsListSettings ResetName(this AzureFunctionappConfigAppsettingsListSettings toolSettings)
         {
@@ -4027,7 +3781,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region SlotSettings
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsSetSettings.SlotSettings"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
         [Pure]
         public static AzureFunctionappConfigAppsettingsSetSettings SetSlotSettings(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string slotSettings)
         {
@@ -4035,7 +3789,7 @@ namespace Nuke.Azure
             toolSettings.SlotSettings = slotSettings;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsSetSettings.SlotSettings"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
         [Pure]
         public static AzureFunctionappConfigAppsettingsSetSettings ResetSlotSettings(this AzureFunctionappConfigAppsettingsSetSettings toolSettings)
         {
@@ -4580,24 +4334,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureFunctionappConfigHostnameListSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameListSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameListSettings SetName(this AzureFunctionappConfigHostnameListSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameListSettings.Name"/>.</em></p><p>Name of the function app.</p></summary>
-        [Pure]
-        public static AzureFunctionappConfigHostnameListSettings ResetName(this AzureFunctionappConfigHostnameListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
         #region ResourceGroup
         /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
@@ -4613,6 +4349,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region WebappName
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigHostnameListSettings.WebappName"/>.</em></p><p>Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameListSettings SetWebappName(this AzureFunctionappConfigHostnameListSettings toolSettings, string webappName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WebappName = webappName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigHostnameListSettings.WebappName"/>.</em></p><p>Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigHostnameListSettings ResetWebappName(this AzureFunctionappConfigHostnameListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WebappName = null;
             return toolSettings;
         }
         #endregion
@@ -6049,7 +5803,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Src
-        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentSourceConfigZipSettings.Src"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureFunctionappDeploymentSourceConfigZipSettings.Src"/>.</em></p><p>A zip file path for deployment.</p></summary>
         [Pure]
         public static AzureFunctionappDeploymentSourceConfigZipSettings SetSrc(this AzureFunctionappDeploymentSourceConfigZipSettings toolSettings, string src)
         {
@@ -6057,7 +5811,7 @@ namespace Nuke.Azure
             toolSettings.Src = src;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentSourceConfigZipSettings.Src"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureFunctionappDeploymentSourceConfigZipSettings.Src"/>.</em></p><p>A zip file path for deployment.</p></summary>
         [Pure]
         public static AzureFunctionappDeploymentSourceConfigZipSettings ResetSrc(this AzureFunctionappDeploymentSourceConfigZipSettings toolSettings)
         {

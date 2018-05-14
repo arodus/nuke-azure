@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.15 [CommitSha: 2886d896].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureSnapshot.json.
 
 using JetBrains.Annotations;
@@ -36,7 +36,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSnapshotCreateSettings toolSettings);
         static partial void PostProcess(AzureSnapshotCreateSettings toolSettings);
-        /// <summary><p>Manage point-in-time copies of managed disks, native blobs, or other snapshots.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/snapshot.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage point-in-time copies of managed disks, native blobs, or other snapshots.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/snapshot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSnapshotCreate(Configure<AzureSnapshotCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSnapshotCreateSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSnapshotDeleteSettings toolSettings);
         static partial void PostProcess(AzureSnapshotDeleteSettings toolSettings);
-        /// <summary><p>Manage point-in-time copies of managed disks, native blobs, or other snapshots.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/snapshot.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage point-in-time copies of managed disks, native blobs, or other snapshots.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/snapshot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSnapshotDelete(Configure<AzureSnapshotDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSnapshotDeleteSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSnapshotGrantAccessSettings toolSettings);
         static partial void PostProcess(AzureSnapshotGrantAccessSettings toolSettings);
-        /// <summary><p>Manage point-in-time copies of managed disks, native blobs, or other snapshots.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/snapshot.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage point-in-time copies of managed disks, native blobs, or other snapshots.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/snapshot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSnapshotGrantAccess(Configure<AzureSnapshotGrantAccessSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSnapshotGrantAccessSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSnapshotListSettings toolSettings);
         static partial void PostProcess(AzureSnapshotListSettings toolSettings);
-        /// <summary><p>Manage point-in-time copies of managed disks, native blobs, or other snapshots.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/snapshot.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage point-in-time copies of managed disks, native blobs, or other snapshots.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/snapshot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSnapshotList(Configure<AzureSnapshotListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSnapshotListSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSnapshotRevokeAccessSettings toolSettings);
         static partial void PostProcess(AzureSnapshotRevokeAccessSettings toolSettings);
-        /// <summary><p>Manage point-in-time copies of managed disks, native blobs, or other snapshots.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/snapshot.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage point-in-time copies of managed disks, native blobs, or other snapshots.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/snapshot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSnapshotRevokeAccess(Configure<AzureSnapshotRevokeAccessSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSnapshotRevokeAccessSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSnapshotShowSettings toolSettings);
         static partial void PostProcess(AzureSnapshotShowSettings toolSettings);
-        /// <summary><p>Manage point-in-time copies of managed disks, native blobs, or other snapshots.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/snapshot.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage point-in-time copies of managed disks, native blobs, or other snapshots.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/snapshot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSnapshotShow(Configure<AzureSnapshotShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSnapshotShowSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureSnapshotUpdateSettings toolSettings);
         static partial void PostProcess(AzureSnapshotUpdateSettings toolSettings);
-        /// <summary><p>Manage point-in-time copies of managed disks, native blobs, or other snapshots.</p><p>For more details, visit the <a href="https://raw.githubusercontent.com/Azure/azure-docs-cli-python/live/latest/docs-ref-autogen/snapshot.yml">official website</a>.</p></summary>
+        /// <summary><p>Manage point-in-time copies of managed disks, native blobs, or other snapshots.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/snapshot?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureSnapshotUpdate(Configure<AzureSnapshotUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSnapshotUpdateSettings());
