@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
@@ -19,5 +19,4 @@
   <ItemGroup>
     <PackageReference Include="Nuke.Common" Version="[0.4,1)" />
   </ItemGroup>
-
 </Project>
