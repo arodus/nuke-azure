@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0 [CommitSha: 3eaf2b72].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureMonitor.json.
 
 using JetBrains.Annotations;
@@ -518,50 +518,6 @@ namespace Nuke.Azure
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
-        static partial void PreProcess(AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings);
-        static partial void PostProcess(AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureMonitorActivityLogAlertActionGroupAdd(Configure<AzureMonitorActivityLogAlertActionGroupAddSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMonitorActivityLogAlertActionGroupAddSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings);
-        static partial void PostProcess(AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureMonitorActivityLogAlertActionGroupRemove(Configure<AzureMonitorActivityLogAlertActionGroupRemoveSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMonitorActivityLogAlertActionGroupRemoveSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureMonitorActivityLogAlertScopeAddSettings toolSettings);
-        static partial void PostProcess(AzureMonitorActivityLogAlertScopeAddSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureMonitorActivityLogAlertScopeAdd(Configure<AzureMonitorActivityLogAlertScopeAddSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMonitorActivityLogAlertScopeAddSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings);
-        static partial void PostProcess(AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings);
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureMonitorActivityLogAlertScopeRemove(Configure<AzureMonitorActivityLogAlertScopeRemoveSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMonitorActivityLogAlertScopeRemoveSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
         static partial void PreProcess(AzureMonitorAutoscaleProfileCreateSettings toolSettings);
         static partial void PostProcess(AzureMonitorAutoscaleProfileCreateSettings toolSettings);
         /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
@@ -678,6 +634,50 @@ namespace Nuke.Azure
         public static void AzureMonitorDiagnosticSettingsCategoriesShow(Configure<AzureMonitorDiagnosticSettingsCategoriesShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorDiagnosticSettingsCategoriesShowSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings);
+        static partial void PostProcess(AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings);
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureMonitorActivityLogAlertActionGroupAdd(Configure<AzureMonitorActivityLogAlertActionGroupAddSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMonitorActivityLogAlertActionGroupAddSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings);
+        static partial void PostProcess(AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings);
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureMonitorActivityLogAlertActionGroupRemove(Configure<AzureMonitorActivityLogAlertActionGroupRemoveSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMonitorActivityLogAlertActionGroupRemoveSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureMonitorActivityLogAlertScopeAddSettings toolSettings);
+        static partial void PostProcess(AzureMonitorActivityLogAlertScopeAddSettings toolSettings);
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureMonitorActivityLogAlertScopeAdd(Configure<AzureMonitorActivityLogAlertScopeAddSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMonitorActivityLogAlertScopeAddSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings);
+        static partial void PostProcess(AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings);
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureMonitorActivityLogAlertScopeRemove(Configure<AzureMonitorActivityLogAlertScopeRemoveSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMonitorActivityLogAlertScopeRemoveSettings());
             PreProcess(toolSettings);
             var process = ProcessTasks.StartProcess(toolSettings, processSettings);
             process.AssertZeroExitCode();
@@ -2760,182 +2760,6 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureMonitorActivityLogAlertActionGroupAddSettings
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMonitorActivityLogAlertActionGroupAddSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
-        /// <summary><p>The names or the resource ids of the action groups to be added.</p></summary>
-        public virtual string ActionGroup { get; internal set; }
-        /// <summary><p>Name of the activity log alerts.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Remove all the existing action groups before add new conditions.</p></summary>
-        public virtual string Reset { get; internal set; }
-        /// <summary><p>Fails the command if an action group to be added will change existing webhook properties.</p></summary>
-        public virtual string Strict { get; internal set; }
-        /// <summary><p>Space-separated webhook properties in 'key[=value]' format. These properties will be associated with the action groups added in this command.</p></summary>
-        public virtual string WebhookProperties { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("monitor activity-log alert action-group add")
-              .Add("--action-group {value}", ActionGroup)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--reset {value}", Reset)
-              .Add("--strict {value}", Strict)
-              .Add("--webhook-properties {value}", WebhookProperties)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMonitorActivityLogAlertActionGroupRemoveSettings
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMonitorActivityLogAlertActionGroupRemoveSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
-        /// <summary><p>The names or the resource ids of the action groups to be added.</p></summary>
-        public virtual string ActionGroup { get; internal set; }
-        /// <summary><p>Name of the activity log alerts.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("monitor activity-log alert action-group remove")
-              .Add("--action-group {value}", ActionGroup)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMonitorActivityLogAlertScopeAddSettings
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMonitorActivityLogAlertScopeAddSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
-        /// <summary><p>Name of the activity log alerts.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The scopes to add.</p></summary>
-        public virtual string Scope { get; internal set; }
-        /// <summary><p>Remove all the existing scopes before add new scopes.</p></summary>
-        public virtual string Reset { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("monitor activity-log alert scope add")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--scope {value}", Scope)
-              .Add("--reset {value}", Reset)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMonitorActivityLogAlertScopeRemoveSettings
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMonitorActivityLogAlertScopeRemoveSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
-        /// <summary><p>Name of the activity log alerts.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The scopes to remove.</p></summary>
-        public virtual string Scope { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("monitor activity-log alert scope remove")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--scope {value}", Scope)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
     #region AzureMonitorAutoscaleProfileCreateSettings
     /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
     [PublicAPI]
@@ -3446,6 +3270,182 @@ namespace Nuke.Azure
               .Add("--resource-namespace {value}", ResourceNamespace)
               .Add("--resource-parent {value}", ResourceParent)
               .Add("--resource-type {value}", ResourceType)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMonitorActivityLogAlertActionGroupAddSettings
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMonitorActivityLogAlertActionGroupAddSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>The names or the resource ids of the action groups to be added.</p></summary>
+        public virtual string ActionGroup { get; internal set; }
+        /// <summary><p>Name of the activity log alerts.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Remove all the existing action groups before add new conditions.</p></summary>
+        public virtual string Reset { get; internal set; }
+        /// <summary><p>Fails the command if an action group to be added will change existing webhook properties.</p></summary>
+        public virtual string Strict { get; internal set; }
+        /// <summary><p>Space-separated webhook properties in 'key[=value]' format. These properties will be associated with the action groups added in this command.</p></summary>
+        public virtual string WebhookProperties { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("monitor activity-log alert action-group add")
+              .Add("--action-group {value}", ActionGroup)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--reset {value}", Reset)
+              .Add("--strict {value}", Strict)
+              .Add("--webhook-properties {value}", WebhookProperties)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMonitorActivityLogAlertActionGroupRemoveSettings
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMonitorActivityLogAlertActionGroupRemoveSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>The names or the resource ids of the action groups to be added.</p></summary>
+        public virtual string ActionGroup { get; internal set; }
+        /// <summary><p>Name of the activity log alerts.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("monitor activity-log alert action-group remove")
+              .Add("--action-group {value}", ActionGroup)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMonitorActivityLogAlertScopeAddSettings
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMonitorActivityLogAlertScopeAddSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>Name of the activity log alerts.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The scopes to add.</p></summary>
+        public virtual string Scope { get; internal set; }
+        /// <summary><p>Remove all the existing scopes before add new scopes.</p></summary>
+        public virtual string Reset { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("monitor activity-log alert scope add")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--scope {value}", Scope)
+              .Add("--reset {value}", Reset)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMonitorActivityLogAlertScopeRemoveSettings
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMonitorActivityLogAlertScopeRemoveSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>Name of the activity log alerts.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The scopes to remove.</p></summary>
+        public virtual string Scope { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("monitor activity-log alert scope remove")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--scope {value}", Scope)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -12111,686 +12111,6 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureMonitorActivityLogAlertActionGroupAddSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMonitorActivityLogAlertActionGroupAddSettingsExtensions
-    {
-        #region ActionGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.ActionGroup"/>.</em></p><p>The names or the resource ids of the action groups to be added.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupAddSettings SetActionGroup(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, string actionGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ActionGroup = actionGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.ActionGroup"/>.</em></p><p>The names or the resource ids of the action groups to be added.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupAddSettings ResetActionGroup(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ActionGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Name"/>.</em></p><p>Name of the activity log alerts.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupAddSettings SetName(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Name"/>.</em></p><p>Name of the activity log alerts.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupAddSettings ResetName(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupAddSettings SetResourceGroup(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupAddSettings ResetResourceGroup(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Reset
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Reset"/>.</em></p><p>Remove all the existing action groups before add new conditions.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupAddSettings SetReset(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, string reset)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Reset = reset;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Reset"/>.</em></p><p>Remove all the existing action groups before add new conditions.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupAddSettings ResetReset(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Reset = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Strict
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Strict"/>.</em></p><p>Fails the command if an action group to be added will change existing webhook properties.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupAddSettings SetStrict(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, string strict)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Strict = strict;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Strict"/>.</em></p><p>Fails the command if an action group to be added will change existing webhook properties.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupAddSettings ResetStrict(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Strict = null;
-            return toolSettings;
-        }
-        #endregion
-        #region WebhookProperties
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.WebhookProperties"/>.</em></p><p>Space-separated webhook properties in 'key[=value]' format. These properties will be associated with the action groups added in this command.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupAddSettings SetWebhookProperties(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, string webhookProperties)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WebhookProperties = webhookProperties;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.WebhookProperties"/>.</em></p><p>Space-separated webhook properties in 'key[=value]' format. These properties will be associated with the action groups added in this command.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupAddSettings ResetWebhookProperties(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WebhookProperties = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupAddSettings SetDebug(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupAddSettings ResetDebug(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupAddSettings SetHelp(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupAddSettings ResetHelp(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupAddSettings SetOutput(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupAddSettings ResetOutput(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupAddSettings SetQuery(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupAddSettings ResetQuery(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupAddSettings SetVerbose(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupAddSettings ResetVerbose(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMonitorActivityLogAlertActionGroupRemoveSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMonitorActivityLogAlertActionGroupRemoveSettingsExtensions
-    {
-        #region ActionGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.ActionGroup"/>.</em></p><p>The names or the resource ids of the action groups to be added.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings SetActionGroup(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings, string actionGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ActionGroup = actionGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.ActionGroup"/>.</em></p><p>The names or the resource ids of the action groups to be added.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings ResetActionGroup(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ActionGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Name"/>.</em></p><p>Name of the activity log alerts.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings SetName(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Name"/>.</em></p><p>Name of the activity log alerts.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings ResetName(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings SetResourceGroup(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings ResetResourceGroup(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings SetDebug(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings ResetDebug(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings SetHelp(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings ResetHelp(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings SetOutput(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings ResetOutput(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings SetQuery(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings ResetQuery(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings SetVerbose(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings ResetVerbose(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMonitorActivityLogAlertScopeAddSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMonitorActivityLogAlertScopeAddSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Name"/>.</em></p><p>Name of the activity log alerts.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeAddSettings SetName(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Name"/>.</em></p><p>Name of the activity log alerts.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeAddSettings ResetName(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeAddSettings SetResourceGroup(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeAddSettings ResetResourceGroup(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Scope
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Scope"/>.</em></p><p>The scopes to add.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeAddSettings SetScope(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings, string scope)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Scope = scope;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Scope"/>.</em></p><p>The scopes to add.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeAddSettings ResetScope(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Scope = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Reset
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Reset"/>.</em></p><p>Remove all the existing scopes before add new scopes.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeAddSettings SetReset(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings, string reset)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Reset = reset;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Reset"/>.</em></p><p>Remove all the existing scopes before add new scopes.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeAddSettings ResetReset(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Reset = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeAddSettings SetDebug(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeAddSettings ResetDebug(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeAddSettings SetHelp(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeAddSettings ResetHelp(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeAddSettings SetOutput(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeAddSettings ResetOutput(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeAddSettings SetQuery(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeAddSettings ResetQuery(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeAddSettings SetVerbose(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeAddSettings ResetVerbose(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMonitorActivityLogAlertScopeRemoveSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMonitorActivityLogAlertScopeRemoveSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Name"/>.</em></p><p>Name of the activity log alerts.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeRemoveSettings SetName(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Name"/>.</em></p><p>Name of the activity log alerts.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeRemoveSettings ResetName(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeRemoveSettings SetResourceGroup(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeRemoveSettings ResetResourceGroup(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Scope
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Scope"/>.</em></p><p>The scopes to remove.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeRemoveSettings SetScope(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings, string scope)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Scope = scope;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Scope"/>.</em></p><p>The scopes to remove.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeRemoveSettings ResetScope(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Scope = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeRemoveSettings SetDebug(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeRemoveSettings ResetDebug(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeRemoveSettings SetHelp(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeRemoveSettings ResetHelp(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeRemoveSettings SetOutput(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeRemoveSettings ResetOutput(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeRemoveSettings SetQuery(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeRemoveSettings ResetQuery(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeRemoveSettings SetVerbose(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeRemoveSettings ResetVerbose(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region AzureMonitorAutoscaleProfileCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
     [PublicAPI]
@@ -14935,6 +14255,686 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureMonitorDiagnosticSettingsCategoriesShowSettings ResetVerbose(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMonitorActivityLogAlertActionGroupAddSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorActivityLogAlertActionGroupAddSettingsExtensions
+    {
+        #region ActionGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.ActionGroup"/>.</em></p><p>The names or the resource ids of the action groups to be added.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings SetActionGroup(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, string actionGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ActionGroup = actionGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.ActionGroup"/>.</em></p><p>The names or the resource ids of the action groups to be added.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings ResetActionGroup(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ActionGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Name"/>.</em></p><p>Name of the activity log alerts.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings SetName(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Name"/>.</em></p><p>Name of the activity log alerts.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings ResetName(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings SetResourceGroup(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings ResetResourceGroup(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Reset
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Reset"/>.</em></p><p>Remove all the existing action groups before add new conditions.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings SetReset(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, string reset)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Reset = reset;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Reset"/>.</em></p><p>Remove all the existing action groups before add new conditions.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings ResetReset(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Reset = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Strict
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Strict"/>.</em></p><p>Fails the command if an action group to be added will change existing webhook properties.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings SetStrict(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, string strict)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Strict = strict;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Strict"/>.</em></p><p>Fails the command if an action group to be added will change existing webhook properties.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings ResetStrict(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Strict = null;
+            return toolSettings;
+        }
+        #endregion
+        #region WebhookProperties
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.WebhookProperties"/>.</em></p><p>Space-separated webhook properties in 'key[=value]' format. These properties will be associated with the action groups added in this command.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings SetWebhookProperties(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, string webhookProperties)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WebhookProperties = webhookProperties;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.WebhookProperties"/>.</em></p><p>Space-separated webhook properties in 'key[=value]' format. These properties will be associated with the action groups added in this command.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings ResetWebhookProperties(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WebhookProperties = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings SetDebug(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings ResetDebug(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings SetHelp(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings ResetHelp(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings SetOutput(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings ResetOutput(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings SetQuery(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings ResetQuery(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings SetVerbose(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings ResetVerbose(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMonitorActivityLogAlertActionGroupRemoveSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorActivityLogAlertActionGroupRemoveSettingsExtensions
+    {
+        #region ActionGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.ActionGroup"/>.</em></p><p>The names or the resource ids of the action groups to be added.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings SetActionGroup(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings, string actionGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ActionGroup = actionGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.ActionGroup"/>.</em></p><p>The names or the resource ids of the action groups to be added.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings ResetActionGroup(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ActionGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Name"/>.</em></p><p>Name of the activity log alerts.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings SetName(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Name"/>.</em></p><p>Name of the activity log alerts.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings ResetName(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings SetResourceGroup(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings ResetResourceGroup(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings SetDebug(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings ResetDebug(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings SetHelp(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings ResetHelp(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings SetOutput(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings ResetOutput(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings SetQuery(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings ResetQuery(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings SetVerbose(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings ResetVerbose(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMonitorActivityLogAlertScopeAddSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorActivityLogAlertScopeAddSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Name"/>.</em></p><p>Name of the activity log alerts.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeAddSettings SetName(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Name"/>.</em></p><p>Name of the activity log alerts.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeAddSettings ResetName(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeAddSettings SetResourceGroup(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeAddSettings ResetResourceGroup(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Scope
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Scope"/>.</em></p><p>The scopes to add.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeAddSettings SetScope(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings, string scope)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Scope = scope;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Scope"/>.</em></p><p>The scopes to add.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeAddSettings ResetScope(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Scope = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Reset
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Reset"/>.</em></p><p>Remove all the existing scopes before add new scopes.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeAddSettings SetReset(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings, string reset)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Reset = reset;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Reset"/>.</em></p><p>Remove all the existing scopes before add new scopes.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeAddSettings ResetReset(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Reset = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeAddSettings SetDebug(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeAddSettings ResetDebug(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeAddSettings SetHelp(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeAddSettings ResetHelp(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeAddSettings SetOutput(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeAddSettings ResetOutput(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeAddSettings SetQuery(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeAddSettings ResetQuery(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeAddSettings SetVerbose(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeAddSettings ResetVerbose(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMonitorActivityLogAlertScopeRemoveSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorActivityLogAlertScopeRemoveSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Name"/>.</em></p><p>Name of the activity log alerts.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeRemoveSettings SetName(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Name"/>.</em></p><p>Name of the activity log alerts.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeRemoveSettings ResetName(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeRemoveSettings SetResourceGroup(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeRemoveSettings ResetResourceGroup(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Scope
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Scope"/>.</em></p><p>The scopes to remove.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeRemoveSettings SetScope(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings, string scope)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Scope = scope;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Scope"/>.</em></p><p>The scopes to remove.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeRemoveSettings ResetScope(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Scope = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeRemoveSettings SetDebug(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeRemoveSettings ResetDebug(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeRemoveSettings SetHelp(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeRemoveSettings ResetHelp(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeRemoveSettings SetOutput(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeRemoveSettings ResetOutput(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeRemoveSettings SetQuery(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeRemoveSettings ResetQuery(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeRemoveSettings SetVerbose(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeRemoveSettings ResetVerbose(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

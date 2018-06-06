@@ -6,15 +6,15 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vmss.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vmss/diagnostics.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vmss/disk.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vmss/encryption.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vmss/extension.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vmss/identity.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vmss/nic.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vmss/rolling-upgrade.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/vmss/extension/image.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/vmss.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/vmss/diagnostics.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/vmss/disk.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/vmss/encryption.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/vmss/extension.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/vmss/identity.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/vmss/nic.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/vmss/rolling-upgrade.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/vmss/extension/image.yml"
   ],
   "name": "AzureVmss",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest",
@@ -76,7 +76,7 @@
           },
           {
             "name": "LicenseType",
-            "type": "VmssCreateLicenseType",
+            "type": "VmssLicenseType",
             "format": "--license-type {value}",
             "help": "License type if the Windows image or disk used was licensed on-premises."
           },
@@ -227,9 +227,9 @@
           },
           {
             "name": "AcceleratedNetworking",
-            "type": "string",
-            "format": "--accelerated-networking {value}",
-            "help": "Enable accelerated networking."
+            "type": "bool",
+            "format": "--accelerated-networking",
+            "help": "Enable accelerated networking. Unless specified, CLI will enable it based on machine image and size."
           },
           {
             "name": "DnsServers",
@@ -864,6 +864,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "LicenseType",
+            "type": "VmssLicenseType",
+            "format": "--license-type {value}",
+            "help": "License type if the Windows image or disk used was licensed on-premises."
           },
           {
             "name": "NoWait",
@@ -1767,8 +1773,9 @@
       ]
     },
     {
-      "name": "VmssCreateLicenseType",
+      "name": "VmssLicenseType",
       "values": [
+        "none",
         "windows_client",
         "windows_server"
       ]

@@ -6,12 +6,12 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/acr.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/acr/build-task.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/acr/credential.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/acr/replication.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/acr/repository.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/acr/webhook.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/acr.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/acr/build-task.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/acr/credential.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/acr/replication.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/acr/repository.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/acr/webhook.yml"
   ],
   "name": "AzureAcr",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest",
@@ -148,6 +148,56 @@
             "type": "string",
             "format": "--name {value}",
             "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Import",
+      "definiteArgument": "acr import",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "Source",
+            "type": "string",
+            "format": "--source {value}",
+            "help": "The source identifier in the format '[registry.azurecr.io/]repository[:tag]' or '[registry.azurecr.io/]repository@digest'."
+          },
+          {
+            "name": "Force",
+            "type": "string",
+            "format": "--force {value}",
+            "help": "Overwrite the existing tag of the image to be imported."
+          },
+          {
+            "name": "Image",
+            "type": "string",
+            "format": "--image {value}",
+            "help": "The repository and optionally a tag in the 'repository:tag' format for target images."
+          },
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "help": "The source container registry can be name, login server or resource ID of the source registry."
+          },
+          {
+            "name": "Repository",
+            "type": "string",
+            "format": "--repository {value}",
+            "help": "The repository name to do a manifest-only copy for images."
           },
           {
             "name": "ResourceGroup",

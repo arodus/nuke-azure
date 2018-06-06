@@ -6,9 +6,9 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/acs.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/acs/dcos.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/acs/kubernetes.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/acs.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/acs/dcos.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/acs/kubernetes.yml"
   ],
   "name": "AzureAcs",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest",

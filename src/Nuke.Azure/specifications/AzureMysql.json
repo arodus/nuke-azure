@@ -6,12 +6,12 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/mysql.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/mysql/db.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/mysql/server-logs.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/mysql/server.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/mysql/server/configuration.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/mysql/server/firewall-rule.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/mysql.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/mysql/db.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/mysql/server-logs.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/mysql/server.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/mysql/server/configuration.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/mysql/server/firewall-rule.yml"
   ],
   "name": "AzureMysql",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest",

@@ -6,7 +6,7 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/identity.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/identity.yml"
   ],
   "name": "AzureIdentity",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/identity?view=azure-cli-latest",
@@ -40,7 +40,7 @@
             "name": "Tags",
             "type": "string",
             "format": "--tags {value}",
-            "help": "Resource tags."
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
           }
         ]
       }

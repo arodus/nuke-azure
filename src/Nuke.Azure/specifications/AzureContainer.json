@@ -6,7 +6,7 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/container.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/container.yml"
   ],
   "name": "AzureContainer",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/container?view=azure-cli-latest",
@@ -45,18 +45,6 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Image",
-            "type": "string",
-            "format": "--image {value}",
-            "help": "The container image name."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the container group."
-          },
-          {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
@@ -89,6 +77,18 @@
             "help": "A list of environment variable for the container. Space-separated values in 'key=value' format."
           },
           {
+            "name": "File",
+            "type": "string",
+            "format": "--file {value}",
+            "help": "The path to the input file."
+          },
+          {
+            "name": "Image",
+            "type": "string",
+            "format": "--image {value}",
+            "help": "The container image name."
+          },
+          {
             "name": "IpAddress",
             "type": "ContainerCreateIpAddress",
             "format": "--ip-address {value}",
@@ -105,6 +105,12 @@
             "type": "string",
             "format": "--memory {value}",
             "help": "The required memory of the containers in GB."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the container group."
           },
           {
             "name": "OsType",
@@ -273,6 +279,32 @@
             "type": "string",
             "format": "--terminal-row-size {value}",
             "help": "The row size for the command output."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Export",
+      "definiteArgument": "container export",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "File",
+            "type": "string",
+            "format": "--file {value}",
+            "help": "The file path to export the container group."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the container group."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           }
         ]
       }

@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0 [CommitSha: 3eaf2b72].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureVm.json.
 
 using JetBrains.Annotations;
@@ -964,12 +964,14 @@ namespace Nuke.Azure
         public virtual string AttachOsDisk { get; internal set; }
         /// <summary><p>Name or ID of an existing availability set to add the VM to. None by default.</p></summary>
         public virtual string AvailabilitySet { get; internal set; }
+        /// <summary><p>Pre-existing storage account name or its blob uri to capture boot diagnostics. Its sku should be one of Standard_GRS, Standard_LRS and Standard_RAGRS.</p></summary>
+        public virtual string BootDiagnosticsStorage { get; internal set; }
         /// <summary><p>Custom init script file or text (cloud-init, cloud-config, etc..).</p></summary>
         public virtual string CustomData { get; internal set; }
         /// <summary><p>The name of the operating system image as a URN alias, URN, custom image name or ID, or VHD blob URI. This parameter is required unless using `--attach-os-disk.`.</p></summary>
         public virtual string Image { get; internal set; }
         /// <summary><p>License type if the Windows image or disk used was licensed on-premises.</p></summary>
-        public virtual VmCreateLicenseType LicenseType { get; internal set; }
+        public virtual VmLicenseType LicenseType { get; internal set; }
         /// <summary><p>Location in which to create VM and related resources. If default location is not configured, will default to the resource group's location.</p></summary>
         public virtual string Location { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
@@ -1010,6 +1012,8 @@ namespace Nuke.Azure
         public virtual string PlanPromotionCode { get; internal set; }
         /// <summary><p>Plan publisher.</p></summary>
         public virtual string PlanPublisher { get; internal set; }
+        /// <summary><p>Enable accelerated networking. Unless specified, CLI will enable it based on machine image and size.</p></summary>
+        public virtual bool? AcceleratedNetworking { get; internal set; }
         /// <summary><p>Space-separated list of existing application security groups to associate with the VM.</p></summary>
         public virtual IReadOnlyList<string> Asgs => AsgsInternal.AsReadOnly();
         internal List<string> AsgsInternal { get; set; } = new List<string>();
@@ -1057,9 +1061,6 @@ namespace Nuke.Azure
         public virtual VmCreateStorageSku StorageSku { get; internal set; }
         /// <summary><p>Do not use managed disk to persist VM.</p></summary>
         public virtual string UseUnmanagedDisk { get; internal set; }
-        /// <summary><p>Enable/disable disk write accelerator. Use singular value 'true/false' to apply across, or specify individual disks, e.g.'os=true 1=true 2=true' for os disk and data disks with lun of 1 &amp; 2.</p></summary>
-        public virtual IReadOnlyList<string> WriteAccelerator => WriteAcceleratorInternal.AsReadOnly();
-        internal List<string> WriteAcceleratorInternal { get; set; } = new List<string>();
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1079,6 +1080,7 @@ namespace Nuke.Azure
               .Add("--attach-data-disks {value}", AttachDataDisks)
               .Add("--attach-os-disk {value}", AttachOsDisk)
               .Add("--availability-set {value}", AvailabilitySet)
+              .Add("--boot-diagnostics-storage {value}", BootDiagnosticsStorage)
               .Add("--custom-data {value}", CustomData)
               .Add("--image {value}", Image)
               .Add("--license-type {value}", LicenseType)
@@ -1102,6 +1104,7 @@ namespace Nuke.Azure
               .Add("--plan-product {value}", PlanProduct)
               .Add("--plan-promotion-code {value}", PlanPromotionCode)
               .Add("--plan-publisher {value}", PlanPublisher)
+              .Add("--accelerated-networking", AcceleratedNetworking)
               .Add("--asgs {value}", Asgs, separator: ' ')
               .Add("--nics {value}", Nics)
               .Add("--nsg {value}", Nsg)
@@ -1125,7 +1128,6 @@ namespace Nuke.Azure
               .Add("--storage-container-name {value}", StorageContainerName)
               .Add("--storage-sku {value}", StorageSku)
               .Add("--use-unmanaged-disk {value}", UseUnmanagedDisk)
-              .Add("--write-accelerator {value}", WriteAccelerator, separator: ' ')
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1871,6 +1873,8 @@ namespace Nuke.Azure
         /// <summary><p>Use singular value to apply across, or specify individual disks, e.g. 'os=ReadWrite 0=None 1=ReadOnly' should enable update os disk and 2 data disks.</p></summary>
         public virtual IReadOnlyList<string> DiskCaching => DiskCachingInternal.AsReadOnly();
         internal List<string> DiskCachingInternal { get; set; } = new List<string>();
+        /// <summary><p>License type if the Windows image or disk used was licensed on-premises.</p></summary>
+        public virtual VmLicenseType LicenseType { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual string NoWait { get; internal set; }
         /// <summary><p>Managed OS disk ID or name to swap to. Feature registration for 'Microsoft.Compute/AllowManagedDisksReplaceOSDisk' is needed.</p></summary>
@@ -1901,6 +1905,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--disk-caching {value}", DiskCaching, separator: ' ')
+              .Add("--license-type {value}", LicenseType)
               .Add("--no-wait {value}", NoWait)
               .Add("--os-disk {value}", OsDisk)
               .Add("--write-accelerator {value}", WriteAccelerator, separator: ' ')
@@ -4649,6 +4654,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region BootDiagnosticsStorage
+        /// <summary><p><em>Sets <see cref="AzureVmCreateSettings.BootDiagnosticsStorage"/>.</em></p><p>Pre-existing storage account name or its blob uri to capture boot diagnostics. Its sku should be one of Standard_GRS, Standard_LRS and Standard_RAGRS.</p></summary>
+        [Pure]
+        public static AzureVmCreateSettings SetBootDiagnosticsStorage(this AzureVmCreateSettings toolSettings, string bootDiagnosticsStorage)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BootDiagnosticsStorage = bootDiagnosticsStorage;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmCreateSettings.BootDiagnosticsStorage"/>.</em></p><p>Pre-existing storage account name or its blob uri to capture boot diagnostics. Its sku should be one of Standard_GRS, Standard_LRS and Standard_RAGRS.</p></summary>
+        [Pure]
+        public static AzureVmCreateSettings ResetBootDiagnosticsStorage(this AzureVmCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BootDiagnosticsStorage = null;
+            return toolSettings;
+        }
+        #endregion
         #region CustomData
         /// <summary><p><em>Sets <see cref="AzureVmCreateSettings.CustomData"/>.</em></p><p>Custom init script file or text (cloud-init, cloud-config, etc..).</p></summary>
         [Pure]
@@ -4688,7 +4711,7 @@ namespace Nuke.Azure
         #region LicenseType
         /// <summary><p><em>Sets <see cref="AzureVmCreateSettings.LicenseType"/>.</em></p><p>License type if the Windows image or disk used was licensed on-premises.</p></summary>
         [Pure]
-        public static AzureVmCreateSettings SetLicenseType(this AzureVmCreateSettings toolSettings, VmCreateLicenseType licenseType)
+        public static AzureVmCreateSettings SetLicenseType(this AzureVmCreateSettings toolSettings, VmLicenseType licenseType)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.LicenseType = licenseType;
@@ -5060,6 +5083,48 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.PlanPublisher = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AcceleratedNetworking
+        /// <summary><p><em>Sets <see cref="AzureVmCreateSettings.AcceleratedNetworking"/>.</em></p><p>Enable accelerated networking. Unless specified, CLI will enable it based on machine image and size.</p></summary>
+        [Pure]
+        public static AzureVmCreateSettings SetAcceleratedNetworking(this AzureVmCreateSettings toolSettings, bool? acceleratedNetworking)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AcceleratedNetworking = acceleratedNetworking;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmCreateSettings.AcceleratedNetworking"/>.</em></p><p>Enable accelerated networking. Unless specified, CLI will enable it based on machine image and size.</p></summary>
+        [Pure]
+        public static AzureVmCreateSettings ResetAcceleratedNetworking(this AzureVmCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AcceleratedNetworking = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureVmCreateSettings.AcceleratedNetworking"/>.</em></p><p>Enable accelerated networking. Unless specified, CLI will enable it based on machine image and size.</p></summary>
+        [Pure]
+        public static AzureVmCreateSettings EnableAcceleratedNetworking(this AzureVmCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AcceleratedNetworking = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureVmCreateSettings.AcceleratedNetworking"/>.</em></p><p>Enable accelerated networking. Unless specified, CLI will enable it based on machine image and size.</p></summary>
+        [Pure]
+        public static AzureVmCreateSettings DisableAcceleratedNetworking(this AzureVmCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AcceleratedNetworking = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureVmCreateSettings.AcceleratedNetworking"/>.</em></p><p>Enable accelerated networking. Unless specified, CLI will enable it based on machine image and size.</p></summary>
+        [Pure]
+        public static AzureVmCreateSettings ToggleAcceleratedNetworking(this AzureVmCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AcceleratedNetworking = !toolSettings.AcceleratedNetworking;
             return toolSettings;
         }
         #endregion
@@ -5516,66 +5581,6 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.UseUnmanagedDisk = null;
-            return toolSettings;
-        }
-        #endregion
-        #region WriteAccelerator
-        /// <summary><p><em>Sets <see cref="AzureVmCreateSettings.WriteAccelerator"/> to a new list.</em></p><p>Enable/disable disk write accelerator. Use singular value 'true/false' to apply across, or specify individual disks, e.g.'os=true 1=true 2=true' for os disk and data disks with lun of 1 &amp; 2.</p></summary>
-        [Pure]
-        public static AzureVmCreateSettings SetWriteAccelerator(this AzureVmCreateSettings toolSettings, params string[] writeAccelerator)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WriteAcceleratorInternal = writeAccelerator.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Sets <see cref="AzureVmCreateSettings.WriteAccelerator"/> to a new list.</em></p><p>Enable/disable disk write accelerator. Use singular value 'true/false' to apply across, or specify individual disks, e.g.'os=true 1=true 2=true' for os disk and data disks with lun of 1 &amp; 2.</p></summary>
-        [Pure]
-        public static AzureVmCreateSettings SetWriteAccelerator(this AzureVmCreateSettings toolSettings, IEnumerable<string> writeAccelerator)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WriteAcceleratorInternal = writeAccelerator.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureVmCreateSettings.WriteAccelerator"/>.</em></p><p>Enable/disable disk write accelerator. Use singular value 'true/false' to apply across, or specify individual disks, e.g.'os=true 1=true 2=true' for os disk and data disks with lun of 1 &amp; 2.</p></summary>
-        [Pure]
-        public static AzureVmCreateSettings AddWriteAccelerator(this AzureVmCreateSettings toolSettings, params string[] writeAccelerator)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WriteAcceleratorInternal.AddRange(writeAccelerator);
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureVmCreateSettings.WriteAccelerator"/>.</em></p><p>Enable/disable disk write accelerator. Use singular value 'true/false' to apply across, or specify individual disks, e.g.'os=true 1=true 2=true' for os disk and data disks with lun of 1 &amp; 2.</p></summary>
-        [Pure]
-        public static AzureVmCreateSettings AddWriteAccelerator(this AzureVmCreateSettings toolSettings, IEnumerable<string> writeAccelerator)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WriteAcceleratorInternal.AddRange(writeAccelerator);
-            return toolSettings;
-        }
-        /// <summary><p><em>Clears <see cref="AzureVmCreateSettings.WriteAccelerator"/>.</em></p><p>Enable/disable disk write accelerator. Use singular value 'true/false' to apply across, or specify individual disks, e.g.'os=true 1=true 2=true' for os disk and data disks with lun of 1 &amp; 2.</p></summary>
-        [Pure]
-        public static AzureVmCreateSettings ClearWriteAccelerator(this AzureVmCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WriteAcceleratorInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureVmCreateSettings.WriteAccelerator"/>.</em></p><p>Enable/disable disk write accelerator. Use singular value 'true/false' to apply across, or specify individual disks, e.g.'os=true 1=true 2=true' for os disk and data disks with lun of 1 &amp; 2.</p></summary>
-        [Pure]
-        public static AzureVmCreateSettings RemoveWriteAccelerator(this AzureVmCreateSettings toolSettings, params string[] writeAccelerator)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(writeAccelerator);
-            toolSettings.WriteAcceleratorInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureVmCreateSettings.WriteAccelerator"/>.</em></p><p>Enable/disable disk write accelerator. Use singular value 'true/false' to apply across, or specify individual disks, e.g.'os=true 1=true 2=true' for os disk and data disks with lun of 1 &amp; 2.</p></summary>
-        [Pure]
-        public static AzureVmCreateSettings RemoveWriteAccelerator(this AzureVmCreateSettings toolSettings, IEnumerable<string> writeAccelerator)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(writeAccelerator);
-            toolSettings.WriteAcceleratorInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
         #endregion
@@ -8446,6 +8451,24 @@ namespace Nuke.Azure
             toolSettings = toolSettings.NewInstance();
             var hashSet = new HashSet<string>(diskCaching);
             toolSettings.DiskCachingInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region LicenseType
+        /// <summary><p><em>Sets <see cref="AzureVmUpdateSettings.LicenseType"/>.</em></p><p>License type if the Windows image or disk used was licensed on-premises.</p></summary>
+        [Pure]
+        public static AzureVmUpdateSettings SetLicenseType(this AzureVmUpdateSettings toolSettings, VmLicenseType licenseType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LicenseType = licenseType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUpdateSettings.LicenseType"/>.</em></p><p>License type if the Windows image or disk used was licensed on-premises.</p></summary>
+        [Pure]
+        public static AzureVmUpdateSettings ResetLicenseType(this AzureVmUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LicenseType = null;
             return toolSettings;
         }
         #endregion
@@ -17659,14 +17682,15 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region VmCreateLicenseType
+    #region VmLicenseType
     /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
-    public partial class VmCreateLicenseType : Enumeration
+    public partial class VmLicenseType : Enumeration
     {
-        public static VmCreateLicenseType windows_client = new VmCreateLicenseType { Value = "windows_client" };
-        public static VmCreateLicenseType windows_server = new VmCreateLicenseType { Value = "windows_server" };
+        public static VmLicenseType none = new VmLicenseType { Value = "none" };
+        public static VmLicenseType windows_client = new VmLicenseType { Value = "windows_client" };
+        public static VmLicenseType windows_server = new VmLicenseType { Value = "windows_server" };
     }
     #endregion
     #region VmCreateZone

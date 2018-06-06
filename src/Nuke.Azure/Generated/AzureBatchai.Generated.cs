@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0 [CommitSha: 3eaf2b72].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureBatchai.json.
 
 using JetBrains.Annotations;
@@ -399,7 +399,7 @@ namespace Nuke.Azure
         public virtual string NfsResourceGroup { get; internal set; }
         /// <summary><p>Resource id of a virtual machine image to be used for nodes creation. Note, you need to provide --image with which this image was created.</p></summary>
         public virtual string CustomImage { get; internal set; }
-        /// <summary><p>Operation system image for cluster nodes. The value may contain an alias (UbuntuDSVM, UbuntuLTS) or specify image details in the form "publisher:offer:sku:version". If image configuration is not provided via command line or configuration file, Batch AI will choose default OS image.</p></summary>
+        /// <summary><p>Operation system image for cluster nodes. The value may contain an alias (UbuntuLTS, UbuntuDSVM) or specify image details in the form "publisher:offer:sku:version". If image configuration is not provided via command line or configuration file, Batch AI will choose default OS image.</p></summary>
         public virtual string Image { get; internal set; }
         /// <summary><p>Max nodes count for the auto-scale cluster.</p></summary>
         public virtual string Max { get; internal set; }
@@ -1916,7 +1916,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Image
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterCreateSettings.Image"/>.</em></p><p>Operation system image for cluster nodes. The value may contain an alias (UbuntuDSVM, UbuntuLTS) or specify image details in the form "publisher:offer:sku:version". If image configuration is not provided via command line or configuration file, Batch AI will choose default OS image.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterCreateSettings.Image"/>.</em></p><p>Operation system image for cluster nodes. The value may contain an alias (UbuntuLTS, UbuntuDSVM) or specify image details in the form "publisher:offer:sku:version". If image configuration is not provided via command line or configuration file, Batch AI will choose default OS image.</p></summary>
         [Pure]
         public static AzureBatchaiClusterCreateSettings SetImage(this AzureBatchaiClusterCreateSettings toolSettings, string image)
         {
@@ -1924,7 +1924,7 @@ namespace Nuke.Azure
             toolSettings.Image = image;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterCreateSettings.Image"/>.</em></p><p>Operation system image for cluster nodes. The value may contain an alias (UbuntuDSVM, UbuntuLTS) or specify image details in the form "publisher:offer:sku:version". If image configuration is not provided via command line or configuration file, Batch AI will choose default OS image.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterCreateSettings.Image"/>.</em></p><p>Operation system image for cluster nodes. The value may contain an alias (UbuntuLTS, UbuntuDSVM) or specify image details in the form "publisher:offer:sku:version". If image configuration is not provided via command line or configuration file, Batch AI will choose default OS image.</p></summary>
         [Pure]
         public static AzureBatchaiClusterCreateSettings ResetImage(this AzureBatchaiClusterCreateSettings toolSettings)
         {

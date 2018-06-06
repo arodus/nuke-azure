@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0 [CommitSha: 3eaf2b72].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureServicebus.json.
 
 using JetBrains.Annotations;
@@ -320,17 +320,6 @@ namespace Nuke.Azure
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
-        static partial void PreProcess(AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings);
-        static partial void PostProcess(AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusGeorecoveryAliasAuthorizationRuleKeysList(Configure<AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
         static partial void PreProcess(AzureServicebusNamespaceAuthorizationRuleCreateSettings toolSettings);
         static partial void PostProcess(AzureServicebusNamespaceAuthorizationRuleCreateSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
@@ -386,28 +375,6 @@ namespace Nuke.Azure
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
-        static partial void PreProcess(AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings);
-        static partial void PostProcess(AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusNamespaceAuthorizationRuleKeysList(Configure<AzureServicebusNamespaceAuthorizationRuleKeysListSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceAuthorizationRuleKeysListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings);
-        static partial void PostProcess(AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusNamespaceAuthorizationRuleKeysRenew(Configure<AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
         static partial void PreProcess(AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings);
         static partial void PostProcess(AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
@@ -458,28 +425,6 @@ namespace Nuke.Azure
         public static void AzureServicebusQueueAuthorizationRuleUpdate(Configure<AzureServicebusQueueAuthorizationRuleUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueAuthorizationRuleUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings);
-        static partial void PostProcess(AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusQueueAuthorizationRuleKeysList(Configure<AzureServicebusQueueAuthorizationRuleKeysListSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueAuthorizationRuleKeysListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings);
-        static partial void PostProcess(AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusQueueAuthorizationRuleKeysRenew(Configure<AzureServicebusQueueAuthorizationRuleKeysRenewSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueAuthorizationRuleKeysRenewSettings());
             PreProcess(toolSettings);
             var process = ProcessTasks.StartProcess(toolSettings, processSettings);
             process.AssertZeroExitCode();
@@ -590,6 +535,61 @@ namespace Nuke.Azure
         public static void AzureServicebusTopicSubscriptionUpdate(Configure<AzureServicebusTopicSubscriptionUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicSubscriptionUpdateSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings);
+        static partial void PostProcess(AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings);
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureServicebusGeorecoveryAliasAuthorizationRuleKeysList(Configure<AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings);
+        static partial void PostProcess(AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings);
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureServicebusNamespaceAuthorizationRuleKeysList(Configure<AzureServicebusNamespaceAuthorizationRuleKeysListSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceAuthorizationRuleKeysListSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings);
+        static partial void PostProcess(AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings);
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureServicebusNamespaceAuthorizationRuleKeysRenew(Configure<AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings);
+        static partial void PostProcess(AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings);
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureServicebusQueueAuthorizationRuleKeysList(Configure<AzureServicebusQueueAuthorizationRuleKeysListSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueAuthorizationRuleKeysListSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings);
+        static partial void PostProcess(AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings);
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureServicebusQueueAuthorizationRuleKeysRenew(Configure<AzureServicebusQueueAuthorizationRuleKeysRenewSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueAuthorizationRuleKeysRenewSettings());
             PreProcess(toolSettings);
             var process = ProcessTasks.StartProcess(toolSettings, processSettings);
             process.AssertZeroExitCode();
@@ -1898,50 +1898,6 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
-        /// <summary><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
-        public virtual string Alias { get; internal set; }
-        /// <summary><p>Name of Namespace AuthorizationRule.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("servicebus georecovery-alias authorization-rule keys list")
-              .Add("--alias {value}", Alias)
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
     #region AzureServicebusNamespaceAuthorizationRuleCreateSettings
     /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
     [PublicAPI]
@@ -2152,94 +2108,6 @@ namespace Nuke.Azure
               .Add("--add {value}", Add)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureServicebusNamespaceAuthorizationRuleKeysListSettings
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureServicebusNamespaceAuthorizationRuleKeysListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
-        /// <summary><p>Name of Namespace Authorization Rule.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("servicebus namespace authorization-rule keys list")
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
-        /// <summary><p>Specifies Primary or Secondary key needs to be reset.</p></summary>
-        public virtual ServicebusNamespaceAuthorizationRuleKeysKey Key { get; internal set; }
-        /// <summary><p>Name of Namespace Authorization Rule.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p></summary>
-        public virtual string KeyValue { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("servicebus namespace authorization-rule keys renew")
-              .Add("--key {value}", Key)
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--key-value {value}", KeyValue)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2474,100 +2342,6 @@ namespace Nuke.Azure
               .Add("--add {value}", Add)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureServicebusQueueAuthorizationRuleKeysListSettings
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureServicebusQueueAuthorizationRuleKeysListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
-        /// <summary><p>Name of Queue Authorization Rule.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of Queue.</p></summary>
-        public virtual string QueueName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("servicebus queue authorization-rule keys list")
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--queue-name {value}", QueueName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureServicebusQueueAuthorizationRuleKeysRenewSettings
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureServicebusQueueAuthorizationRuleKeysRenewSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
-        /// <summary><p>Specifies Primary or Secondary key needs to be reset.</p></summary>
-        public virtual ServicebusNamespaceAuthorizationRuleKeysKey Key { get; internal set; }
-        /// <summary><p>Name of Queue Authorization Rule.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of Queue.</p></summary>
-        public virtual string QueueName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p></summary>
-        public virtual string KeyValue { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("servicebus queue authorization-rule keys renew")
-              .Add("--key {value}", Key)
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--queue-name {value}", QueueName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--key-value {value}", KeyValue)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3088,6 +2862,232 @@ namespace Nuke.Azure
               .Add("--add {value}", Add)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
+        /// <summary><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        public virtual string Alias { get; internal set; }
+        /// <summary><p>Name of Namespace AuthorizationRule.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("servicebus georecovery-alias authorization-rule keys list")
+              .Add("--alias {value}", Alias)
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureServicebusNamespaceAuthorizationRuleKeysListSettings
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureServicebusNamespaceAuthorizationRuleKeysListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
+        /// <summary><p>Name of Namespace Authorization Rule.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("servicebus namespace authorization-rule keys list")
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
+        /// <summary><p>Specifies Primary or Secondary key needs to be reset.</p></summary>
+        public virtual ServicebusNamespaceAuthorizationRuleKeysKey Key { get; internal set; }
+        /// <summary><p>Name of Namespace Authorization Rule.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p></summary>
+        public virtual string KeyValue { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("servicebus namespace authorization-rule keys renew")
+              .Add("--key {value}", Key)
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--key-value {value}", KeyValue)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureServicebusQueueAuthorizationRuleKeysListSettings
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureServicebusQueueAuthorizationRuleKeysListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
+        /// <summary><p>Name of Queue Authorization Rule.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of Queue.</p></summary>
+        public virtual string QueueName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("servicebus queue authorization-rule keys list")
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--queue-name {value}", QueueName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureServicebusQueueAuthorizationRuleKeysRenewSettings
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureServicebusQueueAuthorizationRuleKeysRenewSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
+        /// <summary><p>Specifies Primary or Secondary key needs to be reset.</p></summary>
+        public virtual ServicebusNamespaceAuthorizationRuleKeysKey Key { get; internal set; }
+        /// <summary><p>Name of Queue Authorization Rule.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of Queue.</p></summary>
+        public virtual string QueueName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p></summary>
+        public virtual string KeyValue { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("servicebus queue authorization-rule keys renew")
+              .Add("--key {value}", Key)
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--queue-name {value}", QueueName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--key-value {value}", KeyValue)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -8902,176 +8902,6 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettingsExtensions
-    {
-        #region Alias
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetAlias(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string alias)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = alias;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetAlias(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetName(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetName(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetNamespaceName(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetNamespaceName(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetResourceGroup(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetResourceGroup(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetDebug(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetDebug(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetHelp(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetHelp(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetOutput(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetOutput(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetQuery(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetQuery(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetVerbose(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetVerbose(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region AzureServicebusNamespaceAuthorizationRuleCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
     [PublicAPI]
@@ -9980,346 +9810,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureServicebusNamespaceAuthorizationRuleUpdateSettings ResetVerbose(this AzureServicebusNamespaceAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureServicebusNamespaceAuthorizationRuleKeysListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusNamespaceAuthorizationRuleKeysListSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.Name"/>.</em></p><p>Name of Namespace Authorization Rule.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings SetName(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.Name"/>.</em></p><p>Name of Namespace Authorization Rule.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings ResetName(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings SetNamespaceName(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings ResetNamespaceName(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings SetResourceGroup(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings ResetResourceGroup(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings SetDebug(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings ResetDebug(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings SetHelp(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings ResetHelp(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings SetOutput(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings ResetOutput(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings SetQuery(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings ResetQuery(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings SetVerbose(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings ResetVerbose(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureServicebusNamespaceAuthorizationRuleKeysRenewSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusNamespaceAuthorizationRuleKeysRenewSettingsExtensions
-    {
-        #region Key
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.Key"/>.</em></p><p>Specifies Primary or Secondary key needs to be reset.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings SetKey(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings, ServicebusNamespaceAuthorizationRuleKeysKey key)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Key = key;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.Key"/>.</em></p><p>Specifies Primary or Secondary key needs to be reset.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings ResetKey(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Key = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.Name"/>.</em></p><p>Name of Namespace Authorization Rule.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings SetName(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.Name"/>.</em></p><p>Name of Namespace Authorization Rule.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings ResetName(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings SetNamespaceName(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings ResetNamespaceName(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings SetResourceGroup(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings ResetResourceGroup(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region KeyValue
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.KeyValue"/>.</em></p><p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings SetKeyValue(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string keyValue)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.KeyValue = keyValue;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.KeyValue"/>.</em></p><p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings ResetKeyValue(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.KeyValue = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings SetDebug(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings ResetDebug(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings SetHelp(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings ResetHelp(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings SetOutput(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings ResetOutput(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings SetQuery(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings ResetQuery(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings SetVerbose(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings ResetVerbose(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -11326,382 +10816,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureServicebusQueueAuthorizationRuleUpdateSettings ResetVerbose(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureServicebusQueueAuthorizationRuleKeysListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusQueueAuthorizationRuleKeysListSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetName(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetName(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetNamespaceName(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetNamespaceName(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region QueueName
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetQueueName(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string queueName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.QueueName = queueName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetQueueName(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.QueueName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetResourceGroup(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetResourceGroup(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetDebug(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetDebug(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetHelp(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetHelp(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetOutput(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetOutput(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetQuery(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetQuery(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetVerbose(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetVerbose(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureServicebusQueueAuthorizationRuleKeysRenewSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusQueueAuthorizationRuleKeysRenewSettingsExtensions
-    {
-        #region Key
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Key"/>.</em></p><p>Specifies Primary or Secondary key needs to be reset.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetKey(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, ServicebusNamespaceAuthorizationRuleKeysKey key)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Key = key;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Key"/>.</em></p><p>Specifies Primary or Secondary key needs to be reset.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetKey(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Key = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetName(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetName(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetNamespaceName(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetNamespaceName(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region QueueName
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetQueueName(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string queueName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.QueueName = queueName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetQueueName(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.QueueName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetResourceGroup(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetResourceGroup(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region KeyValue
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.KeyValue"/>.</em></p><p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetKeyValue(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string keyValue)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.KeyValue = keyValue;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.KeyValue"/>.</em></p><p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetKeyValue(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.KeyValue = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetDebug(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetDebug(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetHelp(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetHelp(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetOutput(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetOutput(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetQuery(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetQuery(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetVerbose(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetVerbose(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -14098,6 +13212,892 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureServicebusTopicSubscriptionUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureServicebusTopicSubscriptionUpdateSettings ResetVerbose(this AzureServicebusTopicSubscriptionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettingsExtensions
+    {
+        #region Alias
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetAlias(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string alias)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = alias;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetAlias(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetName(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetName(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetNamespaceName(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetNamespaceName(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetResourceGroup(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetResourceGroup(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetDebug(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetDebug(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetHelp(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetHelp(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetOutput(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetOutput(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetQuery(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetQuery(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetVerbose(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetVerbose(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusNamespaceAuthorizationRuleKeysListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusNamespaceAuthorizationRuleKeysListSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.Name"/>.</em></p><p>Name of Namespace Authorization Rule.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings SetName(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.Name"/>.</em></p><p>Name of Namespace Authorization Rule.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings ResetName(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings SetNamespaceName(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings ResetNamespaceName(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings SetResourceGroup(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings ResetResourceGroup(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings SetDebug(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings ResetDebug(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings SetHelp(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings ResetHelp(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings SetOutput(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings ResetOutput(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings SetQuery(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings ResetQuery(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings SetVerbose(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings ResetVerbose(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusNamespaceAuthorizationRuleKeysRenewSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusNamespaceAuthorizationRuleKeysRenewSettingsExtensions
+    {
+        #region Key
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.Key"/>.</em></p><p>Specifies Primary or Secondary key needs to be reset.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings SetKey(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings, ServicebusNamespaceAuthorizationRuleKeysKey key)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Key = key;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.Key"/>.</em></p><p>Specifies Primary or Secondary key needs to be reset.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings ResetKey(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Key = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.Name"/>.</em></p><p>Name of Namespace Authorization Rule.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings SetName(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.Name"/>.</em></p><p>Name of Namespace Authorization Rule.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings ResetName(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings SetNamespaceName(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings ResetNamespaceName(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings SetResourceGroup(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings ResetResourceGroup(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region KeyValue
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.KeyValue"/>.</em></p><p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings SetKeyValue(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string keyValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyValue = keyValue;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.KeyValue"/>.</em></p><p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings ResetKeyValue(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyValue = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings SetDebug(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings ResetDebug(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings SetHelp(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings ResetHelp(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings SetOutput(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings ResetOutput(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings SetQuery(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings ResetQuery(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings SetVerbose(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings ResetVerbose(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusQueueAuthorizationRuleKeysListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusQueueAuthorizationRuleKeysListSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetName(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetName(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetNamespaceName(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetNamespaceName(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region QueueName
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetQueueName(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string queueName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.QueueName = queueName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetQueueName(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.QueueName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetResourceGroup(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetResourceGroup(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetDebug(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetDebug(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetHelp(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetHelp(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetOutput(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetOutput(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetQuery(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetQuery(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetVerbose(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetVerbose(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusQueueAuthorizationRuleKeysRenewSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusQueueAuthorizationRuleKeysRenewSettingsExtensions
+    {
+        #region Key
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Key"/>.</em></p><p>Specifies Primary or Secondary key needs to be reset.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetKey(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, ServicebusNamespaceAuthorizationRuleKeysKey key)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Key = key;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Key"/>.</em></p><p>Specifies Primary or Secondary key needs to be reset.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetKey(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Key = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetName(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetName(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetNamespaceName(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetNamespaceName(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region QueueName
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetQueueName(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string queueName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.QueueName = queueName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetQueueName(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.QueueName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetResourceGroup(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetResourceGroup(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region KeyValue
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.KeyValue"/>.</em></p><p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetKeyValue(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string keyValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyValue = keyValue;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.KeyValue"/>.</em></p><p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetKeyValue(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyValue = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetDebug(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetDebug(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetHelp(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetHelp(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetOutput(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetOutput(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetQuery(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetQuery(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetVerbose(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetVerbose(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

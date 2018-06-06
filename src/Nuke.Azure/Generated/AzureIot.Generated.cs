@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0 [CommitSha: 3eaf2b72].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureIot.json.
 
 using JetBrains.Annotations;
@@ -1540,10 +1540,10 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureIot executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
-        /// <summary><p>The key to use.</p></summary>
-        public virtual IotDeviceKey Key { get; internal set; }
         /// <summary><p>IoT Hub name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The key to use.</p></summary>
+        public virtual IotDeviceKey Key { get; internal set; }
         /// <summary><p>Shared access policy to use.</p></summary>
         public virtual string PolicyName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
@@ -1562,8 +1562,8 @@ namespace Nuke.Azure
         {
             arguments
               .Add("iot hub show-connection-string")
-              .Add("--key {value}", Key)
               .Add("--name {value}", Name)
+              .Add("--key {value}", Key)
               .Add("--policy-name {value}", PolicyName)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
@@ -6487,24 +6487,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureIotHubShowConnectionStringSettingsExtensions
     {
-        #region Key
-        /// <summary><p><em>Sets <see cref="AzureIotHubShowConnectionStringSettings.Key"/>.</em></p><p>The key to use.</p></summary>
-        [Pure]
-        public static AzureIotHubShowConnectionStringSettings SetKey(this AzureIotHubShowConnectionStringSettings toolSettings, IotDeviceKey key)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Key = key;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubShowConnectionStringSettings.Key"/>.</em></p><p>The key to use.</p></summary>
-        [Pure]
-        public static AzureIotHubShowConnectionStringSettings ResetKey(this AzureIotHubShowConnectionStringSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Key = null;
-            return toolSettings;
-        }
-        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureIotHubShowConnectionStringSettings.Name"/>.</em></p><p>IoT Hub name.</p></summary>
         [Pure]
@@ -6520,6 +6502,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Key
+        /// <summary><p><em>Sets <see cref="AzureIotHubShowConnectionStringSettings.Key"/>.</em></p><p>The key to use.</p></summary>
+        [Pure]
+        public static AzureIotHubShowConnectionStringSettings SetKey(this AzureIotHubShowConnectionStringSettings toolSettings, IotDeviceKey key)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Key = key;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubShowConnectionStringSettings.Key"/>.</em></p><p>The key to use.</p></summary>
+        [Pure]
+        public static AzureIotHubShowConnectionStringSettings ResetKey(this AzureIotHubShowConnectionStringSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Key = null;
             return toolSettings;
         }
         #endregion
@@ -13926,6 +13926,9 @@ namespace Nuke.Azure
     [Serializable]
     public partial class IotHubCreateSku : Enumeration
     {
+        public static IotHubCreateSku b1 = new IotHubCreateSku { Value = "b1" };
+        public static IotHubCreateSku b2 = new IotHubCreateSku { Value = "b2" };
+        public static IotHubCreateSku b3 = new IotHubCreateSku { Value = "b3" };
         public static IotHubCreateSku f1 = new IotHubCreateSku { Value = "f1" };
         public static IotHubCreateSku s1 = new IotHubCreateSku { Value = "s1" };
         public static IotHubCreateSku s2 = new IotHubCreateSku { Value = "s2" };

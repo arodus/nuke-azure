@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0 [CommitSha: 3eaf2b72].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureAks.json.
 
 using JetBrains.Annotations;
@@ -144,6 +144,17 @@ namespace Nuke.Azure
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
+        static partial void PreProcess(AzureAksRemoveDevSpacesSettings toolSettings);
+        static partial void PostProcess(AzureAksRemoveDevSpacesSettings toolSettings);
+        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureAksRemoveDevSpaces(Configure<AzureAksRemoveDevSpacesSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAksRemoveDevSpacesSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
         static partial void PreProcess(AzureAksScaleSettings toolSettings);
         static partial void PostProcess(AzureAksScaleSettings toolSettings);
         /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
@@ -183,6 +194,17 @@ namespace Nuke.Azure
         public static void AzureAksUpgradeConnector(Configure<AzureAksUpgradeConnectorSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksUpgradeConnectorSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureAksUseDevSpacesSettings toolSettings);
+        static partial void PostProcess(AzureAksUseDevSpacesSettings toolSettings);
+        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureAksUseDevSpaces(Configure<AzureAksUseDevSpacesSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAksUseDevSpacesSettings());
             PreProcess(toolSettings);
             var process = ProcessTasks.StartProcess(toolSettings, processSettings);
             process.AssertZeroExitCode();
@@ -258,7 +280,7 @@ namespace Nuke.Azure
         public virtual string AdminUsername { get; internal set; }
         /// <summary><p>Secret associated with the service principal. This argument is required if `--service-principal` is specified.</p></summary>
         public virtual string ClientSecret { get; internal set; }
-        /// <summary><p>Prefix for hostnames that are created. If not specified, gemerate a hostname using the managed cluster and resource group names.</p></summary>
+        /// <summary><p>Prefix for hostnames that are created. If not specified, generate a hostname using the managed cluster and resource group names.</p></summary>
         public virtual string DnsNamePrefix { get; internal set; }
         /// <summary><p>Generate SSH public and private key files if missing.</p></summary>
         public virtual string GenerateSshKeys { get; internal set; }
@@ -661,6 +683,47 @@ namespace Nuke.Azure
         }
     }
     #endregion
+    #region AzureAksRemoveDevSpacesSettings
+    /// <summary><p>Used within <see cref="AzureAksTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAksRemoveDevSpacesSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAks executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAksTasks.AzureAksPath;
+        /// <summary><p>Name of the managed cluster.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Do not prompt for confirmation.</p></summary>
+        public virtual string Yes { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("aks remove-dev-spaces")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--yes {value}", Yes)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
     #region AzureAksScaleSettings
     /// <summary><p>Used within <see cref="AzureAksTasks"/>.</p></summary>
     [PublicAPI]
@@ -843,6 +906,50 @@ namespace Nuke.Azure
               .Add("--location {value}", Location)
               .Add("--os-type {value}", OsType)
               .Add("--service-principal", ServicePrincipal)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAksUseDevSpacesSettings
+    /// <summary><p>Used within <see cref="AzureAksTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAksUseDevSpacesSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAks executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAksTasks.AzureAksPath;
+        /// <summary><p>Name of the managed cluster.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of a parent dev space to inherit from when creating a new dev space. By default, if there is already a single dev space with no parent, the new space inherits from this one.</p></summary>
+        public virtual string ParentSpace { get; internal set; }
+        /// <summary><p>Name of the dev space to use.</p></summary>
+        public virtual string Space { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("aks use-dev-spaces")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--parent-space {value}", ParentSpace)
+              .Add("--space {value}", Space)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1142,7 +1249,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region DnsNamePrefix
-        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.DnsNamePrefix"/>.</em></p><p>Prefix for hostnames that are created. If not specified, gemerate a hostname using the managed cluster and resource group names.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.DnsNamePrefix"/>.</em></p><p>Prefix for hostnames that are created. If not specified, generate a hostname using the managed cluster and resource group names.</p></summary>
         [Pure]
         public static AzureAksCreateSettings SetDnsNamePrefix(this AzureAksCreateSettings toolSettings, string dnsNamePrefix)
         {
@@ -1150,7 +1257,7 @@ namespace Nuke.Azure
             toolSettings.DnsNamePrefix = dnsNamePrefix;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.DnsNamePrefix"/>.</em></p><p>Prefix for hostnames that are created. If not specified, gemerate a hostname using the managed cluster and resource group names.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.DnsNamePrefix"/>.</em></p><p>Prefix for hostnames that are created. If not specified, generate a hostname using the managed cluster and resource group names.</p></summary>
         [Pure]
         public static AzureAksCreateSettings ResetDnsNamePrefix(this AzureAksCreateSettings toolSettings)
         {
@@ -2785,6 +2892,158 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureAksRemoveDevSpacesSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAksTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAksRemoveDevSpacesSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAksRemoveDevSpacesSettings.Name"/>.</em></p><p>Name of the managed cluster.</p></summary>
+        [Pure]
+        public static AzureAksRemoveDevSpacesSettings SetName(this AzureAksRemoveDevSpacesSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksRemoveDevSpacesSettings.Name"/>.</em></p><p>Name of the managed cluster.</p></summary>
+        [Pure]
+        public static AzureAksRemoveDevSpacesSettings ResetName(this AzureAksRemoveDevSpacesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAksRemoveDevSpacesSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAksRemoveDevSpacesSettings SetResourceGroup(this AzureAksRemoveDevSpacesSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksRemoveDevSpacesSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAksRemoveDevSpacesSettings ResetResourceGroup(this AzureAksRemoveDevSpacesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Yes
+        /// <summary><p><em>Sets <see cref="AzureAksRemoveDevSpacesSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
+        [Pure]
+        public static AzureAksRemoveDevSpacesSettings SetYes(this AzureAksRemoveDevSpacesSettings toolSettings, string yes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = yes;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksRemoveDevSpacesSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
+        [Pure]
+        public static AzureAksRemoveDevSpacesSettings ResetYes(this AzureAksRemoveDevSpacesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAksRemoveDevSpacesSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAksRemoveDevSpacesSettings SetDebug(this AzureAksRemoveDevSpacesSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksRemoveDevSpacesSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAksRemoveDevSpacesSettings ResetDebug(this AzureAksRemoveDevSpacesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAksRemoveDevSpacesSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAksRemoveDevSpacesSettings SetHelp(this AzureAksRemoveDevSpacesSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksRemoveDevSpacesSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAksRemoveDevSpacesSettings ResetHelp(this AzureAksRemoveDevSpacesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAksRemoveDevSpacesSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAksRemoveDevSpacesSettings SetOutput(this AzureAksRemoveDevSpacesSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksRemoveDevSpacesSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAksRemoveDevSpacesSettings ResetOutput(this AzureAksRemoveDevSpacesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAksRemoveDevSpacesSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAksRemoveDevSpacesSettings SetQuery(this AzureAksRemoveDevSpacesSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksRemoveDevSpacesSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAksRemoveDevSpacesSettings ResetQuery(this AzureAksRemoveDevSpacesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAksRemoveDevSpacesSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAksRemoveDevSpacesSettings SetVerbose(this AzureAksRemoveDevSpacesSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksRemoveDevSpacesSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAksRemoveDevSpacesSettings ResetVerbose(this AzureAksRemoveDevSpacesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureAksScaleSettingsExtensions
     /// <summary><p>Used within <see cref="AzureAksTasks"/>.</p></summary>
     [PublicAPI]
@@ -3571,6 +3830,176 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureAksUpgradeConnectorSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureAksUpgradeConnectorSettings ResetVerbose(this AzureAksUpgradeConnectorSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAksUseDevSpacesSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAksTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAksUseDevSpacesSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAksUseDevSpacesSettings.Name"/>.</em></p><p>Name of the managed cluster.</p></summary>
+        [Pure]
+        public static AzureAksUseDevSpacesSettings SetName(this AzureAksUseDevSpacesSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksUseDevSpacesSettings.Name"/>.</em></p><p>Name of the managed cluster.</p></summary>
+        [Pure]
+        public static AzureAksUseDevSpacesSettings ResetName(this AzureAksUseDevSpacesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAksUseDevSpacesSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAksUseDevSpacesSettings SetResourceGroup(this AzureAksUseDevSpacesSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksUseDevSpacesSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAksUseDevSpacesSettings ResetResourceGroup(this AzureAksUseDevSpacesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ParentSpace
+        /// <summary><p><em>Sets <see cref="AzureAksUseDevSpacesSettings.ParentSpace"/>.</em></p><p>Name of a parent dev space to inherit from when creating a new dev space. By default, if there is already a single dev space with no parent, the new space inherits from this one.</p></summary>
+        [Pure]
+        public static AzureAksUseDevSpacesSettings SetParentSpace(this AzureAksUseDevSpacesSettings toolSettings, string parentSpace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ParentSpace = parentSpace;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksUseDevSpacesSettings.ParentSpace"/>.</em></p><p>Name of a parent dev space to inherit from when creating a new dev space. By default, if there is already a single dev space with no parent, the new space inherits from this one.</p></summary>
+        [Pure]
+        public static AzureAksUseDevSpacesSettings ResetParentSpace(this AzureAksUseDevSpacesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ParentSpace = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Space
+        /// <summary><p><em>Sets <see cref="AzureAksUseDevSpacesSettings.Space"/>.</em></p><p>Name of the dev space to use.</p></summary>
+        [Pure]
+        public static AzureAksUseDevSpacesSettings SetSpace(this AzureAksUseDevSpacesSettings toolSettings, string space)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Space = space;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksUseDevSpacesSettings.Space"/>.</em></p><p>Name of the dev space to use.</p></summary>
+        [Pure]
+        public static AzureAksUseDevSpacesSettings ResetSpace(this AzureAksUseDevSpacesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Space = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAksUseDevSpacesSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAksUseDevSpacesSettings SetDebug(this AzureAksUseDevSpacesSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksUseDevSpacesSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAksUseDevSpacesSettings ResetDebug(this AzureAksUseDevSpacesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAksUseDevSpacesSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAksUseDevSpacesSettings SetHelp(this AzureAksUseDevSpacesSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksUseDevSpacesSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAksUseDevSpacesSettings ResetHelp(this AzureAksUseDevSpacesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAksUseDevSpacesSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAksUseDevSpacesSettings SetOutput(this AzureAksUseDevSpacesSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksUseDevSpacesSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAksUseDevSpacesSettings ResetOutput(this AzureAksUseDevSpacesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAksUseDevSpacesSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAksUseDevSpacesSettings SetQuery(this AzureAksUseDevSpacesSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksUseDevSpacesSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAksUseDevSpacesSettings ResetQuery(this AzureAksUseDevSpacesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAksUseDevSpacesSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAksUseDevSpacesSettings SetVerbose(this AzureAksUseDevSpacesSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksUseDevSpacesSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAksUseDevSpacesSettings ResetVerbose(this AzureAksUseDevSpacesSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

@@ -6,7 +6,7 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/aks.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/aks.yml"
   ],
   "name": "AzureAks",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest",
@@ -72,7 +72,7 @@
             "name": "DnsNamePrefix",
             "type": "string",
             "format": "--dns-name-prefix {value}",
-            "help": "Prefix for hostnames that are created. If not specified, gemerate a hostname using the managed cluster and resource group names."
+            "help": "Prefix for hostnames that are created. If not specified, generate a hostname using the managed cluster and resource group names."
           },
           {
             "name": "GenerateSshKeys",
@@ -376,6 +376,32 @@
       }
     },
     {
+      "postfix": "RemoveDevSpaces",
+      "definiteArgument": "aks remove-dev-spaces",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the managed cluster."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "help": "Do not prompt for confirmation."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "Scale",
       "definiteArgument": "aks scale",
       "settingsClass": {
@@ -529,6 +555,38 @@
             "type": "bool",
             "format": "--service-principal",
             "help": "Service principal used for authentication to Azure APIs."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "UseDevSpaces",
+      "definiteArgument": "aks use-dev-spaces",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the managed cluster."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ParentSpace",
+            "type": "string",
+            "format": "--parent-space {value}",
+            "help": "Name of a parent dev space to inherit from when creating a new dev space. By default, if there is already a single dev space with no parent, the new space inherits from this one."
+          },
+          {
+            "name": "Space",
+            "type": "string",
+            "format": "--space {value}",
+            "help": "Name of the dev space to use."
           }
         ]
       }

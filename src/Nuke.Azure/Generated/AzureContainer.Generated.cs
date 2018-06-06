@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0 [CommitSha: 3eaf2b72].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureContainer.json.
 
 using JetBrains.Annotations;
@@ -73,6 +73,17 @@ namespace Nuke.Azure
         public static void AzureContainerExec(Configure<AzureContainerExecSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureContainerExecSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureContainerExportSettings toolSettings);
+        static partial void PostProcess(AzureContainerExportSettings toolSettings);
+        /// <summary><p>Manage Azure Container Instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/container?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureContainerExport(Configure<AzureContainerExportSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureContainerExportSettings());
             PreProcess(toolSettings);
             var process = ProcessTasks.StartProcess(toolSettings, processSettings);
             process.AssertZeroExitCode();
@@ -162,10 +173,6 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureContainer executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureContainerTasks.AzureContainerPath;
-        /// <summary><p>The container image name.</p></summary>
-        public virtual string Image { get; internal set; }
-        /// <summary><p>The name of the container group.</p></summary>
-        public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>The command line to run when the container is started, e.g. '/bin/bash -c myscript.sh'.</p></summary>
@@ -177,12 +184,18 @@ namespace Nuke.Azure
         /// <summary><p>A list of environment variable for the container. Space-separated values in 'key=value' format.</p></summary>
         public virtual IReadOnlyDictionary<string, string> EnvironmentVariables => EnvironmentVariablesInternal.AsReadOnly();
         internal Dictionary<string,string> EnvironmentVariablesInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        /// <summary><p>The path to the input file.</p></summary>
+        public virtual string File { get; internal set; }
+        /// <summary><p>The container image name.</p></summary>
+        public virtual string Image { get; internal set; }
         /// <summary><p>The IP address type of the container group.</p></summary>
         public virtual ContainerCreateIpAddress IpAddress { get; internal set; }
         /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
         /// <summary><p>The required memory of the containers in GB.</p></summary>
         public virtual string Memory { get; internal set; }
+        /// <summary><p>The name of the container group.</p></summary>
+        public virtual string Name { get; internal set; }
         /// <summary><p>The OS type of the containers.</p></summary>
         public virtual ContainerCreateOsType OsType { get; internal set; }
         /// <summary><p>The ports to open.</p></summary>
@@ -230,16 +243,17 @@ namespace Nuke.Azure
         {
             arguments
               .Add("container create")
-              .Add("--image {value}", Image)
-              .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--command-line {value}", CommandLine)
               .Add("--cpu {value}", Cpu)
               .Add("--dns-name-label {value}", DnsNameLabel)
               .Add("--environment-variables {value}", EnvironmentVariables, "{key}={value}", separator: ' ')
+              .Add("--file {value}", File)
+              .Add("--image {value}", Image)
               .Add("--ip-address {value}", IpAddress)
               .Add("--location {value}", Location)
               .Add("--memory {value}", Memory)
+              .Add("--name {value}", Name)
               .Add("--os-type {value}", OsType)
               .Add("--ports {value}", Ports)
               .Add("--restart-policy {value}", RestartPolicy)
@@ -347,6 +361,47 @@ namespace Nuke.Azure
               .Add("--container-name {value}", ContainerName)
               .Add("--terminal-col-size {value}", TerminalColSize)
               .Add("--terminal-row-size {value}", TerminalRowSize)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureContainerExportSettings
+    /// <summary><p>Used within <see cref="AzureContainerTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureContainerExportSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureContainer executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureContainerTasks.AzureContainerPath;
+        /// <summary><p>The file path to export the container group.</p></summary>
+        public virtual string File { get; internal set; }
+        /// <summary><p>The name of the container group.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("container export")
+              .Add("--file {value}", File)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -631,42 +686,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureContainerCreateSettingsExtensions
     {
-        #region Image
-        /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.Image"/>.</em></p><p>The container image name.</p></summary>
-        [Pure]
-        public static AzureContainerCreateSettings SetImage(this AzureContainerCreateSettings toolSettings, string image)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Image = image;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureContainerCreateSettings.Image"/>.</em></p><p>The container image name.</p></summary>
-        [Pure]
-        public static AzureContainerCreateSettings ResetImage(this AzureContainerCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Image = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.Name"/>.</em></p><p>The name of the container group.</p></summary>
-        [Pure]
-        public static AzureContainerCreateSettings SetName(this AzureContainerCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureContainerCreateSettings.Name"/>.</em></p><p>The name of the container group.</p></summary>
-        [Pure]
-        public static AzureContainerCreateSettings ResetName(this AzureContainerCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
         #region ResourceGroup
         /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
@@ -781,6 +800,42 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region File
+        /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.File"/>.</em></p><p>The path to the input file.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings SetFile(this AzureContainerCreateSettings toolSettings, string file)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.File = file;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerCreateSettings.File"/>.</em></p><p>The path to the input file.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings ResetFile(this AzureContainerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.File = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Image
+        /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.Image"/>.</em></p><p>The container image name.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings SetImage(this AzureContainerCreateSettings toolSettings, string image)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Image = image;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerCreateSettings.Image"/>.</em></p><p>The container image name.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings ResetImage(this AzureContainerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Image = null;
+            return toolSettings;
+        }
+        #endregion
         #region IpAddress
         /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.IpAddress"/>.</em></p><p>The IP address type of the container group.</p></summary>
         [Pure]
@@ -832,6 +887,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Memory = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.Name"/>.</em></p><p>The name of the container group.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings SetName(this AzureContainerCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerCreateSettings.Name"/>.</em></p><p>The name of the container group.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings ResetName(this AzureContainerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
             return toolSettings;
         }
         #endregion
@@ -1589,6 +1662,158 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureContainerExecSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureContainerExecSettings ResetVerbose(this AzureContainerExecSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureContainerExportSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureContainerTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureContainerExportSettingsExtensions
+    {
+        #region File
+        /// <summary><p><em>Sets <see cref="AzureContainerExportSettings.File"/>.</em></p><p>The file path to export the container group.</p></summary>
+        [Pure]
+        public static AzureContainerExportSettings SetFile(this AzureContainerExportSettings toolSettings, string file)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.File = file;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerExportSettings.File"/>.</em></p><p>The file path to export the container group.</p></summary>
+        [Pure]
+        public static AzureContainerExportSettings ResetFile(this AzureContainerExportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.File = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureContainerExportSettings.Name"/>.</em></p><p>The name of the container group.</p></summary>
+        [Pure]
+        public static AzureContainerExportSettings SetName(this AzureContainerExportSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerExportSettings.Name"/>.</em></p><p>The name of the container group.</p></summary>
+        [Pure]
+        public static AzureContainerExportSettings ResetName(this AzureContainerExportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureContainerExportSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureContainerExportSettings SetResourceGroup(this AzureContainerExportSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerExportSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureContainerExportSettings ResetResourceGroup(this AzureContainerExportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureContainerExportSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureContainerExportSettings SetDebug(this AzureContainerExportSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerExportSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureContainerExportSettings ResetDebug(this AzureContainerExportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureContainerExportSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureContainerExportSettings SetHelp(this AzureContainerExportSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerExportSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureContainerExportSettings ResetHelp(this AzureContainerExportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureContainerExportSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureContainerExportSettings SetOutput(this AzureContainerExportSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerExportSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureContainerExportSettings ResetOutput(this AzureContainerExportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureContainerExportSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureContainerExportSettings SetQuery(this AzureContainerExportSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerExportSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureContainerExportSettings ResetQuery(this AzureContainerExportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureContainerExportSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureContainerExportSettings SetVerbose(this AzureContainerExportSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerExportSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureContainerExportSettings ResetVerbose(this AzureContainerExportSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

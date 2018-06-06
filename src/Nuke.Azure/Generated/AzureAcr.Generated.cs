@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0 [CommitSha: 3eaf2b72].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureAcr.json.
 
 using JetBrains.Annotations;
@@ -73,6 +73,17 @@ namespace Nuke.Azure
         public static void AzureAcrDelete(Configure<AzureAcrDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcrDeleteSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureAcrImportSettings toolSettings);
+        static partial void PostProcess(AzureAcrImportSettings toolSettings);
+        /// <summary><p>Manage Azure Container Registries for private registries within Azure.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureAcrImport(Configure<AzureAcrImportSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAcrImportSettings());
             PreProcess(toolSettings);
             var process = ProcessTasks.StartProcess(toolSettings, processSettings);
             process.AssertZeroExitCode();
@@ -625,6 +636,59 @@ namespace Nuke.Azure
             arguments
               .Add("acr delete")
               .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcrImportSettings
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcrImportSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcr executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
+        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>The source identifier in the format '[registry.azurecr.io/]repository[:tag]' or '[registry.azurecr.io/]repository@digest'.</p></summary>
+        public virtual string Source { get; internal set; }
+        /// <summary><p>Overwrite the existing tag of the image to be imported.</p></summary>
+        public virtual string Force { get; internal set; }
+        /// <summary><p>The repository and optionally a tag in the 'repository:tag' format for target images.</p></summary>
+        public virtual string Image { get; internal set; }
+        /// <summary><p>The source container registry can be name, login server or resource ID of the source registry.</p></summary>
+        public virtual string Registry { get; internal set; }
+        /// <summary><p>The repository name to do a manifest-only copy for images.</p></summary>
+        public virtual string Repository { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acr import")
+              .Add("--name {value}", Name)
+              .Add("--source {value}", Source)
+              .Add("--force {value}", Force)
+              .Add("--image {value}", Image)
+              .Add("--registry {value}", Registry)
+              .Add("--repository {value}", Repository)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -2991,6 +3055,230 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureAcrDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureAcrDeleteSettings ResetVerbose(this AzureAcrDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcrImportSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcrImportSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAcrImportSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrImportSettings SetName(this AzureAcrImportSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrImportSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrImportSettings ResetName(this AzureAcrImportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Source
+        /// <summary><p><em>Sets <see cref="AzureAcrImportSettings.Source"/>.</em></p><p>The source identifier in the format '[registry.azurecr.io/]repository[:tag]' or '[registry.azurecr.io/]repository@digest'.</p></summary>
+        [Pure]
+        public static AzureAcrImportSettings SetSource(this AzureAcrImportSettings toolSettings, string source)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Source = source;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrImportSettings.Source"/>.</em></p><p>The source identifier in the format '[registry.azurecr.io/]repository[:tag]' or '[registry.azurecr.io/]repository@digest'.</p></summary>
+        [Pure]
+        public static AzureAcrImportSettings ResetSource(this AzureAcrImportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Source = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Force
+        /// <summary><p><em>Sets <see cref="AzureAcrImportSettings.Force"/>.</em></p><p>Overwrite the existing tag of the image to be imported.</p></summary>
+        [Pure]
+        public static AzureAcrImportSettings SetForce(this AzureAcrImportSettings toolSettings, string force)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Force = force;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrImportSettings.Force"/>.</em></p><p>Overwrite the existing tag of the image to be imported.</p></summary>
+        [Pure]
+        public static AzureAcrImportSettings ResetForce(this AzureAcrImportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Force = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Image
+        /// <summary><p><em>Sets <see cref="AzureAcrImportSettings.Image"/>.</em></p><p>The repository and optionally a tag in the 'repository:tag' format for target images.</p></summary>
+        [Pure]
+        public static AzureAcrImportSettings SetImage(this AzureAcrImportSettings toolSettings, string image)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Image = image;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrImportSettings.Image"/>.</em></p><p>The repository and optionally a tag in the 'repository:tag' format for target images.</p></summary>
+        [Pure]
+        public static AzureAcrImportSettings ResetImage(this AzureAcrImportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Image = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Registry
+        /// <summary><p><em>Sets <see cref="AzureAcrImportSettings.Registry"/>.</em></p><p>The source container registry can be name, login server or resource ID of the source registry.</p></summary>
+        [Pure]
+        public static AzureAcrImportSettings SetRegistry(this AzureAcrImportSettings toolSettings, string registry)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = registry;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrImportSettings.Registry"/>.</em></p><p>The source container registry can be name, login server or resource ID of the source registry.</p></summary>
+        [Pure]
+        public static AzureAcrImportSettings ResetRegistry(this AzureAcrImportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Repository
+        /// <summary><p><em>Sets <see cref="AzureAcrImportSettings.Repository"/>.</em></p><p>The repository name to do a manifest-only copy for images.</p></summary>
+        [Pure]
+        public static AzureAcrImportSettings SetRepository(this AzureAcrImportSettings toolSettings, string repository)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Repository = repository;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrImportSettings.Repository"/>.</em></p><p>The repository name to do a manifest-only copy for images.</p></summary>
+        [Pure]
+        public static AzureAcrImportSettings ResetRepository(this AzureAcrImportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Repository = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAcrImportSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrImportSettings SetResourceGroup(this AzureAcrImportSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrImportSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrImportSettings ResetResourceGroup(this AzureAcrImportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrImportSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrImportSettings SetDebug(this AzureAcrImportSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrImportSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrImportSettings ResetDebug(this AzureAcrImportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcrImportSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrImportSettings SetHelp(this AzureAcrImportSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrImportSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrImportSettings ResetHelp(this AzureAcrImportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcrImportSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrImportSettings SetOutput(this AzureAcrImportSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrImportSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrImportSettings ResetOutput(this AzureAcrImportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcrImportSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrImportSettings SetQuery(this AzureAcrImportSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrImportSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrImportSettings ResetQuery(this AzureAcrImportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcrImportSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrImportSettings SetVerbose(this AzureAcrImportSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrImportSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrImportSettings ResetVerbose(this AzureAcrImportSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

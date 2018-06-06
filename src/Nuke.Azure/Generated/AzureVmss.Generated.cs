@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0 [CommitSha: 3eaf2b72].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureVmss.json.
 
 using JetBrains.Annotations;
@@ -545,7 +545,7 @@ namespace Nuke.Azure
         /// <summary><p>Number of VMs in the scale set.</p></summary>
         public virtual int? InstanceCount { get; internal set; }
         /// <summary><p>License type if the Windows image or disk used was licensed on-premises.</p></summary>
-        public virtual VmssCreateLicenseType LicenseType { get; internal set; }
+        public virtual VmssLicenseType LicenseType { get; internal set; }
         /// <summary><p>Location in which to create VM and related resources. If default location is not configured, will default to the resource group's location.</p></summary>
         public virtual string Location { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
@@ -595,8 +595,8 @@ namespace Nuke.Azure
         public virtual string PlanPromotionCode { get; internal set; }
         /// <summary><p>Plan publisher.</p></summary>
         public virtual string PlanPublisher { get; internal set; }
-        /// <summary><p>Enable accelerated networking.</p></summary>
-        public virtual string AcceleratedNetworking { get; internal set; }
+        /// <summary><p>Enable accelerated networking. Unless specified, CLI will enable it based on machine image and size.</p></summary>
+        public virtual bool? AcceleratedNetworking { get; internal set; }
         /// <summary><p>Space-separated IP addresses of DNS servers, e.g. 10.0.0.5 10.0.0.6.</p></summary>
         public virtual string DnsServers { get; internal set; }
         /// <summary><p>Name or ID of an existing Network Security Group.</p></summary>
@@ -700,7 +700,7 @@ namespace Nuke.Azure
               .Add("--plan-product {value}", PlanProduct)
               .Add("--plan-promotion-code {value}", PlanPromotionCode)
               .Add("--plan-publisher {value}", PlanPublisher)
-              .Add("--accelerated-networking {value}", AcceleratedNetworking)
+              .Add("--accelerated-networking", AcceleratedNetworking)
               .Add("--dns-servers {value}", DnsServers)
               .Add("--nsg {value}", Nsg)
               .Add("--public-ip-address {value}", PublicIpAddress)
@@ -1425,6 +1425,8 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>License type if the Windows image or disk used was licensed on-premises.</p></summary>
+        public virtual VmssLicenseType LicenseType { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual string NoWait { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
@@ -1449,6 +1451,7 @@ namespace Nuke.Azure
               .Add("vmss update")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--license-type {value}", LicenseType)
               .Add("--no-wait {value}", NoWait)
               .Add("--add {value}", Add)
               .Add("--remove {value}", Remove)
@@ -2760,7 +2763,7 @@ namespace Nuke.Azure
         #region LicenseType
         /// <summary><p><em>Sets <see cref="AzureVmssCreateSettings.LicenseType"/>.</em></p><p>License type if the Windows image or disk used was licensed on-premises.</p></summary>
         [Pure]
-        public static AzureVmssCreateSettings SetLicenseType(this AzureVmssCreateSettings toolSettings, VmssCreateLicenseType licenseType)
+        public static AzureVmssCreateSettings SetLicenseType(this AzureVmssCreateSettings toolSettings, VmssLicenseType licenseType)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.LicenseType = licenseType;
@@ -3274,20 +3277,44 @@ namespace Nuke.Azure
         }
         #endregion
         #region AcceleratedNetworking
-        /// <summary><p><em>Sets <see cref="AzureVmssCreateSettings.AcceleratedNetworking"/>.</em></p><p>Enable accelerated networking.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmssCreateSettings.AcceleratedNetworking"/>.</em></p><p>Enable accelerated networking. Unless specified, CLI will enable it based on machine image and size.</p></summary>
         [Pure]
-        public static AzureVmssCreateSettings SetAcceleratedNetworking(this AzureVmssCreateSettings toolSettings, string acceleratedNetworking)
+        public static AzureVmssCreateSettings SetAcceleratedNetworking(this AzureVmssCreateSettings toolSettings, bool? acceleratedNetworking)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.AcceleratedNetworking = acceleratedNetworking;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmssCreateSettings.AcceleratedNetworking"/>.</em></p><p>Enable accelerated networking.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmssCreateSettings.AcceleratedNetworking"/>.</em></p><p>Enable accelerated networking. Unless specified, CLI will enable it based on machine image and size.</p></summary>
         [Pure]
         public static AzureVmssCreateSettings ResetAcceleratedNetworking(this AzureVmssCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.AcceleratedNetworking = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureVmssCreateSettings.AcceleratedNetworking"/>.</em></p><p>Enable accelerated networking. Unless specified, CLI will enable it based on machine image and size.</p></summary>
+        [Pure]
+        public static AzureVmssCreateSettings EnableAcceleratedNetworking(this AzureVmssCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AcceleratedNetworking = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureVmssCreateSettings.AcceleratedNetworking"/>.</em></p><p>Enable accelerated networking. Unless specified, CLI will enable it based on machine image and size.</p></summary>
+        [Pure]
+        public static AzureVmssCreateSettings DisableAcceleratedNetworking(this AzureVmssCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AcceleratedNetworking = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureVmssCreateSettings.AcceleratedNetworking"/>.</em></p><p>Enable accelerated networking. Unless specified, CLI will enable it based on machine image and size.</p></summary>
+        [Pure]
+        public static AzureVmssCreateSettings ToggleAcceleratedNetworking(this AzureVmssCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AcceleratedNetworking = !toolSettings.AcceleratedNetworking;
             return toolSettings;
         }
         #endregion
@@ -6682,6 +6709,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region LicenseType
+        /// <summary><p><em>Sets <see cref="AzureVmssUpdateSettings.LicenseType"/>.</em></p><p>License type if the Windows image or disk used was licensed on-premises.</p></summary>
+        [Pure]
+        public static AzureVmssUpdateSettings SetLicenseType(this AzureVmssUpdateSettings toolSettings, VmssLicenseType licenseType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LicenseType = licenseType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmssUpdateSettings.LicenseType"/>.</em></p><p>License type if the Windows image or disk used was licensed on-premises.</p></summary>
+        [Pure]
+        public static AzureVmssUpdateSettings ResetLicenseType(this AzureVmssUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LicenseType = null;
             return toolSettings;
         }
         #endregion
@@ -11345,14 +11390,15 @@ namespace Nuke.Azure
         public static VmssCreateEvictionPolicy delete = new VmssCreateEvictionPolicy { Value = "delete" };
     }
     #endregion
-    #region VmssCreateLicenseType
+    #region VmssLicenseType
     /// <summary><p>Used within <see cref="AzureVmssTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
-    public partial class VmssCreateLicenseType : Enumeration
+    public partial class VmssLicenseType : Enumeration
     {
-        public static VmssCreateLicenseType windows_client = new VmssCreateLicenseType { Value = "windows_client" };
-        public static VmssCreateLicenseType windows_server = new VmssCreateLicenseType { Value = "windows_server" };
+        public static VmssLicenseType none = new VmssLicenseType { Value = "none" };
+        public static VmssLicenseType windows_client = new VmssLicenseType { Value = "windows_client" };
+        public static VmssLicenseType windows_server = new VmssLicenseType { Value = "windows_server" };
     }
     #endregion
     #region VmssCreatePriority

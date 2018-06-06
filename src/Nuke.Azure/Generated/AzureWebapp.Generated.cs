@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0 [CommitSha: 3eaf2b72].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureWebapp.json.
 
 using JetBrains.Annotations;
@@ -1137,15 +1137,17 @@ namespace Nuke.Azure
         /// <summary><p>Enables sending session affinity cookies.</p></summary>
         public virtual bool? ClientAffinityEnabled { get; internal set; }
         /// <summary><p>If true, web app hostname is force registered with DNS.</p></summary>
-        public virtual string ForceDnsRegistration { get; internal set; }
+        public virtual bool? ForceDnsRegistration { get; internal set; }
         /// <summary><p>Redirect all traffic made to an app using HTTP to HTTPS.</p></summary>
         public virtual bool? HttpsOnly { get; internal set; }
         /// <summary><p>If true, custom (non *.azurewebsites.net) domains associated with web app are not verified.</p></summary>
-        public virtual string SkipCustomDomainVerification { get; internal set; }
-        /// <summary><p>If true web app hostname is not registered with DNS on creation. This parameter is only used for app creation.</p></summary>
-        public virtual string SkipDnsRegistration { get; internal set; }
+        public virtual bool? SkipCustomDomainVerification { get; internal set; }
+        /// <summary><p>If true web app hostname is not registered with DNS on creation.</p></summary>
+        public virtual bool? SkipDnsRegistration { get; internal set; }
+        /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        public virtual string Slot { get; internal set; }
         /// <summary><p>Time to live in seconds for web app's default domain name.</p></summary>
-        public virtual string TtlInSeconds { get; internal set; }
+        public virtual bool? TtlInSeconds { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
         /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
@@ -1169,11 +1171,12 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--client-affinity-enabled", ClientAffinityEnabled)
-              .Add("--force-dns-registration {value}", ForceDnsRegistration)
+              .Add("--force-dns-registration", ForceDnsRegistration)
               .Add("--https-only", HttpsOnly)
-              .Add("--skip-custom-domain-verification {value}", SkipCustomDomainVerification)
-              .Add("--skip-dns-registration {value}", SkipDnsRegistration)
-              .Add("--ttl-in-seconds {value}", TtlInSeconds)
+              .Add("--skip-custom-domain-verification", SkipCustomDomainVerification)
+              .Add("--skip-dns-registration", SkipDnsRegistration)
+              .Add("--slot {value}", Slot)
+              .Add("--ttl-in-seconds", TtlInSeconds)
               .Add("--add {value}", Add)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
@@ -5252,7 +5255,7 @@ namespace Nuke.Azure
         #region ForceDnsRegistration
         /// <summary><p><em>Sets <see cref="AzureWebappUpdateSettings.ForceDnsRegistration"/>.</em></p><p>If true, web app hostname is force registered with DNS.</p></summary>
         [Pure]
-        public static AzureWebappUpdateSettings SetForceDnsRegistration(this AzureWebappUpdateSettings toolSettings, string forceDnsRegistration)
+        public static AzureWebappUpdateSettings SetForceDnsRegistration(this AzureWebappUpdateSettings toolSettings, bool? forceDnsRegistration)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ForceDnsRegistration = forceDnsRegistration;
@@ -5264,6 +5267,30 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ForceDnsRegistration = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureWebappUpdateSettings.ForceDnsRegistration"/>.</em></p><p>If true, web app hostname is force registered with DNS.</p></summary>
+        [Pure]
+        public static AzureWebappUpdateSettings EnableForceDnsRegistration(this AzureWebappUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceDnsRegistration = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureWebappUpdateSettings.ForceDnsRegistration"/>.</em></p><p>If true, web app hostname is force registered with DNS.</p></summary>
+        [Pure]
+        public static AzureWebappUpdateSettings DisableForceDnsRegistration(this AzureWebappUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceDnsRegistration = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureWebappUpdateSettings.ForceDnsRegistration"/>.</em></p><p>If true, web app hostname is force registered with DNS.</p></summary>
+        [Pure]
+        public static AzureWebappUpdateSettings ToggleForceDnsRegistration(this AzureWebappUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceDnsRegistration = !toolSettings.ForceDnsRegistration;
             return toolSettings;
         }
         #endregion
@@ -5312,7 +5339,7 @@ namespace Nuke.Azure
         #region SkipCustomDomainVerification
         /// <summary><p><em>Sets <see cref="AzureWebappUpdateSettings.SkipCustomDomainVerification"/>.</em></p><p>If true, custom (non *.azurewebsites.net) domains associated with web app are not verified.</p></summary>
         [Pure]
-        public static AzureWebappUpdateSettings SetSkipCustomDomainVerification(this AzureWebappUpdateSettings toolSettings, string skipCustomDomainVerification)
+        public static AzureWebappUpdateSettings SetSkipCustomDomainVerification(this AzureWebappUpdateSettings toolSettings, bool? skipCustomDomainVerification)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.SkipCustomDomainVerification = skipCustomDomainVerification;
@@ -5326,17 +5353,41 @@ namespace Nuke.Azure
             toolSettings.SkipCustomDomainVerification = null;
             return toolSettings;
         }
+        /// <summary><p><em>Enables <see cref="AzureWebappUpdateSettings.SkipCustomDomainVerification"/>.</em></p><p>If true, custom (non *.azurewebsites.net) domains associated with web app are not verified.</p></summary>
+        [Pure]
+        public static AzureWebappUpdateSettings EnableSkipCustomDomainVerification(this AzureWebappUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SkipCustomDomainVerification = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureWebappUpdateSettings.SkipCustomDomainVerification"/>.</em></p><p>If true, custom (non *.azurewebsites.net) domains associated with web app are not verified.</p></summary>
+        [Pure]
+        public static AzureWebappUpdateSettings DisableSkipCustomDomainVerification(this AzureWebappUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SkipCustomDomainVerification = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureWebappUpdateSettings.SkipCustomDomainVerification"/>.</em></p><p>If true, custom (non *.azurewebsites.net) domains associated with web app are not verified.</p></summary>
+        [Pure]
+        public static AzureWebappUpdateSettings ToggleSkipCustomDomainVerification(this AzureWebappUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SkipCustomDomainVerification = !toolSettings.SkipCustomDomainVerification;
+            return toolSettings;
+        }
         #endregion
         #region SkipDnsRegistration
-        /// <summary><p><em>Sets <see cref="AzureWebappUpdateSettings.SkipDnsRegistration"/>.</em></p><p>If true web app hostname is not registered with DNS on creation. This parameter is only used for app creation.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappUpdateSettings.SkipDnsRegistration"/>.</em></p><p>If true web app hostname is not registered with DNS on creation.</p></summary>
         [Pure]
-        public static AzureWebappUpdateSettings SetSkipDnsRegistration(this AzureWebappUpdateSettings toolSettings, string skipDnsRegistration)
+        public static AzureWebappUpdateSettings SetSkipDnsRegistration(this AzureWebappUpdateSettings toolSettings, bool? skipDnsRegistration)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.SkipDnsRegistration = skipDnsRegistration;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappUpdateSettings.SkipDnsRegistration"/>.</em></p><p>If true web app hostname is not registered with DNS on creation. This parameter is only used for app creation.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureWebappUpdateSettings.SkipDnsRegistration"/>.</em></p><p>If true web app hostname is not registered with DNS on creation.</p></summary>
         [Pure]
         public static AzureWebappUpdateSettings ResetSkipDnsRegistration(this AzureWebappUpdateSettings toolSettings)
         {
@@ -5344,11 +5395,53 @@ namespace Nuke.Azure
             toolSettings.SkipDnsRegistration = null;
             return toolSettings;
         }
+        /// <summary><p><em>Enables <see cref="AzureWebappUpdateSettings.SkipDnsRegistration"/>.</em></p><p>If true web app hostname is not registered with DNS on creation.</p></summary>
+        [Pure]
+        public static AzureWebappUpdateSettings EnableSkipDnsRegistration(this AzureWebappUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SkipDnsRegistration = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureWebappUpdateSettings.SkipDnsRegistration"/>.</em></p><p>If true web app hostname is not registered with DNS on creation.</p></summary>
+        [Pure]
+        public static AzureWebappUpdateSettings DisableSkipDnsRegistration(this AzureWebappUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SkipDnsRegistration = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureWebappUpdateSettings.SkipDnsRegistration"/>.</em></p><p>If true web app hostname is not registered with DNS on creation.</p></summary>
+        [Pure]
+        public static AzureWebappUpdateSettings ToggleSkipDnsRegistration(this AzureWebappUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SkipDnsRegistration = !toolSettings.SkipDnsRegistration;
+            return toolSettings;
+        }
+        #endregion
+        #region Slot
+        /// <summary><p><em>Sets <see cref="AzureWebappUpdateSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappUpdateSettings SetSlot(this AzureWebappUpdateSettings toolSettings, string slot)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = slot;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureWebappUpdateSettings.Slot"/>.</em></p><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
+        [Pure]
+        public static AzureWebappUpdateSettings ResetSlot(this AzureWebappUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Slot = null;
+            return toolSettings;
+        }
         #endregion
         #region TtlInSeconds
         /// <summary><p><em>Sets <see cref="AzureWebappUpdateSettings.TtlInSeconds"/>.</em></p><p>Time to live in seconds for web app's default domain name.</p></summary>
         [Pure]
-        public static AzureWebappUpdateSettings SetTtlInSeconds(this AzureWebappUpdateSettings toolSettings, string ttlInSeconds)
+        public static AzureWebappUpdateSettings SetTtlInSeconds(this AzureWebappUpdateSettings toolSettings, bool? ttlInSeconds)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.TtlInSeconds = ttlInSeconds;
@@ -5360,6 +5453,30 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.TtlInSeconds = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureWebappUpdateSettings.TtlInSeconds"/>.</em></p><p>Time to live in seconds for web app's default domain name.</p></summary>
+        [Pure]
+        public static AzureWebappUpdateSettings EnableTtlInSeconds(this AzureWebappUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TtlInSeconds = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureWebappUpdateSettings.TtlInSeconds"/>.</em></p><p>Time to live in seconds for web app's default domain name.</p></summary>
+        [Pure]
+        public static AzureWebappUpdateSettings DisableTtlInSeconds(this AzureWebappUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TtlInSeconds = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureWebappUpdateSettings.TtlInSeconds"/>.</em></p><p>Time to live in seconds for web app's default domain name.</p></summary>
+        [Pure]
+        public static AzureWebappUpdateSettings ToggleTtlInSeconds(this AzureWebappUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TtlInSeconds = !toolSettings.TtlInSeconds;
             return toolSettings;
         }
         #endregion

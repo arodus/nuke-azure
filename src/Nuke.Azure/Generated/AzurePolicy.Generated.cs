@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0 [CommitSha: 3eaf2b72].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzurePolicy.json.
 
 using JetBrains.Annotations;
@@ -144,6 +144,17 @@ namespace Nuke.Azure
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
+        static partial void PreProcess(AzurePolicyEventListSettings toolSettings);
+        static partial void PostProcess(AzurePolicyEventListSettings toolSettings);
+        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/policy?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzurePolicyEventList(Configure<AzurePolicyEventListSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzurePolicyEventListSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
         static partial void PreProcess(AzurePolicySetDefinitionCreateSettings toolSettings);
         static partial void PostProcess(AzurePolicySetDefinitionCreateSettings toolSettings);
         /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/policy?view=azure-cli-latest">official website</a>.</p></summary>
@@ -194,6 +205,28 @@ namespace Nuke.Azure
         public static void AzurePolicySetDefinitionUpdate(Configure<AzurePolicySetDefinitionUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePolicySetDefinitionUpdateSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzurePolicyStateListSettings toolSettings);
+        static partial void PostProcess(AzurePolicyStateListSettings toolSettings);
+        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/policy?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzurePolicyStateList(Configure<AzurePolicyStateListSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzurePolicyStateListSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzurePolicyStateSummarizeSettings toolSettings);
+        static partial void PostProcess(AzurePolicyStateSummarizeSettings toolSettings);
+        /// <summary><p>Manage resource policies.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/policy?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzurePolicyStateSummarize(Configure<AzurePolicyStateSummarizeSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzurePolicyStateSummarizeSettings());
             PreProcess(toolSettings);
             var process = ProcessTasks.StartProcess(toolSettings, processSettings);
             process.AssertZeroExitCode();
@@ -630,6 +663,86 @@ namespace Nuke.Azure
         }
     }
     #endregion
+    #region AzurePolicyEventListSettings
+    /// <summary><p>Used within <see cref="AzurePolicyTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzurePolicyEventListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzurePolicy executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzurePolicyTasks.AzurePolicyPath;
+        /// <summary><p>Apply expression for aggregations using OData notation.</p></summary>
+        public virtual string Apply { get; internal set; }
+        /// <summary><p>Filter expression using OData notation.</p></summary>
+        public virtual string Filter { get; internal set; }
+        /// <summary><p>ISO 8601 formatted timestamp specifying the start time of the interval to query.</p></summary>
+        public virtual string From { get; internal set; }
+        /// <summary><p>Ordering expression using OData notation.</p></summary>
+        public virtual string OrderBy { get; internal set; }
+        /// <summary><p>Select expression using OData notation.</p></summary>
+        public virtual string Select { get; internal set; }
+        /// <summary><p>ISO 8601 formatted timestamp specifying the end time of the interval to query.</p></summary>
+        public virtual string To { get; internal set; }
+        /// <summary><p>Maximum number of records to return.</p></summary>
+        public virtual string Top { get; internal set; }
+        /// <summary><p>Provider namespace (Ex: Microsoft.Provider).</p></summary>
+        public virtual string Namespace { get; internal set; }
+        /// <summary><p>The parent path (Ex: resA/myA/resB/myB).</p></summary>
+        public virtual string Parent { get; internal set; }
+        /// <summary><p>Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments.</p></summary>
+        public virtual string Resource { get; internal set; }
+        /// <summary><p>Resource type (Ex: resC).</p></summary>
+        public virtual string ResourceType { get; internal set; }
+        /// <summary><p>Name of management group.</p></summary>
+        public virtual string ManagementGroup { get; internal set; }
+        /// <summary><p>Name of policy assignment.</p></summary>
+        public virtual string PolicyAssignment { get; internal set; }
+        /// <summary><p>Name of policy definition.</p></summary>
+        public virtual string PolicyDefinition { get; internal set; }
+        /// <summary><p>Name of policy set definition.</p></summary>
+        public virtual string PolicySetDefinition { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("policy event list")
+              .Add("--apply {value}", Apply)
+              .Add("--filter {value}", Filter)
+              .Add("--from {value}", From)
+              .Add("--order-by {value}", OrderBy)
+              .Add("--select {value}", Select)
+              .Add("--to {value}", To)
+              .Add("--top {value}", Top)
+              .Add("--namespace {value}", Namespace)
+              .Add("--parent {value}", Parent)
+              .Add("--resource {value}", Resource)
+              .Add("--resource-type {value}", ResourceType)
+              .Add("--management-group {value}", ManagementGroup)
+              .Add("--policy-assignment {value}", PolicyAssignment)
+              .Add("--policy-definition {value}", PolicyDefinition)
+              .Add("--policy-set-definition {value}", PolicySetDefinition)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
     #region AzurePolicySetDefinitionCreateSettings
     /// <summary><p>Used within <see cref="AzurePolicyTasks"/>.</p></summary>
     [PublicAPI]
@@ -817,6 +930,160 @@ namespace Nuke.Azure
               .Add("--description {value}", Description)
               .Add("--display-name {value}", DisplayName)
               .Add("--params {value}", Params)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzurePolicyStateListSettings
+    /// <summary><p>Used within <see cref="AzurePolicyTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzurePolicyStateListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzurePolicy executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzurePolicyTasks.AzurePolicyPath;
+        /// <summary><p>Within the specified time interval, get all policy states instead of the latest only.</p></summary>
+        public virtual string All { get; internal set; }
+        /// <summary><p>Apply expression for aggregations using OData notation.</p></summary>
+        public virtual string Apply { get; internal set; }
+        /// <summary><p>Filter expression using OData notation.</p></summary>
+        public virtual string Filter { get; internal set; }
+        /// <summary><p>ISO 8601 formatted timestamp specifying the start time of the interval to query.</p></summary>
+        public virtual string From { get; internal set; }
+        /// <summary><p>Ordering expression using OData notation.</p></summary>
+        public virtual string OrderBy { get; internal set; }
+        /// <summary><p>Select expression using OData notation.</p></summary>
+        public virtual string Select { get; internal set; }
+        /// <summary><p>ISO 8601 formatted timestamp specifying the end time of the interval to query.</p></summary>
+        public virtual string To { get; internal set; }
+        /// <summary><p>Maximum number of records to return.</p></summary>
+        public virtual string Top { get; internal set; }
+        /// <summary><p>Provider namespace (Ex: Microsoft.Provider).</p></summary>
+        public virtual string Namespace { get; internal set; }
+        /// <summary><p>The parent path (Ex: resA/myA/resB/myB).</p></summary>
+        public virtual string Parent { get; internal set; }
+        /// <summary><p>Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments.</p></summary>
+        public virtual string Resource { get; internal set; }
+        /// <summary><p>Resource type (Ex: resC).</p></summary>
+        public virtual string ResourceType { get; internal set; }
+        /// <summary><p>Name of management group.</p></summary>
+        public virtual string ManagementGroup { get; internal set; }
+        /// <summary><p>Name of policy assignment.</p></summary>
+        public virtual string PolicyAssignment { get; internal set; }
+        /// <summary><p>Name of policy definition.</p></summary>
+        public virtual string PolicyDefinition { get; internal set; }
+        /// <summary><p>Name of policy set definition.</p></summary>
+        public virtual string PolicySetDefinition { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("policy state list")
+              .Add("--all {value}", All)
+              .Add("--apply {value}", Apply)
+              .Add("--filter {value}", Filter)
+              .Add("--from {value}", From)
+              .Add("--order-by {value}", OrderBy)
+              .Add("--select {value}", Select)
+              .Add("--to {value}", To)
+              .Add("--top {value}", Top)
+              .Add("--namespace {value}", Namespace)
+              .Add("--parent {value}", Parent)
+              .Add("--resource {value}", Resource)
+              .Add("--resource-type {value}", ResourceType)
+              .Add("--management-group {value}", ManagementGroup)
+              .Add("--policy-assignment {value}", PolicyAssignment)
+              .Add("--policy-definition {value}", PolicyDefinition)
+              .Add("--policy-set-definition {value}", PolicySetDefinition)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzurePolicyStateSummarizeSettings
+    /// <summary><p>Used within <see cref="AzurePolicyTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzurePolicyStateSummarizeSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzurePolicy executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzurePolicyTasks.AzurePolicyPath;
+        /// <summary><p>Filter expression using OData notation.</p></summary>
+        public virtual string Filter { get; internal set; }
+        /// <summary><p>ISO 8601 formatted timestamp specifying the start time of the interval to query.</p></summary>
+        public virtual string From { get; internal set; }
+        /// <summary><p>ISO 8601 formatted timestamp specifying the end time of the interval to query.</p></summary>
+        public virtual string To { get; internal set; }
+        /// <summary><p>Maximum number of records to return.</p></summary>
+        public virtual string Top { get; internal set; }
+        /// <summary><p>Provider namespace (Ex: Microsoft.Provider).</p></summary>
+        public virtual string Namespace { get; internal set; }
+        /// <summary><p>The parent path (Ex: resA/myA/resB/myB).</p></summary>
+        public virtual string Parent { get; internal set; }
+        /// <summary><p>Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments.</p></summary>
+        public virtual string Resource { get; internal set; }
+        /// <summary><p>Resource type (Ex: resC).</p></summary>
+        public virtual string ResourceType { get; internal set; }
+        /// <summary><p>Name of management group.</p></summary>
+        public virtual string ManagementGroup { get; internal set; }
+        /// <summary><p>Name of policy assignment.</p></summary>
+        public virtual string PolicyAssignment { get; internal set; }
+        /// <summary><p>Name of policy definition.</p></summary>
+        public virtual string PolicyDefinition { get; internal set; }
+        /// <summary><p>Name of policy set definition.</p></summary>
+        public virtual string PolicySetDefinition { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("policy state summarize")
+              .Add("--filter {value}", Filter)
+              .Add("--from {value}", From)
+              .Add("--to {value}", To)
+              .Add("--top {value}", Top)
+              .Add("--namespace {value}", Namespace)
+              .Add("--parent {value}", Parent)
+              .Add("--resource {value}", Resource)
+              .Add("--resource-type {value}", ResourceType)
+              .Add("--management-group {value}", ManagementGroup)
+              .Add("--policy-assignment {value}", PolicyAssignment)
+              .Add("--policy-definition {value}", PolicyDefinition)
+              .Add("--policy-set-definition {value}", PolicySetDefinition)
+              .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2502,6 +2769,392 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzurePolicyEventListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzurePolicyTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzurePolicyEventListSettingsExtensions
+    {
+        #region Apply
+        /// <summary><p><em>Sets <see cref="AzurePolicyEventListSettings.Apply"/>.</em></p><p>Apply expression for aggregations using OData notation.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings SetApply(this AzurePolicyEventListSettings toolSettings, string apply)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Apply = apply;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyEventListSettings.Apply"/>.</em></p><p>Apply expression for aggregations using OData notation.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings ResetApply(this AzurePolicyEventListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Apply = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Filter
+        /// <summary><p><em>Sets <see cref="AzurePolicyEventListSettings.Filter"/>.</em></p><p>Filter expression using OData notation.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings SetFilter(this AzurePolicyEventListSettings toolSettings, string filter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Filter = filter;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyEventListSettings.Filter"/>.</em></p><p>Filter expression using OData notation.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings ResetFilter(this AzurePolicyEventListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Filter = null;
+            return toolSettings;
+        }
+        #endregion
+        #region From
+        /// <summary><p><em>Sets <see cref="AzurePolicyEventListSettings.From"/>.</em></p><p>ISO 8601 formatted timestamp specifying the start time of the interval to query.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings SetFrom(this AzurePolicyEventListSettings toolSettings, string from)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.From = from;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyEventListSettings.From"/>.</em></p><p>ISO 8601 formatted timestamp specifying the start time of the interval to query.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings ResetFrom(this AzurePolicyEventListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.From = null;
+            return toolSettings;
+        }
+        #endregion
+        #region OrderBy
+        /// <summary><p><em>Sets <see cref="AzurePolicyEventListSettings.OrderBy"/>.</em></p><p>Ordering expression using OData notation.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings SetOrderBy(this AzurePolicyEventListSettings toolSettings, string orderBy)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OrderBy = orderBy;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyEventListSettings.OrderBy"/>.</em></p><p>Ordering expression using OData notation.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings ResetOrderBy(this AzurePolicyEventListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OrderBy = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Select
+        /// <summary><p><em>Sets <see cref="AzurePolicyEventListSettings.Select"/>.</em></p><p>Select expression using OData notation.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings SetSelect(this AzurePolicyEventListSettings toolSettings, string select)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Select = select;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyEventListSettings.Select"/>.</em></p><p>Select expression using OData notation.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings ResetSelect(this AzurePolicyEventListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Select = null;
+            return toolSettings;
+        }
+        #endregion
+        #region To
+        /// <summary><p><em>Sets <see cref="AzurePolicyEventListSettings.To"/>.</em></p><p>ISO 8601 formatted timestamp specifying the end time of the interval to query.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings SetTo(this AzurePolicyEventListSettings toolSettings, string to)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.To = to;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyEventListSettings.To"/>.</em></p><p>ISO 8601 formatted timestamp specifying the end time of the interval to query.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings ResetTo(this AzurePolicyEventListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.To = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Top
+        /// <summary><p><em>Sets <see cref="AzurePolicyEventListSettings.Top"/>.</em></p><p>Maximum number of records to return.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings SetTop(this AzurePolicyEventListSettings toolSettings, string top)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = top;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyEventListSettings.Top"/>.</em></p><p>Maximum number of records to return.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings ResetTop(this AzurePolicyEventListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Namespace
+        /// <summary><p><em>Sets <see cref="AzurePolicyEventListSettings.Namespace"/>.</em></p><p>Provider namespace (Ex: Microsoft.Provider).</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings SetNamespace(this AzurePolicyEventListSettings toolSettings, string @namespace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Namespace = @namespace;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyEventListSettings.Namespace"/>.</em></p><p>Provider namespace (Ex: Microsoft.Provider).</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings ResetNamespace(this AzurePolicyEventListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Namespace = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Parent
+        /// <summary><p><em>Sets <see cref="AzurePolicyEventListSettings.Parent"/>.</em></p><p>The parent path (Ex: resA/myA/resB/myB).</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings SetParent(this AzurePolicyEventListSettings toolSettings, string parent)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Parent = parent;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyEventListSettings.Parent"/>.</em></p><p>The parent path (Ex: resA/myA/resB/myB).</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings ResetParent(this AzurePolicyEventListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Parent = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Resource
+        /// <summary><p><em>Sets <see cref="AzurePolicyEventListSettings.Resource"/>.</em></p><p>Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings SetResource(this AzurePolicyEventListSettings toolSettings, string resource)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Resource = resource;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyEventListSettings.Resource"/>.</em></p><p>Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings ResetResource(this AzurePolicyEventListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Resource = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceType
+        /// <summary><p><em>Sets <see cref="AzurePolicyEventListSettings.ResourceType"/>.</em></p><p>Resource type (Ex: resC).</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings SetResourceType(this AzurePolicyEventListSettings toolSettings, string resourceType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceType = resourceType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyEventListSettings.ResourceType"/>.</em></p><p>Resource type (Ex: resC).</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings ResetResourceType(this AzurePolicyEventListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ManagementGroup
+        /// <summary><p><em>Sets <see cref="AzurePolicyEventListSettings.ManagementGroup"/>.</em></p><p>Name of management group.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings SetManagementGroup(this AzurePolicyEventListSettings toolSettings, string managementGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagementGroup = managementGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyEventListSettings.ManagementGroup"/>.</em></p><p>Name of management group.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings ResetManagementGroup(this AzurePolicyEventListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagementGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region PolicyAssignment
+        /// <summary><p><em>Sets <see cref="AzurePolicyEventListSettings.PolicyAssignment"/>.</em></p><p>Name of policy assignment.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings SetPolicyAssignment(this AzurePolicyEventListSettings toolSettings, string policyAssignment)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PolicyAssignment = policyAssignment;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyEventListSettings.PolicyAssignment"/>.</em></p><p>Name of policy assignment.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings ResetPolicyAssignment(this AzurePolicyEventListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PolicyAssignment = null;
+            return toolSettings;
+        }
+        #endregion
+        #region PolicyDefinition
+        /// <summary><p><em>Sets <see cref="AzurePolicyEventListSettings.PolicyDefinition"/>.</em></p><p>Name of policy definition.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings SetPolicyDefinition(this AzurePolicyEventListSettings toolSettings, string policyDefinition)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PolicyDefinition = policyDefinition;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyEventListSettings.PolicyDefinition"/>.</em></p><p>Name of policy definition.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings ResetPolicyDefinition(this AzurePolicyEventListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PolicyDefinition = null;
+            return toolSettings;
+        }
+        #endregion
+        #region PolicySetDefinition
+        /// <summary><p><em>Sets <see cref="AzurePolicyEventListSettings.PolicySetDefinition"/>.</em></p><p>Name of policy set definition.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings SetPolicySetDefinition(this AzurePolicyEventListSettings toolSettings, string policySetDefinition)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PolicySetDefinition = policySetDefinition;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyEventListSettings.PolicySetDefinition"/>.</em></p><p>Name of policy set definition.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings ResetPolicySetDefinition(this AzurePolicyEventListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PolicySetDefinition = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzurePolicyEventListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings SetResourceGroup(this AzurePolicyEventListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyEventListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings ResetResourceGroup(this AzurePolicyEventListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzurePolicyEventListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings SetDebug(this AzurePolicyEventListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyEventListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings ResetDebug(this AzurePolicyEventListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzurePolicyEventListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings SetHelp(this AzurePolicyEventListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyEventListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings ResetHelp(this AzurePolicyEventListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzurePolicyEventListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings SetOutput(this AzurePolicyEventListSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyEventListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings ResetOutput(this AzurePolicyEventListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzurePolicyEventListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings SetQuery(this AzurePolicyEventListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyEventListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings ResetQuery(this AzurePolicyEventListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzurePolicyEventListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings SetVerbose(this AzurePolicyEventListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyEventListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzurePolicyEventListSettings ResetVerbose(this AzurePolicyEventListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzurePolicySetDefinitionCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzurePolicyTasks"/>.</p></summary>
     [PublicAPI]
@@ -3200,6 +3853,742 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzurePolicySetDefinitionUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzurePolicySetDefinitionUpdateSettings ResetVerbose(this AzurePolicySetDefinitionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzurePolicyStateListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzurePolicyTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzurePolicyStateListSettingsExtensions
+    {
+        #region All
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateListSettings.All"/>.</em></p><p>Within the specified time interval, get all policy states instead of the latest only.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings SetAll(this AzurePolicyStateListSettings toolSettings, string all)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.All = all;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateListSettings.All"/>.</em></p><p>Within the specified time interval, get all policy states instead of the latest only.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings ResetAll(this AzurePolicyStateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.All = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Apply
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateListSettings.Apply"/>.</em></p><p>Apply expression for aggregations using OData notation.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings SetApply(this AzurePolicyStateListSettings toolSettings, string apply)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Apply = apply;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateListSettings.Apply"/>.</em></p><p>Apply expression for aggregations using OData notation.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings ResetApply(this AzurePolicyStateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Apply = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Filter
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateListSettings.Filter"/>.</em></p><p>Filter expression using OData notation.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings SetFilter(this AzurePolicyStateListSettings toolSettings, string filter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Filter = filter;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateListSettings.Filter"/>.</em></p><p>Filter expression using OData notation.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings ResetFilter(this AzurePolicyStateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Filter = null;
+            return toolSettings;
+        }
+        #endregion
+        #region From
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateListSettings.From"/>.</em></p><p>ISO 8601 formatted timestamp specifying the start time of the interval to query.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings SetFrom(this AzurePolicyStateListSettings toolSettings, string from)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.From = from;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateListSettings.From"/>.</em></p><p>ISO 8601 formatted timestamp specifying the start time of the interval to query.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings ResetFrom(this AzurePolicyStateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.From = null;
+            return toolSettings;
+        }
+        #endregion
+        #region OrderBy
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateListSettings.OrderBy"/>.</em></p><p>Ordering expression using OData notation.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings SetOrderBy(this AzurePolicyStateListSettings toolSettings, string orderBy)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OrderBy = orderBy;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateListSettings.OrderBy"/>.</em></p><p>Ordering expression using OData notation.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings ResetOrderBy(this AzurePolicyStateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OrderBy = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Select
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateListSettings.Select"/>.</em></p><p>Select expression using OData notation.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings SetSelect(this AzurePolicyStateListSettings toolSettings, string select)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Select = select;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateListSettings.Select"/>.</em></p><p>Select expression using OData notation.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings ResetSelect(this AzurePolicyStateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Select = null;
+            return toolSettings;
+        }
+        #endregion
+        #region To
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateListSettings.To"/>.</em></p><p>ISO 8601 formatted timestamp specifying the end time of the interval to query.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings SetTo(this AzurePolicyStateListSettings toolSettings, string to)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.To = to;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateListSettings.To"/>.</em></p><p>ISO 8601 formatted timestamp specifying the end time of the interval to query.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings ResetTo(this AzurePolicyStateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.To = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Top
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateListSettings.Top"/>.</em></p><p>Maximum number of records to return.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings SetTop(this AzurePolicyStateListSettings toolSettings, string top)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = top;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateListSettings.Top"/>.</em></p><p>Maximum number of records to return.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings ResetTop(this AzurePolicyStateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Namespace
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateListSettings.Namespace"/>.</em></p><p>Provider namespace (Ex: Microsoft.Provider).</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings SetNamespace(this AzurePolicyStateListSettings toolSettings, string @namespace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Namespace = @namespace;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateListSettings.Namespace"/>.</em></p><p>Provider namespace (Ex: Microsoft.Provider).</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings ResetNamespace(this AzurePolicyStateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Namespace = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Parent
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateListSettings.Parent"/>.</em></p><p>The parent path (Ex: resA/myA/resB/myB).</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings SetParent(this AzurePolicyStateListSettings toolSettings, string parent)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Parent = parent;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateListSettings.Parent"/>.</em></p><p>The parent path (Ex: resA/myA/resB/myB).</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings ResetParent(this AzurePolicyStateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Parent = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Resource
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateListSettings.Resource"/>.</em></p><p>Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings SetResource(this AzurePolicyStateListSettings toolSettings, string resource)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Resource = resource;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateListSettings.Resource"/>.</em></p><p>Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings ResetResource(this AzurePolicyStateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Resource = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceType
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateListSettings.ResourceType"/>.</em></p><p>Resource type (Ex: resC).</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings SetResourceType(this AzurePolicyStateListSettings toolSettings, string resourceType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceType = resourceType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateListSettings.ResourceType"/>.</em></p><p>Resource type (Ex: resC).</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings ResetResourceType(this AzurePolicyStateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ManagementGroup
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateListSettings.ManagementGroup"/>.</em></p><p>Name of management group.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings SetManagementGroup(this AzurePolicyStateListSettings toolSettings, string managementGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagementGroup = managementGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateListSettings.ManagementGroup"/>.</em></p><p>Name of management group.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings ResetManagementGroup(this AzurePolicyStateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagementGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region PolicyAssignment
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateListSettings.PolicyAssignment"/>.</em></p><p>Name of policy assignment.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings SetPolicyAssignment(this AzurePolicyStateListSettings toolSettings, string policyAssignment)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PolicyAssignment = policyAssignment;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateListSettings.PolicyAssignment"/>.</em></p><p>Name of policy assignment.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings ResetPolicyAssignment(this AzurePolicyStateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PolicyAssignment = null;
+            return toolSettings;
+        }
+        #endregion
+        #region PolicyDefinition
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateListSettings.PolicyDefinition"/>.</em></p><p>Name of policy definition.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings SetPolicyDefinition(this AzurePolicyStateListSettings toolSettings, string policyDefinition)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PolicyDefinition = policyDefinition;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateListSettings.PolicyDefinition"/>.</em></p><p>Name of policy definition.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings ResetPolicyDefinition(this AzurePolicyStateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PolicyDefinition = null;
+            return toolSettings;
+        }
+        #endregion
+        #region PolicySetDefinition
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateListSettings.PolicySetDefinition"/>.</em></p><p>Name of policy set definition.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings SetPolicySetDefinition(this AzurePolicyStateListSettings toolSettings, string policySetDefinition)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PolicySetDefinition = policySetDefinition;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateListSettings.PolicySetDefinition"/>.</em></p><p>Name of policy set definition.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings ResetPolicySetDefinition(this AzurePolicyStateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PolicySetDefinition = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings SetResourceGroup(this AzurePolicyStateListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings ResetResourceGroup(this AzurePolicyStateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings SetDebug(this AzurePolicyStateListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings ResetDebug(this AzurePolicyStateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings SetHelp(this AzurePolicyStateListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings ResetHelp(this AzurePolicyStateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings SetOutput(this AzurePolicyStateListSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings ResetOutput(this AzurePolicyStateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings SetQuery(this AzurePolicyStateListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings ResetQuery(this AzurePolicyStateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings SetVerbose(this AzurePolicyStateListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzurePolicyStateListSettings ResetVerbose(this AzurePolicyStateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzurePolicyStateSummarizeSettingsExtensions
+    /// <summary><p>Used within <see cref="AzurePolicyTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzurePolicyStateSummarizeSettingsExtensions
+    {
+        #region Filter
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateSummarizeSettings.Filter"/>.</em></p><p>Filter expression using OData notation.</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings SetFilter(this AzurePolicyStateSummarizeSettings toolSettings, string filter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Filter = filter;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateSummarizeSettings.Filter"/>.</em></p><p>Filter expression using OData notation.</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings ResetFilter(this AzurePolicyStateSummarizeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Filter = null;
+            return toolSettings;
+        }
+        #endregion
+        #region From
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateSummarizeSettings.From"/>.</em></p><p>ISO 8601 formatted timestamp specifying the start time of the interval to query.</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings SetFrom(this AzurePolicyStateSummarizeSettings toolSettings, string from)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.From = from;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateSummarizeSettings.From"/>.</em></p><p>ISO 8601 formatted timestamp specifying the start time of the interval to query.</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings ResetFrom(this AzurePolicyStateSummarizeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.From = null;
+            return toolSettings;
+        }
+        #endregion
+        #region To
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateSummarizeSettings.To"/>.</em></p><p>ISO 8601 formatted timestamp specifying the end time of the interval to query.</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings SetTo(this AzurePolicyStateSummarizeSettings toolSettings, string to)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.To = to;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateSummarizeSettings.To"/>.</em></p><p>ISO 8601 formatted timestamp specifying the end time of the interval to query.</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings ResetTo(this AzurePolicyStateSummarizeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.To = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Top
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateSummarizeSettings.Top"/>.</em></p><p>Maximum number of records to return.</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings SetTop(this AzurePolicyStateSummarizeSettings toolSettings, string top)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = top;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateSummarizeSettings.Top"/>.</em></p><p>Maximum number of records to return.</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings ResetTop(this AzurePolicyStateSummarizeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Namespace
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateSummarizeSettings.Namespace"/>.</em></p><p>Provider namespace (Ex: Microsoft.Provider).</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings SetNamespace(this AzurePolicyStateSummarizeSettings toolSettings, string @namespace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Namespace = @namespace;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateSummarizeSettings.Namespace"/>.</em></p><p>Provider namespace (Ex: Microsoft.Provider).</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings ResetNamespace(this AzurePolicyStateSummarizeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Namespace = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Parent
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateSummarizeSettings.Parent"/>.</em></p><p>The parent path (Ex: resA/myA/resB/myB).</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings SetParent(this AzurePolicyStateSummarizeSettings toolSettings, string parent)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Parent = parent;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateSummarizeSettings.Parent"/>.</em></p><p>The parent path (Ex: resA/myA/resB/myB).</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings ResetParent(this AzurePolicyStateSummarizeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Parent = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Resource
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateSummarizeSettings.Resource"/>.</em></p><p>Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments.</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings SetResource(this AzurePolicyStateSummarizeSettings toolSettings, string resource)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Resource = resource;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateSummarizeSettings.Resource"/>.</em></p><p>Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments.</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings ResetResource(this AzurePolicyStateSummarizeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Resource = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceType
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateSummarizeSettings.ResourceType"/>.</em></p><p>Resource type (Ex: resC).</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings SetResourceType(this AzurePolicyStateSummarizeSettings toolSettings, string resourceType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceType = resourceType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateSummarizeSettings.ResourceType"/>.</em></p><p>Resource type (Ex: resC).</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings ResetResourceType(this AzurePolicyStateSummarizeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ManagementGroup
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateSummarizeSettings.ManagementGroup"/>.</em></p><p>Name of management group.</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings SetManagementGroup(this AzurePolicyStateSummarizeSettings toolSettings, string managementGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagementGroup = managementGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateSummarizeSettings.ManagementGroup"/>.</em></p><p>Name of management group.</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings ResetManagementGroup(this AzurePolicyStateSummarizeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagementGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region PolicyAssignment
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateSummarizeSettings.PolicyAssignment"/>.</em></p><p>Name of policy assignment.</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings SetPolicyAssignment(this AzurePolicyStateSummarizeSettings toolSettings, string policyAssignment)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PolicyAssignment = policyAssignment;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateSummarizeSettings.PolicyAssignment"/>.</em></p><p>Name of policy assignment.</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings ResetPolicyAssignment(this AzurePolicyStateSummarizeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PolicyAssignment = null;
+            return toolSettings;
+        }
+        #endregion
+        #region PolicyDefinition
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateSummarizeSettings.PolicyDefinition"/>.</em></p><p>Name of policy definition.</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings SetPolicyDefinition(this AzurePolicyStateSummarizeSettings toolSettings, string policyDefinition)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PolicyDefinition = policyDefinition;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateSummarizeSettings.PolicyDefinition"/>.</em></p><p>Name of policy definition.</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings ResetPolicyDefinition(this AzurePolicyStateSummarizeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PolicyDefinition = null;
+            return toolSettings;
+        }
+        #endregion
+        #region PolicySetDefinition
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateSummarizeSettings.PolicySetDefinition"/>.</em></p><p>Name of policy set definition.</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings SetPolicySetDefinition(this AzurePolicyStateSummarizeSettings toolSettings, string policySetDefinition)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PolicySetDefinition = policySetDefinition;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateSummarizeSettings.PolicySetDefinition"/>.</em></p><p>Name of policy set definition.</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings ResetPolicySetDefinition(this AzurePolicyStateSummarizeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PolicySetDefinition = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateSummarizeSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings SetResourceGroup(this AzurePolicyStateSummarizeSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateSummarizeSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings ResetResourceGroup(this AzurePolicyStateSummarizeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateSummarizeSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings SetDebug(this AzurePolicyStateSummarizeSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateSummarizeSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings ResetDebug(this AzurePolicyStateSummarizeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateSummarizeSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings SetHelp(this AzurePolicyStateSummarizeSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateSummarizeSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings ResetHelp(this AzurePolicyStateSummarizeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateSummarizeSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings SetOutput(this AzurePolicyStateSummarizeSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateSummarizeSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings ResetOutput(this AzurePolicyStateSummarizeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateSummarizeSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings SetQuery(this AzurePolicyStateSummarizeSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateSummarizeSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings ResetQuery(this AzurePolicyStateSummarizeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzurePolicyStateSummarizeSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings SetVerbose(this AzurePolicyStateSummarizeSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePolicyStateSummarizeSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzurePolicyStateSummarizeSettings ResetVerbose(this AzurePolicyStateSummarizeSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

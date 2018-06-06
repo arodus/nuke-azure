@@ -6,11 +6,11 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/batchai.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/batchai/cluster.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/batchai/file-server.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/batchai/job.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/batchai/job/file.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/batchai.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/batchai/cluster.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/batchai/file-server.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/batchai/job.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/batchai/job/file.yml"
   ],
   "name": "AzureBatchai",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest",
@@ -174,7 +174,7 @@
             "name": "Image",
             "type": "string",
             "format": "--image {value}",
-            "help": "Operation system image for cluster nodes. The value may contain an alias (UbuntuDSVM, UbuntuLTS) or specify image details in the form \"publisher:offer:sku:version\". If image configuration is not provided via command line or configuration file, Batch AI will choose default OS image."
+            "help": "Operation system image for cluster nodes. The value may contain an alias (UbuntuLTS, UbuntuDSVM) or specify image details in the form \"publisher:offer:sku:version\". If image configuration is not provided via command line or configuration file, Batch AI will choose default OS image."
           },
           {
             "name": "Max",

@@ -6,39 +6,39 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/account.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/blob.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/container.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/cors.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/directory.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/entity.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/file.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/logging.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/message.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/metrics.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/queue.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/share.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/table.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/account/keys.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/account/network-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/blob/copy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/blob/incremental-copy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/blob/lease.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/blob/metadata.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/blob/service-properties.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/blob/service-properties/delete-policy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/container/lease.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/container/metadata.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/container/policy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/directory/metadata.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/file/copy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/file/metadata.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/queue/metadata.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/queue/policy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/share/metadata.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/share/policy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/storage/table/policy.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/account.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/blob.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/container.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/cors.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/directory.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/entity.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/file.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/logging.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/message.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/metrics.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/queue.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/share.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/table.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/account/keys.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/account/network-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/blob/copy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/blob/incremental-copy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/blob/lease.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/blob/metadata.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/blob/service-properties.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/container/lease.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/container/metadata.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/container/policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/directory/metadata.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/file/copy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/file/metadata.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/queue/metadata.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/queue/policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/share/metadata.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/share/policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/table/policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/storage/blob/service-properties/delete-policy.yml"
   ],
   "name": "AzureStorage",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest",
@@ -7272,88 +7272,6 @@
       }
     },
     {
-      "postfix": "BlobServicePropertiesDeletePolicyShow",
-      "definiteArgument": "storage blob service-properties delete-policy show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Timeout",
-            "type": "string",
-            "format": "--timeout {value}",
-            "help": "Request timeout in seconds. Applies to each call to the service."
-          },
-          {
-            "name": "AccountKey",
-            "type": "string",
-            "format": "--account-key {value}",
-            "help": "Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY."
-          },
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "Storage account name. Related environment variable: AZURE_STORAGE_ACCOUNT. Must be used in conjunction with either storage account key or a SAS token. If neither are present, the command will try to query the storage account key using the authenticated Azure account. If a large number of storage commands are executed the API quota may be hit."
-          },
-          {
-            "name": "ConnectionString",
-            "type": "string",
-            "format": "--connection-string {value}",
-            "help": "Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING."
-          },
-          {
-            "name": "SasToken",
-            "type": "string",
-            "format": "--sas-token {value}",
-            "help": "A Shared Access Signature (SAS). Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_SAS_TOKEN."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "BlobServicePropertiesDeletePolicyUpdate",
-      "definiteArgument": "storage blob service-properties delete-policy update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "DaysRetained",
-            "type": "int",
-            "format": "--days-retained {value}",
-            "help": "Number of days that soft-deleted blob will be retained. Must be in range [1,365]."
-          },
-          {
-            "name": "Enable",
-            "type": "bool",
-            "format": "--enable",
-            "help": "Enables/disables soft-delete."
-          },
-          {
-            "name": "AccountKey",
-            "type": "string",
-            "format": "--account-key {value}",
-            "help": "Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY."
-          },
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "Storage account name. Related environment variable: AZURE_STORAGE_ACCOUNT. Must be used in conjunction with either storage account key or a SAS token. If neither are present, the command will try to query the storage account key using the authenticated Azure account. If a large number of storage commands are executed the API quota may be hit."
-          },
-          {
-            "name": "ConnectionString",
-            "type": "string",
-            "format": "--connection-string {value}",
-            "help": "Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING."
-          },
-          {
-            "name": "SasToken",
-            "type": "string",
-            "format": "--sas-token {value}",
-            "help": "A Shared Access Signature (SAS). Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_SAS_TOKEN."
-          }
-        ]
-      }
-    },
-    {
       "postfix": "ContainerLeaseAcquire",
       "definiteArgument": "storage container lease acquire",
       "settingsClass": {
@@ -9491,6 +9409,88 @@
             "type": "string",
             "format": "--start {value}",
             "help": "Start UTC datetime (Y-m-d'T'H:M:S'Z'). Defaults to time of request."
+          },
+          {
+            "name": "AccountKey",
+            "type": "string",
+            "format": "--account-key {value}",
+            "help": "Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "Storage account name. Related environment variable: AZURE_STORAGE_ACCOUNT. Must be used in conjunction with either storage account key or a SAS token. If neither are present, the command will try to query the storage account key using the authenticated Azure account. If a large number of storage commands are executed the API quota may be hit."
+          },
+          {
+            "name": "ConnectionString",
+            "type": "string",
+            "format": "--connection-string {value}",
+            "help": "Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING."
+          },
+          {
+            "name": "SasToken",
+            "type": "string",
+            "format": "--sas-token {value}",
+            "help": "A Shared Access Signature (SAS). Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_SAS_TOKEN."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "BlobServicePropertiesDeletePolicyShow",
+      "definiteArgument": "storage blob service-properties delete-policy show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Timeout",
+            "type": "string",
+            "format": "--timeout {value}",
+            "help": "Request timeout in seconds. Applies to each call to the service."
+          },
+          {
+            "name": "AccountKey",
+            "type": "string",
+            "format": "--account-key {value}",
+            "help": "Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "Storage account name. Related environment variable: AZURE_STORAGE_ACCOUNT. Must be used in conjunction with either storage account key or a SAS token. If neither are present, the command will try to query the storage account key using the authenticated Azure account. If a large number of storage commands are executed the API quota may be hit."
+          },
+          {
+            "name": "ConnectionString",
+            "type": "string",
+            "format": "--connection-string {value}",
+            "help": "Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING."
+          },
+          {
+            "name": "SasToken",
+            "type": "string",
+            "format": "--sas-token {value}",
+            "help": "A Shared Access Signature (SAS). Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_SAS_TOKEN."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "BlobServicePropertiesDeletePolicyUpdate",
+      "definiteArgument": "storage blob service-properties delete-policy update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DaysRetained",
+            "type": "int",
+            "format": "--days-retained {value}",
+            "help": "Number of days that soft-deleted blob will be retained. Must be in range [1,365]."
+          },
+          {
+            "name": "Enable",
+            "type": "bool",
+            "format": "--enable",
+            "help": "Enables/disables soft-delete."
           },
           {
             "name": "AccountKey",

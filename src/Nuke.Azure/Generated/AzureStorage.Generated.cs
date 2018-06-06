@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0 [CommitSha: 3eaf2b72].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureStorage.json.
 
 using JetBrains.Annotations;
@@ -1233,28 +1233,6 @@ namespace Nuke.Azure
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
-        static partial void PreProcess(AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings);
-        static partial void PostProcess(AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureStorageBlobServicePropertiesDeletePolicyShow(Configure<AzureStorageBlobServicePropertiesDeletePolicyShowSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureStorageBlobServicePropertiesDeletePolicyShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings);
-        static partial void PostProcess(AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureStorageBlobServicePropertiesDeletePolicyUpdate(Configure<AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
         static partial void PreProcess(AzureStorageContainerLeaseAcquireSettings toolSettings);
         static partial void PostProcess(AzureStorageContainerLeaseAcquireSettings toolSettings);
         /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
@@ -1668,6 +1646,28 @@ namespace Nuke.Azure
         public static void AzureStorageTablePolicyUpdate(Configure<AzureStorageTablePolicyUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureStorageTablePolicyUpdateSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings);
+        static partial void PostProcess(AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings);
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureStorageBlobServicePropertiesDeletePolicyShow(Configure<AzureStorageBlobServicePropertiesDeletePolicyShowSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureStorageBlobServicePropertiesDeletePolicyShowSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings);
+        static partial void PostProcess(AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings);
+        /// <summary><p>Manage Azure Cloud Storage resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/storage?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureStorageBlobServicePropertiesDeletePolicyUpdate(Configure<AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings());
             PreProcess(toolSettings);
             var process = ProcessTasks.StartProcess(toolSettings, processSettings);
             process.AssertZeroExitCode();
@@ -8345,103 +8345,6 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureStorageBlobServicePropertiesDeletePolicyShowSettings
-    /// <summary><p>Used within <see cref="AzureStorageTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureStorageBlobServicePropertiesDeletePolicyShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureStorage executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
-        /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
-        public virtual string Timeout { get; internal set; }
-        /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
-        public virtual string AccountKey { get; internal set; }
-        /// <summary><p>Storage account name. Related environment variable: AZURE_STORAGE_ACCOUNT. Must be used in conjunction with either storage account key or a SAS token. If neither are present, the command will try to query the storage account key using the authenticated Azure account. If a large number of storage commands are executed the API quota may be hit.</p></summary>
-        public virtual string AccountName { get; internal set; }
-        /// <summary><p>Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.</p></summary>
-        public virtual string ConnectionString { get; internal set; }
-        /// <summary><p>A Shared Access Signature (SAS). Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_SAS_TOKEN.</p></summary>
-        public virtual string SasToken { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("storage blob service-properties delete-policy show")
-              .Add("--timeout {value}", Timeout)
-              .Add("--account-key {value}", AccountKey)
-              .Add("--account-name {value}", AccountName)
-              .Add("--connection-string {value}", ConnectionString)
-              .Add("--sas-token {value}", SasToken)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings
-    /// <summary><p>Used within <see cref="AzureStorageTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureStorage executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
-        /// <summary><p>Number of days that soft-deleted blob will be retained. Must be in range [1,365].</p></summary>
-        public virtual int? DaysRetained { get; internal set; }
-        /// <summary><p>Enables/disables soft-delete.</p></summary>
-        public virtual bool? Enable { get; internal set; }
-        /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
-        public virtual string AccountKey { get; internal set; }
-        /// <summary><p>Storage account name. Related environment variable: AZURE_STORAGE_ACCOUNT. Must be used in conjunction with either storage account key or a SAS token. If neither are present, the command will try to query the storage account key using the authenticated Azure account. If a large number of storage commands are executed the API quota may be hit.</p></summary>
-        public virtual string AccountName { get; internal set; }
-        /// <summary><p>Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.</p></summary>
-        public virtual string ConnectionString { get; internal set; }
-        /// <summary><p>A Shared Access Signature (SAS). Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_SAS_TOKEN.</p></summary>
-        public virtual string SasToken { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("storage blob service-properties delete-policy update")
-              .Add("--days-retained {value}", DaysRetained)
-              .Add("--enable", Enable)
-              .Add("--account-key {value}", AccountKey)
-              .Add("--account-name {value}", AccountName)
-              .Add("--connection-string {value}", ConnectionString)
-              .Add("--sas-token {value}", SasToken)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
     #region AzureStorageContainerLeaseAcquireSettings
     /// <summary><p>Used within <see cref="AzureStorageTasks"/>.</p></summary>
     [PublicAPI]
@@ -10576,6 +10479,103 @@ namespace Nuke.Azure
               .Add("--expiry {value}", Expiry)
               .Add("--permissions {value}", Permissions)
               .Add("--start {value}", Start)
+              .Add("--account-key {value}", AccountKey)
+              .Add("--account-name {value}", AccountName)
+              .Add("--connection-string {value}", ConnectionString)
+              .Add("--sas-token {value}", SasToken)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureStorageBlobServicePropertiesDeletePolicyShowSettings
+    /// <summary><p>Used within <see cref="AzureStorageTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureStorageBlobServicePropertiesDeletePolicyShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureStorage executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
+        /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
+        public virtual string Timeout { get; internal set; }
+        /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
+        public virtual string AccountKey { get; internal set; }
+        /// <summary><p>Storage account name. Related environment variable: AZURE_STORAGE_ACCOUNT. Must be used in conjunction with either storage account key or a SAS token. If neither are present, the command will try to query the storage account key using the authenticated Azure account. If a large number of storage commands are executed the API quota may be hit.</p></summary>
+        public virtual string AccountName { get; internal set; }
+        /// <summary><p>Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.</p></summary>
+        public virtual string ConnectionString { get; internal set; }
+        /// <summary><p>A Shared Access Signature (SAS). Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_SAS_TOKEN.</p></summary>
+        public virtual string SasToken { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("storage blob service-properties delete-policy show")
+              .Add("--timeout {value}", Timeout)
+              .Add("--account-key {value}", AccountKey)
+              .Add("--account-name {value}", AccountName)
+              .Add("--connection-string {value}", ConnectionString)
+              .Add("--sas-token {value}", SasToken)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings
+    /// <summary><p>Used within <see cref="AzureStorageTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureStorage executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
+        /// <summary><p>Number of days that soft-deleted blob will be retained. Must be in range [1,365].</p></summary>
+        public virtual int? DaysRetained { get; internal set; }
+        /// <summary><p>Enables/disables soft-delete.</p></summary>
+        public virtual bool? Enable { get; internal set; }
+        /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
+        public virtual string AccountKey { get; internal set; }
+        /// <summary><p>Storage account name. Related environment variable: AZURE_STORAGE_ACCOUNT. Must be used in conjunction with either storage account key or a SAS token. If neither are present, the command will try to query the storage account key using the authenticated Azure account. If a large number of storage commands are executed the API quota may be hit.</p></summary>
+        public virtual string AccountName { get; internal set; }
+        /// <summary><p>Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.</p></summary>
+        public virtual string ConnectionString { get; internal set; }
+        /// <summary><p>A Shared Access Signature (SAS). Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_SAS_TOKEN.</p></summary>
+        public virtual string SasToken { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("storage blob service-properties delete-policy update")
+              .Add("--days-retained {value}", DaysRetained)
+              .Add("--enable", Enable)
               .Add("--account-key {value}", AccountKey)
               .Add("--account-name {value}", AccountName)
               .Add("--connection-string {value}", ConnectionString)
@@ -41191,424 +41191,6 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureStorageBlobServicePropertiesDeletePolicyShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureStorageTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureStorageBlobServicePropertiesDeletePolicyShowSettingsExtensions
-    {
-        #region Timeout
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.Timeout"/>.</em></p><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings SetTimeout(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings, string timeout)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Timeout = timeout;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.Timeout"/>.</em></p><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings ResetTimeout(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Timeout = null;
-            return toolSettings;
-        }
-        #endregion
-        #region AccountKey
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.AccountKey"/>.</em></p><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings SetAccountKey(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings, string accountKey)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AccountKey = accountKey;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.AccountKey"/>.</em></p><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings ResetAccountKey(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AccountKey = null;
-            return toolSettings;
-        }
-        #endregion
-        #region AccountName
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.AccountName"/>.</em></p><p>Storage account name. Related environment variable: AZURE_STORAGE_ACCOUNT. Must be used in conjunction with either storage account key or a SAS token. If neither are present, the command will try to query the storage account key using the authenticated Azure account. If a large number of storage commands are executed the API quota may be hit.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings SetAccountName(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings, string accountName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AccountName = accountName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.AccountName"/>.</em></p><p>Storage account name. Related environment variable: AZURE_STORAGE_ACCOUNT. Must be used in conjunction with either storage account key or a SAS token. If neither are present, the command will try to query the storage account key using the authenticated Azure account. If a large number of storage commands are executed the API quota may be hit.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings ResetAccountName(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AccountName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ConnectionString
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.ConnectionString"/>.</em></p><p>Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings SetConnectionString(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings, string connectionString)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ConnectionString = connectionString;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.ConnectionString"/>.</em></p><p>Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings ResetConnectionString(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ConnectionString = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SasToken
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.SasToken"/>.</em></p><p>A Shared Access Signature (SAS). Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_SAS_TOKEN.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings SetSasToken(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings, string sasToken)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SasToken = sasToken;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.SasToken"/>.</em></p><p>A Shared Access Signature (SAS). Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_SAS_TOKEN.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings ResetSasToken(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SasToken = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings SetDebug(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings ResetDebug(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings SetHelp(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings ResetHelp(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings SetOutput(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings ResetOutput(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings SetQuery(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings ResetQuery(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings SetVerbose(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings ResetVerbose(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureStorageBlobServicePropertiesDeletePolicyUpdateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureStorageTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureStorageBlobServicePropertiesDeletePolicyUpdateSettingsExtensions
-    {
-        #region DaysRetained
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.DaysRetained"/>.</em></p><p>Number of days that soft-deleted blob will be retained. Must be in range [1,365].</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings SetDaysRetained(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings, int? daysRetained)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DaysRetained = daysRetained;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.DaysRetained"/>.</em></p><p>Number of days that soft-deleted blob will be retained. Must be in range [1,365].</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings ResetDaysRetained(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DaysRetained = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Enable
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.Enable"/>.</em></p><p>Enables/disables soft-delete.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings SetEnable(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings, bool? enable)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Enable = enable;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.Enable"/>.</em></p><p>Enables/disables soft-delete.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings ResetEnable(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Enable = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.Enable"/>.</em></p><p>Enables/disables soft-delete.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings EnableEnable(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Enable = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.Enable"/>.</em></p><p>Enables/disables soft-delete.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings DisableEnable(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Enable = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.Enable"/>.</em></p><p>Enables/disables soft-delete.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings ToggleEnable(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Enable = !toolSettings.Enable;
-            return toolSettings;
-        }
-        #endregion
-        #region AccountKey
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.AccountKey"/>.</em></p><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings SetAccountKey(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings, string accountKey)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AccountKey = accountKey;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.AccountKey"/>.</em></p><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings ResetAccountKey(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AccountKey = null;
-            return toolSettings;
-        }
-        #endregion
-        #region AccountName
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.AccountName"/>.</em></p><p>Storage account name. Related environment variable: AZURE_STORAGE_ACCOUNT. Must be used in conjunction with either storage account key or a SAS token. If neither are present, the command will try to query the storage account key using the authenticated Azure account. If a large number of storage commands are executed the API quota may be hit.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings SetAccountName(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings, string accountName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AccountName = accountName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.AccountName"/>.</em></p><p>Storage account name. Related environment variable: AZURE_STORAGE_ACCOUNT. Must be used in conjunction with either storage account key or a SAS token. If neither are present, the command will try to query the storage account key using the authenticated Azure account. If a large number of storage commands are executed the API quota may be hit.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings ResetAccountName(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AccountName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ConnectionString
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.ConnectionString"/>.</em></p><p>Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings SetConnectionString(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings, string connectionString)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ConnectionString = connectionString;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.ConnectionString"/>.</em></p><p>Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings ResetConnectionString(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ConnectionString = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SasToken
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.SasToken"/>.</em></p><p>A Shared Access Signature (SAS). Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_SAS_TOKEN.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings SetSasToken(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings, string sasToken)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SasToken = sasToken;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.SasToken"/>.</em></p><p>A Shared Access Signature (SAS). Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_SAS_TOKEN.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings ResetSasToken(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SasToken = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings SetDebug(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings ResetDebug(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings SetHelp(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings ResetHelp(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings SetOutput(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings ResetOutput(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings SetQuery(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings ResetQuery(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings SetVerbose(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings ResetVerbose(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region AzureStorageContainerLeaseAcquireSettingsExtensions
     /// <summary><p>Used within <see cref="AzureStorageTasks"/>.</p></summary>
     [PublicAPI]
@@ -51037,6 +50619,424 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureStorageTablePolicyUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureStorageTablePolicyUpdateSettings ResetVerbose(this AzureStorageTablePolicyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureStorageBlobServicePropertiesDeletePolicyShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureStorageTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureStorageBlobServicePropertiesDeletePolicyShowSettingsExtensions
+    {
+        #region Timeout
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.Timeout"/>.</em></p><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings SetTimeout(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings, string timeout)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Timeout = timeout;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.Timeout"/>.</em></p><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings ResetTimeout(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Timeout = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AccountKey
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.AccountKey"/>.</em></p><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings SetAccountKey(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings, string accountKey)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountKey = accountKey;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.AccountKey"/>.</em></p><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings ResetAccountKey(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountKey = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AccountName
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.AccountName"/>.</em></p><p>Storage account name. Related environment variable: AZURE_STORAGE_ACCOUNT. Must be used in conjunction with either storage account key or a SAS token. If neither are present, the command will try to query the storage account key using the authenticated Azure account. If a large number of storage commands are executed the API quota may be hit.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings SetAccountName(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings, string accountName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = accountName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.AccountName"/>.</em></p><p>Storage account name. Related environment variable: AZURE_STORAGE_ACCOUNT. Must be used in conjunction with either storage account key or a SAS token. If neither are present, the command will try to query the storage account key using the authenticated Azure account. If a large number of storage commands are executed the API quota may be hit.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings ResetAccountName(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ConnectionString
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.ConnectionString"/>.</em></p><p>Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings SetConnectionString(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings, string connectionString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ConnectionString = connectionString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.ConnectionString"/>.</em></p><p>Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings ResetConnectionString(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ConnectionString = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SasToken
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.SasToken"/>.</em></p><p>A Shared Access Signature (SAS). Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_SAS_TOKEN.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings SetSasToken(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings, string sasToken)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SasToken = sasToken;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.SasToken"/>.</em></p><p>A Shared Access Signature (SAS). Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_SAS_TOKEN.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings ResetSasToken(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SasToken = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings SetDebug(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings ResetDebug(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings SetHelp(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings ResetHelp(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings SetOutput(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings ResetOutput(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings SetQuery(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings ResetQuery(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings SetVerbose(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyShowSettings ResetVerbose(this AzureStorageBlobServicePropertiesDeletePolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureStorageBlobServicePropertiesDeletePolicyUpdateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureStorageTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureStorageBlobServicePropertiesDeletePolicyUpdateSettingsExtensions
+    {
+        #region DaysRetained
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.DaysRetained"/>.</em></p><p>Number of days that soft-deleted blob will be retained. Must be in range [1,365].</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings SetDaysRetained(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings, int? daysRetained)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DaysRetained = daysRetained;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.DaysRetained"/>.</em></p><p>Number of days that soft-deleted blob will be retained. Must be in range [1,365].</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings ResetDaysRetained(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DaysRetained = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Enable
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.Enable"/>.</em></p><p>Enables/disables soft-delete.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings SetEnable(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings, bool? enable)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Enable = enable;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.Enable"/>.</em></p><p>Enables/disables soft-delete.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings ResetEnable(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Enable = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.Enable"/>.</em></p><p>Enables/disables soft-delete.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings EnableEnable(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Enable = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.Enable"/>.</em></p><p>Enables/disables soft-delete.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings DisableEnable(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Enable = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.Enable"/>.</em></p><p>Enables/disables soft-delete.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings ToggleEnable(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Enable = !toolSettings.Enable;
+            return toolSettings;
+        }
+        #endregion
+        #region AccountKey
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.AccountKey"/>.</em></p><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings SetAccountKey(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings, string accountKey)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountKey = accountKey;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.AccountKey"/>.</em></p><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings ResetAccountKey(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountKey = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AccountName
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.AccountName"/>.</em></p><p>Storage account name. Related environment variable: AZURE_STORAGE_ACCOUNT. Must be used in conjunction with either storage account key or a SAS token. If neither are present, the command will try to query the storage account key using the authenticated Azure account. If a large number of storage commands are executed the API quota may be hit.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings SetAccountName(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings, string accountName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = accountName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.AccountName"/>.</em></p><p>Storage account name. Related environment variable: AZURE_STORAGE_ACCOUNT. Must be used in conjunction with either storage account key or a SAS token. If neither are present, the command will try to query the storage account key using the authenticated Azure account. If a large number of storage commands are executed the API quota may be hit.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings ResetAccountName(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ConnectionString
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.ConnectionString"/>.</em></p><p>Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings SetConnectionString(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings, string connectionString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ConnectionString = connectionString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.ConnectionString"/>.</em></p><p>Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings ResetConnectionString(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ConnectionString = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SasToken
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.SasToken"/>.</em></p><p>A Shared Access Signature (SAS). Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_SAS_TOKEN.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings SetSasToken(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings, string sasToken)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SasToken = sasToken;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.SasToken"/>.</em></p><p>A Shared Access Signature (SAS). Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_SAS_TOKEN.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings ResetSasToken(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SasToken = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings SetDebug(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings ResetDebug(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings SetHelp(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings ResetHelp(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings SetOutput(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings ResetOutput(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings SetQuery(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings ResetQuery(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings SetVerbose(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings ResetVerbose(this AzureStorageBlobServicePropertiesDeletePolicyUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

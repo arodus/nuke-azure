@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0 [CommitSha: 3eaf2b72].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureSql.json.
 
 using JetBrains.Annotations;
@@ -359,6 +359,116 @@ namespace Nuke.Azure
         public static void AzureSqlElasticPoolUpdate(Configure<AzureSqlElasticPoolUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSqlElasticPoolUpdateSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureSqlMiCreateSettings toolSettings);
+        static partial void PostProcess(AzureSqlMiCreateSettings toolSettings);
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureSqlMiCreate(Configure<AzureSqlMiCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureSqlMiCreateSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureSqlMiDeleteSettings toolSettings);
+        static partial void PostProcess(AzureSqlMiDeleteSettings toolSettings);
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureSqlMiDelete(Configure<AzureSqlMiDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureSqlMiDeleteSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureSqlMiListSettings toolSettings);
+        static partial void PostProcess(AzureSqlMiListSettings toolSettings);
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureSqlMiList(Configure<AzureSqlMiListSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureSqlMiListSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureSqlMiShowSettings toolSettings);
+        static partial void PostProcess(AzureSqlMiShowSettings toolSettings);
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureSqlMiShow(Configure<AzureSqlMiShowSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureSqlMiShowSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureSqlMiUpdateSettings toolSettings);
+        static partial void PostProcess(AzureSqlMiUpdateSettings toolSettings);
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureSqlMiUpdate(Configure<AzureSqlMiUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureSqlMiUpdateSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureSqlMidbCreateSettings toolSettings);
+        static partial void PostProcess(AzureSqlMidbCreateSettings toolSettings);
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureSqlMidbCreate(Configure<AzureSqlMidbCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureSqlMidbCreateSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureSqlMidbDeleteSettings toolSettings);
+        static partial void PostProcess(AzureSqlMidbDeleteSettings toolSettings);
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureSqlMidbDelete(Configure<AzureSqlMidbDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureSqlMidbDeleteSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureSqlMidbListSettings toolSettings);
+        static partial void PostProcess(AzureSqlMidbListSettings toolSettings);
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureSqlMidbList(Configure<AzureSqlMidbListSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureSqlMidbListSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureSqlMidbRestoreSettings toolSettings);
+        static partial void PostProcess(AzureSqlMidbRestoreSettings toolSettings);
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureSqlMidbRestore(Configure<AzureSqlMidbRestoreSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureSqlMidbRestoreSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureSqlMidbShowSettings toolSettings);
+        static partial void PostProcess(AzureSqlMidbShowSettings toolSettings);
+        /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureSqlMidbShow(Configure<AzureSqlMidbShowSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureSqlMidbShowSettings());
             PreProcess(toolSettings);
             var process = ProcessTasks.StartProcess(toolSettings, processSettings);
             process.AssertZeroExitCode();
@@ -987,14 +1097,22 @@ namespace Nuke.Azure
         public virtual string DestResourceGroup { get; internal set; }
         /// <summary><p>Name of the server to create the copy in. If unspecified, defaults to the origin server.</p></summary>
         public virtual string DestServer { get; internal set; }
-        /// <summary><p>Name of the elastic pool to create the new database in.</p></summary>
-        public virtual string ElasticPool { get; internal set; }
+        /// <summary><p>The license type to apply for this database.</p></summary>
+        public virtual SqlDbLicenseType LicenseType { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual string NoWait { get; internal set; }
-        /// <summary><p>Name of the service objective for the new database.</p></summary>
-        public virtual string ServiceObjective { get; internal set; }
-        /// <summary><p>Resource tags.</p></summary>
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
+        /// <summary><p>Specifies whether to enable zone redundancy.</p></summary>
+        public virtual bool? ZoneRedundant { get; internal set; }
+        /// <summary><p>The capacity component of the sku in integer number of DTUs or vcores.</p></summary>
+        public virtual string Capacity { get; internal set; }
+        /// <summary><p>The compute generation component of the sku (for vcore skus only). Allowed values include: Gen4, Gen5.</p></summary>
+        public virtual string Family { get; internal set; }
+        /// <summary><p>The name or resource id of the elastic pool to create the database in.</p></summary>
+        public virtual string ElasticPool { get; internal set; }
+        /// <summary><p>The service objective for the new database. For example: Basic, S0, P1, GP_Gen4_1, BC_Gen5_2.</p></summary>
+        public virtual string ServiceObjective { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1015,10 +1133,14 @@ namespace Nuke.Azure
               .Add("--server {value}", Server)
               .Add("--dest-resource-group {value}", DestResourceGroup)
               .Add("--dest-server {value}", DestServer)
-              .Add("--elastic-pool {value}", ElasticPool)
+              .Add("--license-type {value}", LicenseType)
               .Add("--no-wait {value}", NoWait)
-              .Add("--service-objective {value}", ServiceObjective)
               .Add("--tags {value}", Tags)
+              .Add("--zone-redundant", ZoneRedundant)
+              .Add("--capacity {value}", Capacity)
+              .Add("--family {value}", Family)
+              .Add("--elastic-pool {value}", ElasticPool)
+              .Add("--service-objective {value}", ServiceObjective)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1043,24 +1165,32 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of the Azure SQL server.</p></summary>
         public virtual string Server { get; internal set; }
-        /// <summary><p>The collation of the database. If createMode is not Default, this value is ignored.</p></summary>
-        public virtual string Collation { get; internal set; }
-        /// <summary><p>The edition of the database.</p></summary>
-        public virtual string Edition { get; internal set; }
-        /// <summary><p>The name of the elastic pool the database is in. If elasticPoolName and requestedServiceObjectiveName are both updated, the value of requestedServiceObjectiveName is ignored. Not supported for DataWarehouse edition.</p></summary>
-        public virtual string ElasticPool { get; internal set; }
-        /// <summary><p>The max storage size of the database. Only the following sizes are supported (in addition to limitations being placed on each edition): 100MB, 500MB, 1GB, 5GB, 10GB, 20GB, 30GB, 150GB, 200GB, 500GB. If no unit is specified, defaults to bytes (B).</p></summary>
+        /// <summary><p>The license type to apply for this database.</p></summary>
+        public virtual SqlDbLicenseType LicenseType { get; internal set; }
+        /// <summary><p>The max storage size. If no unit is specified, defaults to bytes (B).</p></summary>
         public virtual string MaxSize { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual string NoWait { get; internal set; }
-        /// <summary><p>Indicates the name of the sample schema to apply when creating this database. If createMode is not Default, this value is ignored. Not supported for DataWarehouse edition.</p></summary>
-        public virtual string SampleName { get; internal set; }
-        /// <summary><p>The name of the configured service level objective of the database. This is the service level objective that is in the process of being applied to the database. Once successfully updated, it will match the value of serviceLevelObjective property. To see possible values, query the capabilities API (/subscriptions/{subscriptionId}/providers/Microsoft.Sql/locations/{locationID}/capabilities) referred to by operationId: "Capabilities_ListByLocation." or use the Azure CLI command `az sql db list-editions --location &amp;lt;location&amp;gt; --query [].supportedServiceLevelObjectives[].name`.</p></summary>
-        public virtual string ServiceObjective { get; internal set; }
-        /// <summary><p>Resource tags.</p></summary>
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
-        /// <summary><p>Specifies whether to enable zone redundancy for the database.</p></summary>
+        /// <summary><p>Specifies whether to enable zone redundancy.</p></summary>
         public virtual bool? ZoneRedundant { get; internal set; }
+        /// <summary><p>Collation of the metadata catalog.</p></summary>
+        public virtual SqlDbCreateCatalogCollation CatalogCollation { get; internal set; }
+        /// <summary><p>The collation of the database.</p></summary>
+        public virtual string Collation { get; internal set; }
+        /// <summary><p>The name of the sample schema to apply when creating this database.</p></summary>
+        public virtual string SampleName { get; internal set; }
+        /// <summary><p>The capacity component of the sku in integer number of DTUs or vcores.</p></summary>
+        public virtual string Capacity { get; internal set; }
+        /// <summary><p>The edition component of the sku. Allowed values include: Basic, Standard, Premium, GeneralPurpose, BusinessCritical.</p></summary>
+        public virtual string Edition { get; internal set; }
+        /// <summary><p>The compute generation component of the sku (for vcore skus only). Allowed values include: Gen4, Gen5.</p></summary>
+        public virtual string Family { get; internal set; }
+        /// <summary><p>The name or resource id of the elastic pool to create the database in.</p></summary>
+        public virtual string ElasticPool { get; internal set; }
+        /// <summary><p>The service objective for the new database. For example: Basic, S0, P1, GP_Gen4_1, BC_Gen5_2.</p></summary>
+        public virtual string ServiceObjective { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1078,15 +1208,19 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--server {value}", Server)
-              .Add("--collation {value}", Collation)
-              .Add("--edition {value}", Edition)
-              .Add("--elastic-pool {value}", ElasticPool)
+              .Add("--license-type {value}", LicenseType)
               .Add("--max-size {value}", MaxSize)
               .Add("--no-wait {value}", NoWait)
-              .Add("--sample-name {value}", SampleName)
-              .Add("--service-objective {value}", ServiceObjective)
               .Add("--tags {value}", Tags)
               .Add("--zone-redundant", ZoneRedundant)
+              .Add("--catalog-collation {value}", CatalogCollation)
+              .Add("--collation {value}", Collation)
+              .Add("--sample-name {value}", SampleName)
+              .Add("--capacity {value}", Capacity)
+              .Add("--edition {value}", Edition)
+              .Add("--family {value}", Family)
+              .Add("--elastic-pool {value}", ElasticPool)
+              .Add("--service-objective {value}", ServiceObjective)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1111,6 +1245,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of the Azure SQL server.</p></summary>
         public virtual string Server { get; internal set; }
+        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
+        public virtual string NoWait { get; internal set; }
         /// <summary><p>Do not prompt for confirmation.</p></summary>
         public virtual string Yes { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
@@ -1130,6 +1266,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--server {value}", Server)
+              .Add("--no-wait {value}", NoWait)
               .Add("--yes {value}", Yes)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -1149,9 +1286,9 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureSql executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureSqlTasks.AzureSqlPath;
-        /// <summary><p>The password of the SQL administrator.</p></summary>
+        /// <summary><p>Required. The password of the SQL administrator.</p></summary>
         public virtual string AdminPassword { get; internal set; }
-        /// <summary><p>The name of the SQL administrator.</p></summary>
+        /// <summary><p>Required. The name of the SQL administrator.</p></summary>
         public virtual string AdminUser { get; internal set; }
         /// <summary><p>Name of the Azure SQL Database.</p></summary>
         public virtual string Name { get; internal set; }
@@ -1159,11 +1296,11 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of the Azure SQL server.</p></summary>
         public virtual string Server { get; internal set; }
-        /// <summary><p>The storage key to use.  If storage key type is SharedAccessKey, it must be preceded with a "?.".</p></summary>
+        /// <summary><p>Required. The storage key to use.  If storage key type is SharedAccessKey, it must be preceded with a "?.".</p></summary>
         public virtual string StorageKey { get; internal set; }
-        /// <summary><p>The type of the storage key to use.</p></summary>
+        /// <summary><p>Required. The type of the storage key to use.</p></summary>
         public virtual SqlDbStorageKeyType StorageKeyType { get; internal set; }
-        /// <summary><p>The storage uri to use.</p></summary>
+        /// <summary><p>Required. The storage uri to use.</p></summary>
         public virtual string StorageUri { get; internal set; }
         /// <summary><p>The authentication type.</p></summary>
         public virtual SqlDbAuthType AuthType { get; internal set; }
@@ -1208,9 +1345,9 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureSql executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureSqlTasks.AzureSqlPath;
-        /// <summary><p>The password of the SQL administrator.</p></summary>
+        /// <summary><p>Required. The password of the SQL administrator.</p></summary>
         public virtual string AdminPassword { get; internal set; }
-        /// <summary><p>The name of the SQL administrator.</p></summary>
+        /// <summary><p>Required. The name of the SQL administrator.</p></summary>
         public virtual string AdminUser { get; internal set; }
         /// <summary><p>Name of the Azure SQL Database.</p></summary>
         public virtual string Name { get; internal set; }
@@ -1218,11 +1355,11 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of the Azure SQL server.</p></summary>
         public virtual string Server { get; internal set; }
-        /// <summary><p>The storage key to use.  If storage key type is SharedAccessKey, it must be preceded with a "?.".</p></summary>
+        /// <summary><p>Required. The storage key to use.  If storage key type is SharedAccessKey, it must be preceded with a "?.".</p></summary>
         public virtual string StorageKey { get; internal set; }
-        /// <summary><p>The type of the storage key to use.</p></summary>
+        /// <summary><p>Required. The type of the storage key to use.</p></summary>
         public virtual SqlDbStorageKeyType StorageKeyType { get; internal set; }
-        /// <summary><p>The storage uri to use.</p></summary>
+        /// <summary><p>Required. The storage uri to use.</p></summary>
         public virtual string StorageUri { get; internal set; }
         /// <summary><p>The authentication type.</p></summary>
         public virtual SqlDbAuthType AuthType { get; internal set; }
@@ -1348,12 +1485,18 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureSqlTasks.AzureSqlPath;
         /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
+        /// <summary><p>If specified, show only results that are available in the specified region.</p></summary>
+        public virtual string Available { get; internal set; }
         /// <summary><p>List of additional details to include in output.</p></summary>
         public virtual SqlDbListEditionsShowDetails ShowDetails { get; internal set; }
+        /// <summary><p>Number of DTUs to search for. If unspecified, all DTU sizes are shown.</p></summary>
+        public virtual int? Dtu { get; internal set; }
         /// <summary><p>Edition to search for. If unspecified, all editions are shown.</p></summary>
         public virtual string Edition { get; internal set; }
-        /// <summary><p>Service objective to search for. If unspecified, all editions are shown.</p></summary>
+        /// <summary><p>Service objective to search for. If unspecified, all service objectives are shown.</p></summary>
         public virtual string ServiceObjective { get; internal set; }
+        /// <summary><p>Number of vcores to search for. If unspecified, all vcore sizes are shown.</p></summary>
+        public virtual int? Vcores { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1369,9 +1512,12 @@ namespace Nuke.Azure
             arguments
               .Add("sql db list-editions")
               .Add("--location {value}", Location)
+              .Add("--available {value}", Available)
               .Add("--show-details {value}", ShowDetails)
+              .Add("--dtu {value}", Dtu)
               .Add("--edition {value}", Edition)
               .Add("--service-objective {value}", ServiceObjective)
+              .Add("--vcores {value}", Vcores)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1483,16 +1629,24 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of the Azure SQL server.</p></summary>
         public virtual string Server { get; internal set; }
-        /// <summary><p>The edition for the new database.</p></summary>
-        public virtual string Edition { get; internal set; }
-        /// <summary><p>Name of the elastic pool to create the new database in.</p></summary>
-        public virtual string ElasticPool { get; internal set; }
+        /// <summary><p>The license type to apply for this database.</p></summary>
+        public virtual SqlDbLicenseType LicenseType { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual string NoWait { get; internal set; }
-        /// <summary><p>Name of service objective for the new database.</p></summary>
-        public virtual string ServiceObjective { get; internal set; }
-        /// <summary><p>Resource tags.</p></summary>
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
+        /// <summary><p>Specifies whether to enable zone redundancy.</p></summary>
+        public virtual bool? ZoneRedundant { get; internal set; }
+        /// <summary><p>The capacity component of the sku in integer number of DTUs or vcores.</p></summary>
+        public virtual string Capacity { get; internal set; }
+        /// <summary><p>The edition component of the sku. Allowed values include: Basic, Standard, Premium, GeneralPurpose, BusinessCritical.</p></summary>
+        public virtual string Edition { get; internal set; }
+        /// <summary><p>The compute generation component of the sku (for vcore skus only). Allowed values include: Gen4, Gen5.</p></summary>
+        public virtual string Family { get; internal set; }
+        /// <summary><p>The name or resource id of the elastic pool to create the database in.</p></summary>
+        public virtual string ElasticPool { get; internal set; }
+        /// <summary><p>The service objective for the new database. For example: Basic, S0, P1, GP_Gen4_1, BC_Gen5_2.</p></summary>
+        public virtual string ServiceObjective { get; internal set; }
         /// <summary><p>If specified, restore from a deleted database instead of from an existing database. Must match the deleted time of a deleted database in the same server. Either --time or --deleted-time (or both) must be specified.</p></summary>
         public virtual string DeletedTime { get; internal set; }
         /// <summary><p>The point in time of the source database that will be restored to create the new database. Must be greater than or equal to the source database's earliestRestoreDate value. Either --time or --deleted-time (or both) must be specified.</p></summary>
@@ -1515,11 +1669,15 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--server {value}", Server)
-              .Add("--edition {value}", Edition)
-              .Add("--elastic-pool {value}", ElasticPool)
+              .Add("--license-type {value}", LicenseType)
               .Add("--no-wait {value}", NoWait)
-              .Add("--service-objective {value}", ServiceObjective)
               .Add("--tags {value}", Tags)
+              .Add("--zone-redundant", ZoneRedundant)
+              .Add("--capacity {value}", Capacity)
+              .Add("--edition {value}", Edition)
+              .Add("--family {value}", Family)
+              .Add("--elastic-pool {value}", ElasticPool)
+              .Add("--service-objective {value}", ServiceObjective)
               .Add("--deleted-time {value}", DeletedTime)
               .Add("--time {value}", Time)
               .Add("--debug {value}", Debug)
@@ -1631,16 +1789,22 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of the Azure SQL server.</p></summary>
         public virtual string Server { get; internal set; }
-        /// <summary><p>The name of the elastic pool to move the database into.</p></summary>
-        public virtual string ElasticPool { get; internal set; }
         /// <summary><p>The new maximum size of the database expressed in bytes.</p></summary>
         public virtual string MaxSize { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual string NoWait { get; internal set; }
+        /// <summary><p>Specifies whether to enable zone redundancy.</p></summary>
+        public virtual bool? ZoneRedundant { get; internal set; }
+        /// <summary><p>The capacity component of the sku in integer number of DTUs or vcores.</p></summary>
+        public virtual string Capacity { get; internal set; }
+        /// <summary><p>The edition component of the sku. Allowed values include: Basic, Standard, Premium, GeneralPurpose, BusinessCritical.</p></summary>
+        public virtual string Edition { get; internal set; }
+        /// <summary><p>The compute generation component of the sku (for vcore skus only). Allowed values include: Gen4, Gen5.</p></summary>
+        public virtual string Family { get; internal set; }
+        /// <summary><p>The name or resource id of the elastic pool to move the database into.</p></summary>
+        public virtual string ElasticPool { get; internal set; }
         /// <summary><p>The name of the new service objective. If this is a standalone db service objective and the db is currently in an elastic pool, then the db is removed from the pool.</p></summary>
         public virtual string ServiceObjective { get; internal set; }
-        /// <summary><p>Specifies whether to enable zone redundancy for the database.</p></summary>
-        public virtual bool? ZoneRedundant { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
         /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
@@ -1664,11 +1828,14 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--server {value}", Server)
-              .Add("--elastic-pool {value}", ElasticPool)
               .Add("--max-size {value}", MaxSize)
               .Add("--no-wait {value}", NoWait)
-              .Add("--service-objective {value}", ServiceObjective)
               .Add("--zone-redundant", ZoneRedundant)
+              .Add("--capacity {value}", Capacity)
+              .Add("--edition {value}", Edition)
+              .Add("--family {value}", Family)
+              .Add("--elastic-pool {value}", ElasticPool)
+              .Add("--service-objective {value}", ServiceObjective)
               .Add("--add {value}", Add)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
@@ -1698,14 +1865,16 @@ namespace Nuke.Azure
         public virtual string Server { get; internal set; }
         /// <summary><p>The collation of the data warehouse.</p></summary>
         public virtual string Collation { get; internal set; }
-        /// <summary><p>The max storage size of the data warehouse. If no unit is specified, defaultsto bytes (B).</p></summary>
+        /// <summary><p>The max storage size. If no unit is specified, defaults to bytes (B).</p></summary>
         public virtual string MaxSize { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual string NoWait { get; internal set; }
-        /// <summary><p>The service objective of the data warehouse.</p></summary>
-        public virtual string ServiceObjective { get; internal set; }
-        /// <summary><p>Resource tags.</p></summary>
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
+        /// <summary><p>Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.</p></summary>
+        public virtual string ZoneRedundant { get; internal set; }
+        /// <summary><p>The service objective for the new database. For example: DW100, DW1000c.</p></summary>
+        public virtual string ServiceObjective { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1726,8 +1895,9 @@ namespace Nuke.Azure
               .Add("--collation {value}", Collation)
               .Add("--max-size {value}", MaxSize)
               .Add("--no-wait {value}", NoWait)
-              .Add("--service-objective {value}", ServiceObjective)
               .Add("--tags {value}", Tags)
+              .Add("--zone-redundant {value}", ZoneRedundant)
+              .Add("--service-objective {value}", ServiceObjective)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1752,6 +1922,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of the Azure SQL server.</p></summary>
         public virtual string Server { get; internal set; }
+        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
+        public virtual string NoWait { get; internal set; }
         /// <summary><p>Do not prompt for confirmation.</p></summary>
         public virtual string Yes { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
@@ -1771,6 +1943,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--server {value}", Server)
+              .Add("--no-wait {value}", NoWait)
               .Add("--yes {value}", Yes)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -1957,11 +2130,11 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of the Azure SQL server.</p></summary>
         public virtual string Server { get; internal set; }
-        /// <summary><p>The max storage size of the data warehouse. If no unit is specified, defaultsto bytes (B).</p></summary>
+        /// <summary><p>The max storage size. If no unit is specified, defaults to bytes (B).</p></summary>
         public virtual string MaxSize { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual string NoWait { get; internal set; }
-        /// <summary><p>The service objective of the data warehouse.</p></summary>
+        /// <summary><p>The service objective of the data warehouse. For example: DW100, DW1000c.</p></summary>
         public virtual string ServiceObjective { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
@@ -2016,20 +2189,26 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of the Azure SQL server.</p></summary>
         public virtual string Server { get; internal set; }
-        /// <summary><p>The maximum DTU any one database can consume.</p></summary>
+        /// <summary><p>The maximum capacity (in DTUs or vcores) any one database can consume.</p></summary>
         public virtual string DbDtuMax { get; internal set; }
-        /// <summary><p>The minimum DTU all databases are guaranteed.</p></summary>
+        /// <summary><p>The minumum capacity (in DTUs or vcores) each database is guaranteed.</p></summary>
         public virtual string DbDtuMin { get; internal set; }
-        /// <summary><p>The total shared DTU for the database elastic pool.</p></summary>
-        public virtual string Dtu { get; internal set; }
-        /// <summary><p>The edition of the elastic pool.</p></summary>
-        public virtual string Edition { get; internal set; }
-        /// <summary><p>The max storage size of the elastic pool. If no unit is specified, defaults to megabytes (MB).</p></summary>
+        /// <summary><p>The license type to apply for this elastic pool.</p></summary>
+        public virtual SqlDbLicenseType LicenseType { get; internal set; }
+        /// <summary><p>The max storage size. If no unit is specified, defaults to bytes (B).</p></summary>
         public virtual string MaxSize { get; internal set; }
-        /// <summary><p>Resource tags.</p></summary>
+        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
+        public virtual string NoWait { get; internal set; }
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
-        /// <summary><p>Specifies whether to enable zone redundancy for the elastic pool.</p></summary>
+        /// <summary><p>Specifies whether to enable zone redundancy.</p></summary>
         public virtual bool? ZoneRedundant { get; internal set; }
+        /// <summary><p>The capacity component of the sku in integer number of DTUs or vcores.</p></summary>
+        public virtual string Capacity { get; internal set; }
+        /// <summary><p>The edition component of the sku. Allowed values include: Basic, Standard, Premium, GeneralPurpose, BusinessCritical.</p></summary>
+        public virtual string Edition { get; internal set; }
+        /// <summary><p>The compute generation component of the sku (for vcore skus only). Allowed values include: Gen4, Gen5.</p></summary>
+        public virtual string Family { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2049,11 +2228,14 @@ namespace Nuke.Azure
               .Add("--server {value}", Server)
               .Add("--db-dtu-max {value}", DbDtuMax)
               .Add("--db-dtu-min {value}", DbDtuMin)
-              .Add("--dtu {value}", Dtu)
-              .Add("--edition {value}", Edition)
+              .Add("--license-type {value}", LicenseType)
               .Add("--max-size {value}", MaxSize)
+              .Add("--no-wait {value}", NoWait)
               .Add("--tags {value}", Tags)
               .Add("--zone-redundant", ZoneRedundant)
+              .Add("--capacity {value}", Capacity)
+              .Add("--edition {value}", Edition)
+              .Add("--family {value}", Family)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2078,6 +2260,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of the Azure SQL server.</p></summary>
         public virtual string Server { get; internal set; }
+        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
+        public virtual string NoWait { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2095,6 +2279,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--server {value}", Server)
+              .Add("--no-wait {value}", NoWait)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2117,6 +2302,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of the Azure SQL server.</p></summary>
         public virtual string Server { get; internal set; }
+        /// <summary><p>The number of elements in the collection to skip.</p></summary>
+        public virtual string Skip { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2133,6 +2320,7 @@ namespace Nuke.Azure
               .Add("sql elastic-pool list")
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--server {value}", Server)
+              .Add("--skip {value}", Skip)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2194,12 +2382,16 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureSqlTasks.AzureSqlPath;
         /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
+        /// <summary><p>If specified, show only results that are available in the specified region.</p></summary>
+        public virtual string Available { get; internal set; }
         /// <summary><p>List of additional details to include in output.</p></summary>
         public virtual SqlElasticPoolListEditionsShowDetails ShowDetails { get; internal set; }
-        /// <summary><p>Elastic pool DTU limit to search for. If unspecified, all DTU limits are shown.</p></summary>
-        public virtual string Dtu { get; internal set; }
+        /// <summary><p>Number of DTUs to search for. If unspecified, all DTU sizes are shown.</p></summary>
+        public virtual int? Dtu { get; internal set; }
         /// <summary><p>Edition to search for. If unspecified, all editions are shown.</p></summary>
         public virtual string Edition { get; internal set; }
+        /// <summary><p>Number of vcores to search for. If unspecified, all vcore sizes are shown.</p></summary>
+        public virtual int? Vcores { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2215,9 +2407,11 @@ namespace Nuke.Azure
             arguments
               .Add("sql elastic-pool list-editions")
               .Add("--location {value}", Location)
+              .Add("--available {value}", Available)
               .Add("--show-details {value}", ShowDetails)
               .Add("--dtu {value}", Dtu)
               .Add("--edition {value}", Edition)
+              .Add("--vcores {value}", Vcores)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2283,16 +2477,22 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of the Azure SQL server.</p></summary>
         public virtual string Server { get; internal set; }
-        /// <summary><p>The maximum DTU any one database can consume.</p></summary>
+        /// <summary><p>The maximum capacity (in DTUs or vcores) any one database can consume.</p></summary>
         public virtual string DbDtuMax { get; internal set; }
-        /// <summary><p>The minimum DTU all databases are guaranteed.</p></summary>
+        /// <summary><p>The minumum capacity (in DTUs or vcores) each database is guaranteed.</p></summary>
         public virtual string DbDtuMin { get; internal set; }
-        /// <summary><p>TThe total shared DTU for the elastic eool.</p></summary>
-        public virtual string Dtu { get; internal set; }
-        /// <summary><p>Storage limit for the elastic pool in MB.</p></summary>
+        /// <summary><p>The max storage size. If no unit is specified, defaults to bytes (B).</p></summary>
         public virtual string MaxSize { get; internal set; }
-        /// <summary><p>Specifies whether to enable zone redundancy for the elastic pool.</p></summary>
+        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
+        public virtual string NoWait { get; internal set; }
+        /// <summary><p>Specifies whether to enable zone redundancy.</p></summary>
         public virtual bool? ZoneRedundant { get; internal set; }
+        /// <summary><p>The capacity component of the sku in integer number of DTUs or vcores.</p></summary>
+        public virtual string Capacity { get; internal set; }
+        /// <summary><p>The edition component of the sku. Allowed values include: Basic, Standard, Premium, GeneralPurpose, BusinessCritical.</p></summary>
+        public virtual string Edition { get; internal set; }
+        /// <summary><p>The compute generation component of the sku (for vcore skus only). Allowed values include: Gen4, Gen5.</p></summary>
+        public virtual string Family { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
         /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
@@ -2318,12 +2518,500 @@ namespace Nuke.Azure
               .Add("--server {value}", Server)
               .Add("--db-dtu-max {value}", DbDtuMax)
               .Add("--db-dtu-min {value}", DbDtuMin)
-              .Add("--dtu {value}", Dtu)
               .Add("--max-size {value}", MaxSize)
+              .Add("--no-wait {value}", NoWait)
               .Add("--zone-redundant", ZoneRedundant)
+              .Add("--capacity {value}", Capacity)
+              .Add("--edition {value}", Edition)
+              .Add("--family {value}", Family)
               .Add("--add {value}", Add)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSqlMiCreateSettings
+    /// <summary><p>Used within <see cref="AzureSqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSqlMiCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureSql executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureSqlTasks.AzureSqlPath;
+        /// <summary><p>The administrator login password (required for managed instance creation).</p></summary>
+        public virtual string AdminPassword { get; internal set; }
+        /// <summary><p>Administrator username for the managed instance. Can only be specified when the managed instance is being created (and is required for creation).</p></summary>
+        public virtual string AdminUser { get; internal set; }
+        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        public virtual string Location { get; internal set; }
+        /// <summary><p>The managed instance name.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of the subnet that allows access to an Azure Sql Managed Instance. If subnet name is provided, --vnet-name must be provided.</p></summary>
+        public virtual string Subnet { get; internal set; }
+        /// <summary><p>Generate and assign an Azure Active Directory Identity for this managed instance for use with key management services like Azure KeyVault.</p></summary>
+        public virtual string AssignIdentity { get; internal set; }
+        /// <summary><p>The capacity of the managed instance in vcores.</p></summary>
+        public virtual string Capacity { get; internal set; }
+        /// <summary><p>The license type to apply for this managed instance.</p></summary>
+        public virtual SqlDbLicenseType LicenseType { get; internal set; }
+        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
+        public virtual string NoWait { get; internal set; }
+        /// <summary><p>The storage size of the managed instance. Storage size must be specified in increments of 32 GB.</p></summary>
+        public virtual string Storage { get; internal set; }
+        /// <summary><p>The virtual network name.</p></summary>
+        public virtual string VnetName { get; internal set; }
+        /// <summary><p>The edition component of the sku. Allowed value is GeneralPurpose.</p></summary>
+        public virtual string Edition { get; internal set; }
+        /// <summary><p>The compute generation component of the sku. Allowed values include: Gen4, Gen5.</p></summary>
+        public virtual string Family { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("sql mi create")
+              .Add("--admin-password {value}", AdminPassword)
+              .Add("--admin-user {value}", AdminUser)
+              .Add("--location {value}", Location)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subnet {value}", Subnet)
+              .Add("--assign-identity {value}", AssignIdentity)
+              .Add("--capacity {value}", Capacity)
+              .Add("--license-type {value}", LicenseType)
+              .Add("--no-wait {value}", NoWait)
+              .Add("--storage {value}", Storage)
+              .Add("--vnet-name {value}", VnetName)
+              .Add("--edition {value}", Edition)
+              .Add("--family {value}", Family)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSqlMiDeleteSettings
+    /// <summary><p>Used within <see cref="AzureSqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSqlMiDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureSql executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureSqlTasks.AzureSqlPath;
+        /// <summary><p>The managed instance name.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
+        public virtual string NoWait { get; internal set; }
+        /// <summary><p>Do not prompt for confirmation.</p></summary>
+        public virtual string Yes { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("sql mi delete")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--no-wait {value}", NoWait)
+              .Add("--yes {value}", Yes)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSqlMiListSettings
+    /// <summary><p>Used within <see cref="AzureSqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSqlMiListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureSql executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureSqlTasks.AzureSqlPath;
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("sql mi list")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSqlMiShowSettings
+    /// <summary><p>Used within <see cref="AzureSqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSqlMiShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureSql executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureSqlTasks.AzureSqlPath;
+        /// <summary><p>The managed instance name.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("sql mi show")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSqlMiUpdateSettings
+    /// <summary><p>Used within <see cref="AzureSqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSqlMiUpdateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureSql executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureSqlTasks.AzureSqlPath;
+        /// <summary><p>The managed instance name.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The administrator login password (required for managed instance creation).</p></summary>
+        public virtual string AdminPassword { get; internal set; }
+        /// <summary><p>Generate and assign an Azure Active Directory Identity for this managed instance for use with key management services like Azure KeyVault. If identity is already assigned - do nothing.</p></summary>
+        public virtual string AssignIdentity { get; internal set; }
+        /// <summary><p>The capacity of the managed instance in vcores.</p></summary>
+        public virtual string Capacity { get; internal set; }
+        /// <summary><p>The license type to apply for this managed instance.</p></summary>
+        public virtual SqlDbLicenseType LicenseType { get; internal set; }
+        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
+        public virtual string NoWait { get; internal set; }
+        /// <summary><p>The storage size of the managed instance. Storage size must be specified in increments of 32 GB.</p></summary>
+        public virtual string Storage { get; internal set; }
+        /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        public virtual string Add { get; internal set; }
+        /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        public virtual string Remove { get; internal set; }
+        /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        public virtual string Set { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("sql mi update")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--admin-password {value}", AdminPassword)
+              .Add("--assign-identity {value}", AssignIdentity)
+              .Add("--capacity {value}", Capacity)
+              .Add("--license-type {value}", LicenseType)
+              .Add("--no-wait {value}", NoWait)
+              .Add("--storage {value}", Storage)
+              .Add("--add {value}", Add)
+              .Add("--remove {value}", Remove)
+              .Add("--set {value}", Set)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSqlMidbCreateSettings
+    /// <summary><p>Used within <see cref="AzureSqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSqlMidbCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureSql executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureSqlTasks.AzureSqlPath;
+        /// <summary><p>Name of the Azure SQL managed instance.</p></summary>
+        public virtual string ManagedInstance { get; internal set; }
+        /// <summary><p>The name of the Azure SQL Managed Database.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The collation of the Azure SQL Managed Database collation to use, e.g.: SQL_Latin1_General_CP1_CI_AS or Latin1_General_100_CS_AS_SC.</p></summary>
+        public virtual string Collation { get; internal set; }
+        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
+        public virtual string NoWait { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("sql midb create")
+              .Add("--managed-instance {value}", ManagedInstance)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--collation {value}", Collation)
+              .Add("--no-wait {value}", NoWait)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSqlMidbDeleteSettings
+    /// <summary><p>Used within <see cref="AzureSqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSqlMidbDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureSql executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureSqlTasks.AzureSqlPath;
+        /// <summary><p>Name of the Azure SQL managed instance.</p></summary>
+        public virtual string ManagedInstance { get; internal set; }
+        /// <summary><p>The name of the Azure SQL Managed Database.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
+        public virtual string NoWait { get; internal set; }
+        /// <summary><p>Do not prompt for confirmation.</p></summary>
+        public virtual string Yes { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("sql midb delete")
+              .Add("--managed-instance {value}", ManagedInstance)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--no-wait {value}", NoWait)
+              .Add("--yes {value}", Yes)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSqlMidbListSettings
+    /// <summary><p>Used within <see cref="AzureSqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSqlMidbListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureSql executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureSqlTasks.AzureSqlPath;
+        /// <summary><p>Name of the Azure SQL managed instance.</p></summary>
+        public virtual string ManagedInstance { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("sql midb list")
+              .Add("--managed-instance {value}", ManagedInstance)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSqlMidbRestoreSettings
+    /// <summary><p>Used within <see cref="AzureSqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSqlMidbRestoreSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureSql executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureSqlTasks.AzureSqlPath;
+        /// <summary><p>Name of the managed database that will be created as the restore destination.</p></summary>
+        public virtual string DestName { get; internal set; }
+        /// <summary><p>Name of the Azure SQL managed instance.</p></summary>
+        public virtual string ManagedInstance { get; internal set; }
+        /// <summary><p>The name of the Azure SQL Managed Database.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the managed instance to restore managed database to. This can be same managed instance, or another managed instance on same subscription. When not specified it defaults to source managed instance.</p></summary>
+        public virtual string DestMi { get; internal set; }
+        /// <summary><p>Name of the resource group of the managed instance to restore managed database to. When not specified it defaults to source resource group.</p></summary>
+        public virtual string DestResourceGroup { get; internal set; }
+        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
+        public virtual string NoWait { get; internal set; }
+        /// <summary><p>The point in time of the source database that will be restored to create the new database. Must be greater than or equal to the source database's earliestRestoreDate value. Time should be in following format: "YYYY-MM-DDTHH:MM:SS".</p></summary>
+        public virtual string Time { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("sql midb restore")
+              .Add("--dest-name {value}", DestName)
+              .Add("--managed-instance {value}", ManagedInstance)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--dest-mi {value}", DestMi)
+              .Add("--dest-resource-group {value}", DestResourceGroup)
+              .Add("--no-wait {value}", NoWait)
+              .Add("--time {value}", Time)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSqlMidbShowSettings
+    /// <summary><p>Used within <see cref="AzureSqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSqlMidbShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureSql executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureSqlTasks.AzureSqlPath;
+        /// <summary><p>Name of the Azure SQL managed instance.</p></summary>
+        public virtual string ManagedInstance { get; internal set; }
+        /// <summary><p>The name of the Azure SQL Managed Database.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("sql midb show")
+              .Add("--managed-instance {value}", ManagedInstance)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2348,14 +3036,12 @@ namespace Nuke.Azure
         public virtual string AdminUser { get; internal set; }
         /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
-        /// <summary><p></p></summary>
+        /// <summary><p>The server name.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Generate and assign an Azure Active Directory Identity for this serverfor use with key management services like Azure KeyVault.</p></summary>
         public virtual string AssignIdentity { get; internal set; }
-        /// <summary><p>Resource tags.</p></summary>
-        public virtual string Tags { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2376,7 +3062,6 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--assign-identity {value}", AssignIdentity)
-              .Add("--tags {value}", Tags)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2395,7 +3080,7 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureSql executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureSqlTasks.AzureSqlPath;
-        /// <summary><p>The name of the server.</p></summary>
+        /// <summary><p>The server name.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
@@ -2471,7 +3156,7 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureSql executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureSqlTasks.AzureSqlPath;
-        /// <summary><p>The name of the server.</p></summary>
+        /// <summary><p>The server name.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
@@ -2509,7 +3194,7 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureSql executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureSqlTasks.AzureSqlPath;
-        /// <summary><p>The name of the server.</p></summary>
+        /// <summary><p>The server name.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
@@ -2547,7 +3232,7 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureSql executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureSqlTasks.AzureSqlPath;
-        /// <summary><p>The name of the server.</p></summary>
+        /// <summary><p>The server name.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
@@ -2802,16 +3487,24 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of the Azure SQL server.</p></summary>
         public virtual string Server { get; internal set; }
-        /// <summary><p>Name of elastic pool to create the new replica in.</p></summary>
-        public virtual string ElasticPool { get; internal set; }
+        /// <summary><p>The license type to apply for this database.</p></summary>
+        public virtual SqlDbLicenseType LicenseType { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual string NoWait { get; internal set; }
         /// <summary><p>Name of the resource group to create the new replica in. If unspecified, defaults to the origin resource group.</p></summary>
         public virtual string PartnerResourceGroup { get; internal set; }
-        /// <summary><p>Name of service objective for the new replica.</p></summary>
-        public virtual string ServiceObjective { get; internal set; }
-        /// <summary><p>Resource tags.</p></summary>
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
+        /// <summary><p>Specifies whether to enable zone redundancy.</p></summary>
+        public virtual bool? ZoneRedundant { get; internal set; }
+        /// <summary><p>The capacity component of the sku in integer number of DTUs or vcores.</p></summary>
+        public virtual string Capacity { get; internal set; }
+        /// <summary><p>The compute generation component of the sku (for vcore skus only). Allowed values include: Gen4, Gen5.</p></summary>
+        public virtual string Family { get; internal set; }
+        /// <summary><p>The name or resource id of the elastic pool to create the database in.</p></summary>
+        public virtual string ElasticPool { get; internal set; }
+        /// <summary><p>The service objective for the new database. For example: Basic, S0, P1, GP_Gen4_1, BC_Gen5_2.</p></summary>
+        public virtual string ServiceObjective { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2830,11 +3523,15 @@ namespace Nuke.Azure
               .Add("--partner-server {value}", PartnerServer)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--server {value}", Server)
-              .Add("--elastic-pool {value}", ElasticPool)
+              .Add("--license-type {value}", LicenseType)
               .Add("--no-wait {value}", NoWait)
               .Add("--partner-resource-group {value}", PartnerResourceGroup)
-              .Add("--service-objective {value}", ServiceObjective)
               .Add("--tags {value}", Tags)
+              .Add("--zone-redundant", ZoneRedundant)
+              .Add("--capacity {value}", Capacity)
+              .Add("--family {value}", Family)
+              .Add("--elastic-pool {value}", ElasticPool)
+              .Add("--service-objective {value}", ServiceObjective)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -4247,7 +4944,7 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name of the server.</p></summary>
+        /// <summary><p>The server name.</p></summary>
         public virtual string Server { get; internal set; }
         /// <summary><p>Name or ID of the subnet that allows access to an Azure Sql Server. If subnet name is provided, --vnet-name must be provided.</p></summary>
         public virtual string Subnet { get; internal set; }
@@ -4297,7 +4994,7 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name of the server.</p></summary>
+        /// <summary><p>The server name.</p></summary>
         public virtual string Server { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
@@ -4336,7 +5033,7 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureSqlTasks.AzureSqlPath;
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name of the server.</p></summary>
+        /// <summary><p>The server name.</p></summary>
         public virtual string Server { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
@@ -4376,7 +5073,7 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name of the server.</p></summary>
+        /// <summary><p>The server name.</p></summary>
         public virtual string Server { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
@@ -4417,7 +5114,7 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name of the server.</p></summary>
+        /// <summary><p>The server name.</p></summary>
         public virtual string Server { get; internal set; }
         /// <summary><p>Name or ID of the subnet that allows access to an Azure Sql Server. If subnet name is provided, --vnet-name must be provided.</p></summary>
         public virtual string Subnet { get; internal set; }
@@ -4824,21 +5521,21 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region ElasticPool
-        /// <summary><p><em>Sets <see cref="AzureSqlDbCopySettings.ElasticPool"/>.</em></p><p>Name of the elastic pool to create the new database in.</p></summary>
+        #region LicenseType
+        /// <summary><p><em>Sets <see cref="AzureSqlDbCopySettings.LicenseType"/>.</em></p><p>The license type to apply for this database.</p></summary>
         [Pure]
-        public static AzureSqlDbCopySettings SetElasticPool(this AzureSqlDbCopySettings toolSettings, string elasticPool)
+        public static AzureSqlDbCopySettings SetLicenseType(this AzureSqlDbCopySettings toolSettings, SqlDbLicenseType licenseType)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.ElasticPool = elasticPool;
+            toolSettings.LicenseType = licenseType;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlDbCopySettings.ElasticPool"/>.</em></p><p>Name of the elastic pool to create the new database in.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlDbCopySettings.LicenseType"/>.</em></p><p>The license type to apply for this database.</p></summary>
         [Pure]
-        public static AzureSqlDbCopySettings ResetElasticPool(this AzureSqlDbCopySettings toolSettings)
+        public static AzureSqlDbCopySettings ResetLicenseType(this AzureSqlDbCopySettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.ElasticPool = null;
+            toolSettings.LicenseType = null;
             return toolSettings;
         }
         #endregion
@@ -4860,26 +5557,8 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region ServiceObjective
-        /// <summary><p><em>Sets <see cref="AzureSqlDbCopySettings.ServiceObjective"/>.</em></p><p>Name of the service objective for the new database.</p></summary>
-        [Pure]
-        public static AzureSqlDbCopySettings SetServiceObjective(this AzureSqlDbCopySettings toolSettings, string serviceObjective)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServiceObjective = serviceObjective;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSqlDbCopySettings.ServiceObjective"/>.</em></p><p>Name of the service objective for the new database.</p></summary>
-        [Pure]
-        public static AzureSqlDbCopySettings ResetServiceObjective(this AzureSqlDbCopySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServiceObjective = null;
-            return toolSettings;
-        }
-        #endregion
         #region Tags
-        /// <summary><p><em>Sets <see cref="AzureSqlDbCopySettings.Tags"/>.</em></p><p>Resource tags.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlDbCopySettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         [Pure]
         public static AzureSqlDbCopySettings SetTags(this AzureSqlDbCopySettings toolSettings, string tags)
         {
@@ -4887,12 +5566,126 @@ namespace Nuke.Azure
             toolSettings.Tags = tags;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlDbCopySettings.Tags"/>.</em></p><p>Resource tags.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlDbCopySettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         [Pure]
         public static AzureSqlDbCopySettings ResetTags(this AzureSqlDbCopySettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ZoneRedundant
+        /// <summary><p><em>Sets <see cref="AzureSqlDbCopySettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
+        [Pure]
+        public static AzureSqlDbCopySettings SetZoneRedundant(this AzureSqlDbCopySettings toolSettings, bool? zoneRedundant)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ZoneRedundant = zoneRedundant;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbCopySettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
+        [Pure]
+        public static AzureSqlDbCopySettings ResetZoneRedundant(this AzureSqlDbCopySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ZoneRedundant = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureSqlDbCopySettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
+        [Pure]
+        public static AzureSqlDbCopySettings EnableZoneRedundant(this AzureSqlDbCopySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ZoneRedundant = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureSqlDbCopySettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
+        [Pure]
+        public static AzureSqlDbCopySettings DisableZoneRedundant(this AzureSqlDbCopySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ZoneRedundant = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureSqlDbCopySettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
+        [Pure]
+        public static AzureSqlDbCopySettings ToggleZoneRedundant(this AzureSqlDbCopySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ZoneRedundant = !toolSettings.ZoneRedundant;
+            return toolSettings;
+        }
+        #endregion
+        #region Capacity
+        /// <summary><p><em>Sets <see cref="AzureSqlDbCopySettings.Capacity"/>.</em></p><p>The capacity component of the sku in integer number of DTUs or vcores.</p></summary>
+        [Pure]
+        public static AzureSqlDbCopySettings SetCapacity(this AzureSqlDbCopySettings toolSettings, string capacity)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Capacity = capacity;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbCopySettings.Capacity"/>.</em></p><p>The capacity component of the sku in integer number of DTUs or vcores.</p></summary>
+        [Pure]
+        public static AzureSqlDbCopySettings ResetCapacity(this AzureSqlDbCopySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Capacity = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Family
+        /// <summary><p><em>Sets <see cref="AzureSqlDbCopySettings.Family"/>.</em></p><p>The compute generation component of the sku (for vcore skus only). Allowed values include: Gen4, Gen5.</p></summary>
+        [Pure]
+        public static AzureSqlDbCopySettings SetFamily(this AzureSqlDbCopySettings toolSettings, string family)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Family = family;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbCopySettings.Family"/>.</em></p><p>The compute generation component of the sku (for vcore skus only). Allowed values include: Gen4, Gen5.</p></summary>
+        [Pure]
+        public static AzureSqlDbCopySettings ResetFamily(this AzureSqlDbCopySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Family = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ElasticPool
+        /// <summary><p><em>Sets <see cref="AzureSqlDbCopySettings.ElasticPool"/>.</em></p><p>The name or resource id of the elastic pool to create the database in.</p></summary>
+        [Pure]
+        public static AzureSqlDbCopySettings SetElasticPool(this AzureSqlDbCopySettings toolSettings, string elasticPool)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ElasticPool = elasticPool;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbCopySettings.ElasticPool"/>.</em></p><p>The name or resource id of the elastic pool to create the database in.</p></summary>
+        [Pure]
+        public static AzureSqlDbCopySettings ResetElasticPool(this AzureSqlDbCopySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ElasticPool = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServiceObjective
+        /// <summary><p><em>Sets <see cref="AzureSqlDbCopySettings.ServiceObjective"/>.</em></p><p>The service objective for the new database. For example: Basic, S0, P1, GP_Gen4_1, BC_Gen5_2.</p></summary>
+        [Pure]
+        public static AzureSqlDbCopySettings SetServiceObjective(this AzureSqlDbCopySettings toolSettings, string serviceObjective)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServiceObjective = serviceObjective;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbCopySettings.ServiceObjective"/>.</em></p><p>The service objective for the new database. For example: Basic, S0, P1, GP_Gen4_1, BC_Gen5_2.</p></summary>
+        [Pure]
+        public static AzureSqlDbCopySettings ResetServiceObjective(this AzureSqlDbCopySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServiceObjective = null;
             return toolSettings;
         }
         #endregion
@@ -5048,62 +5841,26 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Collation
-        /// <summary><p><em>Sets <see cref="AzureSqlDbCreateSettings.Collation"/>.</em></p><p>The collation of the database. If createMode is not Default, this value is ignored.</p></summary>
+        #region LicenseType
+        /// <summary><p><em>Sets <see cref="AzureSqlDbCreateSettings.LicenseType"/>.</em></p><p>The license type to apply for this database.</p></summary>
         [Pure]
-        public static AzureSqlDbCreateSettings SetCollation(this AzureSqlDbCreateSettings toolSettings, string collation)
+        public static AzureSqlDbCreateSettings SetLicenseType(this AzureSqlDbCreateSettings toolSettings, SqlDbLicenseType licenseType)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Collation = collation;
+            toolSettings.LicenseType = licenseType;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlDbCreateSettings.Collation"/>.</em></p><p>The collation of the database. If createMode is not Default, this value is ignored.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlDbCreateSettings.LicenseType"/>.</em></p><p>The license type to apply for this database.</p></summary>
         [Pure]
-        public static AzureSqlDbCreateSettings ResetCollation(this AzureSqlDbCreateSettings toolSettings)
+        public static AzureSqlDbCreateSettings ResetLicenseType(this AzureSqlDbCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Collation = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Edition
-        /// <summary><p><em>Sets <see cref="AzureSqlDbCreateSettings.Edition"/>.</em></p><p>The edition of the database.</p></summary>
-        [Pure]
-        public static AzureSqlDbCreateSettings SetEdition(this AzureSqlDbCreateSettings toolSettings, string edition)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Edition = edition;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSqlDbCreateSettings.Edition"/>.</em></p><p>The edition of the database.</p></summary>
-        [Pure]
-        public static AzureSqlDbCreateSettings ResetEdition(this AzureSqlDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Edition = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ElasticPool
-        /// <summary><p><em>Sets <see cref="AzureSqlDbCreateSettings.ElasticPool"/>.</em></p><p>The name of the elastic pool the database is in. If elasticPoolName and requestedServiceObjectiveName are both updated, the value of requestedServiceObjectiveName is ignored. Not supported for DataWarehouse edition.</p></summary>
-        [Pure]
-        public static AzureSqlDbCreateSettings SetElasticPool(this AzureSqlDbCreateSettings toolSettings, string elasticPool)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ElasticPool = elasticPool;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSqlDbCreateSettings.ElasticPool"/>.</em></p><p>The name of the elastic pool the database is in. If elasticPoolName and requestedServiceObjectiveName are both updated, the value of requestedServiceObjectiveName is ignored. Not supported for DataWarehouse edition.</p></summary>
-        [Pure]
-        public static AzureSqlDbCreateSettings ResetElasticPool(this AzureSqlDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ElasticPool = null;
+            toolSettings.LicenseType = null;
             return toolSettings;
         }
         #endregion
         #region MaxSize
-        /// <summary><p><em>Sets <see cref="AzureSqlDbCreateSettings.MaxSize"/>.</em></p><p>The max storage size of the database. Only the following sizes are supported (in addition to limitations being placed on each edition): 100MB, 500MB, 1GB, 5GB, 10GB, 20GB, 30GB, 150GB, 200GB, 500GB. If no unit is specified, defaults to bytes (B).</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlDbCreateSettings.MaxSize"/>.</em></p><p>The max storage size. If no unit is specified, defaults to bytes (B).</p></summary>
         [Pure]
         public static AzureSqlDbCreateSettings SetMaxSize(this AzureSqlDbCreateSettings toolSettings, string maxSize)
         {
@@ -5111,7 +5868,7 @@ namespace Nuke.Azure
             toolSettings.MaxSize = maxSize;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlDbCreateSettings.MaxSize"/>.</em></p><p>The max storage size of the database. Only the following sizes are supported (in addition to limitations being placed on each edition): 100MB, 500MB, 1GB, 5GB, 10GB, 20GB, 30GB, 150GB, 200GB, 500GB. If no unit is specified, defaults to bytes (B).</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlDbCreateSettings.MaxSize"/>.</em></p><p>The max storage size. If no unit is specified, defaults to bytes (B).</p></summary>
         [Pure]
         public static AzureSqlDbCreateSettings ResetMaxSize(this AzureSqlDbCreateSettings toolSettings)
         {
@@ -5138,44 +5895,8 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region SampleName
-        /// <summary><p><em>Sets <see cref="AzureSqlDbCreateSettings.SampleName"/>.</em></p><p>Indicates the name of the sample schema to apply when creating this database. If createMode is not Default, this value is ignored. Not supported for DataWarehouse edition.</p></summary>
-        [Pure]
-        public static AzureSqlDbCreateSettings SetSampleName(this AzureSqlDbCreateSettings toolSettings, string sampleName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SampleName = sampleName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSqlDbCreateSettings.SampleName"/>.</em></p><p>Indicates the name of the sample schema to apply when creating this database. If createMode is not Default, this value is ignored. Not supported for DataWarehouse edition.</p></summary>
-        [Pure]
-        public static AzureSqlDbCreateSettings ResetSampleName(this AzureSqlDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SampleName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServiceObjective
-        /// <summary><p><em>Sets <see cref="AzureSqlDbCreateSettings.ServiceObjective"/>.</em></p><p>The name of the configured service level objective of the database. This is the service level objective that is in the process of being applied to the database. Once successfully updated, it will match the value of serviceLevelObjective property. To see possible values, query the capabilities API (/subscriptions/{subscriptionId}/providers/Microsoft.Sql/locations/{locationID}/capabilities) referred to by operationId: "Capabilities_ListByLocation." or use the Azure CLI command `az sql db list-editions --location &amp;lt;location&amp;gt; --query [].supportedServiceLevelObjectives[].name`.</p></summary>
-        [Pure]
-        public static AzureSqlDbCreateSettings SetServiceObjective(this AzureSqlDbCreateSettings toolSettings, string serviceObjective)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServiceObjective = serviceObjective;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSqlDbCreateSettings.ServiceObjective"/>.</em></p><p>The name of the configured service level objective of the database. This is the service level objective that is in the process of being applied to the database. Once successfully updated, it will match the value of serviceLevelObjective property. To see possible values, query the capabilities API (/subscriptions/{subscriptionId}/providers/Microsoft.Sql/locations/{locationID}/capabilities) referred to by operationId: "Capabilities_ListByLocation." or use the Azure CLI command `az sql db list-editions --location &amp;lt;location&amp;gt; --query [].supportedServiceLevelObjectives[].name`.</p></summary>
-        [Pure]
-        public static AzureSqlDbCreateSettings ResetServiceObjective(this AzureSqlDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServiceObjective = null;
-            return toolSettings;
-        }
-        #endregion
         #region Tags
-        /// <summary><p><em>Sets <see cref="AzureSqlDbCreateSettings.Tags"/>.</em></p><p>Resource tags.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlDbCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         [Pure]
         public static AzureSqlDbCreateSettings SetTags(this AzureSqlDbCreateSettings toolSettings, string tags)
         {
@@ -5183,7 +5904,7 @@ namespace Nuke.Azure
             toolSettings.Tags = tags;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlDbCreateSettings.Tags"/>.</em></p><p>Resource tags.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlDbCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         [Pure]
         public static AzureSqlDbCreateSettings ResetTags(this AzureSqlDbCreateSettings toolSettings)
         {
@@ -5193,7 +5914,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region ZoneRedundant
-        /// <summary><p><em>Sets <see cref="AzureSqlDbCreateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy for the database.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlDbCreateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
         [Pure]
         public static AzureSqlDbCreateSettings SetZoneRedundant(this AzureSqlDbCreateSettings toolSettings, bool? zoneRedundant)
         {
@@ -5201,7 +5922,7 @@ namespace Nuke.Azure
             toolSettings.ZoneRedundant = zoneRedundant;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlDbCreateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy for the database.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlDbCreateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
         [Pure]
         public static AzureSqlDbCreateSettings ResetZoneRedundant(this AzureSqlDbCreateSettings toolSettings)
         {
@@ -5209,7 +5930,7 @@ namespace Nuke.Azure
             toolSettings.ZoneRedundant = null;
             return toolSettings;
         }
-        /// <summary><p><em>Enables <see cref="AzureSqlDbCreateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy for the database.</p></summary>
+        /// <summary><p><em>Enables <see cref="AzureSqlDbCreateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
         [Pure]
         public static AzureSqlDbCreateSettings EnableZoneRedundant(this AzureSqlDbCreateSettings toolSettings)
         {
@@ -5217,7 +5938,7 @@ namespace Nuke.Azure
             toolSettings.ZoneRedundant = true;
             return toolSettings;
         }
-        /// <summary><p><em>Disables <see cref="AzureSqlDbCreateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy for the database.</p></summary>
+        /// <summary><p><em>Disables <see cref="AzureSqlDbCreateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
         [Pure]
         public static AzureSqlDbCreateSettings DisableZoneRedundant(this AzureSqlDbCreateSettings toolSettings)
         {
@@ -5225,12 +5946,156 @@ namespace Nuke.Azure
             toolSettings.ZoneRedundant = false;
             return toolSettings;
         }
-        /// <summary><p><em>Toggles <see cref="AzureSqlDbCreateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy for the database.</p></summary>
+        /// <summary><p><em>Toggles <see cref="AzureSqlDbCreateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
         [Pure]
         public static AzureSqlDbCreateSettings ToggleZoneRedundant(this AzureSqlDbCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ZoneRedundant = !toolSettings.ZoneRedundant;
+            return toolSettings;
+        }
+        #endregion
+        #region CatalogCollation
+        /// <summary><p><em>Sets <see cref="AzureSqlDbCreateSettings.CatalogCollation"/>.</em></p><p>Collation of the metadata catalog.</p></summary>
+        [Pure]
+        public static AzureSqlDbCreateSettings SetCatalogCollation(this AzureSqlDbCreateSettings toolSettings, SqlDbCreateCatalogCollation catalogCollation)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CatalogCollation = catalogCollation;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbCreateSettings.CatalogCollation"/>.</em></p><p>Collation of the metadata catalog.</p></summary>
+        [Pure]
+        public static AzureSqlDbCreateSettings ResetCatalogCollation(this AzureSqlDbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CatalogCollation = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Collation
+        /// <summary><p><em>Sets <see cref="AzureSqlDbCreateSettings.Collation"/>.</em></p><p>The collation of the database.</p></summary>
+        [Pure]
+        public static AzureSqlDbCreateSettings SetCollation(this AzureSqlDbCreateSettings toolSettings, string collation)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Collation = collation;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbCreateSettings.Collation"/>.</em></p><p>The collation of the database.</p></summary>
+        [Pure]
+        public static AzureSqlDbCreateSettings ResetCollation(this AzureSqlDbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Collation = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SampleName
+        /// <summary><p><em>Sets <see cref="AzureSqlDbCreateSettings.SampleName"/>.</em></p><p>The name of the sample schema to apply when creating this database.</p></summary>
+        [Pure]
+        public static AzureSqlDbCreateSettings SetSampleName(this AzureSqlDbCreateSettings toolSettings, string sampleName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SampleName = sampleName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbCreateSettings.SampleName"/>.</em></p><p>The name of the sample schema to apply when creating this database.</p></summary>
+        [Pure]
+        public static AzureSqlDbCreateSettings ResetSampleName(this AzureSqlDbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SampleName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Capacity
+        /// <summary><p><em>Sets <see cref="AzureSqlDbCreateSettings.Capacity"/>.</em></p><p>The capacity component of the sku in integer number of DTUs or vcores.</p></summary>
+        [Pure]
+        public static AzureSqlDbCreateSettings SetCapacity(this AzureSqlDbCreateSettings toolSettings, string capacity)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Capacity = capacity;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbCreateSettings.Capacity"/>.</em></p><p>The capacity component of the sku in integer number of DTUs or vcores.</p></summary>
+        [Pure]
+        public static AzureSqlDbCreateSettings ResetCapacity(this AzureSqlDbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Capacity = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Edition
+        /// <summary><p><em>Sets <see cref="AzureSqlDbCreateSettings.Edition"/>.</em></p><p>The edition component of the sku. Allowed values include: Basic, Standard, Premium, GeneralPurpose, BusinessCritical.</p></summary>
+        [Pure]
+        public static AzureSqlDbCreateSettings SetEdition(this AzureSqlDbCreateSettings toolSettings, string edition)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Edition = edition;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbCreateSettings.Edition"/>.</em></p><p>The edition component of the sku. Allowed values include: Basic, Standard, Premium, GeneralPurpose, BusinessCritical.</p></summary>
+        [Pure]
+        public static AzureSqlDbCreateSettings ResetEdition(this AzureSqlDbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Edition = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Family
+        /// <summary><p><em>Sets <see cref="AzureSqlDbCreateSettings.Family"/>.</em></p><p>The compute generation component of the sku (for vcore skus only). Allowed values include: Gen4, Gen5.</p></summary>
+        [Pure]
+        public static AzureSqlDbCreateSettings SetFamily(this AzureSqlDbCreateSettings toolSettings, string family)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Family = family;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbCreateSettings.Family"/>.</em></p><p>The compute generation component of the sku (for vcore skus only). Allowed values include: Gen4, Gen5.</p></summary>
+        [Pure]
+        public static AzureSqlDbCreateSettings ResetFamily(this AzureSqlDbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Family = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ElasticPool
+        /// <summary><p><em>Sets <see cref="AzureSqlDbCreateSettings.ElasticPool"/>.</em></p><p>The name or resource id of the elastic pool to create the database in.</p></summary>
+        [Pure]
+        public static AzureSqlDbCreateSettings SetElasticPool(this AzureSqlDbCreateSettings toolSettings, string elasticPool)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ElasticPool = elasticPool;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbCreateSettings.ElasticPool"/>.</em></p><p>The name or resource id of the elastic pool to create the database in.</p></summary>
+        [Pure]
+        public static AzureSqlDbCreateSettings ResetElasticPool(this AzureSqlDbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ElasticPool = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServiceObjective
+        /// <summary><p><em>Sets <see cref="AzureSqlDbCreateSettings.ServiceObjective"/>.</em></p><p>The service objective for the new database. For example: Basic, S0, P1, GP_Gen4_1, BC_Gen5_2.</p></summary>
+        [Pure]
+        public static AzureSqlDbCreateSettings SetServiceObjective(this AzureSqlDbCreateSettings toolSettings, string serviceObjective)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServiceObjective = serviceObjective;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbCreateSettings.ServiceObjective"/>.</em></p><p>The service objective for the new database. For example: Basic, S0, P1, GP_Gen4_1, BC_Gen5_2.</p></summary>
+        [Pure]
+        public static AzureSqlDbCreateSettings ResetServiceObjective(this AzureSqlDbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServiceObjective = null;
             return toolSettings;
         }
         #endregion
@@ -5386,6 +6251,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region NoWait
+        /// <summary><p><em>Sets <see cref="AzureSqlDbDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSqlDbDeleteSettings SetNoWait(this AzureSqlDbDeleteSettings toolSettings, string noWait)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = noWait;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSqlDbDeleteSettings ResetNoWait(this AzureSqlDbDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        #endregion
         #region Yes
         /// <summary><p><em>Sets <see cref="AzureSqlDbDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
         [Pure]
@@ -5503,7 +6386,7 @@ namespace Nuke.Azure
     public static partial class AzureSqlDbExportSettingsExtensions
     {
         #region AdminPassword
-        /// <summary><p><em>Sets <see cref="AzureSqlDbExportSettings.AdminPassword"/>.</em></p><p>The password of the SQL administrator.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlDbExportSettings.AdminPassword"/>.</em></p><p>Required. The password of the SQL administrator.</p></summary>
         [Pure]
         public static AzureSqlDbExportSettings SetAdminPassword(this AzureSqlDbExportSettings toolSettings, string adminPassword)
         {
@@ -5511,7 +6394,7 @@ namespace Nuke.Azure
             toolSettings.AdminPassword = adminPassword;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlDbExportSettings.AdminPassword"/>.</em></p><p>The password of the SQL administrator.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlDbExportSettings.AdminPassword"/>.</em></p><p>Required. The password of the SQL administrator.</p></summary>
         [Pure]
         public static AzureSqlDbExportSettings ResetAdminPassword(this AzureSqlDbExportSettings toolSettings)
         {
@@ -5521,7 +6404,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region AdminUser
-        /// <summary><p><em>Sets <see cref="AzureSqlDbExportSettings.AdminUser"/>.</em></p><p>The name of the SQL administrator.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlDbExportSettings.AdminUser"/>.</em></p><p>Required. The name of the SQL administrator.</p></summary>
         [Pure]
         public static AzureSqlDbExportSettings SetAdminUser(this AzureSqlDbExportSettings toolSettings, string adminUser)
         {
@@ -5529,7 +6412,7 @@ namespace Nuke.Azure
             toolSettings.AdminUser = adminUser;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlDbExportSettings.AdminUser"/>.</em></p><p>The name of the SQL administrator.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlDbExportSettings.AdminUser"/>.</em></p><p>Required. The name of the SQL administrator.</p></summary>
         [Pure]
         public static AzureSqlDbExportSettings ResetAdminUser(this AzureSqlDbExportSettings toolSettings)
         {
@@ -5593,7 +6476,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region StorageKey
-        /// <summary><p><em>Sets <see cref="AzureSqlDbExportSettings.StorageKey"/>.</em></p><p>The storage key to use.  If storage key type is SharedAccessKey, it must be preceded with a "?.".</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlDbExportSettings.StorageKey"/>.</em></p><p>Required. The storage key to use.  If storage key type is SharedAccessKey, it must be preceded with a "?.".</p></summary>
         [Pure]
         public static AzureSqlDbExportSettings SetStorageKey(this AzureSqlDbExportSettings toolSettings, string storageKey)
         {
@@ -5601,7 +6484,7 @@ namespace Nuke.Azure
             toolSettings.StorageKey = storageKey;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlDbExportSettings.StorageKey"/>.</em></p><p>The storage key to use.  If storage key type is SharedAccessKey, it must be preceded with a "?.".</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlDbExportSettings.StorageKey"/>.</em></p><p>Required. The storage key to use.  If storage key type is SharedAccessKey, it must be preceded with a "?.".</p></summary>
         [Pure]
         public static AzureSqlDbExportSettings ResetStorageKey(this AzureSqlDbExportSettings toolSettings)
         {
@@ -5611,7 +6494,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region StorageKeyType
-        /// <summary><p><em>Sets <see cref="AzureSqlDbExportSettings.StorageKeyType"/>.</em></p><p>The type of the storage key to use.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlDbExportSettings.StorageKeyType"/>.</em></p><p>Required. The type of the storage key to use.</p></summary>
         [Pure]
         public static AzureSqlDbExportSettings SetStorageKeyType(this AzureSqlDbExportSettings toolSettings, SqlDbStorageKeyType storageKeyType)
         {
@@ -5619,7 +6502,7 @@ namespace Nuke.Azure
             toolSettings.StorageKeyType = storageKeyType;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlDbExportSettings.StorageKeyType"/>.</em></p><p>The type of the storage key to use.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlDbExportSettings.StorageKeyType"/>.</em></p><p>Required. The type of the storage key to use.</p></summary>
         [Pure]
         public static AzureSqlDbExportSettings ResetStorageKeyType(this AzureSqlDbExportSettings toolSettings)
         {
@@ -5629,7 +6512,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region StorageUri
-        /// <summary><p><em>Sets <see cref="AzureSqlDbExportSettings.StorageUri"/>.</em></p><p>The storage uri to use.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlDbExportSettings.StorageUri"/>.</em></p><p>Required. The storage uri to use.</p></summary>
         [Pure]
         public static AzureSqlDbExportSettings SetStorageUri(this AzureSqlDbExportSettings toolSettings, string storageUri)
         {
@@ -5637,7 +6520,7 @@ namespace Nuke.Azure
             toolSettings.StorageUri = storageUri;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlDbExportSettings.StorageUri"/>.</em></p><p>The storage uri to use.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlDbExportSettings.StorageUri"/>.</em></p><p>Required. The storage uri to use.</p></summary>
         [Pure]
         public static AzureSqlDbExportSettings ResetStorageUri(this AzureSqlDbExportSettings toolSettings)
         {
@@ -5763,7 +6646,7 @@ namespace Nuke.Azure
     public static partial class AzureSqlDbImportSettingsExtensions
     {
         #region AdminPassword
-        /// <summary><p><em>Sets <see cref="AzureSqlDbImportSettings.AdminPassword"/>.</em></p><p>The password of the SQL administrator.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlDbImportSettings.AdminPassword"/>.</em></p><p>Required. The password of the SQL administrator.</p></summary>
         [Pure]
         public static AzureSqlDbImportSettings SetAdminPassword(this AzureSqlDbImportSettings toolSettings, string adminPassword)
         {
@@ -5771,7 +6654,7 @@ namespace Nuke.Azure
             toolSettings.AdminPassword = adminPassword;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlDbImportSettings.AdminPassword"/>.</em></p><p>The password of the SQL administrator.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlDbImportSettings.AdminPassword"/>.</em></p><p>Required. The password of the SQL administrator.</p></summary>
         [Pure]
         public static AzureSqlDbImportSettings ResetAdminPassword(this AzureSqlDbImportSettings toolSettings)
         {
@@ -5781,7 +6664,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region AdminUser
-        /// <summary><p><em>Sets <see cref="AzureSqlDbImportSettings.AdminUser"/>.</em></p><p>The name of the SQL administrator.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlDbImportSettings.AdminUser"/>.</em></p><p>Required. The name of the SQL administrator.</p></summary>
         [Pure]
         public static AzureSqlDbImportSettings SetAdminUser(this AzureSqlDbImportSettings toolSettings, string adminUser)
         {
@@ -5789,7 +6672,7 @@ namespace Nuke.Azure
             toolSettings.AdminUser = adminUser;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlDbImportSettings.AdminUser"/>.</em></p><p>The name of the SQL administrator.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlDbImportSettings.AdminUser"/>.</em></p><p>Required. The name of the SQL administrator.</p></summary>
         [Pure]
         public static AzureSqlDbImportSettings ResetAdminUser(this AzureSqlDbImportSettings toolSettings)
         {
@@ -5853,7 +6736,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region StorageKey
-        /// <summary><p><em>Sets <see cref="AzureSqlDbImportSettings.StorageKey"/>.</em></p><p>The storage key to use.  If storage key type is SharedAccessKey, it must be preceded with a "?.".</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlDbImportSettings.StorageKey"/>.</em></p><p>Required. The storage key to use.  If storage key type is SharedAccessKey, it must be preceded with a "?.".</p></summary>
         [Pure]
         public static AzureSqlDbImportSettings SetStorageKey(this AzureSqlDbImportSettings toolSettings, string storageKey)
         {
@@ -5861,7 +6744,7 @@ namespace Nuke.Azure
             toolSettings.StorageKey = storageKey;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlDbImportSettings.StorageKey"/>.</em></p><p>The storage key to use.  If storage key type is SharedAccessKey, it must be preceded with a "?.".</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlDbImportSettings.StorageKey"/>.</em></p><p>Required. The storage key to use.  If storage key type is SharedAccessKey, it must be preceded with a "?.".</p></summary>
         [Pure]
         public static AzureSqlDbImportSettings ResetStorageKey(this AzureSqlDbImportSettings toolSettings)
         {
@@ -5871,7 +6754,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region StorageKeyType
-        /// <summary><p><em>Sets <see cref="AzureSqlDbImportSettings.StorageKeyType"/>.</em></p><p>The type of the storage key to use.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlDbImportSettings.StorageKeyType"/>.</em></p><p>Required. The type of the storage key to use.</p></summary>
         [Pure]
         public static AzureSqlDbImportSettings SetStorageKeyType(this AzureSqlDbImportSettings toolSettings, SqlDbStorageKeyType storageKeyType)
         {
@@ -5879,7 +6762,7 @@ namespace Nuke.Azure
             toolSettings.StorageKeyType = storageKeyType;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlDbImportSettings.StorageKeyType"/>.</em></p><p>The type of the storage key to use.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlDbImportSettings.StorageKeyType"/>.</em></p><p>Required. The type of the storage key to use.</p></summary>
         [Pure]
         public static AzureSqlDbImportSettings ResetStorageKeyType(this AzureSqlDbImportSettings toolSettings)
         {
@@ -5889,7 +6772,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region StorageUri
-        /// <summary><p><em>Sets <see cref="AzureSqlDbImportSettings.StorageUri"/>.</em></p><p>The storage uri to use.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlDbImportSettings.StorageUri"/>.</em></p><p>Required. The storage uri to use.</p></summary>
         [Pure]
         public static AzureSqlDbImportSettings SetStorageUri(this AzureSqlDbImportSettings toolSettings, string storageUri)
         {
@@ -5897,7 +6780,7 @@ namespace Nuke.Azure
             toolSettings.StorageUri = storageUri;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlDbImportSettings.StorageUri"/>.</em></p><p>The storage uri to use.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlDbImportSettings.StorageUri"/>.</em></p><p>Required. The storage uri to use.</p></summary>
         [Pure]
         public static AzureSqlDbImportSettings ResetStorageUri(this AzureSqlDbImportSettings toolSettings)
         {
@@ -6326,6 +7209,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Available
+        /// <summary><p><em>Sets <see cref="AzureSqlDbListEditionsSettings.Available"/>.</em></p><p>If specified, show only results that are available in the specified region.</p></summary>
+        [Pure]
+        public static AzureSqlDbListEditionsSettings SetAvailable(this AzureSqlDbListEditionsSettings toolSettings, string available)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Available = available;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbListEditionsSettings.Available"/>.</em></p><p>If specified, show only results that are available in the specified region.</p></summary>
+        [Pure]
+        public static AzureSqlDbListEditionsSettings ResetAvailable(this AzureSqlDbListEditionsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Available = null;
+            return toolSettings;
+        }
+        #endregion
         #region ShowDetails
         /// <summary><p><em>Sets <see cref="AzureSqlDbListEditionsSettings.ShowDetails"/>.</em></p><p>List of additional details to include in output.</p></summary>
         [Pure]
@@ -6341,6 +7242,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ShowDetails = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Dtu
+        /// <summary><p><em>Sets <see cref="AzureSqlDbListEditionsSettings.Dtu"/>.</em></p><p>Number of DTUs to search for. If unspecified, all DTU sizes are shown.</p></summary>
+        [Pure]
+        public static AzureSqlDbListEditionsSettings SetDtu(this AzureSqlDbListEditionsSettings toolSettings, int? dtu)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Dtu = dtu;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbListEditionsSettings.Dtu"/>.</em></p><p>Number of DTUs to search for. If unspecified, all DTU sizes are shown.</p></summary>
+        [Pure]
+        public static AzureSqlDbListEditionsSettings ResetDtu(this AzureSqlDbListEditionsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Dtu = null;
             return toolSettings;
         }
         #endregion
@@ -6363,7 +7282,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region ServiceObjective
-        /// <summary><p><em>Sets <see cref="AzureSqlDbListEditionsSettings.ServiceObjective"/>.</em></p><p>Service objective to search for. If unspecified, all editions are shown.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlDbListEditionsSettings.ServiceObjective"/>.</em></p><p>Service objective to search for. If unspecified, all service objectives are shown.</p></summary>
         [Pure]
         public static AzureSqlDbListEditionsSettings SetServiceObjective(this AzureSqlDbListEditionsSettings toolSettings, string serviceObjective)
         {
@@ -6371,12 +7290,30 @@ namespace Nuke.Azure
             toolSettings.ServiceObjective = serviceObjective;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlDbListEditionsSettings.ServiceObjective"/>.</em></p><p>Service objective to search for. If unspecified, all editions are shown.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlDbListEditionsSettings.ServiceObjective"/>.</em></p><p>Service objective to search for. If unspecified, all service objectives are shown.</p></summary>
         [Pure]
         public static AzureSqlDbListEditionsSettings ResetServiceObjective(this AzureSqlDbListEditionsSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ServiceObjective = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Vcores
+        /// <summary><p><em>Sets <see cref="AzureSqlDbListEditionsSettings.Vcores"/>.</em></p><p>Number of vcores to search for. If unspecified, all vcore sizes are shown.</p></summary>
+        [Pure]
+        public static AzureSqlDbListEditionsSettings SetVcores(this AzureSqlDbListEditionsSettings toolSettings, int? vcores)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Vcores = vcores;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbListEditionsSettings.Vcores"/>.</em></p><p>Number of vcores to search for. If unspecified, all vcore sizes are shown.</p></summary>
+        [Pure]
+        public static AzureSqlDbListEditionsSettings ResetVcores(this AzureSqlDbListEditionsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Vcores = null;
             return toolSettings;
         }
         #endregion
@@ -6872,39 +7809,21 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Edition
-        /// <summary><p><em>Sets <see cref="AzureSqlDbRestoreSettings.Edition"/>.</em></p><p>The edition for the new database.</p></summary>
+        #region LicenseType
+        /// <summary><p><em>Sets <see cref="AzureSqlDbRestoreSettings.LicenseType"/>.</em></p><p>The license type to apply for this database.</p></summary>
         [Pure]
-        public static AzureSqlDbRestoreSettings SetEdition(this AzureSqlDbRestoreSettings toolSettings, string edition)
+        public static AzureSqlDbRestoreSettings SetLicenseType(this AzureSqlDbRestoreSettings toolSettings, SqlDbLicenseType licenseType)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Edition = edition;
+            toolSettings.LicenseType = licenseType;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlDbRestoreSettings.Edition"/>.</em></p><p>The edition for the new database.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlDbRestoreSettings.LicenseType"/>.</em></p><p>The license type to apply for this database.</p></summary>
         [Pure]
-        public static AzureSqlDbRestoreSettings ResetEdition(this AzureSqlDbRestoreSettings toolSettings)
+        public static AzureSqlDbRestoreSettings ResetLicenseType(this AzureSqlDbRestoreSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Edition = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ElasticPool
-        /// <summary><p><em>Sets <see cref="AzureSqlDbRestoreSettings.ElasticPool"/>.</em></p><p>Name of the elastic pool to create the new database in.</p></summary>
-        [Pure]
-        public static AzureSqlDbRestoreSettings SetElasticPool(this AzureSqlDbRestoreSettings toolSettings, string elasticPool)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ElasticPool = elasticPool;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSqlDbRestoreSettings.ElasticPool"/>.</em></p><p>Name of the elastic pool to create the new database in.</p></summary>
-        [Pure]
-        public static AzureSqlDbRestoreSettings ResetElasticPool(this AzureSqlDbRestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ElasticPool = null;
+            toolSettings.LicenseType = null;
             return toolSettings;
         }
         #endregion
@@ -6926,26 +7845,8 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region ServiceObjective
-        /// <summary><p><em>Sets <see cref="AzureSqlDbRestoreSettings.ServiceObjective"/>.</em></p><p>Name of service objective for the new database.</p></summary>
-        [Pure]
-        public static AzureSqlDbRestoreSettings SetServiceObjective(this AzureSqlDbRestoreSettings toolSettings, string serviceObjective)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServiceObjective = serviceObjective;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSqlDbRestoreSettings.ServiceObjective"/>.</em></p><p>Name of service objective for the new database.</p></summary>
-        [Pure]
-        public static AzureSqlDbRestoreSettings ResetServiceObjective(this AzureSqlDbRestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServiceObjective = null;
-            return toolSettings;
-        }
-        #endregion
         #region Tags
-        /// <summary><p><em>Sets <see cref="AzureSqlDbRestoreSettings.Tags"/>.</em></p><p>Resource tags.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlDbRestoreSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         [Pure]
         public static AzureSqlDbRestoreSettings SetTags(this AzureSqlDbRestoreSettings toolSettings, string tags)
         {
@@ -6953,12 +7854,144 @@ namespace Nuke.Azure
             toolSettings.Tags = tags;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlDbRestoreSettings.Tags"/>.</em></p><p>Resource tags.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlDbRestoreSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         [Pure]
         public static AzureSqlDbRestoreSettings ResetTags(this AzureSqlDbRestoreSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ZoneRedundant
+        /// <summary><p><em>Sets <see cref="AzureSqlDbRestoreSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
+        [Pure]
+        public static AzureSqlDbRestoreSettings SetZoneRedundant(this AzureSqlDbRestoreSettings toolSettings, bool? zoneRedundant)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ZoneRedundant = zoneRedundant;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbRestoreSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
+        [Pure]
+        public static AzureSqlDbRestoreSettings ResetZoneRedundant(this AzureSqlDbRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ZoneRedundant = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureSqlDbRestoreSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
+        [Pure]
+        public static AzureSqlDbRestoreSettings EnableZoneRedundant(this AzureSqlDbRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ZoneRedundant = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureSqlDbRestoreSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
+        [Pure]
+        public static AzureSqlDbRestoreSettings DisableZoneRedundant(this AzureSqlDbRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ZoneRedundant = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureSqlDbRestoreSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
+        [Pure]
+        public static AzureSqlDbRestoreSettings ToggleZoneRedundant(this AzureSqlDbRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ZoneRedundant = !toolSettings.ZoneRedundant;
+            return toolSettings;
+        }
+        #endregion
+        #region Capacity
+        /// <summary><p><em>Sets <see cref="AzureSqlDbRestoreSettings.Capacity"/>.</em></p><p>The capacity component of the sku in integer number of DTUs or vcores.</p></summary>
+        [Pure]
+        public static AzureSqlDbRestoreSettings SetCapacity(this AzureSqlDbRestoreSettings toolSettings, string capacity)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Capacity = capacity;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbRestoreSettings.Capacity"/>.</em></p><p>The capacity component of the sku in integer number of DTUs or vcores.</p></summary>
+        [Pure]
+        public static AzureSqlDbRestoreSettings ResetCapacity(this AzureSqlDbRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Capacity = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Edition
+        /// <summary><p><em>Sets <see cref="AzureSqlDbRestoreSettings.Edition"/>.</em></p><p>The edition component of the sku. Allowed values include: Basic, Standard, Premium, GeneralPurpose, BusinessCritical.</p></summary>
+        [Pure]
+        public static AzureSqlDbRestoreSettings SetEdition(this AzureSqlDbRestoreSettings toolSettings, string edition)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Edition = edition;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbRestoreSettings.Edition"/>.</em></p><p>The edition component of the sku. Allowed values include: Basic, Standard, Premium, GeneralPurpose, BusinessCritical.</p></summary>
+        [Pure]
+        public static AzureSqlDbRestoreSettings ResetEdition(this AzureSqlDbRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Edition = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Family
+        /// <summary><p><em>Sets <see cref="AzureSqlDbRestoreSettings.Family"/>.</em></p><p>The compute generation component of the sku (for vcore skus only). Allowed values include: Gen4, Gen5.</p></summary>
+        [Pure]
+        public static AzureSqlDbRestoreSettings SetFamily(this AzureSqlDbRestoreSettings toolSettings, string family)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Family = family;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbRestoreSettings.Family"/>.</em></p><p>The compute generation component of the sku (for vcore skus only). Allowed values include: Gen4, Gen5.</p></summary>
+        [Pure]
+        public static AzureSqlDbRestoreSettings ResetFamily(this AzureSqlDbRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Family = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ElasticPool
+        /// <summary><p><em>Sets <see cref="AzureSqlDbRestoreSettings.ElasticPool"/>.</em></p><p>The name or resource id of the elastic pool to create the database in.</p></summary>
+        [Pure]
+        public static AzureSqlDbRestoreSettings SetElasticPool(this AzureSqlDbRestoreSettings toolSettings, string elasticPool)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ElasticPool = elasticPool;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbRestoreSettings.ElasticPool"/>.</em></p><p>The name or resource id of the elastic pool to create the database in.</p></summary>
+        [Pure]
+        public static AzureSqlDbRestoreSettings ResetElasticPool(this AzureSqlDbRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ElasticPool = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServiceObjective
+        /// <summary><p><em>Sets <see cref="AzureSqlDbRestoreSettings.ServiceObjective"/>.</em></p><p>The service objective for the new database. For example: Basic, S0, P1, GP_Gen4_1, BC_Gen5_2.</p></summary>
+        [Pure]
+        public static AzureSqlDbRestoreSettings SetServiceObjective(this AzureSqlDbRestoreSettings toolSettings, string serviceObjective)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServiceObjective = serviceObjective;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbRestoreSettings.ServiceObjective"/>.</em></p><p>The service objective for the new database. For example: Basic, S0, P1, GP_Gen4_1, BC_Gen5_2.</p></summary>
+        [Pure]
+        public static AzureSqlDbRestoreSettings ResetServiceObjective(this AzureSqlDbRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServiceObjective = null;
             return toolSettings;
         }
         #endregion
@@ -7472,24 +8505,6 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region ElasticPool
-        /// <summary><p><em>Sets <see cref="AzureSqlDbUpdateSettings.ElasticPool"/>.</em></p><p>The name of the elastic pool to move the database into.</p></summary>
-        [Pure]
-        public static AzureSqlDbUpdateSettings SetElasticPool(this AzureSqlDbUpdateSettings toolSettings, string elasticPool)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ElasticPool = elasticPool;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSqlDbUpdateSettings.ElasticPool"/>.</em></p><p>The name of the elastic pool to move the database into.</p></summary>
-        [Pure]
-        public static AzureSqlDbUpdateSettings ResetElasticPool(this AzureSqlDbUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ElasticPool = null;
-            return toolSettings;
-        }
-        #endregion
         #region MaxSize
         /// <summary><p><em>Sets <see cref="AzureSqlDbUpdateSettings.MaxSize"/>.</em></p><p>The new maximum size of the database expressed in bytes.</p></summary>
         [Pure]
@@ -7526,6 +8541,120 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region ZoneRedundant
+        /// <summary><p><em>Sets <see cref="AzureSqlDbUpdateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
+        [Pure]
+        public static AzureSqlDbUpdateSettings SetZoneRedundant(this AzureSqlDbUpdateSettings toolSettings, bool? zoneRedundant)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ZoneRedundant = zoneRedundant;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbUpdateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
+        [Pure]
+        public static AzureSqlDbUpdateSettings ResetZoneRedundant(this AzureSqlDbUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ZoneRedundant = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureSqlDbUpdateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
+        [Pure]
+        public static AzureSqlDbUpdateSettings EnableZoneRedundant(this AzureSqlDbUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ZoneRedundant = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureSqlDbUpdateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
+        [Pure]
+        public static AzureSqlDbUpdateSettings DisableZoneRedundant(this AzureSqlDbUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ZoneRedundant = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureSqlDbUpdateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
+        [Pure]
+        public static AzureSqlDbUpdateSettings ToggleZoneRedundant(this AzureSqlDbUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ZoneRedundant = !toolSettings.ZoneRedundant;
+            return toolSettings;
+        }
+        #endregion
+        #region Capacity
+        /// <summary><p><em>Sets <see cref="AzureSqlDbUpdateSettings.Capacity"/>.</em></p><p>The capacity component of the sku in integer number of DTUs or vcores.</p></summary>
+        [Pure]
+        public static AzureSqlDbUpdateSettings SetCapacity(this AzureSqlDbUpdateSettings toolSettings, string capacity)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Capacity = capacity;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbUpdateSettings.Capacity"/>.</em></p><p>The capacity component of the sku in integer number of DTUs or vcores.</p></summary>
+        [Pure]
+        public static AzureSqlDbUpdateSettings ResetCapacity(this AzureSqlDbUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Capacity = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Edition
+        /// <summary><p><em>Sets <see cref="AzureSqlDbUpdateSettings.Edition"/>.</em></p><p>The edition component of the sku. Allowed values include: Basic, Standard, Premium, GeneralPurpose, BusinessCritical.</p></summary>
+        [Pure]
+        public static AzureSqlDbUpdateSettings SetEdition(this AzureSqlDbUpdateSettings toolSettings, string edition)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Edition = edition;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbUpdateSettings.Edition"/>.</em></p><p>The edition component of the sku. Allowed values include: Basic, Standard, Premium, GeneralPurpose, BusinessCritical.</p></summary>
+        [Pure]
+        public static AzureSqlDbUpdateSettings ResetEdition(this AzureSqlDbUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Edition = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Family
+        /// <summary><p><em>Sets <see cref="AzureSqlDbUpdateSettings.Family"/>.</em></p><p>The compute generation component of the sku (for vcore skus only). Allowed values include: Gen4, Gen5.</p></summary>
+        [Pure]
+        public static AzureSqlDbUpdateSettings SetFamily(this AzureSqlDbUpdateSettings toolSettings, string family)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Family = family;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbUpdateSettings.Family"/>.</em></p><p>The compute generation component of the sku (for vcore skus only). Allowed values include: Gen4, Gen5.</p></summary>
+        [Pure]
+        public static AzureSqlDbUpdateSettings ResetFamily(this AzureSqlDbUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Family = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ElasticPool
+        /// <summary><p><em>Sets <see cref="AzureSqlDbUpdateSettings.ElasticPool"/>.</em></p><p>The name or resource id of the elastic pool to move the database into.</p></summary>
+        [Pure]
+        public static AzureSqlDbUpdateSettings SetElasticPool(this AzureSqlDbUpdateSettings toolSettings, string elasticPool)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ElasticPool = elasticPool;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbUpdateSettings.ElasticPool"/>.</em></p><p>The name or resource id of the elastic pool to move the database into.</p></summary>
+        [Pure]
+        public static AzureSqlDbUpdateSettings ResetElasticPool(this AzureSqlDbUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ElasticPool = null;
+            return toolSettings;
+        }
+        #endregion
         #region ServiceObjective
         /// <summary><p><em>Sets <see cref="AzureSqlDbUpdateSettings.ServiceObjective"/>.</em></p><p>The name of the new service objective. If this is a standalone db service objective and the db is currently in an elastic pool, then the db is removed from the pool.</p></summary>
         [Pure]
@@ -7541,48 +8670,6 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ServiceObjective = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ZoneRedundant
-        /// <summary><p><em>Sets <see cref="AzureSqlDbUpdateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy for the database.</p></summary>
-        [Pure]
-        public static AzureSqlDbUpdateSettings SetZoneRedundant(this AzureSqlDbUpdateSettings toolSettings, bool? zoneRedundant)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ZoneRedundant = zoneRedundant;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSqlDbUpdateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy for the database.</p></summary>
-        [Pure]
-        public static AzureSqlDbUpdateSettings ResetZoneRedundant(this AzureSqlDbUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ZoneRedundant = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureSqlDbUpdateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy for the database.</p></summary>
-        [Pure]
-        public static AzureSqlDbUpdateSettings EnableZoneRedundant(this AzureSqlDbUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ZoneRedundant = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureSqlDbUpdateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy for the database.</p></summary>
-        [Pure]
-        public static AzureSqlDbUpdateSettings DisableZoneRedundant(this AzureSqlDbUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ZoneRedundant = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureSqlDbUpdateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy for the database.</p></summary>
-        [Pure]
-        public static AzureSqlDbUpdateSettings ToggleZoneRedundant(this AzureSqlDbUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ZoneRedundant = !toolSettings.ZoneRedundant;
             return toolSettings;
         }
         #endregion
@@ -7811,7 +8898,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region MaxSize
-        /// <summary><p><em>Sets <see cref="AzureSqlDwCreateSettings.MaxSize"/>.</em></p><p>The max storage size of the data warehouse. If no unit is specified, defaultsto bytes (B).</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlDwCreateSettings.MaxSize"/>.</em></p><p>The max storage size. If no unit is specified, defaults to bytes (B).</p></summary>
         [Pure]
         public static AzureSqlDwCreateSettings SetMaxSize(this AzureSqlDwCreateSettings toolSettings, string maxSize)
         {
@@ -7819,7 +8906,7 @@ namespace Nuke.Azure
             toolSettings.MaxSize = maxSize;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlDwCreateSettings.MaxSize"/>.</em></p><p>The max storage size of the data warehouse. If no unit is specified, defaultsto bytes (B).</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlDwCreateSettings.MaxSize"/>.</em></p><p>The max storage size. If no unit is specified, defaults to bytes (B).</p></summary>
         [Pure]
         public static AzureSqlDwCreateSettings ResetMaxSize(this AzureSqlDwCreateSettings toolSettings)
         {
@@ -7846,26 +8933,8 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region ServiceObjective
-        /// <summary><p><em>Sets <see cref="AzureSqlDwCreateSettings.ServiceObjective"/>.</em></p><p>The service objective of the data warehouse.</p></summary>
-        [Pure]
-        public static AzureSqlDwCreateSettings SetServiceObjective(this AzureSqlDwCreateSettings toolSettings, string serviceObjective)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServiceObjective = serviceObjective;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSqlDwCreateSettings.ServiceObjective"/>.</em></p><p>The service objective of the data warehouse.</p></summary>
-        [Pure]
-        public static AzureSqlDwCreateSettings ResetServiceObjective(this AzureSqlDwCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServiceObjective = null;
-            return toolSettings;
-        }
-        #endregion
         #region Tags
-        /// <summary><p><em>Sets <see cref="AzureSqlDwCreateSettings.Tags"/>.</em></p><p>Resource tags.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlDwCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         [Pure]
         public static AzureSqlDwCreateSettings SetTags(this AzureSqlDwCreateSettings toolSettings, string tags)
         {
@@ -7873,12 +8942,48 @@ namespace Nuke.Azure
             toolSettings.Tags = tags;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlDwCreateSettings.Tags"/>.</em></p><p>Resource tags.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlDwCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         [Pure]
         public static AzureSqlDwCreateSettings ResetTags(this AzureSqlDwCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ZoneRedundant
+        /// <summary><p><em>Sets <see cref="AzureSqlDwCreateSettings.ZoneRedundant"/>.</em></p><p>Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.</p></summary>
+        [Pure]
+        public static AzureSqlDwCreateSettings SetZoneRedundant(this AzureSqlDwCreateSettings toolSettings, string zoneRedundant)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ZoneRedundant = zoneRedundant;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDwCreateSettings.ZoneRedundant"/>.</em></p><p>Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.</p></summary>
+        [Pure]
+        public static AzureSqlDwCreateSettings ResetZoneRedundant(this AzureSqlDwCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ZoneRedundant = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServiceObjective
+        /// <summary><p><em>Sets <see cref="AzureSqlDwCreateSettings.ServiceObjective"/>.</em></p><p>The service objective for the new database. For example: DW100, DW1000c.</p></summary>
+        [Pure]
+        public static AzureSqlDwCreateSettings SetServiceObjective(this AzureSqlDwCreateSettings toolSettings, string serviceObjective)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServiceObjective = serviceObjective;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDwCreateSettings.ServiceObjective"/>.</em></p><p>The service objective for the new database. For example: DW100, DW1000c.</p></summary>
+        [Pure]
+        public static AzureSqlDwCreateSettings ResetServiceObjective(this AzureSqlDwCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServiceObjective = null;
             return toolSettings;
         }
         #endregion
@@ -8031,6 +9136,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Server = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NoWait
+        /// <summary><p><em>Sets <see cref="AzureSqlDwDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSqlDwDeleteSettings SetNoWait(this AzureSqlDwDeleteSettings toolSettings, string noWait)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = noWait;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDwDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSqlDwDeleteSettings ResetNoWait(this AzureSqlDwDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = null;
             return toolSettings;
         }
         #endregion
@@ -8795,7 +9918,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region MaxSize
-        /// <summary><p><em>Sets <see cref="AzureSqlDwUpdateSettings.MaxSize"/>.</em></p><p>The max storage size of the data warehouse. If no unit is specified, defaultsto bytes (B).</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlDwUpdateSettings.MaxSize"/>.</em></p><p>The max storage size. If no unit is specified, defaults to bytes (B).</p></summary>
         [Pure]
         public static AzureSqlDwUpdateSettings SetMaxSize(this AzureSqlDwUpdateSettings toolSettings, string maxSize)
         {
@@ -8803,7 +9926,7 @@ namespace Nuke.Azure
             toolSettings.MaxSize = maxSize;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlDwUpdateSettings.MaxSize"/>.</em></p><p>The max storage size of the data warehouse. If no unit is specified, defaultsto bytes (B).</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlDwUpdateSettings.MaxSize"/>.</em></p><p>The max storage size. If no unit is specified, defaults to bytes (B).</p></summary>
         [Pure]
         public static AzureSqlDwUpdateSettings ResetMaxSize(this AzureSqlDwUpdateSettings toolSettings)
         {
@@ -8831,7 +9954,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region ServiceObjective
-        /// <summary><p><em>Sets <see cref="AzureSqlDwUpdateSettings.ServiceObjective"/>.</em></p><p>The service objective of the data warehouse.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlDwUpdateSettings.ServiceObjective"/>.</em></p><p>The service objective of the data warehouse. For example: DW100, DW1000c.</p></summary>
         [Pure]
         public static AzureSqlDwUpdateSettings SetServiceObjective(this AzureSqlDwUpdateSettings toolSettings, string serviceObjective)
         {
@@ -8839,7 +9962,7 @@ namespace Nuke.Azure
             toolSettings.ServiceObjective = serviceObjective;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlDwUpdateSettings.ServiceObjective"/>.</em></p><p>The service objective of the data warehouse.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlDwUpdateSettings.ServiceObjective"/>.</em></p><p>The service objective of the data warehouse. For example: DW100, DW1000c.</p></summary>
         [Pure]
         public static AzureSqlDwUpdateSettings ResetServiceObjective(this AzureSqlDwUpdateSettings toolSettings)
         {
@@ -9055,7 +10178,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region DbDtuMax
-        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolCreateSettings.DbDtuMax"/>.</em></p><p>The maximum DTU any one database can consume.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolCreateSettings.DbDtuMax"/>.</em></p><p>The maximum capacity (in DTUs or vcores) any one database can consume.</p></summary>
         [Pure]
         public static AzureSqlElasticPoolCreateSettings SetDbDtuMax(this AzureSqlElasticPoolCreateSettings toolSettings, string dbDtuMax)
         {
@@ -9063,7 +10186,7 @@ namespace Nuke.Azure
             toolSettings.DbDtuMax = dbDtuMax;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolCreateSettings.DbDtuMax"/>.</em></p><p>The maximum DTU any one database can consume.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolCreateSettings.DbDtuMax"/>.</em></p><p>The maximum capacity (in DTUs or vcores) any one database can consume.</p></summary>
         [Pure]
         public static AzureSqlElasticPoolCreateSettings ResetDbDtuMax(this AzureSqlElasticPoolCreateSettings toolSettings)
         {
@@ -9073,7 +10196,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region DbDtuMin
-        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolCreateSettings.DbDtuMin"/>.</em></p><p>The minimum DTU all databases are guaranteed.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolCreateSettings.DbDtuMin"/>.</em></p><p>The minumum capacity (in DTUs or vcores) each database is guaranteed.</p></summary>
         [Pure]
         public static AzureSqlElasticPoolCreateSettings SetDbDtuMin(this AzureSqlElasticPoolCreateSettings toolSettings, string dbDtuMin)
         {
@@ -9081,7 +10204,7 @@ namespace Nuke.Azure
             toolSettings.DbDtuMin = dbDtuMin;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolCreateSettings.DbDtuMin"/>.</em></p><p>The minimum DTU all databases are guaranteed.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolCreateSettings.DbDtuMin"/>.</em></p><p>The minumum capacity (in DTUs or vcores) each database is guaranteed.</p></summary>
         [Pure]
         public static AzureSqlElasticPoolCreateSettings ResetDbDtuMin(this AzureSqlElasticPoolCreateSettings toolSettings)
         {
@@ -9090,44 +10213,26 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Dtu
-        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolCreateSettings.Dtu"/>.</em></p><p>The total shared DTU for the database elastic pool.</p></summary>
+        #region LicenseType
+        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolCreateSettings.LicenseType"/>.</em></p><p>The license type to apply for this elastic pool.</p></summary>
         [Pure]
-        public static AzureSqlElasticPoolCreateSettings SetDtu(this AzureSqlElasticPoolCreateSettings toolSettings, string dtu)
+        public static AzureSqlElasticPoolCreateSettings SetLicenseType(this AzureSqlElasticPoolCreateSettings toolSettings, SqlDbLicenseType licenseType)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Dtu = dtu;
+            toolSettings.LicenseType = licenseType;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolCreateSettings.Dtu"/>.</em></p><p>The total shared DTU for the database elastic pool.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolCreateSettings.LicenseType"/>.</em></p><p>The license type to apply for this elastic pool.</p></summary>
         [Pure]
-        public static AzureSqlElasticPoolCreateSettings ResetDtu(this AzureSqlElasticPoolCreateSettings toolSettings)
+        public static AzureSqlElasticPoolCreateSettings ResetLicenseType(this AzureSqlElasticPoolCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Dtu = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Edition
-        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolCreateSettings.Edition"/>.</em></p><p>The edition of the elastic pool.</p></summary>
-        [Pure]
-        public static AzureSqlElasticPoolCreateSettings SetEdition(this AzureSqlElasticPoolCreateSettings toolSettings, string edition)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Edition = edition;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolCreateSettings.Edition"/>.</em></p><p>The edition of the elastic pool.</p></summary>
-        [Pure]
-        public static AzureSqlElasticPoolCreateSettings ResetEdition(this AzureSqlElasticPoolCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Edition = null;
+            toolSettings.LicenseType = null;
             return toolSettings;
         }
         #endregion
         #region MaxSize
-        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolCreateSettings.MaxSize"/>.</em></p><p>The max storage size of the elastic pool. If no unit is specified, defaults to megabytes (MB).</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolCreateSettings.MaxSize"/>.</em></p><p>The max storage size. If no unit is specified, defaults to bytes (B).</p></summary>
         [Pure]
         public static AzureSqlElasticPoolCreateSettings SetMaxSize(this AzureSqlElasticPoolCreateSettings toolSettings, string maxSize)
         {
@@ -9135,7 +10240,7 @@ namespace Nuke.Azure
             toolSettings.MaxSize = maxSize;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolCreateSettings.MaxSize"/>.</em></p><p>The max storage size of the elastic pool. If no unit is specified, defaults to megabytes (MB).</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolCreateSettings.MaxSize"/>.</em></p><p>The max storage size. If no unit is specified, defaults to bytes (B).</p></summary>
         [Pure]
         public static AzureSqlElasticPoolCreateSettings ResetMaxSize(this AzureSqlElasticPoolCreateSettings toolSettings)
         {
@@ -9144,8 +10249,26 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region NoWait
+        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSqlElasticPoolCreateSettings SetNoWait(this AzureSqlElasticPoolCreateSettings toolSettings, string noWait)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = noWait;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSqlElasticPoolCreateSettings ResetNoWait(this AzureSqlElasticPoolCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        #endregion
         #region Tags
-        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolCreateSettings.Tags"/>.</em></p><p>Resource tags.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         [Pure]
         public static AzureSqlElasticPoolCreateSettings SetTags(this AzureSqlElasticPoolCreateSettings toolSettings, string tags)
         {
@@ -9153,7 +10276,7 @@ namespace Nuke.Azure
             toolSettings.Tags = tags;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolCreateSettings.Tags"/>.</em></p><p>Resource tags.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         [Pure]
         public static AzureSqlElasticPoolCreateSettings ResetTags(this AzureSqlElasticPoolCreateSettings toolSettings)
         {
@@ -9163,7 +10286,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region ZoneRedundant
-        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolCreateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy for the elastic pool.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolCreateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
         [Pure]
         public static AzureSqlElasticPoolCreateSettings SetZoneRedundant(this AzureSqlElasticPoolCreateSettings toolSettings, bool? zoneRedundant)
         {
@@ -9171,7 +10294,7 @@ namespace Nuke.Azure
             toolSettings.ZoneRedundant = zoneRedundant;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolCreateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy for the elastic pool.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolCreateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
         [Pure]
         public static AzureSqlElasticPoolCreateSettings ResetZoneRedundant(this AzureSqlElasticPoolCreateSettings toolSettings)
         {
@@ -9179,7 +10302,7 @@ namespace Nuke.Azure
             toolSettings.ZoneRedundant = null;
             return toolSettings;
         }
-        /// <summary><p><em>Enables <see cref="AzureSqlElasticPoolCreateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy for the elastic pool.</p></summary>
+        /// <summary><p><em>Enables <see cref="AzureSqlElasticPoolCreateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
         [Pure]
         public static AzureSqlElasticPoolCreateSettings EnableZoneRedundant(this AzureSqlElasticPoolCreateSettings toolSettings)
         {
@@ -9187,7 +10310,7 @@ namespace Nuke.Azure
             toolSettings.ZoneRedundant = true;
             return toolSettings;
         }
-        /// <summary><p><em>Disables <see cref="AzureSqlElasticPoolCreateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy for the elastic pool.</p></summary>
+        /// <summary><p><em>Disables <see cref="AzureSqlElasticPoolCreateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
         [Pure]
         public static AzureSqlElasticPoolCreateSettings DisableZoneRedundant(this AzureSqlElasticPoolCreateSettings toolSettings)
         {
@@ -9195,12 +10318,66 @@ namespace Nuke.Azure
             toolSettings.ZoneRedundant = false;
             return toolSettings;
         }
-        /// <summary><p><em>Toggles <see cref="AzureSqlElasticPoolCreateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy for the elastic pool.</p></summary>
+        /// <summary><p><em>Toggles <see cref="AzureSqlElasticPoolCreateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
         [Pure]
         public static AzureSqlElasticPoolCreateSettings ToggleZoneRedundant(this AzureSqlElasticPoolCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ZoneRedundant = !toolSettings.ZoneRedundant;
+            return toolSettings;
+        }
+        #endregion
+        #region Capacity
+        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolCreateSettings.Capacity"/>.</em></p><p>The capacity component of the sku in integer number of DTUs or vcores.</p></summary>
+        [Pure]
+        public static AzureSqlElasticPoolCreateSettings SetCapacity(this AzureSqlElasticPoolCreateSettings toolSettings, string capacity)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Capacity = capacity;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolCreateSettings.Capacity"/>.</em></p><p>The capacity component of the sku in integer number of DTUs or vcores.</p></summary>
+        [Pure]
+        public static AzureSqlElasticPoolCreateSettings ResetCapacity(this AzureSqlElasticPoolCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Capacity = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Edition
+        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolCreateSettings.Edition"/>.</em></p><p>The edition component of the sku. Allowed values include: Basic, Standard, Premium, GeneralPurpose, BusinessCritical.</p></summary>
+        [Pure]
+        public static AzureSqlElasticPoolCreateSettings SetEdition(this AzureSqlElasticPoolCreateSettings toolSettings, string edition)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Edition = edition;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolCreateSettings.Edition"/>.</em></p><p>The edition component of the sku. Allowed values include: Basic, Standard, Premium, GeneralPurpose, BusinessCritical.</p></summary>
+        [Pure]
+        public static AzureSqlElasticPoolCreateSettings ResetEdition(this AzureSqlElasticPoolCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Edition = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Family
+        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolCreateSettings.Family"/>.</em></p><p>The compute generation component of the sku (for vcore skus only). Allowed values include: Gen4, Gen5.</p></summary>
+        [Pure]
+        public static AzureSqlElasticPoolCreateSettings SetFamily(this AzureSqlElasticPoolCreateSettings toolSettings, string family)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Family = family;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolCreateSettings.Family"/>.</em></p><p>The compute generation component of the sku (for vcore skus only). Allowed values include: Gen4, Gen5.</p></summary>
+        [Pure]
+        public static AzureSqlElasticPoolCreateSettings ResetFamily(this AzureSqlElasticPoolCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Family = null;
             return toolSettings;
         }
         #endregion
@@ -9356,6 +10533,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region NoWait
+        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSqlElasticPoolDeleteSettings SetNoWait(this AzureSqlElasticPoolDeleteSettings toolSettings, string noWait)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = noWait;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSqlElasticPoolDeleteSettings ResetNoWait(this AzureSqlElasticPoolDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -9487,6 +10682,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Server = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Skip
+        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolListSettings.Skip"/>.</em></p><p>The number of elements in the collection to skip.</p></summary>
+        [Pure]
+        public static AzureSqlElasticPoolListSettings SetSkip(this AzureSqlElasticPoolListSettings toolSettings, string skip)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Skip = skip;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolListSettings.Skip"/>.</em></p><p>The number of elements in the collection to skip.</p></summary>
+        [Pure]
+        public static AzureSqlElasticPoolListSettings ResetSkip(this AzureSqlElasticPoolListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Skip = null;
             return toolSettings;
         }
         #endregion
@@ -9758,6 +10971,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Available
+        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolListEditionsSettings.Available"/>.</em></p><p>If specified, show only results that are available in the specified region.</p></summary>
+        [Pure]
+        public static AzureSqlElasticPoolListEditionsSettings SetAvailable(this AzureSqlElasticPoolListEditionsSettings toolSettings, string available)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Available = available;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolListEditionsSettings.Available"/>.</em></p><p>If specified, show only results that are available in the specified region.</p></summary>
+        [Pure]
+        public static AzureSqlElasticPoolListEditionsSettings ResetAvailable(this AzureSqlElasticPoolListEditionsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Available = null;
+            return toolSettings;
+        }
+        #endregion
         #region ShowDetails
         /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolListEditionsSettings.ShowDetails"/>.</em></p><p>List of additional details to include in output.</p></summary>
         [Pure]
@@ -9777,15 +11008,15 @@ namespace Nuke.Azure
         }
         #endregion
         #region Dtu
-        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolListEditionsSettings.Dtu"/>.</em></p><p>Elastic pool DTU limit to search for. If unspecified, all DTU limits are shown.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolListEditionsSettings.Dtu"/>.</em></p><p>Number of DTUs to search for. If unspecified, all DTU sizes are shown.</p></summary>
         [Pure]
-        public static AzureSqlElasticPoolListEditionsSettings SetDtu(this AzureSqlElasticPoolListEditionsSettings toolSettings, string dtu)
+        public static AzureSqlElasticPoolListEditionsSettings SetDtu(this AzureSqlElasticPoolListEditionsSettings toolSettings, int? dtu)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Dtu = dtu;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolListEditionsSettings.Dtu"/>.</em></p><p>Elastic pool DTU limit to search for. If unspecified, all DTU limits are shown.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolListEditionsSettings.Dtu"/>.</em></p><p>Number of DTUs to search for. If unspecified, all DTU sizes are shown.</p></summary>
         [Pure]
         public static AzureSqlElasticPoolListEditionsSettings ResetDtu(this AzureSqlElasticPoolListEditionsSettings toolSettings)
         {
@@ -9809,6 +11040,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Edition = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Vcores
+        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolListEditionsSettings.Vcores"/>.</em></p><p>Number of vcores to search for. If unspecified, all vcore sizes are shown.</p></summary>
+        [Pure]
+        public static AzureSqlElasticPoolListEditionsSettings SetVcores(this AzureSqlElasticPoolListEditionsSettings toolSettings, int? vcores)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Vcores = vcores;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolListEditionsSettings.Vcores"/>.</em></p><p>Number of vcores to search for. If unspecified, all vcore sizes are shown.</p></summary>
+        [Pure]
+        public static AzureSqlElasticPoolListEditionsSettings ResetVcores(this AzureSqlElasticPoolListEditionsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Vcores = null;
             return toolSettings;
         }
         #endregion
@@ -10117,7 +11366,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region DbDtuMax
-        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolUpdateSettings.DbDtuMax"/>.</em></p><p>The maximum DTU any one database can consume.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolUpdateSettings.DbDtuMax"/>.</em></p><p>The maximum capacity (in DTUs or vcores) any one database can consume.</p></summary>
         [Pure]
         public static AzureSqlElasticPoolUpdateSettings SetDbDtuMax(this AzureSqlElasticPoolUpdateSettings toolSettings, string dbDtuMax)
         {
@@ -10125,7 +11374,7 @@ namespace Nuke.Azure
             toolSettings.DbDtuMax = dbDtuMax;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolUpdateSettings.DbDtuMax"/>.</em></p><p>The maximum DTU any one database can consume.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolUpdateSettings.DbDtuMax"/>.</em></p><p>The maximum capacity (in DTUs or vcores) any one database can consume.</p></summary>
         [Pure]
         public static AzureSqlElasticPoolUpdateSettings ResetDbDtuMax(this AzureSqlElasticPoolUpdateSettings toolSettings)
         {
@@ -10135,7 +11384,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region DbDtuMin
-        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolUpdateSettings.DbDtuMin"/>.</em></p><p>The minimum DTU all databases are guaranteed.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolUpdateSettings.DbDtuMin"/>.</em></p><p>The minumum capacity (in DTUs or vcores) each database is guaranteed.</p></summary>
         [Pure]
         public static AzureSqlElasticPoolUpdateSettings SetDbDtuMin(this AzureSqlElasticPoolUpdateSettings toolSettings, string dbDtuMin)
         {
@@ -10143,7 +11392,7 @@ namespace Nuke.Azure
             toolSettings.DbDtuMin = dbDtuMin;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolUpdateSettings.DbDtuMin"/>.</em></p><p>The minimum DTU all databases are guaranteed.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolUpdateSettings.DbDtuMin"/>.</em></p><p>The minumum capacity (in DTUs or vcores) each database is guaranteed.</p></summary>
         [Pure]
         public static AzureSqlElasticPoolUpdateSettings ResetDbDtuMin(this AzureSqlElasticPoolUpdateSettings toolSettings)
         {
@@ -10152,26 +11401,8 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Dtu
-        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolUpdateSettings.Dtu"/>.</em></p><p>TThe total shared DTU for the elastic eool.</p></summary>
-        [Pure]
-        public static AzureSqlElasticPoolUpdateSettings SetDtu(this AzureSqlElasticPoolUpdateSettings toolSettings, string dtu)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Dtu = dtu;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolUpdateSettings.Dtu"/>.</em></p><p>TThe total shared DTU for the elastic eool.</p></summary>
-        [Pure]
-        public static AzureSqlElasticPoolUpdateSettings ResetDtu(this AzureSqlElasticPoolUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Dtu = null;
-            return toolSettings;
-        }
-        #endregion
         #region MaxSize
-        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolUpdateSettings.MaxSize"/>.</em></p><p>Storage limit for the elastic pool in MB.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolUpdateSettings.MaxSize"/>.</em></p><p>The max storage size. If no unit is specified, defaults to bytes (B).</p></summary>
         [Pure]
         public static AzureSqlElasticPoolUpdateSettings SetMaxSize(this AzureSqlElasticPoolUpdateSettings toolSettings, string maxSize)
         {
@@ -10179,7 +11410,7 @@ namespace Nuke.Azure
             toolSettings.MaxSize = maxSize;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolUpdateSettings.MaxSize"/>.</em></p><p>Storage limit for the elastic pool in MB.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolUpdateSettings.MaxSize"/>.</em></p><p>The max storage size. If no unit is specified, defaults to bytes (B).</p></summary>
         [Pure]
         public static AzureSqlElasticPoolUpdateSettings ResetMaxSize(this AzureSqlElasticPoolUpdateSettings toolSettings)
         {
@@ -10188,8 +11419,26 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region NoWait
+        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolUpdateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSqlElasticPoolUpdateSettings SetNoWait(this AzureSqlElasticPoolUpdateSettings toolSettings, string noWait)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = noWait;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolUpdateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSqlElasticPoolUpdateSettings ResetNoWait(this AzureSqlElasticPoolUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        #endregion
         #region ZoneRedundant
-        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolUpdateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy for the elastic pool.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolUpdateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
         [Pure]
         public static AzureSqlElasticPoolUpdateSettings SetZoneRedundant(this AzureSqlElasticPoolUpdateSettings toolSettings, bool? zoneRedundant)
         {
@@ -10197,7 +11446,7 @@ namespace Nuke.Azure
             toolSettings.ZoneRedundant = zoneRedundant;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolUpdateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy for the elastic pool.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolUpdateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
         [Pure]
         public static AzureSqlElasticPoolUpdateSettings ResetZoneRedundant(this AzureSqlElasticPoolUpdateSettings toolSettings)
         {
@@ -10205,7 +11454,7 @@ namespace Nuke.Azure
             toolSettings.ZoneRedundant = null;
             return toolSettings;
         }
-        /// <summary><p><em>Enables <see cref="AzureSqlElasticPoolUpdateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy for the elastic pool.</p></summary>
+        /// <summary><p><em>Enables <see cref="AzureSqlElasticPoolUpdateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
         [Pure]
         public static AzureSqlElasticPoolUpdateSettings EnableZoneRedundant(this AzureSqlElasticPoolUpdateSettings toolSettings)
         {
@@ -10213,7 +11462,7 @@ namespace Nuke.Azure
             toolSettings.ZoneRedundant = true;
             return toolSettings;
         }
-        /// <summary><p><em>Disables <see cref="AzureSqlElasticPoolUpdateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy for the elastic pool.</p></summary>
+        /// <summary><p><em>Disables <see cref="AzureSqlElasticPoolUpdateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
         [Pure]
         public static AzureSqlElasticPoolUpdateSettings DisableZoneRedundant(this AzureSqlElasticPoolUpdateSettings toolSettings)
         {
@@ -10221,12 +11470,66 @@ namespace Nuke.Azure
             toolSettings.ZoneRedundant = false;
             return toolSettings;
         }
-        /// <summary><p><em>Toggles <see cref="AzureSqlElasticPoolUpdateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy for the elastic pool.</p></summary>
+        /// <summary><p><em>Toggles <see cref="AzureSqlElasticPoolUpdateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
         [Pure]
         public static AzureSqlElasticPoolUpdateSettings ToggleZoneRedundant(this AzureSqlElasticPoolUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ZoneRedundant = !toolSettings.ZoneRedundant;
+            return toolSettings;
+        }
+        #endregion
+        #region Capacity
+        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolUpdateSettings.Capacity"/>.</em></p><p>The capacity component of the sku in integer number of DTUs or vcores.</p></summary>
+        [Pure]
+        public static AzureSqlElasticPoolUpdateSettings SetCapacity(this AzureSqlElasticPoolUpdateSettings toolSettings, string capacity)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Capacity = capacity;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolUpdateSettings.Capacity"/>.</em></p><p>The capacity component of the sku in integer number of DTUs or vcores.</p></summary>
+        [Pure]
+        public static AzureSqlElasticPoolUpdateSettings ResetCapacity(this AzureSqlElasticPoolUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Capacity = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Edition
+        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolUpdateSettings.Edition"/>.</em></p><p>The edition component of the sku. Allowed values include: Basic, Standard, Premium, GeneralPurpose, BusinessCritical.</p></summary>
+        [Pure]
+        public static AzureSqlElasticPoolUpdateSettings SetEdition(this AzureSqlElasticPoolUpdateSettings toolSettings, string edition)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Edition = edition;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolUpdateSettings.Edition"/>.</em></p><p>The edition component of the sku. Allowed values include: Basic, Standard, Premium, GeneralPurpose, BusinessCritical.</p></summary>
+        [Pure]
+        public static AzureSqlElasticPoolUpdateSettings ResetEdition(this AzureSqlElasticPoolUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Edition = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Family
+        /// <summary><p><em>Sets <see cref="AzureSqlElasticPoolUpdateSettings.Family"/>.</em></p><p>The compute generation component of the sku (for vcore skus only). Allowed values include: Gen4, Gen5.</p></summary>
+        [Pure]
+        public static AzureSqlElasticPoolUpdateSettings SetFamily(this AzureSqlElasticPoolUpdateSettings toolSettings, string family)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Family = family;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlElasticPoolUpdateSettings.Family"/>.</em></p><p>The compute generation component of the sku (for vcore skus only). Allowed values include: Gen4, Gen5.</p></summary>
+        [Pure]
+        public static AzureSqlElasticPoolUpdateSettings ResetFamily(this AzureSqlElasticPoolUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Family = null;
             return toolSettings;
         }
         #endregion
@@ -10376,6 +11679,1976 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureSqlMiCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureSqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSqlMiCreateSettingsExtensions
+    {
+        #region AdminPassword
+        /// <summary><p><em>Sets <see cref="AzureSqlMiCreateSettings.AdminPassword"/>.</em></p><p>The administrator login password (required for managed instance creation).</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings SetAdminPassword(this AzureSqlMiCreateSettings toolSettings, string adminPassword)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AdminPassword = adminPassword;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiCreateSettings.AdminPassword"/>.</em></p><p>The administrator login password (required for managed instance creation).</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings ResetAdminPassword(this AzureSqlMiCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AdminPassword = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AdminUser
+        /// <summary><p><em>Sets <see cref="AzureSqlMiCreateSettings.AdminUser"/>.</em></p><p>Administrator username for the managed instance. Can only be specified when the managed instance is being created (and is required for creation).</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings SetAdminUser(this AzureSqlMiCreateSettings toolSettings, string adminUser)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AdminUser = adminUser;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiCreateSettings.AdminUser"/>.</em></p><p>Administrator username for the managed instance. Can only be specified when the managed instance is being created (and is required for creation).</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings ResetAdminUser(this AzureSqlMiCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AdminUser = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Location
+        /// <summary><p><em>Sets <see cref="AzureSqlMiCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings SetLocation(this AzureSqlMiCreateSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings ResetLocation(this AzureSqlMiCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureSqlMiCreateSettings.Name"/>.</em></p><p>The managed instance name.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings SetName(this AzureSqlMiCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiCreateSettings.Name"/>.</em></p><p>The managed instance name.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings ResetName(this AzureSqlMiCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureSqlMiCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings SetResourceGroup(this AzureSqlMiCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings ResetResourceGroup(this AzureSqlMiCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subnet
+        /// <summary><p><em>Sets <see cref="AzureSqlMiCreateSettings.Subnet"/>.</em></p><p>Name or ID of the subnet that allows access to an Azure Sql Managed Instance. If subnet name is provided, --vnet-name must be provided.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings SetSubnet(this AzureSqlMiCreateSettings toolSettings, string subnet)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subnet = subnet;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiCreateSettings.Subnet"/>.</em></p><p>Name or ID of the subnet that allows access to an Azure Sql Managed Instance. If subnet name is provided, --vnet-name must be provided.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings ResetSubnet(this AzureSqlMiCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subnet = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AssignIdentity
+        /// <summary><p><em>Sets <see cref="AzureSqlMiCreateSettings.AssignIdentity"/>.</em></p><p>Generate and assign an Azure Active Directory Identity for this managed instance for use with key management services like Azure KeyVault.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings SetAssignIdentity(this AzureSqlMiCreateSettings toolSettings, string assignIdentity)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AssignIdentity = assignIdentity;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiCreateSettings.AssignIdentity"/>.</em></p><p>Generate and assign an Azure Active Directory Identity for this managed instance for use with key management services like Azure KeyVault.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings ResetAssignIdentity(this AzureSqlMiCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AssignIdentity = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Capacity
+        /// <summary><p><em>Sets <see cref="AzureSqlMiCreateSettings.Capacity"/>.</em></p><p>The capacity of the managed instance in vcores.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings SetCapacity(this AzureSqlMiCreateSettings toolSettings, string capacity)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Capacity = capacity;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiCreateSettings.Capacity"/>.</em></p><p>The capacity of the managed instance in vcores.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings ResetCapacity(this AzureSqlMiCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Capacity = null;
+            return toolSettings;
+        }
+        #endregion
+        #region LicenseType
+        /// <summary><p><em>Sets <see cref="AzureSqlMiCreateSettings.LicenseType"/>.</em></p><p>The license type to apply for this managed instance.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings SetLicenseType(this AzureSqlMiCreateSettings toolSettings, SqlDbLicenseType licenseType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LicenseType = licenseType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiCreateSettings.LicenseType"/>.</em></p><p>The license type to apply for this managed instance.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings ResetLicenseType(this AzureSqlMiCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LicenseType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NoWait
+        /// <summary><p><em>Sets <see cref="AzureSqlMiCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings SetNoWait(this AzureSqlMiCreateSettings toolSettings, string noWait)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = noWait;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings ResetNoWait(this AzureSqlMiCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Storage
+        /// <summary><p><em>Sets <see cref="AzureSqlMiCreateSettings.Storage"/>.</em></p><p>The storage size of the managed instance. Storage size must be specified in increments of 32 GB.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings SetStorage(this AzureSqlMiCreateSettings toolSettings, string storage)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Storage = storage;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiCreateSettings.Storage"/>.</em></p><p>The storage size of the managed instance. Storage size must be specified in increments of 32 GB.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings ResetStorage(this AzureSqlMiCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Storage = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VnetName
+        /// <summary><p><em>Sets <see cref="AzureSqlMiCreateSettings.VnetName"/>.</em></p><p>The virtual network name.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings SetVnetName(this AzureSqlMiCreateSettings toolSettings, string vnetName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VnetName = vnetName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiCreateSettings.VnetName"/>.</em></p><p>The virtual network name.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings ResetVnetName(this AzureSqlMiCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VnetName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Edition
+        /// <summary><p><em>Sets <see cref="AzureSqlMiCreateSettings.Edition"/>.</em></p><p>The edition component of the sku. Allowed value is GeneralPurpose.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings SetEdition(this AzureSqlMiCreateSettings toolSettings, string edition)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Edition = edition;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiCreateSettings.Edition"/>.</em></p><p>The edition component of the sku. Allowed value is GeneralPurpose.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings ResetEdition(this AzureSqlMiCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Edition = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Family
+        /// <summary><p><em>Sets <see cref="AzureSqlMiCreateSettings.Family"/>.</em></p><p>The compute generation component of the sku. Allowed values include: Gen4, Gen5.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings SetFamily(this AzureSqlMiCreateSettings toolSettings, string family)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Family = family;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiCreateSettings.Family"/>.</em></p><p>The compute generation component of the sku. Allowed values include: Gen4, Gen5.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings ResetFamily(this AzureSqlMiCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Family = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureSqlMiCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings SetDebug(this AzureSqlMiCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings ResetDebug(this AzureSqlMiCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureSqlMiCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings SetHelp(this AzureSqlMiCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings ResetHelp(this AzureSqlMiCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureSqlMiCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings SetOutput(this AzureSqlMiCreateSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings ResetOutput(this AzureSqlMiCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureSqlMiCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings SetQuery(this AzureSqlMiCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings ResetQuery(this AzureSqlMiCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureSqlMiCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings SetVerbose(this AzureSqlMiCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMiCreateSettings ResetVerbose(this AzureSqlMiCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSqlMiDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureSqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSqlMiDeleteSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureSqlMiDeleteSettings.Name"/>.</em></p><p>The managed instance name.</p></summary>
+        [Pure]
+        public static AzureSqlMiDeleteSettings SetName(this AzureSqlMiDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiDeleteSettings.Name"/>.</em></p><p>The managed instance name.</p></summary>
+        [Pure]
+        public static AzureSqlMiDeleteSettings ResetName(this AzureSqlMiDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureSqlMiDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSqlMiDeleteSettings SetResourceGroup(this AzureSqlMiDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSqlMiDeleteSettings ResetResourceGroup(this AzureSqlMiDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NoWait
+        /// <summary><p><em>Sets <see cref="AzureSqlMiDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSqlMiDeleteSettings SetNoWait(this AzureSqlMiDeleteSettings toolSettings, string noWait)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = noWait;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSqlMiDeleteSettings ResetNoWait(this AzureSqlMiDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Yes
+        /// <summary><p><em>Sets <see cref="AzureSqlMiDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
+        [Pure]
+        public static AzureSqlMiDeleteSettings SetYes(this AzureSqlMiDeleteSettings toolSettings, string yes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = yes;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
+        [Pure]
+        public static AzureSqlMiDeleteSettings ResetYes(this AzureSqlMiDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureSqlMiDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMiDeleteSettings SetDebug(this AzureSqlMiDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMiDeleteSettings ResetDebug(this AzureSqlMiDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureSqlMiDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSqlMiDeleteSettings SetHelp(this AzureSqlMiDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSqlMiDeleteSettings ResetHelp(this AzureSqlMiDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureSqlMiDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSqlMiDeleteSettings SetOutput(this AzureSqlMiDeleteSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSqlMiDeleteSettings ResetOutput(this AzureSqlMiDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureSqlMiDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSqlMiDeleteSettings SetQuery(this AzureSqlMiDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSqlMiDeleteSettings ResetQuery(this AzureSqlMiDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureSqlMiDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMiDeleteSettings SetVerbose(this AzureSqlMiDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMiDeleteSettings ResetVerbose(this AzureSqlMiDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSqlMiListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureSqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSqlMiListSettingsExtensions
+    {
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureSqlMiListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSqlMiListSettings SetResourceGroup(this AzureSqlMiListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSqlMiListSettings ResetResourceGroup(this AzureSqlMiListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureSqlMiListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMiListSettings SetDebug(this AzureSqlMiListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMiListSettings ResetDebug(this AzureSqlMiListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureSqlMiListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSqlMiListSettings SetHelp(this AzureSqlMiListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSqlMiListSettings ResetHelp(this AzureSqlMiListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureSqlMiListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSqlMiListSettings SetOutput(this AzureSqlMiListSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSqlMiListSettings ResetOutput(this AzureSqlMiListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureSqlMiListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSqlMiListSettings SetQuery(this AzureSqlMiListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSqlMiListSettings ResetQuery(this AzureSqlMiListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureSqlMiListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMiListSettings SetVerbose(this AzureSqlMiListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMiListSettings ResetVerbose(this AzureSqlMiListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSqlMiShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureSqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSqlMiShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureSqlMiShowSettings.Name"/>.</em></p><p>The managed instance name.</p></summary>
+        [Pure]
+        public static AzureSqlMiShowSettings SetName(this AzureSqlMiShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiShowSettings.Name"/>.</em></p><p>The managed instance name.</p></summary>
+        [Pure]
+        public static AzureSqlMiShowSettings ResetName(this AzureSqlMiShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureSqlMiShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSqlMiShowSettings SetResourceGroup(this AzureSqlMiShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSqlMiShowSettings ResetResourceGroup(this AzureSqlMiShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureSqlMiShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMiShowSettings SetDebug(this AzureSqlMiShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMiShowSettings ResetDebug(this AzureSqlMiShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureSqlMiShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSqlMiShowSettings SetHelp(this AzureSqlMiShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSqlMiShowSettings ResetHelp(this AzureSqlMiShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureSqlMiShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSqlMiShowSettings SetOutput(this AzureSqlMiShowSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSqlMiShowSettings ResetOutput(this AzureSqlMiShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureSqlMiShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSqlMiShowSettings SetQuery(this AzureSqlMiShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSqlMiShowSettings ResetQuery(this AzureSqlMiShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureSqlMiShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMiShowSettings SetVerbose(this AzureSqlMiShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMiShowSettings ResetVerbose(this AzureSqlMiShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSqlMiUpdateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureSqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSqlMiUpdateSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureSqlMiUpdateSettings.Name"/>.</em></p><p>The managed instance name.</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings SetName(this AzureSqlMiUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiUpdateSettings.Name"/>.</em></p><p>The managed instance name.</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings ResetName(this AzureSqlMiUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureSqlMiUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings SetResourceGroup(this AzureSqlMiUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings ResetResourceGroup(this AzureSqlMiUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AdminPassword
+        /// <summary><p><em>Sets <see cref="AzureSqlMiUpdateSettings.AdminPassword"/>.</em></p><p>The administrator login password (required for managed instance creation).</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings SetAdminPassword(this AzureSqlMiUpdateSettings toolSettings, string adminPassword)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AdminPassword = adminPassword;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiUpdateSettings.AdminPassword"/>.</em></p><p>The administrator login password (required for managed instance creation).</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings ResetAdminPassword(this AzureSqlMiUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AdminPassword = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AssignIdentity
+        /// <summary><p><em>Sets <see cref="AzureSqlMiUpdateSettings.AssignIdentity"/>.</em></p><p>Generate and assign an Azure Active Directory Identity for this managed instance for use with key management services like Azure KeyVault. If identity is already assigned - do nothing.</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings SetAssignIdentity(this AzureSqlMiUpdateSettings toolSettings, string assignIdentity)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AssignIdentity = assignIdentity;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiUpdateSettings.AssignIdentity"/>.</em></p><p>Generate and assign an Azure Active Directory Identity for this managed instance for use with key management services like Azure KeyVault. If identity is already assigned - do nothing.</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings ResetAssignIdentity(this AzureSqlMiUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AssignIdentity = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Capacity
+        /// <summary><p><em>Sets <see cref="AzureSqlMiUpdateSettings.Capacity"/>.</em></p><p>The capacity of the managed instance in vcores.</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings SetCapacity(this AzureSqlMiUpdateSettings toolSettings, string capacity)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Capacity = capacity;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiUpdateSettings.Capacity"/>.</em></p><p>The capacity of the managed instance in vcores.</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings ResetCapacity(this AzureSqlMiUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Capacity = null;
+            return toolSettings;
+        }
+        #endregion
+        #region LicenseType
+        /// <summary><p><em>Sets <see cref="AzureSqlMiUpdateSettings.LicenseType"/>.</em></p><p>The license type to apply for this managed instance.</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings SetLicenseType(this AzureSqlMiUpdateSettings toolSettings, SqlDbLicenseType licenseType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LicenseType = licenseType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiUpdateSettings.LicenseType"/>.</em></p><p>The license type to apply for this managed instance.</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings ResetLicenseType(this AzureSqlMiUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LicenseType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NoWait
+        /// <summary><p><em>Sets <see cref="AzureSqlMiUpdateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings SetNoWait(this AzureSqlMiUpdateSettings toolSettings, string noWait)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = noWait;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiUpdateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings ResetNoWait(this AzureSqlMiUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Storage
+        /// <summary><p><em>Sets <see cref="AzureSqlMiUpdateSettings.Storage"/>.</em></p><p>The storage size of the managed instance. Storage size must be specified in increments of 32 GB.</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings SetStorage(this AzureSqlMiUpdateSettings toolSettings, string storage)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Storage = storage;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiUpdateSettings.Storage"/>.</em></p><p>The storage size of the managed instance. Storage size must be specified in increments of 32 GB.</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings ResetStorage(this AzureSqlMiUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Storage = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Add
+        /// <summary><p><em>Sets <see cref="AzureSqlMiUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings SetAdd(this AzureSqlMiUpdateSettings toolSettings, string add)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = add;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings ResetAdd(this AzureSqlMiUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Remove
+        /// <summary><p><em>Sets <see cref="AzureSqlMiUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings SetRemove(this AzureSqlMiUpdateSettings toolSettings, string remove)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = remove;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings ResetRemove(this AzureSqlMiUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Set
+        /// <summary><p><em>Sets <see cref="AzureSqlMiUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings SetSet(this AzureSqlMiUpdateSettings toolSettings, string set)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = set;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings ResetSet(this AzureSqlMiUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureSqlMiUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings SetDebug(this AzureSqlMiUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings ResetDebug(this AzureSqlMiUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureSqlMiUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings SetHelp(this AzureSqlMiUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings ResetHelp(this AzureSqlMiUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureSqlMiUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings SetOutput(this AzureSqlMiUpdateSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings ResetOutput(this AzureSqlMiUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureSqlMiUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings SetQuery(this AzureSqlMiUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings ResetQuery(this AzureSqlMiUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureSqlMiUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings SetVerbose(this AzureSqlMiUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMiUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMiUpdateSettings ResetVerbose(this AzureSqlMiUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSqlMidbCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureSqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSqlMidbCreateSettingsExtensions
+    {
+        #region ManagedInstance
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbCreateSettings.ManagedInstance"/>.</em></p><p>Name of the Azure SQL managed instance.</p></summary>
+        [Pure]
+        public static AzureSqlMidbCreateSettings SetManagedInstance(this AzureSqlMidbCreateSettings toolSettings, string managedInstance)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagedInstance = managedInstance;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbCreateSettings.ManagedInstance"/>.</em></p><p>Name of the Azure SQL managed instance.</p></summary>
+        [Pure]
+        public static AzureSqlMidbCreateSettings ResetManagedInstance(this AzureSqlMidbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagedInstance = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbCreateSettings.Name"/>.</em></p><p>The name of the Azure SQL Managed Database.</p></summary>
+        [Pure]
+        public static AzureSqlMidbCreateSettings SetName(this AzureSqlMidbCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbCreateSettings.Name"/>.</em></p><p>The name of the Azure SQL Managed Database.</p></summary>
+        [Pure]
+        public static AzureSqlMidbCreateSettings ResetName(this AzureSqlMidbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSqlMidbCreateSettings SetResourceGroup(this AzureSqlMidbCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSqlMidbCreateSettings ResetResourceGroup(this AzureSqlMidbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Collation
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbCreateSettings.Collation"/>.</em></p><p>The collation of the Azure SQL Managed Database collation to use, e.g.: SQL_Latin1_General_CP1_CI_AS or Latin1_General_100_CS_AS_SC.</p></summary>
+        [Pure]
+        public static AzureSqlMidbCreateSettings SetCollation(this AzureSqlMidbCreateSettings toolSettings, string collation)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Collation = collation;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbCreateSettings.Collation"/>.</em></p><p>The collation of the Azure SQL Managed Database collation to use, e.g.: SQL_Latin1_General_CP1_CI_AS or Latin1_General_100_CS_AS_SC.</p></summary>
+        [Pure]
+        public static AzureSqlMidbCreateSettings ResetCollation(this AzureSqlMidbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Collation = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NoWait
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSqlMidbCreateSettings SetNoWait(this AzureSqlMidbCreateSettings toolSettings, string noWait)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = noWait;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSqlMidbCreateSettings ResetNoWait(this AzureSqlMidbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMidbCreateSettings SetDebug(this AzureSqlMidbCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMidbCreateSettings ResetDebug(this AzureSqlMidbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSqlMidbCreateSettings SetHelp(this AzureSqlMidbCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSqlMidbCreateSettings ResetHelp(this AzureSqlMidbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSqlMidbCreateSettings SetOutput(this AzureSqlMidbCreateSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSqlMidbCreateSettings ResetOutput(this AzureSqlMidbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSqlMidbCreateSettings SetQuery(this AzureSqlMidbCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSqlMidbCreateSettings ResetQuery(this AzureSqlMidbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMidbCreateSettings SetVerbose(this AzureSqlMidbCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMidbCreateSettings ResetVerbose(this AzureSqlMidbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSqlMidbDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureSqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSqlMidbDeleteSettingsExtensions
+    {
+        #region ManagedInstance
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbDeleteSettings.ManagedInstance"/>.</em></p><p>Name of the Azure SQL managed instance.</p></summary>
+        [Pure]
+        public static AzureSqlMidbDeleteSettings SetManagedInstance(this AzureSqlMidbDeleteSettings toolSettings, string managedInstance)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagedInstance = managedInstance;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbDeleteSettings.ManagedInstance"/>.</em></p><p>Name of the Azure SQL managed instance.</p></summary>
+        [Pure]
+        public static AzureSqlMidbDeleteSettings ResetManagedInstance(this AzureSqlMidbDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagedInstance = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbDeleteSettings.Name"/>.</em></p><p>The name of the Azure SQL Managed Database.</p></summary>
+        [Pure]
+        public static AzureSqlMidbDeleteSettings SetName(this AzureSqlMidbDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbDeleteSettings.Name"/>.</em></p><p>The name of the Azure SQL Managed Database.</p></summary>
+        [Pure]
+        public static AzureSqlMidbDeleteSettings ResetName(this AzureSqlMidbDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSqlMidbDeleteSettings SetResourceGroup(this AzureSqlMidbDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSqlMidbDeleteSettings ResetResourceGroup(this AzureSqlMidbDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NoWait
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSqlMidbDeleteSettings SetNoWait(this AzureSqlMidbDeleteSettings toolSettings, string noWait)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = noWait;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSqlMidbDeleteSettings ResetNoWait(this AzureSqlMidbDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Yes
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
+        [Pure]
+        public static AzureSqlMidbDeleteSettings SetYes(this AzureSqlMidbDeleteSettings toolSettings, string yes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = yes;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
+        [Pure]
+        public static AzureSqlMidbDeleteSettings ResetYes(this AzureSqlMidbDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMidbDeleteSettings SetDebug(this AzureSqlMidbDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMidbDeleteSettings ResetDebug(this AzureSqlMidbDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSqlMidbDeleteSettings SetHelp(this AzureSqlMidbDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSqlMidbDeleteSettings ResetHelp(this AzureSqlMidbDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSqlMidbDeleteSettings SetOutput(this AzureSqlMidbDeleteSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSqlMidbDeleteSettings ResetOutput(this AzureSqlMidbDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSqlMidbDeleteSettings SetQuery(this AzureSqlMidbDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSqlMidbDeleteSettings ResetQuery(this AzureSqlMidbDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMidbDeleteSettings SetVerbose(this AzureSqlMidbDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMidbDeleteSettings ResetVerbose(this AzureSqlMidbDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSqlMidbListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureSqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSqlMidbListSettingsExtensions
+    {
+        #region ManagedInstance
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbListSettings.ManagedInstance"/>.</em></p><p>Name of the Azure SQL managed instance.</p></summary>
+        [Pure]
+        public static AzureSqlMidbListSettings SetManagedInstance(this AzureSqlMidbListSettings toolSettings, string managedInstance)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagedInstance = managedInstance;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbListSettings.ManagedInstance"/>.</em></p><p>Name of the Azure SQL managed instance.</p></summary>
+        [Pure]
+        public static AzureSqlMidbListSettings ResetManagedInstance(this AzureSqlMidbListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagedInstance = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSqlMidbListSettings SetResourceGroup(this AzureSqlMidbListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSqlMidbListSettings ResetResourceGroup(this AzureSqlMidbListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMidbListSettings SetDebug(this AzureSqlMidbListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMidbListSettings ResetDebug(this AzureSqlMidbListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSqlMidbListSettings SetHelp(this AzureSqlMidbListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSqlMidbListSettings ResetHelp(this AzureSqlMidbListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSqlMidbListSettings SetOutput(this AzureSqlMidbListSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSqlMidbListSettings ResetOutput(this AzureSqlMidbListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSqlMidbListSettings SetQuery(this AzureSqlMidbListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSqlMidbListSettings ResetQuery(this AzureSqlMidbListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMidbListSettings SetVerbose(this AzureSqlMidbListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMidbListSettings ResetVerbose(this AzureSqlMidbListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSqlMidbRestoreSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureSqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSqlMidbRestoreSettingsExtensions
+    {
+        #region DestName
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbRestoreSettings.DestName"/>.</em></p><p>Name of the managed database that will be created as the restore destination.</p></summary>
+        [Pure]
+        public static AzureSqlMidbRestoreSettings SetDestName(this AzureSqlMidbRestoreSettings toolSettings, string destName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DestName = destName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbRestoreSettings.DestName"/>.</em></p><p>Name of the managed database that will be created as the restore destination.</p></summary>
+        [Pure]
+        public static AzureSqlMidbRestoreSettings ResetDestName(this AzureSqlMidbRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DestName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ManagedInstance
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbRestoreSettings.ManagedInstance"/>.</em></p><p>Name of the Azure SQL managed instance.</p></summary>
+        [Pure]
+        public static AzureSqlMidbRestoreSettings SetManagedInstance(this AzureSqlMidbRestoreSettings toolSettings, string managedInstance)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagedInstance = managedInstance;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbRestoreSettings.ManagedInstance"/>.</em></p><p>Name of the Azure SQL managed instance.</p></summary>
+        [Pure]
+        public static AzureSqlMidbRestoreSettings ResetManagedInstance(this AzureSqlMidbRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagedInstance = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbRestoreSettings.Name"/>.</em></p><p>The name of the Azure SQL Managed Database.</p></summary>
+        [Pure]
+        public static AzureSqlMidbRestoreSettings SetName(this AzureSqlMidbRestoreSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbRestoreSettings.Name"/>.</em></p><p>The name of the Azure SQL Managed Database.</p></summary>
+        [Pure]
+        public static AzureSqlMidbRestoreSettings ResetName(this AzureSqlMidbRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbRestoreSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSqlMidbRestoreSettings SetResourceGroup(this AzureSqlMidbRestoreSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbRestoreSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSqlMidbRestoreSettings ResetResourceGroup(this AzureSqlMidbRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DestMi
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbRestoreSettings.DestMi"/>.</em></p><p>Name of the managed instance to restore managed database to. This can be same managed instance, or another managed instance on same subscription. When not specified it defaults to source managed instance.</p></summary>
+        [Pure]
+        public static AzureSqlMidbRestoreSettings SetDestMi(this AzureSqlMidbRestoreSettings toolSettings, string destMi)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DestMi = destMi;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbRestoreSettings.DestMi"/>.</em></p><p>Name of the managed instance to restore managed database to. This can be same managed instance, or another managed instance on same subscription. When not specified it defaults to source managed instance.</p></summary>
+        [Pure]
+        public static AzureSqlMidbRestoreSettings ResetDestMi(this AzureSqlMidbRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DestMi = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DestResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbRestoreSettings.DestResourceGroup"/>.</em></p><p>Name of the resource group of the managed instance to restore managed database to. When not specified it defaults to source resource group.</p></summary>
+        [Pure]
+        public static AzureSqlMidbRestoreSettings SetDestResourceGroup(this AzureSqlMidbRestoreSettings toolSettings, string destResourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DestResourceGroup = destResourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbRestoreSettings.DestResourceGroup"/>.</em></p><p>Name of the resource group of the managed instance to restore managed database to. When not specified it defaults to source resource group.</p></summary>
+        [Pure]
+        public static AzureSqlMidbRestoreSettings ResetDestResourceGroup(this AzureSqlMidbRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DestResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NoWait
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbRestoreSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSqlMidbRestoreSettings SetNoWait(this AzureSqlMidbRestoreSettings toolSettings, string noWait)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = noWait;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbRestoreSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSqlMidbRestoreSettings ResetNoWait(this AzureSqlMidbRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Time
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbRestoreSettings.Time"/>.</em></p><p>The point in time of the source database that will be restored to create the new database. Must be greater than or equal to the source database's earliestRestoreDate value. Time should be in following format: "YYYY-MM-DDTHH:MM:SS".</p></summary>
+        [Pure]
+        public static AzureSqlMidbRestoreSettings SetTime(this AzureSqlMidbRestoreSettings toolSettings, string time)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Time = time;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbRestoreSettings.Time"/>.</em></p><p>The point in time of the source database that will be restored to create the new database. Must be greater than or equal to the source database's earliestRestoreDate value. Time should be in following format: "YYYY-MM-DDTHH:MM:SS".</p></summary>
+        [Pure]
+        public static AzureSqlMidbRestoreSettings ResetTime(this AzureSqlMidbRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Time = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbRestoreSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMidbRestoreSettings SetDebug(this AzureSqlMidbRestoreSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbRestoreSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMidbRestoreSettings ResetDebug(this AzureSqlMidbRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbRestoreSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSqlMidbRestoreSettings SetHelp(this AzureSqlMidbRestoreSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbRestoreSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSqlMidbRestoreSettings ResetHelp(this AzureSqlMidbRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbRestoreSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSqlMidbRestoreSettings SetOutput(this AzureSqlMidbRestoreSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbRestoreSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSqlMidbRestoreSettings ResetOutput(this AzureSqlMidbRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbRestoreSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSqlMidbRestoreSettings SetQuery(this AzureSqlMidbRestoreSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbRestoreSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSqlMidbRestoreSettings ResetQuery(this AzureSqlMidbRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbRestoreSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMidbRestoreSettings SetVerbose(this AzureSqlMidbRestoreSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbRestoreSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMidbRestoreSettings ResetVerbose(this AzureSqlMidbRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSqlMidbShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureSqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSqlMidbShowSettingsExtensions
+    {
+        #region ManagedInstance
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbShowSettings.ManagedInstance"/>.</em></p><p>Name of the Azure SQL managed instance.</p></summary>
+        [Pure]
+        public static AzureSqlMidbShowSettings SetManagedInstance(this AzureSqlMidbShowSettings toolSettings, string managedInstance)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagedInstance = managedInstance;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbShowSettings.ManagedInstance"/>.</em></p><p>Name of the Azure SQL managed instance.</p></summary>
+        [Pure]
+        public static AzureSqlMidbShowSettings ResetManagedInstance(this AzureSqlMidbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagedInstance = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbShowSettings.Name"/>.</em></p><p>The name of the Azure SQL Managed Database.</p></summary>
+        [Pure]
+        public static AzureSqlMidbShowSettings SetName(this AzureSqlMidbShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbShowSettings.Name"/>.</em></p><p>The name of the Azure SQL Managed Database.</p></summary>
+        [Pure]
+        public static AzureSqlMidbShowSettings ResetName(this AzureSqlMidbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSqlMidbShowSettings SetResourceGroup(this AzureSqlMidbShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSqlMidbShowSettings ResetResourceGroup(this AzureSqlMidbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMidbShowSettings SetDebug(this AzureSqlMidbShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMidbShowSettings ResetDebug(this AzureSqlMidbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSqlMidbShowSettings SetHelp(this AzureSqlMidbShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSqlMidbShowSettings ResetHelp(this AzureSqlMidbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSqlMidbShowSettings SetOutput(this AzureSqlMidbShowSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSqlMidbShowSettings ResetOutput(this AzureSqlMidbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSqlMidbShowSettings SetQuery(this AzureSqlMidbShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSqlMidbShowSettings ResetQuery(this AzureSqlMidbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureSqlMidbShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMidbShowSettings SetVerbose(this AzureSqlMidbShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlMidbShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSqlMidbShowSettings ResetVerbose(this AzureSqlMidbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureSqlServerCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureSqlTasks"/>.</p></summary>
     [PublicAPI]
@@ -10437,7 +13710,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureSqlServerCreateSettings.Name"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlServerCreateSettings.Name"/>.</em></p><p>The server name.</p></summary>
         [Pure]
         public static AzureSqlServerCreateSettings SetName(this AzureSqlServerCreateSettings toolSettings, string name)
         {
@@ -10445,7 +13718,7 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlServerCreateSettings.Name"/>.</em></p><p></p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlServerCreateSettings.Name"/>.</em></p><p>The server name.</p></summary>
         [Pure]
         public static AzureSqlServerCreateSettings ResetName(this AzureSqlServerCreateSettings toolSettings)
         {
@@ -10487,24 +13760,6 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.AssignIdentity = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Tags
-        /// <summary><p><em>Sets <see cref="AzureSqlServerCreateSettings.Tags"/>.</em></p><p>Resource tags.</p></summary>
-        [Pure]
-        public static AzureSqlServerCreateSettings SetTags(this AzureSqlServerCreateSettings toolSettings, string tags)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = tags;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSqlServerCreateSettings.Tags"/>.</em></p><p>Resource tags.</p></summary>
-        [Pure]
-        public static AzureSqlServerCreateSettings ResetTags(this AzureSqlServerCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = null;
             return toolSettings;
         }
         #endregion
@@ -10607,7 +13862,7 @@ namespace Nuke.Azure
     public static partial class AzureSqlServerDeleteSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureSqlServerDeleteSettings.Name"/>.</em></p><p>The name of the server.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlServerDeleteSettings.Name"/>.</em></p><p>The server name.</p></summary>
         [Pure]
         public static AzureSqlServerDeleteSettings SetName(this AzureSqlServerDeleteSettings toolSettings, string name)
         {
@@ -10615,7 +13870,7 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlServerDeleteSettings.Name"/>.</em></p><p>The name of the server.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlServerDeleteSettings.Name"/>.</em></p><p>The server name.</p></summary>
         [Pure]
         public static AzureSqlServerDeleteSettings ResetName(this AzureSqlServerDeleteSettings toolSettings)
         {
@@ -10875,7 +14130,7 @@ namespace Nuke.Azure
     public static partial class AzureSqlServerListUsagesSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureSqlServerListUsagesSettings.Name"/>.</em></p><p>The name of the server.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlServerListUsagesSettings.Name"/>.</em></p><p>The server name.</p></summary>
         [Pure]
         public static AzureSqlServerListUsagesSettings SetName(this AzureSqlServerListUsagesSettings toolSettings, string name)
         {
@@ -10883,7 +14138,7 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlServerListUsagesSettings.Name"/>.</em></p><p>The name of the server.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlServerListUsagesSettings.Name"/>.</em></p><p>The server name.</p></summary>
         [Pure]
         public static AzureSqlServerListUsagesSettings ResetName(this AzureSqlServerListUsagesSettings toolSettings)
         {
@@ -11009,7 +14264,7 @@ namespace Nuke.Azure
     public static partial class AzureSqlServerShowSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureSqlServerShowSettings.Name"/>.</em></p><p>The name of the server.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlServerShowSettings.Name"/>.</em></p><p>The server name.</p></summary>
         [Pure]
         public static AzureSqlServerShowSettings SetName(this AzureSqlServerShowSettings toolSettings, string name)
         {
@@ -11017,7 +14272,7 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlServerShowSettings.Name"/>.</em></p><p>The name of the server.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlServerShowSettings.Name"/>.</em></p><p>The server name.</p></summary>
         [Pure]
         public static AzureSqlServerShowSettings ResetName(this AzureSqlServerShowSettings toolSettings)
         {
@@ -11143,7 +14398,7 @@ namespace Nuke.Azure
     public static partial class AzureSqlServerUpdateSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureSqlServerUpdateSettings.Name"/>.</em></p><p>The name of the server.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlServerUpdateSettings.Name"/>.</em></p><p>The server name.</p></summary>
         [Pure]
         public static AzureSqlServerUpdateSettings SetName(this AzureSqlServerUpdateSettings toolSettings, string name)
         {
@@ -11151,7 +14406,7 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlServerUpdateSettings.Name"/>.</em></p><p>The name of the server.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlServerUpdateSettings.Name"/>.</em></p><p>The server name.</p></summary>
         [Pure]
         public static AzureSqlServerUpdateSettings ResetName(this AzureSqlServerUpdateSettings toolSettings)
         {
@@ -12226,21 +15481,21 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region ElasticPool
-        /// <summary><p><em>Sets <see cref="AzureSqlDbReplicaCreateSettings.ElasticPool"/>.</em></p><p>Name of elastic pool to create the new replica in.</p></summary>
+        #region LicenseType
+        /// <summary><p><em>Sets <see cref="AzureSqlDbReplicaCreateSettings.LicenseType"/>.</em></p><p>The license type to apply for this database.</p></summary>
         [Pure]
-        public static AzureSqlDbReplicaCreateSettings SetElasticPool(this AzureSqlDbReplicaCreateSettings toolSettings, string elasticPool)
+        public static AzureSqlDbReplicaCreateSettings SetLicenseType(this AzureSqlDbReplicaCreateSettings toolSettings, SqlDbLicenseType licenseType)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.ElasticPool = elasticPool;
+            toolSettings.LicenseType = licenseType;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlDbReplicaCreateSettings.ElasticPool"/>.</em></p><p>Name of elastic pool to create the new replica in.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlDbReplicaCreateSettings.LicenseType"/>.</em></p><p>The license type to apply for this database.</p></summary>
         [Pure]
-        public static AzureSqlDbReplicaCreateSettings ResetElasticPool(this AzureSqlDbReplicaCreateSettings toolSettings)
+        public static AzureSqlDbReplicaCreateSettings ResetLicenseType(this AzureSqlDbReplicaCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.ElasticPool = null;
+            toolSettings.LicenseType = null;
             return toolSettings;
         }
         #endregion
@@ -12280,26 +15535,8 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region ServiceObjective
-        /// <summary><p><em>Sets <see cref="AzureSqlDbReplicaCreateSettings.ServiceObjective"/>.</em></p><p>Name of service objective for the new replica.</p></summary>
-        [Pure]
-        public static AzureSqlDbReplicaCreateSettings SetServiceObjective(this AzureSqlDbReplicaCreateSettings toolSettings, string serviceObjective)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServiceObjective = serviceObjective;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSqlDbReplicaCreateSettings.ServiceObjective"/>.</em></p><p>Name of service objective for the new replica.</p></summary>
-        [Pure]
-        public static AzureSqlDbReplicaCreateSettings ResetServiceObjective(this AzureSqlDbReplicaCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServiceObjective = null;
-            return toolSettings;
-        }
-        #endregion
         #region Tags
-        /// <summary><p><em>Sets <see cref="AzureSqlDbReplicaCreateSettings.Tags"/>.</em></p><p>Resource tags.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlDbReplicaCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         [Pure]
         public static AzureSqlDbReplicaCreateSettings SetTags(this AzureSqlDbReplicaCreateSettings toolSettings, string tags)
         {
@@ -12307,12 +15544,126 @@ namespace Nuke.Azure
             toolSettings.Tags = tags;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlDbReplicaCreateSettings.Tags"/>.</em></p><p>Resource tags.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlDbReplicaCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         [Pure]
         public static AzureSqlDbReplicaCreateSettings ResetTags(this AzureSqlDbReplicaCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ZoneRedundant
+        /// <summary><p><em>Sets <see cref="AzureSqlDbReplicaCreateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
+        [Pure]
+        public static AzureSqlDbReplicaCreateSettings SetZoneRedundant(this AzureSqlDbReplicaCreateSettings toolSettings, bool? zoneRedundant)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ZoneRedundant = zoneRedundant;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbReplicaCreateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
+        [Pure]
+        public static AzureSqlDbReplicaCreateSettings ResetZoneRedundant(this AzureSqlDbReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ZoneRedundant = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureSqlDbReplicaCreateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
+        [Pure]
+        public static AzureSqlDbReplicaCreateSettings EnableZoneRedundant(this AzureSqlDbReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ZoneRedundant = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureSqlDbReplicaCreateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
+        [Pure]
+        public static AzureSqlDbReplicaCreateSettings DisableZoneRedundant(this AzureSqlDbReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ZoneRedundant = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureSqlDbReplicaCreateSettings.ZoneRedundant"/>.</em></p><p>Specifies whether to enable zone redundancy.</p></summary>
+        [Pure]
+        public static AzureSqlDbReplicaCreateSettings ToggleZoneRedundant(this AzureSqlDbReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ZoneRedundant = !toolSettings.ZoneRedundant;
+            return toolSettings;
+        }
+        #endregion
+        #region Capacity
+        /// <summary><p><em>Sets <see cref="AzureSqlDbReplicaCreateSettings.Capacity"/>.</em></p><p>The capacity component of the sku in integer number of DTUs or vcores.</p></summary>
+        [Pure]
+        public static AzureSqlDbReplicaCreateSettings SetCapacity(this AzureSqlDbReplicaCreateSettings toolSettings, string capacity)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Capacity = capacity;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbReplicaCreateSettings.Capacity"/>.</em></p><p>The capacity component of the sku in integer number of DTUs or vcores.</p></summary>
+        [Pure]
+        public static AzureSqlDbReplicaCreateSettings ResetCapacity(this AzureSqlDbReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Capacity = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Family
+        /// <summary><p><em>Sets <see cref="AzureSqlDbReplicaCreateSettings.Family"/>.</em></p><p>The compute generation component of the sku (for vcore skus only). Allowed values include: Gen4, Gen5.</p></summary>
+        [Pure]
+        public static AzureSqlDbReplicaCreateSettings SetFamily(this AzureSqlDbReplicaCreateSettings toolSettings, string family)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Family = family;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbReplicaCreateSettings.Family"/>.</em></p><p>The compute generation component of the sku (for vcore skus only). Allowed values include: Gen4, Gen5.</p></summary>
+        [Pure]
+        public static AzureSqlDbReplicaCreateSettings ResetFamily(this AzureSqlDbReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Family = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ElasticPool
+        /// <summary><p><em>Sets <see cref="AzureSqlDbReplicaCreateSettings.ElasticPool"/>.</em></p><p>The name or resource id of the elastic pool to create the database in.</p></summary>
+        [Pure]
+        public static AzureSqlDbReplicaCreateSettings SetElasticPool(this AzureSqlDbReplicaCreateSettings toolSettings, string elasticPool)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ElasticPool = elasticPool;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbReplicaCreateSettings.ElasticPool"/>.</em></p><p>The name or resource id of the elastic pool to create the database in.</p></summary>
+        [Pure]
+        public static AzureSqlDbReplicaCreateSettings ResetElasticPool(this AzureSqlDbReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ElasticPool = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServiceObjective
+        /// <summary><p><em>Sets <see cref="AzureSqlDbReplicaCreateSettings.ServiceObjective"/>.</em></p><p>The service objective for the new database. For example: Basic, S0, P1, GP_Gen4_1, BC_Gen5_2.</p></summary>
+        [Pure]
+        public static AzureSqlDbReplicaCreateSettings SetServiceObjective(this AzureSqlDbReplicaCreateSettings toolSettings, string serviceObjective)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServiceObjective = serviceObjective;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSqlDbReplicaCreateSettings.ServiceObjective"/>.</em></p><p>The service objective for the new database. For example: Basic, S0, P1, GP_Gen4_1, BC_Gen5_2.</p></summary>
+        [Pure]
+        public static AzureSqlDbReplicaCreateSettings ResetServiceObjective(this AzureSqlDbReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServiceObjective = null;
             return toolSettings;
         }
         #endregion
@@ -17783,7 +21134,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Server
-        /// <summary><p><em>Sets <see cref="AzureSqlServerVnetRuleCreateSettings.Server"/>.</em></p><p>The name of the server.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlServerVnetRuleCreateSettings.Server"/>.</em></p><p>The server name.</p></summary>
         [Pure]
         public static AzureSqlServerVnetRuleCreateSettings SetServer(this AzureSqlServerVnetRuleCreateSettings toolSettings, string server)
         {
@@ -17791,7 +21142,7 @@ namespace Nuke.Azure
             toolSettings.Server = server;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlServerVnetRuleCreateSettings.Server"/>.</em></p><p>The name of the server.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlServerVnetRuleCreateSettings.Server"/>.</em></p><p>The server name.</p></summary>
         [Pure]
         public static AzureSqlServerVnetRuleCreateSettings ResetServer(this AzureSqlServerVnetRuleCreateSettings toolSettings)
         {
@@ -18013,7 +21364,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Server
-        /// <summary><p><em>Sets <see cref="AzureSqlServerVnetRuleDeleteSettings.Server"/>.</em></p><p>The name of the server.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlServerVnetRuleDeleteSettings.Server"/>.</em></p><p>The server name.</p></summary>
         [Pure]
         public static AzureSqlServerVnetRuleDeleteSettings SetServer(this AzureSqlServerVnetRuleDeleteSettings toolSettings, string server)
         {
@@ -18021,7 +21372,7 @@ namespace Nuke.Azure
             toolSettings.Server = server;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlServerVnetRuleDeleteSettings.Server"/>.</em></p><p>The name of the server.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlServerVnetRuleDeleteSettings.Server"/>.</em></p><p>The server name.</p></summary>
         [Pure]
         public static AzureSqlServerVnetRuleDeleteSettings ResetServer(this AzureSqlServerVnetRuleDeleteSettings toolSettings)
         {
@@ -18147,7 +21498,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Server
-        /// <summary><p><em>Sets <see cref="AzureSqlServerVnetRuleListSettings.Server"/>.</em></p><p>The name of the server.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlServerVnetRuleListSettings.Server"/>.</em></p><p>The server name.</p></summary>
         [Pure]
         public static AzureSqlServerVnetRuleListSettings SetServer(this AzureSqlServerVnetRuleListSettings toolSettings, string server)
         {
@@ -18155,7 +21506,7 @@ namespace Nuke.Azure
             toolSettings.Server = server;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlServerVnetRuleListSettings.Server"/>.</em></p><p>The name of the server.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlServerVnetRuleListSettings.Server"/>.</em></p><p>The server name.</p></summary>
         [Pure]
         public static AzureSqlServerVnetRuleListSettings ResetServer(this AzureSqlServerVnetRuleListSettings toolSettings)
         {
@@ -18299,7 +21650,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Server
-        /// <summary><p><em>Sets <see cref="AzureSqlServerVnetRuleShowSettings.Server"/>.</em></p><p>The name of the server.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlServerVnetRuleShowSettings.Server"/>.</em></p><p>The server name.</p></summary>
         [Pure]
         public static AzureSqlServerVnetRuleShowSettings SetServer(this AzureSqlServerVnetRuleShowSettings toolSettings, string server)
         {
@@ -18307,7 +21658,7 @@ namespace Nuke.Azure
             toolSettings.Server = server;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlServerVnetRuleShowSettings.Server"/>.</em></p><p>The name of the server.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlServerVnetRuleShowSettings.Server"/>.</em></p><p>The server name.</p></summary>
         [Pure]
         public static AzureSqlServerVnetRuleShowSettings ResetServer(this AzureSqlServerVnetRuleShowSettings toolSettings)
         {
@@ -18451,7 +21802,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Server
-        /// <summary><p><em>Sets <see cref="AzureSqlServerVnetRuleUpdateSettings.Server"/>.</em></p><p>The name of the server.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSqlServerVnetRuleUpdateSettings.Server"/>.</em></p><p>The server name.</p></summary>
         [Pure]
         public static AzureSqlServerVnetRuleUpdateSettings SetServer(this AzureSqlServerVnetRuleUpdateSettings toolSettings, string server)
         {
@@ -18459,7 +21810,7 @@ namespace Nuke.Azure
             toolSettings.Server = server;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSqlServerVnetRuleUpdateSettings.Server"/>.</em></p><p>The name of the server.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSqlServerVnetRuleUpdateSettings.Server"/>.</em></p><p>The server name.</p></summary>
         [Pure]
         public static AzureSqlServerVnetRuleUpdateSettings ResetServer(this AzureSqlServerVnetRuleUpdateSettings toolSettings)
         {
@@ -18672,6 +22023,26 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+    }
+    #endregion
+    #region SqlDbLicenseType
+    /// <summary><p>Used within <see cref="AzureSqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [Serializable]
+    public partial class SqlDbLicenseType : Enumeration
+    {
+        public static SqlDbLicenseType baseprice = new SqlDbLicenseType { Value = "baseprice" };
+        public static SqlDbLicenseType licenseincluded = new SqlDbLicenseType { Value = "licenseincluded" };
+    }
+    #endregion
+    #region SqlDbCreateCatalogCollation
+    /// <summary><p>Used within <see cref="AzureSqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [Serializable]
+    public partial class SqlDbCreateCatalogCollation : Enumeration
+    {
+        public static SqlDbCreateCatalogCollation database_default = new SqlDbCreateCatalogCollation { Value = "database_default" };
+        public static SqlDbCreateCatalogCollation sql_latin1_general_cp1_ci_as = new SqlDbCreateCatalogCollation { Value = "sql_latin1_general_cp1_ci_as" };
     }
     #endregion
     #region SqlDbStorageKeyType

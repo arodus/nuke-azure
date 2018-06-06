@@ -6,8 +6,10 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/account.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a5c8a3fb/latest/docs-ref-autogen/account/lock.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/account.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/account/lock.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/account/management-group.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/account/management-group/subscription.yml"
   ],
   "name": "AzureAccount",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest",
@@ -206,6 +208,161 @@
             "type": "string",
             "format": "--notes {value}",
             "help": "Notes about this lock."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ManagementGroupCreate",
+      "definiteArgument": "account management-group create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the management group."
+          },
+          {
+            "name": "DisplayName",
+            "type": "string",
+            "format": "--display-name {value}",
+            "help": "Sets the display name of the management group. If null, the group name is set as the display name."
+          },
+          {
+            "name": "Parent",
+            "type": "string",
+            "format": "--parent {value}",
+            "help": "Sets the parent of the management group. Can be the fully qualified id or the name of the management group. If null, the root tenant group is set as the parent."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ManagementGroupDelete",
+      "definiteArgument": "account management-group delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the management group."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ManagementGroupList",
+      "definiteArgument": "account management-group list",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "ManagementGroupShow",
+      "definiteArgument": "account management-group show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the management group."
+          },
+          {
+            "name": "Expand",
+            "type": "string",
+            "format": "--expand {value}",
+            "help": "If given, lists the children in the first level of hierarchy."
+          },
+          {
+            "name": "Recurse",
+            "type": "string",
+            "format": "--recurse {value}",
+            "help": "If given, lists the children in all levels of hierarchy."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ManagementGroupUpdate",
+      "definiteArgument": "account management-group update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the management group."
+          },
+          {
+            "name": "DisplayName",
+            "type": "string",
+            "format": "--display-name {value}",
+            "help": "Updates the display name of the management group. If null, no change is made."
+          },
+          {
+            "name": "Parent",
+            "type": "string",
+            "format": "--parent {value}",
+            "help": "Update the parent of the management group. Can be the fully qualified id or the name of the management group. If null, no change is made."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ManagementGroupSubscriptionAdd",
+      "definiteArgument": "account management-group subscription add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the management group."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Subscription Id or Name."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ManagementGroupSubscriptionRemove",
+      "definiteArgument": "account management-group subscription remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the management group."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Subscription Id or Name."
           }
         ]
       }

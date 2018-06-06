@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0 [CommitSha: 3eaf2b72].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureAd.json.
 
 using JetBrains.Annotations;
@@ -589,6 +589,12 @@ namespace Nuke.Azure
         public virtual string RequiredResourceAccesses { get; internal set; }
         /// <summary><p>Date or datetime at which credentials become valid(e.g. '2017-01-01T01:00:00+00:00' or '2017-01-01'). Default value is current time.</p></summary>
         public virtual string StartDate { get; internal set; }
+        /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        public virtual string Add { get; internal set; }
+        /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        public virtual string Remove { get; internal set; }
+        /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        public virtual string Set { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -617,6 +623,9 @@ namespace Nuke.Azure
               .Add("--reply-urls {value}", ReplyUrls)
               .Add("--required-resource-accesses {value}", RequiredResourceAccesses)
               .Add("--start-date {value}", StartDate)
+              .Add("--add {value}", Add)
+              .Add("--remove {value}", Remove)
+              .Add("--set {value}", Set)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -710,6 +719,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureAdTasks.AzureAdPath;
         /// <summary><p>Group's object id or display name(prefix also works if there is a unique match).</p></summary>
         public virtual string Group { get; internal set; }
+        /// <summary><p>Unmatched properties from the message are deserialized this collection.</p></summary>
+        public virtual string AdditionalProperties { get; internal set; }
         /// <summary><p>If true, only membership in security-enabled groups should be checked. Otherwise, membership in all groups should be checked.</p></summary>
         public virtual bool? SecurityEnabledOnly { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
@@ -727,6 +738,7 @@ namespace Nuke.Azure
             arguments
               .Add("ad group get-member-groups")
               .Add("--group {value}", Group)
+              .Add("--additional-properties {value}", AdditionalProperties)
               .Add("--security-enabled-only", SecurityEnabledOnly)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -1193,6 +1205,8 @@ namespace Nuke.Azure
         public virtual string Group { get; internal set; }
         /// <summary><p>The object ID of the contact, group, user, or service principal.</p></summary>
         public virtual string MemberId { get; internal set; }
+        /// <summary><p>Unmatched properties from the message are deserialized this collection.</p></summary>
+        public virtual string AdditionalProperties { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1209,6 +1223,7 @@ namespace Nuke.Azure
               .Add("ad group member add")
               .Add("--group {value}", Group)
               .Add("--member-id {value}", MemberId)
+              .Add("--additional-properties {value}", AdditionalProperties)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2689,6 +2704,60 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Add
+        /// <summary><p><em>Sets <see cref="AzureAdAppUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        [Pure]
+        public static AzureAdAppUpdateSettings SetAdd(this AzureAdAppUpdateSettings toolSettings, string add)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = add;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        [Pure]
+        public static AzureAdAppUpdateSettings ResetAdd(this AzureAdAppUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Remove
+        /// <summary><p><em>Sets <see cref="AzureAdAppUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        [Pure]
+        public static AzureAdAppUpdateSettings SetRemove(this AzureAdAppUpdateSettings toolSettings, string remove)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = remove;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        [Pure]
+        public static AzureAdAppUpdateSettings ResetRemove(this AzureAdAppUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Set
+        /// <summary><p><em>Sets <see cref="AzureAdAppUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureAdAppUpdateSettings SetSet(this AzureAdAppUpdateSettings toolSettings, string set)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = set;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureAdAppUpdateSettings ResetSet(this AzureAdAppUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureAdAppUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -3052,6 +3121,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Group = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AdditionalProperties
+        /// <summary><p><em>Sets <see cref="AzureAdGroupGetMemberGroupsSettings.AdditionalProperties"/>.</em></p><p>Unmatched properties from the message are deserialized this collection.</p></summary>
+        [Pure]
+        public static AzureAdGroupGetMemberGroupsSettings SetAdditionalProperties(this AzureAdGroupGetMemberGroupsSettings toolSettings, string additionalProperties)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AdditionalProperties = additionalProperties;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdGroupGetMemberGroupsSettings.AdditionalProperties"/>.</em></p><p>Unmatched properties from the message are deserialized this collection.</p></summary>
+        [Pure]
+        public static AzureAdGroupGetMemberGroupsSettings ResetAdditionalProperties(this AzureAdGroupGetMemberGroupsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AdditionalProperties = null;
             return toolSettings;
         }
         #endregion
@@ -4960,6 +5047,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MemberId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AdditionalProperties
+        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberAddSettings.AdditionalProperties"/>.</em></p><p>Unmatched properties from the message are deserialized this collection.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberAddSettings SetAdditionalProperties(this AzureAdGroupMemberAddSettings toolSettings, string additionalProperties)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AdditionalProperties = additionalProperties;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberAddSettings.AdditionalProperties"/>.</em></p><p>Unmatched properties from the message are deserialized this collection.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberAddSettings ResetAdditionalProperties(this AzureAdGroupMemberAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AdditionalProperties = null;
             return toolSettings;
         }
         #endregion

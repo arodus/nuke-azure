@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0-alpha.20 [CommitSha: 67bb27fd].
+// Generated with Nuke.CodeGeneration, Version: 0.5.0 [CommitSha: 3eaf2b72].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureIdentity.json.
 
 using JetBrains.Annotations;
@@ -105,7 +105,7 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
-        /// <summary><p>Resource tags.</p></summary>
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
@@ -338,7 +338,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Tags
-        /// <summary><p><em>Sets <see cref="AzureIdentityCreateSettings.Tags"/>.</em></p><p>Resource tags.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureIdentityCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         [Pure]
         public static AzureIdentityCreateSettings SetTags(this AzureIdentityCreateSettings toolSettings, string tags)
         {
@@ -346,7 +346,7 @@ namespace Nuke.Azure
             toolSettings.Tags = tags;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureIdentityCreateSettings.Tags"/>.</em></p><p>Resource tags.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureIdentityCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         [Pure]
         public static AzureIdentityCreateSettings ResetTags(this AzureIdentityCreateSettings toolSettings)
         {
