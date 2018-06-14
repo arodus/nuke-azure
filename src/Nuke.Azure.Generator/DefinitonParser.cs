@@ -97,6 +97,10 @@ namespace Nuke.Azure.Generator
         {
             if (parameter.InstanceName == null) return null;
             var type = _typeResolver.Resolve(parameter, _namespace);
+            var name = parameter.InstanceName;
+            // if separator has a value the type is either a dictionary or a list and thus can't be a secret.
+            var isSecret = !type.Separator.HasValue && (name.IndexOf("secret", StringComparison.OrdinalIgnoreCase) >= 0
+                                                        || name.IndexOf("password", StringComparison.OrdinalIgnoreCase) >= 0);
 
             var property = new Property
                            {
@@ -105,8 +109,9 @@ namespace Nuke.Azure.Generator
                                Format = type.Format,
                                ItemFormat = type.ItemFormat,
                                Separator = type.Separator,
-                               Help = parameter.Summary.FormatForXmlDoc()
-                           };
+                               Help = parameter.Summary.FormatForXmlDoc(),
+                               Secret = isSecret
+            };
             return property;
         }
 

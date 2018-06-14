@@ -30,16 +30,16 @@ namespace Nuke.Azure.Generator.Model
         [JsonProperty(PropertyName = "parameterValueGroup")] [CanBeNull]
         public string ParameterValueGroup { get; set; }
 
-        [JsonIgnore] public string FormatString =>
+        [JsonIgnore] [CanBeNull]public string FormatString =>
             Name?.Split(new[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries).FirstOrDefault(x => x.StartsWith("--"));
 
-        [JsonIgnore] public string[] ParameterValueGroups =>
+        [JsonIgnore] [CanBeNull]public string[] ParameterValueGroups =>
             ParameterValueGroup?.Split(separator: ',').Select(x => x.ToLowerInvariant().Trim()).ToArray();
 
         [JsonProperty(PropertyName = "name")] public string Name { get; set; }
 
-        [JsonIgnore] public string InstanceName => FormatString?.TrimStart('-', ' ').ToPascalCase(separator: '-');
-        [JsonIgnore] [NotNull] public IDefinition Parent { get; set; }
+        [JsonIgnore] [CanBeNull] public string InstanceName => FormatString?.TrimStart('-', ' ').ToPascalCase(separator: '-');
+        [JsonIgnore] public IDefinition Parent { get; set; }
         [JsonIgnore] public IDefinition Root => Parent.Root;
     }
 }

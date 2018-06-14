@@ -5,13 +5,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using JetBrains.Annotations;
 
 namespace Nuke.Azure.Generator.Model
 {
     internal interface IDefinition
     {
         string Name { get; }
-        string InstanceName { get; }
+        [CanBeNull]string InstanceName { get; }
 
         IDefinition Root { get; }
         IDefinition Parent { get; set; }

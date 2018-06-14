@@ -113,7 +113,7 @@ class Build : NukeBuild
         .DependsOn(Clone)
         .Executes(() =>
         {
-            var reference = Git($"rev-parse --short {AzureCliGitBranch}", DefinitonRepositoryPath).Single();
+            var reference = Git($"rev-parse --short {AzureCliGitBranch}", DefinitonRepositoryPath, redirectOutput: true).Single();
             Logger.Log($"Generating specifications for {reference}");
             var generationSettings = new SpecificationGeneratorSettings
                                      {
