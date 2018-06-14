@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0 [CommitSha: 3eaf2b72].
+// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureSql.json.
 
 using JetBrains.Annotations;
@@ -28,11 +28,11 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureSql executable.</p></summary>
         public static string AzureSqlPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage Azure SQL Databases and Data Warehouses.</p></summary>
-        public static IEnumerable<string> AzureSql(string arguments, string workingDirectory = null, ProcessSettings processSettings = null)
+        public static IEnumerable<string> AzureSql(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureSqlPath, arguments, workingDirectory, processSettings?.EnvironmentVariables, processSettings?.ExecutionTimeout, processSettings?.RedirectOutput ?? true);
+            var process = ProcessTasks.StartProcess(AzureSqlPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
             process.AssertZeroExitCode();
-            return process.Output.Select(x => x.Text);
+            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
         }
         static partial void PreProcess(AzureSqlListUsagesSettings toolSettings);
         static partial void PostProcess(AzureSqlListUsagesSettings toolSettings);
@@ -1318,7 +1318,7 @@ namespace Nuke.Azure
         {
             arguments
               .Add("sql db export")
-              .Add("--admin-password {value}", AdminPassword)
+              .Add("--admin-password {value}", AdminPassword, secret: true)
               .Add("--admin-user {value}", AdminUser)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
@@ -1377,7 +1377,7 @@ namespace Nuke.Azure
         {
             arguments
               .Add("sql db import")
-              .Add("--admin-password {value}", AdminPassword)
+              .Add("--admin-password {value}", AdminPassword, secret: true)
               .Add("--admin-user {value}", AdminUser)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
@@ -2587,7 +2587,7 @@ namespace Nuke.Azure
         {
             arguments
               .Add("sql mi create")
-              .Add("--admin-password {value}", AdminPassword)
+              .Add("--admin-password {value}", AdminPassword, secret: true)
               .Add("--admin-user {value}", AdminUser)
               .Add("--location {value}", Location)
               .Add("--name {value}", Name)
@@ -2774,7 +2774,7 @@ namespace Nuke.Azure
               .Add("sql mi update")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--admin-password {value}", AdminPassword)
+              .Add("--admin-password {value}", AdminPassword, secret: true)
               .Add("--assign-identity {value}", AssignIdentity)
               .Add("--capacity {value}", Capacity)
               .Add("--license-type {value}", LicenseType)
@@ -3056,7 +3056,7 @@ namespace Nuke.Azure
         {
             arguments
               .Add("sql server create")
-              .Add("--admin-password {value}", AdminPassword)
+              .Add("--admin-password {value}", AdminPassword, secret: true)
               .Add("--admin-user {value}", AdminUser)
               .Add("--location {value}", Location)
               .Add("--name {value}", Name)
@@ -3262,7 +3262,7 @@ namespace Nuke.Azure
               .Add("sql server update")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--admin-password {value}", AdminPassword)
+              .Add("--admin-password {value}", AdminPassword, secret: true)
               .Add("--assign_identity {value}", Assign_identity)
               .Add("--add {value}", Add)
               .Add("--remove {value}", Remove)

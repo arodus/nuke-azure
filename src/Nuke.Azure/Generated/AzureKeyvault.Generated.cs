@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0 [CommitSha: 3eaf2b72].
+// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureKeyvault.json.
 
 using JetBrains.Annotations;
@@ -28,11 +28,11 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureKeyvault executable.</p></summary>
         public static string AzureKeyvaultPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Safeguard and maintain control of keys, secrets, and certificates.</p></summary>
-        public static IEnumerable<string> AzureKeyvault(string arguments, string workingDirectory = null, ProcessSettings processSettings = null)
+        public static IEnumerable<string> AzureKeyvault(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureKeyvaultPath, arguments, workingDirectory, processSettings?.EnvironmentVariables, processSettings?.ExecutionTimeout, processSettings?.RedirectOutput ?? true);
+            var process = ProcessTasks.StartProcess(AzureKeyvaultPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
             process.AssertZeroExitCode();
-            return process.Output.Select(x => x.Text);
+            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
         }
         static partial void PreProcess(AzureKeyvaultCreateSettings toolSettings);
         static partial void PostProcess(AzureKeyvaultCreateSettings toolSettings);
@@ -1385,7 +1385,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--vault-name {value}", VaultName)
               .Add("--disabled", Disabled)
-              .Add("--password {value}", Password)
+              .Add("--password {value}", Password, secret: true)
               .Add("--policy {value}", Policy)
               .Add("--tags {value}", Tags)
               .Add("--debug {value}", Debug)
@@ -1914,7 +1914,7 @@ namespace Nuke.Azure
               .Add("--tags {value}", Tags)
               .Add("--byok-file {value}", ByokFile)
               .Add("--pem-file {value}", PemFile)
-              .Add("--pem-password {value}", PemPassword)
+              .Add("--pem-password {value}", PemPassword, secret: true)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3004,7 +3004,7 @@ namespace Nuke.Azure
               .Add("--vault-name {value}", VaultName)
               .Add("--disabled", Disabled)
               .Add("--account-id {value}", AccountId)
-              .Add("--password {value}", Password)
+              .Add("--password {value}", Password, secret: true)
               .Add("--organization-id {value}", OrganizationId)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -3171,7 +3171,7 @@ namespace Nuke.Azure
               .Add("--enabled", Enabled)
               .Add("--provider-name {value}", ProviderName)
               .Add("--account-id {value}", AccountId)
-              .Add("--password {value}", Password)
+              .Add("--password {value}", Password, secret: true)
               .Add("--organization-id {value}", OrganizationId)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)

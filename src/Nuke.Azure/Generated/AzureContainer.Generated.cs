@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0 [CommitSha: 3eaf2b72].
+// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureContainer.json.
 
 using JetBrains.Annotations;
@@ -28,11 +28,11 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureContainer executable.</p></summary>
         public static string AzureContainerPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage Azure Container Instances.</p></summary>
-        public static IEnumerable<string> AzureContainer(string arguments, string workingDirectory = null, ProcessSettings processSettings = null)
+        public static IEnumerable<string> AzureContainer(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureContainerPath, arguments, workingDirectory, processSettings?.EnvironmentVariables, processSettings?.ExecutionTimeout, processSettings?.RedirectOutput ?? true);
+            var process = ProcessTasks.StartProcess(AzureContainerPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
             process.AssertZeroExitCode();
-            return process.Output.Select(x => x.Text);
+            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
         }
         static partial void PreProcess(AzureContainerAttachSettings toolSettings);
         static partial void PostProcess(AzureContainerAttachSettings toolSettings);
@@ -258,7 +258,7 @@ namespace Nuke.Azure
               .Add("--ports {value}", Ports)
               .Add("--restart-policy {value}", RestartPolicy)
               .Add("--secrets {value}", Secrets, "{key}={value}", separator: ' ')
-              .Add("--secrets-mount-path {value}", SecretsMountPath)
+              .Add("--secrets-mount-path {value}", SecretsMountPath, secret: true)
               .Add("--azure-file-volume-account-key {value}", AzureFileVolumeAccountKey)
               .Add("--azure-file-volume-account-name {value}", AzureFileVolumeAccountName)
               .Add("--azure-file-volume-mount-path {value}", AzureFileVolumeMountPath)
@@ -268,7 +268,7 @@ namespace Nuke.Azure
               .Add("--gitrepo-revision {value}", GitrepoRevision)
               .Add("--gitrepo-url {value}", GitrepoUrl)
               .Add("--registry-login-server {value}", RegistryLoginServer)
-              .Add("--registry-password {value}", RegistryPassword)
+              .Add("--registry-password {value}", RegistryPassword, secret: true)
               .Add("--registry-username {value}", RegistryUsername)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)

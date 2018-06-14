@@ -6,12 +6,12 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/acr.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/acr/build-task.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/acr/credential.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/acr/replication.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/acr/repository.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/acr/webhook.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/acr.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/acr/build-task.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/acr/credential.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/acr/replication.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/acr/repository.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/acr/webhook.yml"
   ],
   "name": "AzureAcr",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest",
@@ -69,6 +69,7 @@
             "name": "SecretBuildArg",
             "type": "string",
             "format": "--secret-build-arg {value}",
+            "secret": true,
             "help": "Secret build argument in 'name[=value]' format."
           },
           {
@@ -237,6 +238,7 @@
             "name": "Password",
             "type": "string",
             "format": "--password {value}",
+            "secret": true,
             "help": "The password used to log into a container registry."
           },
           {
@@ -461,6 +463,7 @@
             "name": "SecretBuildArg",
             "type": "string",
             "format": "--secret-build-arg {value}",
+            "secret": true,
             "help": "Secret build argument in 'name[=value]' format."
           },
           {
@@ -783,6 +786,7 @@
             "name": "SecretBuildArg",
             "type": "string",
             "format": "--secret-build-arg {value}",
+            "secret": true,
             "help": "Secret build argument in 'name[=value]' format."
           },
           {
@@ -815,6 +819,7 @@
             "name": "PasswordName",
             "type": "AcrCredentialRenewPasswordName",
             "format": "--password-name {value}",
+            "secret": true,
             "help": "The name of password to regenerate."
           },
           {
@@ -1027,6 +1032,7 @@
             "name": "Password",
             "type": "string",
             "format": "--password {value}",
+            "secret": true,
             "help": "The password used to log into a container registry."
           },
           {
@@ -1071,6 +1077,7 @@
             "name": "Password",
             "type": "string",
             "format": "--password {value}",
+            "secret": true,
             "help": "The password used to log into a container registry."
           },
           {
@@ -1109,6 +1116,7 @@
             "name": "Password",
             "type": "string",
             "format": "--password {value}",
+            "secret": true,
             "help": "The password used to log into a container registry."
           },
           {
@@ -1147,6 +1155,7 @@
             "name": "Password",
             "type": "string",
             "format": "--password {value}",
+            "secret": true,
             "help": "The password used to log into a container registry."
           },
           {
@@ -1185,6 +1194,7 @@
             "name": "Password",
             "type": "string",
             "format": "--password {value}",
+            "secret": true,
             "help": "The password used to log into a container registry."
           },
           {

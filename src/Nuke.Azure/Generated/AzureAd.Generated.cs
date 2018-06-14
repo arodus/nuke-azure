@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0 [CommitSha: 3eaf2b72].
+// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureAd.json.
 
 using JetBrains.Annotations;
@@ -28,11 +28,11 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureAd executable.</p></summary>
         public static string AzureAdPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p></summary>
-        public static IEnumerable<string> AzureAd(string arguments, string workingDirectory = null, ProcessSettings processSettings = null)
+        public static IEnumerable<string> AzureAd(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureAdPath, arguments, workingDirectory, processSettings?.EnvironmentVariables, processSettings?.ExecutionTimeout, processSettings?.RedirectOutput ?? true);
+            var process = ProcessTasks.StartProcess(AzureAdPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
             process.AssertZeroExitCode();
-            return process.Output.Select(x => x.Text);
+            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
         }
         static partial void PreProcess(AzureAdSettings toolSettings);
         static partial void PostProcess(AzureAdSettings toolSettings);
@@ -425,7 +425,7 @@ namespace Nuke.Azure
               .Add("--key-value {value}", KeyValue)
               .Add("--native-app", NativeApp)
               .Add("--oauth2-allow-implicit-flow", Oauth2AllowImplicitFlow)
-              .Add("--password {value}", Password)
+              .Add("--password {value}", Password, secret: true)
               .Add("--reply-urls {value}", ReplyUrls)
               .Add("--required-resource-accesses {value}", RequiredResourceAccesses)
               .Add("--start-date {value}", StartDate)
@@ -619,7 +619,7 @@ namespace Nuke.Azure
               .Add("--key-usage {value}", KeyUsage)
               .Add("--key-value {value}", KeyValue)
               .Add("--oauth2-allow-implicit-flow", Oauth2AllowImplicitFlow)
-              .Add("--password {value}", Password)
+              .Add("--password {value}", Password, secret: true)
               .Add("--reply-urls {value}", ReplyUrls)
               .Add("--required-resource-accesses {value}", RequiredResourceAccesses)
               .Add("--start-date {value}", StartDate)
@@ -909,7 +909,7 @@ namespace Nuke.Azure
               .Add("--cert {value}", Cert)
               .Add("--create-cert {value}", CreateCert)
               .Add("--keyvault {value}", Keyvault)
-              .Add("--password {value}", Password)
+              .Add("--password {value}", Password, secret: true)
               .Add("--years {value}", Years)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -1067,9 +1067,9 @@ namespace Nuke.Azure
             arguments
               .Add("ad user create")
               .Add("--display-name {value}", DisplayName)
-              .Add("--password {value}", Password)
+              .Add("--password {value}", Password, secret: true)
               .Add("--user-principal-name {value}", UserPrincipalName)
-              .Add("--force-change-password-next-login", ForceChangePasswordNextLogin)
+              .Add("--force-change-password-next-login", ForceChangePasswordNextLogin, secret: true)
               .Add("--immutable-id {value}", ImmutableId)
               .Add("--mail-nickname {value}", MailNickname)
               .Add("--debug {value}", Debug)
@@ -1465,7 +1465,7 @@ namespace Nuke.Azure
               .Add("--cert {value}", Cert)
               .Add("--create-cert {value}", CreateCert)
               .Add("--keyvault {value}", Keyvault)
-              .Add("--password {value}", Password)
+              .Add("--password {value}", Password, secret: true)
               .Add("--years {value}", Years)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)

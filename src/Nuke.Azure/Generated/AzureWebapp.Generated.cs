@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0 [CommitSha: 3eaf2b72].
+// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureWebapp.json.
 
 using JetBrains.Annotations;
@@ -28,11 +28,11 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureWebapp executable.</p></summary>
         public static string AzureWebappPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage web apps.</p></summary>
-        public static IEnumerable<string> AzureWebapp(string arguments, string workingDirectory = null, ProcessSettings processSettings = null)
+        public static IEnumerable<string> AzureWebapp(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureWebappPath, arguments, workingDirectory, processSettings?.EnvironmentVariables, processSettings?.ExecutionTimeout, processSettings?.RedirectOutput ?? true);
+            var process = ProcessTasks.StartProcess(AzureWebappPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
             process.AssertZeroExitCode();
-            return process.Output.Select(x => x.Text);
+            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
         }
         static partial void PreProcess(AzureWebappBrowseSettings toolSettings);
         static partial void PostProcess(AzureWebappBrowseSettings toolSettings);
@@ -1309,19 +1309,19 @@ namespace Nuke.Azure
               .Add("--token-store", TokenStore)
               .Add("--aad-allowed-token-audiences {value}", AadAllowedTokenAudiences)
               .Add("--aad-client-id {value}", AadClientId)
-              .Add("--aad-client-secret {value}", AadClientSecret)
+              .Add("--aad-client-secret {value}", AadClientSecret, secret: true)
               .Add("--aad-token-issuer-url {value}", AadTokenIssuerUrl)
               .Add("--facebook-app-id {value}", FacebookAppId)
-              .Add("--facebook-app-secret {value}", FacebookAppSecret)
+              .Add("--facebook-app-secret {value}", FacebookAppSecret, secret: true)
               .Add("--facebook-oauth-scopes {value}", FacebookOauthScopes)
               .Add("--google-client-id {value}", GoogleClientId)
-              .Add("--google-client-secret {value}", GoogleClientSecret)
+              .Add("--google-client-secret {value}", GoogleClientSecret, secret: true)
               .Add("--google-oauth-scopes {value}", GoogleOauthScopes)
               .Add("--microsoft-account-client-id {value}", MicrosoftAccountClientId)
-              .Add("--microsoft-account-client-secret {value}", MicrosoftAccountClientSecret)
+              .Add("--microsoft-account-client-secret {value}", MicrosoftAccountClientSecret, secret: true)
               .Add("--microsoft-account-oauth-scopes {value}", MicrosoftAccountOauthScopes)
               .Add("--twitter-consumer-key {value}", TwitterConsumerKey)
-              .Add("--twitter-consumer-secret {value}", TwitterConsumerSecret)
+              .Add("--twitter-consumer-secret {value}", TwitterConsumerSecret, secret: true)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2517,7 +2517,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--docker-custom-image-name {value}", DockerCustomImageName)
-              .Add("--docker-registry-server-password {value}", DockerRegistryServerPassword)
+              .Add("--docker-registry-server-password {value}", DockerRegistryServerPassword, secret: true)
               .Add("--docker-registry-server-url {value}", DockerRegistryServerUrl)
               .Add("--docker-registry-server-user {value}", DockerRegistryServerUser)
               .Add("--enable-app-service-storage", EnableAppServiceStorage)
@@ -2940,7 +2940,7 @@ namespace Nuke.Azure
             arguments
               .Add("webapp config ssl upload")
               .Add("--certificate-file {value}", CertificateFile)
-              .Add("--certificate-password {value}", CertificatePassword)
+              .Add("--certificate-password {value}", CertificatePassword, secret: true)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
@@ -3328,7 +3328,7 @@ namespace Nuke.Azure
               .Add("--cd-app-type {value}", CdAppType)
               .Add("--cd-project-url {value}", CdProjectUrl)
               .Add("--nodejs-task-runner {value}", NodejsTaskRunner)
-              .Add("--private-repo-password {value}", PrivateRepoPassword)
+              .Add("--private-repo-password {value}", PrivateRepoPassword, secret: true)
               .Add("--private-repo-username {value}", PrivateRepoUsername)
               .Add("--python-framework {value}", PythonFramework)
               .Add("--python-version {value}", PythonVersion)
@@ -3614,7 +3614,7 @@ namespace Nuke.Azure
             arguments
               .Add("webapp deployment user set")
               .Add("--user-name {value}", UserName)
-              .Add("--password {value}", Password)
+              .Add("--password {value}", Password, secret: true)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)

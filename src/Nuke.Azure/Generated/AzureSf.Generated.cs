@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0 [CommitSha: 3eaf2b72].
+// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureSf.json.
 
 using JetBrains.Annotations;
@@ -28,11 +28,11 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureSf executable.</p></summary>
         public static string AzureSfPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage and administer Azure Service Fabric clusters.</p></summary>
-        public static IEnumerable<string> AzureSf(string arguments, string workingDirectory = null, ProcessSettings processSettings = null)
+        public static IEnumerable<string> AzureSf(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureSfPath, arguments, workingDirectory, processSettings?.EnvironmentVariables, processSettings?.ExecutionTimeout, processSettings?.RedirectOutput ?? true);
+            var process = ProcessTasks.StartProcess(AzureSfPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
             process.AssertZeroExitCode();
-            return process.Output.Select(x => x.Text);
+            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
         }
         static partial void PreProcess(AzureSfSettings toolSettings);
         static partial void PostProcess(AzureSfSettings toolSettings);
@@ -358,17 +358,17 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--certificate-file {value}", CertificateFile)
               .Add("--certificate-output-folder {value}", CertificateOutputFolder)
-              .Add("--certificate-password {value}", CertificatePassword)
+              .Add("--certificate-password {value}", CertificatePassword, secret: true)
               .Add("--certificate-subject-name {value}", CertificateSubjectName)
               .Add("--cluster-name {value}", ClusterName)
               .Add("--cluster-size {value}", ClusterSize)
               .Add("--os {value}", Os)
               .Add("--parameter-file {value}", ParameterFile)
-              .Add("--secret-identifier {value}", SecretIdentifier)
+              .Add("--secret-identifier {value}", SecretIdentifier, secret: true)
               .Add("--template-file {value}", TemplateFile)
               .Add("--vault-name {value}", VaultName)
               .Add("--vault-resource-group {value}", VaultResourceGroup)
-              .Add("--vm-password {value}", VmPassword)
+              .Add("--vm-password {value}", VmPassword, secret: true)
               .Add("--vm-sku {value}", VmSku)
               .Add("--vm-user-name {value}", VmUserName)
               .Add("--debug {value}", Debug)
@@ -498,9 +498,9 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--certificate-file {value}", CertificateFile)
               .Add("--certificate-output-folder {value}", CertificateOutputFolder)
-              .Add("--certificate-password {value}", CertificatePassword)
+              .Add("--certificate-password {value}", CertificatePassword, secret: true)
               .Add("--certificate-subject-name {value}", CertificateSubjectName)
-              .Add("--secret-identifier {value}", SecretIdentifier)
+              .Add("--secret-identifier {value}", SecretIdentifier, secret: true)
               .Add("--vault-name {value}", VaultName)
               .Add("--vault-resource-group {value}", VaultResourceGroup)
               .Add("--debug {value}", Debug)
@@ -557,9 +557,9 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--certificate-file {value}", CertificateFile)
               .Add("--certificate-output-folder {value}", CertificateOutputFolder)
-              .Add("--certificate-password {value}", CertificatePassword)
+              .Add("--certificate-password {value}", CertificatePassword, secret: true)
               .Add("--certificate-subject-name {value}", CertificateSubjectName)
-              .Add("--secret-identifier {value}", SecretIdentifier)
+              .Add("--secret-identifier {value}", SecretIdentifier, secret: true)
               .Add("--vault-name {value}", VaultName)
               .Add("--vault-resource-group {value}", VaultResourceGroup)
               .Add("--debug {value}", Debug)
@@ -811,7 +811,7 @@ namespace Nuke.Azure
               .Add("--cluster-name {value}", ClusterName)
               .Add("--node-type {value}", NodeType)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--vm-password {value}", VmPassword)
+              .Add("--vm-password {value}", VmPassword, secret: true)
               .Add("--vm-user-name {value}", VmUserName)
               .Add("--durability-level {value}", DurabilityLevel)
               .Add("--vm-sku {value}", VmSku)

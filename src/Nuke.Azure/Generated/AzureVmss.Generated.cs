@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0 [CommitSha: 3eaf2b72].
+// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureVmss.json.
 
 using JetBrains.Annotations;
@@ -28,11 +28,11 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureVmss executable.</p></summary>
         public static string AzureVmssPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).</p></summary>
-        public static IEnumerable<string> AzureVmss(string arguments, string workingDirectory = null, ProcessSettings processSettings = null)
+        public static IEnumerable<string> AzureVmss(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureVmssPath, arguments, workingDirectory, processSettings?.EnvironmentVariables, processSettings?.ExecutionTimeout, processSettings?.RedirectOutput ?? true);
+            var process = ProcessTasks.StartProcess(AzureVmssPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
             process.AssertZeroExitCode();
-            return process.Output.Select(x => x.Text);
+            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
         }
         static partial void PreProcess(AzureVmssCreateSettings toolSettings);
         static partial void PostProcess(AzureVmssCreateSettings toolSettings);
@@ -680,14 +680,14 @@ namespace Nuke.Azure
               .Add("--no-wait {value}", NoWait)
               .Add("--platform-fault-domain-count {value}", PlatformFaultDomainCount)
               .Add("--priority {value}", Priority)
-              .Add("--secrets {value}", Secrets)
+              .Add("--secrets {value}", Secrets, secret: true)
               .Add("--single-placement-group", SinglePlacementGroup)
               .Add("--tags {value}", Tags)
               .Add("--upgrade-policy-mode {value}", UpgradePolicyMode)
               .Add("--validate {value}", Validate)
               .Add("--vm-sku {value}", VmSku)
               .Add("--zones {value}", Zones, separator: ' ')
-              .Add("--admin-password {value}", AdminPassword)
+              .Add("--admin-password {value}", AdminPassword, secret: true)
               .Add("--admin-username {value}", AdminUsername)
               .Add("--authentication-type {value}", AuthenticationType)
               .Add("--generate-ssh-keys {value}", GenerateSshKeys)

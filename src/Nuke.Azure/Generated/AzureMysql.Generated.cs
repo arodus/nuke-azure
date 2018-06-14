@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0 [CommitSha: 3eaf2b72].
+// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureMysql.json.
 
 using JetBrains.Annotations;
@@ -28,11 +28,11 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureMysql executable.</p></summary>
         public static string AzureMysqlPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage Azure Database for MySQL servers.</p></summary>
-        public static IEnumerable<string> AzureMysql(string arguments, string workingDirectory = null, ProcessSettings processSettings = null)
+        public static IEnumerable<string> AzureMysql(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureMysqlPath, arguments, workingDirectory, processSettings?.EnvironmentVariables, processSettings?.ExecutionTimeout, processSettings?.RedirectOutput ?? true);
+            var process = ProcessTasks.StartProcess(AzureMysqlPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
             process.AssertZeroExitCode();
-            return process.Output.Select(x => x.Text);
+            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
         }
         static partial void PreProcess(AzureMysqlSettings toolSettings);
         static partial void PostProcess(AzureMysqlSettings toolSettings);
@@ -637,7 +637,7 @@ namespace Nuke.Azure
               .Add("--tags {value}", Tags)
               .Add("--version {value}", Version)
               .Add("--admin-user {value}", AdminUser)
-              .Add("--admin-password {value}", AdminPassword)
+              .Add("--admin-password {value}", AdminPassword, secret: true)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -911,7 +911,7 @@ namespace Nuke.Azure
               .Add("mysql server update")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--admin-password {value}", AdminPassword)
+              .Add("--admin-password {value}", AdminPassword, secret: true)
               .Add("--backup-retention {value}", BackupRetention)
               .Add("--ssl-enforcement {value}", SslEnforcement)
               .Add("--storage-size {value}", StorageSize)

@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0 [CommitSha: 3eaf2b72].
+// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureFunctionapp.json.
 
 using JetBrains.Annotations;
@@ -28,11 +28,11 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureFunctionapp executable.</p></summary>
         public static string AzureFunctionappPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage function apps.</p></summary>
-        public static IEnumerable<string> AzureFunctionapp(string arguments, string workingDirectory = null, ProcessSettings processSettings = null)
+        public static IEnumerable<string> AzureFunctionapp(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureFunctionappPath, arguments, workingDirectory, processSettings?.EnvironmentVariables, processSettings?.ExecutionTimeout, processSettings?.RedirectOutput ?? true);
+            var process = ProcessTasks.StartProcess(AzureFunctionappPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
             process.AssertZeroExitCode();
-            return process.Output.Select(x => x.Text);
+            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
         }
         static partial void PreProcess(AzureFunctionappCreateSettings toolSettings);
         static partial void PostProcess(AzureFunctionappCreateSettings toolSettings);
@@ -1398,7 +1398,7 @@ namespace Nuke.Azure
             arguments
               .Add("functionapp config ssl upload")
               .Add("--certificate-file {value}", CertificateFile)
-              .Add("--certificate-password {value}", CertificatePassword)
+              .Add("--certificate-password {value}", CertificatePassword, secret: true)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
@@ -1481,7 +1481,7 @@ namespace Nuke.Azure
               .Add("--cd-app-type {value}", CdAppType)
               .Add("--cd-project-url {value}", CdProjectUrl)
               .Add("--nodejs-task-runner {value}", NodejsTaskRunner)
-              .Add("--private-repo-password {value}", PrivateRepoPassword)
+              .Add("--private-repo-password {value}", PrivateRepoPassword, secret: true)
               .Add("--private-repo-username {value}", PrivateRepoUsername)
               .Add("--python-framework {value}", PythonFramework)
               .Add("--python-version {value}", PythonVersion)
@@ -1752,7 +1752,7 @@ namespace Nuke.Azure
             arguments
               .Add("functionapp deployment user set")
               .Add("--user-name {value}", UserName)
-              .Add("--password {value}", Password)
+              .Add("--password {value}", Password, secret: true)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)

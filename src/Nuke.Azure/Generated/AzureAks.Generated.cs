@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0 [CommitSha: 3eaf2b72].
+// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureAks.json.
 
 using JetBrains.Annotations;
@@ -27,16 +27,16 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureAks executable.</p></summary>
         public static string AzureAksPath => ToolPathResolver.GetPathExecutable("az");
-        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p></summary>
-        public static IEnumerable<string> AzureAks(string arguments, string workingDirectory = null, ProcessSettings processSettings = null)
+        /// <summary><p>Manage Azure Kubernetes Services.</p></summary>
+        public static IEnumerable<string> AzureAks(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureAksPath, arguments, workingDirectory, processSettings?.EnvironmentVariables, processSettings?.ExecutionTimeout, processSettings?.RedirectOutput ?? true);
+            var process = ProcessTasks.StartProcess(AzureAksPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
             process.AssertZeroExitCode();
-            return process.Output.Select(x => x.Text);
+            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
         }
         static partial void PreProcess(AzureAksBrowseSettings toolSettings);
         static partial void PostProcess(AzureAksBrowseSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksBrowse(Configure<AzureAksBrowseSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksBrowseSettings());
@@ -47,7 +47,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAksCreateSettings toolSettings);
         static partial void PostProcess(AzureAksCreateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksCreate(Configure<AzureAksCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksCreateSettings());
@@ -58,7 +58,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAksDeleteSettings toolSettings);
         static partial void PostProcess(AzureAksDeleteSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksDelete(Configure<AzureAksDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksDeleteSettings());
@@ -69,7 +69,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAksGetCredentialsSettings toolSettings);
         static partial void PostProcess(AzureAksGetCredentialsSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksGetCredentials(Configure<AzureAksGetCredentialsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksGetCredentialsSettings());
@@ -80,7 +80,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAksGetUpgradesSettings toolSettings);
         static partial void PostProcess(AzureAksGetUpgradesSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksGetUpgrades(Configure<AzureAksGetUpgradesSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksGetUpgradesSettings());
@@ -91,7 +91,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAksGetVersionsSettings toolSettings);
         static partial void PostProcess(AzureAksGetVersionsSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksGetVersions(Configure<AzureAksGetVersionsSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksGetVersionsSettings());
@@ -102,7 +102,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAksInstallCliSettings toolSettings);
         static partial void PostProcess(AzureAksInstallCliSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksInstallCli(Configure<AzureAksInstallCliSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksInstallCliSettings());
@@ -113,7 +113,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAksInstallConnectorSettings toolSettings);
         static partial void PostProcess(AzureAksInstallConnectorSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksInstallConnector(Configure<AzureAksInstallConnectorSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksInstallConnectorSettings());
@@ -124,7 +124,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAksListSettings toolSettings);
         static partial void PostProcess(AzureAksListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksList(Configure<AzureAksListSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksListSettings());
@@ -135,7 +135,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAksRemoveConnectorSettings toolSettings);
         static partial void PostProcess(AzureAksRemoveConnectorSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksRemoveConnector(Configure<AzureAksRemoveConnectorSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksRemoveConnectorSettings());
@@ -146,7 +146,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAksRemoveDevSpacesSettings toolSettings);
         static partial void PostProcess(AzureAksRemoveDevSpacesSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksRemoveDevSpaces(Configure<AzureAksRemoveDevSpacesSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksRemoveDevSpacesSettings());
@@ -157,7 +157,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAksScaleSettings toolSettings);
         static partial void PostProcess(AzureAksScaleSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksScale(Configure<AzureAksScaleSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksScaleSettings());
@@ -168,7 +168,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAksShowSettings toolSettings);
         static partial void PostProcess(AzureAksShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksShow(Configure<AzureAksShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksShowSettings());
@@ -179,7 +179,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAksUpgradeSettings toolSettings);
         static partial void PostProcess(AzureAksUpgradeSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksUpgrade(Configure<AzureAksUpgradeSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksUpgradeSettings());
@@ -190,7 +190,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAksUpgradeConnectorSettings toolSettings);
         static partial void PostProcess(AzureAksUpgradeConnectorSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksUpgradeConnector(Configure<AzureAksUpgradeConnectorSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksUpgradeConnectorSettings());
@@ -201,7 +201,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAksUseDevSpacesSettings toolSettings);
         static partial void PostProcess(AzureAksUseDevSpacesSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksUseDevSpaces(Configure<AzureAksUseDevSpacesSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksUseDevSpacesSettings());
@@ -212,7 +212,7 @@ namespace Nuke.Azure
         }
         static partial void PreProcess(AzureAksWaitSettings toolSettings);
         static partial void PostProcess(AzureAksWaitSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
+        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
         public static void AzureAksWait(Configure<AzureAksWaitSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksWaitSettings());
@@ -276,18 +276,41 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>(PREVIEW) The ID of an Azure Active Directory client application of type "Native". This application is for user login via kubectl.</p></summary>
+        public virtual string AadClientAppId { get; internal set; }
+        /// <summary><p>(PREVIEW) The ID of an Azure Active Directory server application of type "Web app/API". This application represents the managed cluster's apiserver (Server application).</p></summary>
+        public virtual string AadServerAppId { get; internal set; }
+        /// <summary><p>(PREVIEW) The secret of an Azure Active Directory server application.</p></summary>
+        public virtual string AadServerAppSecret { get; internal set; }
+        /// <summary><p>(PREVIEW) The ID of an Azure Active Directory tenant.</p></summary>
+        public virtual string AadTenantId { get; internal set; }
         /// <summary><p>User account to create on node VMs for SSH access.</p></summary>
         public virtual string AdminUsername { get; internal set; }
         /// <summary><p>Secret associated with the service principal. This argument is required if `--service-principal` is specified.</p></summary>
         public virtual string ClientSecret { get; internal set; }
         /// <summary><p>Prefix for hostnames that are created. If not specified, generate a hostname using the managed cluster and resource group names.</p></summary>
         public virtual string DnsNamePrefix { get; internal set; }
+        /// <summary><p>An IP address assigned to the Kubernetes DNS service.</p></summary>
+        public virtual string DnsServiceIp { get; internal set; }
+        /// <summary><p>An IP address and netmask assigned to the Docker bridge.</p></summary>
+        public virtual string DockerBridgeAddress { get; internal set; }
+        /// <summary><p>Enable the Kubernetes addons in a comma-separated list.</p></summary>
+        public virtual IReadOnlyList<string> EnableAddons => EnableAddonsInternal.AsReadOnly();
+        internal List<string> EnableAddonsInternal { get; set; } = new List<string>();
+        /// <summary><p>Enable Kubernetes Role-Based Access Control.</p></summary>
+        public virtual string EnableRbac { get; internal set; }
         /// <summary><p>Generate SSH public and private key files if missing.</p></summary>
         public virtual string GenerateSshKeys { get; internal set; }
         /// <summary><p>Version of Kubernetes to use for creating the cluster, such as "1.7.12" or "1.8.7".</p></summary>
         public virtual string KubernetesVersion { get; internal set; }
         /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
+        /// <summary><p>The maximum number of pods deployable to a node.</p></summary>
+        public virtual string MaxPods { get; internal set; }
+        /// <summary><p>The Kubernetes network plugin to use.</p></summary>
+        public virtual string NetworkPlugin { get; internal set; }
+        /// <summary><p>Do not use or create a local SSH key.</p></summary>
+        public virtual string NoSshKey { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual string NoWait { get; internal set; }
         /// <summary><p>Number of nodes in the Kubernetes node pool. After creating a cluster, you can change the size of its node pool with `az aks scale`.</p></summary>
@@ -296,12 +319,20 @@ namespace Nuke.Azure
         public virtual string NodeOsdiskSize { get; internal set; }
         /// <summary><p>Size of Virtual Machines to create as Kubernetes nodes.</p></summary>
         public virtual string NodeVmSize { get; internal set; }
+        /// <summary><p>A CIDR notation IP range from which to assign pod IPs when kubenet is used.</p></summary>
+        public virtual string PodCidr { get; internal set; }
+        /// <summary><p>A CIDR notation IP range from which to assign service cluster IPs.</p></summary>
+        public virtual string ServiceCidr { get; internal set; }
         /// <summary><p>Service principal used for authentication to Azure APIs.</p></summary>
         public virtual bool? ServicePrincipal { get; internal set; }
         /// <summary><p>Public key path or key contents to install on node VMs for SSH access. For example, 'ssh-rsa AAAAB...snip...UcyupgH azureuser@linuxvm'.</p></summary>
         public virtual string SshKeyValue { get; internal set; }
         /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
+        /// <summary><p>The ID of a subnet in an existing VNet into which to deploy the cluster.</p></summary>
+        public virtual string VnetSubnetId { get; internal set; }
+        /// <summary><p>The resource ID of an existing Log Analytics Workspace to use for storing monitoring data.</p></summary>
+        public virtual string WorkspaceResourceId { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -318,19 +349,34 @@ namespace Nuke.Azure
               .Add("aks create")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--aad-client-app-id {value}", AadClientAppId)
+              .Add("--aad-server-app-id {value}", AadServerAppId)
+              .Add("--aad-server-app-secret {value}", AadServerAppSecret, secret: true)
+              .Add("--aad-tenant-id {value}", AadTenantId)
               .Add("--admin-username {value}", AdminUsername)
-              .Add("--client-secret {value}", ClientSecret)
+              .Add("--client-secret {value}", ClientSecret, secret: true)
               .Add("--dns-name-prefix {value}", DnsNamePrefix)
+              .Add("--dns-service-ip {value}", DnsServiceIp)
+              .Add("--docker-bridge-address {value}", DockerBridgeAddress)
+              .Add("--enable-addons {value}", EnableAddons, separator: ',')
+              .Add("--enable-rbac {value}", EnableRbac)
               .Add("--generate-ssh-keys {value}", GenerateSshKeys)
               .Add("--kubernetes-version {value}", KubernetesVersion)
               .Add("--location {value}", Location)
+              .Add("--max-pods {value}", MaxPods)
+              .Add("--network-plugin {value}", NetworkPlugin)
+              .Add("--no-ssh-key {value}", NoSshKey)
               .Add("--no-wait {value}", NoWait)
               .Add("--node-count {value}", NodeCount)
               .Add("--node-osdisk-size {value}", NodeOsdiskSize)
               .Add("--node-vm-size {value}", NodeVmSize)
+              .Add("--pod-cidr {value}", PodCidr)
+              .Add("--service-cidr {value}", ServiceCidr)
               .Add("--service-principal", ServicePrincipal)
               .Add("--ssh-key-value {value}", SshKeyValue)
               .Add("--tags {value}", Tags)
+              .Add("--vnet-subnet-id {value}", VnetSubnetId)
+              .Add("--workspace-resource-id {value}", WorkspaceResourceId)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -587,7 +633,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--aci-resource-group {value}", AciResourceGroup)
               .Add("--chart-url {value}", ChartUrl)
-              .Add("--client-secret {value}", ClientSecret)
+              .Add("--client-secret {value}", ClientSecret, secret: true)
               .Add("--image-tag {value}", ImageTag)
               .Add("--location {value}", Location)
               .Add("--os-type {value}", OsType)
@@ -901,7 +947,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--aci-resource-group {value}", AciResourceGroup)
               .Add("--chart-url {value}", ChartUrl)
-              .Add("--client-secret {value}", ClientSecret)
+              .Add("--client-secret {value}", ClientSecret, secret: true)
               .Add("--image-tag {value}", ImageTag)
               .Add("--location {value}", Location)
               .Add("--os-type {value}", OsType)
@@ -1212,6 +1258,78 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AadClientAppId
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.AadClientAppId"/>.</em></p><p>(PREVIEW) The ID of an Azure Active Directory client application of type "Native". This application is for user login via kubectl.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings SetAadClientAppId(this AzureAksCreateSettings toolSettings, string aadClientAppId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AadClientAppId = aadClientAppId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.AadClientAppId"/>.</em></p><p>(PREVIEW) The ID of an Azure Active Directory client application of type "Native". This application is for user login via kubectl.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings ResetAadClientAppId(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AadClientAppId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AadServerAppId
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.AadServerAppId"/>.</em></p><p>(PREVIEW) The ID of an Azure Active Directory server application of type "Web app/API". This application represents the managed cluster's apiserver (Server application).</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings SetAadServerAppId(this AzureAksCreateSettings toolSettings, string aadServerAppId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AadServerAppId = aadServerAppId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.AadServerAppId"/>.</em></p><p>(PREVIEW) The ID of an Azure Active Directory server application of type "Web app/API". This application represents the managed cluster's apiserver (Server application).</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings ResetAadServerAppId(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AadServerAppId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AadServerAppSecret
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.AadServerAppSecret"/>.</em></p><p>(PREVIEW) The secret of an Azure Active Directory server application.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings SetAadServerAppSecret(this AzureAksCreateSettings toolSettings, string aadServerAppSecret)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AadServerAppSecret = aadServerAppSecret;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.AadServerAppSecret"/>.</em></p><p>(PREVIEW) The secret of an Azure Active Directory server application.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings ResetAadServerAppSecret(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AadServerAppSecret = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AadTenantId
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.AadTenantId"/>.</em></p><p>(PREVIEW) The ID of an Azure Active Directory tenant.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings SetAadTenantId(this AzureAksCreateSettings toolSettings, string aadTenantId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AadTenantId = aadTenantId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.AadTenantId"/>.</em></p><p>(PREVIEW) The ID of an Azure Active Directory tenant.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings ResetAadTenantId(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AadTenantId = null;
+            return toolSettings;
+        }
+        #endregion
         #region AdminUsername
         /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.AdminUsername"/>.</em></p><p>User account to create on node VMs for SSH access.</p></summary>
         [Pure]
@@ -1266,6 +1384,120 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region DnsServiceIp
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.DnsServiceIp"/>.</em></p><p>An IP address assigned to the Kubernetes DNS service.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings SetDnsServiceIp(this AzureAksCreateSettings toolSettings, string dnsServiceIp)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DnsServiceIp = dnsServiceIp;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.DnsServiceIp"/>.</em></p><p>An IP address assigned to the Kubernetes DNS service.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings ResetDnsServiceIp(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DnsServiceIp = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DockerBridgeAddress
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.DockerBridgeAddress"/>.</em></p><p>An IP address and netmask assigned to the Docker bridge.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings SetDockerBridgeAddress(this AzureAksCreateSettings toolSettings, string dockerBridgeAddress)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DockerBridgeAddress = dockerBridgeAddress;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.DockerBridgeAddress"/>.</em></p><p>An IP address and netmask assigned to the Docker bridge.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings ResetDockerBridgeAddress(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DockerBridgeAddress = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EnableAddons
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.EnableAddons"/> to a new list.</em></p><p>Enable the Kubernetes addons in a comma-separated list.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings SetEnableAddons(this AzureAksCreateSettings toolSettings, params string[] enableAddons)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableAddonsInternal = enableAddons.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.EnableAddons"/> to a new list.</em></p><p>Enable the Kubernetes addons in a comma-separated list.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings SetEnableAddons(this AzureAksCreateSettings toolSettings, IEnumerable<string> enableAddons)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableAddonsInternal = enableAddons.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureAksCreateSettings.EnableAddons"/>.</em></p><p>Enable the Kubernetes addons in a comma-separated list.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings AddEnableAddons(this AzureAksCreateSettings toolSettings, params string[] enableAddons)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableAddonsInternal.AddRange(enableAddons);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureAksCreateSettings.EnableAddons"/>.</em></p><p>Enable the Kubernetes addons in a comma-separated list.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings AddEnableAddons(this AzureAksCreateSettings toolSettings, IEnumerable<string> enableAddons)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableAddonsInternal.AddRange(enableAddons);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureAksCreateSettings.EnableAddons"/>.</em></p><p>Enable the Kubernetes addons in a comma-separated list.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings ClearEnableAddons(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableAddonsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureAksCreateSettings.EnableAddons"/>.</em></p><p>Enable the Kubernetes addons in a comma-separated list.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings RemoveEnableAddons(this AzureAksCreateSettings toolSettings, params string[] enableAddons)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(enableAddons);
+            toolSettings.EnableAddonsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureAksCreateSettings.EnableAddons"/>.</em></p><p>Enable the Kubernetes addons in a comma-separated list.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings RemoveEnableAddons(this AzureAksCreateSettings toolSettings, IEnumerable<string> enableAddons)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(enableAddons);
+            toolSettings.EnableAddonsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region EnableRbac
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.EnableRbac"/>.</em></p><p>Enable Kubernetes Role-Based Access Control.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings SetEnableRbac(this AzureAksCreateSettings toolSettings, string enableRbac)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableRbac = enableRbac;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.EnableRbac"/>.</em></p><p>Enable Kubernetes Role-Based Access Control.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings ResetEnableRbac(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableRbac = null;
+            return toolSettings;
+        }
+        #endregion
         #region GenerateSshKeys
         /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.GenerateSshKeys"/>.</em></p><p>Generate SSH public and private key files if missing.</p></summary>
         [Pure]
@@ -1317,6 +1549,60 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region MaxPods
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.MaxPods"/>.</em></p><p>The maximum number of pods deployable to a node.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings SetMaxPods(this AzureAksCreateSettings toolSettings, string maxPods)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MaxPods = maxPods;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.MaxPods"/>.</em></p><p>The maximum number of pods deployable to a node.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings ResetMaxPods(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MaxPods = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NetworkPlugin
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.NetworkPlugin"/>.</em></p><p>The Kubernetes network plugin to use.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings SetNetworkPlugin(this AzureAksCreateSettings toolSettings, string networkPlugin)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NetworkPlugin = networkPlugin;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.NetworkPlugin"/>.</em></p><p>The Kubernetes network plugin to use.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings ResetNetworkPlugin(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NetworkPlugin = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NoSshKey
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.NoSshKey"/>.</em></p><p>Do not use or create a local SSH key.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings SetNoSshKey(this AzureAksCreateSettings toolSettings, string noSshKey)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoSshKey = noSshKey;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.NoSshKey"/>.</em></p><p>Do not use or create a local SSH key.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings ResetNoSshKey(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoSshKey = null;
             return toolSettings;
         }
         #endregion
@@ -1389,6 +1675,42 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NodeVmSize = null;
+            return toolSettings;
+        }
+        #endregion
+        #region PodCidr
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.PodCidr"/>.</em></p><p>A CIDR notation IP range from which to assign pod IPs when kubenet is used.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings SetPodCidr(this AzureAksCreateSettings toolSettings, string podCidr)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PodCidr = podCidr;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.PodCidr"/>.</em></p><p>A CIDR notation IP range from which to assign pod IPs when kubenet is used.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings ResetPodCidr(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PodCidr = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServiceCidr
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.ServiceCidr"/>.</em></p><p>A CIDR notation IP range from which to assign service cluster IPs.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings SetServiceCidr(this AzureAksCreateSettings toolSettings, string serviceCidr)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServiceCidr = serviceCidr;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.ServiceCidr"/>.</em></p><p>A CIDR notation IP range from which to assign service cluster IPs.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings ResetServiceCidr(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServiceCidr = null;
             return toolSettings;
         }
         #endregion
@@ -1467,6 +1789,42 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VnetSubnetId
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.VnetSubnetId"/>.</em></p><p>The ID of a subnet in an existing VNet into which to deploy the cluster.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings SetVnetSubnetId(this AzureAksCreateSettings toolSettings, string vnetSubnetId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VnetSubnetId = vnetSubnetId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.VnetSubnetId"/>.</em></p><p>The ID of a subnet in an existing VNet into which to deploy the cluster.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings ResetVnetSubnetId(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VnetSubnetId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region WorkspaceResourceId
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.WorkspaceResourceId"/>.</em></p><p>The resource ID of an existing Log Analytics Workspace to use for storing monitoring data.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings SetWorkspaceResourceId(this AzureAksCreateSettings toolSettings, string workspaceResourceId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WorkspaceResourceId = workspaceResourceId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.WorkspaceResourceId"/>.</em></p><p>The resource ID of an existing Log Analytics Workspace to use for storing monitoring data.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings ResetWorkspaceResourceId(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WorkspaceResourceId = null;
             return toolSettings;
         }
         #endregion

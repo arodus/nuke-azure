@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0 [CommitSha: 3eaf2b72].
+// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureVm.json.
 
 using JetBrains.Annotations;
@@ -28,11 +28,11 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureVm executable.</p></summary>
         public static string AzureVmPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Provision Linux or Windows virtual machines.</p></summary>
-        public static IEnumerable<string> AzureVm(string arguments, string workingDirectory = null, ProcessSettings processSettings = null)
+        public static IEnumerable<string> AzureVm(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureVmPath, arguments, workingDirectory, processSettings?.EnvironmentVariables, processSettings?.ExecutionTimeout, processSettings?.RedirectOutput ?? true);
+            var process = ProcessTasks.StartProcess(AzureVmPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
             process.AssertZeroExitCode();
-            return process.Output.Select(x => x.Text);
+            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
         }
         static partial void PreProcess(AzureVmCaptureSettings toolSettings);
         static partial void PostProcess(AzureVmCaptureSettings toolSettings);
@@ -1086,12 +1086,12 @@ namespace Nuke.Azure
               .Add("--license-type {value}", LicenseType)
               .Add("--location {value}", Location)
               .Add("--no-wait {value}", NoWait)
-              .Add("--secrets {value}", Secrets)
+              .Add("--secrets {value}", Secrets, secret: true)
               .Add("--size {value}", Size)
               .Add("--tags {value}", Tags)
               .Add("--validate {value}", Validate)
               .Add("--zone {value}", Zone)
-              .Add("--admin-password {value}", AdminPassword)
+              .Add("--admin-password {value}", AdminPassword, secret: true)
               .Add("--admin-username {value}", AdminUsername)
               .Add("--authentication-type {value}", AuthenticationType)
               .Add("--generate-ssh-keys {value}", GenerateSshKeys)
@@ -2669,7 +2669,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--aad-client-cert-thumbprint {value}", AadClientCertThumbprint)
               .Add("--aad-client-id {value}", AadClientId)
-              .Add("--aad-client-secret {value}", AadClientSecret)
+              .Add("--aad-client-secret {value}", AadClientSecret, secret: true)
               .Add("--encrypt-format-all {value}", EncryptFormatAll)
               .Add("--key-encryption-algorithm {value}", KeyEncryptionAlgorithm)
               .Add("--key-encryption-key {value}", KeyEncryptionKey)
@@ -4046,7 +4046,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--username {value}", Username)
               .Add("--no-wait {value}", NoWait)
-              .Add("--password {value}", Password)
+              .Add("--password {value}", Password, secret: true)
               .Add("--ssh-key-value {value}", SshKeyValue)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)

@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0 [CommitSha: 3eaf2b72].
+// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureAcs.json.
 
 using JetBrains.Annotations;
@@ -28,11 +28,11 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureAcs executable.</p></summary>
         public static string AzureAcsPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage Azure Container Services.</p></summary>
-        public static IEnumerable<string> AzureAcs(string arguments, string workingDirectory = null, ProcessSettings processSettings = null)
+        public static IEnumerable<string> AzureAcs(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureAcsPath, arguments, workingDirectory, processSettings?.EnvironmentVariables, processSettings?.ExecutionTimeout, processSettings?.RedirectOutput ?? true);
+            var process = ProcessTasks.StartProcess(AzureAcsPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
             process.AssertZeroExitCode();
-            return process.Output.Select(x => x.Text);
+            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
         }
         static partial void PreProcess(AzureAcsBrowseSettings toolSettings);
         static partial void PostProcess(AzureAcsBrowseSettings toolSettings);
@@ -309,7 +309,7 @@ namespace Nuke.Azure
               .Add("acs create")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--admin-password {value}", AdminPassword)
+              .Add("--admin-password {value}", AdminPassword, secret: true)
               .Add("--admin-username {value}", AdminUsername)
               .Add("--agent-count {value}", AgentCount)
               .Add("--agent-osdisk-size {value}", AgentOsdiskSize)
@@ -319,7 +319,7 @@ namespace Nuke.Azure
               .Add("--agent-vm-size {value}", AgentVmSize)
               .Add("--agent-vnet-subnet-id {value}", AgentVnetSubnetId)
               .Add("--api-version {value}", ApiVersion)
-              .Add("--client-secret {value}", ClientSecret)
+              .Add("--client-secret {value}", ClientSecret, secret: true)
               .Add("--dns-prefix {value}", DnsPrefix)
               .Add("--generate-ssh-keys {value}", GenerateSshKeys)
               .Add("--location {value}", Location)

@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0 [CommitSha: 3eaf2b72].
+// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureBatch.json.
 
 using JetBrains.Annotations;
@@ -28,11 +28,11 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureBatch executable.</p></summary>
         public static string AzureBatchPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage Azure Batch.</p></summary>
-        public static IEnumerable<string> AzureBatch(string arguments, string workingDirectory = null, ProcessSettings processSettings = null)
+        public static IEnumerable<string> AzureBatch(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureBatchPath, arguments, workingDirectory, processSettings?.EnvironmentVariables, processSettings?.ExecutionTimeout, processSettings?.RedirectOutput ?? true);
+            var process = ProcessTasks.StartProcess(AzureBatchPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
             process.AssertZeroExitCode();
-            return process.Output.Select(x => x.Text);
+            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
         }
         static partial void PreProcess(AzureBatchSettings toolSettings);
         static partial void PostProcess(AzureBatchSettings toolSettings);
@@ -1597,7 +1597,7 @@ namespace Nuke.Azure
               .Add("batch certificate create")
               .Add("--certificate-file {value}", CertificateFile)
               .Add("--thumbprint {value}", Thumbprint)
-              .Add("--password {value}", Password)
+              .Add("--password {value}", Password, secret: true)
               .Add("--account-endpoint {value}", AccountEndpoint)
               .Add("--account-key {value}", AccountKey)
               .Add("--account-name {value}", AccountName)
@@ -5311,7 +5311,7 @@ namespace Nuke.Azure
               .Add("--expiry-time {value}", ExpiryTime)
               .Add("--is-admin {value}", IsAdmin)
               .Add("--name {value}", Name)
-              .Add("--password {value}", Password)
+              .Add("--password {value}", Password, secret: true)
               .Add("--ssh-public-key {value}", SshPublicKey)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -5426,7 +5426,7 @@ namespace Nuke.Azure
               .Add("--account-key {value}", AccountKey)
               .Add("--account-name {value}", AccountName)
               .Add("--expiry-time {value}", ExpiryTime)
-              .Add("--password {value}", Password)
+              .Add("--password {value}", Password, secret: true)
               .Add("--ssh-public-key {value}", SshPublicKey)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)

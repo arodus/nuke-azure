@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0 [CommitSha: 3eaf2b72].
+// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureDla.json.
 
 using JetBrains.Annotations;
@@ -28,11 +28,11 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureDla executable.</p></summary>
         public static string AzureDlaPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>(PREVIEW) Manage Data Lake Analytics accounts, jobs, and catalogs.</p></summary>
-        public static IEnumerable<string> AzureDla(string arguments, string workingDirectory = null, ProcessSettings processSettings = null)
+        public static IEnumerable<string> AzureDla(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureDlaPath, arguments, workingDirectory, processSettings?.EnvironmentVariables, processSettings?.ExecutionTimeout, processSettings?.RedirectOutput ?? true);
+            var process = ProcessTasks.StartProcess(AzureDlaPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
             process.AssertZeroExitCode();
-            return process.Output.Select(x => x.Text);
+            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
         }
         static partial void PreProcess(AzureDlaSettings toolSettings);
         static partial void PostProcess(AzureDlaSettings toolSettings);
@@ -2276,7 +2276,7 @@ namespace Nuke.Azure
               .Add("--database-name {value}", DatabaseName)
               .Add("--uri {value}", Uri)
               .Add("--user-name {value}", UserName)
-              .Add("--password {value}", Password)
+              .Add("--password {value}", Password, secret: true)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2323,7 +2323,7 @@ namespace Nuke.Azure
               .Add("--credential-name {value}", CredentialName)
               .Add("--database-name {value}", DatabaseName)
               .Add("--cascade {value}", Cascade)
-              .Add("--password {value}", Password)
+              .Add("--password {value}", Password, secret: true)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2473,8 +2473,8 @@ namespace Nuke.Azure
               .Add("--database-name {value}", DatabaseName)
               .Add("--uri {value}", Uri)
               .Add("--user-name {value}", UserName)
-              .Add("--new-password {value}", NewPassword)
-              .Add("--password {value}", Password)
+              .Add("--new-password {value}", NewPassword, secret: true)
+              .Add("--password {value}", Password, secret: true)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)

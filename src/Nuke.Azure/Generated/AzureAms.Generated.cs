@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0 [CommitSha: 3eaf2b72].
+// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureAms.json.
 
 using JetBrains.Annotations;
@@ -28,11 +28,11 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureAms executable.</p></summary>
         public static string AzureAmsPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage Azure Media Services resources.</p></summary>
-        public static IEnumerable<string> AzureAms(string arguments, string workingDirectory = null, ProcessSettings processSettings = null)
+        public static IEnumerable<string> AzureAms(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureAmsPath, arguments, workingDirectory, processSettings?.EnvironmentVariables, processSettings?.ExecutionTimeout, processSettings?.RedirectOutput ?? true);
+            var process = ProcessTasks.StartProcess(AzureAmsPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
             process.AssertZeroExitCode();
-            return process.Output.Select(x => x.Text);
+            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
         }
         static partial void PreProcess(AzureAmsSettings toolSettings);
         static partial void PostProcess(AzureAmsSettings toolSettings);
@@ -1560,7 +1560,7 @@ namespace Nuke.Azure
               .Add("--account-name {value}", AccountName)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--name {value}", Name)
-              .Add("--password {value}", Password)
+              .Add("--password {value}", Password, secret: true)
               .Add("--role {value}", Role)
               .Add("--xml {value}", Xml)
               .Add("--years {value}", Years)
@@ -1613,7 +1613,7 @@ namespace Nuke.Azure
               .Add("--account-name {value}", AccountName)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--name {value}", Name)
-              .Add("--password {value}", Password)
+              .Add("--password {value}", Password, secret: true)
               .Add("--role {value}", Role)
               .Add("--xml {value}", Xml)
               .Add("--years {value}", Years)

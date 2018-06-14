@@ -6,12 +6,12 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/postgres.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/postgres/db.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/postgres/server-logs.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/postgres/server.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/postgres/server/configuration.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80189ff1/latest/docs-ref-autogen/postgres/server/firewall-rule.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/postgres.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/postgres/db.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/postgres/server-logs.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/postgres/server.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/postgres/server/configuration.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/postgres/server/firewall-rule.yml"
   ],
   "name": "AzurePostgres",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest",
@@ -279,6 +279,7 @@
             "name": "AdminPassword",
             "type": "string",
             "format": "--admin-password {value}",
+            "secret": true,
             "help": "The password of the administrator login."
           }
         ]
@@ -459,6 +460,7 @@
             "name": "AdminPassword",
             "type": "string",
             "format": "--admin-password {value}",
+            "secret": true,
             "help": "The password of the administrator login."
           },
           {

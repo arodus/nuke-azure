@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.0 [CommitSha: 3eaf2b72].
+// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureAcr.json.
 
 using JetBrains.Annotations;
@@ -28,11 +28,11 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureAcr executable.</p></summary>
         public static string AzureAcrPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage Azure Container Registries for private registries within Azure.</p></summary>
-        public static IEnumerable<string> AzureAcr(string arguments, string workingDirectory = null, ProcessSettings processSettings = null)
+        public static IEnumerable<string> AzureAcr(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureAcrPath, arguments, workingDirectory, processSettings?.EnvironmentVariables, processSettings?.ExecutionTimeout, processSettings?.RedirectOutput ?? true);
+            var process = ProcessTasks.StartProcess(AzureAcrPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
             process.AssertZeroExitCode();
-            return process.Output.Select(x => x.Text);
+            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
         }
         static partial void PreProcess(AzureAcrBuildSettings toolSettings);
         static partial void PostProcess(AzureAcrBuildSettings toolSettings);
@@ -512,7 +512,7 @@ namespace Nuke.Azure
               .Add("--no-logs {value}", NoLogs)
               .Add("--no-push", NoPush)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--secret-build-arg {value}", SecretBuildArg)
+              .Add("--secret-build-arg {value}", SecretBuildArg, secret: true)
               .Add("--timeout {value}", Timeout)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -766,7 +766,7 @@ namespace Nuke.Azure
             arguments
               .Add("acr login")
               .Add("--name {value}", Name)
-              .Add("--password {value}", Password)
+              .Add("--password {value}", Password, secret: true)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--username {value}", Username)
               .Add("--debug {value}", Debug)
@@ -990,7 +990,7 @@ namespace Nuke.Azure
               .Add("--no-push", NoPush)
               .Add("--os {value}", Os)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--secret-build-arg {value}", SecretBuildArg)
+              .Add("--secret-build-arg {value}", SecretBuildArg, secret: true)
               .Add("--status {value}", Status)
               .Add("--timeout {value}", Timeout)
               .Add("--debug {value}", Debug)
@@ -1375,7 +1375,7 @@ namespace Nuke.Azure
               .Add("--no-push", NoPush)
               .Add("--os {value}", Os)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--secret-build-arg {value}", SecretBuildArg)
+              .Add("--secret-build-arg {value}", SecretBuildArg, secret: true)
               .Add("--status {value}", Status)
               .Add("--timeout {value}", Timeout)
               .Add("--debug {value}", Debug)
@@ -1417,7 +1417,7 @@ namespace Nuke.Azure
             arguments
               .Add("acr credential renew")
               .Add("--name {value}", Name)
-              .Add("--password-name {value}", PasswordName)
+              .Add("--password-name {value}", PasswordName, secret: true)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -1725,7 +1725,7 @@ namespace Nuke.Azure
               .Add("acr repository delete")
               .Add("--name {value}", Name)
               .Add("--image {value}", Image)
-              .Add("--password {value}", Password)
+              .Add("--password {value}", Password, secret: true)
               .Add("--repository {value}", Repository)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--username {value}", Username)
@@ -1771,7 +1771,7 @@ namespace Nuke.Azure
             arguments
               .Add("acr repository list")
               .Add("--name {value}", Name)
-              .Add("--password {value}", Password)
+              .Add("--password {value}", Password, secret: true)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--username {value}", Username)
               .Add("--debug {value}", Debug)
@@ -1818,7 +1818,7 @@ namespace Nuke.Azure
               .Add("acr repository show-manifests")
               .Add("--name {value}", Name)
               .Add("--repository {value}", Repository)
-              .Add("--password {value}", Password)
+              .Add("--password {value}", Password, secret: true)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--username {value}", Username)
               .Add("--debug {value}", Debug)
@@ -1865,7 +1865,7 @@ namespace Nuke.Azure
               .Add("acr repository show-tags")
               .Add("--name {value}", Name)
               .Add("--repository {value}", Repository)
-              .Add("--password {value}", Password)
+              .Add("--password {value}", Password, secret: true)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--username {value}", Username)
               .Add("--debug {value}", Debug)
@@ -1912,7 +1912,7 @@ namespace Nuke.Azure
               .Add("acr repository untag")
               .Add("--image {value}", Image)
               .Add("--name {value}", Name)
-              .Add("--password {value}", Password)
+              .Add("--password {value}", Password, secret: true)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--username {value}", Username)
               .Add("--debug {value}", Debug)
