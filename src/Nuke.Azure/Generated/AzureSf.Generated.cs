@@ -100,28 +100,6 @@ namespace Nuke.Azure
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
-        static partial void PreProcess(AzureSfClusterCertificateAddSettings toolSettings);
-        static partial void PostProcess(AzureSfClusterCertificateAddSettings toolSettings);
-        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureSfClusterCertificateAdd(Configure<AzureSfClusterCertificateAddSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureSfClusterCertificateAddSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureSfClusterCertificateRemoveSettings toolSettings);
-        static partial void PostProcess(AzureSfClusterCertificateRemoveSettings toolSettings);
-        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureSfClusterCertificateRemove(Configure<AzureSfClusterCertificateRemoveSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureSfClusterCertificateRemoveSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
         static partial void PreProcess(AzureSfClusterClientCertificateAddSettings toolSettings);
         static partial void PostProcess(AzureSfClusterClientCertificateAddSettings toolSettings);
         /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p></summary>
@@ -144,23 +122,12 @@ namespace Nuke.Azure
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
-        static partial void PreProcess(AzureSfClusterDurabilityUpdateSettings toolSettings);
-        static partial void PostProcess(AzureSfClusterDurabilityUpdateSettings toolSettings);
+        static partial void PreProcess(AzureSfClusterUpgradeTypeSetSettings toolSettings);
+        static partial void PostProcess(AzureSfClusterUpgradeTypeSetSettings toolSettings);
         /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureSfClusterDurabilityUpdate(Configure<AzureSfClusterDurabilityUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static void AzureSfClusterUpgradeTypeSet(Configure<AzureSfClusterUpgradeTypeSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureSfClusterDurabilityUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureSfClusterNodeTypeAddSettings toolSettings);
-        static partial void PostProcess(AzureSfClusterNodeTypeAddSettings toolSettings);
-        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureSfClusterNodeTypeAdd(Configure<AzureSfClusterNodeTypeAddSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureSfClusterNodeTypeAddSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureSfClusterUpgradeTypeSetSettings());
             PreProcess(toolSettings);
             var process = ProcessTasks.StartProcess(toolSettings, processSettings);
             process.AssertZeroExitCode();
@@ -188,12 +155,23 @@ namespace Nuke.Azure
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
-        static partial void PreProcess(AzureSfClusterReliabilityUpdateSettings toolSettings);
-        static partial void PostProcess(AzureSfClusterReliabilityUpdateSettings toolSettings);
+        static partial void PreProcess(AzureSfClusterCertificateAddSettings toolSettings);
+        static partial void PostProcess(AzureSfClusterCertificateAddSettings toolSettings);
         /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureSfClusterReliabilityUpdate(Configure<AzureSfClusterReliabilityUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static void AzureSfClusterCertificateAdd(Configure<AzureSfClusterCertificateAddSettings> configurator = null, ProcessSettings processSettings = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureSfClusterReliabilityUpdateSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureSfClusterCertificateAddSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureSfClusterCertificateRemoveSettings toolSettings);
+        static partial void PostProcess(AzureSfClusterCertificateRemoveSettings toolSettings);
+        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureSfClusterCertificateRemove(Configure<AzureSfClusterCertificateRemoveSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureSfClusterCertificateRemoveSettings());
             PreProcess(toolSettings);
             var process = ProcessTasks.StartProcess(toolSettings, processSettings);
             process.AssertZeroExitCode();
@@ -221,12 +199,34 @@ namespace Nuke.Azure
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
-        static partial void PreProcess(AzureSfClusterUpgradeTypeSetSettings toolSettings);
-        static partial void PostProcess(AzureSfClusterUpgradeTypeSetSettings toolSettings);
+        static partial void PreProcess(AzureSfClusterReliabilityUpdateSettings toolSettings);
+        static partial void PostProcess(AzureSfClusterReliabilityUpdateSettings toolSettings);
         /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureSfClusterUpgradeTypeSet(Configure<AzureSfClusterUpgradeTypeSetSettings> configurator = null, ProcessSettings processSettings = null)
+        public static void AzureSfClusterReliabilityUpdate(Configure<AzureSfClusterReliabilityUpdateSettings> configurator = null, ProcessSettings processSettings = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureSfClusterUpgradeTypeSetSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureSfClusterReliabilityUpdateSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureSfClusterNodeTypeAddSettings toolSettings);
+        static partial void PostProcess(AzureSfClusterNodeTypeAddSettings toolSettings);
+        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureSfClusterNodeTypeAdd(Configure<AzureSfClusterNodeTypeAddSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureSfClusterNodeTypeAddSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureSfClusterDurabilityUpdateSettings toolSettings);
+        static partial void PostProcess(AzureSfClusterDurabilityUpdateSettings toolSettings);
+        /// <summary><p>Manage and administer Azure Service Fabric clusters.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureSfClusterDurabilityUpdate(Configure<AzureSfClusterDurabilityUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureSfClusterDurabilityUpdateSettings());
             PreProcess(toolSettings);
             var process = ProcessTasks.StartProcess(toolSettings, processSettings);
             process.AssertZeroExitCode();
@@ -248,7 +248,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -280,7 +280,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -346,7 +346,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -397,7 +397,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -434,7 +434,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -486,7 +486,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -503,106 +503,6 @@ namespace Nuke.Azure
               .Add("--secret-identifier {value}", SecretIdentifier, secret: true)
               .Add("--vault-name {value}", VaultName)
               .Add("--vault-resource-group {value}", VaultResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSfClusterCertificateAddSettings
-    /// <summary><p>Used within <see cref="AzureSfTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSfClusterCertificateAddSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureSf executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureSfTasks.AzureSfPath;
-        /// <summary><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
-        public virtual string ClusterName { get; internal set; }
-        /// <summary><p>The resource group name.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The existing certificate file path for the primary cluster certificate.</p></summary>
-        public virtual string CertificateFile { get; internal set; }
-        /// <summary><p>The folder of the new certificate file to be created.</p></summary>
-        public virtual string CertificateOutputFolder { get; internal set; }
-        /// <summary><p>The password of the certificate file.</p></summary>
-        public virtual string CertificatePassword { get; internal set; }
-        /// <summary><p>The subject name of the certificate to be created.</p></summary>
-        public virtual string CertificateSubjectName { get; internal set; }
-        /// <summary><p>The existing Azure key vault secret URL.</p></summary>
-        public virtual string SecretIdentifier { get; internal set; }
-        /// <summary><p>Azure key vault name, it not given it will be the cluster resource group name.</p></summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary><p>Key vault resource group name,if not given it will be cluster resource group name.</p></summary>
-        public virtual string VaultResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("sf cluster certificate add")
-              .Add("--cluster-name {value}", ClusterName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--certificate-file {value}", CertificateFile)
-              .Add("--certificate-output-folder {value}", CertificateOutputFolder)
-              .Add("--certificate-password {value}", CertificatePassword, secret: true)
-              .Add("--certificate-subject-name {value}", CertificateSubjectName)
-              .Add("--secret-identifier {value}", SecretIdentifier, secret: true)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--vault-resource-group {value}", VaultResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSfClusterCertificateRemoveSettings
-    /// <summary><p>Used within <see cref="AzureSfTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSfClusterCertificateRemoveSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureSf executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureSfTasks.AzureSfPath;
-        /// <summary><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
-        public virtual string ClusterName { get; internal set; }
-        /// <summary><p>The resource group name.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The cluster certificate thumbprint to be removed.</p></summary>
-        public virtual string Thumbprint { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("sf cluster certificate remove")
-              .Add("--cluster-name {value}", ClusterName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--thumbprint {value}", Thumbprint)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -646,7 +546,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -699,7 +599,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -722,100 +622,41 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureSfClusterDurabilityUpdateSettings
+    #region AzureSfClusterUpgradeTypeSetSettings
     /// <summary><p>Used within <see cref="AzureSfTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureSfClusterDurabilityUpdateSettings : ToolSettings
+    public partial class AzureSfClusterUpgradeTypeSetSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureSf executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureSfTasks.AzureSfPath;
         /// <summary><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
         public virtual string ClusterName { get; internal set; }
-        /// <summary><p>Durability level.</p></summary>
-        public virtual SfClusterDurabilityUpdateDurabilityLevel DurabilityLevel { get; internal set; }
-        /// <summary><p>The Node type name.</p></summary>
-        public virtual string NodeType { get; internal set; }
         /// <summary><p>The resource group name.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Cluster upgrade mode.</p></summary>
+        public virtual SfClusterUpgradeTypeSetUpgradeMode UpgradeMode { get; internal set; }
+        /// <summary><p>Cluster code version.</p></summary>
+        public virtual string Version { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("sf cluster durability update")
+              .Add("sf cluster upgrade-type set")
               .Add("--cluster-name {value}", ClusterName)
-              .Add("--durability-level {value}", DurabilityLevel)
-              .Add("--node-type {value}", NodeType)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSfClusterNodeTypeAddSettings
-    /// <summary><p>Used within <see cref="AzureSfTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSfClusterNodeTypeAddSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureSf executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureSfTasks.AzureSfPath;
-        /// <summary><p></p></summary>
-        public virtual string Capacity { get; internal set; }
-        /// <summary><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
-        public virtual string ClusterName { get; internal set; }
-        /// <summary><p>The Node type name.</p></summary>
-        public virtual string NodeType { get; internal set; }
-        /// <summary><p>The resource group name.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The password of the Vm.</p></summary>
-        public virtual string VmPassword { get; internal set; }
-        /// <summary><p>The user name for logging to Vm. Default will be adminuser.</p></summary>
-        public virtual string VmUserName { get; internal set; }
-        /// <summary><p></p></summary>
-        public virtual string DurabilityLevel { get; internal set; }
-        /// <summary><p>The Vm Sku.</p></summary>
-        public virtual string VmSku { get; internal set; }
-        /// <summary><p></p></summary>
-        public virtual string VmTier { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("sf cluster node-type add")
-              .Add("--capacity {value}", Capacity)
-              .Add("--cluster-name {value}", ClusterName)
-              .Add("--node-type {value}", NodeType)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--vm-password {value}", VmPassword, secret: true)
-              .Add("--vm-user-name {value}", VmUserName)
-              .Add("--durability-level {value}", DurabilityLevel)
-              .Add("--vm-sku {value}", VmSku)
-              .Add("--vm-tier {value}", VmTier)
+              .Add("--upgrade-mode {value}", UpgradeMode)
+              .Add("--version {value}", Version)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -848,7 +689,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -892,7 +733,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -913,41 +754,97 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureSfClusterReliabilityUpdateSettings
+    #region AzureSfClusterCertificateAddSettings
     /// <summary><p>Used within <see cref="AzureSfTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureSfClusterReliabilityUpdateSettings : ToolSettings
+    public partial class AzureSfClusterCertificateAddSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureSf executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureSfTasks.AzureSfPath;
         /// <summary><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
         public virtual string ClusterName { get; internal set; }
-        /// <summary><p>Durability level.</p></summary>
-        public virtual SfClusterDurabilityUpdateDurabilityLevel ReliabilityLevel { get; internal set; }
         /// <summary><p>The resource group name.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Add node count automatically when changing reliability.</p></summary>
-        public virtual string AutoAddNode { get; internal set; }
+        /// <summary><p>The existing certificate file path for the primary cluster certificate.</p></summary>
+        public virtual string CertificateFile { get; internal set; }
+        /// <summary><p>The folder of the new certificate file to be created.</p></summary>
+        public virtual string CertificateOutputFolder { get; internal set; }
+        /// <summary><p>The password of the certificate file.</p></summary>
+        public virtual string CertificatePassword { get; internal set; }
+        /// <summary><p>The subject name of the certificate to be created.</p></summary>
+        public virtual string CertificateSubjectName { get; internal set; }
+        /// <summary><p>The existing Azure key vault secret URL.</p></summary>
+        public virtual string SecretIdentifier { get; internal set; }
+        /// <summary><p>Azure key vault name, it not given it will be the cluster resource group name.</p></summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary><p>Key vault resource group name,if not given it will be cluster resource group name.</p></summary>
+        public virtual string VaultResourceGroup { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("sf cluster reliability update")
+              .Add("sf cluster certificate add")
               .Add("--cluster-name {value}", ClusterName)
-              .Add("--reliability-level {value}", ReliabilityLevel)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--auto-add-node {value}", AutoAddNode)
+              .Add("--certificate-file {value}", CertificateFile)
+              .Add("--certificate-output-folder {value}", CertificateOutputFolder)
+              .Add("--certificate-password {value}", CertificatePassword, secret: true)
+              .Add("--certificate-subject-name {value}", CertificateSubjectName)
+              .Add("--secret-identifier {value}", SecretIdentifier, secret: true)
+              .Add("--vault-name {value}", VaultName)
+              .Add("--vault-resource-group {value}", VaultResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSfClusterCertificateRemoveSettings
+    /// <summary><p>Used within <see cref="AzureSfTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSfClusterCertificateRemoveSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureSf executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureSfTasks.AzureSfPath;
+        /// <summary><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
+        public virtual string ClusterName { get; internal set; }
+        /// <summary><p>The resource group name.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The cluster certificate thumbprint to be removed.</p></summary>
+        public virtual string Thumbprint { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("sf cluster certificate remove")
+              .Add("--cluster-name {value}", ClusterName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--thumbprint {value}", Thumbprint)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -982,7 +879,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1031,7 +928,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1054,41 +951,144 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureSfClusterUpgradeTypeSetSettings
+    #region AzureSfClusterReliabilityUpdateSettings
     /// <summary><p>Used within <see cref="AzureSfTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureSfClusterUpgradeTypeSetSettings : ToolSettings
+    public partial class AzureSfClusterReliabilityUpdateSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureSf executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureSfTasks.AzureSfPath;
         /// <summary><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
         public virtual string ClusterName { get; internal set; }
+        /// <summary><p>Durability level.</p></summary>
+        public virtual SfClusterReliabilityUpdateReliabilityLevel ReliabilityLevel { get; internal set; }
         /// <summary><p>The resource group name.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Cluster upgrade mode.</p></summary>
-        public virtual SfClusterUpgradeTypeSetUpgradeMode UpgradeMode { get; internal set; }
-        /// <summary><p>Cluster code version.</p></summary>
-        public virtual string Version { get; internal set; }
+        /// <summary><p>Add node count automatically when changing reliability.</p></summary>
+        public virtual string AutoAddNode { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("sf cluster upgrade-type set")
+              .Add("sf cluster reliability update")
               .Add("--cluster-name {value}", ClusterName)
+              .Add("--reliability-level {value}", ReliabilityLevel)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--upgrade-mode {value}", UpgradeMode)
-              .Add("--version {value}", Version)
+              .Add("--auto-add-node {value}", AutoAddNode)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSfClusterNodeTypeAddSettings
+    /// <summary><p>Used within <see cref="AzureSfTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSfClusterNodeTypeAddSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureSf executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureSfTasks.AzureSfPath;
+        /// <summary><p></p></summary>
+        public virtual string Capacity { get; internal set; }
+        /// <summary><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
+        public virtual string ClusterName { get; internal set; }
+        /// <summary><p>The Node type name.</p></summary>
+        public virtual string NodeType { get; internal set; }
+        /// <summary><p>The resource group name.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The password of the Vm.</p></summary>
+        public virtual string VmPassword { get; internal set; }
+        /// <summary><p>The user name for logging to Vm. Default will be adminuser.</p></summary>
+        public virtual string VmUserName { get; internal set; }
+        /// <summary><p></p></summary>
+        public virtual string DurabilityLevel { get; internal set; }
+        /// <summary><p>The Vm Sku.</p></summary>
+        public virtual string VmSku { get; internal set; }
+        /// <summary><p></p></summary>
+        public virtual string VmTier { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("sf cluster node-type add")
+              .Add("--capacity {value}", Capacity)
+              .Add("--cluster-name {value}", ClusterName)
+              .Add("--node-type {value}", NodeType)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--vm-password {value}", VmPassword, secret: true)
+              .Add("--vm-user-name {value}", VmUserName)
+              .Add("--durability-level {value}", DurabilityLevel)
+              .Add("--vm-sku {value}", VmSku)
+              .Add("--vm-tier {value}", VmTier)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSfClusterDurabilityUpdateSettings
+    /// <summary><p>Used within <see cref="AzureSfTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSfClusterDurabilityUpdateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureSf executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureSfTasks.AzureSfPath;
+        /// <summary><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
+        public virtual string ClusterName { get; internal set; }
+        /// <summary><p>Durability level.</p></summary>
+        public virtual SfClusterReliabilityUpdateReliabilityLevel DurabilityLevel { get; internal set; }
+        /// <summary><p>The Node type name.</p></summary>
+        public virtual string NodeType { get; internal set; }
+        /// <summary><p>The resource group name.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("sf cluster durability update")
+              .Add("--cluster-name {value}", ClusterName)
+              .Add("--durability-level {value}", DurabilityLevel)
+              .Add("--node-type {value}", NodeType)
+              .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1159,7 +1159,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureSfSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSfSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureSfSettings SetQuery(this AzureSfSettings toolSettings, string query)
         {
@@ -1167,7 +1167,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSfSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSfSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureSfSettings ResetQuery(this AzureSfSettings toolSettings)
         {
@@ -1257,7 +1257,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureSfApplicationSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSfApplicationSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureSfApplicationSettings SetQuery(this AzureSfApplicationSettings toolSettings, string query)
         {
@@ -1265,7 +1265,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSfApplicationSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSfApplicationSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureSfApplicationSettings ResetQuery(this AzureSfApplicationSettings toolSettings)
         {
@@ -1661,7 +1661,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureSfClusterCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSfClusterCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureSfClusterCreateSettings SetQuery(this AzureSfClusterCreateSettings toolSettings, string query)
         {
@@ -1669,7 +1669,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSfClusterCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureSfClusterCreateSettings ResetQuery(this AzureSfClusterCreateSettings toolSettings)
         {
@@ -1777,7 +1777,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureSfClusterListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSfClusterListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureSfClusterListSettings SetQuery(this AzureSfClusterListSettings toolSettings, string query)
         {
@@ -1785,7 +1785,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSfClusterListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureSfClusterListSettings ResetQuery(this AzureSfClusterListSettings toolSettings)
         {
@@ -1911,7 +1911,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureSfClusterShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSfClusterShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureSfClusterShowSettings SetQuery(this AzureSfClusterShowSettings toolSettings, string query)
         {
@@ -1919,7 +1919,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSfClusterShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureSfClusterShowSettings ResetQuery(this AzureSfClusterShowSettings toolSettings)
         {
@@ -2171,7 +2171,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureSfApplicationCertificateAddSettings SetQuery(this AzureSfApplicationCertificateAddSettings toolSettings, string query)
         {
@@ -2179,7 +2179,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureSfApplicationCertificateAddSettings ResetQuery(this AzureSfApplicationCertificateAddSettings toolSettings)
         {
@@ -2200,418 +2200,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureSfApplicationCertificateAddSettings ResetVerbose(this AzureSfApplicationCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSfClusterCertificateAddSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureSfTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSfClusterCertificateAddSettingsExtensions
-    {
-        #region ClusterName
-        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings SetClusterName(this AzureSfClusterCertificateAddSettings toolSettings, string clusterName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = clusterName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings ResetClusterName(this AzureSfClusterCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings SetResourceGroup(this AzureSfClusterCertificateAddSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings ResetResourceGroup(this AzureSfClusterCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region CertificateFile
-        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.CertificateFile"/>.</em></p><p>The existing certificate file path for the primary cluster certificate.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings SetCertificateFile(this AzureSfClusterCertificateAddSettings toolSettings, string certificateFile)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificateFile = certificateFile;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.CertificateFile"/>.</em></p><p>The existing certificate file path for the primary cluster certificate.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings ResetCertificateFile(this AzureSfClusterCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificateFile = null;
-            return toolSettings;
-        }
-        #endregion
-        #region CertificateOutputFolder
-        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.CertificateOutputFolder"/>.</em></p><p>The folder of the new certificate file to be created.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings SetCertificateOutputFolder(this AzureSfClusterCertificateAddSettings toolSettings, string certificateOutputFolder)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificateOutputFolder = certificateOutputFolder;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.CertificateOutputFolder"/>.</em></p><p>The folder of the new certificate file to be created.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings ResetCertificateOutputFolder(this AzureSfClusterCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificateOutputFolder = null;
-            return toolSettings;
-        }
-        #endregion
-        #region CertificatePassword
-        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.CertificatePassword"/>.</em></p><p>The password of the certificate file.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings SetCertificatePassword(this AzureSfClusterCertificateAddSettings toolSettings, string certificatePassword)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificatePassword = certificatePassword;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.CertificatePassword"/>.</em></p><p>The password of the certificate file.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings ResetCertificatePassword(this AzureSfClusterCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificatePassword = null;
-            return toolSettings;
-        }
-        #endregion
-        #region CertificateSubjectName
-        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.CertificateSubjectName"/>.</em></p><p>The subject name of the certificate to be created.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings SetCertificateSubjectName(this AzureSfClusterCertificateAddSettings toolSettings, string certificateSubjectName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificateSubjectName = certificateSubjectName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.CertificateSubjectName"/>.</em></p><p>The subject name of the certificate to be created.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings ResetCertificateSubjectName(this AzureSfClusterCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificateSubjectName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SecretIdentifier
-        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.SecretIdentifier"/>.</em></p><p>The existing Azure key vault secret URL.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings SetSecretIdentifier(this AzureSfClusterCertificateAddSettings toolSettings, string secretIdentifier)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SecretIdentifier = secretIdentifier;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.SecretIdentifier"/>.</em></p><p>The existing Azure key vault secret URL.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings ResetSecretIdentifier(this AzureSfClusterCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SecretIdentifier = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.VaultName"/>.</em></p><p>Azure key vault name, it not given it will be the cluster resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings SetVaultName(this AzureSfClusterCertificateAddSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.VaultName"/>.</em></p><p>Azure key vault name, it not given it will be the cluster resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings ResetVaultName(this AzureSfClusterCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.VaultResourceGroup"/>.</em></p><p>Key vault resource group name,if not given it will be cluster resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings SetVaultResourceGroup(this AzureSfClusterCertificateAddSettings toolSettings, string vaultResourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultResourceGroup = vaultResourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.VaultResourceGroup"/>.</em></p><p>Key vault resource group name,if not given it will be cluster resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings ResetVaultResourceGroup(this AzureSfClusterCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings SetDebug(this AzureSfClusterCertificateAddSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings ResetDebug(this AzureSfClusterCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings SetHelp(this AzureSfClusterCertificateAddSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings ResetHelp(this AzureSfClusterCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings SetOutput(this AzureSfClusterCertificateAddSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings ResetOutput(this AzureSfClusterCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings SetQuery(this AzureSfClusterCertificateAddSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings ResetQuery(this AzureSfClusterCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings SetVerbose(this AzureSfClusterCertificateAddSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings ResetVerbose(this AzureSfClusterCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSfClusterCertificateRemoveSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureSfTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSfClusterCertificateRemoveSettingsExtensions
-    {
-        #region ClusterName
-        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings SetClusterName(this AzureSfClusterCertificateRemoveSettings toolSettings, string clusterName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = clusterName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings ResetClusterName(this AzureSfClusterCertificateRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings SetResourceGroup(this AzureSfClusterCertificateRemoveSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings ResetResourceGroup(this AzureSfClusterCertificateRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Thumbprint
-        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.Thumbprint"/>.</em></p><p>The cluster certificate thumbprint to be removed.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings SetThumbprint(this AzureSfClusterCertificateRemoveSettings toolSettings, string thumbprint)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Thumbprint = thumbprint;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.Thumbprint"/>.</em></p><p>The cluster certificate thumbprint to be removed.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings ResetThumbprint(this AzureSfClusterCertificateRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Thumbprint = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings SetDebug(this AzureSfClusterCertificateRemoveSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings ResetDebug(this AzureSfClusterCertificateRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings SetHelp(this AzureSfClusterCertificateRemoveSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings ResetHelp(this AzureSfClusterCertificateRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings SetOutput(this AzureSfClusterCertificateRemoveSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings ResetOutput(this AzureSfClusterCertificateRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings SetQuery(this AzureSfClusterCertificateRemoveSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings ResetQuery(this AzureSfClusterCertificateRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings SetVerbose(this AzureSfClusterCertificateRemoveSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings ResetVerbose(this AzureSfClusterCertificateRemoveSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -2885,7 +2473,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureSfClusterClientCertificateAddSettings SetQuery(this AzureSfClusterClientCertificateAddSettings toolSettings, string query)
         {
@@ -2893,7 +2481,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterClientCertificateAddSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSfClusterClientCertificateAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureSfClusterClientCertificateAddSettings ResetQuery(this AzureSfClusterClientCertificateAddSettings toolSettings)
         {
@@ -3091,7 +2679,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureSfClusterClientCertificateRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSfClusterClientCertificateRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureSfClusterClientCertificateRemoveSettings SetQuery(this AzureSfClusterClientCertificateRemoveSettings toolSettings, string query)
         {
@@ -3099,7 +2687,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterClientCertificateRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSfClusterClientCertificateRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureSfClusterClientCertificateRemoveSettings ResetQuery(this AzureSfClusterClientCertificateRemoveSettings toolSettings)
         {
@@ -3128,96 +2716,96 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureSfClusterDurabilityUpdateSettingsExtensions
+    #region AzureSfClusterUpgradeTypeSetSettingsExtensions
     /// <summary><p>Used within <see cref="AzureSfTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureSfClusterDurabilityUpdateSettingsExtensions
+    public static partial class AzureSfClusterUpgradeTypeSetSettingsExtensions
     {
         #region ClusterName
-        /// <summary><p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSfClusterUpgradeTypeSetSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
         [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings SetClusterName(this AzureSfClusterDurabilityUpdateSettings toolSettings, string clusterName)
+        public static AzureSfClusterUpgradeTypeSetSettings SetClusterName(this AzureSfClusterUpgradeTypeSetSettings toolSettings, string clusterName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ClusterName = clusterName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSfClusterUpgradeTypeSetSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
         [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings ResetClusterName(this AzureSfClusterDurabilityUpdateSettings toolSettings)
+        public static AzureSfClusterUpgradeTypeSetSettings ResetClusterName(this AzureSfClusterUpgradeTypeSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ClusterName = null;
             return toolSettings;
         }
         #endregion
-        #region DurabilityLevel
-        /// <summary><p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.DurabilityLevel"/>.</em></p><p>Durability level.</p></summary>
-        [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings SetDurabilityLevel(this AzureSfClusterDurabilityUpdateSettings toolSettings, SfClusterDurabilityUpdateDurabilityLevel durabilityLevel)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DurabilityLevel = durabilityLevel;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.DurabilityLevel"/>.</em></p><p>Durability level.</p></summary>
-        [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings ResetDurabilityLevel(this AzureSfClusterDurabilityUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DurabilityLevel = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NodeType
-        /// <summary><p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.NodeType"/>.</em></p><p>The Node type name.</p></summary>
-        [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings SetNodeType(this AzureSfClusterDurabilityUpdateSettings toolSettings, string nodeType)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NodeType = nodeType;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.NodeType"/>.</em></p><p>The Node type name.</p></summary>
-        [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings ResetNodeType(this AzureSfClusterDurabilityUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NodeType = null;
-            return toolSettings;
-        }
-        #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSfClusterUpgradeTypeSetSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
         [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings SetResourceGroup(this AzureSfClusterDurabilityUpdateSettings toolSettings, string resourceGroup)
+        public static AzureSfClusterUpgradeTypeSetSettings SetResourceGroup(this AzureSfClusterUpgradeTypeSetSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSfClusterUpgradeTypeSetSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
         [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings ResetResourceGroup(this AzureSfClusterDurabilityUpdateSettings toolSettings)
+        public static AzureSfClusterUpgradeTypeSetSettings ResetResourceGroup(this AzureSfClusterUpgradeTypeSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region UpgradeMode
+        /// <summary><p><em>Sets <see cref="AzureSfClusterUpgradeTypeSetSettings.UpgradeMode"/>.</em></p><p>Cluster upgrade mode.</p></summary>
         [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings SetDebug(this AzureSfClusterDurabilityUpdateSettings toolSettings, string debug)
+        public static AzureSfClusterUpgradeTypeSetSettings SetUpgradeMode(this AzureSfClusterUpgradeTypeSetSettings toolSettings, SfClusterUpgradeTypeSetUpgradeMode upgradeMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UpgradeMode = upgradeMode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterUpgradeTypeSetSettings.UpgradeMode"/>.</em></p><p>Cluster upgrade mode.</p></summary>
+        [Pure]
+        public static AzureSfClusterUpgradeTypeSetSettings ResetUpgradeMode(this AzureSfClusterUpgradeTypeSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UpgradeMode = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Version
+        /// <summary><p><em>Sets <see cref="AzureSfClusterUpgradeTypeSetSettings.Version"/>.</em></p><p>Cluster code version.</p></summary>
+        [Pure]
+        public static AzureSfClusterUpgradeTypeSetSettings SetVersion(this AzureSfClusterUpgradeTypeSetSettings toolSettings, string version)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Version = version;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterUpgradeTypeSetSettings.Version"/>.</em></p><p>Cluster code version.</p></summary>
+        [Pure]
+        public static AzureSfClusterUpgradeTypeSetSettings ResetVersion(this AzureSfClusterUpgradeTypeSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Version = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureSfClusterUpgradeTypeSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSfClusterUpgradeTypeSetSettings SetDebug(this AzureSfClusterUpgradeTypeSetSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSfClusterUpgradeTypeSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings ResetDebug(this AzureSfClusterDurabilityUpdateSettings toolSettings)
+        public static AzureSfClusterUpgradeTypeSetSettings ResetDebug(this AzureSfClusterUpgradeTypeSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -3225,17 +2813,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSfClusterUpgradeTypeSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings SetHelp(this AzureSfClusterDurabilityUpdateSettings toolSettings, string help)
+        public static AzureSfClusterUpgradeTypeSetSettings SetHelp(this AzureSfClusterUpgradeTypeSetSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSfClusterUpgradeTypeSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings ResetHelp(this AzureSfClusterDurabilityUpdateSettings toolSettings)
+        public static AzureSfClusterUpgradeTypeSetSettings ResetHelp(this AzureSfClusterUpgradeTypeSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -3243,17 +2831,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSfClusterUpgradeTypeSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings SetOutput(this AzureSfClusterDurabilityUpdateSettings toolSettings, Output output)
+        public static AzureSfClusterUpgradeTypeSetSettings SetOutput(this AzureSfClusterUpgradeTypeSetSettings toolSettings, Output output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSfClusterUpgradeTypeSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings ResetOutput(this AzureSfClusterDurabilityUpdateSettings toolSettings)
+        public static AzureSfClusterUpgradeTypeSetSettings ResetOutput(this AzureSfClusterUpgradeTypeSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -3261,17 +2849,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSfClusterUpgradeTypeSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings SetQuery(this AzureSfClusterDurabilityUpdateSettings toolSettings, string query)
+        public static AzureSfClusterUpgradeTypeSetSettings SetQuery(this AzureSfClusterUpgradeTypeSetSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSfClusterUpgradeTypeSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings ResetQuery(this AzureSfClusterDurabilityUpdateSettings toolSettings)
+        public static AzureSfClusterUpgradeTypeSetSettings ResetQuery(this AzureSfClusterUpgradeTypeSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -3279,17 +2867,1333 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSfClusterUpgradeTypeSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings SetVerbose(this AzureSfClusterDurabilityUpdateSettings toolSettings, string verbose)
+        public static AzureSfClusterUpgradeTypeSetSettings SetVerbose(this AzureSfClusterUpgradeTypeSetSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSfClusterUpgradeTypeSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings ResetVerbose(this AzureSfClusterDurabilityUpdateSettings toolSettings)
+        public static AzureSfClusterUpgradeTypeSetSettings ResetVerbose(this AzureSfClusterUpgradeTypeSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSfClusterNodeAddSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureSfTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSfClusterNodeAddSettingsExtensions
+    {
+        #region ClusterName
+        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeAddSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings SetClusterName(this AzureSfClusterNodeAddSettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeAddSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings ResetClusterName(this AzureSfClusterNodeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NodeType
+        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeAddSettings.NodeType"/>.</em></p><p>The Node type name.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings SetNodeType(this AzureSfClusterNodeAddSettings toolSettings, string nodeType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NodeType = nodeType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeAddSettings.NodeType"/>.</em></p><p>The Node type name.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings ResetNodeType(this AzureSfClusterNodeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NodeType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NumberOfNodesToAdd
+        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeAddSettings.NumberOfNodesToAdd"/>.</em></p><p>Number of nodes to add.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings SetNumberOfNodesToAdd(this AzureSfClusterNodeAddSettings toolSettings, int? numberOfNodesToAdd)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NumberOfNodesToAdd = numberOfNodesToAdd;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeAddSettings.NumberOfNodesToAdd"/>.</em></p><p>Number of nodes to add.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings ResetNumberOfNodesToAdd(this AzureSfClusterNodeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NumberOfNodesToAdd = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeAddSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings SetResourceGroup(this AzureSfClusterNodeAddSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeAddSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings ResetResourceGroup(this AzureSfClusterNodeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings SetDebug(this AzureSfClusterNodeAddSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings ResetDebug(this AzureSfClusterNodeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings SetHelp(this AzureSfClusterNodeAddSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings ResetHelp(this AzureSfClusterNodeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings SetOutput(this AzureSfClusterNodeAddSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings ResetOutput(this AzureSfClusterNodeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings SetQuery(this AzureSfClusterNodeAddSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings ResetQuery(this AzureSfClusterNodeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings SetVerbose(this AzureSfClusterNodeAddSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings ResetVerbose(this AzureSfClusterNodeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSfClusterNodeRemoveSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureSfTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSfClusterNodeRemoveSettingsExtensions
+    {
+        #region ClusterName
+        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings SetClusterName(this AzureSfClusterNodeRemoveSettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings ResetClusterName(this AzureSfClusterNodeRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NodeType
+        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.NodeType"/>.</em></p><p>The Node type name.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings SetNodeType(this AzureSfClusterNodeRemoveSettings toolSettings, string nodeType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NodeType = nodeType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.NodeType"/>.</em></p><p>The Node type name.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings ResetNodeType(this AzureSfClusterNodeRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NodeType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NumberOfNodesToRemove
+        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.NumberOfNodesToRemove"/>.</em></p><p>Number of nodes to remove.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings SetNumberOfNodesToRemove(this AzureSfClusterNodeRemoveSettings toolSettings, int? numberOfNodesToRemove)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NumberOfNodesToRemove = numberOfNodesToRemove;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.NumberOfNodesToRemove"/>.</em></p><p>Number of nodes to remove.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings ResetNumberOfNodesToRemove(this AzureSfClusterNodeRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NumberOfNodesToRemove = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings SetResourceGroup(this AzureSfClusterNodeRemoveSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings ResetResourceGroup(this AzureSfClusterNodeRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings SetDebug(this AzureSfClusterNodeRemoveSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings ResetDebug(this AzureSfClusterNodeRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings SetHelp(this AzureSfClusterNodeRemoveSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings ResetHelp(this AzureSfClusterNodeRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings SetOutput(this AzureSfClusterNodeRemoveSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings ResetOutput(this AzureSfClusterNodeRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings SetQuery(this AzureSfClusterNodeRemoveSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings ResetQuery(this AzureSfClusterNodeRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings SetVerbose(this AzureSfClusterNodeRemoveSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings ResetVerbose(this AzureSfClusterNodeRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSfClusterCertificateAddSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureSfTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSfClusterCertificateAddSettingsExtensions
+    {
+        #region ClusterName
+        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings SetClusterName(this AzureSfClusterCertificateAddSettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings ResetClusterName(this AzureSfClusterCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings SetResourceGroup(this AzureSfClusterCertificateAddSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings ResetResourceGroup(this AzureSfClusterCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region CertificateFile
+        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.CertificateFile"/>.</em></p><p>The existing certificate file path for the primary cluster certificate.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings SetCertificateFile(this AzureSfClusterCertificateAddSettings toolSettings, string certificateFile)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificateFile = certificateFile;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.CertificateFile"/>.</em></p><p>The existing certificate file path for the primary cluster certificate.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings ResetCertificateFile(this AzureSfClusterCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificateFile = null;
+            return toolSettings;
+        }
+        #endregion
+        #region CertificateOutputFolder
+        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.CertificateOutputFolder"/>.</em></p><p>The folder of the new certificate file to be created.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings SetCertificateOutputFolder(this AzureSfClusterCertificateAddSettings toolSettings, string certificateOutputFolder)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificateOutputFolder = certificateOutputFolder;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.CertificateOutputFolder"/>.</em></p><p>The folder of the new certificate file to be created.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings ResetCertificateOutputFolder(this AzureSfClusterCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificateOutputFolder = null;
+            return toolSettings;
+        }
+        #endregion
+        #region CertificatePassword
+        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.CertificatePassword"/>.</em></p><p>The password of the certificate file.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings SetCertificatePassword(this AzureSfClusterCertificateAddSettings toolSettings, string certificatePassword)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificatePassword = certificatePassword;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.CertificatePassword"/>.</em></p><p>The password of the certificate file.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings ResetCertificatePassword(this AzureSfClusterCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificatePassword = null;
+            return toolSettings;
+        }
+        #endregion
+        #region CertificateSubjectName
+        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.CertificateSubjectName"/>.</em></p><p>The subject name of the certificate to be created.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings SetCertificateSubjectName(this AzureSfClusterCertificateAddSettings toolSettings, string certificateSubjectName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificateSubjectName = certificateSubjectName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.CertificateSubjectName"/>.</em></p><p>The subject name of the certificate to be created.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings ResetCertificateSubjectName(this AzureSfClusterCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificateSubjectName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SecretIdentifier
+        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.SecretIdentifier"/>.</em></p><p>The existing Azure key vault secret URL.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings SetSecretIdentifier(this AzureSfClusterCertificateAddSettings toolSettings, string secretIdentifier)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SecretIdentifier = secretIdentifier;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.SecretIdentifier"/>.</em></p><p>The existing Azure key vault secret URL.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings ResetSecretIdentifier(this AzureSfClusterCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SecretIdentifier = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.VaultName"/>.</em></p><p>Azure key vault name, it not given it will be the cluster resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings SetVaultName(this AzureSfClusterCertificateAddSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.VaultName"/>.</em></p><p>Azure key vault name, it not given it will be the cluster resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings ResetVaultName(this AzureSfClusterCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.VaultResourceGroup"/>.</em></p><p>Key vault resource group name,if not given it will be cluster resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings SetVaultResourceGroup(this AzureSfClusterCertificateAddSettings toolSettings, string vaultResourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultResourceGroup = vaultResourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.VaultResourceGroup"/>.</em></p><p>Key vault resource group name,if not given it will be cluster resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings ResetVaultResourceGroup(this AzureSfClusterCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings SetDebug(this AzureSfClusterCertificateAddSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings ResetDebug(this AzureSfClusterCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings SetHelp(this AzureSfClusterCertificateAddSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings ResetHelp(this AzureSfClusterCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings SetOutput(this AzureSfClusterCertificateAddSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings ResetOutput(this AzureSfClusterCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings SetQuery(this AzureSfClusterCertificateAddSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings ResetQuery(this AzureSfClusterCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings SetVerbose(this AzureSfClusterCertificateAddSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings ResetVerbose(this AzureSfClusterCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSfClusterCertificateRemoveSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureSfTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSfClusterCertificateRemoveSettingsExtensions
+    {
+        #region ClusterName
+        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings SetClusterName(this AzureSfClusterCertificateRemoveSettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings ResetClusterName(this AzureSfClusterCertificateRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings SetResourceGroup(this AzureSfClusterCertificateRemoveSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings ResetResourceGroup(this AzureSfClusterCertificateRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Thumbprint
+        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.Thumbprint"/>.</em></p><p>The cluster certificate thumbprint to be removed.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings SetThumbprint(this AzureSfClusterCertificateRemoveSettings toolSettings, string thumbprint)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Thumbprint = thumbprint;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.Thumbprint"/>.</em></p><p>The cluster certificate thumbprint to be removed.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings ResetThumbprint(this AzureSfClusterCertificateRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Thumbprint = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings SetDebug(this AzureSfClusterCertificateRemoveSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings ResetDebug(this AzureSfClusterCertificateRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings SetHelp(this AzureSfClusterCertificateRemoveSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings ResetHelp(this AzureSfClusterCertificateRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings SetOutput(this AzureSfClusterCertificateRemoveSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings ResetOutput(this AzureSfClusterCertificateRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings SetQuery(this AzureSfClusterCertificateRemoveSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings ResetQuery(this AzureSfClusterCertificateRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings SetVerbose(this AzureSfClusterCertificateRemoveSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings ResetVerbose(this AzureSfClusterCertificateRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSfClusterSettingRemoveSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureSfTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSfClusterSettingRemoveSettingsExtensions
+    {
+        #region ClusterName
+        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingRemoveSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingRemoveSettings SetClusterName(this AzureSfClusterSettingRemoveSettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingRemoveSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingRemoveSettings ResetClusterName(this AzureSfClusterSettingRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingRemoveSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingRemoveSettings SetResourceGroup(this AzureSfClusterSettingRemoveSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingRemoveSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingRemoveSettings ResetResourceGroup(this AzureSfClusterSettingRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Parameter
+        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingRemoveSettings.Parameter"/>.</em></p><p>Parameter name.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingRemoveSettings SetParameter(this AzureSfClusterSettingRemoveSettings toolSettings, string parameter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Parameter = parameter;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingRemoveSettings.Parameter"/>.</em></p><p>Parameter name.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingRemoveSettings ResetParameter(this AzureSfClusterSettingRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Parameter = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Section
+        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingRemoveSettings.Section"/>.</em></p><p>Section name.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingRemoveSettings SetSection(this AzureSfClusterSettingRemoveSettings toolSettings, string section)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Section = section;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingRemoveSettings.Section"/>.</em></p><p>Section name.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingRemoveSettings ResetSection(this AzureSfClusterSettingRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Section = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SettingsSectionDescription
+        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingRemoveSettings.SettingsSectionDescription"/>.</em></p><p>JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{"section": "NamingService","parameter": "MaxOperationTimeout"}].</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingRemoveSettings SetSettingsSectionDescription(this AzureSfClusterSettingRemoveSettings toolSettings, string settingsSectionDescription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingsSectionDescription = settingsSectionDescription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingRemoveSettings.SettingsSectionDescription"/>.</em></p><p>JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{"section": "NamingService","parameter": "MaxOperationTimeout"}].</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingRemoveSettings ResetSettingsSectionDescription(this AzureSfClusterSettingRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingsSectionDescription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingRemoveSettings SetDebug(this AzureSfClusterSettingRemoveSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingRemoveSettings ResetDebug(this AzureSfClusterSettingRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingRemoveSettings SetHelp(this AzureSfClusterSettingRemoveSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingRemoveSettings ResetHelp(this AzureSfClusterSettingRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingRemoveSettings SetOutput(this AzureSfClusterSettingRemoveSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingRemoveSettings ResetOutput(this AzureSfClusterSettingRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingRemoveSettings SetQuery(this AzureSfClusterSettingRemoveSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingRemoveSettings ResetQuery(this AzureSfClusterSettingRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingRemoveSettings SetVerbose(this AzureSfClusterSettingRemoveSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingRemoveSettings ResetVerbose(this AzureSfClusterSettingRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSfClusterSettingSetSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureSfTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSfClusterSettingSetSettingsExtensions
+    {
+        #region ClusterName
+        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingSetSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingSetSettings SetClusterName(this AzureSfClusterSettingSetSettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingSetSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingSetSettings ResetClusterName(this AzureSfClusterSettingSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingSetSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingSetSettings SetResourceGroup(this AzureSfClusterSettingSetSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingSetSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingSetSettings ResetResourceGroup(this AzureSfClusterSettingSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Parameter
+        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingSetSettings.Parameter"/>.</em></p><p>Parameter name.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingSetSettings SetParameter(this AzureSfClusterSettingSetSettings toolSettings, string parameter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Parameter = parameter;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingSetSettings.Parameter"/>.</em></p><p>Parameter name.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingSetSettings ResetParameter(this AzureSfClusterSettingSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Parameter = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Section
+        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingSetSettings.Section"/>.</em></p><p>Section name.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingSetSettings SetSection(this AzureSfClusterSettingSetSettings toolSettings, string section)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Section = section;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingSetSettings.Section"/>.</em></p><p>Section name.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingSetSettings ResetSection(this AzureSfClusterSettingSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Section = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SettingsSectionDescription
+        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingSetSettings.SettingsSectionDescription"/>.</em></p><p>JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{"section": "NamingService","parameter": "MaxOperationTimeout","value": 1000},{"section": "MaxFileOperationTimeout","parameter": "Max2","value": 1000].</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingSetSettings SetSettingsSectionDescription(this AzureSfClusterSettingSetSettings toolSettings, string settingsSectionDescription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingsSectionDescription = settingsSectionDescription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingSetSettings.SettingsSectionDescription"/>.</em></p><p>JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{"section": "NamingService","parameter": "MaxOperationTimeout","value": 1000},{"section": "MaxFileOperationTimeout","parameter": "Max2","value": 1000].</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingSetSettings ResetSettingsSectionDescription(this AzureSfClusterSettingSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingsSectionDescription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Value
+        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingSetSettings.Value"/>.</em></p><p>Specify the value.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingSetSettings SetValue(this AzureSfClusterSettingSetSettings toolSettings, string value)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Value = value;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingSetSettings.Value"/>.</em></p><p>Specify the value.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingSetSettings ResetValue(this AzureSfClusterSettingSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Value = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingSetSettings SetDebug(this AzureSfClusterSettingSetSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingSetSettings ResetDebug(this AzureSfClusterSettingSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingSetSettings SetHelp(this AzureSfClusterSettingSetSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingSetSettings ResetHelp(this AzureSfClusterSettingSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingSetSettings SetOutput(this AzureSfClusterSettingSetSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingSetSettings ResetOutput(this AzureSfClusterSettingSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingSetSettings SetQuery(this AzureSfClusterSettingSetSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingSetSettings ResetQuery(this AzureSfClusterSettingSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingSetSettings SetVerbose(this AzureSfClusterSettingSetSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSfClusterSettingSetSettings ResetVerbose(this AzureSfClusterSettingSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSfClusterReliabilityUpdateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureSfTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSfClusterReliabilityUpdateSettingsExtensions
+    {
+        #region ClusterName
+        /// <summary><p><em>Sets <see cref="AzureSfClusterReliabilityUpdateSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterReliabilityUpdateSettings SetClusterName(this AzureSfClusterReliabilityUpdateSettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterReliabilityUpdateSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterReliabilityUpdateSettings ResetClusterName(this AzureSfClusterReliabilityUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ReliabilityLevel
+        /// <summary><p><em>Sets <see cref="AzureSfClusterReliabilityUpdateSettings.ReliabilityLevel"/>.</em></p><p>Durability level.</p></summary>
+        [Pure]
+        public static AzureSfClusterReliabilityUpdateSettings SetReliabilityLevel(this AzureSfClusterReliabilityUpdateSettings toolSettings, SfClusterReliabilityUpdateReliabilityLevel reliabilityLevel)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ReliabilityLevel = reliabilityLevel;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterReliabilityUpdateSettings.ReliabilityLevel"/>.</em></p><p>Durability level.</p></summary>
+        [Pure]
+        public static AzureSfClusterReliabilityUpdateSettings ResetReliabilityLevel(this AzureSfClusterReliabilityUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ReliabilityLevel = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureSfClusterReliabilityUpdateSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterReliabilityUpdateSettings SetResourceGroup(this AzureSfClusterReliabilityUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterReliabilityUpdateSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
+        [Pure]
+        public static AzureSfClusterReliabilityUpdateSettings ResetResourceGroup(this AzureSfClusterReliabilityUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AutoAddNode
+        /// <summary><p><em>Sets <see cref="AzureSfClusterReliabilityUpdateSettings.AutoAddNode"/>.</em></p><p>Add node count automatically when changing reliability.</p></summary>
+        [Pure]
+        public static AzureSfClusterReliabilityUpdateSettings SetAutoAddNode(this AzureSfClusterReliabilityUpdateSettings toolSettings, string autoAddNode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoAddNode = autoAddNode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterReliabilityUpdateSettings.AutoAddNode"/>.</em></p><p>Add node count automatically when changing reliability.</p></summary>
+        [Pure]
+        public static AzureSfClusterReliabilityUpdateSettings ResetAutoAddNode(this AzureSfClusterReliabilityUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoAddNode = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureSfClusterReliabilityUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSfClusterReliabilityUpdateSettings SetDebug(this AzureSfClusterReliabilityUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterReliabilityUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSfClusterReliabilityUpdateSettings ResetDebug(this AzureSfClusterReliabilityUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureSfClusterReliabilityUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSfClusterReliabilityUpdateSettings SetHelp(this AzureSfClusterReliabilityUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterReliabilityUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSfClusterReliabilityUpdateSettings ResetHelp(this AzureSfClusterReliabilityUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureSfClusterReliabilityUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSfClusterReliabilityUpdateSettings SetOutput(this AzureSfClusterReliabilityUpdateSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterReliabilityUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSfClusterReliabilityUpdateSettings ResetOutput(this AzureSfClusterReliabilityUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureSfClusterReliabilityUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSfClusterReliabilityUpdateSettings SetQuery(this AzureSfClusterReliabilityUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterReliabilityUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSfClusterReliabilityUpdateSettings ResetQuery(this AzureSfClusterReliabilityUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureSfClusterReliabilityUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSfClusterReliabilityUpdateSettings SetVerbose(this AzureSfClusterReliabilityUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterReliabilityUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSfClusterReliabilityUpdateSettings ResetVerbose(this AzureSfClusterReliabilityUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -3521,7 +4425,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureSfClusterNodeTypeAddSettings SetQuery(this AzureSfClusterNodeTypeAddSettings toolSettings, string query)
         {
@@ -3529,7 +4433,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureSfClusterNodeTypeAddSettings ResetQuery(this AzureSfClusterNodeTypeAddSettings toolSettings)
         {
@@ -3558,78 +4462,78 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureSfClusterNodeAddSettingsExtensions
+    #region AzureSfClusterDurabilityUpdateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureSfTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureSfClusterNodeAddSettingsExtensions
+    public static partial class AzureSfClusterDurabilityUpdateSettingsExtensions
     {
         #region ClusterName
-        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeAddSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
         [Pure]
-        public static AzureSfClusterNodeAddSettings SetClusterName(this AzureSfClusterNodeAddSettings toolSettings, string clusterName)
+        public static AzureSfClusterDurabilityUpdateSettings SetClusterName(this AzureSfClusterDurabilityUpdateSettings toolSettings, string clusterName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ClusterName = clusterName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeAddSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
         [Pure]
-        public static AzureSfClusterNodeAddSettings ResetClusterName(this AzureSfClusterNodeAddSettings toolSettings)
+        public static AzureSfClusterDurabilityUpdateSettings ResetClusterName(this AzureSfClusterDurabilityUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ClusterName = null;
             return toolSettings;
         }
         #endregion
-        #region NodeType
-        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeAddSettings.NodeType"/>.</em></p><p>The Node type name.</p></summary>
+        #region DurabilityLevel
+        /// <summary><p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.DurabilityLevel"/>.</em></p><p>Durability level.</p></summary>
         [Pure]
-        public static AzureSfClusterNodeAddSettings SetNodeType(this AzureSfClusterNodeAddSettings toolSettings, string nodeType)
+        public static AzureSfClusterDurabilityUpdateSettings SetDurabilityLevel(this AzureSfClusterDurabilityUpdateSettings toolSettings, SfClusterReliabilityUpdateReliabilityLevel durabilityLevel)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DurabilityLevel = durabilityLevel;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.DurabilityLevel"/>.</em></p><p>Durability level.</p></summary>
+        [Pure]
+        public static AzureSfClusterDurabilityUpdateSettings ResetDurabilityLevel(this AzureSfClusterDurabilityUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DurabilityLevel = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NodeType
+        /// <summary><p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.NodeType"/>.</em></p><p>The Node type name.</p></summary>
+        [Pure]
+        public static AzureSfClusterDurabilityUpdateSettings SetNodeType(this AzureSfClusterDurabilityUpdateSettings toolSettings, string nodeType)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NodeType = nodeType;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeAddSettings.NodeType"/>.</em></p><p>The Node type name.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.NodeType"/>.</em></p><p>The Node type name.</p></summary>
         [Pure]
-        public static AzureSfClusterNodeAddSettings ResetNodeType(this AzureSfClusterNodeAddSettings toolSettings)
+        public static AzureSfClusterDurabilityUpdateSettings ResetNodeType(this AzureSfClusterDurabilityUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NodeType = null;
             return toolSettings;
         }
         #endregion
-        #region NumberOfNodesToAdd
-        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeAddSettings.NumberOfNodesToAdd"/>.</em></p><p>Number of nodes to add.</p></summary>
-        [Pure]
-        public static AzureSfClusterNodeAddSettings SetNumberOfNodesToAdd(this AzureSfClusterNodeAddSettings toolSettings, int? numberOfNodesToAdd)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NumberOfNodesToAdd = numberOfNodesToAdd;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeAddSettings.NumberOfNodesToAdd"/>.</em></p><p>Number of nodes to add.</p></summary>
-        [Pure]
-        public static AzureSfClusterNodeAddSettings ResetNumberOfNodesToAdd(this AzureSfClusterNodeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NumberOfNodesToAdd = null;
-            return toolSettings;
-        }
-        #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeAddSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
         [Pure]
-        public static AzureSfClusterNodeAddSettings SetResourceGroup(this AzureSfClusterNodeAddSettings toolSettings, string resourceGroup)
+        public static AzureSfClusterDurabilityUpdateSettings SetResourceGroup(this AzureSfClusterDurabilityUpdateSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeAddSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
         [Pure]
-        public static AzureSfClusterNodeAddSettings ResetResourceGroup(this AzureSfClusterNodeAddSettings toolSettings)
+        public static AzureSfClusterDurabilityUpdateSettings ResetResourceGroup(this AzureSfClusterDurabilityUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -3637,17 +4541,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureSfClusterNodeAddSettings SetDebug(this AzureSfClusterNodeAddSettings toolSettings, string debug)
+        public static AzureSfClusterDurabilityUpdateSettings SetDebug(this AzureSfClusterDurabilityUpdateSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureSfClusterNodeAddSettings ResetDebug(this AzureSfClusterNodeAddSettings toolSettings)
+        public static AzureSfClusterDurabilityUpdateSettings ResetDebug(this AzureSfClusterDurabilityUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -3655,17 +4559,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureSfClusterNodeAddSettings SetHelp(this AzureSfClusterNodeAddSettings toolSettings, string help)
+        public static AzureSfClusterDurabilityUpdateSettings SetHelp(this AzureSfClusterDurabilityUpdateSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureSfClusterNodeAddSettings ResetHelp(this AzureSfClusterNodeAddSettings toolSettings)
+        public static AzureSfClusterDurabilityUpdateSettings ResetHelp(this AzureSfClusterDurabilityUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -3673,17 +4577,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureSfClusterNodeAddSettings SetOutput(this AzureSfClusterNodeAddSettings toolSettings, Output output)
+        public static AzureSfClusterDurabilityUpdateSettings SetOutput(this AzureSfClusterDurabilityUpdateSettings toolSettings, Output output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureSfClusterNodeAddSettings ResetOutput(this AzureSfClusterNodeAddSettings toolSettings)
+        public static AzureSfClusterDurabilityUpdateSettings ResetOutput(this AzureSfClusterDurabilityUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -3691,17 +4595,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeAddSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureSfClusterNodeAddSettings SetQuery(this AzureSfClusterNodeAddSettings toolSettings, string query)
+        public static AzureSfClusterDurabilityUpdateSettings SetQuery(this AzureSfClusterDurabilityUpdateSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeAddSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureSfClusterNodeAddSettings ResetQuery(this AzureSfClusterNodeAddSettings toolSettings)
+        public static AzureSfClusterDurabilityUpdateSettings ResetQuery(this AzureSfClusterDurabilityUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -3709,921 +4613,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureSfClusterNodeAddSettings SetVerbose(this AzureSfClusterNodeAddSettings toolSettings, string verbose)
+        public static AzureSfClusterDurabilityUpdateSettings SetVerbose(this AzureSfClusterDurabilityUpdateSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureSfClusterNodeAddSettings ResetVerbose(this AzureSfClusterNodeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSfClusterNodeRemoveSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureSfTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSfClusterNodeRemoveSettingsExtensions
-    {
-        #region ClusterName
-        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings SetClusterName(this AzureSfClusterNodeRemoveSettings toolSettings, string clusterName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = clusterName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings ResetClusterName(this AzureSfClusterNodeRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NodeType
-        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.NodeType"/>.</em></p><p>The Node type name.</p></summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings SetNodeType(this AzureSfClusterNodeRemoveSettings toolSettings, string nodeType)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NodeType = nodeType;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.NodeType"/>.</em></p><p>The Node type name.</p></summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings ResetNodeType(this AzureSfClusterNodeRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NodeType = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NumberOfNodesToRemove
-        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.NumberOfNodesToRemove"/>.</em></p><p>Number of nodes to remove.</p></summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings SetNumberOfNodesToRemove(this AzureSfClusterNodeRemoveSettings toolSettings, int? numberOfNodesToRemove)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NumberOfNodesToRemove = numberOfNodesToRemove;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.NumberOfNodesToRemove"/>.</em></p><p>Number of nodes to remove.</p></summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings ResetNumberOfNodesToRemove(this AzureSfClusterNodeRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NumberOfNodesToRemove = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings SetResourceGroup(this AzureSfClusterNodeRemoveSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings ResetResourceGroup(this AzureSfClusterNodeRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings SetDebug(this AzureSfClusterNodeRemoveSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings ResetDebug(this AzureSfClusterNodeRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings SetHelp(this AzureSfClusterNodeRemoveSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings ResetHelp(this AzureSfClusterNodeRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings SetOutput(this AzureSfClusterNodeRemoveSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings ResetOutput(this AzureSfClusterNodeRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings SetQuery(this AzureSfClusterNodeRemoveSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings ResetQuery(this AzureSfClusterNodeRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings SetVerbose(this AzureSfClusterNodeRemoveSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings ResetVerbose(this AzureSfClusterNodeRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSfClusterReliabilityUpdateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureSfTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSfClusterReliabilityUpdateSettingsExtensions
-    {
-        #region ClusterName
-        /// <summary><p><em>Sets <see cref="AzureSfClusterReliabilityUpdateSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterReliabilityUpdateSettings SetClusterName(this AzureSfClusterReliabilityUpdateSettings toolSettings, string clusterName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = clusterName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterReliabilityUpdateSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterReliabilityUpdateSettings ResetClusterName(this AzureSfClusterReliabilityUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ReliabilityLevel
-        /// <summary><p><em>Sets <see cref="AzureSfClusterReliabilityUpdateSettings.ReliabilityLevel"/>.</em></p><p>Durability level.</p></summary>
-        [Pure]
-        public static AzureSfClusterReliabilityUpdateSettings SetReliabilityLevel(this AzureSfClusterReliabilityUpdateSettings toolSettings, SfClusterDurabilityUpdateDurabilityLevel reliabilityLevel)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ReliabilityLevel = reliabilityLevel;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterReliabilityUpdateSettings.ReliabilityLevel"/>.</em></p><p>Durability level.</p></summary>
-        [Pure]
-        public static AzureSfClusterReliabilityUpdateSettings ResetReliabilityLevel(this AzureSfClusterReliabilityUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ReliabilityLevel = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureSfClusterReliabilityUpdateSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterReliabilityUpdateSettings SetResourceGroup(this AzureSfClusterReliabilityUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterReliabilityUpdateSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterReliabilityUpdateSettings ResetResourceGroup(this AzureSfClusterReliabilityUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region AutoAddNode
-        /// <summary><p><em>Sets <see cref="AzureSfClusterReliabilityUpdateSettings.AutoAddNode"/>.</em></p><p>Add node count automatically when changing reliability.</p></summary>
-        [Pure]
-        public static AzureSfClusterReliabilityUpdateSettings SetAutoAddNode(this AzureSfClusterReliabilityUpdateSettings toolSettings, string autoAddNode)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AutoAddNode = autoAddNode;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterReliabilityUpdateSettings.AutoAddNode"/>.</em></p><p>Add node count automatically when changing reliability.</p></summary>
-        [Pure]
-        public static AzureSfClusterReliabilityUpdateSettings ResetAutoAddNode(this AzureSfClusterReliabilityUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AutoAddNode = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureSfClusterReliabilityUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureSfClusterReliabilityUpdateSettings SetDebug(this AzureSfClusterReliabilityUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterReliabilityUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureSfClusterReliabilityUpdateSettings ResetDebug(this AzureSfClusterReliabilityUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureSfClusterReliabilityUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureSfClusterReliabilityUpdateSettings SetHelp(this AzureSfClusterReliabilityUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterReliabilityUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureSfClusterReliabilityUpdateSettings ResetHelp(this AzureSfClusterReliabilityUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureSfClusterReliabilityUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureSfClusterReliabilityUpdateSettings SetOutput(this AzureSfClusterReliabilityUpdateSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterReliabilityUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureSfClusterReliabilityUpdateSettings ResetOutput(this AzureSfClusterReliabilityUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureSfClusterReliabilityUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureSfClusterReliabilityUpdateSettings SetQuery(this AzureSfClusterReliabilityUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterReliabilityUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureSfClusterReliabilityUpdateSettings ResetQuery(this AzureSfClusterReliabilityUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureSfClusterReliabilityUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureSfClusterReliabilityUpdateSettings SetVerbose(this AzureSfClusterReliabilityUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterReliabilityUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureSfClusterReliabilityUpdateSettings ResetVerbose(this AzureSfClusterReliabilityUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSfClusterSettingRemoveSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureSfTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSfClusterSettingRemoveSettingsExtensions
-    {
-        #region ClusterName
-        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingRemoveSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingRemoveSettings SetClusterName(this AzureSfClusterSettingRemoveSettings toolSettings, string clusterName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = clusterName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingRemoveSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingRemoveSettings ResetClusterName(this AzureSfClusterSettingRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingRemoveSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingRemoveSettings SetResourceGroup(this AzureSfClusterSettingRemoveSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingRemoveSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingRemoveSettings ResetResourceGroup(this AzureSfClusterSettingRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Parameter
-        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingRemoveSettings.Parameter"/>.</em></p><p>Parameter name.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingRemoveSettings SetParameter(this AzureSfClusterSettingRemoveSettings toolSettings, string parameter)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Parameter = parameter;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingRemoveSettings.Parameter"/>.</em></p><p>Parameter name.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingRemoveSettings ResetParameter(this AzureSfClusterSettingRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Parameter = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Section
-        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingRemoveSettings.Section"/>.</em></p><p>Section name.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingRemoveSettings SetSection(this AzureSfClusterSettingRemoveSettings toolSettings, string section)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Section = section;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingRemoveSettings.Section"/>.</em></p><p>Section name.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingRemoveSettings ResetSection(this AzureSfClusterSettingRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Section = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SettingsSectionDescription
-        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingRemoveSettings.SettingsSectionDescription"/>.</em></p><p>JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{"section": "NamingService","parameter": "MaxOperationTimeout"}].</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingRemoveSettings SetSettingsSectionDescription(this AzureSfClusterSettingRemoveSettings toolSettings, string settingsSectionDescription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SettingsSectionDescription = settingsSectionDescription;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingRemoveSettings.SettingsSectionDescription"/>.</em></p><p>JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{"section": "NamingService","parameter": "MaxOperationTimeout"}].</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingRemoveSettings ResetSettingsSectionDescription(this AzureSfClusterSettingRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SettingsSectionDescription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingRemoveSettings SetDebug(this AzureSfClusterSettingRemoveSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingRemoveSettings ResetDebug(this AzureSfClusterSettingRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingRemoveSettings SetHelp(this AzureSfClusterSettingRemoveSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingRemoveSettings ResetHelp(this AzureSfClusterSettingRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingRemoveSettings SetOutput(this AzureSfClusterSettingRemoveSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingRemoveSettings ResetOutput(this AzureSfClusterSettingRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingRemoveSettings SetQuery(this AzureSfClusterSettingRemoveSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingRemoveSettings ResetQuery(this AzureSfClusterSettingRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingRemoveSettings SetVerbose(this AzureSfClusterSettingRemoveSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingRemoveSettings ResetVerbose(this AzureSfClusterSettingRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSfClusterSettingSetSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureSfTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSfClusterSettingSetSettingsExtensions
-    {
-        #region ClusterName
-        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingSetSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingSetSettings SetClusterName(this AzureSfClusterSettingSetSettings toolSettings, string clusterName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = clusterName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingSetSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingSetSettings ResetClusterName(this AzureSfClusterSettingSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingSetSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingSetSettings SetResourceGroup(this AzureSfClusterSettingSetSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingSetSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingSetSettings ResetResourceGroup(this AzureSfClusterSettingSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Parameter
-        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingSetSettings.Parameter"/>.</em></p><p>Parameter name.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingSetSettings SetParameter(this AzureSfClusterSettingSetSettings toolSettings, string parameter)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Parameter = parameter;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingSetSettings.Parameter"/>.</em></p><p>Parameter name.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingSetSettings ResetParameter(this AzureSfClusterSettingSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Parameter = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Section
-        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingSetSettings.Section"/>.</em></p><p>Section name.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingSetSettings SetSection(this AzureSfClusterSettingSetSettings toolSettings, string section)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Section = section;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingSetSettings.Section"/>.</em></p><p>Section name.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingSetSettings ResetSection(this AzureSfClusterSettingSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Section = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SettingsSectionDescription
-        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingSetSettings.SettingsSectionDescription"/>.</em></p><p>JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{"section": "NamingService","parameter": "MaxOperationTimeout","value": 1000},{"section": "MaxFileOperationTimeout","parameter": "Max2","value": 1000].</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingSetSettings SetSettingsSectionDescription(this AzureSfClusterSettingSetSettings toolSettings, string settingsSectionDescription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SettingsSectionDescription = settingsSectionDescription;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingSetSettings.SettingsSectionDescription"/>.</em></p><p>JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{"section": "NamingService","parameter": "MaxOperationTimeout","value": 1000},{"section": "MaxFileOperationTimeout","parameter": "Max2","value": 1000].</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingSetSettings ResetSettingsSectionDescription(this AzureSfClusterSettingSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SettingsSectionDescription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Value
-        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingSetSettings.Value"/>.</em></p><p>Specify the value.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingSetSettings SetValue(this AzureSfClusterSettingSetSettings toolSettings, string value)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Value = value;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingSetSettings.Value"/>.</em></p><p>Specify the value.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingSetSettings ResetValue(this AzureSfClusterSettingSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Value = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingSetSettings SetDebug(this AzureSfClusterSettingSetSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingSetSettings ResetDebug(this AzureSfClusterSettingSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingSetSettings SetHelp(this AzureSfClusterSettingSetSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingSetSettings ResetHelp(this AzureSfClusterSettingSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingSetSettings SetOutput(this AzureSfClusterSettingSetSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingSetSettings ResetOutput(this AzureSfClusterSettingSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingSetSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingSetSettings SetQuery(this AzureSfClusterSettingSetSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingSetSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingSetSettings ResetQuery(this AzureSfClusterSettingSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureSfClusterSettingSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingSetSettings SetVerbose(this AzureSfClusterSettingSetSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterSettingSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureSfClusterSettingSetSettings ResetVerbose(this AzureSfClusterSettingSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSfClusterUpgradeTypeSetSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureSfTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSfClusterUpgradeTypeSetSettingsExtensions
-    {
-        #region ClusterName
-        /// <summary><p><em>Sets <see cref="AzureSfClusterUpgradeTypeSetSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterUpgradeTypeSetSettings SetClusterName(this AzureSfClusterUpgradeTypeSetSettings toolSettings, string clusterName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = clusterName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterUpgradeTypeSetSettings.ClusterName"/>.</em></p><p>Specify the name of the cluster, if not given it will be same as resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterUpgradeTypeSetSettings ResetClusterName(this AzureSfClusterUpgradeTypeSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureSfClusterUpgradeTypeSetSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterUpgradeTypeSetSettings SetResourceGroup(this AzureSfClusterUpgradeTypeSetSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterUpgradeTypeSetSettings.ResourceGroup"/>.</em></p><p>The resource group name.</p></summary>
-        [Pure]
-        public static AzureSfClusterUpgradeTypeSetSettings ResetResourceGroup(this AzureSfClusterUpgradeTypeSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region UpgradeMode
-        /// <summary><p><em>Sets <see cref="AzureSfClusterUpgradeTypeSetSettings.UpgradeMode"/>.</em></p><p>Cluster upgrade mode.</p></summary>
-        [Pure]
-        public static AzureSfClusterUpgradeTypeSetSettings SetUpgradeMode(this AzureSfClusterUpgradeTypeSetSettings toolSettings, SfClusterUpgradeTypeSetUpgradeMode upgradeMode)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.UpgradeMode = upgradeMode;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterUpgradeTypeSetSettings.UpgradeMode"/>.</em></p><p>Cluster upgrade mode.</p></summary>
-        [Pure]
-        public static AzureSfClusterUpgradeTypeSetSettings ResetUpgradeMode(this AzureSfClusterUpgradeTypeSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.UpgradeMode = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Version
-        /// <summary><p><em>Sets <see cref="AzureSfClusterUpgradeTypeSetSettings.Version"/>.</em></p><p>Cluster code version.</p></summary>
-        [Pure]
-        public static AzureSfClusterUpgradeTypeSetSettings SetVersion(this AzureSfClusterUpgradeTypeSetSettings toolSettings, string version)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Version = version;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterUpgradeTypeSetSettings.Version"/>.</em></p><p>Cluster code version.</p></summary>
-        [Pure]
-        public static AzureSfClusterUpgradeTypeSetSettings ResetVersion(this AzureSfClusterUpgradeTypeSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Version = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureSfClusterUpgradeTypeSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureSfClusterUpgradeTypeSetSettings SetDebug(this AzureSfClusterUpgradeTypeSetSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterUpgradeTypeSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureSfClusterUpgradeTypeSetSettings ResetDebug(this AzureSfClusterUpgradeTypeSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureSfClusterUpgradeTypeSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureSfClusterUpgradeTypeSetSettings SetHelp(this AzureSfClusterUpgradeTypeSetSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterUpgradeTypeSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureSfClusterUpgradeTypeSetSettings ResetHelp(this AzureSfClusterUpgradeTypeSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureSfClusterUpgradeTypeSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureSfClusterUpgradeTypeSetSettings SetOutput(this AzureSfClusterUpgradeTypeSetSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterUpgradeTypeSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureSfClusterUpgradeTypeSetSettings ResetOutput(this AzureSfClusterUpgradeTypeSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureSfClusterUpgradeTypeSetSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureSfClusterUpgradeTypeSetSettings SetQuery(this AzureSfClusterUpgradeTypeSetSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterUpgradeTypeSetSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureSfClusterUpgradeTypeSetSettings ResetQuery(this AzureSfClusterUpgradeTypeSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureSfClusterUpgradeTypeSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureSfClusterUpgradeTypeSetSettings SetVerbose(this AzureSfClusterUpgradeTypeSetSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSfClusterUpgradeTypeSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureSfClusterUpgradeTypeSetSettings ResetVerbose(this AzureSfClusterUpgradeTypeSetSettings toolSettings)
+        public static AzureSfClusterDurabilityUpdateSettings ResetVerbose(this AzureSfClusterDurabilityUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -4644,17 +4644,6 @@ namespace Nuke.Azure
         public static SfClusterCreateOs windowsserver2016datacenterwithcontainers = new SfClusterCreateOs { Value = "windowsserver2016datacenterwithcontainers" };
     }
     #endregion
-    #region SfClusterDurabilityUpdateDurabilityLevel
-    /// <summary><p>Used within <see cref="AzureSfTasks"/>.</p></summary>
-    [PublicAPI]
-    [Serializable]
-    public partial class SfClusterDurabilityUpdateDurabilityLevel : Enumeration
-    {
-        public static SfClusterDurabilityUpdateDurabilityLevel bronze = new SfClusterDurabilityUpdateDurabilityLevel { Value = "bronze" };
-        public static SfClusterDurabilityUpdateDurabilityLevel gold = new SfClusterDurabilityUpdateDurabilityLevel { Value = "gold" };
-        public static SfClusterDurabilityUpdateDurabilityLevel silver = new SfClusterDurabilityUpdateDurabilityLevel { Value = "silver" };
-    }
-    #endregion
     #region SfClusterUpgradeTypeSetUpgradeMode
     /// <summary><p>Used within <see cref="AzureSfTasks"/>.</p></summary>
     [PublicAPI]
@@ -4663,6 +4652,17 @@ namespace Nuke.Azure
     {
         public static SfClusterUpgradeTypeSetUpgradeMode automatic = new SfClusterUpgradeTypeSetUpgradeMode { Value = "automatic" };
         public static SfClusterUpgradeTypeSetUpgradeMode manual = new SfClusterUpgradeTypeSetUpgradeMode { Value = "manual" };
+    }
+    #endregion
+    #region SfClusterReliabilityUpdateReliabilityLevel
+    /// <summary><p>Used within <see cref="AzureSfTasks"/>.</p></summary>
+    [PublicAPI]
+    [Serializable]
+    public partial class SfClusterReliabilityUpdateReliabilityLevel : Enumeration
+    {
+        public static SfClusterReliabilityUpdateReliabilityLevel bronze = new SfClusterReliabilityUpdateReliabilityLevel { Value = "bronze" };
+        public static SfClusterReliabilityUpdateReliabilityLevel gold = new SfClusterReliabilityUpdateReliabilityLevel { Value = "gold" };
+        public static SfClusterReliabilityUpdateReliabilityLevel silver = new SfClusterReliabilityUpdateReliabilityLevel { Value = "silver" };
     }
     #endregion
 }

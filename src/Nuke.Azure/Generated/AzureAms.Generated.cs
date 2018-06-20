@@ -45,61 +45,6 @@ namespace Nuke.Azure
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
-        static partial void PreProcess(AzureAmsAccountCreateSettings toolSettings);
-        static partial void PostProcess(AzureAmsAccountCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Media Services resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ams?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAmsAccountCreate(Configure<AzureAmsAccountCreateSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAmsAccountCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureAmsAccountDeleteSettings toolSettings);
-        static partial void PostProcess(AzureAmsAccountDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Media Services resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ams?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAmsAccountDelete(Configure<AzureAmsAccountDeleteSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAmsAccountDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureAmsAccountListSettings toolSettings);
-        static partial void PostProcess(AzureAmsAccountListSettings toolSettings);
-        /// <summary><p>Manage Azure Media Services resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ams?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAmsAccountList(Configure<AzureAmsAccountListSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAmsAccountListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureAmsAccountShowSettings toolSettings);
-        static partial void PostProcess(AzureAmsAccountShowSettings toolSettings);
-        /// <summary><p>Manage Azure Media Services resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ams?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAmsAccountShow(Configure<AzureAmsAccountShowSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAmsAccountShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureAmsAccountUpdateSettings toolSettings);
-        static partial void PostProcess(AzureAmsAccountUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Media Services resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ams?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAmsAccountUpdate(Configure<AzureAmsAccountUpdateSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAmsAccountUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
         static partial void PreProcess(AzureAmsAssetCreateSettings toolSettings);
         static partial void PostProcess(AzureAmsAssetCreateSettings toolSettings);
         /// <summary><p>Manage Azure Media Services resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ams?view=azure-cli-latest">official website</a>.</p></summary>
@@ -221,12 +166,56 @@ namespace Nuke.Azure
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
-        static partial void PreProcess(AzureAmsStreamingSettings toolSettings);
-        static partial void PostProcess(AzureAmsStreamingSettings toolSettings);
+        static partial void PreProcess(AzureAmsAccountCreateSettings toolSettings);
+        static partial void PostProcess(AzureAmsAccountCreateSettings toolSettings);
         /// <summary><p>Manage Azure Media Services resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ams?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAmsStreaming(Configure<AzureAmsStreamingSettings> configurator = null, ProcessSettings processSettings = null)
+        public static void AzureAmsAccountCreate(Configure<AzureAmsAccountCreateSettings> configurator = null, ProcessSettings processSettings = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureAmsStreamingSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureAmsAccountCreateSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureAmsAccountDeleteSettings toolSettings);
+        static partial void PostProcess(AzureAmsAccountDeleteSettings toolSettings);
+        /// <summary><p>Manage Azure Media Services resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ams?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureAmsAccountDelete(Configure<AzureAmsAccountDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAmsAccountDeleteSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureAmsAccountListSettings toolSettings);
+        static partial void PostProcess(AzureAmsAccountListSettings toolSettings);
+        /// <summary><p>Manage Azure Media Services resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ams?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureAmsAccountList(Configure<AzureAmsAccountListSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAmsAccountListSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureAmsAccountShowSettings toolSettings);
+        static partial void PostProcess(AzureAmsAccountShowSettings toolSettings);
+        /// <summary><p>Manage Azure Media Services resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ams?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureAmsAccountShow(Configure<AzureAmsAccountShowSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAmsAccountShowSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureAmsAccountUpdateSettings toolSettings);
+        static partial void PostProcess(AzureAmsAccountUpdateSettings toolSettings);
+        /// <summary><p>Manage Azure Media Services resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ams?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureAmsAccountUpdate(Configure<AzureAmsAccountUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAmsAccountUpdateSettings());
             PreProcess(toolSettings);
             var process = ProcessTasks.StartProcess(toolSettings, processSettings);
             process.AssertZeroExitCode();
@@ -287,6 +276,39 @@ namespace Nuke.Azure
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
+        static partial void PreProcess(AzureAmsStreamingSettings toolSettings);
+        static partial void PostProcess(AzureAmsStreamingSettings toolSettings);
+        /// <summary><p>Manage Azure Media Services resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ams?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureAmsStreaming(Configure<AzureAmsStreamingSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAmsStreamingSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureAmsTransformOutputAddSettings toolSettings);
+        static partial void PostProcess(AzureAmsTransformOutputAddSettings toolSettings);
+        /// <summary><p>Manage Azure Media Services resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ams?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureAmsTransformOutputAdd(Configure<AzureAmsTransformOutputAddSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAmsTransformOutputAddSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureAmsTransformOutputRemoveSettings toolSettings);
+        static partial void PostProcess(AzureAmsTransformOutputRemoveSettings toolSettings);
+        /// <summary><p>Manage Azure Media Services resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ams?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureAmsTransformOutputRemove(Configure<AzureAmsTransformOutputRemoveSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAmsTransformOutputRemoveSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
         static partial void PreProcess(AzureAmsAccountSpCreateSettings toolSettings);
         static partial void PostProcess(AzureAmsAccountSpCreateSettings toolSettings);
         /// <summary><p>Manage Azure Media Services resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ams?view=azure-cli-latest">official website</a>.</p></summary>
@@ -326,6 +348,50 @@ namespace Nuke.Azure
         public static void AzureAmsAccountStorageRemove(Configure<AzureAmsAccountStorageRemoveSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAmsAccountStorageRemoveSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureAmsStreamingPolicyCreateSettings toolSettings);
+        static partial void PostProcess(AzureAmsStreamingPolicyCreateSettings toolSettings);
+        /// <summary><p>Manage Azure Media Services resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ams?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureAmsStreamingPolicyCreate(Configure<AzureAmsStreamingPolicyCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAmsStreamingPolicyCreateSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureAmsStreamingPolicyDeleteSettings toolSettings);
+        static partial void PostProcess(AzureAmsStreamingPolicyDeleteSettings toolSettings);
+        /// <summary><p>Manage Azure Media Services resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ams?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureAmsStreamingPolicyDelete(Configure<AzureAmsStreamingPolicyDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAmsStreamingPolicyDeleteSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureAmsStreamingPolicyListSettings toolSettings);
+        static partial void PostProcess(AzureAmsStreamingPolicyListSettings toolSettings);
+        /// <summary><p>Manage Azure Media Services resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ams?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureAmsStreamingPolicyList(Configure<AzureAmsStreamingPolicyListSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAmsStreamingPolicyListSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureAmsStreamingPolicyShowSettings toolSettings);
+        static partial void PostProcess(AzureAmsStreamingPolicyShowSettings toolSettings);
+        /// <summary><p>Manage Azure Media Services resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ams?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureAmsStreamingPolicyShow(Configure<AzureAmsStreamingPolicyShowSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAmsStreamingPolicyShowSettings());
             PreProcess(toolSettings);
             var process = ProcessTasks.StartProcess(toolSettings, processSettings);
             process.AssertZeroExitCode();
@@ -419,72 +485,6 @@ namespace Nuke.Azure
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
-        static partial void PreProcess(AzureAmsStreamingPolicyCreateSettings toolSettings);
-        static partial void PostProcess(AzureAmsStreamingPolicyCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Media Services resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ams?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAmsStreamingPolicyCreate(Configure<AzureAmsStreamingPolicyCreateSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAmsStreamingPolicyCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureAmsStreamingPolicyDeleteSettings toolSettings);
-        static partial void PostProcess(AzureAmsStreamingPolicyDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Media Services resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ams?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAmsStreamingPolicyDelete(Configure<AzureAmsStreamingPolicyDeleteSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAmsStreamingPolicyDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureAmsStreamingPolicyListSettings toolSettings);
-        static partial void PostProcess(AzureAmsStreamingPolicyListSettings toolSettings);
-        /// <summary><p>Manage Azure Media Services resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ams?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAmsStreamingPolicyList(Configure<AzureAmsStreamingPolicyListSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAmsStreamingPolicyListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureAmsStreamingPolicyShowSettings toolSettings);
-        static partial void PostProcess(AzureAmsStreamingPolicyShowSettings toolSettings);
-        /// <summary><p>Manage Azure Media Services resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ams?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAmsStreamingPolicyShow(Configure<AzureAmsStreamingPolicyShowSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAmsStreamingPolicyShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureAmsTransformOutputAddSettings toolSettings);
-        static partial void PostProcess(AzureAmsTransformOutputAddSettings toolSettings);
-        /// <summary><p>Manage Azure Media Services resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ams?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAmsTransformOutputAdd(Configure<AzureAmsTransformOutputAddSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAmsTransformOutputAddSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureAmsTransformOutputRemoveSettings toolSettings);
-        static partial void PostProcess(AzureAmsTransformOutputRemoveSettings toolSettings);
-        /// <summary><p>Manage Azure Media Services resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ams?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAmsTransformOutputRemove(Configure<AzureAmsTransformOutputRemoveSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAmsTransformOutputRemoveSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
     }
     #region AzureAmsSettings
     /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
@@ -501,7 +501,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -509,214 +509,6 @@ namespace Nuke.Azure
         {
             arguments
               .Add("ams")
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAmsAccountCreateSettings
-    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAmsAccountCreateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAms executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAmsTasks.AzureAmsPath;
-        /// <summary><p>The name of the Azure Media Services account.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name or resource ID of the primary storage account to attach to the Azure Media Services account. Blob only accounts are not allowed as primary.</p></summary>
-        public virtual string StorageAccount { get; internal set; }
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        public virtual string Location { get; internal set; }
-        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        public virtual string Tags { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("ams account create")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--storage-account {value}", StorageAccount)
-              .Add("--location {value}", Location)
-              .Add("--tags {value}", Tags)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAmsAccountDeleteSettings
-    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAmsAccountDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAms executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAmsTasks.AzureAmsPath;
-        /// <summary><p>The name of the Azure Media Services account.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("ams account delete")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAmsAccountListSettings
-    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAmsAccountListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAms executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAmsTasks.AzureAmsPath;
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("ams account list")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAmsAccountShowSettings
-    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAmsAccountShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAms executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAmsTasks.AzureAmsPath;
-        /// <summary><p>The name of the Azure Media Services account.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("ams account show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAmsAccountUpdateSettings
-    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAmsAccountUpdateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAms executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAmsTasks.AzureAmsPath;
-        /// <summary><p>The name of the Azure Media Services account.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        public virtual string Tags { get; internal set; }
-        /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        public virtual string Add { get; internal set; }
-        /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        public virtual string Remove { get; internal set; }
-        /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        public virtual string Set { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("ams account update")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--tags {value}", Tags)
-              .Add("--add {value}", Add)
-              .Add("--remove {value}", Remove)
-              .Add("--set {value}", Set)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -751,7 +543,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -794,7 +586,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -839,7 +631,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -886,7 +678,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -929,7 +721,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -980,7 +772,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1030,7 +822,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1075,7 +867,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1123,7 +915,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1169,7 +961,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1227,7 +1019,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1254,29 +1046,205 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureAmsStreamingSettings
+    #region AzureAmsAccountCreateSettings
     /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureAmsStreamingSettings : ToolSettings
+    public partial class AzureAmsAccountCreateSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureAms executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureAmsTasks.AzureAmsPath;
+        /// <summary><p>The name of the Azure Media Services account.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name or resource ID of the primary storage account to attach to the Azure Media Services account. Blob only accounts are not allowed as primary.</p></summary>
+        public virtual string StorageAccount { get; internal set; }
+        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        public virtual string Location { get; internal set; }
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        public virtual string Tags { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("ams streaming")
+              .Add("ams account create")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--storage-account {value}", StorageAccount)
+              .Add("--location {value}", Location)
+              .Add("--tags {value}", Tags)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAmsAccountDeleteSettings
+    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAmsAccountDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAms executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAmsTasks.AzureAmsPath;
+        /// <summary><p>The name of the Azure Media Services account.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("ams account delete")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAmsAccountListSettings
+    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAmsAccountListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAms executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAmsTasks.AzureAmsPath;
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("ams account list")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAmsAccountShowSettings
+    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAmsAccountShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAms executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAmsTasks.AzureAmsPath;
+        /// <summary><p>The name of the Azure Media Services account.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("ams account show")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAmsAccountUpdateSettings
+    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAmsAccountUpdateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAms executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAmsTasks.AzureAmsPath;
+        /// <summary><p>The name of the Azure Media Services account.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        public virtual string Tags { get; internal set; }
+        /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        public virtual string Add { get; internal set; }
+        /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        public virtual string Remove { get; internal set; }
+        /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        public virtual string Set { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("ams account update")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--tags {value}", Tags)
+              .Add("--add {value}", Add)
+              .Add("--remove {value}", Remove)
+              .Add("--set {value}", Set)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1312,7 +1280,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1355,7 +1323,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1400,7 +1368,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1443,7 +1411,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1495,7 +1463,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1511,6 +1479,128 @@ namespace Nuke.Azure
               .Add("--add {value}", Add)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAmsStreamingSettings
+    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAmsStreamingSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAms executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAmsTasks.AzureAmsPath;
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("ams streaming")
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAmsTransformOutputAddSettings
+    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAmsTransformOutputAddSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAms executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAmsTasks.AzureAmsPath;
+        /// <summary><p>The name of the Azure Media Services account.</p></summary>
+        public virtual string AccountName { get; internal set; }
+        /// <summary><p>The name of the transform.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Space-separated list of built-in preset names.</p></summary>
+        public virtual IReadOnlyList<AmsTransformPresetNames> PresetNames => PresetNamesInternal.AsReadOnly();
+        internal List<AmsTransformPresetNames> PresetNamesInternal { get; set; } = new List<AmsTransformPresetNames>();
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("ams transform output add")
+              .Add("--account-name {value}", AccountName)
+              .Add("--name {value}", Name)
+              .Add("--preset-names {value}", PresetNames, separator: ' ')
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAmsTransformOutputRemoveSettings
+    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAmsTransformOutputRemoveSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAms executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAmsTasks.AzureAmsPath;
+        /// <summary><p>The name of the Azure Media Services account.</p></summary>
+        public virtual string AccountName { get; internal set; }
+        /// <summary><p>The name of the transform.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Space-separated list of built-in preset names.</p></summary>
+        public virtual IReadOnlyList<AmsTransformPresetNames> PresetNames => PresetNamesInternal.AsReadOnly();
+        internal List<AmsTransformPresetNames> PresetNamesInternal { get; set; } = new List<AmsTransformPresetNames>();
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("ams transform output remove")
+              .Add("--account-name {value}", AccountName)
+              .Add("--name {value}", Name)
+              .Add("--preset-names {value}", PresetNames, separator: ' ')
+              .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1549,7 +1639,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1602,7 +1692,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1647,7 +1737,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1688,7 +1778,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1696,6 +1786,191 @@ namespace Nuke.Azure
         {
             arguments
               .Add("ams account storage remove")
+              .Add("--account-name {value}", AccountName)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAmsStreamingPolicyCreateSettings
+    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAmsStreamingPolicyCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAms executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAmsTasks.AzureAmsPath;
+        /// <summary><p>The name of the Azure Media Services account.</p></summary>
+        public virtual string AccountName { get; internal set; }
+        /// <summary><p>The name of the streaming policy.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The default content key policy name used by the streaming locator.</p></summary>
+        public virtual string ContentPolicyName { get; internal set; }
+        /// <summary><p>Enable Dash protocol.</p></summary>
+        public virtual bool? Dash { get; internal set; }
+        /// <summary><p>Enable Download protocol.</p></summary>
+        public virtual bool? Download { get; internal set; }
+        /// <summary><p>Enable HLS protocol.</p></summary>
+        public virtual bool? Hls { get; internal set; }
+        /// <summary><p>Enable SmoothStreaming protocol.</p></summary>
+        public virtual bool? SmoothStreaming { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("ams streaming policy create")
+              .Add("--account-name {value}", AccountName)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--content-policy-name {value}", ContentPolicyName)
+              .Add("--dash", Dash)
+              .Add("--download", Download)
+              .Add("--hls", Hls)
+              .Add("--smooth-streaming", SmoothStreaming)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAmsStreamingPolicyDeleteSettings
+    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAmsStreamingPolicyDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAms executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAmsTasks.AzureAmsPath;
+        /// <summary><p>The name of the Azure Media Services account.</p></summary>
+        public virtual string AccountName { get; internal set; }
+        /// <summary><p>The name of the streaming policy.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("ams streaming policy delete")
+              .Add("--account-name {value}", AccountName)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAmsStreamingPolicyListSettings
+    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAmsStreamingPolicyListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAms executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAmsTasks.AzureAmsPath;
+        /// <summary><p>The name of the Azure Media Services account.</p></summary>
+        public virtual string AccountName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Restricts the set of items returned.</p></summary>
+        public virtual string Filter { get; internal set; }
+        /// <summary><p>Specifies the the key by which the result collection should be ordered.</p></summary>
+        public virtual string Orderby { get; internal set; }
+        /// <summary><p>Specifies a non-negative integer n that limits the number of items returned from a collection. The service returns the number of available items up to but not greater than the specified value n.</p></summary>
+        public virtual string Top { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("ams streaming policy list")
+              .Add("--account-name {value}", AccountName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--filter {value}", Filter)
+              .Add("--orderby {value}", Orderby)
+              .Add("--top {value}", Top)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAmsStreamingPolicyShowSettings
+    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAmsStreamingPolicyShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAms executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAmsTasks.AzureAmsPath;
+        /// <summary><p>The name of the Azure Media Services account.</p></summary>
+        public virtual string AccountName { get; internal set; }
+        /// <summary><p>The name of the streaming policy.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("ams streaming policy show")
               .Add("--account-name {value}", AccountName)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
@@ -1727,7 +2002,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1767,7 +2042,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1808,7 +2083,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1859,7 +2134,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1905,7 +2180,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1946,7 +2221,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1991,7 +2266,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -2034,7 +2309,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -2044,281 +2319,6 @@ namespace Nuke.Azure
               .Add("ams streaming locator show")
               .Add("--account-name {value}", AccountName)
               .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAmsStreamingPolicyCreateSettings
-    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAmsStreamingPolicyCreateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAms executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAmsTasks.AzureAmsPath;
-        /// <summary><p>The name of the Azure Media Services account.</p></summary>
-        public virtual string AccountName { get; internal set; }
-        /// <summary><p>The name of the streaming policy.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The default content key policy name used by the streaming locator.</p></summary>
-        public virtual string ContentPolicyName { get; internal set; }
-        /// <summary><p>Enable Dash protocol.</p></summary>
-        public virtual bool? Dash { get; internal set; }
-        /// <summary><p>Enable Download protocol.</p></summary>
-        public virtual bool? Download { get; internal set; }
-        /// <summary><p>Enable HLS protocol.</p></summary>
-        public virtual bool? Hls { get; internal set; }
-        /// <summary><p>Enable SmoothStreaming protocol.</p></summary>
-        public virtual bool? SmoothStreaming { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("ams streaming policy create")
-              .Add("--account-name {value}", AccountName)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--content-policy-name {value}", ContentPolicyName)
-              .Add("--dash", Dash)
-              .Add("--download", Download)
-              .Add("--hls", Hls)
-              .Add("--smooth-streaming", SmoothStreaming)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAmsStreamingPolicyDeleteSettings
-    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAmsStreamingPolicyDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAms executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAmsTasks.AzureAmsPath;
-        /// <summary><p>The name of the Azure Media Services account.</p></summary>
-        public virtual string AccountName { get; internal set; }
-        /// <summary><p>The name of the streaming policy.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("ams streaming policy delete")
-              .Add("--account-name {value}", AccountName)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAmsStreamingPolicyListSettings
-    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAmsStreamingPolicyListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAms executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAmsTasks.AzureAmsPath;
-        /// <summary><p>The name of the Azure Media Services account.</p></summary>
-        public virtual string AccountName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Restricts the set of items returned.</p></summary>
-        public virtual string Filter { get; internal set; }
-        /// <summary><p>Specifies the the key by which the result collection should be ordered.</p></summary>
-        public virtual string Orderby { get; internal set; }
-        /// <summary><p>Specifies a non-negative integer n that limits the number of items returned from a collection. The service returns the number of available items up to but not greater than the specified value n.</p></summary>
-        public virtual string Top { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("ams streaming policy list")
-              .Add("--account-name {value}", AccountName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--filter {value}", Filter)
-              .Add("--orderby {value}", Orderby)
-              .Add("--top {value}", Top)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAmsStreamingPolicyShowSettings
-    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAmsStreamingPolicyShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAms executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAmsTasks.AzureAmsPath;
-        /// <summary><p>The name of the Azure Media Services account.</p></summary>
-        public virtual string AccountName { get; internal set; }
-        /// <summary><p>The name of the streaming policy.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("ams streaming policy show")
-              .Add("--account-name {value}", AccountName)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAmsTransformOutputAddSettings
-    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAmsTransformOutputAddSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAms executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAmsTasks.AzureAmsPath;
-        /// <summary><p>The name of the Azure Media Services account.</p></summary>
-        public virtual string AccountName { get; internal set; }
-        /// <summary><p>The name of the transform.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Space-separated list of built-in preset names.</p></summary>
-        public virtual IReadOnlyList<AmsTransformPresetNames> PresetNames => PresetNamesInternal.AsReadOnly();
-        internal List<AmsTransformPresetNames> PresetNamesInternal { get; set; } = new List<AmsTransformPresetNames>();
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("ams transform output add")
-              .Add("--account-name {value}", AccountName)
-              .Add("--name {value}", Name)
-              .Add("--preset-names {value}", PresetNames, separator: ' ')
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAmsTransformOutputRemoveSettings
-    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAmsTransformOutputRemoveSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAms executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAmsTasks.AzureAmsPath;
-        /// <summary><p>The name of the Azure Media Services account.</p></summary>
-        public virtual string AccountName { get; internal set; }
-        /// <summary><p>The name of the transform.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Space-separated list of built-in preset names.</p></summary>
-        public virtual IReadOnlyList<AmsTransformPresetNames> PresetNames => PresetNamesInternal.AsReadOnly();
-        internal List<AmsTransformPresetNames> PresetNamesInternal { get; set; } = new List<AmsTransformPresetNames>();
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("ams transform output remove")
-              .Add("--account-name {value}", AccountName)
-              .Add("--name {value}", Name)
-              .Add("--preset-names {value}", PresetNames, separator: ' ')
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -2390,7 +2390,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsSettings SetQuery(this AzureAmsSettings toolSettings, string query)
         {
@@ -2398,7 +2398,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsSettings ResetQuery(this AzureAmsSettings toolSettings)
         {
@@ -2419,784 +2419,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureAmsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureAmsSettings ResetVerbose(this AzureAmsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAmsAccountCreateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAmsAccountCreateSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountCreateSettings.Name"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
-        [Pure]
-        public static AzureAmsAccountCreateSettings SetName(this AzureAmsAccountCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountCreateSettings.Name"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
-        [Pure]
-        public static AzureAmsAccountCreateSettings ResetName(this AzureAmsAccountCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAmsAccountCreateSettings SetResourceGroup(this AzureAmsAccountCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAmsAccountCreateSettings ResetResourceGroup(this AzureAmsAccountCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region StorageAccount
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountCreateSettings.StorageAccount"/>.</em></p><p>The name or resource ID of the primary storage account to attach to the Azure Media Services account. Blob only accounts are not allowed as primary.</p></summary>
-        [Pure]
-        public static AzureAmsAccountCreateSettings SetStorageAccount(this AzureAmsAccountCreateSettings toolSettings, string storageAccount)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StorageAccount = storageAccount;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountCreateSettings.StorageAccount"/>.</em></p><p>The name or resource ID of the primary storage account to attach to the Azure Media Services account. Blob only accounts are not allowed as primary.</p></summary>
-        [Pure]
-        public static AzureAmsAccountCreateSettings ResetStorageAccount(this AzureAmsAccountCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StorageAccount = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Location
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAmsAccountCreateSettings SetLocation(this AzureAmsAccountCreateSettings toolSettings, string location)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = location;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAmsAccountCreateSettings ResetLocation(this AzureAmsAccountCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Tags
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureAmsAccountCreateSettings SetTags(this AzureAmsAccountCreateSettings toolSettings, string tags)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = tags;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureAmsAccountCreateSettings ResetTags(this AzureAmsAccountCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsAccountCreateSettings SetDebug(this AzureAmsAccountCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsAccountCreateSettings ResetDebug(this AzureAmsAccountCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAmsAccountCreateSettings SetHelp(this AzureAmsAccountCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAmsAccountCreateSettings ResetHelp(this AzureAmsAccountCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAmsAccountCreateSettings SetOutput(this AzureAmsAccountCreateSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAmsAccountCreateSettings ResetOutput(this AzureAmsAccountCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAmsAccountCreateSettings SetQuery(this AzureAmsAccountCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAmsAccountCreateSettings ResetQuery(this AzureAmsAccountCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsAccountCreateSettings SetVerbose(this AzureAmsAccountCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsAccountCreateSettings ResetVerbose(this AzureAmsAccountCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAmsAccountDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAmsAccountDeleteSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountDeleteSettings.Name"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
-        [Pure]
-        public static AzureAmsAccountDeleteSettings SetName(this AzureAmsAccountDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountDeleteSettings.Name"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
-        [Pure]
-        public static AzureAmsAccountDeleteSettings ResetName(this AzureAmsAccountDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAmsAccountDeleteSettings SetResourceGroup(this AzureAmsAccountDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAmsAccountDeleteSettings ResetResourceGroup(this AzureAmsAccountDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsAccountDeleteSettings SetDebug(this AzureAmsAccountDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsAccountDeleteSettings ResetDebug(this AzureAmsAccountDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAmsAccountDeleteSettings SetHelp(this AzureAmsAccountDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAmsAccountDeleteSettings ResetHelp(this AzureAmsAccountDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAmsAccountDeleteSettings SetOutput(this AzureAmsAccountDeleteSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAmsAccountDeleteSettings ResetOutput(this AzureAmsAccountDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAmsAccountDeleteSettings SetQuery(this AzureAmsAccountDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAmsAccountDeleteSettings ResetQuery(this AzureAmsAccountDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsAccountDeleteSettings SetVerbose(this AzureAmsAccountDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsAccountDeleteSettings ResetVerbose(this AzureAmsAccountDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAmsAccountListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAmsAccountListSettingsExtensions
-    {
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAmsAccountListSettings SetResourceGroup(this AzureAmsAccountListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAmsAccountListSettings ResetResourceGroup(this AzureAmsAccountListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsAccountListSettings SetDebug(this AzureAmsAccountListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsAccountListSettings ResetDebug(this AzureAmsAccountListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAmsAccountListSettings SetHelp(this AzureAmsAccountListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAmsAccountListSettings ResetHelp(this AzureAmsAccountListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAmsAccountListSettings SetOutput(this AzureAmsAccountListSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAmsAccountListSettings ResetOutput(this AzureAmsAccountListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAmsAccountListSettings SetQuery(this AzureAmsAccountListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAmsAccountListSettings ResetQuery(this AzureAmsAccountListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsAccountListSettings SetVerbose(this AzureAmsAccountListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsAccountListSettings ResetVerbose(this AzureAmsAccountListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAmsAccountShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAmsAccountShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountShowSettings.Name"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
-        [Pure]
-        public static AzureAmsAccountShowSettings SetName(this AzureAmsAccountShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountShowSettings.Name"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
-        [Pure]
-        public static AzureAmsAccountShowSettings ResetName(this AzureAmsAccountShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAmsAccountShowSettings SetResourceGroup(this AzureAmsAccountShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAmsAccountShowSettings ResetResourceGroup(this AzureAmsAccountShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsAccountShowSettings SetDebug(this AzureAmsAccountShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsAccountShowSettings ResetDebug(this AzureAmsAccountShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAmsAccountShowSettings SetHelp(this AzureAmsAccountShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAmsAccountShowSettings ResetHelp(this AzureAmsAccountShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAmsAccountShowSettings SetOutput(this AzureAmsAccountShowSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAmsAccountShowSettings ResetOutput(this AzureAmsAccountShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAmsAccountShowSettings SetQuery(this AzureAmsAccountShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAmsAccountShowSettings ResetQuery(this AzureAmsAccountShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsAccountShowSettings SetVerbose(this AzureAmsAccountShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsAccountShowSettings ResetVerbose(this AzureAmsAccountShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAmsAccountUpdateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAmsAccountUpdateSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountUpdateSettings.Name"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
-        [Pure]
-        public static AzureAmsAccountUpdateSettings SetName(this AzureAmsAccountUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountUpdateSettings.Name"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
-        [Pure]
-        public static AzureAmsAccountUpdateSettings ResetName(this AzureAmsAccountUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAmsAccountUpdateSettings SetResourceGroup(this AzureAmsAccountUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAmsAccountUpdateSettings ResetResourceGroup(this AzureAmsAccountUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Tags
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureAmsAccountUpdateSettings SetTags(this AzureAmsAccountUpdateSettings toolSettings, string tags)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = tags;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureAmsAccountUpdateSettings ResetTags(this AzureAmsAccountUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Add
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        [Pure]
-        public static AzureAmsAccountUpdateSettings SetAdd(this AzureAmsAccountUpdateSettings toolSettings, string add)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = add;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        [Pure]
-        public static AzureAmsAccountUpdateSettings ResetAdd(this AzureAmsAccountUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Remove
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        [Pure]
-        public static AzureAmsAccountUpdateSettings SetRemove(this AzureAmsAccountUpdateSettings toolSettings, string remove)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = remove;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        [Pure]
-        public static AzureAmsAccountUpdateSettings ResetRemove(this AzureAmsAccountUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Set
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureAmsAccountUpdateSettings SetSet(this AzureAmsAccountUpdateSettings toolSettings, string set)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = set;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureAmsAccountUpdateSettings ResetSet(this AzureAmsAccountUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsAccountUpdateSettings SetDebug(this AzureAmsAccountUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsAccountUpdateSettings ResetDebug(this AzureAmsAccountUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAmsAccountUpdateSettings SetHelp(this AzureAmsAccountUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAmsAccountUpdateSettings ResetHelp(this AzureAmsAccountUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAmsAccountUpdateSettings SetOutput(this AzureAmsAccountUpdateSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAmsAccountUpdateSettings ResetOutput(this AzureAmsAccountUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAmsAccountUpdateSettings SetQuery(this AzureAmsAccountUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAmsAccountUpdateSettings ResetQuery(this AzureAmsAccountUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsAccountUpdateSettings SetVerbose(this AzureAmsAccountUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsAccountUpdateSettings ResetVerbose(this AzureAmsAccountUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -3356,7 +2578,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsAssetCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsAssetCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsAssetCreateSettings SetQuery(this AzureAmsAssetCreateSettings toolSettings, string query)
         {
@@ -3364,7 +2586,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsAssetCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsAssetCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsAssetCreateSettings ResetQuery(this AzureAmsAssetCreateSettings toolSettings)
         {
@@ -3508,7 +2730,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsAssetDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsAssetDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsAssetDeleteSettings SetQuery(this AzureAmsAssetDeleteSettings toolSettings, string query)
         {
@@ -3516,7 +2738,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsAssetDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsAssetDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsAssetDeleteSettings ResetQuery(this AzureAmsAssetDeleteSettings toolSettings)
         {
@@ -3696,7 +2918,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsAssetGetSasUrlsSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsAssetGetSasUrlsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsAssetGetSasUrlsSettings SetQuery(this AzureAmsAssetGetSasUrlsSettings toolSettings, string query)
         {
@@ -3704,7 +2926,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsAssetGetSasUrlsSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsAssetGetSasUrlsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsAssetGetSasUrlsSettings ResetQuery(this AzureAmsAssetGetSasUrlsSettings toolSettings)
         {
@@ -3884,7 +3106,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsAssetListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsAssetListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsAssetListSettings SetQuery(this AzureAmsAssetListSettings toolSettings, string query)
         {
@@ -3892,7 +3114,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsAssetListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsAssetListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsAssetListSettings ResetQuery(this AzureAmsAssetListSettings toolSettings)
         {
@@ -4036,7 +3258,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsAssetShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsAssetShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsAssetShowSettings SetQuery(this AzureAmsAssetShowSettings toolSettings, string query)
         {
@@ -4044,7 +3266,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsAssetShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsAssetShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsAssetShowSettings ResetQuery(this AzureAmsAssetShowSettings toolSettings)
         {
@@ -4278,7 +3500,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsAssetUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsAssetUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsAssetUpdateSettings SetQuery(this AzureAmsAssetUpdateSettings toolSettings, string query)
         {
@@ -4286,7 +3508,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsAssetUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsAssetUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsAssetUpdateSettings ResetQuery(this AzureAmsAssetUpdateSettings toolSettings)
         {
@@ -4466,7 +3688,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsJobCancelSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsJobCancelSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsJobCancelSettings SetQuery(this AzureAmsJobCancelSettings toolSettings, string query)
         {
@@ -4474,7 +3696,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsJobCancelSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsJobCancelSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsJobCancelSettings ResetQuery(this AzureAmsJobCancelSettings toolSettings)
         {
@@ -4636,7 +3858,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsJobDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsJobDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsJobDeleteSettings SetQuery(this AzureAmsJobDeleteSettings toolSettings, string query)
         {
@@ -4644,7 +3866,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsJobDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsJobDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsJobDeleteSettings ResetQuery(this AzureAmsJobDeleteSettings toolSettings)
         {
@@ -4842,7 +4064,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsJobListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsJobListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsJobListSettings SetQuery(this AzureAmsJobListSettings toolSettings, string query)
         {
@@ -4850,7 +4072,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsJobListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsJobListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsJobListSettings ResetQuery(this AzureAmsJobListSettings toolSettings)
         {
@@ -5012,7 +4234,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsJobShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsJobShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsJobShowSettings SetQuery(this AzureAmsJobShowSettings toolSettings, string query)
         {
@@ -5020,7 +4242,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsJobShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsJobShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsJobShowSettings ResetQuery(this AzureAmsJobShowSettings toolSettings)
         {
@@ -5374,7 +4596,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsJobStartSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsJobStartSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsJobStartSettings SetQuery(this AzureAmsJobStartSettings toolSettings, string query)
         {
@@ -5382,7 +4604,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsJobStartSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsJobStartSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsJobStartSettings ResetQuery(this AzureAmsJobStartSettings toolSettings)
         {
@@ -5411,24 +4633,114 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureAmsStreamingSettingsExtensions
+    #region AzureAmsAccountCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureAmsStreamingSettingsExtensions
+    public static partial class AzureAmsAccountCreateSettingsExtensions
     {
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountCreateSettings.Name"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
         [Pure]
-        public static AzureAmsStreamingSettings SetDebug(this AzureAmsStreamingSettings toolSettings, string debug)
+        public static AzureAmsAccountCreateSettings SetName(this AzureAmsAccountCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountCreateSettings.Name"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
+        [Pure]
+        public static AzureAmsAccountCreateSettings ResetName(this AzureAmsAccountCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAmsAccountCreateSettings SetResourceGroup(this AzureAmsAccountCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAmsAccountCreateSettings ResetResourceGroup(this AzureAmsAccountCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region StorageAccount
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountCreateSettings.StorageAccount"/>.</em></p><p>The name or resource ID of the primary storage account to attach to the Azure Media Services account. Blob only accounts are not allowed as primary.</p></summary>
+        [Pure]
+        public static AzureAmsAccountCreateSettings SetStorageAccount(this AzureAmsAccountCreateSettings toolSettings, string storageAccount)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StorageAccount = storageAccount;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountCreateSettings.StorageAccount"/>.</em></p><p>The name or resource ID of the primary storage account to attach to the Azure Media Services account. Blob only accounts are not allowed as primary.</p></summary>
+        [Pure]
+        public static AzureAmsAccountCreateSettings ResetStorageAccount(this AzureAmsAccountCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StorageAccount = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Location
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAmsAccountCreateSettings SetLocation(this AzureAmsAccountCreateSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAmsAccountCreateSettings ResetLocation(this AzureAmsAccountCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tags
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureAmsAccountCreateSettings SetTags(this AzureAmsAccountCreateSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureAmsAccountCreateSettings ResetTags(this AzureAmsAccountCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsAccountCreateSettings SetDebug(this AzureAmsAccountCreateSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureAmsStreamingSettings ResetDebug(this AzureAmsStreamingSettings toolSettings)
+        public static AzureAmsAccountCreateSettings ResetDebug(this AzureAmsAccountCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -5436,17 +4748,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureAmsStreamingSettings SetHelp(this AzureAmsStreamingSettings toolSettings, string help)
+        public static AzureAmsAccountCreateSettings SetHelp(this AzureAmsAccountCreateSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureAmsStreamingSettings ResetHelp(this AzureAmsStreamingSettings toolSettings)
+        public static AzureAmsAccountCreateSettings ResetHelp(this AzureAmsAccountCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -5454,17 +4766,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAmsStreamingSettings SetOutput(this AzureAmsStreamingSettings toolSettings, Output output)
+        public static AzureAmsAccountCreateSettings SetOutput(this AzureAmsAccountCreateSettings toolSettings, Output output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAmsStreamingSettings ResetOutput(this AzureAmsStreamingSettings toolSettings)
+        public static AzureAmsAccountCreateSettings ResetOutput(this AzureAmsAccountCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -5472,17 +4784,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureAmsStreamingSettings SetQuery(this AzureAmsStreamingSettings toolSettings, string query)
+        public static AzureAmsAccountCreateSettings SetQuery(this AzureAmsAccountCreateSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureAmsStreamingSettings ResetQuery(this AzureAmsStreamingSettings toolSettings)
+        public static AzureAmsAccountCreateSettings ResetQuery(this AzureAmsAccountCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -5490,17 +4802,607 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureAmsStreamingSettings SetVerbose(this AzureAmsStreamingSettings toolSettings, string verbose)
+        public static AzureAmsAccountCreateSettings SetVerbose(this AzureAmsAccountCreateSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureAmsStreamingSettings ResetVerbose(this AzureAmsStreamingSettings toolSettings)
+        public static AzureAmsAccountCreateSettings ResetVerbose(this AzureAmsAccountCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAmsAccountDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAmsAccountDeleteSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountDeleteSettings.Name"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
+        [Pure]
+        public static AzureAmsAccountDeleteSettings SetName(this AzureAmsAccountDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountDeleteSettings.Name"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
+        [Pure]
+        public static AzureAmsAccountDeleteSettings ResetName(this AzureAmsAccountDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAmsAccountDeleteSettings SetResourceGroup(this AzureAmsAccountDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAmsAccountDeleteSettings ResetResourceGroup(this AzureAmsAccountDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsAccountDeleteSettings SetDebug(this AzureAmsAccountDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsAccountDeleteSettings ResetDebug(this AzureAmsAccountDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAmsAccountDeleteSettings SetHelp(this AzureAmsAccountDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAmsAccountDeleteSettings ResetHelp(this AzureAmsAccountDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAmsAccountDeleteSettings SetOutput(this AzureAmsAccountDeleteSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAmsAccountDeleteSettings ResetOutput(this AzureAmsAccountDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAmsAccountDeleteSettings SetQuery(this AzureAmsAccountDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAmsAccountDeleteSettings ResetQuery(this AzureAmsAccountDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsAccountDeleteSettings SetVerbose(this AzureAmsAccountDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsAccountDeleteSettings ResetVerbose(this AzureAmsAccountDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAmsAccountListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAmsAccountListSettingsExtensions
+    {
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAmsAccountListSettings SetResourceGroup(this AzureAmsAccountListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAmsAccountListSettings ResetResourceGroup(this AzureAmsAccountListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsAccountListSettings SetDebug(this AzureAmsAccountListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsAccountListSettings ResetDebug(this AzureAmsAccountListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAmsAccountListSettings SetHelp(this AzureAmsAccountListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAmsAccountListSettings ResetHelp(this AzureAmsAccountListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAmsAccountListSettings SetOutput(this AzureAmsAccountListSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAmsAccountListSettings ResetOutput(this AzureAmsAccountListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAmsAccountListSettings SetQuery(this AzureAmsAccountListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAmsAccountListSettings ResetQuery(this AzureAmsAccountListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsAccountListSettings SetVerbose(this AzureAmsAccountListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsAccountListSettings ResetVerbose(this AzureAmsAccountListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAmsAccountShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAmsAccountShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountShowSettings.Name"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
+        [Pure]
+        public static AzureAmsAccountShowSettings SetName(this AzureAmsAccountShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountShowSettings.Name"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
+        [Pure]
+        public static AzureAmsAccountShowSettings ResetName(this AzureAmsAccountShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAmsAccountShowSettings SetResourceGroup(this AzureAmsAccountShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAmsAccountShowSettings ResetResourceGroup(this AzureAmsAccountShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsAccountShowSettings SetDebug(this AzureAmsAccountShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsAccountShowSettings ResetDebug(this AzureAmsAccountShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAmsAccountShowSettings SetHelp(this AzureAmsAccountShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAmsAccountShowSettings ResetHelp(this AzureAmsAccountShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAmsAccountShowSettings SetOutput(this AzureAmsAccountShowSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAmsAccountShowSettings ResetOutput(this AzureAmsAccountShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAmsAccountShowSettings SetQuery(this AzureAmsAccountShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAmsAccountShowSettings ResetQuery(this AzureAmsAccountShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsAccountShowSettings SetVerbose(this AzureAmsAccountShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsAccountShowSettings ResetVerbose(this AzureAmsAccountShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAmsAccountUpdateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAmsAccountUpdateSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountUpdateSettings.Name"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
+        [Pure]
+        public static AzureAmsAccountUpdateSettings SetName(this AzureAmsAccountUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountUpdateSettings.Name"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
+        [Pure]
+        public static AzureAmsAccountUpdateSettings ResetName(this AzureAmsAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAmsAccountUpdateSettings SetResourceGroup(this AzureAmsAccountUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAmsAccountUpdateSettings ResetResourceGroup(this AzureAmsAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tags
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureAmsAccountUpdateSettings SetTags(this AzureAmsAccountUpdateSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureAmsAccountUpdateSettings ResetTags(this AzureAmsAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Add
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        [Pure]
+        public static AzureAmsAccountUpdateSettings SetAdd(this AzureAmsAccountUpdateSettings toolSettings, string add)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = add;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        [Pure]
+        public static AzureAmsAccountUpdateSettings ResetAdd(this AzureAmsAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Remove
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        [Pure]
+        public static AzureAmsAccountUpdateSettings SetRemove(this AzureAmsAccountUpdateSettings toolSettings, string remove)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = remove;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        [Pure]
+        public static AzureAmsAccountUpdateSettings ResetRemove(this AzureAmsAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Set
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureAmsAccountUpdateSettings SetSet(this AzureAmsAccountUpdateSettings toolSettings, string set)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = set;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureAmsAccountUpdateSettings ResetSet(this AzureAmsAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsAccountUpdateSettings SetDebug(this AzureAmsAccountUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsAccountUpdateSettings ResetDebug(this AzureAmsAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAmsAccountUpdateSettings SetHelp(this AzureAmsAccountUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAmsAccountUpdateSettings ResetHelp(this AzureAmsAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAmsAccountUpdateSettings SetOutput(this AzureAmsAccountUpdateSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAmsAccountUpdateSettings ResetOutput(this AzureAmsAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAmsAccountUpdateSettings SetQuery(this AzureAmsAccountUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAmsAccountUpdateSettings ResetQuery(this AzureAmsAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsAccountUpdateSettings SetVerbose(this AzureAmsAccountUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsAccountUpdateSettings ResetVerbose(this AzureAmsAccountUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -5702,7 +5604,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsTransformCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsTransformCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsTransformCreateSettings SetQuery(this AzureAmsTransformCreateSettings toolSettings, string query)
         {
@@ -5710,7 +5612,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsTransformCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsTransformCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsTransformCreateSettings ResetQuery(this AzureAmsTransformCreateSettings toolSettings)
         {
@@ -5854,7 +5756,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsTransformDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsTransformDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsTransformDeleteSettings SetQuery(this AzureAmsTransformDeleteSettings toolSettings, string query)
         {
@@ -5862,7 +5764,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsTransformDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsTransformDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsTransformDeleteSettings ResetQuery(this AzureAmsTransformDeleteSettings toolSettings)
         {
@@ -6042,7 +5944,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsTransformListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsTransformListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsTransformListSettings SetQuery(this AzureAmsTransformListSettings toolSettings, string query)
         {
@@ -6050,7 +5952,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsTransformListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsTransformListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsTransformListSettings ResetQuery(this AzureAmsTransformListSettings toolSettings)
         {
@@ -6194,7 +6096,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsTransformShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsTransformShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsTransformShowSettings SetQuery(this AzureAmsTransformShowSettings toolSettings, string query)
         {
@@ -6202,7 +6104,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsTransformShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsTransformShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsTransformShowSettings ResetQuery(this AzureAmsTransformShowSettings toolSettings)
         {
@@ -6478,7 +6380,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsTransformUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsTransformUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsTransformUpdateSettings SetQuery(this AzureAmsTransformUpdateSettings toolSettings, string query)
         {
@@ -6486,7 +6388,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsTransformUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsTransformUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsTransformUpdateSettings ResetQuery(this AzureAmsTransformUpdateSettings toolSettings)
         {
@@ -6507,6 +6409,528 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureAmsTransformUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureAmsTransformUpdateSettings ResetVerbose(this AzureAmsTransformUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAmsStreamingSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAmsStreamingSettingsExtensions
+    {
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingSettings SetDebug(this AzureAmsStreamingSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingSettings ResetDebug(this AzureAmsStreamingSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingSettings SetHelp(this AzureAmsStreamingSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingSettings ResetHelp(this AzureAmsStreamingSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingSettings SetOutput(this AzureAmsStreamingSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingSettings ResetOutput(this AzureAmsStreamingSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingSettings SetQuery(this AzureAmsStreamingSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingSettings ResetQuery(this AzureAmsStreamingSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingSettings SetVerbose(this AzureAmsStreamingSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingSettings ResetVerbose(this AzureAmsStreamingSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAmsTransformOutputAddSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAmsTransformOutputAddSettingsExtensions
+    {
+        #region AccountName
+        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputAddSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputAddSettings SetAccountName(this AzureAmsTransformOutputAddSettings toolSettings, string accountName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = accountName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputAddSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputAddSettings ResetAccountName(this AzureAmsTransformOutputAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputAddSettings.Name"/>.</em></p><p>The name of the transform.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputAddSettings SetName(this AzureAmsTransformOutputAddSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputAddSettings.Name"/>.</em></p><p>The name of the transform.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputAddSettings ResetName(this AzureAmsTransformOutputAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region PresetNames
+        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputAddSettings.PresetNames"/> to a new list.</em></p><p>Space-separated list of built-in preset names.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputAddSettings SetPresetNames(this AzureAmsTransformOutputAddSettings toolSettings, params AmsTransformPresetNames[] presetNames)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PresetNamesInternal = presetNames.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputAddSettings.PresetNames"/> to a new list.</em></p><p>Space-separated list of built-in preset names.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputAddSettings SetPresetNames(this AzureAmsTransformOutputAddSettings toolSettings, IEnumerable<AmsTransformPresetNames> presetNames)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PresetNamesInternal = presetNames.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureAmsTransformOutputAddSettings.PresetNames"/>.</em></p><p>Space-separated list of built-in preset names.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputAddSettings AddPresetNames(this AzureAmsTransformOutputAddSettings toolSettings, params AmsTransformPresetNames[] presetNames)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PresetNamesInternal.AddRange(presetNames);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureAmsTransformOutputAddSettings.PresetNames"/>.</em></p><p>Space-separated list of built-in preset names.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputAddSettings AddPresetNames(this AzureAmsTransformOutputAddSettings toolSettings, IEnumerable<AmsTransformPresetNames> presetNames)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PresetNamesInternal.AddRange(presetNames);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureAmsTransformOutputAddSettings.PresetNames"/>.</em></p><p>Space-separated list of built-in preset names.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputAddSettings ClearPresetNames(this AzureAmsTransformOutputAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PresetNamesInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureAmsTransformOutputAddSettings.PresetNames"/>.</em></p><p>Space-separated list of built-in preset names.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputAddSettings RemovePresetNames(this AzureAmsTransformOutputAddSettings toolSettings, params AmsTransformPresetNames[] presetNames)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<AmsTransformPresetNames>(presetNames);
+            toolSettings.PresetNamesInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureAmsTransformOutputAddSettings.PresetNames"/>.</em></p><p>Space-separated list of built-in preset names.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputAddSettings RemovePresetNames(this AzureAmsTransformOutputAddSettings toolSettings, IEnumerable<AmsTransformPresetNames> presetNames)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<AmsTransformPresetNames>(presetNames);
+            toolSettings.PresetNamesInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputAddSettings SetResourceGroup(this AzureAmsTransformOutputAddSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputAddSettings ResetResourceGroup(this AzureAmsTransformOutputAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputAddSettings SetDebug(this AzureAmsTransformOutputAddSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputAddSettings ResetDebug(this AzureAmsTransformOutputAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputAddSettings SetHelp(this AzureAmsTransformOutputAddSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputAddSettings ResetHelp(this AzureAmsTransformOutputAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputAddSettings SetOutput(this AzureAmsTransformOutputAddSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputAddSettings ResetOutput(this AzureAmsTransformOutputAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputAddSettings SetQuery(this AzureAmsTransformOutputAddSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputAddSettings ResetQuery(this AzureAmsTransformOutputAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputAddSettings SetVerbose(this AzureAmsTransformOutputAddSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputAddSettings ResetVerbose(this AzureAmsTransformOutputAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAmsTransformOutputRemoveSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAmsTransformOutputRemoveSettingsExtensions
+    {
+        #region AccountName
+        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputRemoveSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputRemoveSettings SetAccountName(this AzureAmsTransformOutputRemoveSettings toolSettings, string accountName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = accountName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputRemoveSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputRemoveSettings ResetAccountName(this AzureAmsTransformOutputRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputRemoveSettings.Name"/>.</em></p><p>The name of the transform.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputRemoveSettings SetName(this AzureAmsTransformOutputRemoveSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputRemoveSettings.Name"/>.</em></p><p>The name of the transform.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputRemoveSettings ResetName(this AzureAmsTransformOutputRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region PresetNames
+        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputRemoveSettings.PresetNames"/> to a new list.</em></p><p>Space-separated list of built-in preset names.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputRemoveSettings SetPresetNames(this AzureAmsTransformOutputRemoveSettings toolSettings, params AmsTransformPresetNames[] presetNames)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PresetNamesInternal = presetNames.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputRemoveSettings.PresetNames"/> to a new list.</em></p><p>Space-separated list of built-in preset names.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputRemoveSettings SetPresetNames(this AzureAmsTransformOutputRemoveSettings toolSettings, IEnumerable<AmsTransformPresetNames> presetNames)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PresetNamesInternal = presetNames.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureAmsTransformOutputRemoveSettings.PresetNames"/>.</em></p><p>Space-separated list of built-in preset names.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputRemoveSettings AddPresetNames(this AzureAmsTransformOutputRemoveSettings toolSettings, params AmsTransformPresetNames[] presetNames)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PresetNamesInternal.AddRange(presetNames);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureAmsTransformOutputRemoveSettings.PresetNames"/>.</em></p><p>Space-separated list of built-in preset names.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputRemoveSettings AddPresetNames(this AzureAmsTransformOutputRemoveSettings toolSettings, IEnumerable<AmsTransformPresetNames> presetNames)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PresetNamesInternal.AddRange(presetNames);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureAmsTransformOutputRemoveSettings.PresetNames"/>.</em></p><p>Space-separated list of built-in preset names.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputRemoveSettings ClearPresetNames(this AzureAmsTransformOutputRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PresetNamesInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureAmsTransformOutputRemoveSettings.PresetNames"/>.</em></p><p>Space-separated list of built-in preset names.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputRemoveSettings RemovePresetNames(this AzureAmsTransformOutputRemoveSettings toolSettings, params AmsTransformPresetNames[] presetNames)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<AmsTransformPresetNames>(presetNames);
+            toolSettings.PresetNamesInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureAmsTransformOutputRemoveSettings.PresetNames"/>.</em></p><p>Space-separated list of built-in preset names.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputRemoveSettings RemovePresetNames(this AzureAmsTransformOutputRemoveSettings toolSettings, IEnumerable<AmsTransformPresetNames> presetNames)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<AmsTransformPresetNames>(presetNames);
+            toolSettings.PresetNamesInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputRemoveSettings SetResourceGroup(this AzureAmsTransformOutputRemoveSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputRemoveSettings ResetResourceGroup(this AzureAmsTransformOutputRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputRemoveSettings SetDebug(this AzureAmsTransformOutputRemoveSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputRemoveSettings ResetDebug(this AzureAmsTransformOutputRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputRemoveSettings SetHelp(this AzureAmsTransformOutputRemoveSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputRemoveSettings ResetHelp(this AzureAmsTransformOutputRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputRemoveSettings SetOutput(this AzureAmsTransformOutputRemoveSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputRemoveSettings ResetOutput(this AzureAmsTransformOutputRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputRemoveSettings SetQuery(this AzureAmsTransformOutputRemoveSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputRemoveSettings ResetQuery(this AzureAmsTransformOutputRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputRemoveSettings SetVerbose(this AzureAmsTransformOutputRemoveSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsTransformOutputRemoveSettings ResetVerbose(this AzureAmsTransformOutputRemoveSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -6702,7 +7126,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountSpCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountSpCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsAccountSpCreateSettings SetQuery(this AzureAmsAccountSpCreateSettings toolSettings, string query)
         {
@@ -6710,7 +7134,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountSpCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountSpCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsAccountSpCreateSettings ResetQuery(this AzureAmsAccountSpCreateSettings toolSettings)
         {
@@ -6926,7 +7350,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountSpResetCredentialsSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountSpResetCredentialsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsAccountSpResetCredentialsSettings SetQuery(this AzureAmsAccountSpResetCredentialsSettings toolSettings, string query)
         {
@@ -6934,7 +7358,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountSpResetCredentialsSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountSpResetCredentialsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsAccountSpResetCredentialsSettings ResetQuery(this AzureAmsAccountSpResetCredentialsSettings toolSettings)
         {
@@ -7078,7 +7502,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountStorageAddSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountStorageAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsAccountStorageAddSettings SetQuery(this AzureAmsAccountStorageAddSettings toolSettings, string query)
         {
@@ -7086,7 +7510,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountStorageAddSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountStorageAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsAccountStorageAddSettings ResetQuery(this AzureAmsAccountStorageAddSettings toolSettings)
         {
@@ -7230,7 +7654,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsAccountStorageRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsAccountStorageRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsAccountStorageRemoveSettings SetQuery(this AzureAmsAccountStorageRemoveSettings toolSettings, string query)
         {
@@ -7238,7 +7662,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsAccountStorageRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsAccountStorageRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsAccountStorageRemoveSettings ResetQuery(this AzureAmsAccountStorageRemoveSettings toolSettings)
         {
@@ -7259,1330 +7683,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureAmsAccountStorageRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureAmsAccountStorageRemoveSettings ResetVerbose(this AzureAmsAccountStorageRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAmsStreamingEndpointListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAmsStreamingEndpointListSettingsExtensions
-    {
-        #region AccountName
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointListSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointListSettings SetAccountName(this AzureAmsStreamingEndpointListSettings toolSettings, string accountName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AccountName = accountName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointListSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointListSettings ResetAccountName(this AzureAmsStreamingEndpointListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AccountName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointListSettings SetResourceGroup(this AzureAmsStreamingEndpointListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointListSettings ResetResourceGroup(this AzureAmsStreamingEndpointListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointListSettings SetDebug(this AzureAmsStreamingEndpointListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointListSettings ResetDebug(this AzureAmsStreamingEndpointListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointListSettings SetHelp(this AzureAmsStreamingEndpointListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointListSettings ResetHelp(this AzureAmsStreamingEndpointListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointListSettings SetOutput(this AzureAmsStreamingEndpointListSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointListSettings ResetOutput(this AzureAmsStreamingEndpointListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointListSettings SetQuery(this AzureAmsStreamingEndpointListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointListSettings ResetQuery(this AzureAmsStreamingEndpointListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointListSettings SetVerbose(this AzureAmsStreamingEndpointListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointListSettings ResetVerbose(this AzureAmsStreamingEndpointListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAmsStreamingEndpointStartSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAmsStreamingEndpointStartSettingsExtensions
-    {
-        #region AccountName
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStartSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStartSettings SetAccountName(this AzureAmsStreamingEndpointStartSettings toolSettings, string accountName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AccountName = accountName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStartSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStartSettings ResetAccountName(this AzureAmsStreamingEndpointStartSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AccountName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStartSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStartSettings SetResourceGroup(this AzureAmsStreamingEndpointStartSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStartSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStartSettings ResetResourceGroup(this AzureAmsStreamingEndpointStartSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region StreamingEndpointName
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStartSettings.StreamingEndpointName"/>.</em></p><p>The name of the StreamingEndpoint.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStartSettings SetStreamingEndpointName(this AzureAmsStreamingEndpointStartSettings toolSettings, string streamingEndpointName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StreamingEndpointName = streamingEndpointName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStartSettings.StreamingEndpointName"/>.</em></p><p>The name of the StreamingEndpoint.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStartSettings ResetStreamingEndpointName(this AzureAmsStreamingEndpointStartSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StreamingEndpointName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStartSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStartSettings SetDebug(this AzureAmsStreamingEndpointStartSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStartSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStartSettings ResetDebug(this AzureAmsStreamingEndpointStartSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStartSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStartSettings SetHelp(this AzureAmsStreamingEndpointStartSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStartSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStartSettings ResetHelp(this AzureAmsStreamingEndpointStartSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStartSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStartSettings SetOutput(this AzureAmsStreamingEndpointStartSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStartSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStartSettings ResetOutput(this AzureAmsStreamingEndpointStartSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStartSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStartSettings SetQuery(this AzureAmsStreamingEndpointStartSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStartSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStartSettings ResetQuery(this AzureAmsStreamingEndpointStartSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStartSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStartSettings SetVerbose(this AzureAmsStreamingEndpointStartSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStartSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStartSettings ResetVerbose(this AzureAmsStreamingEndpointStartSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAmsStreamingEndpointStopSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAmsStreamingEndpointStopSettingsExtensions
-    {
-        #region AccountName
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStopSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStopSettings SetAccountName(this AzureAmsStreamingEndpointStopSettings toolSettings, string accountName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AccountName = accountName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStopSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStopSettings ResetAccountName(this AzureAmsStreamingEndpointStopSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AccountName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStopSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStopSettings SetResourceGroup(this AzureAmsStreamingEndpointStopSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStopSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStopSettings ResetResourceGroup(this AzureAmsStreamingEndpointStopSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region StreamingEndpointName
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStopSettings.StreamingEndpointName"/>.</em></p><p>The name of the StreamingEndpoint.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStopSettings SetStreamingEndpointName(this AzureAmsStreamingEndpointStopSettings toolSettings, string streamingEndpointName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StreamingEndpointName = streamingEndpointName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStopSettings.StreamingEndpointName"/>.</em></p><p>The name of the StreamingEndpoint.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStopSettings ResetStreamingEndpointName(this AzureAmsStreamingEndpointStopSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StreamingEndpointName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStopSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStopSettings SetDebug(this AzureAmsStreamingEndpointStopSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStopSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStopSettings ResetDebug(this AzureAmsStreamingEndpointStopSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStopSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStopSettings SetHelp(this AzureAmsStreamingEndpointStopSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStopSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStopSettings ResetHelp(this AzureAmsStreamingEndpointStopSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStopSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStopSettings SetOutput(this AzureAmsStreamingEndpointStopSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStopSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStopSettings ResetOutput(this AzureAmsStreamingEndpointStopSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStopSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStopSettings SetQuery(this AzureAmsStreamingEndpointStopSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStopSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStopSettings ResetQuery(this AzureAmsStreamingEndpointStopSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStopSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStopSettings SetVerbose(this AzureAmsStreamingEndpointStopSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStopSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingEndpointStopSettings ResetVerbose(this AzureAmsStreamingEndpointStopSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAmsStreamingLocatorCreateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAmsStreamingLocatorCreateSettingsExtensions
-    {
-        #region AccountName
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorCreateSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorCreateSettings SetAccountName(this AzureAmsStreamingLocatorCreateSettings toolSettings, string accountName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AccountName = accountName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorCreateSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorCreateSettings ResetAccountName(this AzureAmsStreamingLocatorCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AccountName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region AssetName
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorCreateSettings.AssetName"/>.</em></p><p>The name of the asset used by the streaming locator.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorCreateSettings SetAssetName(this AzureAmsStreamingLocatorCreateSettings toolSettings, string assetName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AssetName = assetName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorCreateSettings.AssetName"/>.</em></p><p>The name of the asset used by the streaming locator.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorCreateSettings ResetAssetName(this AzureAmsStreamingLocatorCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AssetName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorCreateSettings.Name"/>.</em></p><p>The name of the streaming locator.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorCreateSettings SetName(this AzureAmsStreamingLocatorCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorCreateSettings.Name"/>.</em></p><p>The name of the streaming locator.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorCreateSettings ResetName(this AzureAmsStreamingLocatorCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorCreateSettings SetResourceGroup(this AzureAmsStreamingLocatorCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorCreateSettings ResetResourceGroup(this AzureAmsStreamingLocatorCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region StreamingPolicyName
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorCreateSettings.StreamingPolicyName"/>.</em></p><p>The name of the streaming policy used by the streaming locator.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorCreateSettings SetStreamingPolicyName(this AzureAmsStreamingLocatorCreateSettings toolSettings, string streamingPolicyName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StreamingPolicyName = streamingPolicyName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorCreateSettings.StreamingPolicyName"/>.</em></p><p>The name of the streaming policy used by the streaming locator.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorCreateSettings ResetStreamingPolicyName(this AzureAmsStreamingLocatorCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StreamingPolicyName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ContentPolicyName
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorCreateSettings.ContentPolicyName"/>.</em></p><p>The default content key policy name used by the streaming locator.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorCreateSettings SetContentPolicyName(this AzureAmsStreamingLocatorCreateSettings toolSettings, string contentPolicyName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ContentPolicyName = contentPolicyName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorCreateSettings.ContentPolicyName"/>.</em></p><p>The default content key policy name used by the streaming locator.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorCreateSettings ResetContentPolicyName(this AzureAmsStreamingLocatorCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ContentPolicyName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region EndTime
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorCreateSettings.EndTime"/>.</em></p><p>End time (Y-m-d'T'H:M:S'Z') of the streaming locator.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorCreateSettings SetEndTime(this AzureAmsStreamingLocatorCreateSettings toolSettings, string endTime)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndTime = endTime;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorCreateSettings.EndTime"/>.</em></p><p>End time (Y-m-d'T'H:M:S'Z') of the streaming locator.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorCreateSettings ResetEndTime(this AzureAmsStreamingLocatorCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndTime = null;
-            return toolSettings;
-        }
-        #endregion
-        #region StartTime
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorCreateSettings.StartTime"/>.</em></p><p>Start time (Y-m-d'T'H:M:S'Z') of the streaming locator.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorCreateSettings SetStartTime(this AzureAmsStreamingLocatorCreateSettings toolSettings, string startTime)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StartTime = startTime;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorCreateSettings.StartTime"/>.</em></p><p>Start time (Y-m-d'T'H:M:S'Z') of the streaming locator.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorCreateSettings ResetStartTime(this AzureAmsStreamingLocatorCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StartTime = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorCreateSettings SetDebug(this AzureAmsStreamingLocatorCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorCreateSettings ResetDebug(this AzureAmsStreamingLocatorCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorCreateSettings SetHelp(this AzureAmsStreamingLocatorCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorCreateSettings ResetHelp(this AzureAmsStreamingLocatorCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorCreateSettings SetOutput(this AzureAmsStreamingLocatorCreateSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorCreateSettings ResetOutput(this AzureAmsStreamingLocatorCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorCreateSettings SetQuery(this AzureAmsStreamingLocatorCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorCreateSettings ResetQuery(this AzureAmsStreamingLocatorCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorCreateSettings SetVerbose(this AzureAmsStreamingLocatorCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorCreateSettings ResetVerbose(this AzureAmsStreamingLocatorCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAmsStreamingLocatorDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAmsStreamingLocatorDeleteSettingsExtensions
-    {
-        #region AccountName
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorDeleteSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorDeleteSettings SetAccountName(this AzureAmsStreamingLocatorDeleteSettings toolSettings, string accountName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AccountName = accountName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorDeleteSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorDeleteSettings ResetAccountName(this AzureAmsStreamingLocatorDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AccountName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorDeleteSettings.Name"/>.</em></p><p>The name of the streaming locator.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorDeleteSettings SetName(this AzureAmsStreamingLocatorDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorDeleteSettings.Name"/>.</em></p><p>The name of the streaming locator.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorDeleteSettings ResetName(this AzureAmsStreamingLocatorDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorDeleteSettings SetResourceGroup(this AzureAmsStreamingLocatorDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorDeleteSettings ResetResourceGroup(this AzureAmsStreamingLocatorDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorDeleteSettings SetDebug(this AzureAmsStreamingLocatorDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorDeleteSettings ResetDebug(this AzureAmsStreamingLocatorDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorDeleteSettings SetHelp(this AzureAmsStreamingLocatorDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorDeleteSettings ResetHelp(this AzureAmsStreamingLocatorDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorDeleteSettings SetOutput(this AzureAmsStreamingLocatorDeleteSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorDeleteSettings ResetOutput(this AzureAmsStreamingLocatorDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorDeleteSettings SetQuery(this AzureAmsStreamingLocatorDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorDeleteSettings ResetQuery(this AzureAmsStreamingLocatorDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorDeleteSettings SetVerbose(this AzureAmsStreamingLocatorDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorDeleteSettings ResetVerbose(this AzureAmsStreamingLocatorDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAmsStreamingLocatorGetPathsSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAmsStreamingLocatorGetPathsSettingsExtensions
-    {
-        #region AccountName
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorGetPathsSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorGetPathsSettings SetAccountName(this AzureAmsStreamingLocatorGetPathsSettings toolSettings, string accountName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AccountName = accountName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorGetPathsSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorGetPathsSettings ResetAccountName(this AzureAmsStreamingLocatorGetPathsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AccountName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorGetPathsSettings.Name"/>.</em></p><p>The name of the streaming locator.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorGetPathsSettings SetName(this AzureAmsStreamingLocatorGetPathsSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorGetPathsSettings.Name"/>.</em></p><p>The name of the streaming locator.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorGetPathsSettings ResetName(this AzureAmsStreamingLocatorGetPathsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorGetPathsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorGetPathsSettings SetResourceGroup(this AzureAmsStreamingLocatorGetPathsSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorGetPathsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorGetPathsSettings ResetResourceGroup(this AzureAmsStreamingLocatorGetPathsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorGetPathsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorGetPathsSettings SetDebug(this AzureAmsStreamingLocatorGetPathsSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorGetPathsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorGetPathsSettings ResetDebug(this AzureAmsStreamingLocatorGetPathsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorGetPathsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorGetPathsSettings SetHelp(this AzureAmsStreamingLocatorGetPathsSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorGetPathsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorGetPathsSettings ResetHelp(this AzureAmsStreamingLocatorGetPathsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorGetPathsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorGetPathsSettings SetOutput(this AzureAmsStreamingLocatorGetPathsSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorGetPathsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorGetPathsSettings ResetOutput(this AzureAmsStreamingLocatorGetPathsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorGetPathsSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorGetPathsSettings SetQuery(this AzureAmsStreamingLocatorGetPathsSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorGetPathsSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorGetPathsSettings ResetQuery(this AzureAmsStreamingLocatorGetPathsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorGetPathsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorGetPathsSettings SetVerbose(this AzureAmsStreamingLocatorGetPathsSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorGetPathsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorGetPathsSettings ResetVerbose(this AzureAmsStreamingLocatorGetPathsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAmsStreamingLocatorListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAmsStreamingLocatorListSettingsExtensions
-    {
-        #region AccountName
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorListSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorListSettings SetAccountName(this AzureAmsStreamingLocatorListSettings toolSettings, string accountName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AccountName = accountName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorListSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorListSettings ResetAccountName(this AzureAmsStreamingLocatorListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AccountName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorListSettings SetResourceGroup(this AzureAmsStreamingLocatorListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorListSettings ResetResourceGroup(this AzureAmsStreamingLocatorListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Filter
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorListSettings.Filter"/>.</em></p><p>Restricts the set of items returned.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorListSettings SetFilter(this AzureAmsStreamingLocatorListSettings toolSettings, string filter)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Filter = filter;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorListSettings.Filter"/>.</em></p><p>Restricts the set of items returned.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorListSettings ResetFilter(this AzureAmsStreamingLocatorListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Filter = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Orderby
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorListSettings.Orderby"/>.</em></p><p>Specifies the the key by which the result collection should be ordered.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorListSettings SetOrderby(this AzureAmsStreamingLocatorListSettings toolSettings, string orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Orderby = orderby;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorListSettings.Orderby"/>.</em></p><p>Specifies the the key by which the result collection should be ordered.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorListSettings ResetOrderby(this AzureAmsStreamingLocatorListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Orderby = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Top
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorListSettings.Top"/>.</em></p><p>Specifies a non-negative integer n that limits the number of items returned from a collection. The service returns the number of available items up to but not greater than the specified value n.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorListSettings SetTop(this AzureAmsStreamingLocatorListSettings toolSettings, string top)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Top = top;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorListSettings.Top"/>.</em></p><p>Specifies a non-negative integer n that limits the number of items returned from a collection. The service returns the number of available items up to but not greater than the specified value n.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorListSettings ResetTop(this AzureAmsStreamingLocatorListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Top = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorListSettings SetDebug(this AzureAmsStreamingLocatorListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorListSettings ResetDebug(this AzureAmsStreamingLocatorListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorListSettings SetHelp(this AzureAmsStreamingLocatorListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorListSettings ResetHelp(this AzureAmsStreamingLocatorListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorListSettings SetOutput(this AzureAmsStreamingLocatorListSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorListSettings ResetOutput(this AzureAmsStreamingLocatorListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorListSettings SetQuery(this AzureAmsStreamingLocatorListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorListSettings ResetQuery(this AzureAmsStreamingLocatorListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorListSettings SetVerbose(this AzureAmsStreamingLocatorListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorListSettings ResetVerbose(this AzureAmsStreamingLocatorListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAmsStreamingLocatorShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAmsStreamingLocatorShowSettingsExtensions
-    {
-        #region AccountName
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorShowSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorShowSettings SetAccountName(this AzureAmsStreamingLocatorShowSettings toolSettings, string accountName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AccountName = accountName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorShowSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorShowSettings ResetAccountName(this AzureAmsStreamingLocatorShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AccountName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorShowSettings.Name"/>.</em></p><p>The name of the streaming locator.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorShowSettings SetName(this AzureAmsStreamingLocatorShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorShowSettings.Name"/>.</em></p><p>The name of the streaming locator.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorShowSettings ResetName(this AzureAmsStreamingLocatorShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorShowSettings SetResourceGroup(this AzureAmsStreamingLocatorShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorShowSettings ResetResourceGroup(this AzureAmsStreamingLocatorShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorShowSettings SetDebug(this AzureAmsStreamingLocatorShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorShowSettings ResetDebug(this AzureAmsStreamingLocatorShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorShowSettings SetHelp(this AzureAmsStreamingLocatorShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorShowSettings ResetHelp(this AzureAmsStreamingLocatorShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorShowSettings SetOutput(this AzureAmsStreamingLocatorShowSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorShowSettings ResetOutput(this AzureAmsStreamingLocatorShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorShowSettings SetQuery(this AzureAmsStreamingLocatorShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorShowSettings ResetQuery(this AzureAmsStreamingLocatorShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorShowSettings SetVerbose(this AzureAmsStreamingLocatorShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAmsStreamingLocatorShowSettings ResetVerbose(this AzureAmsStreamingLocatorShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -8892,7 +7992,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingPolicyCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingPolicyCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsStreamingPolicyCreateSettings SetQuery(this AzureAmsStreamingPolicyCreateSettings toolSettings, string query)
         {
@@ -8900,7 +8000,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingPolicyCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingPolicyCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsStreamingPolicyCreateSettings ResetQuery(this AzureAmsStreamingPolicyCreateSettings toolSettings)
         {
@@ -9044,7 +8144,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingPolicyDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingPolicyDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsStreamingPolicyDeleteSettings SetQuery(this AzureAmsStreamingPolicyDeleteSettings toolSettings, string query)
         {
@@ -9052,7 +8152,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingPolicyDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingPolicyDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsStreamingPolicyDeleteSettings ResetQuery(this AzureAmsStreamingPolicyDeleteSettings toolSettings)
         {
@@ -9232,7 +8332,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingPolicyListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingPolicyListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsStreamingPolicyListSettings SetQuery(this AzureAmsStreamingPolicyListSettings toolSettings, string query)
         {
@@ -9240,7 +8340,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingPolicyListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingPolicyListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsStreamingPolicyListSettings ResetQuery(this AzureAmsStreamingPolicyListSettings toolSettings)
         {
@@ -9384,7 +8484,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsStreamingPolicyShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingPolicyShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsStreamingPolicyShowSettings SetQuery(this AzureAmsStreamingPolicyShowSettings toolSettings, string query)
         {
@@ -9392,7 +8492,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsStreamingPolicyShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingPolicyShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAmsStreamingPolicyShowSettings ResetQuery(this AzureAmsStreamingPolicyShowSettings toolSettings)
         {
@@ -9421,120 +8521,42 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureAmsTransformOutputAddSettingsExtensions
+    #region AzureAmsStreamingEndpointListSettingsExtensions
     /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureAmsTransformOutputAddSettingsExtensions
+    public static partial class AzureAmsStreamingEndpointListSettingsExtensions
     {
         #region AccountName
-        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputAddSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointListSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
         [Pure]
-        public static AzureAmsTransformOutputAddSettings SetAccountName(this AzureAmsTransformOutputAddSettings toolSettings, string accountName)
+        public static AzureAmsStreamingEndpointListSettings SetAccountName(this AzureAmsStreamingEndpointListSettings toolSettings, string accountName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.AccountName = accountName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputAddSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointListSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
         [Pure]
-        public static AzureAmsTransformOutputAddSettings ResetAccountName(this AzureAmsTransformOutputAddSettings toolSettings)
+        public static AzureAmsStreamingEndpointListSettings ResetAccountName(this AzureAmsStreamingEndpointListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.AccountName = null;
             return toolSettings;
         }
         #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputAddSettings.Name"/>.</em></p><p>The name of the transform.</p></summary>
-        [Pure]
-        public static AzureAmsTransformOutputAddSettings SetName(this AzureAmsTransformOutputAddSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputAddSettings.Name"/>.</em></p><p>The name of the transform.</p></summary>
-        [Pure]
-        public static AzureAmsTransformOutputAddSettings ResetName(this AzureAmsTransformOutputAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region PresetNames
-        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputAddSettings.PresetNames"/> to a new list.</em></p><p>Space-separated list of built-in preset names.</p></summary>
-        [Pure]
-        public static AzureAmsTransformOutputAddSettings SetPresetNames(this AzureAmsTransformOutputAddSettings toolSettings, params AmsTransformPresetNames[] presetNames)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PresetNamesInternal = presetNames.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputAddSettings.PresetNames"/> to a new list.</em></p><p>Space-separated list of built-in preset names.</p></summary>
-        [Pure]
-        public static AzureAmsTransformOutputAddSettings SetPresetNames(this AzureAmsTransformOutputAddSettings toolSettings, IEnumerable<AmsTransformPresetNames> presetNames)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PresetNamesInternal = presetNames.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureAmsTransformOutputAddSettings.PresetNames"/>.</em></p><p>Space-separated list of built-in preset names.</p></summary>
-        [Pure]
-        public static AzureAmsTransformOutputAddSettings AddPresetNames(this AzureAmsTransformOutputAddSettings toolSettings, params AmsTransformPresetNames[] presetNames)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PresetNamesInternal.AddRange(presetNames);
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureAmsTransformOutputAddSettings.PresetNames"/>.</em></p><p>Space-separated list of built-in preset names.</p></summary>
-        [Pure]
-        public static AzureAmsTransformOutputAddSettings AddPresetNames(this AzureAmsTransformOutputAddSettings toolSettings, IEnumerable<AmsTransformPresetNames> presetNames)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PresetNamesInternal.AddRange(presetNames);
-            return toolSettings;
-        }
-        /// <summary><p><em>Clears <see cref="AzureAmsTransformOutputAddSettings.PresetNames"/>.</em></p><p>Space-separated list of built-in preset names.</p></summary>
-        [Pure]
-        public static AzureAmsTransformOutputAddSettings ClearPresetNames(this AzureAmsTransformOutputAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PresetNamesInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureAmsTransformOutputAddSettings.PresetNames"/>.</em></p><p>Space-separated list of built-in preset names.</p></summary>
-        [Pure]
-        public static AzureAmsTransformOutputAddSettings RemovePresetNames(this AzureAmsTransformOutputAddSettings toolSettings, params AmsTransformPresetNames[] presetNames)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<AmsTransformPresetNames>(presetNames);
-            toolSettings.PresetNamesInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureAmsTransformOutputAddSettings.PresetNames"/>.</em></p><p>Space-separated list of built-in preset names.</p></summary>
-        [Pure]
-        public static AzureAmsTransformOutputAddSettings RemovePresetNames(this AzureAmsTransformOutputAddSettings toolSettings, IEnumerable<AmsTransformPresetNames> presetNames)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<AmsTransformPresetNames>(presetNames);
-            toolSettings.PresetNamesInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureAmsTransformOutputAddSettings SetResourceGroup(this AzureAmsTransformOutputAddSettings toolSettings, string resourceGroup)
+        public static AzureAmsStreamingEndpointListSettings SetResourceGroup(this AzureAmsStreamingEndpointListSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureAmsTransformOutputAddSettings ResetResourceGroup(this AzureAmsTransformOutputAddSettings toolSettings)
+        public static AzureAmsStreamingEndpointListSettings ResetResourceGroup(this AzureAmsStreamingEndpointListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -9542,17 +8564,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureAmsTransformOutputAddSettings SetDebug(this AzureAmsTransformOutputAddSettings toolSettings, string debug)
+        public static AzureAmsStreamingEndpointListSettings SetDebug(this AzureAmsStreamingEndpointListSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureAmsTransformOutputAddSettings ResetDebug(this AzureAmsTransformOutputAddSettings toolSettings)
+        public static AzureAmsStreamingEndpointListSettings ResetDebug(this AzureAmsStreamingEndpointListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -9560,17 +8582,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureAmsTransformOutputAddSettings SetHelp(this AzureAmsTransformOutputAddSettings toolSettings, string help)
+        public static AzureAmsStreamingEndpointListSettings SetHelp(this AzureAmsStreamingEndpointListSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureAmsTransformOutputAddSettings ResetHelp(this AzureAmsTransformOutputAddSettings toolSettings)
+        public static AzureAmsStreamingEndpointListSettings ResetHelp(this AzureAmsStreamingEndpointListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -9578,17 +8600,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAmsTransformOutputAddSettings SetOutput(this AzureAmsTransformOutputAddSettings toolSettings, Output output)
+        public static AzureAmsStreamingEndpointListSettings SetOutput(this AzureAmsStreamingEndpointListSettings toolSettings, Output output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAmsTransformOutputAddSettings ResetOutput(this AzureAmsTransformOutputAddSettings toolSettings)
+        public static AzureAmsStreamingEndpointListSettings ResetOutput(this AzureAmsStreamingEndpointListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -9596,17 +8618,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputAddSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureAmsTransformOutputAddSettings SetQuery(this AzureAmsTransformOutputAddSettings toolSettings, string query)
+        public static AzureAmsStreamingEndpointListSettings SetQuery(this AzureAmsStreamingEndpointListSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputAddSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureAmsTransformOutputAddSettings ResetQuery(this AzureAmsTransformOutputAddSettings toolSettings)
+        public static AzureAmsStreamingEndpointListSettings ResetQuery(this AzureAmsStreamingEndpointListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -9614,17 +8636,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureAmsTransformOutputAddSettings SetVerbose(this AzureAmsTransformOutputAddSettings toolSettings, string verbose)
+        public static AzureAmsStreamingEndpointListSettings SetVerbose(this AzureAmsStreamingEndpointListSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureAmsTransformOutputAddSettings ResetVerbose(this AzureAmsTransformOutputAddSettings toolSettings)
+        public static AzureAmsStreamingEndpointListSettings ResetVerbose(this AzureAmsStreamingEndpointListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -9633,138 +8655,78 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureAmsTransformOutputRemoveSettingsExtensions
+    #region AzureAmsStreamingEndpointStartSettingsExtensions
     /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureAmsTransformOutputRemoveSettingsExtensions
+    public static partial class AzureAmsStreamingEndpointStartSettingsExtensions
     {
         #region AccountName
-        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputRemoveSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStartSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
         [Pure]
-        public static AzureAmsTransformOutputRemoveSettings SetAccountName(this AzureAmsTransformOutputRemoveSettings toolSettings, string accountName)
+        public static AzureAmsStreamingEndpointStartSettings SetAccountName(this AzureAmsStreamingEndpointStartSettings toolSettings, string accountName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.AccountName = accountName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputRemoveSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStartSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
         [Pure]
-        public static AzureAmsTransformOutputRemoveSettings ResetAccountName(this AzureAmsTransformOutputRemoveSettings toolSettings)
+        public static AzureAmsStreamingEndpointStartSettings ResetAccountName(this AzureAmsStreamingEndpointStartSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.AccountName = null;
             return toolSettings;
         }
         #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputRemoveSettings.Name"/>.</em></p><p>The name of the transform.</p></summary>
-        [Pure]
-        public static AzureAmsTransformOutputRemoveSettings SetName(this AzureAmsTransformOutputRemoveSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputRemoveSettings.Name"/>.</em></p><p>The name of the transform.</p></summary>
-        [Pure]
-        public static AzureAmsTransformOutputRemoveSettings ResetName(this AzureAmsTransformOutputRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region PresetNames
-        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputRemoveSettings.PresetNames"/> to a new list.</em></p><p>Space-separated list of built-in preset names.</p></summary>
-        [Pure]
-        public static AzureAmsTransformOutputRemoveSettings SetPresetNames(this AzureAmsTransformOutputRemoveSettings toolSettings, params AmsTransformPresetNames[] presetNames)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PresetNamesInternal = presetNames.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputRemoveSettings.PresetNames"/> to a new list.</em></p><p>Space-separated list of built-in preset names.</p></summary>
-        [Pure]
-        public static AzureAmsTransformOutputRemoveSettings SetPresetNames(this AzureAmsTransformOutputRemoveSettings toolSettings, IEnumerable<AmsTransformPresetNames> presetNames)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PresetNamesInternal = presetNames.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureAmsTransformOutputRemoveSettings.PresetNames"/>.</em></p><p>Space-separated list of built-in preset names.</p></summary>
-        [Pure]
-        public static AzureAmsTransformOutputRemoveSettings AddPresetNames(this AzureAmsTransformOutputRemoveSettings toolSettings, params AmsTransformPresetNames[] presetNames)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PresetNamesInternal.AddRange(presetNames);
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureAmsTransformOutputRemoveSettings.PresetNames"/>.</em></p><p>Space-separated list of built-in preset names.</p></summary>
-        [Pure]
-        public static AzureAmsTransformOutputRemoveSettings AddPresetNames(this AzureAmsTransformOutputRemoveSettings toolSettings, IEnumerable<AmsTransformPresetNames> presetNames)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PresetNamesInternal.AddRange(presetNames);
-            return toolSettings;
-        }
-        /// <summary><p><em>Clears <see cref="AzureAmsTransformOutputRemoveSettings.PresetNames"/>.</em></p><p>Space-separated list of built-in preset names.</p></summary>
-        [Pure]
-        public static AzureAmsTransformOutputRemoveSettings ClearPresetNames(this AzureAmsTransformOutputRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PresetNamesInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureAmsTransformOutputRemoveSettings.PresetNames"/>.</em></p><p>Space-separated list of built-in preset names.</p></summary>
-        [Pure]
-        public static AzureAmsTransformOutputRemoveSettings RemovePresetNames(this AzureAmsTransformOutputRemoveSettings toolSettings, params AmsTransformPresetNames[] presetNames)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<AmsTransformPresetNames>(presetNames);
-            toolSettings.PresetNamesInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureAmsTransformOutputRemoveSettings.PresetNames"/>.</em></p><p>Space-separated list of built-in preset names.</p></summary>
-        [Pure]
-        public static AzureAmsTransformOutputRemoveSettings RemovePresetNames(this AzureAmsTransformOutputRemoveSettings toolSettings, IEnumerable<AmsTransformPresetNames> presetNames)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<AmsTransformPresetNames>(presetNames);
-            toolSettings.PresetNamesInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStartSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureAmsTransformOutputRemoveSettings SetResourceGroup(this AzureAmsTransformOutputRemoveSettings toolSettings, string resourceGroup)
+        public static AzureAmsStreamingEndpointStartSettings SetResourceGroup(this AzureAmsStreamingEndpointStartSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStartSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureAmsTransformOutputRemoveSettings ResetResourceGroup(this AzureAmsTransformOutputRemoveSettings toolSettings)
+        public static AzureAmsStreamingEndpointStartSettings ResetResourceGroup(this AzureAmsStreamingEndpointStartSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region StreamingEndpointName
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStartSettings.StreamingEndpointName"/>.</em></p><p>The name of the StreamingEndpoint.</p></summary>
         [Pure]
-        public static AzureAmsTransformOutputRemoveSettings SetDebug(this AzureAmsTransformOutputRemoveSettings toolSettings, string debug)
+        public static AzureAmsStreamingEndpointStartSettings SetStreamingEndpointName(this AzureAmsStreamingEndpointStartSettings toolSettings, string streamingEndpointName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StreamingEndpointName = streamingEndpointName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStartSettings.StreamingEndpointName"/>.</em></p><p>The name of the StreamingEndpoint.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingEndpointStartSettings ResetStreamingEndpointName(this AzureAmsStreamingEndpointStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StreamingEndpointName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStartSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingEndpointStartSettings SetDebug(this AzureAmsStreamingEndpointStartSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStartSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureAmsTransformOutputRemoveSettings ResetDebug(this AzureAmsTransformOutputRemoveSettings toolSettings)
+        public static AzureAmsStreamingEndpointStartSettings ResetDebug(this AzureAmsStreamingEndpointStartSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -9772,17 +8734,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStartSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureAmsTransformOutputRemoveSettings SetHelp(this AzureAmsTransformOutputRemoveSettings toolSettings, string help)
+        public static AzureAmsStreamingEndpointStartSettings SetHelp(this AzureAmsStreamingEndpointStartSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStartSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureAmsTransformOutputRemoveSettings ResetHelp(this AzureAmsTransformOutputRemoveSettings toolSettings)
+        public static AzureAmsStreamingEndpointStartSettings ResetHelp(this AzureAmsStreamingEndpointStartSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -9790,17 +8752,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStartSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAmsTransformOutputRemoveSettings SetOutput(this AzureAmsTransformOutputRemoveSettings toolSettings, Output output)
+        public static AzureAmsStreamingEndpointStartSettings SetOutput(this AzureAmsStreamingEndpointStartSettings toolSettings, Output output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStartSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAmsTransformOutputRemoveSettings ResetOutput(this AzureAmsTransformOutputRemoveSettings toolSettings)
+        public static AzureAmsStreamingEndpointStartSettings ResetOutput(this AzureAmsStreamingEndpointStartSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -9808,17 +8770,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStartSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureAmsTransformOutputRemoveSettings SetQuery(this AzureAmsTransformOutputRemoveSettings toolSettings, string query)
+        public static AzureAmsStreamingEndpointStartSettings SetQuery(this AzureAmsStreamingEndpointStartSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStartSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureAmsTransformOutputRemoveSettings ResetQuery(this AzureAmsTransformOutputRemoveSettings toolSettings)
+        public static AzureAmsStreamingEndpointStartSettings ResetQuery(this AzureAmsStreamingEndpointStartSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -9826,17 +8788,1055 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAmsTransformOutputRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStartSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureAmsTransformOutputRemoveSettings SetVerbose(this AzureAmsTransformOutputRemoveSettings toolSettings, string verbose)
+        public static AzureAmsStreamingEndpointStartSettings SetVerbose(this AzureAmsStreamingEndpointStartSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAmsTransformOutputRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStartSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureAmsTransformOutputRemoveSettings ResetVerbose(this AzureAmsTransformOutputRemoveSettings toolSettings)
+        public static AzureAmsStreamingEndpointStartSettings ResetVerbose(this AzureAmsStreamingEndpointStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAmsStreamingEndpointStopSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAmsStreamingEndpointStopSettingsExtensions
+    {
+        #region AccountName
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStopSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingEndpointStopSettings SetAccountName(this AzureAmsStreamingEndpointStopSettings toolSettings, string accountName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = accountName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStopSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingEndpointStopSettings ResetAccountName(this AzureAmsStreamingEndpointStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStopSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingEndpointStopSettings SetResourceGroup(this AzureAmsStreamingEndpointStopSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStopSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingEndpointStopSettings ResetResourceGroup(this AzureAmsStreamingEndpointStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region StreamingEndpointName
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStopSettings.StreamingEndpointName"/>.</em></p><p>The name of the StreamingEndpoint.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingEndpointStopSettings SetStreamingEndpointName(this AzureAmsStreamingEndpointStopSettings toolSettings, string streamingEndpointName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StreamingEndpointName = streamingEndpointName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStopSettings.StreamingEndpointName"/>.</em></p><p>The name of the StreamingEndpoint.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingEndpointStopSettings ResetStreamingEndpointName(this AzureAmsStreamingEndpointStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StreamingEndpointName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStopSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingEndpointStopSettings SetDebug(this AzureAmsStreamingEndpointStopSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStopSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingEndpointStopSettings ResetDebug(this AzureAmsStreamingEndpointStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStopSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingEndpointStopSettings SetHelp(this AzureAmsStreamingEndpointStopSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStopSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingEndpointStopSettings ResetHelp(this AzureAmsStreamingEndpointStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStopSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingEndpointStopSettings SetOutput(this AzureAmsStreamingEndpointStopSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStopSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingEndpointStopSettings ResetOutput(this AzureAmsStreamingEndpointStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStopSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingEndpointStopSettings SetQuery(this AzureAmsStreamingEndpointStopSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStopSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingEndpointStopSettings ResetQuery(this AzureAmsStreamingEndpointStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingEndpointStopSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingEndpointStopSettings SetVerbose(this AzureAmsStreamingEndpointStopSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingEndpointStopSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingEndpointStopSettings ResetVerbose(this AzureAmsStreamingEndpointStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAmsStreamingLocatorCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAmsStreamingLocatorCreateSettingsExtensions
+    {
+        #region AccountName
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorCreateSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorCreateSettings SetAccountName(this AzureAmsStreamingLocatorCreateSettings toolSettings, string accountName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = accountName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorCreateSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorCreateSettings ResetAccountName(this AzureAmsStreamingLocatorCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AssetName
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorCreateSettings.AssetName"/>.</em></p><p>The name of the asset used by the streaming locator.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorCreateSettings SetAssetName(this AzureAmsStreamingLocatorCreateSettings toolSettings, string assetName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AssetName = assetName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorCreateSettings.AssetName"/>.</em></p><p>The name of the asset used by the streaming locator.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorCreateSettings ResetAssetName(this AzureAmsStreamingLocatorCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AssetName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorCreateSettings.Name"/>.</em></p><p>The name of the streaming locator.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorCreateSettings SetName(this AzureAmsStreamingLocatorCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorCreateSettings.Name"/>.</em></p><p>The name of the streaming locator.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorCreateSettings ResetName(this AzureAmsStreamingLocatorCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorCreateSettings SetResourceGroup(this AzureAmsStreamingLocatorCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorCreateSettings ResetResourceGroup(this AzureAmsStreamingLocatorCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region StreamingPolicyName
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorCreateSettings.StreamingPolicyName"/>.</em></p><p>The name of the streaming policy used by the streaming locator.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorCreateSettings SetStreamingPolicyName(this AzureAmsStreamingLocatorCreateSettings toolSettings, string streamingPolicyName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StreamingPolicyName = streamingPolicyName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorCreateSettings.StreamingPolicyName"/>.</em></p><p>The name of the streaming policy used by the streaming locator.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorCreateSettings ResetStreamingPolicyName(this AzureAmsStreamingLocatorCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StreamingPolicyName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ContentPolicyName
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorCreateSettings.ContentPolicyName"/>.</em></p><p>The default content key policy name used by the streaming locator.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorCreateSettings SetContentPolicyName(this AzureAmsStreamingLocatorCreateSettings toolSettings, string contentPolicyName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ContentPolicyName = contentPolicyName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorCreateSettings.ContentPolicyName"/>.</em></p><p>The default content key policy name used by the streaming locator.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorCreateSettings ResetContentPolicyName(this AzureAmsStreamingLocatorCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ContentPolicyName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EndTime
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorCreateSettings.EndTime"/>.</em></p><p>End time (Y-m-d'T'H:M:S'Z') of the streaming locator.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorCreateSettings SetEndTime(this AzureAmsStreamingLocatorCreateSettings toolSettings, string endTime)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndTime = endTime;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorCreateSettings.EndTime"/>.</em></p><p>End time (Y-m-d'T'H:M:S'Z') of the streaming locator.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorCreateSettings ResetEndTime(this AzureAmsStreamingLocatorCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndTime = null;
+            return toolSettings;
+        }
+        #endregion
+        #region StartTime
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorCreateSettings.StartTime"/>.</em></p><p>Start time (Y-m-d'T'H:M:S'Z') of the streaming locator.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorCreateSettings SetStartTime(this AzureAmsStreamingLocatorCreateSettings toolSettings, string startTime)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StartTime = startTime;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorCreateSettings.StartTime"/>.</em></p><p>Start time (Y-m-d'T'H:M:S'Z') of the streaming locator.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorCreateSettings ResetStartTime(this AzureAmsStreamingLocatorCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StartTime = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorCreateSettings SetDebug(this AzureAmsStreamingLocatorCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorCreateSettings ResetDebug(this AzureAmsStreamingLocatorCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorCreateSettings SetHelp(this AzureAmsStreamingLocatorCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorCreateSettings ResetHelp(this AzureAmsStreamingLocatorCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorCreateSettings SetOutput(this AzureAmsStreamingLocatorCreateSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorCreateSettings ResetOutput(this AzureAmsStreamingLocatorCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorCreateSettings SetQuery(this AzureAmsStreamingLocatorCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorCreateSettings ResetQuery(this AzureAmsStreamingLocatorCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorCreateSettings SetVerbose(this AzureAmsStreamingLocatorCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorCreateSettings ResetVerbose(this AzureAmsStreamingLocatorCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAmsStreamingLocatorDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAmsStreamingLocatorDeleteSettingsExtensions
+    {
+        #region AccountName
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorDeleteSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorDeleteSettings SetAccountName(this AzureAmsStreamingLocatorDeleteSettings toolSettings, string accountName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = accountName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorDeleteSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorDeleteSettings ResetAccountName(this AzureAmsStreamingLocatorDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorDeleteSettings.Name"/>.</em></p><p>The name of the streaming locator.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorDeleteSettings SetName(this AzureAmsStreamingLocatorDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorDeleteSettings.Name"/>.</em></p><p>The name of the streaming locator.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorDeleteSettings ResetName(this AzureAmsStreamingLocatorDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorDeleteSettings SetResourceGroup(this AzureAmsStreamingLocatorDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorDeleteSettings ResetResourceGroup(this AzureAmsStreamingLocatorDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorDeleteSettings SetDebug(this AzureAmsStreamingLocatorDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorDeleteSettings ResetDebug(this AzureAmsStreamingLocatorDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorDeleteSettings SetHelp(this AzureAmsStreamingLocatorDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorDeleteSettings ResetHelp(this AzureAmsStreamingLocatorDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorDeleteSettings SetOutput(this AzureAmsStreamingLocatorDeleteSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorDeleteSettings ResetOutput(this AzureAmsStreamingLocatorDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorDeleteSettings SetQuery(this AzureAmsStreamingLocatorDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorDeleteSettings ResetQuery(this AzureAmsStreamingLocatorDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorDeleteSettings SetVerbose(this AzureAmsStreamingLocatorDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorDeleteSettings ResetVerbose(this AzureAmsStreamingLocatorDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAmsStreamingLocatorGetPathsSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAmsStreamingLocatorGetPathsSettingsExtensions
+    {
+        #region AccountName
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorGetPathsSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorGetPathsSettings SetAccountName(this AzureAmsStreamingLocatorGetPathsSettings toolSettings, string accountName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = accountName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorGetPathsSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorGetPathsSettings ResetAccountName(this AzureAmsStreamingLocatorGetPathsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorGetPathsSettings.Name"/>.</em></p><p>The name of the streaming locator.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorGetPathsSettings SetName(this AzureAmsStreamingLocatorGetPathsSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorGetPathsSettings.Name"/>.</em></p><p>The name of the streaming locator.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorGetPathsSettings ResetName(this AzureAmsStreamingLocatorGetPathsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorGetPathsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorGetPathsSettings SetResourceGroup(this AzureAmsStreamingLocatorGetPathsSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorGetPathsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorGetPathsSettings ResetResourceGroup(this AzureAmsStreamingLocatorGetPathsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorGetPathsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorGetPathsSettings SetDebug(this AzureAmsStreamingLocatorGetPathsSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorGetPathsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorGetPathsSettings ResetDebug(this AzureAmsStreamingLocatorGetPathsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorGetPathsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorGetPathsSettings SetHelp(this AzureAmsStreamingLocatorGetPathsSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorGetPathsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorGetPathsSettings ResetHelp(this AzureAmsStreamingLocatorGetPathsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorGetPathsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorGetPathsSettings SetOutput(this AzureAmsStreamingLocatorGetPathsSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorGetPathsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorGetPathsSettings ResetOutput(this AzureAmsStreamingLocatorGetPathsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorGetPathsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorGetPathsSettings SetQuery(this AzureAmsStreamingLocatorGetPathsSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorGetPathsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorGetPathsSettings ResetQuery(this AzureAmsStreamingLocatorGetPathsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorGetPathsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorGetPathsSettings SetVerbose(this AzureAmsStreamingLocatorGetPathsSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorGetPathsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorGetPathsSettings ResetVerbose(this AzureAmsStreamingLocatorGetPathsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAmsStreamingLocatorListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAmsStreamingLocatorListSettingsExtensions
+    {
+        #region AccountName
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorListSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorListSettings SetAccountName(this AzureAmsStreamingLocatorListSettings toolSettings, string accountName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = accountName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorListSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorListSettings ResetAccountName(this AzureAmsStreamingLocatorListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorListSettings SetResourceGroup(this AzureAmsStreamingLocatorListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorListSettings ResetResourceGroup(this AzureAmsStreamingLocatorListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Filter
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorListSettings.Filter"/>.</em></p><p>Restricts the set of items returned.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorListSettings SetFilter(this AzureAmsStreamingLocatorListSettings toolSettings, string filter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Filter = filter;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorListSettings.Filter"/>.</em></p><p>Restricts the set of items returned.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorListSettings ResetFilter(this AzureAmsStreamingLocatorListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Filter = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Orderby
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorListSettings.Orderby"/>.</em></p><p>Specifies the the key by which the result collection should be ordered.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorListSettings SetOrderby(this AzureAmsStreamingLocatorListSettings toolSettings, string orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Orderby = orderby;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorListSettings.Orderby"/>.</em></p><p>Specifies the the key by which the result collection should be ordered.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorListSettings ResetOrderby(this AzureAmsStreamingLocatorListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Orderby = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Top
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorListSettings.Top"/>.</em></p><p>Specifies a non-negative integer n that limits the number of items returned from a collection. The service returns the number of available items up to but not greater than the specified value n.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorListSettings SetTop(this AzureAmsStreamingLocatorListSettings toolSettings, string top)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = top;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorListSettings.Top"/>.</em></p><p>Specifies a non-negative integer n that limits the number of items returned from a collection. The service returns the number of available items up to but not greater than the specified value n.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorListSettings ResetTop(this AzureAmsStreamingLocatorListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorListSettings SetDebug(this AzureAmsStreamingLocatorListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorListSettings ResetDebug(this AzureAmsStreamingLocatorListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorListSettings SetHelp(this AzureAmsStreamingLocatorListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorListSettings ResetHelp(this AzureAmsStreamingLocatorListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorListSettings SetOutput(this AzureAmsStreamingLocatorListSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorListSettings ResetOutput(this AzureAmsStreamingLocatorListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorListSettings SetQuery(this AzureAmsStreamingLocatorListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorListSettings ResetQuery(this AzureAmsStreamingLocatorListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorListSettings SetVerbose(this AzureAmsStreamingLocatorListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorListSettings ResetVerbose(this AzureAmsStreamingLocatorListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAmsStreamingLocatorShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAmsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAmsStreamingLocatorShowSettingsExtensions
+    {
+        #region AccountName
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorShowSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorShowSettings SetAccountName(this AzureAmsStreamingLocatorShowSettings toolSettings, string accountName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = accountName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorShowSettings.AccountName"/>.</em></p><p>The name of the Azure Media Services account.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorShowSettings ResetAccountName(this AzureAmsStreamingLocatorShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AccountName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorShowSettings.Name"/>.</em></p><p>The name of the streaming locator.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorShowSettings SetName(this AzureAmsStreamingLocatorShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorShowSettings.Name"/>.</em></p><p>The name of the streaming locator.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorShowSettings ResetName(this AzureAmsStreamingLocatorShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorShowSettings SetResourceGroup(this AzureAmsStreamingLocatorShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorShowSettings ResetResourceGroup(this AzureAmsStreamingLocatorShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorShowSettings SetDebug(this AzureAmsStreamingLocatorShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorShowSettings ResetDebug(this AzureAmsStreamingLocatorShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorShowSettings SetHelp(this AzureAmsStreamingLocatorShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorShowSettings ResetHelp(this AzureAmsStreamingLocatorShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorShowSettings SetOutput(this AzureAmsStreamingLocatorShowSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorShowSettings ResetOutput(this AzureAmsStreamingLocatorShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorShowSettings SetQuery(this AzureAmsStreamingLocatorShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorShowSettings ResetQuery(this AzureAmsStreamingLocatorShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAmsStreamingLocatorShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorShowSettings SetVerbose(this AzureAmsStreamingLocatorShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAmsStreamingLocatorShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAmsStreamingLocatorShowSettings ResetVerbose(this AzureAmsStreamingLocatorShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

@@ -243,7 +243,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -339,7 +339,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -409,7 +409,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -453,7 +453,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -493,7 +493,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -529,7 +529,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -566,7 +566,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -594,8 +594,6 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureAks executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureAksTasks.AzureAksPath;
-        /// <summary><p>Name of the ACI Connector.</p></summary>
-        public virtual string ConnectorName { get; internal set; }
         /// <summary><p>Name of the managed cluster.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
@@ -606,6 +604,8 @@ namespace Nuke.Azure
         public virtual string ChartUrl { get; internal set; }
         /// <summary><p>Secret associated with the service principal. This argument is required if `--service-principal` is specified.</p></summary>
         public virtual string ClientSecret { get; internal set; }
+        /// <summary><p>Name of the ACI Connector.</p></summary>
+        public virtual string ConnectorName { get; internal set; }
         /// <summary><p>The image tag of the virtual kubelet. Use 'latest' if it is not specified.</p></summary>
         public virtual string ImageTag { get; internal set; }
         /// <summary><p>The location to create the ACI container groups. Use the location of the MC_* resource group if it is not specified.</p></summary>
@@ -620,7 +620,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -628,12 +628,12 @@ namespace Nuke.Azure
         {
             arguments
               .Add("aks install-connector")
-              .Add("--connector-name {value}", ConnectorName)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--aci-resource-group {value}", AciResourceGroup)
               .Add("--chart-url {value}", ChartUrl)
               .Add("--client-secret {value}", ClientSecret, secret: true)
+              .Add("--connector-name {value}", ConnectorName)
               .Add("--image-tag {value}", ImageTag)
               .Add("--location {value}", Location)
               .Add("--os-type {value}", OsType)
@@ -664,7 +664,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -691,14 +691,16 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureAks executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureAksTasks.AzureAksPath;
-        /// <summary><p>Name of the ACI Connector.</p></summary>
-        public virtual string ConnectorName { get; internal set; }
         /// <summary><p>Name of the managed cluster.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the ACI Connector.</p></summary>
+        public virtual string ConnectorName { get; internal set; }
         /// <summary><p>Use a "cordon and drain" strategy to evict pods safely before removing the ACI node.</p></summary>
         public virtual string Graceful { get; internal set; }
+        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        public virtual string Location { get; internal set; }
         /// <summary><p>Remove support for deploying ACIs of this operating system type.</p></summary>
         public virtual AksOsType OsType { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
@@ -707,7 +709,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -715,10 +717,11 @@ namespace Nuke.Azure
         {
             arguments
               .Add("aks remove-connector")
-              .Add("--connector-name {value}", ConnectorName)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--connector-name {value}", ConnectorName)
               .Add("--graceful {value}", Graceful)
+              .Add("--location {value}", Location)
               .Add("--os-type {value}", OsType)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -750,7 +753,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -793,7 +796,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -833,7 +836,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -877,7 +880,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -908,8 +911,6 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureAks executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureAksTasks.AzureAksPath;
-        /// <summary><p>Name of the ACI Connector.</p></summary>
-        public virtual string ConnectorName { get; internal set; }
         /// <summary><p>Name of the managed cluster.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
@@ -920,6 +921,8 @@ namespace Nuke.Azure
         public virtual string ChartUrl { get; internal set; }
         /// <summary><p>Secret associated with the service principal. This argument is required if `--service-principal` is specified.</p></summary>
         public virtual string ClientSecret { get; internal set; }
+        /// <summary><p>Name of the ACI Connector.</p></summary>
+        public virtual string ConnectorName { get; internal set; }
         /// <summary><p>The image tag of the virtual kubelet. Use 'latest' if it is not specified.</p></summary>
         public virtual string ImageTag { get; internal set; }
         /// <summary><p>The location to create the ACI container groups. Use the location of the MC_* resource group if it is not specified.</p></summary>
@@ -934,7 +937,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -942,12 +945,12 @@ namespace Nuke.Azure
         {
             arguments
               .Add("aks upgrade-connector")
-              .Add("--connector-name {value}", ConnectorName)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--aci-resource-group {value}", AciResourceGroup)
               .Add("--chart-url {value}", ChartUrl)
               .Add("--client-secret {value}", ClientSecret, secret: true)
+              .Add("--connector-name {value}", ConnectorName)
               .Add("--image-tag {value}", ImageTag)
               .Add("--location {value}", Location)
               .Add("--os-type {value}", OsType)
@@ -974,17 +977,19 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of a parent dev space to inherit from when creating a new dev space. By default, if there is already a single dev space with no parent, the new space inherits from this one.</p></summary>
-        public virtual string ParentSpace { get; internal set; }
-        /// <summary><p>Name of the dev space to use.</p></summary>
+        /// <summary><p>Name of the new or existing dev space to select. Defaults to an interactive selection experience.</p></summary>
         public virtual string Space { get; internal set; }
+        /// <summary><p>Update to the latest Azure Dev Spaces client components.</p></summary>
+        public virtual string Update { get; internal set; }
+        /// <summary><p>Do not prompt for confirmation. Requires --space.</p></summary>
+        public virtual string Yes { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -994,8 +999,9 @@ namespace Nuke.Azure
               .Add("aks use-dev-spaces")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--parent-space {value}", ParentSpace)
               .Add("--space {value}", Space)
+              .Add("--update {value}", Update)
+              .Add("--yes {value}", Yes)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1038,7 +1044,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1179,7 +1185,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAksBrowseSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksBrowseSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksBrowseSettings SetQuery(this AzureAksBrowseSettings toolSettings, string query)
         {
@@ -1187,7 +1193,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksBrowseSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksBrowseSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksBrowseSettings ResetQuery(this AzureAksBrowseSettings toolSettings)
         {
@@ -1883,7 +1889,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksCreateSettings SetQuery(this AzureAksCreateSettings toolSettings, string query)
         {
@@ -1891,7 +1897,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksCreateSettings ResetQuery(this AzureAksCreateSettings toolSettings)
         {
@@ -2053,7 +2059,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAksDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksDeleteSettings SetQuery(this AzureAksDeleteSettings toolSettings, string query)
         {
@@ -2061,7 +2067,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksDeleteSettings ResetQuery(this AzureAksDeleteSettings toolSettings)
         {
@@ -2223,7 +2229,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAksGetCredentialsSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksGetCredentialsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksGetCredentialsSettings SetQuery(this AzureAksGetCredentialsSettings toolSettings, string query)
         {
@@ -2231,7 +2237,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksGetCredentialsSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksGetCredentialsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksGetCredentialsSettings ResetQuery(this AzureAksGetCredentialsSettings toolSettings)
         {
@@ -2357,7 +2363,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAksGetUpgradesSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksGetUpgradesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksGetUpgradesSettings SetQuery(this AzureAksGetUpgradesSettings toolSettings, string query)
         {
@@ -2365,7 +2371,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksGetUpgradesSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksGetUpgradesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksGetUpgradesSettings ResetQuery(this AzureAksGetUpgradesSettings toolSettings)
         {
@@ -2473,7 +2479,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAksGetVersionsSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksGetVersionsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksGetVersionsSettings SetQuery(this AzureAksGetVersionsSettings toolSettings, string query)
         {
@@ -2481,7 +2487,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksGetVersionsSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksGetVersionsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksGetVersionsSettings ResetQuery(this AzureAksGetVersionsSettings toolSettings)
         {
@@ -2607,7 +2613,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAksInstallCliSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksInstallCliSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksInstallCliSettings SetQuery(this AzureAksInstallCliSettings toolSettings, string query)
         {
@@ -2615,7 +2621,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksInstallCliSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksInstallCliSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksInstallCliSettings ResetQuery(this AzureAksInstallCliSettings toolSettings)
         {
@@ -2650,24 +2656,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureAksInstallConnectorSettingsExtensions
     {
-        #region ConnectorName
-        /// <summary><p><em>Sets <see cref="AzureAksInstallConnectorSettings.ConnectorName"/>.</em></p><p>Name of the ACI Connector.</p></summary>
-        [Pure]
-        public static AzureAksInstallConnectorSettings SetConnectorName(this AzureAksInstallConnectorSettings toolSettings, string connectorName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ConnectorName = connectorName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAksInstallConnectorSettings.ConnectorName"/>.</em></p><p>Name of the ACI Connector.</p></summary>
-        [Pure]
-        public static AzureAksInstallConnectorSettings ResetConnectorName(this AzureAksInstallConnectorSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ConnectorName = null;
-            return toolSettings;
-        }
-        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureAksInstallConnectorSettings.Name"/>.</em></p><p>Name of the managed cluster.</p></summary>
         [Pure]
@@ -2755,6 +2743,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ClientSecret = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ConnectorName
+        /// <summary><p><em>Sets <see cref="AzureAksInstallConnectorSettings.ConnectorName"/>.</em></p><p>Name of the ACI Connector.</p></summary>
+        [Pure]
+        public static AzureAksInstallConnectorSettings SetConnectorName(this AzureAksInstallConnectorSettings toolSettings, string connectorName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ConnectorName = connectorName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksInstallConnectorSettings.ConnectorName"/>.</em></p><p>Name of the ACI Connector.</p></summary>
+        [Pure]
+        public static AzureAksInstallConnectorSettings ResetConnectorName(this AzureAksInstallConnectorSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ConnectorName = null;
             return toolSettings;
         }
         #endregion
@@ -2909,7 +2915,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAksInstallConnectorSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksInstallConnectorSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksInstallConnectorSettings SetQuery(this AzureAksInstallConnectorSettings toolSettings, string query)
         {
@@ -2917,7 +2923,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksInstallConnectorSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksInstallConnectorSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksInstallConnectorSettings ResetQuery(this AzureAksInstallConnectorSettings toolSettings)
         {
@@ -3025,7 +3031,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAksListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksListSettings SetQuery(this AzureAksListSettings toolSettings, string query)
         {
@@ -3033,7 +3039,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksListSettings ResetQuery(this AzureAksListSettings toolSettings)
         {
@@ -3068,24 +3074,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureAksRemoveConnectorSettingsExtensions
     {
-        #region ConnectorName
-        /// <summary><p><em>Sets <see cref="AzureAksRemoveConnectorSettings.ConnectorName"/>.</em></p><p>Name of the ACI Connector.</p></summary>
-        [Pure]
-        public static AzureAksRemoveConnectorSettings SetConnectorName(this AzureAksRemoveConnectorSettings toolSettings, string connectorName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ConnectorName = connectorName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAksRemoveConnectorSettings.ConnectorName"/>.</em></p><p>Name of the ACI Connector.</p></summary>
-        [Pure]
-        public static AzureAksRemoveConnectorSettings ResetConnectorName(this AzureAksRemoveConnectorSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ConnectorName = null;
-            return toolSettings;
-        }
-        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureAksRemoveConnectorSettings.Name"/>.</em></p><p>Name of the managed cluster.</p></summary>
         [Pure]
@@ -3122,6 +3110,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region ConnectorName
+        /// <summary><p><em>Sets <see cref="AzureAksRemoveConnectorSettings.ConnectorName"/>.</em></p><p>Name of the ACI Connector.</p></summary>
+        [Pure]
+        public static AzureAksRemoveConnectorSettings SetConnectorName(this AzureAksRemoveConnectorSettings toolSettings, string connectorName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ConnectorName = connectorName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksRemoveConnectorSettings.ConnectorName"/>.</em></p><p>Name of the ACI Connector.</p></summary>
+        [Pure]
+        public static AzureAksRemoveConnectorSettings ResetConnectorName(this AzureAksRemoveConnectorSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ConnectorName = null;
+            return toolSettings;
+        }
+        #endregion
         #region Graceful
         /// <summary><p><em>Sets <see cref="AzureAksRemoveConnectorSettings.Graceful"/>.</em></p><p>Use a "cordon and drain" strategy to evict pods safely before removing the ACI node.</p></summary>
         [Pure]
@@ -3137,6 +3143,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Graceful = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Location
+        /// <summary><p><em>Sets <see cref="AzureAksRemoveConnectorSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAksRemoveConnectorSettings SetLocation(this AzureAksRemoveConnectorSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksRemoveConnectorSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAksRemoveConnectorSettings ResetLocation(this AzureAksRemoveConnectorSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
             return toolSettings;
         }
         #endregion
@@ -3213,7 +3237,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAksRemoveConnectorSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksRemoveConnectorSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksRemoveConnectorSettings SetQuery(this AzureAksRemoveConnectorSettings toolSettings, string query)
         {
@@ -3221,7 +3245,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksRemoveConnectorSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksRemoveConnectorSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksRemoveConnectorSettings ResetQuery(this AzureAksRemoveConnectorSettings toolSettings)
         {
@@ -3365,7 +3389,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAksRemoveDevSpacesSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksRemoveDevSpacesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksRemoveDevSpacesSettings SetQuery(this AzureAksRemoveDevSpacesSettings toolSettings, string query)
         {
@@ -3373,7 +3397,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksRemoveDevSpacesSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksRemoveDevSpacesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksRemoveDevSpacesSettings ResetQuery(this AzureAksRemoveDevSpacesSettings toolSettings)
         {
@@ -3535,7 +3559,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAksScaleSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksScaleSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksScaleSettings SetQuery(this AzureAksScaleSettings toolSettings, string query)
         {
@@ -3543,7 +3567,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksScaleSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksScaleSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksScaleSettings ResetQuery(this AzureAksScaleSettings toolSettings)
         {
@@ -3669,7 +3693,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAksShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksShowSettings SetQuery(this AzureAksShowSettings toolSettings, string query)
         {
@@ -3677,7 +3701,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksShowSettings ResetQuery(this AzureAksShowSettings toolSettings)
         {
@@ -3857,7 +3881,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAksUpgradeSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksUpgradeSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksUpgradeSettings SetQuery(this AzureAksUpgradeSettings toolSettings, string query)
         {
@@ -3865,7 +3889,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksUpgradeSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksUpgradeSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksUpgradeSettings ResetQuery(this AzureAksUpgradeSettings toolSettings)
         {
@@ -3900,24 +3924,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureAksUpgradeConnectorSettingsExtensions
     {
-        #region ConnectorName
-        /// <summary><p><em>Sets <see cref="AzureAksUpgradeConnectorSettings.ConnectorName"/>.</em></p><p>Name of the ACI Connector.</p></summary>
-        [Pure]
-        public static AzureAksUpgradeConnectorSettings SetConnectorName(this AzureAksUpgradeConnectorSettings toolSettings, string connectorName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ConnectorName = connectorName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAksUpgradeConnectorSettings.ConnectorName"/>.</em></p><p>Name of the ACI Connector.</p></summary>
-        [Pure]
-        public static AzureAksUpgradeConnectorSettings ResetConnectorName(this AzureAksUpgradeConnectorSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ConnectorName = null;
-            return toolSettings;
-        }
-        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureAksUpgradeConnectorSettings.Name"/>.</em></p><p>Name of the managed cluster.</p></summary>
         [Pure]
@@ -4005,6 +4011,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ClientSecret = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ConnectorName
+        /// <summary><p><em>Sets <see cref="AzureAksUpgradeConnectorSettings.ConnectorName"/>.</em></p><p>Name of the ACI Connector.</p></summary>
+        [Pure]
+        public static AzureAksUpgradeConnectorSettings SetConnectorName(this AzureAksUpgradeConnectorSettings toolSettings, string connectorName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ConnectorName = connectorName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksUpgradeConnectorSettings.ConnectorName"/>.</em></p><p>Name of the ACI Connector.</p></summary>
+        [Pure]
+        public static AzureAksUpgradeConnectorSettings ResetConnectorName(this AzureAksUpgradeConnectorSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ConnectorName = null;
             return toolSettings;
         }
         #endregion
@@ -4159,7 +4183,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAksUpgradeConnectorSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksUpgradeConnectorSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksUpgradeConnectorSettings SetQuery(this AzureAksUpgradeConnectorSettings toolSettings, string query)
         {
@@ -4167,7 +4191,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksUpgradeConnectorSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksUpgradeConnectorSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksUpgradeConnectorSettings ResetQuery(this AzureAksUpgradeConnectorSettings toolSettings)
         {
@@ -4238,26 +4262,8 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region ParentSpace
-        /// <summary><p><em>Sets <see cref="AzureAksUseDevSpacesSettings.ParentSpace"/>.</em></p><p>Name of a parent dev space to inherit from when creating a new dev space. By default, if there is already a single dev space with no parent, the new space inherits from this one.</p></summary>
-        [Pure]
-        public static AzureAksUseDevSpacesSettings SetParentSpace(this AzureAksUseDevSpacesSettings toolSettings, string parentSpace)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ParentSpace = parentSpace;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAksUseDevSpacesSettings.ParentSpace"/>.</em></p><p>Name of a parent dev space to inherit from when creating a new dev space. By default, if there is already a single dev space with no parent, the new space inherits from this one.</p></summary>
-        [Pure]
-        public static AzureAksUseDevSpacesSettings ResetParentSpace(this AzureAksUseDevSpacesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ParentSpace = null;
-            return toolSettings;
-        }
-        #endregion
         #region Space
-        /// <summary><p><em>Sets <see cref="AzureAksUseDevSpacesSettings.Space"/>.</em></p><p>Name of the dev space to use.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksUseDevSpacesSettings.Space"/>.</em></p><p>Name of the new or existing dev space to select. Defaults to an interactive selection experience.</p></summary>
         [Pure]
         public static AzureAksUseDevSpacesSettings SetSpace(this AzureAksUseDevSpacesSettings toolSettings, string space)
         {
@@ -4265,12 +4271,48 @@ namespace Nuke.Azure
             toolSettings.Space = space;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksUseDevSpacesSettings.Space"/>.</em></p><p>Name of the dev space to use.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksUseDevSpacesSettings.Space"/>.</em></p><p>Name of the new or existing dev space to select. Defaults to an interactive selection experience.</p></summary>
         [Pure]
         public static AzureAksUseDevSpacesSettings ResetSpace(this AzureAksUseDevSpacesSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Space = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Update
+        /// <summary><p><em>Sets <see cref="AzureAksUseDevSpacesSettings.Update"/>.</em></p><p>Update to the latest Azure Dev Spaces client components.</p></summary>
+        [Pure]
+        public static AzureAksUseDevSpacesSettings SetUpdate(this AzureAksUseDevSpacesSettings toolSettings, string update)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Update = update;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksUseDevSpacesSettings.Update"/>.</em></p><p>Update to the latest Azure Dev Spaces client components.</p></summary>
+        [Pure]
+        public static AzureAksUseDevSpacesSettings ResetUpdate(this AzureAksUseDevSpacesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Update = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Yes
+        /// <summary><p><em>Sets <see cref="AzureAksUseDevSpacesSettings.Yes"/>.</em></p><p>Do not prompt for confirmation. Requires --space.</p></summary>
+        [Pure]
+        public static AzureAksUseDevSpacesSettings SetYes(this AzureAksUseDevSpacesSettings toolSettings, string yes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = yes;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksUseDevSpacesSettings.Yes"/>.</em></p><p>Do not prompt for confirmation. Requires --space.</p></summary>
+        [Pure]
+        public static AzureAksUseDevSpacesSettings ResetYes(this AzureAksUseDevSpacesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = null;
             return toolSettings;
         }
         #endregion
@@ -4329,7 +4371,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAksUseDevSpacesSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksUseDevSpacesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksUseDevSpacesSettings SetQuery(this AzureAksUseDevSpacesSettings toolSettings, string query)
         {
@@ -4337,7 +4379,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksUseDevSpacesSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksUseDevSpacesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksUseDevSpacesSettings ResetQuery(this AzureAksUseDevSpacesSettings toolSettings)
         {
@@ -4589,7 +4631,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAksWaitSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksWaitSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksWaitSettings SetQuery(this AzureAksWaitSettings toolSettings, string query)
         {
@@ -4597,7 +4639,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksWaitSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksWaitSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureAksWaitSettings ResetQuery(this AzureAksWaitSettings toolSettings)
         {

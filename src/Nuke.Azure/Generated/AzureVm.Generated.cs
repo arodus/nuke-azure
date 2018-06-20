@@ -364,61 +364,6 @@ namespace Nuke.Azure
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
-        static partial void PreProcess(AzureVmBootDiagnosticsDisableSettings toolSettings);
-        static partial void PostProcess(AzureVmBootDiagnosticsDisableSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureVmBootDiagnosticsDisable(Configure<AzureVmBootDiagnosticsDisableSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureVmBootDiagnosticsDisableSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureVmBootDiagnosticsEnableSettings toolSettings);
-        static partial void PostProcess(AzureVmBootDiagnosticsEnableSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureVmBootDiagnosticsEnable(Configure<AzureVmBootDiagnosticsEnableSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureVmBootDiagnosticsEnableSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureVmBootDiagnosticsGetBootLogSettings toolSettings);
-        static partial void PostProcess(AzureVmBootDiagnosticsGetBootLogSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureVmBootDiagnosticsGetBootLog(Configure<AzureVmBootDiagnosticsGetBootLogSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureVmBootDiagnosticsGetBootLogSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureVmDiagnosticsGetDefaultConfigSettings toolSettings);
-        static partial void PostProcess(AzureVmDiagnosticsGetDefaultConfigSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureVmDiagnosticsGetDefaultConfig(Configure<AzureVmDiagnosticsGetDefaultConfigSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureVmDiagnosticsGetDefaultConfigSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureVmDiagnosticsSetSettings toolSettings);
-        static partial void PostProcess(AzureVmDiagnosticsSetSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureVmDiagnosticsSet(Configure<AzureVmDiagnosticsSetSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureVmDiagnosticsSetSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
         static partial void PreProcess(AzureVmDiskAttachSettings toolSettings);
         static partial void PostProcess(AzureVmDiskAttachSettings toolSettings);
         /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
@@ -441,78 +386,56 @@ namespace Nuke.Azure
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
-        static partial void PreProcess(AzureVmEncryptionDisableSettings toolSettings);
-        static partial void PostProcess(AzureVmEncryptionDisableSettings toolSettings);
+        static partial void PreProcess(AzureVmRunCommandInvokeSettings toolSettings);
+        static partial void PostProcess(AzureVmRunCommandInvokeSettings toolSettings);
         /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureVmEncryptionDisable(Configure<AzureVmEncryptionDisableSettings> configurator = null, ProcessSettings processSettings = null)
+        public static void AzureVmRunCommandInvoke(Configure<AzureVmRunCommandInvokeSettings> configurator = null, ProcessSettings processSettings = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureVmEncryptionDisableSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureVmRunCommandInvokeSettings());
             PreProcess(toolSettings);
             var process = ProcessTasks.StartProcess(toolSettings, processSettings);
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
-        static partial void PreProcess(AzureVmEncryptionEnableSettings toolSettings);
-        static partial void PostProcess(AzureVmEncryptionEnableSettings toolSettings);
+        static partial void PreProcess(AzureVmRunCommandListSettings toolSettings);
+        static partial void PostProcess(AzureVmRunCommandListSettings toolSettings);
         /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureVmEncryptionEnable(Configure<AzureVmEncryptionEnableSettings> configurator = null, ProcessSettings processSettings = null)
+        public static void AzureVmRunCommandList(Configure<AzureVmRunCommandListSettings> configurator = null, ProcessSettings processSettings = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureVmEncryptionEnableSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureVmRunCommandListSettings());
             PreProcess(toolSettings);
             var process = ProcessTasks.StartProcess(toolSettings, processSettings);
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
-        static partial void PreProcess(AzureVmEncryptionShowSettings toolSettings);
-        static partial void PostProcess(AzureVmEncryptionShowSettings toolSettings);
+        static partial void PreProcess(AzureVmRunCommandShowSettings toolSettings);
+        static partial void PostProcess(AzureVmRunCommandShowSettings toolSettings);
         /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureVmEncryptionShow(Configure<AzureVmEncryptionShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static void AzureVmRunCommandShow(Configure<AzureVmRunCommandShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureVmEncryptionShowSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureVmRunCommandShowSettings());
             PreProcess(toolSettings);
             var process = ProcessTasks.StartProcess(toolSettings, processSettings);
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
-        static partial void PreProcess(AzureVmExtensionDeleteSettings toolSettings);
-        static partial void PostProcess(AzureVmExtensionDeleteSettings toolSettings);
+        static partial void PreProcess(AzureVmDiagnosticsGetDefaultConfigSettings toolSettings);
+        static partial void PostProcess(AzureVmDiagnosticsGetDefaultConfigSettings toolSettings);
         /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureVmExtensionDelete(Configure<AzureVmExtensionDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static void AzureVmDiagnosticsGetDefaultConfig(Configure<AzureVmDiagnosticsGetDefaultConfigSettings> configurator = null, ProcessSettings processSettings = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureVmExtensionDeleteSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureVmDiagnosticsGetDefaultConfigSettings());
             PreProcess(toolSettings);
             var process = ProcessTasks.StartProcess(toolSettings, processSettings);
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
-        static partial void PreProcess(AzureVmExtensionListSettings toolSettings);
-        static partial void PostProcess(AzureVmExtensionListSettings toolSettings);
+        static partial void PreProcess(AzureVmDiagnosticsSetSettings toolSettings);
+        static partial void PostProcess(AzureVmDiagnosticsSetSettings toolSettings);
         /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureVmExtensionList(Configure<AzureVmExtensionListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static void AzureVmDiagnosticsSet(Configure<AzureVmDiagnosticsSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureVmExtensionListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureVmExtensionSetSettings toolSettings);
-        static partial void PostProcess(AzureVmExtensionSetSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureVmExtensionSet(Configure<AzureVmExtensionSetSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureVmExtensionSetSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureVmExtensionShowSettings toolSettings);
-        static partial void PostProcess(AzureVmExtensionShowSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureVmExtensionShow(Configure<AzureVmExtensionShowSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureVmExtensionShowSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureVmDiagnosticsSetSettings());
             PreProcess(toolSettings);
             var process = ProcessTasks.StartProcess(toolSettings, processSettings);
             process.AssertZeroExitCode();
@@ -546,6 +469,204 @@ namespace Nuke.Azure
         public static void AzureVmIdentityShow(Configure<AzureVmIdentityShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureVmIdentityShowSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureVmUnmanagedDiskAttachSettings toolSettings);
+        static partial void PostProcess(AzureVmUnmanagedDiskAttachSettings toolSettings);
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureVmUnmanagedDiskAttach(Configure<AzureVmUnmanagedDiskAttachSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureVmUnmanagedDiskAttachSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureVmUnmanagedDiskDetachSettings toolSettings);
+        static partial void PostProcess(AzureVmUnmanagedDiskDetachSettings toolSettings);
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureVmUnmanagedDiskDetach(Configure<AzureVmUnmanagedDiskDetachSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureVmUnmanagedDiskDetachSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureVmUnmanagedDiskListSettings toolSettings);
+        static partial void PostProcess(AzureVmUnmanagedDiskListSettings toolSettings);
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureVmUnmanagedDiskList(Configure<AzureVmUnmanagedDiskListSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureVmUnmanagedDiskListSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureVmBootDiagnosticsDisableSettings toolSettings);
+        static partial void PostProcess(AzureVmBootDiagnosticsDisableSettings toolSettings);
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureVmBootDiagnosticsDisable(Configure<AzureVmBootDiagnosticsDisableSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureVmBootDiagnosticsDisableSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureVmBootDiagnosticsEnableSettings toolSettings);
+        static partial void PostProcess(AzureVmBootDiagnosticsEnableSettings toolSettings);
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureVmBootDiagnosticsEnable(Configure<AzureVmBootDiagnosticsEnableSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureVmBootDiagnosticsEnableSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureVmBootDiagnosticsGetBootLogSettings toolSettings);
+        static partial void PostProcess(AzureVmBootDiagnosticsGetBootLogSettings toolSettings);
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureVmBootDiagnosticsGetBootLog(Configure<AzureVmBootDiagnosticsGetBootLogSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureVmBootDiagnosticsGetBootLogSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureVmNicAddSettings toolSettings);
+        static partial void PostProcess(AzureVmNicAddSettings toolSettings);
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureVmNicAdd(Configure<AzureVmNicAddSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureVmNicAddSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureVmNicListSettings toolSettings);
+        static partial void PostProcess(AzureVmNicListSettings toolSettings);
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureVmNicList(Configure<AzureVmNicListSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureVmNicListSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureVmNicRemoveSettings toolSettings);
+        static partial void PostProcess(AzureVmNicRemoveSettings toolSettings);
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureVmNicRemove(Configure<AzureVmNicRemoveSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureVmNicRemoveSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureVmNicSetSettings toolSettings);
+        static partial void PostProcess(AzureVmNicSetSettings toolSettings);
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureVmNicSet(Configure<AzureVmNicSetSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureVmNicSetSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureVmNicShowSettings toolSettings);
+        static partial void PostProcess(AzureVmNicShowSettings toolSettings);
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureVmNicShow(Configure<AzureVmNicShowSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureVmNicShowSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureVmSecretAddSettings toolSettings);
+        static partial void PostProcess(AzureVmSecretAddSettings toolSettings);
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureVmSecretAdd(Configure<AzureVmSecretAddSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureVmSecretAddSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureVmSecretFormatSettings toolSettings);
+        static partial void PostProcess(AzureVmSecretFormatSettings toolSettings);
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureVmSecretFormat(Configure<AzureVmSecretFormatSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureVmSecretFormatSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureVmSecretListSettings toolSettings);
+        static partial void PostProcess(AzureVmSecretListSettings toolSettings);
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureVmSecretList(Configure<AzureVmSecretListSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureVmSecretListSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureVmSecretRemoveSettings toolSettings);
+        static partial void PostProcess(AzureVmSecretRemoveSettings toolSettings);
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureVmSecretRemove(Configure<AzureVmSecretRemoveSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureVmSecretRemoveSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureVmUserDeleteSettings toolSettings);
+        static partial void PostProcess(AzureVmUserDeleteSettings toolSettings);
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureVmUserDelete(Configure<AzureVmUserDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureVmUserDeleteSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureVmUserResetSshSettings toolSettings);
+        static partial void PostProcess(AzureVmUserResetSshSettings toolSettings);
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureVmUserResetSsh(Configure<AzureVmUserResetSshSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureVmUserResetSshSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureVmUserUpdateSettings toolSettings);
+        static partial void PostProcess(AzureVmUserUpdateSettings toolSettings);
+        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureVmUserUpdate(Configure<AzureVmUserUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureVmUserUpdateSettings());
             PreProcess(toolSettings);
             var process = ProcessTasks.StartProcess(toolSettings, processSettings);
             process.AssertZeroExitCode();
@@ -617,199 +738,78 @@ namespace Nuke.Azure
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
-        static partial void PreProcess(AzureVmNicAddSettings toolSettings);
-        static partial void PostProcess(AzureVmNicAddSettings toolSettings);
+        static partial void PreProcess(AzureVmExtensionDeleteSettings toolSettings);
+        static partial void PostProcess(AzureVmExtensionDeleteSettings toolSettings);
         /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureVmNicAdd(Configure<AzureVmNicAddSettings> configurator = null, ProcessSettings processSettings = null)
+        public static void AzureVmExtensionDelete(Configure<AzureVmExtensionDeleteSettings> configurator = null, ProcessSettings processSettings = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureVmNicAddSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureVmExtensionDeleteSettings());
             PreProcess(toolSettings);
             var process = ProcessTasks.StartProcess(toolSettings, processSettings);
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
-        static partial void PreProcess(AzureVmNicListSettings toolSettings);
-        static partial void PostProcess(AzureVmNicListSettings toolSettings);
+        static partial void PreProcess(AzureVmExtensionListSettings toolSettings);
+        static partial void PostProcess(AzureVmExtensionListSettings toolSettings);
         /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureVmNicList(Configure<AzureVmNicListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static void AzureVmExtensionList(Configure<AzureVmExtensionListSettings> configurator = null, ProcessSettings processSettings = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureVmNicListSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureVmExtensionListSettings());
             PreProcess(toolSettings);
             var process = ProcessTasks.StartProcess(toolSettings, processSettings);
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
-        static partial void PreProcess(AzureVmNicRemoveSettings toolSettings);
-        static partial void PostProcess(AzureVmNicRemoveSettings toolSettings);
+        static partial void PreProcess(AzureVmExtensionSetSettings toolSettings);
+        static partial void PostProcess(AzureVmExtensionSetSettings toolSettings);
         /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureVmNicRemove(Configure<AzureVmNicRemoveSettings> configurator = null, ProcessSettings processSettings = null)
+        public static void AzureVmExtensionSet(Configure<AzureVmExtensionSetSettings> configurator = null, ProcessSettings processSettings = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureVmNicRemoveSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureVmExtensionSetSettings());
             PreProcess(toolSettings);
             var process = ProcessTasks.StartProcess(toolSettings, processSettings);
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
-        static partial void PreProcess(AzureVmNicSetSettings toolSettings);
-        static partial void PostProcess(AzureVmNicSetSettings toolSettings);
+        static partial void PreProcess(AzureVmExtensionShowSettings toolSettings);
+        static partial void PostProcess(AzureVmExtensionShowSettings toolSettings);
         /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureVmNicSet(Configure<AzureVmNicSetSettings> configurator = null, ProcessSettings processSettings = null)
+        public static void AzureVmExtensionShow(Configure<AzureVmExtensionShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureVmNicSetSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureVmExtensionShowSettings());
             PreProcess(toolSettings);
             var process = ProcessTasks.StartProcess(toolSettings, processSettings);
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
-        static partial void PreProcess(AzureVmNicShowSettings toolSettings);
-        static partial void PostProcess(AzureVmNicShowSettings toolSettings);
+        static partial void PreProcess(AzureVmEncryptionDisableSettings toolSettings);
+        static partial void PostProcess(AzureVmEncryptionDisableSettings toolSettings);
         /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureVmNicShow(Configure<AzureVmNicShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static void AzureVmEncryptionDisable(Configure<AzureVmEncryptionDisableSettings> configurator = null, ProcessSettings processSettings = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureVmNicShowSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureVmEncryptionDisableSettings());
             PreProcess(toolSettings);
             var process = ProcessTasks.StartProcess(toolSettings, processSettings);
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
-        static partial void PreProcess(AzureVmRunCommandInvokeSettings toolSettings);
-        static partial void PostProcess(AzureVmRunCommandInvokeSettings toolSettings);
+        static partial void PreProcess(AzureVmEncryptionEnableSettings toolSettings);
+        static partial void PostProcess(AzureVmEncryptionEnableSettings toolSettings);
         /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureVmRunCommandInvoke(Configure<AzureVmRunCommandInvokeSettings> configurator = null, ProcessSettings processSettings = null)
+        public static void AzureVmEncryptionEnable(Configure<AzureVmEncryptionEnableSettings> configurator = null, ProcessSettings processSettings = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureVmRunCommandInvokeSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureVmEncryptionEnableSettings());
             PreProcess(toolSettings);
             var process = ProcessTasks.StartProcess(toolSettings, processSettings);
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
-        static partial void PreProcess(AzureVmRunCommandListSettings toolSettings);
-        static partial void PostProcess(AzureVmRunCommandListSettings toolSettings);
+        static partial void PreProcess(AzureVmEncryptionShowSettings toolSettings);
+        static partial void PostProcess(AzureVmEncryptionShowSettings toolSettings);
         /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureVmRunCommandList(Configure<AzureVmRunCommandListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static void AzureVmEncryptionShow(Configure<AzureVmEncryptionShowSettings> configurator = null, ProcessSettings processSettings = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureVmRunCommandListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureVmRunCommandShowSettings toolSettings);
-        static partial void PostProcess(AzureVmRunCommandShowSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureVmRunCommandShow(Configure<AzureVmRunCommandShowSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureVmRunCommandShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureVmSecretAddSettings toolSettings);
-        static partial void PostProcess(AzureVmSecretAddSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureVmSecretAdd(Configure<AzureVmSecretAddSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureVmSecretAddSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureVmSecretFormatSettings toolSettings);
-        static partial void PostProcess(AzureVmSecretFormatSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureVmSecretFormat(Configure<AzureVmSecretFormatSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureVmSecretFormatSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureVmSecretListSettings toolSettings);
-        static partial void PostProcess(AzureVmSecretListSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureVmSecretList(Configure<AzureVmSecretListSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureVmSecretListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureVmSecretRemoveSettings toolSettings);
-        static partial void PostProcess(AzureVmSecretRemoveSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureVmSecretRemove(Configure<AzureVmSecretRemoveSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureVmSecretRemoveSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureVmUnmanagedDiskAttachSettings toolSettings);
-        static partial void PostProcess(AzureVmUnmanagedDiskAttachSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureVmUnmanagedDiskAttach(Configure<AzureVmUnmanagedDiskAttachSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureVmUnmanagedDiskAttachSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureVmUnmanagedDiskDetachSettings toolSettings);
-        static partial void PostProcess(AzureVmUnmanagedDiskDetachSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureVmUnmanagedDiskDetach(Configure<AzureVmUnmanagedDiskDetachSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureVmUnmanagedDiskDetachSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureVmUnmanagedDiskListSettings toolSettings);
-        static partial void PostProcess(AzureVmUnmanagedDiskListSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureVmUnmanagedDiskList(Configure<AzureVmUnmanagedDiskListSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureVmUnmanagedDiskListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureVmUserDeleteSettings toolSettings);
-        static partial void PostProcess(AzureVmUserDeleteSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureVmUserDelete(Configure<AzureVmUserDeleteSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureVmUserDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureVmUserResetSshSettings toolSettings);
-        static partial void PostProcess(AzureVmUserResetSshSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureVmUserResetSsh(Configure<AzureVmUserResetSshSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureVmUserResetSshSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureVmUserUpdateSettings toolSettings);
-        static partial void PostProcess(AzureVmUserUpdateSettings toolSettings);
-        /// <summary><p>Provision Linux or Windows virtual machines.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureVmUserUpdate(Configure<AzureVmUserUpdateSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureVmUserUpdateSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureVmEncryptionShowSettings());
             PreProcess(toolSettings);
             var process = ProcessTasks.StartProcess(toolSettings, processSettings);
             process.AssertZeroExitCode();
@@ -885,7 +885,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -926,7 +926,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -978,7 +978,7 @@ namespace Nuke.Azure
         public virtual string NoWait { get; internal set; }
         /// <summary><p>One or many Key Vault secrets as JSON strings or files via `@&amp;lt;file path&amp;gt;` containing `[{ "sourceVault": { "id": "value" }, "vaultCertificates": [{ "certificateUrl": "value", "certificateStore": "cert store name (only on windows)"}] }]`.</p></summary>
         public virtual string Secrets { get; internal set; }
-        /// <summary><p>The VM size to be created. See &lt;a href="https://azure.microsoft.com/en-us/pricing/details/virtual-machines/"&gt;https://azure.microsoft.com/en-us/pricing/details/virtual-machines/&lt;/a&gt; for size info.</p></summary>
+        /// <summary><p>The VM size to be created. See <a href="https://azure.microsoft.com/en-us/pricing/details/virtual-machines/">https://azure.microsoft.com/en-us/pricing/details/virtual-machines/</a> for size info.</p></summary>
         public virtual string Size { get; internal set; }
         /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
@@ -1067,7 +1067,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1158,7 +1158,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1201,7 +1201,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1243,7 +1243,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1282,7 +1282,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1320,7 +1320,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1358,7 +1358,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1394,7 +1394,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1429,7 +1429,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1464,7 +1464,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1501,7 +1501,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1547,7 +1547,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1589,7 +1589,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1629,7 +1629,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1672,7 +1672,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1714,7 +1714,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1755,7 +1755,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1796,7 +1796,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1837,7 +1837,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1894,7 +1894,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1954,7 +1954,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1999,7 +1999,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -2037,7 +2037,7 @@ namespace Nuke.Azure
         public virtual string NoWait { get; internal set; }
         /// <summary><p>Fault Domain count.</p></summary>
         public virtual string PlatformFaultDomainCount { get; internal set; }
-        /// <summary><p>Update Domain count. If unspecified, server picks the most optimal number like 5. For the latest defaults see &lt;a href="https://docs.microsoft.com/en-us/rest/api/compute/availabilitysets/availabilitysets-create"&gt;https://docs.microsoft.com/en-us/rest/api/compute/availabilitysets/availabilitysets-create&lt;/a&gt;.</p></summary>
+        /// <summary><p>Update Domain count. If unspecified, server picks the most optimal number like 5. For the latest defaults see <a href="https://docs.microsoft.com/en-us/rest/api/compute/availabilitysets/availabilitysets-create">https://docs.microsoft.com/en-us/rest/api/compute/availabilitysets/availabilitysets-create</a>.</p></summary>
         public virtual string PlatformUpdateDomainCount { get; internal set; }
         /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
@@ -2051,7 +2051,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -2096,7 +2096,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -2132,7 +2132,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -2169,7 +2169,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -2207,7 +2207,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -2251,7 +2251,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -2264,208 +2264,6 @@ namespace Nuke.Azure
               .Add("--add {value}", Add)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmBootDiagnosticsDisableSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmBootDiagnosticsDisableSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm boot-diagnostics disable")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmBootDiagnosticsEnableSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmBootDiagnosticsEnableSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name or URI of a storage account (e.g. &lt;a href="https://your_storage_account_name.blob.core.windows.net/"&gt;https://your_storage_account_name.blob.core.windows.net/&lt;/a&gt;).</p></summary>
-        public virtual string Storage { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm boot-diagnostics enable")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--storage {value}", Storage)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmBootDiagnosticsGetBootLogSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmBootDiagnosticsGetBootLogSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm boot-diagnostics get-boot-log")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmDiagnosticsGetDefaultConfigSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmDiagnosticsGetDefaultConfigSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>For Windows VMs.</p></summary>
-        public virtual string IsWindowsOs { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm diagnostics get-default-config")
-              .Add("--is-windows-os {value}", IsWindowsOs)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmDiagnosticsSetSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmDiagnosticsSetSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Json string or a file path, which defines data to be collected.</p></summary>
-        public virtual string Settings { get; internal set; }
-        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string VmName { get; internal set; }
-        /// <summary><p>By doing this, extension system will not pick the highest minor version for the specified version number, and will not auto update to the latest build/revision number on any scale set updates in future.</p></summary>
-        public virtual string NoAutoUpgrade { get; internal set; }
-        /// <summary><p>Json string or a file path containing private configurations such as storage account keys, etc.</p></summary>
-        public virtual string ProtectedSettings { get; internal set; }
-        /// <summary><p>Version of the diagnostics extension. Will use the latest if not specfied.</p></summary>
-        public virtual string Version { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm diagnostics set")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--settings {value}", Settings)
-              .Add("--vm-name {value}", VmName)
-              .Add("--no-auto-upgrade {value}", NoAutoUpgrade)
-              .Add("--protected-settings {value}", ProtectedSettings)
-              .Add("--version {value}", Version)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2508,7 +2306,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -2555,7 +2353,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -2566,6 +2364,1546 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--vm-name {value}", VmName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmRunCommandInvokeSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmRunCommandInvokeSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>The run command ID.</p></summary>
+        public virtual string CommandId { get; internal set; }
+        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Space-separated parameters in the format of '[name=]value'.</p></summary>
+        public virtual string Parameters { get; internal set; }
+        /// <summary><p>Script lines separated by whites spaces. Use @{file} to load from a file.</p></summary>
+        public virtual string Scripts { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm run-command invoke")
+              .Add("--command-id {value}", CommandId)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--parameters {value}", Parameters)
+              .Add("--scripts {value}", Scripts)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmRunCommandListSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmRunCommandListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        public virtual string Location { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm run-command list")
+              .Add("--location {value}", Location)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmRunCommandShowSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmRunCommandShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>The run command ID.</p></summary>
+        public virtual string CommandId { get; internal set; }
+        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        public virtual string Location { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm run-command show")
+              .Add("--command-id {value}", CommandId)
+              .Add("--location {value}", Location)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmDiagnosticsGetDefaultConfigSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmDiagnosticsGetDefaultConfigSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>For Windows VMs.</p></summary>
+        public virtual string IsWindowsOs { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm diagnostics get-default-config")
+              .Add("--is-windows-os {value}", IsWindowsOs)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmDiagnosticsSetSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmDiagnosticsSetSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Json string or a file path, which defines data to be collected.</p></summary>
+        public virtual string Settings { get; internal set; }
+        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string VmName { get; internal set; }
+        /// <summary><p>By doing this, extension system will not pick the highest minor version for the specified version number, and will not auto update to the latest build/revision number on any scale set updates in future.</p></summary>
+        public virtual string NoAutoUpgrade { get; internal set; }
+        /// <summary><p>Json string or a file path containing private configurations such as storage account keys, etc.</p></summary>
+        public virtual string ProtectedSettings { get; internal set; }
+        /// <summary><p>Version of the diagnostics extension. Will use the latest if not specfied.</p></summary>
+        public virtual string Version { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm diagnostics set")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--settings {value}", Settings)
+              .Add("--vm-name {value}", VmName)
+              .Add("--no-auto-upgrade {value}", NoAutoUpgrade)
+              .Add("--protected-settings {value}", ProtectedSettings)
+              .Add("--version {value}", Version)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmIdentityAssignSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmIdentityAssignSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The identities to assign.</p></summary>
+        public virtual string Identities { get; internal set; }
+        /// <summary><p>Role name or id the system assigned identity will have.</p></summary>
+        public virtual string Role { get; internal set; }
+        /// <summary><p>Scope that the system assigned identity can access.</p></summary>
+        public virtual string Scope { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm identity assign")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--identities {value}", Identities)
+              .Add("--role {value}", Role)
+              .Add("--scope {value}", Scope)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmIdentityRemoveSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmIdentityRemoveSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>Space-separated user assigned identities to remove.</p></summary>
+        public virtual string Identities { get; internal set; }
+        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm identity remove")
+              .Add("--identities {value}", Identities)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmIdentityShowSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmIdentityShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm identity show")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmUnmanagedDiskAttachSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmUnmanagedDiskAttachSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string VmName { get; internal set; }
+        /// <summary><p>Disk caching policy.</p></summary>
+        public virtual VmCreateOsDiskCaching Caching { get; internal set; }
+        /// <summary><p>0-based logical unit number (LUN). Max value depends on the Virtual Machine size.</p></summary>
+        public virtual string Lun { get; internal set; }
+        /// <summary><p>The data disk name(optional when create a new disk).</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Create a new disk.</p></summary>
+        public virtual string New { get; internal set; }
+        /// <summary><p></p></summary>
+        public virtual string SizeGb { get; internal set; }
+        /// <summary><p>Virtual hard disk URI. For example: <a href="https://mystorage.blob.core.windows.net/vhds/d1.vhd">https://mystorage.blob.core.windows.net/vhds/d1.vhd</a>.</p></summary>
+        public virtual string VhdUri { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm unmanaged-disk attach")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--vm-name {value}", VmName)
+              .Add("--caching {value}", Caching)
+              .Add("--lun {value}", Lun)
+              .Add("--name {value}", Name)
+              .Add("--new {value}", New)
+              .Add("--size-gb {value}", SizeGb)
+              .Add("--vhd-uri {value}", VhdUri)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmUnmanagedDiskDetachSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmUnmanagedDiskDetachSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>The data disk name.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string VmName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm unmanaged-disk detach")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--vm-name {value}", VmName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmUnmanagedDiskListSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmUnmanagedDiskListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm unmanaged-disk list")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmBootDiagnosticsDisableSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmBootDiagnosticsDisableSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm boot-diagnostics disable")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmBootDiagnosticsEnableSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmBootDiagnosticsEnableSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or URI of a storage account (e.g. <a href="https://your_storage_account_name.blob.core.windows.net/">https://your_storage_account_name.blob.core.windows.net/</a>).</p></summary>
+        public virtual string Storage { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm boot-diagnostics enable")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--storage {value}", Storage)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmBootDiagnosticsGetBootLogSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmBootDiagnosticsGetBootLogSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm boot-diagnostics get-boot-log")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmNicAddSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmNicAddSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>Names or IDs of NICs.</p></summary>
+        public virtual string Nics { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string VmName { get; internal set; }
+        /// <summary><p>Name or ID of the primary NIC. If missing, the first NIC in the list will be the primary.</p></summary>
+        public virtual string PrimaryNic { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm nic add")
+              .Add("--nics {value}", Nics)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--vm-name {value}", VmName)
+              .Add("--primary-nic {value}", PrimaryNic)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmNicListSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmNicListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string VmName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm nic list")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--vm-name {value}", VmName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmNicRemoveSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmNicRemoveSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>Names or IDs of NICs.</p></summary>
+        public virtual string Nics { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string VmName { get; internal set; }
+        /// <summary><p>Name or ID of the primary NIC. If missing, the first NIC in the list will be the primary.</p></summary>
+        public virtual string PrimaryNic { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm nic remove")
+              .Add("--nics {value}", Nics)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--vm-name {value}", VmName)
+              .Add("--primary-nic {value}", PrimaryNic)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmNicSetSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmNicSetSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>Names or IDs of NICs.</p></summary>
+        public virtual string Nics { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string VmName { get; internal set; }
+        /// <summary><p>Name or ID of the primary NIC. If missing, the first NIC in the list will be the primary.</p></summary>
+        public virtual string PrimaryNic { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm nic set")
+              .Add("--nics {value}", Nics)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--vm-name {value}", VmName)
+              .Add("--primary-nic {value}", PrimaryNic)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmNicShowSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmNicShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>NIC name or ID.</p></summary>
+        public virtual string Nic { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string VmName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm nic show")
+              .Add("--nic {value}", Nic)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--vm-name {value}", VmName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmSecretAddSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmSecretAddSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>Key vault certificate name or its full secret URL.</p></summary>
+        public virtual string Certificate { get; internal set; }
+        /// <summary><p>Name or ID of the key vault.</p></summary>
+        public virtual string Keyvault { get; internal set; }
+        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Windows certificate store names. Default: My.</p></summary>
+        public virtual string CertificateStore { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm secret add")
+              .Add("--certificate {value}", Certificate)
+              .Add("--keyvault {value}", Keyvault)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--certificate-store {value}", CertificateStore)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmSecretFormatSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmSecretFormatSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>Space-separated list of key vault secret URIs. Perhaps, produced by 'az keyvault secret list-versions --vault-name vaultname -n cert1 --query "[?attributes.enabled].id" -o tsv'.</p></summary>
+        public virtual IReadOnlyList<string> Secrets => SecretsInternal.AsReadOnly();
+        internal List<string> SecretsInternal { get; set; } = new List<string>();
+        /// <summary><p>Windows certificate store names. Default: My.</p></summary>
+        public virtual string CertificateStore { get; internal set; }
+        /// <summary><p>Name or ID of the key vault.</p></summary>
+        public virtual string Keyvault { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm secret format")
+              .Add("--secrets {value}", Secrets, separator: ' ')
+              .Add("--certificate-store {value}", CertificateStore)
+              .Add("--keyvault {value}", Keyvault)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmSecretListSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmSecretListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm secret list")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmSecretRemoveSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmSecretRemoveSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>Name or ID of the key vault.</p></summary>
+        public virtual string Keyvault { get; internal set; }
+        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Key vault certificate name or its full secret URL.</p></summary>
+        public virtual string Certificate { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm secret remove")
+              .Add("--keyvault {value}", Keyvault)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--certificate {value}", Certificate)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmUserDeleteSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmUserDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The user name.</p></summary>
+        public virtual string Username { get; internal set; }
+        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
+        public virtual string NoWait { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm user delete")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--username {value}", Username)
+              .Add("--no-wait {value}", NoWait)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmUserResetSshSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmUserResetSshSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
+        public virtual string NoWait { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm user reset-ssh")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--no-wait {value}", NoWait)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmUserUpdateSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmUserUpdateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The user name.</p></summary>
+        public virtual string Username { get; internal set; }
+        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
+        public virtual string NoWait { get; internal set; }
+        /// <summary><p>The user password.</p></summary>
+        public virtual string Password { get; internal set; }
+        /// <summary><p>SSH public key file value or public key file path.</p></summary>
+        public virtual string SshKeyValue { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm user update")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--username {value}", Username)
+              .Add("--no-wait {value}", NoWait)
+              .Add("--password {value}", Password, secret: true)
+              .Add("--ssh-key-value {value}", SshKeyValue)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmImageAcceptTermsSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmImageAcceptTermsSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>Image offer.</p></summary>
+        public virtual string Offer { get; internal set; }
+        /// <summary><p>Image billing plan.</p></summary>
+        public virtual string Plan { get; internal set; }
+        /// <summary><p>Image publisher.</p></summary>
+        public virtual string Publisher { get; internal set; }
+        /// <summary><p>URN, in format of 'publisher:offer:sku:versin'. If specified, other argument values can be omitted.</p></summary>
+        public virtual string Urn { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm image accept-terms")
+              .Add("--offer {value}", Offer)
+              .Add("--plan {value}", Plan)
+              .Add("--publisher {value}", Publisher)
+              .Add("--urn {value}", Urn)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmImageListSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmImageListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>Retrieve image list from live Azure service rather using an offline image list.</p></summary>
+        public virtual string All { get; internal set; }
+        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        public virtual string Location { get; internal set; }
+        /// <summary><p>Image offer name, partial name is accepted.</p></summary>
+        public virtual string Offer { get; internal set; }
+        /// <summary><p>Image publisher name, partial name is accepted.</p></summary>
+        public virtual string Publisher { get; internal set; }
+        /// <summary><p>Image sku name, partial name is accepted.</p></summary>
+        public virtual string Sku { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm image list")
+              .Add("--all {value}", All)
+              .Add("--location {value}", Location)
+              .Add("--offer {value}", Offer)
+              .Add("--publisher {value}", Publisher)
+              .Add("--sku {value}", Sku)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmImageListOffersSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmImageListOffersSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        public virtual string Location { get; internal set; }
+        /// <summary><p>A valid image publisher.</p></summary>
+        public virtual string Publisher { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm image list-offers")
+              .Add("--location {value}", Location)
+              .Add("--publisher {value}", Publisher)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmImageListPublishersSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmImageListPublishersSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        public virtual string Location { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm image list-publishers")
+              .Add("--location {value}", Location)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmImageListSkusSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmImageListSkusSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        public virtual string Location { get; internal set; }
+        /// <summary><p>Image offer.</p></summary>
+        public virtual string Offer { get; internal set; }
+        /// <summary><p>A valid image publisher.</p></summary>
+        public virtual string Publisher { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm image list-skus")
+              .Add("--location {value}", Location)
+              .Add("--offer {value}", Offer)
+              .Add("--publisher {value}", Publisher)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmImageShowSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmImageShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        public virtual string Location { get; internal set; }
+        /// <summary><p>Image offer.</p></summary>
+        public virtual string Offer { get; internal set; }
+        /// <summary><p>Image publisher.</p></summary>
+        public virtual string Publisher { get; internal set; }
+        /// <summary><p>Image sku.</p></summary>
+        public virtual string Sku { get; internal set; }
+        /// <summary><p>URN, in format of 'publisher:offer:sku:versin'. If specified, other argument values can be omitted.</p></summary>
+        public virtual string Urn { get; internal set; }
+        /// <summary><p>Image sku's version.</p></summary>
+        public virtual string Version { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm image show")
+              .Add("--location {value}", Location)
+              .Add("--offer {value}", Offer)
+              .Add("--publisher {value}", Publisher)
+              .Add("--sku {value}", Sku)
+              .Add("--urn {value}", Urn)
+              .Add("--version {value}", Version)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmExtensionDeleteSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmExtensionDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>Extension name.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string VmName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm extension delete")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--vm-name {value}", VmName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmExtensionListSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmExtensionListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string VmName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm extension list")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--vm-name {value}", VmName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmExtensionSetSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmExtensionSetSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>Extension name.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>The name of the extension publisher.</p></summary>
+        public virtual string Publisher { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string VmName { get; internal set; }
+        /// <summary><p>Force to update even if the extension configuration has not changed.</p></summary>
+        public virtual string ForceUpdate { get; internal set; }
+        /// <summary><p>By doing this, extension system will not pick the highest minor version for the specified version number, and will not auto update to the latest build/revision number on any scale set updates in future.</p></summary>
+        public virtual string NoAutoUpgrade { get; internal set; }
+        /// <summary><p>Protected settings in JSON format for sensitive information like credentials. A JSON file path is also accepted.</p></summary>
+        public virtual string ProtectedSettings { get; internal set; }
+        /// <summary><p>Extension settings in JSON format. A JSON file path is also accepted.</p></summary>
+        public virtual string Settings { get; internal set; }
+        /// <summary><p>The version of the extension.</p></summary>
+        public virtual string Version { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm extension set")
+              .Add("--name {value}", Name)
+              .Add("--publisher {value}", Publisher)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--vm-name {value}", VmName)
+              .Add("--force-update {value}", ForceUpdate)
+              .Add("--no-auto-upgrade {value}", NoAutoUpgrade)
+              .Add("--protected-settings {value}", ProtectedSettings)
+              .Add("--settings {value}", Settings)
+              .Add("--version {value}", Version)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureVmExtensionShowSettings
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureVmExtensionShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureVm executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
+        /// <summary><p>Extension name.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string VmName { get; internal set; }
+        /// <summary><p>The expand expression to apply on the operation.</p></summary>
+        public virtual string Expand { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("vm extension show")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--vm-name {value}", VmName)
+              .Add("--expand {value}", Expand)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2598,7 +3936,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -2656,7 +3994,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -2703,7 +4041,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -2713,1341 +4051,6 @@ namespace Nuke.Azure
               .Add("vm encryption show")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmExtensionDeleteSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmExtensionDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>Extension name.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string VmName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm extension delete")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--vm-name {value}", VmName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmExtensionListSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmExtensionListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string VmName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm extension list")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--vm-name {value}", VmName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmExtensionSetSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmExtensionSetSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>Extension name.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>The name of the extension publisher.</p></summary>
-        public virtual string Publisher { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string VmName { get; internal set; }
-        /// <summary><p>By doing this, extension system will not pick the highest minor version for the specified version number, and will not auto update to the latest build/revision number on any scale set updates in future.</p></summary>
-        public virtual string NoAutoUpgrade { get; internal set; }
-        /// <summary><p>Protected settings in JSON format for sensitive information like credentials. A JSON file path is also accepted.</p></summary>
-        public virtual string ProtectedSettings { get; internal set; }
-        /// <summary><p>Extension settings in JSON format. A JSON file path is also accepted.</p></summary>
-        public virtual string Settings { get; internal set; }
-        /// <summary><p>The version of the extension.</p></summary>
-        public virtual string Version { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm extension set")
-              .Add("--name {value}", Name)
-              .Add("--publisher {value}", Publisher)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--vm-name {value}", VmName)
-              .Add("--no-auto-upgrade {value}", NoAutoUpgrade)
-              .Add("--protected-settings {value}", ProtectedSettings)
-              .Add("--settings {value}", Settings)
-              .Add("--version {value}", Version)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmExtensionShowSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmExtensionShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>Extension name.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string VmName { get; internal set; }
-        /// <summary><p>The expand expression to apply on the operation.</p></summary>
-        public virtual string Expand { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm extension show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--vm-name {value}", VmName)
-              .Add("--expand {value}", Expand)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmIdentityAssignSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmIdentityAssignSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The identities to assign.</p></summary>
-        public virtual string Identities { get; internal set; }
-        /// <summary><p>Role name or id the system assigned identity will have.</p></summary>
-        public virtual string Role { get; internal set; }
-        /// <summary><p>Scope that the system assigned identity can access.</p></summary>
-        public virtual string Scope { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm identity assign")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--identities {value}", Identities)
-              .Add("--role {value}", Role)
-              .Add("--scope {value}", Scope)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmIdentityRemoveSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmIdentityRemoveSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>Space-separated user assigned identities to remove.</p></summary>
-        public virtual string Identities { get; internal set; }
-        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm identity remove")
-              .Add("--identities {value}", Identities)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmIdentityShowSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmIdentityShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm identity show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmImageAcceptTermsSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmImageAcceptTermsSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>Image offer.</p></summary>
-        public virtual string Offer { get; internal set; }
-        /// <summary><p>Image billing plan.</p></summary>
-        public virtual string Plan { get; internal set; }
-        /// <summary><p>Image publisher.</p></summary>
-        public virtual string Publisher { get; internal set; }
-        /// <summary><p>URN, in format of 'publisher:offer:sku:versin'. If specified, other argument values can be omitted.</p></summary>
-        public virtual string Urn { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm image accept-terms")
-              .Add("--offer {value}", Offer)
-              .Add("--plan {value}", Plan)
-              .Add("--publisher {value}", Publisher)
-              .Add("--urn {value}", Urn)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmImageListSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmImageListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>Retrieve image list from live Azure service rather using an offline image list.</p></summary>
-        public virtual string All { get; internal set; }
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        public virtual string Location { get; internal set; }
-        /// <summary><p>Image offer name, partial name is accepted.</p></summary>
-        public virtual string Offer { get; internal set; }
-        /// <summary><p>Image publisher name, partial name is accepted.</p></summary>
-        public virtual string Publisher { get; internal set; }
-        /// <summary><p>Image sku name, partial name is accepted.</p></summary>
-        public virtual string Sku { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm image list")
-              .Add("--all {value}", All)
-              .Add("--location {value}", Location)
-              .Add("--offer {value}", Offer)
-              .Add("--publisher {value}", Publisher)
-              .Add("--sku {value}", Sku)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmImageListOffersSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmImageListOffersSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        public virtual string Location { get; internal set; }
-        /// <summary><p>A valid image publisher.</p></summary>
-        public virtual string Publisher { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm image list-offers")
-              .Add("--location {value}", Location)
-              .Add("--publisher {value}", Publisher)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmImageListPublishersSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmImageListPublishersSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        public virtual string Location { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm image list-publishers")
-              .Add("--location {value}", Location)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmImageListSkusSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmImageListSkusSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        public virtual string Location { get; internal set; }
-        /// <summary><p>Image offer.</p></summary>
-        public virtual string Offer { get; internal set; }
-        /// <summary><p>A valid image publisher.</p></summary>
-        public virtual string Publisher { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm image list-skus")
-              .Add("--location {value}", Location)
-              .Add("--offer {value}", Offer)
-              .Add("--publisher {value}", Publisher)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmImageShowSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmImageShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        public virtual string Location { get; internal set; }
-        /// <summary><p>Image offer.</p></summary>
-        public virtual string Offer { get; internal set; }
-        /// <summary><p>Image publisher.</p></summary>
-        public virtual string Publisher { get; internal set; }
-        /// <summary><p>Image sku.</p></summary>
-        public virtual string Sku { get; internal set; }
-        /// <summary><p>URN, in format of 'publisher:offer:sku:versin'. If specified, other argument values can be omitted.</p></summary>
-        public virtual string Urn { get; internal set; }
-        /// <summary><p>Image sku's version.</p></summary>
-        public virtual string Version { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm image show")
-              .Add("--location {value}", Location)
-              .Add("--offer {value}", Offer)
-              .Add("--publisher {value}", Publisher)
-              .Add("--sku {value}", Sku)
-              .Add("--urn {value}", Urn)
-              .Add("--version {value}", Version)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmNicAddSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmNicAddSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>Names or IDs of NICs.</p></summary>
-        public virtual string Nics { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string VmName { get; internal set; }
-        /// <summary><p>Name or ID of the primary NIC. If missing, the first NIC in the list will be the primary.</p></summary>
-        public virtual string PrimaryNic { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm nic add")
-              .Add("--nics {value}", Nics)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--vm-name {value}", VmName)
-              .Add("--primary-nic {value}", PrimaryNic)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmNicListSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmNicListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string VmName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm nic list")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--vm-name {value}", VmName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmNicRemoveSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmNicRemoveSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>Names or IDs of NICs.</p></summary>
-        public virtual string Nics { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string VmName { get; internal set; }
-        /// <summary><p>Name or ID of the primary NIC. If missing, the first NIC in the list will be the primary.</p></summary>
-        public virtual string PrimaryNic { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm nic remove")
-              .Add("--nics {value}", Nics)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--vm-name {value}", VmName)
-              .Add("--primary-nic {value}", PrimaryNic)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmNicSetSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmNicSetSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>Names or IDs of NICs.</p></summary>
-        public virtual string Nics { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string VmName { get; internal set; }
-        /// <summary><p>Name or ID of the primary NIC. If missing, the first NIC in the list will be the primary.</p></summary>
-        public virtual string PrimaryNic { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm nic set")
-              .Add("--nics {value}", Nics)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--vm-name {value}", VmName)
-              .Add("--primary-nic {value}", PrimaryNic)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmNicShowSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmNicShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>NIC name or ID.</p></summary>
-        public virtual string Nic { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string VmName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm nic show")
-              .Add("--nic {value}", Nic)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--vm-name {value}", VmName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmRunCommandInvokeSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmRunCommandInvokeSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>The run command ID.</p></summary>
-        public virtual string CommandId { get; internal set; }
-        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Space-separated parameters in the format of '[name=]value'.</p></summary>
-        public virtual string Parameters { get; internal set; }
-        /// <summary><p>Script lines separated by whites spaces. Use @{file} to load from a file.</p></summary>
-        public virtual string Scripts { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm run-command invoke")
-              .Add("--command-id {value}", CommandId)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--parameters {value}", Parameters)
-              .Add("--scripts {value}", Scripts)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmRunCommandListSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmRunCommandListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        public virtual string Location { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm run-command list")
-              .Add("--location {value}", Location)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmRunCommandShowSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmRunCommandShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>The run command ID.</p></summary>
-        public virtual string CommandId { get; internal set; }
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        public virtual string Location { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm run-command show")
-              .Add("--command-id {value}", CommandId)
-              .Add("--location {value}", Location)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmSecretAddSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmSecretAddSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>Key vault certificate name or its full secret URL.</p></summary>
-        public virtual string Certificate { get; internal set; }
-        /// <summary><p>Name or ID of the key vault.</p></summary>
-        public virtual string Keyvault { get; internal set; }
-        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Windows certificate store names. Default: My.</p></summary>
-        public virtual string CertificateStore { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm secret add")
-              .Add("--certificate {value}", Certificate)
-              .Add("--keyvault {value}", Keyvault)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--certificate-store {value}", CertificateStore)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmSecretFormatSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmSecretFormatSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>Space-separated list of key vault secret URIs. Perhaps, produced by 'az keyvault secret list-versions --vault-name vaultname -n cert1 --query "[?attributes.enabled].id" -o tsv'.</p></summary>
-        public virtual IReadOnlyList<string> Secrets => SecretsInternal.AsReadOnly();
-        internal List<string> SecretsInternal { get; set; } = new List<string>();
-        /// <summary><p>Windows certificate store names. Default: My.</p></summary>
-        public virtual string CertificateStore { get; internal set; }
-        /// <summary><p>Name or ID of the key vault.</p></summary>
-        public virtual string Keyvault { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm secret format")
-              .Add("--secrets {value}", Secrets, separator: ' ')
-              .Add("--certificate-store {value}", CertificateStore)
-              .Add("--keyvault {value}", Keyvault)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmSecretListSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmSecretListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm secret list")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmSecretRemoveSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmSecretRemoveSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>Name or ID of the key vault.</p></summary>
-        public virtual string Keyvault { get; internal set; }
-        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Key vault certificate name or its full secret URL.</p></summary>
-        public virtual string Certificate { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm secret remove")
-              .Add("--keyvault {value}", Keyvault)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--certificate {value}", Certificate)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmUnmanagedDiskAttachSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmUnmanagedDiskAttachSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string VmName { get; internal set; }
-        /// <summary><p>Disk caching policy.</p></summary>
-        public virtual VmCreateOsDiskCaching Caching { get; internal set; }
-        /// <summary><p>0-based logical unit number (LUN). Max value depends on the Virtual Machine size.</p></summary>
-        public virtual string Lun { get; internal set; }
-        /// <summary><p>The data disk name(optional when create a new disk).</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Create a new disk.</p></summary>
-        public virtual string New { get; internal set; }
-        /// <summary><p></p></summary>
-        public virtual string SizeGb { get; internal set; }
-        /// <summary><p>Virtual hard disk URI. For example: &lt;a href="https://mystorage.blob.core.windows.net/vhds/d1.vhd"&gt;https://mystorage.blob.core.windows.net/vhds/d1.vhd&lt;/a&gt;.</p></summary>
-        public virtual string VhdUri { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm unmanaged-disk attach")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--vm-name {value}", VmName)
-              .Add("--caching {value}", Caching)
-              .Add("--lun {value}", Lun)
-              .Add("--name {value}", Name)
-              .Add("--new {value}", New)
-              .Add("--size-gb {value}", SizeGb)
-              .Add("--vhd-uri {value}", VhdUri)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmUnmanagedDiskDetachSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmUnmanagedDiskDetachSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>The data disk name.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string VmName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm unmanaged-disk detach")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--vm-name {value}", VmName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmUnmanagedDiskListSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmUnmanagedDiskListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm unmanaged-disk list")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmUserDeleteSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmUserDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The user name.</p></summary>
-        public virtual string Username { get; internal set; }
-        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
-        public virtual string NoWait { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm user delete")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--username {value}", Username)
-              .Add("--no-wait {value}", NoWait)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmUserResetSshSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmUserResetSshSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
-        public virtual string NoWait { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm user reset-ssh")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--no-wait {value}", NoWait)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureVmUserUpdateSettings
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureVmUserUpdateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureVm executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureVmTasks.AzureVmPath;
-        /// <summary><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The user name.</p></summary>
-        public virtual string Username { get; internal set; }
-        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
-        public virtual string NoWait { get; internal set; }
-        /// <summary><p>The user password.</p></summary>
-        public virtual string Password { get; internal set; }
-        /// <summary><p>SSH public key file value or public key file path.</p></summary>
-        public virtual string SshKeyValue { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("vm user update")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--username {value}", Username)
-              .Add("--no-wait {value}", NoWait)
-              .Add("--password {value}", Password, secret: true)
-              .Add("--ssh-key-value {value}", SshKeyValue)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -4082,7 +4085,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -4123,7 +4126,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -4169,7 +4172,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -4215,7 +4218,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -4387,7 +4390,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmCaptureSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmCaptureSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmCaptureSettings SetQuery(this AzureVmCaptureSettings toolSettings, string query)
         {
@@ -4395,7 +4398,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmCaptureSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmCaptureSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmCaptureSettings ResetQuery(this AzureVmCaptureSettings toolSettings)
         {
@@ -4521,7 +4524,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmConvertSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmConvertSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmConvertSettings SetQuery(this AzureVmConvertSettings toolSettings, string query)
         {
@@ -4529,7 +4532,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmConvertSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmConvertSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmConvertSettings ResetQuery(this AzureVmConvertSettings toolSettings)
         {
@@ -4781,7 +4784,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Size
-        /// <summary><p><em>Sets <see cref="AzureVmCreateSettings.Size"/>.</em></p><p>The VM size to be created. See &lt;a href="https://azure.microsoft.com/en-us/pricing/details/virtual-machines/"&gt;https://azure.microsoft.com/en-us/pricing/details/virtual-machines/&lt;/a&gt; for size info.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmCreateSettings.Size"/>.</em></p><p>The VM size to be created. See <a href="https://azure.microsoft.com/en-us/pricing/details/virtual-machines/">https://azure.microsoft.com/en-us/pricing/details/virtual-machines/</a> for size info.</p></summary>
         [Pure]
         public static AzureVmCreateSettings SetSize(this AzureVmCreateSettings toolSettings, string size)
         {
@@ -4789,7 +4792,7 @@ namespace Nuke.Azure
             toolSettings.Size = size;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmCreateSettings.Size"/>.</em></p><p>The VM size to be created. See &lt;a href="https://azure.microsoft.com/en-us/pricing/details/virtual-machines/"&gt;https://azure.microsoft.com/en-us/pricing/details/virtual-machines/&lt;/a&gt; for size info.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmCreateSettings.Size"/>.</em></p><p>The VM size to be created. See <a href="https://azure.microsoft.com/en-us/pricing/details/virtual-machines/">https://azure.microsoft.com/en-us/pricing/details/virtual-machines/</a> for size info.</p></summary>
         [Pure]
         public static AzureVmCreateSettings ResetSize(this AzureVmCreateSettings toolSettings)
         {
@@ -5639,7 +5642,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmCreateSettings SetQuery(this AzureVmCreateSettings toolSettings, string query)
         {
@@ -5647,7 +5650,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmCreateSettings ResetQuery(this AzureVmCreateSettings toolSettings)
         {
@@ -5791,7 +5794,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmDeallocateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmDeallocateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmDeallocateSettings SetQuery(this AzureVmDeallocateSettings toolSettings, string query)
         {
@@ -5799,7 +5802,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmDeallocateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmDeallocateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmDeallocateSettings ResetQuery(this AzureVmDeallocateSettings toolSettings)
         {
@@ -5961,7 +5964,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmDeleteSettings SetQuery(this AzureVmDeleteSettings toolSettings, string query)
         {
@@ -5969,7 +5972,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmDeleteSettings ResetQuery(this AzureVmDeleteSettings toolSettings)
         {
@@ -6113,7 +6116,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmGeneralizeSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmGeneralizeSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmGeneralizeSettings SetQuery(this AzureVmGeneralizeSettings toolSettings, string query)
         {
@@ -6121,7 +6124,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmGeneralizeSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmGeneralizeSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmGeneralizeSettings ResetQuery(this AzureVmGeneralizeSettings toolSettings)
         {
@@ -6247,7 +6250,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmGetInstanceViewSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmGetInstanceViewSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmGetInstanceViewSettings SetQuery(this AzureVmGetInstanceViewSettings toolSettings, string query)
         {
@@ -6255,7 +6258,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmGetInstanceViewSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmGetInstanceViewSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmGetInstanceViewSettings ResetQuery(this AzureVmGetInstanceViewSettings toolSettings)
         {
@@ -6405,7 +6408,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmListSettings SetQuery(this AzureVmListSettings toolSettings, string query)
         {
@@ -6413,7 +6416,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmListSettings ResetQuery(this AzureVmListSettings toolSettings)
         {
@@ -6539,7 +6542,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmListIpAddressesSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmListIpAddressesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmListIpAddressesSettings SetQuery(this AzureVmListIpAddressesSettings toolSettings, string query)
         {
@@ -6547,7 +6550,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmListIpAddressesSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmListIpAddressesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmListIpAddressesSettings ResetQuery(this AzureVmListIpAddressesSettings toolSettings)
         {
@@ -6655,7 +6658,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmListSizesSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmListSizesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmListSizesSettings SetQuery(this AzureVmListSizesSettings toolSettings, string query)
         {
@@ -6663,7 +6666,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmListSizesSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmListSizesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmListSizesSettings ResetQuery(this AzureVmListSizesSettings toolSettings)
         {
@@ -6771,7 +6774,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmListSkusSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmListSkusSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmListSkusSettings SetQuery(this AzureVmListSkusSettings toolSettings, string query)
         {
@@ -6779,7 +6782,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmListSkusSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmListSkusSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmListSkusSettings ResetQuery(this AzureVmListSkusSettings toolSettings)
         {
@@ -6887,7 +6890,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmListUsageSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmListUsageSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmListUsageSettings SetQuery(this AzureVmListUsageSettings toolSettings, string query)
         {
@@ -6895,7 +6898,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmListUsageSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmListUsageSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmListUsageSettings ResetQuery(this AzureVmListUsageSettings toolSettings)
         {
@@ -7021,7 +7024,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmListVmResizeOptionsSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmListVmResizeOptionsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmListVmResizeOptionsSettings SetQuery(this AzureVmListVmResizeOptionsSettings toolSettings, string query)
         {
@@ -7029,7 +7032,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmListVmResizeOptionsSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmListVmResizeOptionsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmListVmResizeOptionsSettings ResetQuery(this AzureVmListVmResizeOptionsSettings toolSettings)
         {
@@ -7227,7 +7230,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmOpenPortSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmOpenPortSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmOpenPortSettings SetQuery(this AzureVmOpenPortSettings toolSettings, string query)
         {
@@ -7235,7 +7238,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmOpenPortSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmOpenPortSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmOpenPortSettings ResetQuery(this AzureVmOpenPortSettings toolSettings)
         {
@@ -7361,7 +7364,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmPerformMaintenanceSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmPerformMaintenanceSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmPerformMaintenanceSettings SetQuery(this AzureVmPerformMaintenanceSettings toolSettings, string query)
         {
@@ -7369,7 +7372,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmPerformMaintenanceSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmPerformMaintenanceSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmPerformMaintenanceSettings ResetQuery(this AzureVmPerformMaintenanceSettings toolSettings)
         {
@@ -7513,7 +7516,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmRedeploySettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmRedeploySettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmRedeploySettings SetQuery(this AzureVmRedeploySettings toolSettings, string query)
         {
@@ -7521,7 +7524,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmRedeploySettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmRedeploySettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmRedeploySettings ResetQuery(this AzureVmRedeploySettings toolSettings)
         {
@@ -7683,7 +7686,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmResizeSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmResizeSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmResizeSettings SetQuery(this AzureVmResizeSettings toolSettings, string query)
         {
@@ -7691,7 +7694,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmResizeSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmResizeSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmResizeSettings ResetQuery(this AzureVmResizeSettings toolSettings)
         {
@@ -7835,7 +7838,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmRestartSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmRestartSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmRestartSettings SetQuery(this AzureVmRestartSettings toolSettings, string query)
         {
@@ -7843,7 +7846,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmRestartSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmRestartSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmRestartSettings ResetQuery(this AzureVmRestartSettings toolSettings)
         {
@@ -8011,7 +8014,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmShowSettings SetQuery(this AzureVmShowSettings toolSettings, string query)
         {
@@ -8019,7 +8022,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmShowSettings ResetQuery(this AzureVmShowSettings toolSettings)
         {
@@ -8163,7 +8166,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmStartSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmStartSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmStartSettings SetQuery(this AzureVmStartSettings toolSettings, string query)
         {
@@ -8171,7 +8174,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmStartSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmStartSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmStartSettings ResetQuery(this AzureVmStartSettings toolSettings)
         {
@@ -8315,7 +8318,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmStopSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmStopSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmStopSettings SetQuery(this AzureVmStopSettings toolSettings, string query)
         {
@@ -8323,7 +8326,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmStopSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmStopSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmStopSettings ResetQuery(this AzureVmStopSettings toolSettings)
         {
@@ -8677,7 +8680,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmUpdateSettings SetQuery(this AzureVmUpdateSettings toolSettings, string query)
         {
@@ -8685,7 +8688,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmUpdateSettings ResetQuery(this AzureVmUpdateSettings toolSettings)
         {
@@ -8937,7 +8940,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmWaitSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmWaitSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmWaitSettings SetQuery(this AzureVmWaitSettings toolSettings, string query)
         {
@@ -8945,7 +8948,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmWaitSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmWaitSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmWaitSettings ResetQuery(this AzureVmWaitSettings toolSettings)
         {
@@ -9071,7 +9074,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmAvailabilitySetConvertSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmAvailabilitySetConvertSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmAvailabilitySetConvertSettings SetQuery(this AzureVmAvailabilitySetConvertSettings toolSettings, string query)
         {
@@ -9079,7 +9082,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmAvailabilitySetConvertSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmAvailabilitySetConvertSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmAvailabilitySetConvertSettings ResetQuery(this AzureVmAvailabilitySetConvertSettings toolSettings)
         {
@@ -9205,7 +9208,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region PlatformUpdateDomainCount
-        /// <summary><p><em>Sets <see cref="AzureVmAvailabilitySetCreateSettings.PlatformUpdateDomainCount"/>.</em></p><p>Update Domain count. If unspecified, server picks the most optimal number like 5. For the latest defaults see &lt;a href="https://docs.microsoft.com/en-us/rest/api/compute/availabilitysets/availabilitysets-create"&gt;https://docs.microsoft.com/en-us/rest/api/compute/availabilitysets/availabilitysets-create&lt;/a&gt;.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmAvailabilitySetCreateSettings.PlatformUpdateDomainCount"/>.</em></p><p>Update Domain count. If unspecified, server picks the most optimal number like 5. For the latest defaults see <a href="https://docs.microsoft.com/en-us/rest/api/compute/availabilitysets/availabilitysets-create">https://docs.microsoft.com/en-us/rest/api/compute/availabilitysets/availabilitysets-create</a>.</p></summary>
         [Pure]
         public static AzureVmAvailabilitySetCreateSettings SetPlatformUpdateDomainCount(this AzureVmAvailabilitySetCreateSettings toolSettings, string platformUpdateDomainCount)
         {
@@ -9213,7 +9216,7 @@ namespace Nuke.Azure
             toolSettings.PlatformUpdateDomainCount = platformUpdateDomainCount;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmAvailabilitySetCreateSettings.PlatformUpdateDomainCount"/>.</em></p><p>Update Domain count. If unspecified, server picks the most optimal number like 5. For the latest defaults see &lt;a href="https://docs.microsoft.com/en-us/rest/api/compute/availabilitysets/availabilitysets-create"&gt;https://docs.microsoft.com/en-us/rest/api/compute/availabilitysets/availabilitysets-create&lt;/a&gt;.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmAvailabilitySetCreateSettings.PlatformUpdateDomainCount"/>.</em></p><p>Update Domain count. If unspecified, server picks the most optimal number like 5. For the latest defaults see <a href="https://docs.microsoft.com/en-us/rest/api/compute/availabilitysets/availabilitysets-create">https://docs.microsoft.com/en-us/rest/api/compute/availabilitysets/availabilitysets-create</a>.</p></summary>
         [Pure]
         public static AzureVmAvailabilitySetCreateSettings ResetPlatformUpdateDomainCount(this AzureVmAvailabilitySetCreateSettings toolSettings)
         {
@@ -9331,7 +9334,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmAvailabilitySetCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmAvailabilitySetCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmAvailabilitySetCreateSettings SetQuery(this AzureVmAvailabilitySetCreateSettings toolSettings, string query)
         {
@@ -9339,7 +9342,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmAvailabilitySetCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmAvailabilitySetCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmAvailabilitySetCreateSettings ResetQuery(this AzureVmAvailabilitySetCreateSettings toolSettings)
         {
@@ -9465,7 +9468,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmAvailabilitySetDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmAvailabilitySetDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmAvailabilitySetDeleteSettings SetQuery(this AzureVmAvailabilitySetDeleteSettings toolSettings, string query)
         {
@@ -9473,7 +9476,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmAvailabilitySetDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmAvailabilitySetDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmAvailabilitySetDeleteSettings ResetQuery(this AzureVmAvailabilitySetDeleteSettings toolSettings)
         {
@@ -9581,7 +9584,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmAvailabilitySetListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmAvailabilitySetListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmAvailabilitySetListSettings SetQuery(this AzureVmAvailabilitySetListSettings toolSettings, string query)
         {
@@ -9589,7 +9592,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmAvailabilitySetListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmAvailabilitySetListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmAvailabilitySetListSettings ResetQuery(this AzureVmAvailabilitySetListSettings toolSettings)
         {
@@ -9715,7 +9718,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmAvailabilitySetListSizesSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmAvailabilitySetListSizesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmAvailabilitySetListSizesSettings SetQuery(this AzureVmAvailabilitySetListSizesSettings toolSettings, string query)
         {
@@ -9723,7 +9726,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmAvailabilitySetListSizesSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmAvailabilitySetListSizesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmAvailabilitySetListSizesSettings ResetQuery(this AzureVmAvailabilitySetListSizesSettings toolSettings)
         {
@@ -9849,7 +9852,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmAvailabilitySetShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmAvailabilitySetShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmAvailabilitySetShowSettings SetQuery(this AzureVmAvailabilitySetShowSettings toolSettings, string query)
         {
@@ -9857,7 +9860,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmAvailabilitySetShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmAvailabilitySetShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmAvailabilitySetShowSettings ResetQuery(this AzureVmAvailabilitySetShowSettings toolSettings)
         {
@@ -10037,7 +10040,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmAvailabilitySetUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmAvailabilitySetUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmAvailabilitySetUpdateSettings SetQuery(this AzureVmAvailabilitySetUpdateSettings toolSettings, string query)
         {
@@ -10045,7 +10048,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmAvailabilitySetUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmAvailabilitySetUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmAvailabilitySetUpdateSettings ResetQuery(this AzureVmAvailabilitySetUpdateSettings toolSettings)
         {
@@ -10066,748 +10069,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureVmAvailabilitySetUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureVmAvailabilitySetUpdateSettings ResetVerbose(this AzureVmAvailabilitySetUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmBootDiagnosticsDisableSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmBootDiagnosticsDisableSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsDisableSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsDisableSettings SetName(this AzureVmBootDiagnosticsDisableSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsDisableSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsDisableSettings ResetName(this AzureVmBootDiagnosticsDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsDisableSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsDisableSettings SetResourceGroup(this AzureVmBootDiagnosticsDisableSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsDisableSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsDisableSettings ResetResourceGroup(this AzureVmBootDiagnosticsDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsDisableSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsDisableSettings SetDebug(this AzureVmBootDiagnosticsDisableSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsDisableSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsDisableSettings ResetDebug(this AzureVmBootDiagnosticsDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsDisableSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsDisableSettings SetHelp(this AzureVmBootDiagnosticsDisableSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsDisableSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsDisableSettings ResetHelp(this AzureVmBootDiagnosticsDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsDisableSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsDisableSettings SetOutput(this AzureVmBootDiagnosticsDisableSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsDisableSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsDisableSettings ResetOutput(this AzureVmBootDiagnosticsDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsDisableSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsDisableSettings SetQuery(this AzureVmBootDiagnosticsDisableSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsDisableSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsDisableSettings ResetQuery(this AzureVmBootDiagnosticsDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsDisableSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsDisableSettings SetVerbose(this AzureVmBootDiagnosticsDisableSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsDisableSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsDisableSettings ResetVerbose(this AzureVmBootDiagnosticsDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmBootDiagnosticsEnableSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmBootDiagnosticsEnableSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsEnableSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsEnableSettings SetName(this AzureVmBootDiagnosticsEnableSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsEnableSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsEnableSettings ResetName(this AzureVmBootDiagnosticsEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsEnableSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsEnableSettings SetResourceGroup(this AzureVmBootDiagnosticsEnableSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsEnableSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsEnableSettings ResetResourceGroup(this AzureVmBootDiagnosticsEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Storage
-        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsEnableSettings.Storage"/>.</em></p><p>Name or URI of a storage account (e.g. &lt;a href="https://your_storage_account_name.blob.core.windows.net/"&gt;https://your_storage_account_name.blob.core.windows.net/&lt;/a&gt;).</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsEnableSettings SetStorage(this AzureVmBootDiagnosticsEnableSettings toolSettings, string storage)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Storage = storage;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsEnableSettings.Storage"/>.</em></p><p>Name or URI of a storage account (e.g. &lt;a href="https://your_storage_account_name.blob.core.windows.net/"&gt;https://your_storage_account_name.blob.core.windows.net/&lt;/a&gt;).</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsEnableSettings ResetStorage(this AzureVmBootDiagnosticsEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Storage = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsEnableSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsEnableSettings SetDebug(this AzureVmBootDiagnosticsEnableSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsEnableSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsEnableSettings ResetDebug(this AzureVmBootDiagnosticsEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsEnableSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsEnableSettings SetHelp(this AzureVmBootDiagnosticsEnableSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsEnableSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsEnableSettings ResetHelp(this AzureVmBootDiagnosticsEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsEnableSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsEnableSettings SetOutput(this AzureVmBootDiagnosticsEnableSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsEnableSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsEnableSettings ResetOutput(this AzureVmBootDiagnosticsEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsEnableSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsEnableSettings SetQuery(this AzureVmBootDiagnosticsEnableSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsEnableSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsEnableSettings ResetQuery(this AzureVmBootDiagnosticsEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsEnableSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsEnableSettings SetVerbose(this AzureVmBootDiagnosticsEnableSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsEnableSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsEnableSettings ResetVerbose(this AzureVmBootDiagnosticsEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmBootDiagnosticsGetBootLogSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmBootDiagnosticsGetBootLogSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsGetBootLogSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsGetBootLogSettings SetName(this AzureVmBootDiagnosticsGetBootLogSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsGetBootLogSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsGetBootLogSettings ResetName(this AzureVmBootDiagnosticsGetBootLogSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsGetBootLogSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsGetBootLogSettings SetResourceGroup(this AzureVmBootDiagnosticsGetBootLogSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsGetBootLogSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsGetBootLogSettings ResetResourceGroup(this AzureVmBootDiagnosticsGetBootLogSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsGetBootLogSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsGetBootLogSettings SetDebug(this AzureVmBootDiagnosticsGetBootLogSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsGetBootLogSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsGetBootLogSettings ResetDebug(this AzureVmBootDiagnosticsGetBootLogSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsGetBootLogSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsGetBootLogSettings SetHelp(this AzureVmBootDiagnosticsGetBootLogSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsGetBootLogSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsGetBootLogSettings ResetHelp(this AzureVmBootDiagnosticsGetBootLogSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsGetBootLogSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsGetBootLogSettings SetOutput(this AzureVmBootDiagnosticsGetBootLogSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsGetBootLogSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsGetBootLogSettings ResetOutput(this AzureVmBootDiagnosticsGetBootLogSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsGetBootLogSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsGetBootLogSettings SetQuery(this AzureVmBootDiagnosticsGetBootLogSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsGetBootLogSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsGetBootLogSettings ResetQuery(this AzureVmBootDiagnosticsGetBootLogSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsGetBootLogSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsGetBootLogSettings SetVerbose(this AzureVmBootDiagnosticsGetBootLogSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsGetBootLogSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmBootDiagnosticsGetBootLogSettings ResetVerbose(this AzureVmBootDiagnosticsGetBootLogSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmDiagnosticsGetDefaultConfigSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmDiagnosticsGetDefaultConfigSettingsExtensions
-    {
-        #region IsWindowsOs
-        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsGetDefaultConfigSettings.IsWindowsOs"/>.</em></p><p>For Windows VMs.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsGetDefaultConfigSettings SetIsWindowsOs(this AzureVmDiagnosticsGetDefaultConfigSettings toolSettings, string isWindowsOs)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IsWindowsOs = isWindowsOs;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsGetDefaultConfigSettings.IsWindowsOs"/>.</em></p><p>For Windows VMs.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsGetDefaultConfigSettings ResetIsWindowsOs(this AzureVmDiagnosticsGetDefaultConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IsWindowsOs = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsGetDefaultConfigSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsGetDefaultConfigSettings SetDebug(this AzureVmDiagnosticsGetDefaultConfigSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsGetDefaultConfigSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsGetDefaultConfigSettings ResetDebug(this AzureVmDiagnosticsGetDefaultConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsGetDefaultConfigSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsGetDefaultConfigSettings SetHelp(this AzureVmDiagnosticsGetDefaultConfigSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsGetDefaultConfigSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsGetDefaultConfigSettings ResetHelp(this AzureVmDiagnosticsGetDefaultConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsGetDefaultConfigSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsGetDefaultConfigSettings SetOutput(this AzureVmDiagnosticsGetDefaultConfigSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsGetDefaultConfigSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsGetDefaultConfigSettings ResetOutput(this AzureVmDiagnosticsGetDefaultConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsGetDefaultConfigSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsGetDefaultConfigSettings SetQuery(this AzureVmDiagnosticsGetDefaultConfigSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsGetDefaultConfigSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsGetDefaultConfigSettings ResetQuery(this AzureVmDiagnosticsGetDefaultConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsGetDefaultConfigSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsGetDefaultConfigSettings SetVerbose(this AzureVmDiagnosticsGetDefaultConfigSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsGetDefaultConfigSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsGetDefaultConfigSettings ResetVerbose(this AzureVmDiagnosticsGetDefaultConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmDiagnosticsSetSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmDiagnosticsSetSettingsExtensions
-    {
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsSetSettings SetResourceGroup(this AzureVmDiagnosticsSetSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsSetSettings ResetResourceGroup(this AzureVmDiagnosticsSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Settings
-        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsSetSettings.Settings"/>.</em></p><p>Json string or a file path, which defines data to be collected.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsSetSettings SetSettings(this AzureVmDiagnosticsSetSettings toolSettings, string settings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Settings = settings;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsSetSettings.Settings"/>.</em></p><p>Json string or a file path, which defines data to be collected.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsSetSettings ResetSettings(this AzureVmDiagnosticsSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Settings = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VmName
-        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsSetSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsSetSettings SetVmName(this AzureVmDiagnosticsSetSettings toolSettings, string vmName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmName = vmName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsSetSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsSetSettings ResetVmName(this AzureVmDiagnosticsSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NoAutoUpgrade
-        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsSetSettings.NoAutoUpgrade"/>.</em></p><p>By doing this, extension system will not pick the highest minor version for the specified version number, and will not auto update to the latest build/revision number on any scale set updates in future.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsSetSettings SetNoAutoUpgrade(this AzureVmDiagnosticsSetSettings toolSettings, string noAutoUpgrade)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoAutoUpgrade = noAutoUpgrade;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsSetSettings.NoAutoUpgrade"/>.</em></p><p>By doing this, extension system will not pick the highest minor version for the specified version number, and will not auto update to the latest build/revision number on any scale set updates in future.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsSetSettings ResetNoAutoUpgrade(this AzureVmDiagnosticsSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoAutoUpgrade = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ProtectedSettings
-        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsSetSettings.ProtectedSettings"/>.</em></p><p>Json string or a file path containing private configurations such as storage account keys, etc.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsSetSettings SetProtectedSettings(this AzureVmDiagnosticsSetSettings toolSettings, string protectedSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ProtectedSettings = protectedSettings;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsSetSettings.ProtectedSettings"/>.</em></p><p>Json string or a file path containing private configurations such as storage account keys, etc.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsSetSettings ResetProtectedSettings(this AzureVmDiagnosticsSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ProtectedSettings = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Version
-        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsSetSettings.Version"/>.</em></p><p>Version of the diagnostics extension. Will use the latest if not specfied.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsSetSettings SetVersion(this AzureVmDiagnosticsSetSettings toolSettings, string version)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Version = version;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsSetSettings.Version"/>.</em></p><p>Version of the diagnostics extension. Will use the latest if not specfied.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsSetSettings ResetVersion(this AzureVmDiagnosticsSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Version = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsSetSettings SetDebug(this AzureVmDiagnosticsSetSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsSetSettings ResetDebug(this AzureVmDiagnosticsSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsSetSettings SetHelp(this AzureVmDiagnosticsSetSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsSetSettings ResetHelp(this AzureVmDiagnosticsSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsSetSettings SetOutput(this AzureVmDiagnosticsSetSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsSetSettings ResetOutput(this AzureVmDiagnosticsSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsSetSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsSetSettings SetQuery(this AzureVmDiagnosticsSetSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsSetSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsSetSettings ResetQuery(this AzureVmDiagnosticsSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsSetSettings SetVerbose(this AzureVmDiagnosticsSetSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmDiagnosticsSetSettings ResetVerbose(this AzureVmDiagnosticsSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -11039,7 +10300,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmDiskAttachSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmDiskAttachSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmDiskAttachSettings SetQuery(this AzureVmDiskAttachSettings toolSettings, string query)
         {
@@ -11047,7 +10308,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmDiskAttachSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmDiskAttachSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmDiskAttachSettings ResetQuery(this AzureVmDiskAttachSettings toolSettings)
         {
@@ -11191,7 +10452,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmDiskDetachSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmDiskDetachSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmDiskDetachSettings SetQuery(this AzureVmDiskDetachSettings toolSettings, string query)
         {
@@ -11199,7 +10460,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmDiskDetachSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmDiskDetachSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmDiskDetachSettings ResetQuery(this AzureVmDiskDetachSettings toolSettings)
         {
@@ -11220,6 +10481,5898 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureVmDiskDetachSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureVmDiskDetachSettings ResetVerbose(this AzureVmDiskDetachSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmRunCommandInvokeSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmRunCommandInvokeSettingsExtensions
+    {
+        #region CommandId
+        /// <summary><p><em>Sets <see cref="AzureVmRunCommandInvokeSettings.CommandId"/>.</em></p><p>The run command ID.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandInvokeSettings SetCommandId(this AzureVmRunCommandInvokeSettings toolSettings, string commandId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CommandId = commandId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmRunCommandInvokeSettings.CommandId"/>.</em></p><p>The run command ID.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandInvokeSettings ResetCommandId(this AzureVmRunCommandInvokeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CommandId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmRunCommandInvokeSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandInvokeSettings SetName(this AzureVmRunCommandInvokeSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmRunCommandInvokeSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandInvokeSettings ResetName(this AzureVmRunCommandInvokeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmRunCommandInvokeSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandInvokeSettings SetResourceGroup(this AzureVmRunCommandInvokeSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmRunCommandInvokeSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandInvokeSettings ResetResourceGroup(this AzureVmRunCommandInvokeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Parameters
+        /// <summary><p><em>Sets <see cref="AzureVmRunCommandInvokeSettings.Parameters"/>.</em></p><p>Space-separated parameters in the format of '[name=]value'.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandInvokeSettings SetParameters(this AzureVmRunCommandInvokeSettings toolSettings, string parameters)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Parameters = parameters;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmRunCommandInvokeSettings.Parameters"/>.</em></p><p>Space-separated parameters in the format of '[name=]value'.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandInvokeSettings ResetParameters(this AzureVmRunCommandInvokeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Parameters = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Scripts
+        /// <summary><p><em>Sets <see cref="AzureVmRunCommandInvokeSettings.Scripts"/>.</em></p><p>Script lines separated by whites spaces. Use @{file} to load from a file.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandInvokeSettings SetScripts(this AzureVmRunCommandInvokeSettings toolSettings, string scripts)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Scripts = scripts;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmRunCommandInvokeSettings.Scripts"/>.</em></p><p>Script lines separated by whites spaces. Use @{file} to load from a file.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandInvokeSettings ResetScripts(this AzureVmRunCommandInvokeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Scripts = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmRunCommandInvokeSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandInvokeSettings SetDebug(this AzureVmRunCommandInvokeSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmRunCommandInvokeSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandInvokeSettings ResetDebug(this AzureVmRunCommandInvokeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmRunCommandInvokeSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandInvokeSettings SetHelp(this AzureVmRunCommandInvokeSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmRunCommandInvokeSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandInvokeSettings ResetHelp(this AzureVmRunCommandInvokeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmRunCommandInvokeSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandInvokeSettings SetOutput(this AzureVmRunCommandInvokeSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmRunCommandInvokeSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandInvokeSettings ResetOutput(this AzureVmRunCommandInvokeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmRunCommandInvokeSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandInvokeSettings SetQuery(this AzureVmRunCommandInvokeSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmRunCommandInvokeSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandInvokeSettings ResetQuery(this AzureVmRunCommandInvokeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmRunCommandInvokeSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandInvokeSettings SetVerbose(this AzureVmRunCommandInvokeSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmRunCommandInvokeSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandInvokeSettings ResetVerbose(this AzureVmRunCommandInvokeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmRunCommandListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmRunCommandListSettingsExtensions
+    {
+        #region Location
+        /// <summary><p><em>Sets <see cref="AzureVmRunCommandListSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandListSettings SetLocation(this AzureVmRunCommandListSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmRunCommandListSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandListSettings ResetLocation(this AzureVmRunCommandListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmRunCommandListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandListSettings SetDebug(this AzureVmRunCommandListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmRunCommandListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandListSettings ResetDebug(this AzureVmRunCommandListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmRunCommandListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandListSettings SetHelp(this AzureVmRunCommandListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmRunCommandListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandListSettings ResetHelp(this AzureVmRunCommandListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmRunCommandListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandListSettings SetOutput(this AzureVmRunCommandListSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmRunCommandListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandListSettings ResetOutput(this AzureVmRunCommandListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmRunCommandListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandListSettings SetQuery(this AzureVmRunCommandListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmRunCommandListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandListSettings ResetQuery(this AzureVmRunCommandListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmRunCommandListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandListSettings SetVerbose(this AzureVmRunCommandListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmRunCommandListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandListSettings ResetVerbose(this AzureVmRunCommandListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmRunCommandShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmRunCommandShowSettingsExtensions
+    {
+        #region CommandId
+        /// <summary><p><em>Sets <see cref="AzureVmRunCommandShowSettings.CommandId"/>.</em></p><p>The run command ID.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandShowSettings SetCommandId(this AzureVmRunCommandShowSettings toolSettings, string commandId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CommandId = commandId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmRunCommandShowSettings.CommandId"/>.</em></p><p>The run command ID.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandShowSettings ResetCommandId(this AzureVmRunCommandShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CommandId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Location
+        /// <summary><p><em>Sets <see cref="AzureVmRunCommandShowSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandShowSettings SetLocation(this AzureVmRunCommandShowSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmRunCommandShowSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandShowSettings ResetLocation(this AzureVmRunCommandShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmRunCommandShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandShowSettings SetDebug(this AzureVmRunCommandShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmRunCommandShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandShowSettings ResetDebug(this AzureVmRunCommandShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmRunCommandShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandShowSettings SetHelp(this AzureVmRunCommandShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmRunCommandShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandShowSettings ResetHelp(this AzureVmRunCommandShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmRunCommandShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandShowSettings SetOutput(this AzureVmRunCommandShowSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmRunCommandShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandShowSettings ResetOutput(this AzureVmRunCommandShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmRunCommandShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandShowSettings SetQuery(this AzureVmRunCommandShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmRunCommandShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandShowSettings ResetQuery(this AzureVmRunCommandShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmRunCommandShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandShowSettings SetVerbose(this AzureVmRunCommandShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmRunCommandShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmRunCommandShowSettings ResetVerbose(this AzureVmRunCommandShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmDiagnosticsGetDefaultConfigSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmDiagnosticsGetDefaultConfigSettingsExtensions
+    {
+        #region IsWindowsOs
+        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsGetDefaultConfigSettings.IsWindowsOs"/>.</em></p><p>For Windows VMs.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsGetDefaultConfigSettings SetIsWindowsOs(this AzureVmDiagnosticsGetDefaultConfigSettings toolSettings, string isWindowsOs)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IsWindowsOs = isWindowsOs;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsGetDefaultConfigSettings.IsWindowsOs"/>.</em></p><p>For Windows VMs.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsGetDefaultConfigSettings ResetIsWindowsOs(this AzureVmDiagnosticsGetDefaultConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IsWindowsOs = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsGetDefaultConfigSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsGetDefaultConfigSettings SetDebug(this AzureVmDiagnosticsGetDefaultConfigSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsGetDefaultConfigSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsGetDefaultConfigSettings ResetDebug(this AzureVmDiagnosticsGetDefaultConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsGetDefaultConfigSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsGetDefaultConfigSettings SetHelp(this AzureVmDiagnosticsGetDefaultConfigSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsGetDefaultConfigSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsGetDefaultConfigSettings ResetHelp(this AzureVmDiagnosticsGetDefaultConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsGetDefaultConfigSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsGetDefaultConfigSettings SetOutput(this AzureVmDiagnosticsGetDefaultConfigSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsGetDefaultConfigSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsGetDefaultConfigSettings ResetOutput(this AzureVmDiagnosticsGetDefaultConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsGetDefaultConfigSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsGetDefaultConfigSettings SetQuery(this AzureVmDiagnosticsGetDefaultConfigSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsGetDefaultConfigSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsGetDefaultConfigSettings ResetQuery(this AzureVmDiagnosticsGetDefaultConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsGetDefaultConfigSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsGetDefaultConfigSettings SetVerbose(this AzureVmDiagnosticsGetDefaultConfigSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsGetDefaultConfigSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsGetDefaultConfigSettings ResetVerbose(this AzureVmDiagnosticsGetDefaultConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmDiagnosticsSetSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmDiagnosticsSetSettingsExtensions
+    {
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsSetSettings SetResourceGroup(this AzureVmDiagnosticsSetSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsSetSettings ResetResourceGroup(this AzureVmDiagnosticsSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Settings
+        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsSetSettings.Settings"/>.</em></p><p>Json string or a file path, which defines data to be collected.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsSetSettings SetSettings(this AzureVmDiagnosticsSetSettings toolSettings, string settings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Settings = settings;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsSetSettings.Settings"/>.</em></p><p>Json string or a file path, which defines data to be collected.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsSetSettings ResetSettings(this AzureVmDiagnosticsSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Settings = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VmName
+        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsSetSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsSetSettings SetVmName(this AzureVmDiagnosticsSetSettings toolSettings, string vmName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmName = vmName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsSetSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsSetSettings ResetVmName(this AzureVmDiagnosticsSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NoAutoUpgrade
+        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsSetSettings.NoAutoUpgrade"/>.</em></p><p>By doing this, extension system will not pick the highest minor version for the specified version number, and will not auto update to the latest build/revision number on any scale set updates in future.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsSetSettings SetNoAutoUpgrade(this AzureVmDiagnosticsSetSettings toolSettings, string noAutoUpgrade)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoAutoUpgrade = noAutoUpgrade;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsSetSettings.NoAutoUpgrade"/>.</em></p><p>By doing this, extension system will not pick the highest minor version for the specified version number, and will not auto update to the latest build/revision number on any scale set updates in future.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsSetSettings ResetNoAutoUpgrade(this AzureVmDiagnosticsSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoAutoUpgrade = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ProtectedSettings
+        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsSetSettings.ProtectedSettings"/>.</em></p><p>Json string or a file path containing private configurations such as storage account keys, etc.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsSetSettings SetProtectedSettings(this AzureVmDiagnosticsSetSettings toolSettings, string protectedSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ProtectedSettings = protectedSettings;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsSetSettings.ProtectedSettings"/>.</em></p><p>Json string or a file path containing private configurations such as storage account keys, etc.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsSetSettings ResetProtectedSettings(this AzureVmDiagnosticsSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ProtectedSettings = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Version
+        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsSetSettings.Version"/>.</em></p><p>Version of the diagnostics extension. Will use the latest if not specfied.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsSetSettings SetVersion(this AzureVmDiagnosticsSetSettings toolSettings, string version)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Version = version;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsSetSettings.Version"/>.</em></p><p>Version of the diagnostics extension. Will use the latest if not specfied.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsSetSettings ResetVersion(this AzureVmDiagnosticsSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Version = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsSetSettings SetDebug(this AzureVmDiagnosticsSetSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsSetSettings ResetDebug(this AzureVmDiagnosticsSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsSetSettings SetHelp(this AzureVmDiagnosticsSetSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsSetSettings ResetHelp(this AzureVmDiagnosticsSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsSetSettings SetOutput(this AzureVmDiagnosticsSetSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsSetSettings ResetOutput(this AzureVmDiagnosticsSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsSetSettings SetQuery(this AzureVmDiagnosticsSetSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsSetSettings ResetQuery(this AzureVmDiagnosticsSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmDiagnosticsSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsSetSettings SetVerbose(this AzureVmDiagnosticsSetSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmDiagnosticsSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmDiagnosticsSetSettings ResetVerbose(this AzureVmDiagnosticsSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmIdentityAssignSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmIdentityAssignSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmIdentityAssignSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmIdentityAssignSettings SetName(this AzureVmIdentityAssignSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmIdentityAssignSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmIdentityAssignSettings ResetName(this AzureVmIdentityAssignSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmIdentityAssignSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmIdentityAssignSettings SetResourceGroup(this AzureVmIdentityAssignSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmIdentityAssignSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmIdentityAssignSettings ResetResourceGroup(this AzureVmIdentityAssignSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Identities
+        /// <summary><p><em>Sets <see cref="AzureVmIdentityAssignSettings.Identities"/>.</em></p><p>The identities to assign.</p></summary>
+        [Pure]
+        public static AzureVmIdentityAssignSettings SetIdentities(this AzureVmIdentityAssignSettings toolSettings, string identities)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Identities = identities;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmIdentityAssignSettings.Identities"/>.</em></p><p>The identities to assign.</p></summary>
+        [Pure]
+        public static AzureVmIdentityAssignSettings ResetIdentities(this AzureVmIdentityAssignSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Identities = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Role
+        /// <summary><p><em>Sets <see cref="AzureVmIdentityAssignSettings.Role"/>.</em></p><p>Role name or id the system assigned identity will have.</p></summary>
+        [Pure]
+        public static AzureVmIdentityAssignSettings SetRole(this AzureVmIdentityAssignSettings toolSettings, string role)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Role = role;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmIdentityAssignSettings.Role"/>.</em></p><p>Role name or id the system assigned identity will have.</p></summary>
+        [Pure]
+        public static AzureVmIdentityAssignSettings ResetRole(this AzureVmIdentityAssignSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Role = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Scope
+        /// <summary><p><em>Sets <see cref="AzureVmIdentityAssignSettings.Scope"/>.</em></p><p>Scope that the system assigned identity can access.</p></summary>
+        [Pure]
+        public static AzureVmIdentityAssignSettings SetScope(this AzureVmIdentityAssignSettings toolSettings, string scope)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Scope = scope;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmIdentityAssignSettings.Scope"/>.</em></p><p>Scope that the system assigned identity can access.</p></summary>
+        [Pure]
+        public static AzureVmIdentityAssignSettings ResetScope(this AzureVmIdentityAssignSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Scope = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmIdentityAssignSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmIdentityAssignSettings SetDebug(this AzureVmIdentityAssignSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmIdentityAssignSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmIdentityAssignSettings ResetDebug(this AzureVmIdentityAssignSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmIdentityAssignSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmIdentityAssignSettings SetHelp(this AzureVmIdentityAssignSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmIdentityAssignSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmIdentityAssignSettings ResetHelp(this AzureVmIdentityAssignSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmIdentityAssignSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmIdentityAssignSettings SetOutput(this AzureVmIdentityAssignSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmIdentityAssignSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmIdentityAssignSettings ResetOutput(this AzureVmIdentityAssignSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmIdentityAssignSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmIdentityAssignSettings SetQuery(this AzureVmIdentityAssignSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmIdentityAssignSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmIdentityAssignSettings ResetQuery(this AzureVmIdentityAssignSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmIdentityAssignSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmIdentityAssignSettings SetVerbose(this AzureVmIdentityAssignSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmIdentityAssignSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmIdentityAssignSettings ResetVerbose(this AzureVmIdentityAssignSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmIdentityRemoveSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmIdentityRemoveSettingsExtensions
+    {
+        #region Identities
+        /// <summary><p><em>Sets <see cref="AzureVmIdentityRemoveSettings.Identities"/>.</em></p><p>Space-separated user assigned identities to remove.</p></summary>
+        [Pure]
+        public static AzureVmIdentityRemoveSettings SetIdentities(this AzureVmIdentityRemoveSettings toolSettings, string identities)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Identities = identities;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmIdentityRemoveSettings.Identities"/>.</em></p><p>Space-separated user assigned identities to remove.</p></summary>
+        [Pure]
+        public static AzureVmIdentityRemoveSettings ResetIdentities(this AzureVmIdentityRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Identities = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmIdentityRemoveSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmIdentityRemoveSettings SetName(this AzureVmIdentityRemoveSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmIdentityRemoveSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmIdentityRemoveSettings ResetName(this AzureVmIdentityRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmIdentityRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmIdentityRemoveSettings SetResourceGroup(this AzureVmIdentityRemoveSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmIdentityRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmIdentityRemoveSettings ResetResourceGroup(this AzureVmIdentityRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmIdentityRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmIdentityRemoveSettings SetDebug(this AzureVmIdentityRemoveSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmIdentityRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmIdentityRemoveSettings ResetDebug(this AzureVmIdentityRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmIdentityRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmIdentityRemoveSettings SetHelp(this AzureVmIdentityRemoveSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmIdentityRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmIdentityRemoveSettings ResetHelp(this AzureVmIdentityRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmIdentityRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmIdentityRemoveSettings SetOutput(this AzureVmIdentityRemoveSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmIdentityRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmIdentityRemoveSettings ResetOutput(this AzureVmIdentityRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmIdentityRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmIdentityRemoveSettings SetQuery(this AzureVmIdentityRemoveSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmIdentityRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmIdentityRemoveSettings ResetQuery(this AzureVmIdentityRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmIdentityRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmIdentityRemoveSettings SetVerbose(this AzureVmIdentityRemoveSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmIdentityRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmIdentityRemoveSettings ResetVerbose(this AzureVmIdentityRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmIdentityShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmIdentityShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmIdentityShowSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmIdentityShowSettings SetName(this AzureVmIdentityShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmIdentityShowSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmIdentityShowSettings ResetName(this AzureVmIdentityShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmIdentityShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmIdentityShowSettings SetResourceGroup(this AzureVmIdentityShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmIdentityShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmIdentityShowSettings ResetResourceGroup(this AzureVmIdentityShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmIdentityShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmIdentityShowSettings SetDebug(this AzureVmIdentityShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmIdentityShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmIdentityShowSettings ResetDebug(this AzureVmIdentityShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmIdentityShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmIdentityShowSettings SetHelp(this AzureVmIdentityShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmIdentityShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmIdentityShowSettings ResetHelp(this AzureVmIdentityShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmIdentityShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmIdentityShowSettings SetOutput(this AzureVmIdentityShowSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmIdentityShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmIdentityShowSettings ResetOutput(this AzureVmIdentityShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmIdentityShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmIdentityShowSettings SetQuery(this AzureVmIdentityShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmIdentityShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmIdentityShowSettings ResetQuery(this AzureVmIdentityShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmIdentityShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmIdentityShowSettings SetVerbose(this AzureVmIdentityShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmIdentityShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmIdentityShowSettings ResetVerbose(this AzureVmIdentityShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmUnmanagedDiskAttachSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmUnmanagedDiskAttachSettingsExtensions
+    {
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskAttachSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskAttachSettings SetResourceGroup(this AzureVmUnmanagedDiskAttachSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskAttachSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskAttachSettings ResetResourceGroup(this AzureVmUnmanagedDiskAttachSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VmName
+        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskAttachSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskAttachSettings SetVmName(this AzureVmUnmanagedDiskAttachSettings toolSettings, string vmName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmName = vmName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskAttachSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskAttachSettings ResetVmName(this AzureVmUnmanagedDiskAttachSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Caching
+        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskAttachSettings.Caching"/>.</em></p><p>Disk caching policy.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskAttachSettings SetCaching(this AzureVmUnmanagedDiskAttachSettings toolSettings, VmCreateOsDiskCaching caching)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Caching = caching;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskAttachSettings.Caching"/>.</em></p><p>Disk caching policy.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskAttachSettings ResetCaching(this AzureVmUnmanagedDiskAttachSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Caching = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Lun
+        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskAttachSettings.Lun"/>.</em></p><p>0-based logical unit number (LUN). Max value depends on the Virtual Machine size.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskAttachSettings SetLun(this AzureVmUnmanagedDiskAttachSettings toolSettings, string lun)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Lun = lun;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskAttachSettings.Lun"/>.</em></p><p>0-based logical unit number (LUN). Max value depends on the Virtual Machine size.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskAttachSettings ResetLun(this AzureVmUnmanagedDiskAttachSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Lun = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskAttachSettings.Name"/>.</em></p><p>The data disk name(optional when create a new disk).</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskAttachSettings SetName(this AzureVmUnmanagedDiskAttachSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskAttachSettings.Name"/>.</em></p><p>The data disk name(optional when create a new disk).</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskAttachSettings ResetName(this AzureVmUnmanagedDiskAttachSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region New
+        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskAttachSettings.New"/>.</em></p><p>Create a new disk.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskAttachSettings SetNew(this AzureVmUnmanagedDiskAttachSettings toolSettings, string @new)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.New = @new;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskAttachSettings.New"/>.</em></p><p>Create a new disk.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskAttachSettings ResetNew(this AzureVmUnmanagedDiskAttachSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.New = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SizeGb
+        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskAttachSettings.SizeGb"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskAttachSettings SetSizeGb(this AzureVmUnmanagedDiskAttachSettings toolSettings, string sizeGb)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SizeGb = sizeGb;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskAttachSettings.SizeGb"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskAttachSettings ResetSizeGb(this AzureVmUnmanagedDiskAttachSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SizeGb = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VhdUri
+        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskAttachSettings.VhdUri"/>.</em></p><p>Virtual hard disk URI. For example: <a href="https://mystorage.blob.core.windows.net/vhds/d1.vhd">https://mystorage.blob.core.windows.net/vhds/d1.vhd</a>.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskAttachSettings SetVhdUri(this AzureVmUnmanagedDiskAttachSettings toolSettings, string vhdUri)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VhdUri = vhdUri;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskAttachSettings.VhdUri"/>.</em></p><p>Virtual hard disk URI. For example: <a href="https://mystorage.blob.core.windows.net/vhds/d1.vhd">https://mystorage.blob.core.windows.net/vhds/d1.vhd</a>.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskAttachSettings ResetVhdUri(this AzureVmUnmanagedDiskAttachSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VhdUri = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskAttachSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskAttachSettings SetDebug(this AzureVmUnmanagedDiskAttachSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskAttachSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskAttachSettings ResetDebug(this AzureVmUnmanagedDiskAttachSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskAttachSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskAttachSettings SetHelp(this AzureVmUnmanagedDiskAttachSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskAttachSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskAttachSettings ResetHelp(this AzureVmUnmanagedDiskAttachSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskAttachSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskAttachSettings SetOutput(this AzureVmUnmanagedDiskAttachSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskAttachSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskAttachSettings ResetOutput(this AzureVmUnmanagedDiskAttachSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskAttachSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskAttachSettings SetQuery(this AzureVmUnmanagedDiskAttachSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskAttachSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskAttachSettings ResetQuery(this AzureVmUnmanagedDiskAttachSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskAttachSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskAttachSettings SetVerbose(this AzureVmUnmanagedDiskAttachSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskAttachSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskAttachSettings ResetVerbose(this AzureVmUnmanagedDiskAttachSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmUnmanagedDiskDetachSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmUnmanagedDiskDetachSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskDetachSettings.Name"/>.</em></p><p>The data disk name.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskDetachSettings SetName(this AzureVmUnmanagedDiskDetachSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskDetachSettings.Name"/>.</em></p><p>The data disk name.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskDetachSettings ResetName(this AzureVmUnmanagedDiskDetachSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskDetachSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskDetachSettings SetResourceGroup(this AzureVmUnmanagedDiskDetachSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskDetachSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskDetachSettings ResetResourceGroup(this AzureVmUnmanagedDiskDetachSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VmName
+        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskDetachSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskDetachSettings SetVmName(this AzureVmUnmanagedDiskDetachSettings toolSettings, string vmName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmName = vmName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskDetachSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskDetachSettings ResetVmName(this AzureVmUnmanagedDiskDetachSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskDetachSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskDetachSettings SetDebug(this AzureVmUnmanagedDiskDetachSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskDetachSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskDetachSettings ResetDebug(this AzureVmUnmanagedDiskDetachSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskDetachSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskDetachSettings SetHelp(this AzureVmUnmanagedDiskDetachSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskDetachSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskDetachSettings ResetHelp(this AzureVmUnmanagedDiskDetachSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskDetachSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskDetachSettings SetOutput(this AzureVmUnmanagedDiskDetachSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskDetachSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskDetachSettings ResetOutput(this AzureVmUnmanagedDiskDetachSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskDetachSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskDetachSettings SetQuery(this AzureVmUnmanagedDiskDetachSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskDetachSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskDetachSettings ResetQuery(this AzureVmUnmanagedDiskDetachSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskDetachSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskDetachSettings SetVerbose(this AzureVmUnmanagedDiskDetachSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskDetachSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskDetachSettings ResetVerbose(this AzureVmUnmanagedDiskDetachSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmUnmanagedDiskListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmUnmanagedDiskListSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskListSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskListSettings SetName(this AzureVmUnmanagedDiskListSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskListSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskListSettings ResetName(this AzureVmUnmanagedDiskListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskListSettings SetResourceGroup(this AzureVmUnmanagedDiskListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskListSettings ResetResourceGroup(this AzureVmUnmanagedDiskListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskListSettings SetDebug(this AzureVmUnmanagedDiskListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskListSettings ResetDebug(this AzureVmUnmanagedDiskListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskListSettings SetHelp(this AzureVmUnmanagedDiskListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskListSettings ResetHelp(this AzureVmUnmanagedDiskListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskListSettings SetOutput(this AzureVmUnmanagedDiskListSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskListSettings ResetOutput(this AzureVmUnmanagedDiskListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskListSettings SetQuery(this AzureVmUnmanagedDiskListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskListSettings ResetQuery(this AzureVmUnmanagedDiskListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskListSettings SetVerbose(this AzureVmUnmanagedDiskListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmUnmanagedDiskListSettings ResetVerbose(this AzureVmUnmanagedDiskListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmBootDiagnosticsDisableSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmBootDiagnosticsDisableSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsDisableSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsDisableSettings SetName(this AzureVmBootDiagnosticsDisableSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsDisableSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsDisableSettings ResetName(this AzureVmBootDiagnosticsDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsDisableSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsDisableSettings SetResourceGroup(this AzureVmBootDiagnosticsDisableSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsDisableSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsDisableSettings ResetResourceGroup(this AzureVmBootDiagnosticsDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsDisableSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsDisableSettings SetDebug(this AzureVmBootDiagnosticsDisableSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsDisableSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsDisableSettings ResetDebug(this AzureVmBootDiagnosticsDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsDisableSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsDisableSettings SetHelp(this AzureVmBootDiagnosticsDisableSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsDisableSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsDisableSettings ResetHelp(this AzureVmBootDiagnosticsDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsDisableSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsDisableSettings SetOutput(this AzureVmBootDiagnosticsDisableSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsDisableSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsDisableSettings ResetOutput(this AzureVmBootDiagnosticsDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsDisableSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsDisableSettings SetQuery(this AzureVmBootDiagnosticsDisableSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsDisableSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsDisableSettings ResetQuery(this AzureVmBootDiagnosticsDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsDisableSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsDisableSettings SetVerbose(this AzureVmBootDiagnosticsDisableSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsDisableSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsDisableSettings ResetVerbose(this AzureVmBootDiagnosticsDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmBootDiagnosticsEnableSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmBootDiagnosticsEnableSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsEnableSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsEnableSettings SetName(this AzureVmBootDiagnosticsEnableSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsEnableSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsEnableSettings ResetName(this AzureVmBootDiagnosticsEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsEnableSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsEnableSettings SetResourceGroup(this AzureVmBootDiagnosticsEnableSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsEnableSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsEnableSettings ResetResourceGroup(this AzureVmBootDiagnosticsEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Storage
+        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsEnableSettings.Storage"/>.</em></p><p>Name or URI of a storage account (e.g. <a href="https://your_storage_account_name.blob.core.windows.net/">https://your_storage_account_name.blob.core.windows.net/</a>).</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsEnableSettings SetStorage(this AzureVmBootDiagnosticsEnableSettings toolSettings, string storage)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Storage = storage;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsEnableSettings.Storage"/>.</em></p><p>Name or URI of a storage account (e.g. <a href="https://your_storage_account_name.blob.core.windows.net/">https://your_storage_account_name.blob.core.windows.net/</a>).</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsEnableSettings ResetStorage(this AzureVmBootDiagnosticsEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Storage = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsEnableSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsEnableSettings SetDebug(this AzureVmBootDiagnosticsEnableSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsEnableSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsEnableSettings ResetDebug(this AzureVmBootDiagnosticsEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsEnableSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsEnableSettings SetHelp(this AzureVmBootDiagnosticsEnableSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsEnableSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsEnableSettings ResetHelp(this AzureVmBootDiagnosticsEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsEnableSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsEnableSettings SetOutput(this AzureVmBootDiagnosticsEnableSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsEnableSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsEnableSettings ResetOutput(this AzureVmBootDiagnosticsEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsEnableSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsEnableSettings SetQuery(this AzureVmBootDiagnosticsEnableSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsEnableSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsEnableSettings ResetQuery(this AzureVmBootDiagnosticsEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsEnableSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsEnableSettings SetVerbose(this AzureVmBootDiagnosticsEnableSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsEnableSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsEnableSettings ResetVerbose(this AzureVmBootDiagnosticsEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmBootDiagnosticsGetBootLogSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmBootDiagnosticsGetBootLogSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsGetBootLogSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsGetBootLogSettings SetName(this AzureVmBootDiagnosticsGetBootLogSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsGetBootLogSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsGetBootLogSettings ResetName(this AzureVmBootDiagnosticsGetBootLogSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsGetBootLogSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsGetBootLogSettings SetResourceGroup(this AzureVmBootDiagnosticsGetBootLogSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsGetBootLogSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsGetBootLogSettings ResetResourceGroup(this AzureVmBootDiagnosticsGetBootLogSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsGetBootLogSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsGetBootLogSettings SetDebug(this AzureVmBootDiagnosticsGetBootLogSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsGetBootLogSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsGetBootLogSettings ResetDebug(this AzureVmBootDiagnosticsGetBootLogSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsGetBootLogSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsGetBootLogSettings SetHelp(this AzureVmBootDiagnosticsGetBootLogSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsGetBootLogSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsGetBootLogSettings ResetHelp(this AzureVmBootDiagnosticsGetBootLogSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsGetBootLogSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsGetBootLogSettings SetOutput(this AzureVmBootDiagnosticsGetBootLogSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsGetBootLogSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsGetBootLogSettings ResetOutput(this AzureVmBootDiagnosticsGetBootLogSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsGetBootLogSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsGetBootLogSettings SetQuery(this AzureVmBootDiagnosticsGetBootLogSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsGetBootLogSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsGetBootLogSettings ResetQuery(this AzureVmBootDiagnosticsGetBootLogSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmBootDiagnosticsGetBootLogSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsGetBootLogSettings SetVerbose(this AzureVmBootDiagnosticsGetBootLogSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmBootDiagnosticsGetBootLogSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmBootDiagnosticsGetBootLogSettings ResetVerbose(this AzureVmBootDiagnosticsGetBootLogSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmNicAddSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmNicAddSettingsExtensions
+    {
+        #region Nics
+        /// <summary><p><em>Sets <see cref="AzureVmNicAddSettings.Nics"/>.</em></p><p>Names or IDs of NICs.</p></summary>
+        [Pure]
+        public static AzureVmNicAddSettings SetNics(this AzureVmNicAddSettings toolSettings, string nics)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Nics = nics;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicAddSettings.Nics"/>.</em></p><p>Names or IDs of NICs.</p></summary>
+        [Pure]
+        public static AzureVmNicAddSettings ResetNics(this AzureVmNicAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Nics = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmNicAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmNicAddSettings SetResourceGroup(this AzureVmNicAddSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmNicAddSettings ResetResourceGroup(this AzureVmNicAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VmName
+        /// <summary><p><em>Sets <see cref="AzureVmNicAddSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmNicAddSettings SetVmName(this AzureVmNicAddSettings toolSettings, string vmName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmName = vmName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicAddSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmNicAddSettings ResetVmName(this AzureVmNicAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region PrimaryNic
+        /// <summary><p><em>Sets <see cref="AzureVmNicAddSettings.PrimaryNic"/>.</em></p><p>Name or ID of the primary NIC. If missing, the first NIC in the list will be the primary.</p></summary>
+        [Pure]
+        public static AzureVmNicAddSettings SetPrimaryNic(this AzureVmNicAddSettings toolSettings, string primaryNic)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PrimaryNic = primaryNic;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicAddSettings.PrimaryNic"/>.</em></p><p>Name or ID of the primary NIC. If missing, the first NIC in the list will be the primary.</p></summary>
+        [Pure]
+        public static AzureVmNicAddSettings ResetPrimaryNic(this AzureVmNicAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PrimaryNic = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmNicAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmNicAddSettings SetDebug(this AzureVmNicAddSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmNicAddSettings ResetDebug(this AzureVmNicAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmNicAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmNicAddSettings SetHelp(this AzureVmNicAddSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmNicAddSettings ResetHelp(this AzureVmNicAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmNicAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmNicAddSettings SetOutput(this AzureVmNicAddSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmNicAddSettings ResetOutput(this AzureVmNicAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmNicAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmNicAddSettings SetQuery(this AzureVmNicAddSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmNicAddSettings ResetQuery(this AzureVmNicAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmNicAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmNicAddSettings SetVerbose(this AzureVmNicAddSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmNicAddSettings ResetVerbose(this AzureVmNicAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmNicListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmNicListSettingsExtensions
+    {
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmNicListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmNicListSettings SetResourceGroup(this AzureVmNicListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmNicListSettings ResetResourceGroup(this AzureVmNicListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VmName
+        /// <summary><p><em>Sets <see cref="AzureVmNicListSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmNicListSettings SetVmName(this AzureVmNicListSettings toolSettings, string vmName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmName = vmName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicListSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmNicListSettings ResetVmName(this AzureVmNicListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmNicListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmNicListSettings SetDebug(this AzureVmNicListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmNicListSettings ResetDebug(this AzureVmNicListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmNicListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmNicListSettings SetHelp(this AzureVmNicListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmNicListSettings ResetHelp(this AzureVmNicListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmNicListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmNicListSettings SetOutput(this AzureVmNicListSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmNicListSettings ResetOutput(this AzureVmNicListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmNicListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmNicListSettings SetQuery(this AzureVmNicListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmNicListSettings ResetQuery(this AzureVmNicListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmNicListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmNicListSettings SetVerbose(this AzureVmNicListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmNicListSettings ResetVerbose(this AzureVmNicListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmNicRemoveSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmNicRemoveSettingsExtensions
+    {
+        #region Nics
+        /// <summary><p><em>Sets <see cref="AzureVmNicRemoveSettings.Nics"/>.</em></p><p>Names or IDs of NICs.</p></summary>
+        [Pure]
+        public static AzureVmNicRemoveSettings SetNics(this AzureVmNicRemoveSettings toolSettings, string nics)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Nics = nics;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicRemoveSettings.Nics"/>.</em></p><p>Names or IDs of NICs.</p></summary>
+        [Pure]
+        public static AzureVmNicRemoveSettings ResetNics(this AzureVmNicRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Nics = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmNicRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmNicRemoveSettings SetResourceGroup(this AzureVmNicRemoveSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmNicRemoveSettings ResetResourceGroup(this AzureVmNicRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VmName
+        /// <summary><p><em>Sets <see cref="AzureVmNicRemoveSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmNicRemoveSettings SetVmName(this AzureVmNicRemoveSettings toolSettings, string vmName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmName = vmName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicRemoveSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmNicRemoveSettings ResetVmName(this AzureVmNicRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region PrimaryNic
+        /// <summary><p><em>Sets <see cref="AzureVmNicRemoveSettings.PrimaryNic"/>.</em></p><p>Name or ID of the primary NIC. If missing, the first NIC in the list will be the primary.</p></summary>
+        [Pure]
+        public static AzureVmNicRemoveSettings SetPrimaryNic(this AzureVmNicRemoveSettings toolSettings, string primaryNic)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PrimaryNic = primaryNic;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicRemoveSettings.PrimaryNic"/>.</em></p><p>Name or ID of the primary NIC. If missing, the first NIC in the list will be the primary.</p></summary>
+        [Pure]
+        public static AzureVmNicRemoveSettings ResetPrimaryNic(this AzureVmNicRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PrimaryNic = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmNicRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmNicRemoveSettings SetDebug(this AzureVmNicRemoveSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmNicRemoveSettings ResetDebug(this AzureVmNicRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmNicRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmNicRemoveSettings SetHelp(this AzureVmNicRemoveSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmNicRemoveSettings ResetHelp(this AzureVmNicRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmNicRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmNicRemoveSettings SetOutput(this AzureVmNicRemoveSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmNicRemoveSettings ResetOutput(this AzureVmNicRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmNicRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmNicRemoveSettings SetQuery(this AzureVmNicRemoveSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmNicRemoveSettings ResetQuery(this AzureVmNicRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmNicRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmNicRemoveSettings SetVerbose(this AzureVmNicRemoveSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmNicRemoveSettings ResetVerbose(this AzureVmNicRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmNicSetSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmNicSetSettingsExtensions
+    {
+        #region Nics
+        /// <summary><p><em>Sets <see cref="AzureVmNicSetSettings.Nics"/>.</em></p><p>Names or IDs of NICs.</p></summary>
+        [Pure]
+        public static AzureVmNicSetSettings SetNics(this AzureVmNicSetSettings toolSettings, string nics)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Nics = nics;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicSetSettings.Nics"/>.</em></p><p>Names or IDs of NICs.</p></summary>
+        [Pure]
+        public static AzureVmNicSetSettings ResetNics(this AzureVmNicSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Nics = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmNicSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmNicSetSettings SetResourceGroup(this AzureVmNicSetSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmNicSetSettings ResetResourceGroup(this AzureVmNicSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VmName
+        /// <summary><p><em>Sets <see cref="AzureVmNicSetSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmNicSetSettings SetVmName(this AzureVmNicSetSettings toolSettings, string vmName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmName = vmName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicSetSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmNicSetSettings ResetVmName(this AzureVmNicSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region PrimaryNic
+        /// <summary><p><em>Sets <see cref="AzureVmNicSetSettings.PrimaryNic"/>.</em></p><p>Name or ID of the primary NIC. If missing, the first NIC in the list will be the primary.</p></summary>
+        [Pure]
+        public static AzureVmNicSetSettings SetPrimaryNic(this AzureVmNicSetSettings toolSettings, string primaryNic)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PrimaryNic = primaryNic;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicSetSettings.PrimaryNic"/>.</em></p><p>Name or ID of the primary NIC. If missing, the first NIC in the list will be the primary.</p></summary>
+        [Pure]
+        public static AzureVmNicSetSettings ResetPrimaryNic(this AzureVmNicSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PrimaryNic = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmNicSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmNicSetSettings SetDebug(this AzureVmNicSetSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmNicSetSettings ResetDebug(this AzureVmNicSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmNicSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmNicSetSettings SetHelp(this AzureVmNicSetSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmNicSetSettings ResetHelp(this AzureVmNicSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmNicSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmNicSetSettings SetOutput(this AzureVmNicSetSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmNicSetSettings ResetOutput(this AzureVmNicSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmNicSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmNicSetSettings SetQuery(this AzureVmNicSetSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmNicSetSettings ResetQuery(this AzureVmNicSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmNicSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmNicSetSettings SetVerbose(this AzureVmNicSetSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmNicSetSettings ResetVerbose(this AzureVmNicSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmNicShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmNicShowSettingsExtensions
+    {
+        #region Nic
+        /// <summary><p><em>Sets <see cref="AzureVmNicShowSettings.Nic"/>.</em></p><p>NIC name or ID.</p></summary>
+        [Pure]
+        public static AzureVmNicShowSettings SetNic(this AzureVmNicShowSettings toolSettings, string nic)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Nic = nic;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicShowSettings.Nic"/>.</em></p><p>NIC name or ID.</p></summary>
+        [Pure]
+        public static AzureVmNicShowSettings ResetNic(this AzureVmNicShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Nic = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmNicShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmNicShowSettings SetResourceGroup(this AzureVmNicShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmNicShowSettings ResetResourceGroup(this AzureVmNicShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VmName
+        /// <summary><p><em>Sets <see cref="AzureVmNicShowSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmNicShowSettings SetVmName(this AzureVmNicShowSettings toolSettings, string vmName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmName = vmName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicShowSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmNicShowSettings ResetVmName(this AzureVmNicShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmNicShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmNicShowSettings SetDebug(this AzureVmNicShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmNicShowSettings ResetDebug(this AzureVmNicShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmNicShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmNicShowSettings SetHelp(this AzureVmNicShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmNicShowSettings ResetHelp(this AzureVmNicShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmNicShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmNicShowSettings SetOutput(this AzureVmNicShowSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmNicShowSettings ResetOutput(this AzureVmNicShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmNicShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmNicShowSettings SetQuery(this AzureVmNicShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmNicShowSettings ResetQuery(this AzureVmNicShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmNicShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmNicShowSettings SetVerbose(this AzureVmNicShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmNicShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmNicShowSettings ResetVerbose(this AzureVmNicShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmSecretAddSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmSecretAddSettingsExtensions
+    {
+        #region Certificate
+        /// <summary><p><em>Sets <see cref="AzureVmSecretAddSettings.Certificate"/>.</em></p><p>Key vault certificate name or its full secret URL.</p></summary>
+        [Pure]
+        public static AzureVmSecretAddSettings SetCertificate(this AzureVmSecretAddSettings toolSettings, string certificate)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Certificate = certificate;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretAddSettings.Certificate"/>.</em></p><p>Key vault certificate name or its full secret URL.</p></summary>
+        [Pure]
+        public static AzureVmSecretAddSettings ResetCertificate(this AzureVmSecretAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Certificate = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Keyvault
+        /// <summary><p><em>Sets <see cref="AzureVmSecretAddSettings.Keyvault"/>.</em></p><p>Name or ID of the key vault.</p></summary>
+        [Pure]
+        public static AzureVmSecretAddSettings SetKeyvault(this AzureVmSecretAddSettings toolSettings, string keyvault)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Keyvault = keyvault;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretAddSettings.Keyvault"/>.</em></p><p>Name or ID of the key vault.</p></summary>
+        [Pure]
+        public static AzureVmSecretAddSettings ResetKeyvault(this AzureVmSecretAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Keyvault = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmSecretAddSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmSecretAddSettings SetName(this AzureVmSecretAddSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretAddSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmSecretAddSettings ResetName(this AzureVmSecretAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmSecretAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmSecretAddSettings SetResourceGroup(this AzureVmSecretAddSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmSecretAddSettings ResetResourceGroup(this AzureVmSecretAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region CertificateStore
+        /// <summary><p><em>Sets <see cref="AzureVmSecretAddSettings.CertificateStore"/>.</em></p><p>Windows certificate store names. Default: My.</p></summary>
+        [Pure]
+        public static AzureVmSecretAddSettings SetCertificateStore(this AzureVmSecretAddSettings toolSettings, string certificateStore)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificateStore = certificateStore;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretAddSettings.CertificateStore"/>.</em></p><p>Windows certificate store names. Default: My.</p></summary>
+        [Pure]
+        public static AzureVmSecretAddSettings ResetCertificateStore(this AzureVmSecretAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificateStore = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmSecretAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmSecretAddSettings SetDebug(this AzureVmSecretAddSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmSecretAddSettings ResetDebug(this AzureVmSecretAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmSecretAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmSecretAddSettings SetHelp(this AzureVmSecretAddSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmSecretAddSettings ResetHelp(this AzureVmSecretAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmSecretAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmSecretAddSettings SetOutput(this AzureVmSecretAddSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmSecretAddSettings ResetOutput(this AzureVmSecretAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmSecretAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmSecretAddSettings SetQuery(this AzureVmSecretAddSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmSecretAddSettings ResetQuery(this AzureVmSecretAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmSecretAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmSecretAddSettings SetVerbose(this AzureVmSecretAddSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmSecretAddSettings ResetVerbose(this AzureVmSecretAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmSecretFormatSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmSecretFormatSettingsExtensions
+    {
+        #region Secrets
+        /// <summary><p><em>Sets <see cref="AzureVmSecretFormatSettings.Secrets"/> to a new list.</em></p><p>Space-separated list of key vault secret URIs. Perhaps, produced by 'az keyvault secret list-versions --vault-name vaultname -n cert1 --query "[?attributes.enabled].id" -o tsv'.</p></summary>
+        [Pure]
+        public static AzureVmSecretFormatSettings SetSecrets(this AzureVmSecretFormatSettings toolSettings, params string[] secrets)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SecretsInternal = secrets.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureVmSecretFormatSettings.Secrets"/> to a new list.</em></p><p>Space-separated list of key vault secret URIs. Perhaps, produced by 'az keyvault secret list-versions --vault-name vaultname -n cert1 --query "[?attributes.enabled].id" -o tsv'.</p></summary>
+        [Pure]
+        public static AzureVmSecretFormatSettings SetSecrets(this AzureVmSecretFormatSettings toolSettings, IEnumerable<string> secrets)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SecretsInternal = secrets.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmSecretFormatSettings.Secrets"/>.</em></p><p>Space-separated list of key vault secret URIs. Perhaps, produced by 'az keyvault secret list-versions --vault-name vaultname -n cert1 --query "[?attributes.enabled].id" -o tsv'.</p></summary>
+        [Pure]
+        public static AzureVmSecretFormatSettings AddSecrets(this AzureVmSecretFormatSettings toolSettings, params string[] secrets)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SecretsInternal.AddRange(secrets);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureVmSecretFormatSettings.Secrets"/>.</em></p><p>Space-separated list of key vault secret URIs. Perhaps, produced by 'az keyvault secret list-versions --vault-name vaultname -n cert1 --query "[?attributes.enabled].id" -o tsv'.</p></summary>
+        [Pure]
+        public static AzureVmSecretFormatSettings AddSecrets(this AzureVmSecretFormatSettings toolSettings, IEnumerable<string> secrets)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SecretsInternal.AddRange(secrets);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureVmSecretFormatSettings.Secrets"/>.</em></p><p>Space-separated list of key vault secret URIs. Perhaps, produced by 'az keyvault secret list-versions --vault-name vaultname -n cert1 --query "[?attributes.enabled].id" -o tsv'.</p></summary>
+        [Pure]
+        public static AzureVmSecretFormatSettings ClearSecrets(this AzureVmSecretFormatSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SecretsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmSecretFormatSettings.Secrets"/>.</em></p><p>Space-separated list of key vault secret URIs. Perhaps, produced by 'az keyvault secret list-versions --vault-name vaultname -n cert1 --query "[?attributes.enabled].id" -o tsv'.</p></summary>
+        [Pure]
+        public static AzureVmSecretFormatSettings RemoveSecrets(this AzureVmSecretFormatSettings toolSettings, params string[] secrets)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(secrets);
+            toolSettings.SecretsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureVmSecretFormatSettings.Secrets"/>.</em></p><p>Space-separated list of key vault secret URIs. Perhaps, produced by 'az keyvault secret list-versions --vault-name vaultname -n cert1 --query "[?attributes.enabled].id" -o tsv'.</p></summary>
+        [Pure]
+        public static AzureVmSecretFormatSettings RemoveSecrets(this AzureVmSecretFormatSettings toolSettings, IEnumerable<string> secrets)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(secrets);
+            toolSettings.SecretsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region CertificateStore
+        /// <summary><p><em>Sets <see cref="AzureVmSecretFormatSettings.CertificateStore"/>.</em></p><p>Windows certificate store names. Default: My.</p></summary>
+        [Pure]
+        public static AzureVmSecretFormatSettings SetCertificateStore(this AzureVmSecretFormatSettings toolSettings, string certificateStore)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificateStore = certificateStore;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretFormatSettings.CertificateStore"/>.</em></p><p>Windows certificate store names. Default: My.</p></summary>
+        [Pure]
+        public static AzureVmSecretFormatSettings ResetCertificateStore(this AzureVmSecretFormatSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificateStore = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Keyvault
+        /// <summary><p><em>Sets <see cref="AzureVmSecretFormatSettings.Keyvault"/>.</em></p><p>Name or ID of the key vault.</p></summary>
+        [Pure]
+        public static AzureVmSecretFormatSettings SetKeyvault(this AzureVmSecretFormatSettings toolSettings, string keyvault)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Keyvault = keyvault;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretFormatSettings.Keyvault"/>.</em></p><p>Name or ID of the key vault.</p></summary>
+        [Pure]
+        public static AzureVmSecretFormatSettings ResetKeyvault(this AzureVmSecretFormatSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Keyvault = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmSecretFormatSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmSecretFormatSettings SetResourceGroup(this AzureVmSecretFormatSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretFormatSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmSecretFormatSettings ResetResourceGroup(this AzureVmSecretFormatSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmSecretFormatSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmSecretFormatSettings SetDebug(this AzureVmSecretFormatSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretFormatSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmSecretFormatSettings ResetDebug(this AzureVmSecretFormatSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmSecretFormatSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmSecretFormatSettings SetHelp(this AzureVmSecretFormatSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretFormatSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmSecretFormatSettings ResetHelp(this AzureVmSecretFormatSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmSecretFormatSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmSecretFormatSettings SetOutput(this AzureVmSecretFormatSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretFormatSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmSecretFormatSettings ResetOutput(this AzureVmSecretFormatSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmSecretFormatSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmSecretFormatSettings SetQuery(this AzureVmSecretFormatSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretFormatSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmSecretFormatSettings ResetQuery(this AzureVmSecretFormatSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmSecretFormatSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmSecretFormatSettings SetVerbose(this AzureVmSecretFormatSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretFormatSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmSecretFormatSettings ResetVerbose(this AzureVmSecretFormatSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmSecretListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmSecretListSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmSecretListSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmSecretListSettings SetName(this AzureVmSecretListSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretListSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmSecretListSettings ResetName(this AzureVmSecretListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmSecretListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmSecretListSettings SetResourceGroup(this AzureVmSecretListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmSecretListSettings ResetResourceGroup(this AzureVmSecretListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmSecretListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmSecretListSettings SetDebug(this AzureVmSecretListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmSecretListSettings ResetDebug(this AzureVmSecretListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmSecretListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmSecretListSettings SetHelp(this AzureVmSecretListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmSecretListSettings ResetHelp(this AzureVmSecretListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmSecretListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmSecretListSettings SetOutput(this AzureVmSecretListSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmSecretListSettings ResetOutput(this AzureVmSecretListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmSecretListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmSecretListSettings SetQuery(this AzureVmSecretListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmSecretListSettings ResetQuery(this AzureVmSecretListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmSecretListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmSecretListSettings SetVerbose(this AzureVmSecretListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmSecretListSettings ResetVerbose(this AzureVmSecretListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmSecretRemoveSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmSecretRemoveSettingsExtensions
+    {
+        #region Keyvault
+        /// <summary><p><em>Sets <see cref="AzureVmSecretRemoveSettings.Keyvault"/>.</em></p><p>Name or ID of the key vault.</p></summary>
+        [Pure]
+        public static AzureVmSecretRemoveSettings SetKeyvault(this AzureVmSecretRemoveSettings toolSettings, string keyvault)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Keyvault = keyvault;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretRemoveSettings.Keyvault"/>.</em></p><p>Name or ID of the key vault.</p></summary>
+        [Pure]
+        public static AzureVmSecretRemoveSettings ResetKeyvault(this AzureVmSecretRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Keyvault = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmSecretRemoveSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmSecretRemoveSettings SetName(this AzureVmSecretRemoveSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretRemoveSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmSecretRemoveSettings ResetName(this AzureVmSecretRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmSecretRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmSecretRemoveSettings SetResourceGroup(this AzureVmSecretRemoveSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmSecretRemoveSettings ResetResourceGroup(this AzureVmSecretRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Certificate
+        /// <summary><p><em>Sets <see cref="AzureVmSecretRemoveSettings.Certificate"/>.</em></p><p>Key vault certificate name or its full secret URL.</p></summary>
+        [Pure]
+        public static AzureVmSecretRemoveSettings SetCertificate(this AzureVmSecretRemoveSettings toolSettings, string certificate)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Certificate = certificate;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretRemoveSettings.Certificate"/>.</em></p><p>Key vault certificate name or its full secret URL.</p></summary>
+        [Pure]
+        public static AzureVmSecretRemoveSettings ResetCertificate(this AzureVmSecretRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Certificate = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmSecretRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmSecretRemoveSettings SetDebug(this AzureVmSecretRemoveSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmSecretRemoveSettings ResetDebug(this AzureVmSecretRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmSecretRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmSecretRemoveSettings SetHelp(this AzureVmSecretRemoveSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmSecretRemoveSettings ResetHelp(this AzureVmSecretRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmSecretRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmSecretRemoveSettings SetOutput(this AzureVmSecretRemoveSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmSecretRemoveSettings ResetOutput(this AzureVmSecretRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmSecretRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmSecretRemoveSettings SetQuery(this AzureVmSecretRemoveSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmSecretRemoveSettings ResetQuery(this AzureVmSecretRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmSecretRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmSecretRemoveSettings SetVerbose(this AzureVmSecretRemoveSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmSecretRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmSecretRemoveSettings ResetVerbose(this AzureVmSecretRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmUserDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmUserDeleteSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmUserDeleteSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmUserDeleteSettings SetName(this AzureVmUserDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUserDeleteSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmUserDeleteSettings ResetName(this AzureVmUserDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmUserDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmUserDeleteSettings SetResourceGroup(this AzureVmUserDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUserDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmUserDeleteSettings ResetResourceGroup(this AzureVmUserDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Username
+        /// <summary><p><em>Sets <see cref="AzureVmUserDeleteSettings.Username"/>.</em></p><p>The user name.</p></summary>
+        [Pure]
+        public static AzureVmUserDeleteSettings SetUsername(this AzureVmUserDeleteSettings toolSettings, string username)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Username = username;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUserDeleteSettings.Username"/>.</em></p><p>The user name.</p></summary>
+        [Pure]
+        public static AzureVmUserDeleteSettings ResetUsername(this AzureVmUserDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Username = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NoWait
+        /// <summary><p><em>Sets <see cref="AzureVmUserDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureVmUserDeleteSettings SetNoWait(this AzureVmUserDeleteSettings toolSettings, string noWait)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = noWait;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUserDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureVmUserDeleteSettings ResetNoWait(this AzureVmUserDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmUserDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmUserDeleteSettings SetDebug(this AzureVmUserDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUserDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmUserDeleteSettings ResetDebug(this AzureVmUserDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmUserDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmUserDeleteSettings SetHelp(this AzureVmUserDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUserDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmUserDeleteSettings ResetHelp(this AzureVmUserDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmUserDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmUserDeleteSettings SetOutput(this AzureVmUserDeleteSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUserDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmUserDeleteSettings ResetOutput(this AzureVmUserDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmUserDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmUserDeleteSettings SetQuery(this AzureVmUserDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUserDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmUserDeleteSettings ResetQuery(this AzureVmUserDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmUserDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmUserDeleteSettings SetVerbose(this AzureVmUserDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUserDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmUserDeleteSettings ResetVerbose(this AzureVmUserDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmUserResetSshSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmUserResetSshSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmUserResetSshSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmUserResetSshSettings SetName(this AzureVmUserResetSshSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUserResetSshSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmUserResetSshSettings ResetName(this AzureVmUserResetSshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmUserResetSshSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmUserResetSshSettings SetResourceGroup(this AzureVmUserResetSshSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUserResetSshSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmUserResetSshSettings ResetResourceGroup(this AzureVmUserResetSshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NoWait
+        /// <summary><p><em>Sets <see cref="AzureVmUserResetSshSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureVmUserResetSshSettings SetNoWait(this AzureVmUserResetSshSettings toolSettings, string noWait)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = noWait;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUserResetSshSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureVmUserResetSshSettings ResetNoWait(this AzureVmUserResetSshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmUserResetSshSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmUserResetSshSettings SetDebug(this AzureVmUserResetSshSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUserResetSshSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmUserResetSshSettings ResetDebug(this AzureVmUserResetSshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmUserResetSshSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmUserResetSshSettings SetHelp(this AzureVmUserResetSshSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUserResetSshSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmUserResetSshSettings ResetHelp(this AzureVmUserResetSshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmUserResetSshSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmUserResetSshSettings SetOutput(this AzureVmUserResetSshSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUserResetSshSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmUserResetSshSettings ResetOutput(this AzureVmUserResetSshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmUserResetSshSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmUserResetSshSettings SetQuery(this AzureVmUserResetSshSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUserResetSshSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmUserResetSshSettings ResetQuery(this AzureVmUserResetSshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmUserResetSshSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmUserResetSshSettings SetVerbose(this AzureVmUserResetSshSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUserResetSshSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmUserResetSshSettings ResetVerbose(this AzureVmUserResetSshSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmUserUpdateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmUserUpdateSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmUserUpdateSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmUserUpdateSettings SetName(this AzureVmUserUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUserUpdateSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmUserUpdateSettings ResetName(this AzureVmUserUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmUserUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmUserUpdateSettings SetResourceGroup(this AzureVmUserUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUserUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmUserUpdateSettings ResetResourceGroup(this AzureVmUserUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Username
+        /// <summary><p><em>Sets <see cref="AzureVmUserUpdateSettings.Username"/>.</em></p><p>The user name.</p></summary>
+        [Pure]
+        public static AzureVmUserUpdateSettings SetUsername(this AzureVmUserUpdateSettings toolSettings, string username)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Username = username;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUserUpdateSettings.Username"/>.</em></p><p>The user name.</p></summary>
+        [Pure]
+        public static AzureVmUserUpdateSettings ResetUsername(this AzureVmUserUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Username = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NoWait
+        /// <summary><p><em>Sets <see cref="AzureVmUserUpdateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureVmUserUpdateSettings SetNoWait(this AzureVmUserUpdateSettings toolSettings, string noWait)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = noWait;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUserUpdateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureVmUserUpdateSettings ResetNoWait(this AzureVmUserUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Password
+        /// <summary><p><em>Sets <see cref="AzureVmUserUpdateSettings.Password"/>.</em></p><p>The user password.</p></summary>
+        [Pure]
+        public static AzureVmUserUpdateSettings SetPassword(this AzureVmUserUpdateSettings toolSettings, string password)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Password = password;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUserUpdateSettings.Password"/>.</em></p><p>The user password.</p></summary>
+        [Pure]
+        public static AzureVmUserUpdateSettings ResetPassword(this AzureVmUserUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Password = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SshKeyValue
+        /// <summary><p><em>Sets <see cref="AzureVmUserUpdateSettings.SshKeyValue"/>.</em></p><p>SSH public key file value or public key file path.</p></summary>
+        [Pure]
+        public static AzureVmUserUpdateSettings SetSshKeyValue(this AzureVmUserUpdateSettings toolSettings, string sshKeyValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SshKeyValue = sshKeyValue;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUserUpdateSettings.SshKeyValue"/>.</em></p><p>SSH public key file value or public key file path.</p></summary>
+        [Pure]
+        public static AzureVmUserUpdateSettings ResetSshKeyValue(this AzureVmUserUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SshKeyValue = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmUserUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmUserUpdateSettings SetDebug(this AzureVmUserUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUserUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmUserUpdateSettings ResetDebug(this AzureVmUserUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmUserUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmUserUpdateSettings SetHelp(this AzureVmUserUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUserUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmUserUpdateSettings ResetHelp(this AzureVmUserUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmUserUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmUserUpdateSettings SetOutput(this AzureVmUserUpdateSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUserUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmUserUpdateSettings ResetOutput(this AzureVmUserUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmUserUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmUserUpdateSettings SetQuery(this AzureVmUserUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUserUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmUserUpdateSettings ResetQuery(this AzureVmUserUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmUserUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmUserUpdateSettings SetVerbose(this AzureVmUserUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmUserUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmUserUpdateSettings ResetVerbose(this AzureVmUserUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmImageAcceptTermsSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmImageAcceptTermsSettingsExtensions
+    {
+        #region Offer
+        /// <summary><p><em>Sets <see cref="AzureVmImageAcceptTermsSettings.Offer"/>.</em></p><p>Image offer.</p></summary>
+        [Pure]
+        public static AzureVmImageAcceptTermsSettings SetOffer(this AzureVmImageAcceptTermsSettings toolSettings, string offer)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Offer = offer;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageAcceptTermsSettings.Offer"/>.</em></p><p>Image offer.</p></summary>
+        [Pure]
+        public static AzureVmImageAcceptTermsSettings ResetOffer(this AzureVmImageAcceptTermsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Offer = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Plan
+        /// <summary><p><em>Sets <see cref="AzureVmImageAcceptTermsSettings.Plan"/>.</em></p><p>Image billing plan.</p></summary>
+        [Pure]
+        public static AzureVmImageAcceptTermsSettings SetPlan(this AzureVmImageAcceptTermsSettings toolSettings, string plan)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Plan = plan;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageAcceptTermsSettings.Plan"/>.</em></p><p>Image billing plan.</p></summary>
+        [Pure]
+        public static AzureVmImageAcceptTermsSettings ResetPlan(this AzureVmImageAcceptTermsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Plan = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Publisher
+        /// <summary><p><em>Sets <see cref="AzureVmImageAcceptTermsSettings.Publisher"/>.</em></p><p>Image publisher.</p></summary>
+        [Pure]
+        public static AzureVmImageAcceptTermsSettings SetPublisher(this AzureVmImageAcceptTermsSettings toolSettings, string publisher)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Publisher = publisher;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageAcceptTermsSettings.Publisher"/>.</em></p><p>Image publisher.</p></summary>
+        [Pure]
+        public static AzureVmImageAcceptTermsSettings ResetPublisher(this AzureVmImageAcceptTermsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Publisher = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Urn
+        /// <summary><p><em>Sets <see cref="AzureVmImageAcceptTermsSettings.Urn"/>.</em></p><p>URN, in format of 'publisher:offer:sku:versin'. If specified, other argument values can be omitted.</p></summary>
+        [Pure]
+        public static AzureVmImageAcceptTermsSettings SetUrn(this AzureVmImageAcceptTermsSettings toolSettings, string urn)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Urn = urn;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageAcceptTermsSettings.Urn"/>.</em></p><p>URN, in format of 'publisher:offer:sku:versin'. If specified, other argument values can be omitted.</p></summary>
+        [Pure]
+        public static AzureVmImageAcceptTermsSettings ResetUrn(this AzureVmImageAcceptTermsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Urn = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmImageAcceptTermsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmImageAcceptTermsSettings SetDebug(this AzureVmImageAcceptTermsSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageAcceptTermsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmImageAcceptTermsSettings ResetDebug(this AzureVmImageAcceptTermsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmImageAcceptTermsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmImageAcceptTermsSettings SetHelp(this AzureVmImageAcceptTermsSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageAcceptTermsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmImageAcceptTermsSettings ResetHelp(this AzureVmImageAcceptTermsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmImageAcceptTermsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmImageAcceptTermsSettings SetOutput(this AzureVmImageAcceptTermsSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageAcceptTermsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmImageAcceptTermsSettings ResetOutput(this AzureVmImageAcceptTermsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmImageAcceptTermsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmImageAcceptTermsSettings SetQuery(this AzureVmImageAcceptTermsSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageAcceptTermsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmImageAcceptTermsSettings ResetQuery(this AzureVmImageAcceptTermsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmImageAcceptTermsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmImageAcceptTermsSettings SetVerbose(this AzureVmImageAcceptTermsSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageAcceptTermsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmImageAcceptTermsSettings ResetVerbose(this AzureVmImageAcceptTermsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmImageListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmImageListSettingsExtensions
+    {
+        #region All
+        /// <summary><p><em>Sets <see cref="AzureVmImageListSettings.All"/>.</em></p><p>Retrieve image list from live Azure service rather using an offline image list.</p></summary>
+        [Pure]
+        public static AzureVmImageListSettings SetAll(this AzureVmImageListSettings toolSettings, string all)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.All = all;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageListSettings.All"/>.</em></p><p>Retrieve image list from live Azure service rather using an offline image list.</p></summary>
+        [Pure]
+        public static AzureVmImageListSettings ResetAll(this AzureVmImageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.All = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Location
+        /// <summary><p><em>Sets <see cref="AzureVmImageListSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmImageListSettings SetLocation(this AzureVmImageListSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageListSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmImageListSettings ResetLocation(this AzureVmImageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Offer
+        /// <summary><p><em>Sets <see cref="AzureVmImageListSettings.Offer"/>.</em></p><p>Image offer name, partial name is accepted.</p></summary>
+        [Pure]
+        public static AzureVmImageListSettings SetOffer(this AzureVmImageListSettings toolSettings, string offer)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Offer = offer;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageListSettings.Offer"/>.</em></p><p>Image offer name, partial name is accepted.</p></summary>
+        [Pure]
+        public static AzureVmImageListSettings ResetOffer(this AzureVmImageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Offer = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Publisher
+        /// <summary><p><em>Sets <see cref="AzureVmImageListSettings.Publisher"/>.</em></p><p>Image publisher name, partial name is accepted.</p></summary>
+        [Pure]
+        public static AzureVmImageListSettings SetPublisher(this AzureVmImageListSettings toolSettings, string publisher)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Publisher = publisher;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageListSettings.Publisher"/>.</em></p><p>Image publisher name, partial name is accepted.</p></summary>
+        [Pure]
+        public static AzureVmImageListSettings ResetPublisher(this AzureVmImageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Publisher = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Sku
+        /// <summary><p><em>Sets <see cref="AzureVmImageListSettings.Sku"/>.</em></p><p>Image sku name, partial name is accepted.</p></summary>
+        [Pure]
+        public static AzureVmImageListSettings SetSku(this AzureVmImageListSettings toolSettings, string sku)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Sku = sku;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageListSettings.Sku"/>.</em></p><p>Image sku name, partial name is accepted.</p></summary>
+        [Pure]
+        public static AzureVmImageListSettings ResetSku(this AzureVmImageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Sku = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmImageListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmImageListSettings SetDebug(this AzureVmImageListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmImageListSettings ResetDebug(this AzureVmImageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmImageListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmImageListSettings SetHelp(this AzureVmImageListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmImageListSettings ResetHelp(this AzureVmImageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmImageListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmImageListSettings SetOutput(this AzureVmImageListSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmImageListSettings ResetOutput(this AzureVmImageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmImageListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmImageListSettings SetQuery(this AzureVmImageListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmImageListSettings ResetQuery(this AzureVmImageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmImageListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmImageListSettings SetVerbose(this AzureVmImageListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmImageListSettings ResetVerbose(this AzureVmImageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmImageListOffersSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmImageListOffersSettingsExtensions
+    {
+        #region Location
+        /// <summary><p><em>Sets <see cref="AzureVmImageListOffersSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmImageListOffersSettings SetLocation(this AzureVmImageListOffersSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageListOffersSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmImageListOffersSettings ResetLocation(this AzureVmImageListOffersSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Publisher
+        /// <summary><p><em>Sets <see cref="AzureVmImageListOffersSettings.Publisher"/>.</em></p><p>A valid image publisher.</p></summary>
+        [Pure]
+        public static AzureVmImageListOffersSettings SetPublisher(this AzureVmImageListOffersSettings toolSettings, string publisher)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Publisher = publisher;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageListOffersSettings.Publisher"/>.</em></p><p>A valid image publisher.</p></summary>
+        [Pure]
+        public static AzureVmImageListOffersSettings ResetPublisher(this AzureVmImageListOffersSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Publisher = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmImageListOffersSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmImageListOffersSettings SetDebug(this AzureVmImageListOffersSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageListOffersSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmImageListOffersSettings ResetDebug(this AzureVmImageListOffersSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmImageListOffersSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmImageListOffersSettings SetHelp(this AzureVmImageListOffersSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageListOffersSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmImageListOffersSettings ResetHelp(this AzureVmImageListOffersSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmImageListOffersSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmImageListOffersSettings SetOutput(this AzureVmImageListOffersSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageListOffersSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmImageListOffersSettings ResetOutput(this AzureVmImageListOffersSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmImageListOffersSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmImageListOffersSettings SetQuery(this AzureVmImageListOffersSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageListOffersSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmImageListOffersSettings ResetQuery(this AzureVmImageListOffersSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmImageListOffersSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmImageListOffersSettings SetVerbose(this AzureVmImageListOffersSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageListOffersSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmImageListOffersSettings ResetVerbose(this AzureVmImageListOffersSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmImageListPublishersSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmImageListPublishersSettingsExtensions
+    {
+        #region Location
+        /// <summary><p><em>Sets <see cref="AzureVmImageListPublishersSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmImageListPublishersSettings SetLocation(this AzureVmImageListPublishersSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageListPublishersSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmImageListPublishersSettings ResetLocation(this AzureVmImageListPublishersSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmImageListPublishersSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmImageListPublishersSettings SetDebug(this AzureVmImageListPublishersSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageListPublishersSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmImageListPublishersSettings ResetDebug(this AzureVmImageListPublishersSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmImageListPublishersSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmImageListPublishersSettings SetHelp(this AzureVmImageListPublishersSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageListPublishersSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmImageListPublishersSettings ResetHelp(this AzureVmImageListPublishersSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmImageListPublishersSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmImageListPublishersSettings SetOutput(this AzureVmImageListPublishersSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageListPublishersSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmImageListPublishersSettings ResetOutput(this AzureVmImageListPublishersSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmImageListPublishersSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmImageListPublishersSettings SetQuery(this AzureVmImageListPublishersSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageListPublishersSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmImageListPublishersSettings ResetQuery(this AzureVmImageListPublishersSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmImageListPublishersSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmImageListPublishersSettings SetVerbose(this AzureVmImageListPublishersSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageListPublishersSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmImageListPublishersSettings ResetVerbose(this AzureVmImageListPublishersSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmImageListSkusSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmImageListSkusSettingsExtensions
+    {
+        #region Location
+        /// <summary><p><em>Sets <see cref="AzureVmImageListSkusSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmImageListSkusSettings SetLocation(this AzureVmImageListSkusSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageListSkusSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmImageListSkusSettings ResetLocation(this AzureVmImageListSkusSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Offer
+        /// <summary><p><em>Sets <see cref="AzureVmImageListSkusSettings.Offer"/>.</em></p><p>Image offer.</p></summary>
+        [Pure]
+        public static AzureVmImageListSkusSettings SetOffer(this AzureVmImageListSkusSettings toolSettings, string offer)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Offer = offer;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageListSkusSettings.Offer"/>.</em></p><p>Image offer.</p></summary>
+        [Pure]
+        public static AzureVmImageListSkusSettings ResetOffer(this AzureVmImageListSkusSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Offer = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Publisher
+        /// <summary><p><em>Sets <see cref="AzureVmImageListSkusSettings.Publisher"/>.</em></p><p>A valid image publisher.</p></summary>
+        [Pure]
+        public static AzureVmImageListSkusSettings SetPublisher(this AzureVmImageListSkusSettings toolSettings, string publisher)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Publisher = publisher;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageListSkusSettings.Publisher"/>.</em></p><p>A valid image publisher.</p></summary>
+        [Pure]
+        public static AzureVmImageListSkusSettings ResetPublisher(this AzureVmImageListSkusSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Publisher = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmImageListSkusSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmImageListSkusSettings SetDebug(this AzureVmImageListSkusSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageListSkusSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmImageListSkusSettings ResetDebug(this AzureVmImageListSkusSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmImageListSkusSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmImageListSkusSettings SetHelp(this AzureVmImageListSkusSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageListSkusSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmImageListSkusSettings ResetHelp(this AzureVmImageListSkusSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmImageListSkusSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmImageListSkusSettings SetOutput(this AzureVmImageListSkusSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageListSkusSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmImageListSkusSettings ResetOutput(this AzureVmImageListSkusSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmImageListSkusSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmImageListSkusSettings SetQuery(this AzureVmImageListSkusSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageListSkusSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmImageListSkusSettings ResetQuery(this AzureVmImageListSkusSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmImageListSkusSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmImageListSkusSettings SetVerbose(this AzureVmImageListSkusSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageListSkusSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmImageListSkusSettings ResetVerbose(this AzureVmImageListSkusSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmImageShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmImageShowSettingsExtensions
+    {
+        #region Location
+        /// <summary><p><em>Sets <see cref="AzureVmImageShowSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmImageShowSettings SetLocation(this AzureVmImageShowSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageShowSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmImageShowSettings ResetLocation(this AzureVmImageShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Offer
+        /// <summary><p><em>Sets <see cref="AzureVmImageShowSettings.Offer"/>.</em></p><p>Image offer.</p></summary>
+        [Pure]
+        public static AzureVmImageShowSettings SetOffer(this AzureVmImageShowSettings toolSettings, string offer)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Offer = offer;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageShowSettings.Offer"/>.</em></p><p>Image offer.</p></summary>
+        [Pure]
+        public static AzureVmImageShowSettings ResetOffer(this AzureVmImageShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Offer = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Publisher
+        /// <summary><p><em>Sets <see cref="AzureVmImageShowSettings.Publisher"/>.</em></p><p>Image publisher.</p></summary>
+        [Pure]
+        public static AzureVmImageShowSettings SetPublisher(this AzureVmImageShowSettings toolSettings, string publisher)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Publisher = publisher;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageShowSettings.Publisher"/>.</em></p><p>Image publisher.</p></summary>
+        [Pure]
+        public static AzureVmImageShowSettings ResetPublisher(this AzureVmImageShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Publisher = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Sku
+        /// <summary><p><em>Sets <see cref="AzureVmImageShowSettings.Sku"/>.</em></p><p>Image sku.</p></summary>
+        [Pure]
+        public static AzureVmImageShowSettings SetSku(this AzureVmImageShowSettings toolSettings, string sku)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Sku = sku;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageShowSettings.Sku"/>.</em></p><p>Image sku.</p></summary>
+        [Pure]
+        public static AzureVmImageShowSettings ResetSku(this AzureVmImageShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Sku = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Urn
+        /// <summary><p><em>Sets <see cref="AzureVmImageShowSettings.Urn"/>.</em></p><p>URN, in format of 'publisher:offer:sku:versin'. If specified, other argument values can be omitted.</p></summary>
+        [Pure]
+        public static AzureVmImageShowSettings SetUrn(this AzureVmImageShowSettings toolSettings, string urn)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Urn = urn;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageShowSettings.Urn"/>.</em></p><p>URN, in format of 'publisher:offer:sku:versin'. If specified, other argument values can be omitted.</p></summary>
+        [Pure]
+        public static AzureVmImageShowSettings ResetUrn(this AzureVmImageShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Urn = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Version
+        /// <summary><p><em>Sets <see cref="AzureVmImageShowSettings.Version"/>.</em></p><p>Image sku's version.</p></summary>
+        [Pure]
+        public static AzureVmImageShowSettings SetVersion(this AzureVmImageShowSettings toolSettings, string version)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Version = version;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageShowSettings.Version"/>.</em></p><p>Image sku's version.</p></summary>
+        [Pure]
+        public static AzureVmImageShowSettings ResetVersion(this AzureVmImageShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Version = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmImageShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmImageShowSettings SetDebug(this AzureVmImageShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmImageShowSettings ResetDebug(this AzureVmImageShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmImageShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmImageShowSettings SetHelp(this AzureVmImageShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmImageShowSettings ResetHelp(this AzureVmImageShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmImageShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmImageShowSettings SetOutput(this AzureVmImageShowSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmImageShowSettings ResetOutput(this AzureVmImageShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmImageShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmImageShowSettings SetQuery(this AzureVmImageShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmImageShowSettings ResetQuery(this AzureVmImageShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmImageShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmImageShowSettings SetVerbose(this AzureVmImageShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmImageShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmImageShowSettings ResetVerbose(this AzureVmImageShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmExtensionDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmExtensionDeleteSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionDeleteSettings.Name"/>.</em></p><p>Extension name.</p></summary>
+        [Pure]
+        public static AzureVmExtensionDeleteSettings SetName(this AzureVmExtensionDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionDeleteSettings.Name"/>.</em></p><p>Extension name.</p></summary>
+        [Pure]
+        public static AzureVmExtensionDeleteSettings ResetName(this AzureVmExtensionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmExtensionDeleteSettings SetResourceGroup(this AzureVmExtensionDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmExtensionDeleteSettings ResetResourceGroup(this AzureVmExtensionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VmName
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionDeleteSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmExtensionDeleteSettings SetVmName(this AzureVmExtensionDeleteSettings toolSettings, string vmName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmName = vmName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionDeleteSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmExtensionDeleteSettings ResetVmName(this AzureVmExtensionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmExtensionDeleteSettings SetDebug(this AzureVmExtensionDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmExtensionDeleteSettings ResetDebug(this AzureVmExtensionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmExtensionDeleteSettings SetHelp(this AzureVmExtensionDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmExtensionDeleteSettings ResetHelp(this AzureVmExtensionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmExtensionDeleteSettings SetOutput(this AzureVmExtensionDeleteSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmExtensionDeleteSettings ResetOutput(this AzureVmExtensionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmExtensionDeleteSettings SetQuery(this AzureVmExtensionDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmExtensionDeleteSettings ResetQuery(this AzureVmExtensionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmExtensionDeleteSettings SetVerbose(this AzureVmExtensionDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmExtensionDeleteSettings ResetVerbose(this AzureVmExtensionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmExtensionListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmExtensionListSettingsExtensions
+    {
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmExtensionListSettings SetResourceGroup(this AzureVmExtensionListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmExtensionListSettings ResetResourceGroup(this AzureVmExtensionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VmName
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionListSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmExtensionListSettings SetVmName(this AzureVmExtensionListSettings toolSettings, string vmName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmName = vmName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionListSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmExtensionListSettings ResetVmName(this AzureVmExtensionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmExtensionListSettings SetDebug(this AzureVmExtensionListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmExtensionListSettings ResetDebug(this AzureVmExtensionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmExtensionListSettings SetHelp(this AzureVmExtensionListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmExtensionListSettings ResetHelp(this AzureVmExtensionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmExtensionListSettings SetOutput(this AzureVmExtensionListSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmExtensionListSettings ResetOutput(this AzureVmExtensionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmExtensionListSettings SetQuery(this AzureVmExtensionListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmExtensionListSettings ResetQuery(this AzureVmExtensionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmExtensionListSettings SetVerbose(this AzureVmExtensionListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmExtensionListSettings ResetVerbose(this AzureVmExtensionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmExtensionSetSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmExtensionSetSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionSetSettings.Name"/>.</em></p><p>Extension name.</p></summary>
+        [Pure]
+        public static AzureVmExtensionSetSettings SetName(this AzureVmExtensionSetSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionSetSettings.Name"/>.</em></p><p>Extension name.</p></summary>
+        [Pure]
+        public static AzureVmExtensionSetSettings ResetName(this AzureVmExtensionSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Publisher
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionSetSettings.Publisher"/>.</em></p><p>The name of the extension publisher.</p></summary>
+        [Pure]
+        public static AzureVmExtensionSetSettings SetPublisher(this AzureVmExtensionSetSettings toolSettings, string publisher)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Publisher = publisher;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionSetSettings.Publisher"/>.</em></p><p>The name of the extension publisher.</p></summary>
+        [Pure]
+        public static AzureVmExtensionSetSettings ResetPublisher(this AzureVmExtensionSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Publisher = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmExtensionSetSettings SetResourceGroup(this AzureVmExtensionSetSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmExtensionSetSettings ResetResourceGroup(this AzureVmExtensionSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VmName
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionSetSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmExtensionSetSettings SetVmName(this AzureVmExtensionSetSettings toolSettings, string vmName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmName = vmName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionSetSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmExtensionSetSettings ResetVmName(this AzureVmExtensionSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ForceUpdate
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionSetSettings.ForceUpdate"/>.</em></p><p>Force to update even if the extension configuration has not changed.</p></summary>
+        [Pure]
+        public static AzureVmExtensionSetSettings SetForceUpdate(this AzureVmExtensionSetSettings toolSettings, string forceUpdate)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceUpdate = forceUpdate;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionSetSettings.ForceUpdate"/>.</em></p><p>Force to update even if the extension configuration has not changed.</p></summary>
+        [Pure]
+        public static AzureVmExtensionSetSettings ResetForceUpdate(this AzureVmExtensionSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceUpdate = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NoAutoUpgrade
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionSetSettings.NoAutoUpgrade"/>.</em></p><p>By doing this, extension system will not pick the highest minor version for the specified version number, and will not auto update to the latest build/revision number on any scale set updates in future.</p></summary>
+        [Pure]
+        public static AzureVmExtensionSetSettings SetNoAutoUpgrade(this AzureVmExtensionSetSettings toolSettings, string noAutoUpgrade)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoAutoUpgrade = noAutoUpgrade;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionSetSettings.NoAutoUpgrade"/>.</em></p><p>By doing this, extension system will not pick the highest minor version for the specified version number, and will not auto update to the latest build/revision number on any scale set updates in future.</p></summary>
+        [Pure]
+        public static AzureVmExtensionSetSettings ResetNoAutoUpgrade(this AzureVmExtensionSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoAutoUpgrade = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ProtectedSettings
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionSetSettings.ProtectedSettings"/>.</em></p><p>Protected settings in JSON format for sensitive information like credentials. A JSON file path is also accepted.</p></summary>
+        [Pure]
+        public static AzureVmExtensionSetSettings SetProtectedSettings(this AzureVmExtensionSetSettings toolSettings, string protectedSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ProtectedSettings = protectedSettings;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionSetSettings.ProtectedSettings"/>.</em></p><p>Protected settings in JSON format for sensitive information like credentials. A JSON file path is also accepted.</p></summary>
+        [Pure]
+        public static AzureVmExtensionSetSettings ResetProtectedSettings(this AzureVmExtensionSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ProtectedSettings = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Settings
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionSetSettings.Settings"/>.</em></p><p>Extension settings in JSON format. A JSON file path is also accepted.</p></summary>
+        [Pure]
+        public static AzureVmExtensionSetSettings SetSettings(this AzureVmExtensionSetSettings toolSettings, string settings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Settings = settings;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionSetSettings.Settings"/>.</em></p><p>Extension settings in JSON format. A JSON file path is also accepted.</p></summary>
+        [Pure]
+        public static AzureVmExtensionSetSettings ResetSettings(this AzureVmExtensionSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Settings = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Version
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionSetSettings.Version"/>.</em></p><p>The version of the extension.</p></summary>
+        [Pure]
+        public static AzureVmExtensionSetSettings SetVersion(this AzureVmExtensionSetSettings toolSettings, string version)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Version = version;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionSetSettings.Version"/>.</em></p><p>The version of the extension.</p></summary>
+        [Pure]
+        public static AzureVmExtensionSetSettings ResetVersion(this AzureVmExtensionSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Version = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmExtensionSetSettings SetDebug(this AzureVmExtensionSetSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmExtensionSetSettings ResetDebug(this AzureVmExtensionSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmExtensionSetSettings SetHelp(this AzureVmExtensionSetSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmExtensionSetSettings ResetHelp(this AzureVmExtensionSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmExtensionSetSettings SetOutput(this AzureVmExtensionSetSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmExtensionSetSettings ResetOutput(this AzureVmExtensionSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmExtensionSetSettings SetQuery(this AzureVmExtensionSetSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmExtensionSetSettings ResetQuery(this AzureVmExtensionSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmExtensionSetSettings SetVerbose(this AzureVmExtensionSetSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmExtensionSetSettings ResetVerbose(this AzureVmExtensionSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureVmExtensionShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureVmExtensionShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionShowSettings.Name"/>.</em></p><p>Extension name.</p></summary>
+        [Pure]
+        public static AzureVmExtensionShowSettings SetName(this AzureVmExtensionShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionShowSettings.Name"/>.</em></p><p>Extension name.</p></summary>
+        [Pure]
+        public static AzureVmExtensionShowSettings ResetName(this AzureVmExtensionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmExtensionShowSettings SetResourceGroup(this AzureVmExtensionShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmExtensionShowSettings ResetResourceGroup(this AzureVmExtensionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VmName
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionShowSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmExtensionShowSettings SetVmName(this AzureVmExtensionShowSettings toolSettings, string vmName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmName = vmName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionShowSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureVmExtensionShowSettings ResetVmName(this AzureVmExtensionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Expand
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionShowSettings.Expand"/>.</em></p><p>The expand expression to apply on the operation.</p></summary>
+        [Pure]
+        public static AzureVmExtensionShowSettings SetExpand(this AzureVmExtensionShowSettings toolSettings, string expand)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Expand = expand;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionShowSettings.Expand"/>.</em></p><p>The expand expression to apply on the operation.</p></summary>
+        [Pure]
+        public static AzureVmExtensionShowSettings ResetExpand(this AzureVmExtensionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Expand = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmExtensionShowSettings SetDebug(this AzureVmExtensionShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureVmExtensionShowSettings ResetDebug(this AzureVmExtensionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmExtensionShowSettings SetHelp(this AzureVmExtensionShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureVmExtensionShowSettings ResetHelp(this AzureVmExtensionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmExtensionShowSettings SetOutput(this AzureVmExtensionShowSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureVmExtensionShowSettings ResetOutput(this AzureVmExtensionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmExtensionShowSettings SetQuery(this AzureVmExtensionShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureVmExtensionShowSettings ResetQuery(this AzureVmExtensionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmExtensionShowSettings SetVerbose(this AzureVmExtensionShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureVmExtensionShowSettings ResetVerbose(this AzureVmExtensionShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -11361,7 +16514,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmEncryptionDisableSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmEncryptionDisableSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmEncryptionDisableSettings SetQuery(this AzureVmEncryptionDisableSettings toolSettings, string query)
         {
@@ -11369,7 +16522,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmEncryptionDisableSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmEncryptionDisableSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmEncryptionDisableSettings ResetQuery(this AzureVmEncryptionDisableSettings toolSettings)
         {
@@ -11657,7 +16810,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmEncryptionEnableSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmEncryptionEnableSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmEncryptionEnableSettings SetQuery(this AzureVmEncryptionEnableSettings toolSettings, string query)
         {
@@ -11665,7 +16818,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmEncryptionEnableSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmEncryptionEnableSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmEncryptionEnableSettings ResetQuery(this AzureVmEncryptionEnableSettings toolSettings)
         {
@@ -11791,7 +16944,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmEncryptionShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmEncryptionShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmEncryptionShowSettings SetQuery(this AzureVmEncryptionShowSettings toolSettings, string query)
         {
@@ -11799,7 +16952,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmEncryptionShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmEncryptionShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmEncryptionShowSettings ResetQuery(this AzureVmEncryptionShowSettings toolSettings)
         {
@@ -11820,5138 +16973,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureVmEncryptionShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureVmEncryptionShowSettings ResetVerbose(this AzureVmEncryptionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmExtensionDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmExtensionDeleteSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionDeleteSettings.Name"/>.</em></p><p>Extension name.</p></summary>
-        [Pure]
-        public static AzureVmExtensionDeleteSettings SetName(this AzureVmExtensionDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionDeleteSettings.Name"/>.</em></p><p>Extension name.</p></summary>
-        [Pure]
-        public static AzureVmExtensionDeleteSettings ResetName(this AzureVmExtensionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmExtensionDeleteSettings SetResourceGroup(this AzureVmExtensionDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmExtensionDeleteSettings ResetResourceGroup(this AzureVmExtensionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VmName
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionDeleteSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmExtensionDeleteSettings SetVmName(this AzureVmExtensionDeleteSettings toolSettings, string vmName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmName = vmName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionDeleteSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmExtensionDeleteSettings ResetVmName(this AzureVmExtensionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmExtensionDeleteSettings SetDebug(this AzureVmExtensionDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmExtensionDeleteSettings ResetDebug(this AzureVmExtensionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmExtensionDeleteSettings SetHelp(this AzureVmExtensionDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmExtensionDeleteSettings ResetHelp(this AzureVmExtensionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmExtensionDeleteSettings SetOutput(this AzureVmExtensionDeleteSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmExtensionDeleteSettings ResetOutput(this AzureVmExtensionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmExtensionDeleteSettings SetQuery(this AzureVmExtensionDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmExtensionDeleteSettings ResetQuery(this AzureVmExtensionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmExtensionDeleteSettings SetVerbose(this AzureVmExtensionDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmExtensionDeleteSettings ResetVerbose(this AzureVmExtensionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmExtensionListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmExtensionListSettingsExtensions
-    {
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmExtensionListSettings SetResourceGroup(this AzureVmExtensionListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmExtensionListSettings ResetResourceGroup(this AzureVmExtensionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VmName
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionListSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmExtensionListSettings SetVmName(this AzureVmExtensionListSettings toolSettings, string vmName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmName = vmName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionListSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmExtensionListSettings ResetVmName(this AzureVmExtensionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmExtensionListSettings SetDebug(this AzureVmExtensionListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmExtensionListSettings ResetDebug(this AzureVmExtensionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmExtensionListSettings SetHelp(this AzureVmExtensionListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmExtensionListSettings ResetHelp(this AzureVmExtensionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmExtensionListSettings SetOutput(this AzureVmExtensionListSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmExtensionListSettings ResetOutput(this AzureVmExtensionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmExtensionListSettings SetQuery(this AzureVmExtensionListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmExtensionListSettings ResetQuery(this AzureVmExtensionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmExtensionListSettings SetVerbose(this AzureVmExtensionListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmExtensionListSettings ResetVerbose(this AzureVmExtensionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmExtensionSetSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmExtensionSetSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionSetSettings.Name"/>.</em></p><p>Extension name.</p></summary>
-        [Pure]
-        public static AzureVmExtensionSetSettings SetName(this AzureVmExtensionSetSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionSetSettings.Name"/>.</em></p><p>Extension name.</p></summary>
-        [Pure]
-        public static AzureVmExtensionSetSettings ResetName(this AzureVmExtensionSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Publisher
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionSetSettings.Publisher"/>.</em></p><p>The name of the extension publisher.</p></summary>
-        [Pure]
-        public static AzureVmExtensionSetSettings SetPublisher(this AzureVmExtensionSetSettings toolSettings, string publisher)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Publisher = publisher;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionSetSettings.Publisher"/>.</em></p><p>The name of the extension publisher.</p></summary>
-        [Pure]
-        public static AzureVmExtensionSetSettings ResetPublisher(this AzureVmExtensionSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Publisher = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmExtensionSetSettings SetResourceGroup(this AzureVmExtensionSetSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmExtensionSetSettings ResetResourceGroup(this AzureVmExtensionSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VmName
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionSetSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmExtensionSetSettings SetVmName(this AzureVmExtensionSetSettings toolSettings, string vmName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmName = vmName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionSetSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmExtensionSetSettings ResetVmName(this AzureVmExtensionSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NoAutoUpgrade
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionSetSettings.NoAutoUpgrade"/>.</em></p><p>By doing this, extension system will not pick the highest minor version for the specified version number, and will not auto update to the latest build/revision number on any scale set updates in future.</p></summary>
-        [Pure]
-        public static AzureVmExtensionSetSettings SetNoAutoUpgrade(this AzureVmExtensionSetSettings toolSettings, string noAutoUpgrade)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoAutoUpgrade = noAutoUpgrade;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionSetSettings.NoAutoUpgrade"/>.</em></p><p>By doing this, extension system will not pick the highest minor version for the specified version number, and will not auto update to the latest build/revision number on any scale set updates in future.</p></summary>
-        [Pure]
-        public static AzureVmExtensionSetSettings ResetNoAutoUpgrade(this AzureVmExtensionSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoAutoUpgrade = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ProtectedSettings
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionSetSettings.ProtectedSettings"/>.</em></p><p>Protected settings in JSON format for sensitive information like credentials. A JSON file path is also accepted.</p></summary>
-        [Pure]
-        public static AzureVmExtensionSetSettings SetProtectedSettings(this AzureVmExtensionSetSettings toolSettings, string protectedSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ProtectedSettings = protectedSettings;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionSetSettings.ProtectedSettings"/>.</em></p><p>Protected settings in JSON format for sensitive information like credentials. A JSON file path is also accepted.</p></summary>
-        [Pure]
-        public static AzureVmExtensionSetSettings ResetProtectedSettings(this AzureVmExtensionSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ProtectedSettings = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Settings
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionSetSettings.Settings"/>.</em></p><p>Extension settings in JSON format. A JSON file path is also accepted.</p></summary>
-        [Pure]
-        public static AzureVmExtensionSetSettings SetSettings(this AzureVmExtensionSetSettings toolSettings, string settings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Settings = settings;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionSetSettings.Settings"/>.</em></p><p>Extension settings in JSON format. A JSON file path is also accepted.</p></summary>
-        [Pure]
-        public static AzureVmExtensionSetSettings ResetSettings(this AzureVmExtensionSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Settings = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Version
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionSetSettings.Version"/>.</em></p><p>The version of the extension.</p></summary>
-        [Pure]
-        public static AzureVmExtensionSetSettings SetVersion(this AzureVmExtensionSetSettings toolSettings, string version)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Version = version;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionSetSettings.Version"/>.</em></p><p>The version of the extension.</p></summary>
-        [Pure]
-        public static AzureVmExtensionSetSettings ResetVersion(this AzureVmExtensionSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Version = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmExtensionSetSettings SetDebug(this AzureVmExtensionSetSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmExtensionSetSettings ResetDebug(this AzureVmExtensionSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmExtensionSetSettings SetHelp(this AzureVmExtensionSetSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmExtensionSetSettings ResetHelp(this AzureVmExtensionSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmExtensionSetSettings SetOutput(this AzureVmExtensionSetSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmExtensionSetSettings ResetOutput(this AzureVmExtensionSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionSetSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmExtensionSetSettings SetQuery(this AzureVmExtensionSetSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionSetSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmExtensionSetSettings ResetQuery(this AzureVmExtensionSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmExtensionSetSettings SetVerbose(this AzureVmExtensionSetSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmExtensionSetSettings ResetVerbose(this AzureVmExtensionSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmExtensionShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmExtensionShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionShowSettings.Name"/>.</em></p><p>Extension name.</p></summary>
-        [Pure]
-        public static AzureVmExtensionShowSettings SetName(this AzureVmExtensionShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionShowSettings.Name"/>.</em></p><p>Extension name.</p></summary>
-        [Pure]
-        public static AzureVmExtensionShowSettings ResetName(this AzureVmExtensionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmExtensionShowSettings SetResourceGroup(this AzureVmExtensionShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmExtensionShowSettings ResetResourceGroup(this AzureVmExtensionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VmName
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionShowSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmExtensionShowSettings SetVmName(this AzureVmExtensionShowSettings toolSettings, string vmName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmName = vmName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionShowSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmExtensionShowSettings ResetVmName(this AzureVmExtensionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Expand
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionShowSettings.Expand"/>.</em></p><p>The expand expression to apply on the operation.</p></summary>
-        [Pure]
-        public static AzureVmExtensionShowSettings SetExpand(this AzureVmExtensionShowSettings toolSettings, string expand)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Expand = expand;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionShowSettings.Expand"/>.</em></p><p>The expand expression to apply on the operation.</p></summary>
-        [Pure]
-        public static AzureVmExtensionShowSettings ResetExpand(this AzureVmExtensionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Expand = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmExtensionShowSettings SetDebug(this AzureVmExtensionShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmExtensionShowSettings ResetDebug(this AzureVmExtensionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmExtensionShowSettings SetHelp(this AzureVmExtensionShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmExtensionShowSettings ResetHelp(this AzureVmExtensionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmExtensionShowSettings SetOutput(this AzureVmExtensionShowSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmExtensionShowSettings ResetOutput(this AzureVmExtensionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmExtensionShowSettings SetQuery(this AzureVmExtensionShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmExtensionShowSettings ResetQuery(this AzureVmExtensionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmExtensionShowSettings SetVerbose(this AzureVmExtensionShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmExtensionShowSettings ResetVerbose(this AzureVmExtensionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmIdentityAssignSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmIdentityAssignSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmIdentityAssignSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmIdentityAssignSettings SetName(this AzureVmIdentityAssignSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmIdentityAssignSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmIdentityAssignSettings ResetName(this AzureVmIdentityAssignSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmIdentityAssignSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmIdentityAssignSettings SetResourceGroup(this AzureVmIdentityAssignSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmIdentityAssignSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmIdentityAssignSettings ResetResourceGroup(this AzureVmIdentityAssignSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Identities
-        /// <summary><p><em>Sets <see cref="AzureVmIdentityAssignSettings.Identities"/>.</em></p><p>The identities to assign.</p></summary>
-        [Pure]
-        public static AzureVmIdentityAssignSettings SetIdentities(this AzureVmIdentityAssignSettings toolSettings, string identities)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Identities = identities;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmIdentityAssignSettings.Identities"/>.</em></p><p>The identities to assign.</p></summary>
-        [Pure]
-        public static AzureVmIdentityAssignSettings ResetIdentities(this AzureVmIdentityAssignSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Identities = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Role
-        /// <summary><p><em>Sets <see cref="AzureVmIdentityAssignSettings.Role"/>.</em></p><p>Role name or id the system assigned identity will have.</p></summary>
-        [Pure]
-        public static AzureVmIdentityAssignSettings SetRole(this AzureVmIdentityAssignSettings toolSettings, string role)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Role = role;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmIdentityAssignSettings.Role"/>.</em></p><p>Role name or id the system assigned identity will have.</p></summary>
-        [Pure]
-        public static AzureVmIdentityAssignSettings ResetRole(this AzureVmIdentityAssignSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Role = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Scope
-        /// <summary><p><em>Sets <see cref="AzureVmIdentityAssignSettings.Scope"/>.</em></p><p>Scope that the system assigned identity can access.</p></summary>
-        [Pure]
-        public static AzureVmIdentityAssignSettings SetScope(this AzureVmIdentityAssignSettings toolSettings, string scope)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Scope = scope;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmIdentityAssignSettings.Scope"/>.</em></p><p>Scope that the system assigned identity can access.</p></summary>
-        [Pure]
-        public static AzureVmIdentityAssignSettings ResetScope(this AzureVmIdentityAssignSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Scope = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmIdentityAssignSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmIdentityAssignSettings SetDebug(this AzureVmIdentityAssignSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmIdentityAssignSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmIdentityAssignSettings ResetDebug(this AzureVmIdentityAssignSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmIdentityAssignSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmIdentityAssignSettings SetHelp(this AzureVmIdentityAssignSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmIdentityAssignSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmIdentityAssignSettings ResetHelp(this AzureVmIdentityAssignSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmIdentityAssignSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmIdentityAssignSettings SetOutput(this AzureVmIdentityAssignSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmIdentityAssignSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmIdentityAssignSettings ResetOutput(this AzureVmIdentityAssignSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmIdentityAssignSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmIdentityAssignSettings SetQuery(this AzureVmIdentityAssignSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmIdentityAssignSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmIdentityAssignSettings ResetQuery(this AzureVmIdentityAssignSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmIdentityAssignSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmIdentityAssignSettings SetVerbose(this AzureVmIdentityAssignSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmIdentityAssignSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmIdentityAssignSettings ResetVerbose(this AzureVmIdentityAssignSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmIdentityRemoveSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmIdentityRemoveSettingsExtensions
-    {
-        #region Identities
-        /// <summary><p><em>Sets <see cref="AzureVmIdentityRemoveSettings.Identities"/>.</em></p><p>Space-separated user assigned identities to remove.</p></summary>
-        [Pure]
-        public static AzureVmIdentityRemoveSettings SetIdentities(this AzureVmIdentityRemoveSettings toolSettings, string identities)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Identities = identities;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmIdentityRemoveSettings.Identities"/>.</em></p><p>Space-separated user assigned identities to remove.</p></summary>
-        [Pure]
-        public static AzureVmIdentityRemoveSettings ResetIdentities(this AzureVmIdentityRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Identities = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmIdentityRemoveSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmIdentityRemoveSettings SetName(this AzureVmIdentityRemoveSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmIdentityRemoveSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmIdentityRemoveSettings ResetName(this AzureVmIdentityRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmIdentityRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmIdentityRemoveSettings SetResourceGroup(this AzureVmIdentityRemoveSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmIdentityRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmIdentityRemoveSettings ResetResourceGroup(this AzureVmIdentityRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmIdentityRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmIdentityRemoveSettings SetDebug(this AzureVmIdentityRemoveSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmIdentityRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmIdentityRemoveSettings ResetDebug(this AzureVmIdentityRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmIdentityRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmIdentityRemoveSettings SetHelp(this AzureVmIdentityRemoveSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmIdentityRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmIdentityRemoveSettings ResetHelp(this AzureVmIdentityRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmIdentityRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmIdentityRemoveSettings SetOutput(this AzureVmIdentityRemoveSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmIdentityRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmIdentityRemoveSettings ResetOutput(this AzureVmIdentityRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmIdentityRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmIdentityRemoveSettings SetQuery(this AzureVmIdentityRemoveSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmIdentityRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmIdentityRemoveSettings ResetQuery(this AzureVmIdentityRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmIdentityRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmIdentityRemoveSettings SetVerbose(this AzureVmIdentityRemoveSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmIdentityRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmIdentityRemoveSettings ResetVerbose(this AzureVmIdentityRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmIdentityShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmIdentityShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmIdentityShowSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmIdentityShowSettings SetName(this AzureVmIdentityShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmIdentityShowSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmIdentityShowSettings ResetName(this AzureVmIdentityShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmIdentityShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmIdentityShowSettings SetResourceGroup(this AzureVmIdentityShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmIdentityShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmIdentityShowSettings ResetResourceGroup(this AzureVmIdentityShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmIdentityShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmIdentityShowSettings SetDebug(this AzureVmIdentityShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmIdentityShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmIdentityShowSettings ResetDebug(this AzureVmIdentityShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmIdentityShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmIdentityShowSettings SetHelp(this AzureVmIdentityShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmIdentityShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmIdentityShowSettings ResetHelp(this AzureVmIdentityShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmIdentityShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmIdentityShowSettings SetOutput(this AzureVmIdentityShowSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmIdentityShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmIdentityShowSettings ResetOutput(this AzureVmIdentityShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmIdentityShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmIdentityShowSettings SetQuery(this AzureVmIdentityShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmIdentityShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmIdentityShowSettings ResetQuery(this AzureVmIdentityShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmIdentityShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmIdentityShowSettings SetVerbose(this AzureVmIdentityShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmIdentityShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmIdentityShowSettings ResetVerbose(this AzureVmIdentityShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmImageAcceptTermsSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmImageAcceptTermsSettingsExtensions
-    {
-        #region Offer
-        /// <summary><p><em>Sets <see cref="AzureVmImageAcceptTermsSettings.Offer"/>.</em></p><p>Image offer.</p></summary>
-        [Pure]
-        public static AzureVmImageAcceptTermsSettings SetOffer(this AzureVmImageAcceptTermsSettings toolSettings, string offer)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Offer = offer;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageAcceptTermsSettings.Offer"/>.</em></p><p>Image offer.</p></summary>
-        [Pure]
-        public static AzureVmImageAcceptTermsSettings ResetOffer(this AzureVmImageAcceptTermsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Offer = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Plan
-        /// <summary><p><em>Sets <see cref="AzureVmImageAcceptTermsSettings.Plan"/>.</em></p><p>Image billing plan.</p></summary>
-        [Pure]
-        public static AzureVmImageAcceptTermsSettings SetPlan(this AzureVmImageAcceptTermsSettings toolSettings, string plan)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Plan = plan;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageAcceptTermsSettings.Plan"/>.</em></p><p>Image billing plan.</p></summary>
-        [Pure]
-        public static AzureVmImageAcceptTermsSettings ResetPlan(this AzureVmImageAcceptTermsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Plan = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Publisher
-        /// <summary><p><em>Sets <see cref="AzureVmImageAcceptTermsSettings.Publisher"/>.</em></p><p>Image publisher.</p></summary>
-        [Pure]
-        public static AzureVmImageAcceptTermsSettings SetPublisher(this AzureVmImageAcceptTermsSettings toolSettings, string publisher)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Publisher = publisher;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageAcceptTermsSettings.Publisher"/>.</em></p><p>Image publisher.</p></summary>
-        [Pure]
-        public static AzureVmImageAcceptTermsSettings ResetPublisher(this AzureVmImageAcceptTermsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Publisher = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Urn
-        /// <summary><p><em>Sets <see cref="AzureVmImageAcceptTermsSettings.Urn"/>.</em></p><p>URN, in format of 'publisher:offer:sku:versin'. If specified, other argument values can be omitted.</p></summary>
-        [Pure]
-        public static AzureVmImageAcceptTermsSettings SetUrn(this AzureVmImageAcceptTermsSettings toolSettings, string urn)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Urn = urn;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageAcceptTermsSettings.Urn"/>.</em></p><p>URN, in format of 'publisher:offer:sku:versin'. If specified, other argument values can be omitted.</p></summary>
-        [Pure]
-        public static AzureVmImageAcceptTermsSettings ResetUrn(this AzureVmImageAcceptTermsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Urn = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmImageAcceptTermsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmImageAcceptTermsSettings SetDebug(this AzureVmImageAcceptTermsSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageAcceptTermsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmImageAcceptTermsSettings ResetDebug(this AzureVmImageAcceptTermsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmImageAcceptTermsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmImageAcceptTermsSettings SetHelp(this AzureVmImageAcceptTermsSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageAcceptTermsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmImageAcceptTermsSettings ResetHelp(this AzureVmImageAcceptTermsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmImageAcceptTermsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmImageAcceptTermsSettings SetOutput(this AzureVmImageAcceptTermsSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageAcceptTermsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmImageAcceptTermsSettings ResetOutput(this AzureVmImageAcceptTermsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmImageAcceptTermsSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmImageAcceptTermsSettings SetQuery(this AzureVmImageAcceptTermsSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageAcceptTermsSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmImageAcceptTermsSettings ResetQuery(this AzureVmImageAcceptTermsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmImageAcceptTermsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmImageAcceptTermsSettings SetVerbose(this AzureVmImageAcceptTermsSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageAcceptTermsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmImageAcceptTermsSettings ResetVerbose(this AzureVmImageAcceptTermsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmImageListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmImageListSettingsExtensions
-    {
-        #region All
-        /// <summary><p><em>Sets <see cref="AzureVmImageListSettings.All"/>.</em></p><p>Retrieve image list from live Azure service rather using an offline image list.</p></summary>
-        [Pure]
-        public static AzureVmImageListSettings SetAll(this AzureVmImageListSettings toolSettings, string all)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.All = all;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageListSettings.All"/>.</em></p><p>Retrieve image list from live Azure service rather using an offline image list.</p></summary>
-        [Pure]
-        public static AzureVmImageListSettings ResetAll(this AzureVmImageListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.All = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Location
-        /// <summary><p><em>Sets <see cref="AzureVmImageListSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmImageListSettings SetLocation(this AzureVmImageListSettings toolSettings, string location)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = location;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageListSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmImageListSettings ResetLocation(this AzureVmImageListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Offer
-        /// <summary><p><em>Sets <see cref="AzureVmImageListSettings.Offer"/>.</em></p><p>Image offer name, partial name is accepted.</p></summary>
-        [Pure]
-        public static AzureVmImageListSettings SetOffer(this AzureVmImageListSettings toolSettings, string offer)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Offer = offer;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageListSettings.Offer"/>.</em></p><p>Image offer name, partial name is accepted.</p></summary>
-        [Pure]
-        public static AzureVmImageListSettings ResetOffer(this AzureVmImageListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Offer = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Publisher
-        /// <summary><p><em>Sets <see cref="AzureVmImageListSettings.Publisher"/>.</em></p><p>Image publisher name, partial name is accepted.</p></summary>
-        [Pure]
-        public static AzureVmImageListSettings SetPublisher(this AzureVmImageListSettings toolSettings, string publisher)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Publisher = publisher;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageListSettings.Publisher"/>.</em></p><p>Image publisher name, partial name is accepted.</p></summary>
-        [Pure]
-        public static AzureVmImageListSettings ResetPublisher(this AzureVmImageListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Publisher = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Sku
-        /// <summary><p><em>Sets <see cref="AzureVmImageListSettings.Sku"/>.</em></p><p>Image sku name, partial name is accepted.</p></summary>
-        [Pure]
-        public static AzureVmImageListSettings SetSku(this AzureVmImageListSettings toolSettings, string sku)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Sku = sku;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageListSettings.Sku"/>.</em></p><p>Image sku name, partial name is accepted.</p></summary>
-        [Pure]
-        public static AzureVmImageListSettings ResetSku(this AzureVmImageListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Sku = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmImageListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmImageListSettings SetDebug(this AzureVmImageListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmImageListSettings ResetDebug(this AzureVmImageListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmImageListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmImageListSettings SetHelp(this AzureVmImageListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmImageListSettings ResetHelp(this AzureVmImageListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmImageListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmImageListSettings SetOutput(this AzureVmImageListSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmImageListSettings ResetOutput(this AzureVmImageListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmImageListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmImageListSettings SetQuery(this AzureVmImageListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmImageListSettings ResetQuery(this AzureVmImageListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmImageListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmImageListSettings SetVerbose(this AzureVmImageListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmImageListSettings ResetVerbose(this AzureVmImageListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmImageListOffersSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmImageListOffersSettingsExtensions
-    {
-        #region Location
-        /// <summary><p><em>Sets <see cref="AzureVmImageListOffersSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmImageListOffersSettings SetLocation(this AzureVmImageListOffersSettings toolSettings, string location)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = location;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageListOffersSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmImageListOffersSettings ResetLocation(this AzureVmImageListOffersSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Publisher
-        /// <summary><p><em>Sets <see cref="AzureVmImageListOffersSettings.Publisher"/>.</em></p><p>A valid image publisher.</p></summary>
-        [Pure]
-        public static AzureVmImageListOffersSettings SetPublisher(this AzureVmImageListOffersSettings toolSettings, string publisher)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Publisher = publisher;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageListOffersSettings.Publisher"/>.</em></p><p>A valid image publisher.</p></summary>
-        [Pure]
-        public static AzureVmImageListOffersSettings ResetPublisher(this AzureVmImageListOffersSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Publisher = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmImageListOffersSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmImageListOffersSettings SetDebug(this AzureVmImageListOffersSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageListOffersSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmImageListOffersSettings ResetDebug(this AzureVmImageListOffersSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmImageListOffersSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmImageListOffersSettings SetHelp(this AzureVmImageListOffersSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageListOffersSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmImageListOffersSettings ResetHelp(this AzureVmImageListOffersSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmImageListOffersSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmImageListOffersSettings SetOutput(this AzureVmImageListOffersSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageListOffersSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmImageListOffersSettings ResetOutput(this AzureVmImageListOffersSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmImageListOffersSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmImageListOffersSettings SetQuery(this AzureVmImageListOffersSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageListOffersSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmImageListOffersSettings ResetQuery(this AzureVmImageListOffersSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmImageListOffersSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmImageListOffersSettings SetVerbose(this AzureVmImageListOffersSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageListOffersSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmImageListOffersSettings ResetVerbose(this AzureVmImageListOffersSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmImageListPublishersSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmImageListPublishersSettingsExtensions
-    {
-        #region Location
-        /// <summary><p><em>Sets <see cref="AzureVmImageListPublishersSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmImageListPublishersSettings SetLocation(this AzureVmImageListPublishersSettings toolSettings, string location)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = location;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageListPublishersSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmImageListPublishersSettings ResetLocation(this AzureVmImageListPublishersSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmImageListPublishersSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmImageListPublishersSettings SetDebug(this AzureVmImageListPublishersSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageListPublishersSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmImageListPublishersSettings ResetDebug(this AzureVmImageListPublishersSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmImageListPublishersSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmImageListPublishersSettings SetHelp(this AzureVmImageListPublishersSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageListPublishersSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmImageListPublishersSettings ResetHelp(this AzureVmImageListPublishersSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmImageListPublishersSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmImageListPublishersSettings SetOutput(this AzureVmImageListPublishersSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageListPublishersSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmImageListPublishersSettings ResetOutput(this AzureVmImageListPublishersSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmImageListPublishersSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmImageListPublishersSettings SetQuery(this AzureVmImageListPublishersSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageListPublishersSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmImageListPublishersSettings ResetQuery(this AzureVmImageListPublishersSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmImageListPublishersSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmImageListPublishersSettings SetVerbose(this AzureVmImageListPublishersSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageListPublishersSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmImageListPublishersSettings ResetVerbose(this AzureVmImageListPublishersSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmImageListSkusSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmImageListSkusSettingsExtensions
-    {
-        #region Location
-        /// <summary><p><em>Sets <see cref="AzureVmImageListSkusSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmImageListSkusSettings SetLocation(this AzureVmImageListSkusSettings toolSettings, string location)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = location;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageListSkusSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmImageListSkusSettings ResetLocation(this AzureVmImageListSkusSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Offer
-        /// <summary><p><em>Sets <see cref="AzureVmImageListSkusSettings.Offer"/>.</em></p><p>Image offer.</p></summary>
-        [Pure]
-        public static AzureVmImageListSkusSettings SetOffer(this AzureVmImageListSkusSettings toolSettings, string offer)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Offer = offer;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageListSkusSettings.Offer"/>.</em></p><p>Image offer.</p></summary>
-        [Pure]
-        public static AzureVmImageListSkusSettings ResetOffer(this AzureVmImageListSkusSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Offer = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Publisher
-        /// <summary><p><em>Sets <see cref="AzureVmImageListSkusSettings.Publisher"/>.</em></p><p>A valid image publisher.</p></summary>
-        [Pure]
-        public static AzureVmImageListSkusSettings SetPublisher(this AzureVmImageListSkusSettings toolSettings, string publisher)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Publisher = publisher;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageListSkusSettings.Publisher"/>.</em></p><p>A valid image publisher.</p></summary>
-        [Pure]
-        public static AzureVmImageListSkusSettings ResetPublisher(this AzureVmImageListSkusSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Publisher = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmImageListSkusSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmImageListSkusSettings SetDebug(this AzureVmImageListSkusSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageListSkusSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmImageListSkusSettings ResetDebug(this AzureVmImageListSkusSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmImageListSkusSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmImageListSkusSettings SetHelp(this AzureVmImageListSkusSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageListSkusSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmImageListSkusSettings ResetHelp(this AzureVmImageListSkusSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmImageListSkusSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmImageListSkusSettings SetOutput(this AzureVmImageListSkusSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageListSkusSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmImageListSkusSettings ResetOutput(this AzureVmImageListSkusSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmImageListSkusSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmImageListSkusSettings SetQuery(this AzureVmImageListSkusSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageListSkusSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmImageListSkusSettings ResetQuery(this AzureVmImageListSkusSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmImageListSkusSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmImageListSkusSettings SetVerbose(this AzureVmImageListSkusSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageListSkusSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmImageListSkusSettings ResetVerbose(this AzureVmImageListSkusSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmImageShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmImageShowSettingsExtensions
-    {
-        #region Location
-        /// <summary><p><em>Sets <see cref="AzureVmImageShowSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmImageShowSettings SetLocation(this AzureVmImageShowSettings toolSettings, string location)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = location;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageShowSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmImageShowSettings ResetLocation(this AzureVmImageShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Offer
-        /// <summary><p><em>Sets <see cref="AzureVmImageShowSettings.Offer"/>.</em></p><p>Image offer.</p></summary>
-        [Pure]
-        public static AzureVmImageShowSettings SetOffer(this AzureVmImageShowSettings toolSettings, string offer)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Offer = offer;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageShowSettings.Offer"/>.</em></p><p>Image offer.</p></summary>
-        [Pure]
-        public static AzureVmImageShowSettings ResetOffer(this AzureVmImageShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Offer = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Publisher
-        /// <summary><p><em>Sets <see cref="AzureVmImageShowSettings.Publisher"/>.</em></p><p>Image publisher.</p></summary>
-        [Pure]
-        public static AzureVmImageShowSettings SetPublisher(this AzureVmImageShowSettings toolSettings, string publisher)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Publisher = publisher;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageShowSettings.Publisher"/>.</em></p><p>Image publisher.</p></summary>
-        [Pure]
-        public static AzureVmImageShowSettings ResetPublisher(this AzureVmImageShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Publisher = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Sku
-        /// <summary><p><em>Sets <see cref="AzureVmImageShowSettings.Sku"/>.</em></p><p>Image sku.</p></summary>
-        [Pure]
-        public static AzureVmImageShowSettings SetSku(this AzureVmImageShowSettings toolSettings, string sku)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Sku = sku;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageShowSettings.Sku"/>.</em></p><p>Image sku.</p></summary>
-        [Pure]
-        public static AzureVmImageShowSettings ResetSku(this AzureVmImageShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Sku = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Urn
-        /// <summary><p><em>Sets <see cref="AzureVmImageShowSettings.Urn"/>.</em></p><p>URN, in format of 'publisher:offer:sku:versin'. If specified, other argument values can be omitted.</p></summary>
-        [Pure]
-        public static AzureVmImageShowSettings SetUrn(this AzureVmImageShowSettings toolSettings, string urn)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Urn = urn;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageShowSettings.Urn"/>.</em></p><p>URN, in format of 'publisher:offer:sku:versin'. If specified, other argument values can be omitted.</p></summary>
-        [Pure]
-        public static AzureVmImageShowSettings ResetUrn(this AzureVmImageShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Urn = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Version
-        /// <summary><p><em>Sets <see cref="AzureVmImageShowSettings.Version"/>.</em></p><p>Image sku's version.</p></summary>
-        [Pure]
-        public static AzureVmImageShowSettings SetVersion(this AzureVmImageShowSettings toolSettings, string version)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Version = version;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageShowSettings.Version"/>.</em></p><p>Image sku's version.</p></summary>
-        [Pure]
-        public static AzureVmImageShowSettings ResetVersion(this AzureVmImageShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Version = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmImageShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmImageShowSettings SetDebug(this AzureVmImageShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmImageShowSettings ResetDebug(this AzureVmImageShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmImageShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmImageShowSettings SetHelp(this AzureVmImageShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmImageShowSettings ResetHelp(this AzureVmImageShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmImageShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmImageShowSettings SetOutput(this AzureVmImageShowSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmImageShowSettings ResetOutput(this AzureVmImageShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmImageShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmImageShowSettings SetQuery(this AzureVmImageShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmImageShowSettings ResetQuery(this AzureVmImageShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmImageShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmImageShowSettings SetVerbose(this AzureVmImageShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmImageShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmImageShowSettings ResetVerbose(this AzureVmImageShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmNicAddSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmNicAddSettingsExtensions
-    {
-        #region Nics
-        /// <summary><p><em>Sets <see cref="AzureVmNicAddSettings.Nics"/>.</em></p><p>Names or IDs of NICs.</p></summary>
-        [Pure]
-        public static AzureVmNicAddSettings SetNics(this AzureVmNicAddSettings toolSettings, string nics)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Nics = nics;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicAddSettings.Nics"/>.</em></p><p>Names or IDs of NICs.</p></summary>
-        [Pure]
-        public static AzureVmNicAddSettings ResetNics(this AzureVmNicAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Nics = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmNicAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmNicAddSettings SetResourceGroup(this AzureVmNicAddSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmNicAddSettings ResetResourceGroup(this AzureVmNicAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VmName
-        /// <summary><p><em>Sets <see cref="AzureVmNicAddSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmNicAddSettings SetVmName(this AzureVmNicAddSettings toolSettings, string vmName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmName = vmName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicAddSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmNicAddSettings ResetVmName(this AzureVmNicAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region PrimaryNic
-        /// <summary><p><em>Sets <see cref="AzureVmNicAddSettings.PrimaryNic"/>.</em></p><p>Name or ID of the primary NIC. If missing, the first NIC in the list will be the primary.</p></summary>
-        [Pure]
-        public static AzureVmNicAddSettings SetPrimaryNic(this AzureVmNicAddSettings toolSettings, string primaryNic)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PrimaryNic = primaryNic;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicAddSettings.PrimaryNic"/>.</em></p><p>Name or ID of the primary NIC. If missing, the first NIC in the list will be the primary.</p></summary>
-        [Pure]
-        public static AzureVmNicAddSettings ResetPrimaryNic(this AzureVmNicAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PrimaryNic = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmNicAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmNicAddSettings SetDebug(this AzureVmNicAddSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmNicAddSettings ResetDebug(this AzureVmNicAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmNicAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmNicAddSettings SetHelp(this AzureVmNicAddSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmNicAddSettings ResetHelp(this AzureVmNicAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmNicAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmNicAddSettings SetOutput(this AzureVmNicAddSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmNicAddSettings ResetOutput(this AzureVmNicAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmNicAddSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmNicAddSettings SetQuery(this AzureVmNicAddSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicAddSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmNicAddSettings ResetQuery(this AzureVmNicAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmNicAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmNicAddSettings SetVerbose(this AzureVmNicAddSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmNicAddSettings ResetVerbose(this AzureVmNicAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmNicListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmNicListSettingsExtensions
-    {
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmNicListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmNicListSettings SetResourceGroup(this AzureVmNicListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmNicListSettings ResetResourceGroup(this AzureVmNicListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VmName
-        /// <summary><p><em>Sets <see cref="AzureVmNicListSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmNicListSettings SetVmName(this AzureVmNicListSettings toolSettings, string vmName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmName = vmName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicListSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmNicListSettings ResetVmName(this AzureVmNicListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmNicListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmNicListSettings SetDebug(this AzureVmNicListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmNicListSettings ResetDebug(this AzureVmNicListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmNicListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmNicListSettings SetHelp(this AzureVmNicListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmNicListSettings ResetHelp(this AzureVmNicListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmNicListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmNicListSettings SetOutput(this AzureVmNicListSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmNicListSettings ResetOutput(this AzureVmNicListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmNicListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmNicListSettings SetQuery(this AzureVmNicListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmNicListSettings ResetQuery(this AzureVmNicListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmNicListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmNicListSettings SetVerbose(this AzureVmNicListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmNicListSettings ResetVerbose(this AzureVmNicListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmNicRemoveSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmNicRemoveSettingsExtensions
-    {
-        #region Nics
-        /// <summary><p><em>Sets <see cref="AzureVmNicRemoveSettings.Nics"/>.</em></p><p>Names or IDs of NICs.</p></summary>
-        [Pure]
-        public static AzureVmNicRemoveSettings SetNics(this AzureVmNicRemoveSettings toolSettings, string nics)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Nics = nics;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicRemoveSettings.Nics"/>.</em></p><p>Names or IDs of NICs.</p></summary>
-        [Pure]
-        public static AzureVmNicRemoveSettings ResetNics(this AzureVmNicRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Nics = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmNicRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmNicRemoveSettings SetResourceGroup(this AzureVmNicRemoveSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmNicRemoveSettings ResetResourceGroup(this AzureVmNicRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VmName
-        /// <summary><p><em>Sets <see cref="AzureVmNicRemoveSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmNicRemoveSettings SetVmName(this AzureVmNicRemoveSettings toolSettings, string vmName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmName = vmName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicRemoveSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmNicRemoveSettings ResetVmName(this AzureVmNicRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region PrimaryNic
-        /// <summary><p><em>Sets <see cref="AzureVmNicRemoveSettings.PrimaryNic"/>.</em></p><p>Name or ID of the primary NIC. If missing, the first NIC in the list will be the primary.</p></summary>
-        [Pure]
-        public static AzureVmNicRemoveSettings SetPrimaryNic(this AzureVmNicRemoveSettings toolSettings, string primaryNic)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PrimaryNic = primaryNic;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicRemoveSettings.PrimaryNic"/>.</em></p><p>Name or ID of the primary NIC. If missing, the first NIC in the list will be the primary.</p></summary>
-        [Pure]
-        public static AzureVmNicRemoveSettings ResetPrimaryNic(this AzureVmNicRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PrimaryNic = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmNicRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmNicRemoveSettings SetDebug(this AzureVmNicRemoveSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmNicRemoveSettings ResetDebug(this AzureVmNicRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmNicRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmNicRemoveSettings SetHelp(this AzureVmNicRemoveSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmNicRemoveSettings ResetHelp(this AzureVmNicRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmNicRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmNicRemoveSettings SetOutput(this AzureVmNicRemoveSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmNicRemoveSettings ResetOutput(this AzureVmNicRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmNicRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmNicRemoveSettings SetQuery(this AzureVmNicRemoveSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmNicRemoveSettings ResetQuery(this AzureVmNicRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmNicRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmNicRemoveSettings SetVerbose(this AzureVmNicRemoveSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmNicRemoveSettings ResetVerbose(this AzureVmNicRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmNicSetSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmNicSetSettingsExtensions
-    {
-        #region Nics
-        /// <summary><p><em>Sets <see cref="AzureVmNicSetSettings.Nics"/>.</em></p><p>Names or IDs of NICs.</p></summary>
-        [Pure]
-        public static AzureVmNicSetSettings SetNics(this AzureVmNicSetSettings toolSettings, string nics)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Nics = nics;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicSetSettings.Nics"/>.</em></p><p>Names or IDs of NICs.</p></summary>
-        [Pure]
-        public static AzureVmNicSetSettings ResetNics(this AzureVmNicSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Nics = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmNicSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmNicSetSettings SetResourceGroup(this AzureVmNicSetSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmNicSetSettings ResetResourceGroup(this AzureVmNicSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VmName
-        /// <summary><p><em>Sets <see cref="AzureVmNicSetSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmNicSetSettings SetVmName(this AzureVmNicSetSettings toolSettings, string vmName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmName = vmName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicSetSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmNicSetSettings ResetVmName(this AzureVmNicSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region PrimaryNic
-        /// <summary><p><em>Sets <see cref="AzureVmNicSetSettings.PrimaryNic"/>.</em></p><p>Name or ID of the primary NIC. If missing, the first NIC in the list will be the primary.</p></summary>
-        [Pure]
-        public static AzureVmNicSetSettings SetPrimaryNic(this AzureVmNicSetSettings toolSettings, string primaryNic)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PrimaryNic = primaryNic;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicSetSettings.PrimaryNic"/>.</em></p><p>Name or ID of the primary NIC. If missing, the first NIC in the list will be the primary.</p></summary>
-        [Pure]
-        public static AzureVmNicSetSettings ResetPrimaryNic(this AzureVmNicSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PrimaryNic = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmNicSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmNicSetSettings SetDebug(this AzureVmNicSetSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmNicSetSettings ResetDebug(this AzureVmNicSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmNicSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmNicSetSettings SetHelp(this AzureVmNicSetSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmNicSetSettings ResetHelp(this AzureVmNicSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmNicSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmNicSetSettings SetOutput(this AzureVmNicSetSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmNicSetSettings ResetOutput(this AzureVmNicSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmNicSetSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmNicSetSettings SetQuery(this AzureVmNicSetSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicSetSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmNicSetSettings ResetQuery(this AzureVmNicSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmNicSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmNicSetSettings SetVerbose(this AzureVmNicSetSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmNicSetSettings ResetVerbose(this AzureVmNicSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmNicShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmNicShowSettingsExtensions
-    {
-        #region Nic
-        /// <summary><p><em>Sets <see cref="AzureVmNicShowSettings.Nic"/>.</em></p><p>NIC name or ID.</p></summary>
-        [Pure]
-        public static AzureVmNicShowSettings SetNic(this AzureVmNicShowSettings toolSettings, string nic)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Nic = nic;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicShowSettings.Nic"/>.</em></p><p>NIC name or ID.</p></summary>
-        [Pure]
-        public static AzureVmNicShowSettings ResetNic(this AzureVmNicShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Nic = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmNicShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmNicShowSettings SetResourceGroup(this AzureVmNicShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmNicShowSettings ResetResourceGroup(this AzureVmNicShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VmName
-        /// <summary><p><em>Sets <see cref="AzureVmNicShowSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmNicShowSettings SetVmName(this AzureVmNicShowSettings toolSettings, string vmName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmName = vmName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicShowSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmNicShowSettings ResetVmName(this AzureVmNicShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmNicShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmNicShowSettings SetDebug(this AzureVmNicShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmNicShowSettings ResetDebug(this AzureVmNicShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmNicShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmNicShowSettings SetHelp(this AzureVmNicShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmNicShowSettings ResetHelp(this AzureVmNicShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmNicShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmNicShowSettings SetOutput(this AzureVmNicShowSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmNicShowSettings ResetOutput(this AzureVmNicShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmNicShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmNicShowSettings SetQuery(this AzureVmNicShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmNicShowSettings ResetQuery(this AzureVmNicShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmNicShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmNicShowSettings SetVerbose(this AzureVmNicShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmNicShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmNicShowSettings ResetVerbose(this AzureVmNicShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmRunCommandInvokeSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmRunCommandInvokeSettingsExtensions
-    {
-        #region CommandId
-        /// <summary><p><em>Sets <see cref="AzureVmRunCommandInvokeSettings.CommandId"/>.</em></p><p>The run command ID.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandInvokeSettings SetCommandId(this AzureVmRunCommandInvokeSettings toolSettings, string commandId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CommandId = commandId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmRunCommandInvokeSettings.CommandId"/>.</em></p><p>The run command ID.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandInvokeSettings ResetCommandId(this AzureVmRunCommandInvokeSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CommandId = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmRunCommandInvokeSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandInvokeSettings SetName(this AzureVmRunCommandInvokeSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmRunCommandInvokeSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandInvokeSettings ResetName(this AzureVmRunCommandInvokeSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmRunCommandInvokeSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandInvokeSettings SetResourceGroup(this AzureVmRunCommandInvokeSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmRunCommandInvokeSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandInvokeSettings ResetResourceGroup(this AzureVmRunCommandInvokeSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Parameters
-        /// <summary><p><em>Sets <see cref="AzureVmRunCommandInvokeSettings.Parameters"/>.</em></p><p>Space-separated parameters in the format of '[name=]value'.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandInvokeSettings SetParameters(this AzureVmRunCommandInvokeSettings toolSettings, string parameters)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Parameters = parameters;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmRunCommandInvokeSettings.Parameters"/>.</em></p><p>Space-separated parameters in the format of '[name=]value'.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandInvokeSettings ResetParameters(this AzureVmRunCommandInvokeSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Parameters = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Scripts
-        /// <summary><p><em>Sets <see cref="AzureVmRunCommandInvokeSettings.Scripts"/>.</em></p><p>Script lines separated by whites spaces. Use @{file} to load from a file.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandInvokeSettings SetScripts(this AzureVmRunCommandInvokeSettings toolSettings, string scripts)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Scripts = scripts;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmRunCommandInvokeSettings.Scripts"/>.</em></p><p>Script lines separated by whites spaces. Use @{file} to load from a file.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandInvokeSettings ResetScripts(this AzureVmRunCommandInvokeSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Scripts = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmRunCommandInvokeSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandInvokeSettings SetDebug(this AzureVmRunCommandInvokeSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmRunCommandInvokeSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandInvokeSettings ResetDebug(this AzureVmRunCommandInvokeSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmRunCommandInvokeSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandInvokeSettings SetHelp(this AzureVmRunCommandInvokeSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmRunCommandInvokeSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandInvokeSettings ResetHelp(this AzureVmRunCommandInvokeSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmRunCommandInvokeSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandInvokeSettings SetOutput(this AzureVmRunCommandInvokeSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmRunCommandInvokeSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandInvokeSettings ResetOutput(this AzureVmRunCommandInvokeSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmRunCommandInvokeSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandInvokeSettings SetQuery(this AzureVmRunCommandInvokeSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmRunCommandInvokeSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandInvokeSettings ResetQuery(this AzureVmRunCommandInvokeSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmRunCommandInvokeSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandInvokeSettings SetVerbose(this AzureVmRunCommandInvokeSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmRunCommandInvokeSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandInvokeSettings ResetVerbose(this AzureVmRunCommandInvokeSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmRunCommandListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmRunCommandListSettingsExtensions
-    {
-        #region Location
-        /// <summary><p><em>Sets <see cref="AzureVmRunCommandListSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandListSettings SetLocation(this AzureVmRunCommandListSettings toolSettings, string location)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = location;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmRunCommandListSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandListSettings ResetLocation(this AzureVmRunCommandListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmRunCommandListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandListSettings SetDebug(this AzureVmRunCommandListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmRunCommandListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandListSettings ResetDebug(this AzureVmRunCommandListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmRunCommandListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandListSettings SetHelp(this AzureVmRunCommandListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmRunCommandListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandListSettings ResetHelp(this AzureVmRunCommandListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmRunCommandListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandListSettings SetOutput(this AzureVmRunCommandListSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmRunCommandListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandListSettings ResetOutput(this AzureVmRunCommandListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmRunCommandListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandListSettings SetQuery(this AzureVmRunCommandListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmRunCommandListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandListSettings ResetQuery(this AzureVmRunCommandListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmRunCommandListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandListSettings SetVerbose(this AzureVmRunCommandListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmRunCommandListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandListSettings ResetVerbose(this AzureVmRunCommandListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmRunCommandShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmRunCommandShowSettingsExtensions
-    {
-        #region CommandId
-        /// <summary><p><em>Sets <see cref="AzureVmRunCommandShowSettings.CommandId"/>.</em></p><p>The run command ID.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandShowSettings SetCommandId(this AzureVmRunCommandShowSettings toolSettings, string commandId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CommandId = commandId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmRunCommandShowSettings.CommandId"/>.</em></p><p>The run command ID.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandShowSettings ResetCommandId(this AzureVmRunCommandShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CommandId = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Location
-        /// <summary><p><em>Sets <see cref="AzureVmRunCommandShowSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandShowSettings SetLocation(this AzureVmRunCommandShowSettings toolSettings, string location)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = location;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmRunCommandShowSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandShowSettings ResetLocation(this AzureVmRunCommandShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmRunCommandShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandShowSettings SetDebug(this AzureVmRunCommandShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmRunCommandShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandShowSettings ResetDebug(this AzureVmRunCommandShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmRunCommandShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandShowSettings SetHelp(this AzureVmRunCommandShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmRunCommandShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandShowSettings ResetHelp(this AzureVmRunCommandShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmRunCommandShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandShowSettings SetOutput(this AzureVmRunCommandShowSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmRunCommandShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandShowSettings ResetOutput(this AzureVmRunCommandShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmRunCommandShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandShowSettings SetQuery(this AzureVmRunCommandShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmRunCommandShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandShowSettings ResetQuery(this AzureVmRunCommandShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmRunCommandShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandShowSettings SetVerbose(this AzureVmRunCommandShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmRunCommandShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmRunCommandShowSettings ResetVerbose(this AzureVmRunCommandShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmSecretAddSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmSecretAddSettingsExtensions
-    {
-        #region Certificate
-        /// <summary><p><em>Sets <see cref="AzureVmSecretAddSettings.Certificate"/>.</em></p><p>Key vault certificate name or its full secret URL.</p></summary>
-        [Pure]
-        public static AzureVmSecretAddSettings SetCertificate(this AzureVmSecretAddSettings toolSettings, string certificate)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Certificate = certificate;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretAddSettings.Certificate"/>.</em></p><p>Key vault certificate name or its full secret URL.</p></summary>
-        [Pure]
-        public static AzureVmSecretAddSettings ResetCertificate(this AzureVmSecretAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Certificate = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Keyvault
-        /// <summary><p><em>Sets <see cref="AzureVmSecretAddSettings.Keyvault"/>.</em></p><p>Name or ID of the key vault.</p></summary>
-        [Pure]
-        public static AzureVmSecretAddSettings SetKeyvault(this AzureVmSecretAddSettings toolSettings, string keyvault)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Keyvault = keyvault;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretAddSettings.Keyvault"/>.</em></p><p>Name or ID of the key vault.</p></summary>
-        [Pure]
-        public static AzureVmSecretAddSettings ResetKeyvault(this AzureVmSecretAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Keyvault = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmSecretAddSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmSecretAddSettings SetName(this AzureVmSecretAddSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretAddSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmSecretAddSettings ResetName(this AzureVmSecretAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmSecretAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmSecretAddSettings SetResourceGroup(this AzureVmSecretAddSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmSecretAddSettings ResetResourceGroup(this AzureVmSecretAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region CertificateStore
-        /// <summary><p><em>Sets <see cref="AzureVmSecretAddSettings.CertificateStore"/>.</em></p><p>Windows certificate store names. Default: My.</p></summary>
-        [Pure]
-        public static AzureVmSecretAddSettings SetCertificateStore(this AzureVmSecretAddSettings toolSettings, string certificateStore)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificateStore = certificateStore;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretAddSettings.CertificateStore"/>.</em></p><p>Windows certificate store names. Default: My.</p></summary>
-        [Pure]
-        public static AzureVmSecretAddSettings ResetCertificateStore(this AzureVmSecretAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificateStore = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmSecretAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmSecretAddSettings SetDebug(this AzureVmSecretAddSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmSecretAddSettings ResetDebug(this AzureVmSecretAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmSecretAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmSecretAddSettings SetHelp(this AzureVmSecretAddSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmSecretAddSettings ResetHelp(this AzureVmSecretAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmSecretAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmSecretAddSettings SetOutput(this AzureVmSecretAddSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmSecretAddSettings ResetOutput(this AzureVmSecretAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmSecretAddSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmSecretAddSettings SetQuery(this AzureVmSecretAddSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretAddSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmSecretAddSettings ResetQuery(this AzureVmSecretAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmSecretAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmSecretAddSettings SetVerbose(this AzureVmSecretAddSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmSecretAddSettings ResetVerbose(this AzureVmSecretAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmSecretFormatSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmSecretFormatSettingsExtensions
-    {
-        #region Secrets
-        /// <summary><p><em>Sets <see cref="AzureVmSecretFormatSettings.Secrets"/> to a new list.</em></p><p>Space-separated list of key vault secret URIs. Perhaps, produced by 'az keyvault secret list-versions --vault-name vaultname -n cert1 --query "[?attributes.enabled].id" -o tsv'.</p></summary>
-        [Pure]
-        public static AzureVmSecretFormatSettings SetSecrets(this AzureVmSecretFormatSettings toolSettings, params string[] secrets)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SecretsInternal = secrets.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Sets <see cref="AzureVmSecretFormatSettings.Secrets"/> to a new list.</em></p><p>Space-separated list of key vault secret URIs. Perhaps, produced by 'az keyvault secret list-versions --vault-name vaultname -n cert1 --query "[?attributes.enabled].id" -o tsv'.</p></summary>
-        [Pure]
-        public static AzureVmSecretFormatSettings SetSecrets(this AzureVmSecretFormatSettings toolSettings, IEnumerable<string> secrets)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SecretsInternal = secrets.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureVmSecretFormatSettings.Secrets"/>.</em></p><p>Space-separated list of key vault secret URIs. Perhaps, produced by 'az keyvault secret list-versions --vault-name vaultname -n cert1 --query "[?attributes.enabled].id" -o tsv'.</p></summary>
-        [Pure]
-        public static AzureVmSecretFormatSettings AddSecrets(this AzureVmSecretFormatSettings toolSettings, params string[] secrets)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SecretsInternal.AddRange(secrets);
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureVmSecretFormatSettings.Secrets"/>.</em></p><p>Space-separated list of key vault secret URIs. Perhaps, produced by 'az keyvault secret list-versions --vault-name vaultname -n cert1 --query "[?attributes.enabled].id" -o tsv'.</p></summary>
-        [Pure]
-        public static AzureVmSecretFormatSettings AddSecrets(this AzureVmSecretFormatSettings toolSettings, IEnumerable<string> secrets)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SecretsInternal.AddRange(secrets);
-            return toolSettings;
-        }
-        /// <summary><p><em>Clears <see cref="AzureVmSecretFormatSettings.Secrets"/>.</em></p><p>Space-separated list of key vault secret URIs. Perhaps, produced by 'az keyvault secret list-versions --vault-name vaultname -n cert1 --query "[?attributes.enabled].id" -o tsv'.</p></summary>
-        [Pure]
-        public static AzureVmSecretFormatSettings ClearSecrets(this AzureVmSecretFormatSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SecretsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureVmSecretFormatSettings.Secrets"/>.</em></p><p>Space-separated list of key vault secret URIs. Perhaps, produced by 'az keyvault secret list-versions --vault-name vaultname -n cert1 --query "[?attributes.enabled].id" -o tsv'.</p></summary>
-        [Pure]
-        public static AzureVmSecretFormatSettings RemoveSecrets(this AzureVmSecretFormatSettings toolSettings, params string[] secrets)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(secrets);
-            toolSettings.SecretsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureVmSecretFormatSettings.Secrets"/>.</em></p><p>Space-separated list of key vault secret URIs. Perhaps, produced by 'az keyvault secret list-versions --vault-name vaultname -n cert1 --query "[?attributes.enabled].id" -o tsv'.</p></summary>
-        [Pure]
-        public static AzureVmSecretFormatSettings RemoveSecrets(this AzureVmSecretFormatSettings toolSettings, IEnumerable<string> secrets)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(secrets);
-            toolSettings.SecretsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region CertificateStore
-        /// <summary><p><em>Sets <see cref="AzureVmSecretFormatSettings.CertificateStore"/>.</em></p><p>Windows certificate store names. Default: My.</p></summary>
-        [Pure]
-        public static AzureVmSecretFormatSettings SetCertificateStore(this AzureVmSecretFormatSettings toolSettings, string certificateStore)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificateStore = certificateStore;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretFormatSettings.CertificateStore"/>.</em></p><p>Windows certificate store names. Default: My.</p></summary>
-        [Pure]
-        public static AzureVmSecretFormatSettings ResetCertificateStore(this AzureVmSecretFormatSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificateStore = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Keyvault
-        /// <summary><p><em>Sets <see cref="AzureVmSecretFormatSettings.Keyvault"/>.</em></p><p>Name or ID of the key vault.</p></summary>
-        [Pure]
-        public static AzureVmSecretFormatSettings SetKeyvault(this AzureVmSecretFormatSettings toolSettings, string keyvault)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Keyvault = keyvault;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretFormatSettings.Keyvault"/>.</em></p><p>Name or ID of the key vault.</p></summary>
-        [Pure]
-        public static AzureVmSecretFormatSettings ResetKeyvault(this AzureVmSecretFormatSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Keyvault = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmSecretFormatSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmSecretFormatSettings SetResourceGroup(this AzureVmSecretFormatSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretFormatSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmSecretFormatSettings ResetResourceGroup(this AzureVmSecretFormatSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmSecretFormatSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmSecretFormatSettings SetDebug(this AzureVmSecretFormatSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretFormatSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmSecretFormatSettings ResetDebug(this AzureVmSecretFormatSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmSecretFormatSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmSecretFormatSettings SetHelp(this AzureVmSecretFormatSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretFormatSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmSecretFormatSettings ResetHelp(this AzureVmSecretFormatSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmSecretFormatSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmSecretFormatSettings SetOutput(this AzureVmSecretFormatSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretFormatSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmSecretFormatSettings ResetOutput(this AzureVmSecretFormatSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmSecretFormatSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmSecretFormatSettings SetQuery(this AzureVmSecretFormatSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretFormatSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmSecretFormatSettings ResetQuery(this AzureVmSecretFormatSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmSecretFormatSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmSecretFormatSettings SetVerbose(this AzureVmSecretFormatSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretFormatSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmSecretFormatSettings ResetVerbose(this AzureVmSecretFormatSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmSecretListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmSecretListSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmSecretListSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmSecretListSettings SetName(this AzureVmSecretListSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretListSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmSecretListSettings ResetName(this AzureVmSecretListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmSecretListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmSecretListSettings SetResourceGroup(this AzureVmSecretListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmSecretListSettings ResetResourceGroup(this AzureVmSecretListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmSecretListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmSecretListSettings SetDebug(this AzureVmSecretListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmSecretListSettings ResetDebug(this AzureVmSecretListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmSecretListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmSecretListSettings SetHelp(this AzureVmSecretListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmSecretListSettings ResetHelp(this AzureVmSecretListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmSecretListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmSecretListSettings SetOutput(this AzureVmSecretListSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmSecretListSettings ResetOutput(this AzureVmSecretListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmSecretListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmSecretListSettings SetQuery(this AzureVmSecretListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmSecretListSettings ResetQuery(this AzureVmSecretListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmSecretListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmSecretListSettings SetVerbose(this AzureVmSecretListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmSecretListSettings ResetVerbose(this AzureVmSecretListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmSecretRemoveSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmSecretRemoveSettingsExtensions
-    {
-        #region Keyvault
-        /// <summary><p><em>Sets <see cref="AzureVmSecretRemoveSettings.Keyvault"/>.</em></p><p>Name or ID of the key vault.</p></summary>
-        [Pure]
-        public static AzureVmSecretRemoveSettings SetKeyvault(this AzureVmSecretRemoveSettings toolSettings, string keyvault)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Keyvault = keyvault;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretRemoveSettings.Keyvault"/>.</em></p><p>Name or ID of the key vault.</p></summary>
-        [Pure]
-        public static AzureVmSecretRemoveSettings ResetKeyvault(this AzureVmSecretRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Keyvault = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmSecretRemoveSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmSecretRemoveSettings SetName(this AzureVmSecretRemoveSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretRemoveSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmSecretRemoveSettings ResetName(this AzureVmSecretRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmSecretRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmSecretRemoveSettings SetResourceGroup(this AzureVmSecretRemoveSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretRemoveSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmSecretRemoveSettings ResetResourceGroup(this AzureVmSecretRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Certificate
-        /// <summary><p><em>Sets <see cref="AzureVmSecretRemoveSettings.Certificate"/>.</em></p><p>Key vault certificate name or its full secret URL.</p></summary>
-        [Pure]
-        public static AzureVmSecretRemoveSettings SetCertificate(this AzureVmSecretRemoveSettings toolSettings, string certificate)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Certificate = certificate;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretRemoveSettings.Certificate"/>.</em></p><p>Key vault certificate name or its full secret URL.</p></summary>
-        [Pure]
-        public static AzureVmSecretRemoveSettings ResetCertificate(this AzureVmSecretRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Certificate = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmSecretRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmSecretRemoveSettings SetDebug(this AzureVmSecretRemoveSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmSecretRemoveSettings ResetDebug(this AzureVmSecretRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmSecretRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmSecretRemoveSettings SetHelp(this AzureVmSecretRemoveSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmSecretRemoveSettings ResetHelp(this AzureVmSecretRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmSecretRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmSecretRemoveSettings SetOutput(this AzureVmSecretRemoveSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmSecretRemoveSettings ResetOutput(this AzureVmSecretRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmSecretRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmSecretRemoveSettings SetQuery(this AzureVmSecretRemoveSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmSecretRemoveSettings ResetQuery(this AzureVmSecretRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmSecretRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmSecretRemoveSettings SetVerbose(this AzureVmSecretRemoveSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmSecretRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmSecretRemoveSettings ResetVerbose(this AzureVmSecretRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmUnmanagedDiskAttachSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmUnmanagedDiskAttachSettingsExtensions
-    {
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskAttachSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskAttachSettings SetResourceGroup(this AzureVmUnmanagedDiskAttachSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskAttachSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskAttachSettings ResetResourceGroup(this AzureVmUnmanagedDiskAttachSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VmName
-        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskAttachSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskAttachSettings SetVmName(this AzureVmUnmanagedDiskAttachSettings toolSettings, string vmName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmName = vmName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskAttachSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskAttachSettings ResetVmName(this AzureVmUnmanagedDiskAttachSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Caching
-        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskAttachSettings.Caching"/>.</em></p><p>Disk caching policy.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskAttachSettings SetCaching(this AzureVmUnmanagedDiskAttachSettings toolSettings, VmCreateOsDiskCaching caching)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Caching = caching;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskAttachSettings.Caching"/>.</em></p><p>Disk caching policy.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskAttachSettings ResetCaching(this AzureVmUnmanagedDiskAttachSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Caching = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Lun
-        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskAttachSettings.Lun"/>.</em></p><p>0-based logical unit number (LUN). Max value depends on the Virtual Machine size.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskAttachSettings SetLun(this AzureVmUnmanagedDiskAttachSettings toolSettings, string lun)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Lun = lun;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskAttachSettings.Lun"/>.</em></p><p>0-based logical unit number (LUN). Max value depends on the Virtual Machine size.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskAttachSettings ResetLun(this AzureVmUnmanagedDiskAttachSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Lun = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskAttachSettings.Name"/>.</em></p><p>The data disk name(optional when create a new disk).</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskAttachSettings SetName(this AzureVmUnmanagedDiskAttachSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskAttachSettings.Name"/>.</em></p><p>The data disk name(optional when create a new disk).</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskAttachSettings ResetName(this AzureVmUnmanagedDiskAttachSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region New
-        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskAttachSettings.New"/>.</em></p><p>Create a new disk.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskAttachSettings SetNew(this AzureVmUnmanagedDiskAttachSettings toolSettings, string @new)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.New = @new;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskAttachSettings.New"/>.</em></p><p>Create a new disk.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskAttachSettings ResetNew(this AzureVmUnmanagedDiskAttachSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.New = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SizeGb
-        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskAttachSettings.SizeGb"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskAttachSettings SetSizeGb(this AzureVmUnmanagedDiskAttachSettings toolSettings, string sizeGb)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SizeGb = sizeGb;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskAttachSettings.SizeGb"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskAttachSettings ResetSizeGb(this AzureVmUnmanagedDiskAttachSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SizeGb = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VhdUri
-        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskAttachSettings.VhdUri"/>.</em></p><p>Virtual hard disk URI. For example: &lt;a href="https://mystorage.blob.core.windows.net/vhds/d1.vhd"&gt;https://mystorage.blob.core.windows.net/vhds/d1.vhd&lt;/a&gt;.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskAttachSettings SetVhdUri(this AzureVmUnmanagedDiskAttachSettings toolSettings, string vhdUri)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VhdUri = vhdUri;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskAttachSettings.VhdUri"/>.</em></p><p>Virtual hard disk URI. For example: &lt;a href="https://mystorage.blob.core.windows.net/vhds/d1.vhd"&gt;https://mystorage.blob.core.windows.net/vhds/d1.vhd&lt;/a&gt;.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskAttachSettings ResetVhdUri(this AzureVmUnmanagedDiskAttachSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VhdUri = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskAttachSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskAttachSettings SetDebug(this AzureVmUnmanagedDiskAttachSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskAttachSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskAttachSettings ResetDebug(this AzureVmUnmanagedDiskAttachSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskAttachSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskAttachSettings SetHelp(this AzureVmUnmanagedDiskAttachSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskAttachSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskAttachSettings ResetHelp(this AzureVmUnmanagedDiskAttachSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskAttachSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskAttachSettings SetOutput(this AzureVmUnmanagedDiskAttachSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskAttachSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskAttachSettings ResetOutput(this AzureVmUnmanagedDiskAttachSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskAttachSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskAttachSettings SetQuery(this AzureVmUnmanagedDiskAttachSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskAttachSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskAttachSettings ResetQuery(this AzureVmUnmanagedDiskAttachSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskAttachSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskAttachSettings SetVerbose(this AzureVmUnmanagedDiskAttachSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskAttachSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskAttachSettings ResetVerbose(this AzureVmUnmanagedDiskAttachSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmUnmanagedDiskDetachSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmUnmanagedDiskDetachSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskDetachSettings.Name"/>.</em></p><p>The data disk name.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskDetachSettings SetName(this AzureVmUnmanagedDiskDetachSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskDetachSettings.Name"/>.</em></p><p>The data disk name.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskDetachSettings ResetName(this AzureVmUnmanagedDiskDetachSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskDetachSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskDetachSettings SetResourceGroup(this AzureVmUnmanagedDiskDetachSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskDetachSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskDetachSettings ResetResourceGroup(this AzureVmUnmanagedDiskDetachSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VmName
-        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskDetachSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskDetachSettings SetVmName(this AzureVmUnmanagedDiskDetachSettings toolSettings, string vmName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmName = vmName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskDetachSettings.VmName"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskDetachSettings ResetVmName(this AzureVmUnmanagedDiskDetachSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskDetachSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskDetachSettings SetDebug(this AzureVmUnmanagedDiskDetachSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskDetachSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskDetachSettings ResetDebug(this AzureVmUnmanagedDiskDetachSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskDetachSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskDetachSettings SetHelp(this AzureVmUnmanagedDiskDetachSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskDetachSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskDetachSettings ResetHelp(this AzureVmUnmanagedDiskDetachSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskDetachSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskDetachSettings SetOutput(this AzureVmUnmanagedDiskDetachSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskDetachSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskDetachSettings ResetOutput(this AzureVmUnmanagedDiskDetachSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskDetachSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskDetachSettings SetQuery(this AzureVmUnmanagedDiskDetachSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskDetachSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskDetachSettings ResetQuery(this AzureVmUnmanagedDiskDetachSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskDetachSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskDetachSettings SetVerbose(this AzureVmUnmanagedDiskDetachSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskDetachSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskDetachSettings ResetVerbose(this AzureVmUnmanagedDiskDetachSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmUnmanagedDiskListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmUnmanagedDiskListSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskListSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskListSettings SetName(this AzureVmUnmanagedDiskListSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskListSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskListSettings ResetName(this AzureVmUnmanagedDiskListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskListSettings SetResourceGroup(this AzureVmUnmanagedDiskListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskListSettings ResetResourceGroup(this AzureVmUnmanagedDiskListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskListSettings SetDebug(this AzureVmUnmanagedDiskListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskListSettings ResetDebug(this AzureVmUnmanagedDiskListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskListSettings SetHelp(this AzureVmUnmanagedDiskListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskListSettings ResetHelp(this AzureVmUnmanagedDiskListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskListSettings SetOutput(this AzureVmUnmanagedDiskListSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskListSettings ResetOutput(this AzureVmUnmanagedDiskListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskListSettings SetQuery(this AzureVmUnmanagedDiskListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskListSettings ResetQuery(this AzureVmUnmanagedDiskListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmUnmanagedDiskListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskListSettings SetVerbose(this AzureVmUnmanagedDiskListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUnmanagedDiskListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmUnmanagedDiskListSettings ResetVerbose(this AzureVmUnmanagedDiskListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmUserDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmUserDeleteSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmUserDeleteSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmUserDeleteSettings SetName(this AzureVmUserDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUserDeleteSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmUserDeleteSettings ResetName(this AzureVmUserDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmUserDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmUserDeleteSettings SetResourceGroup(this AzureVmUserDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUserDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmUserDeleteSettings ResetResourceGroup(this AzureVmUserDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Username
-        /// <summary><p><em>Sets <see cref="AzureVmUserDeleteSettings.Username"/>.</em></p><p>The user name.</p></summary>
-        [Pure]
-        public static AzureVmUserDeleteSettings SetUsername(this AzureVmUserDeleteSettings toolSettings, string username)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Username = username;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUserDeleteSettings.Username"/>.</em></p><p>The user name.</p></summary>
-        [Pure]
-        public static AzureVmUserDeleteSettings ResetUsername(this AzureVmUserDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Username = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NoWait
-        /// <summary><p><em>Sets <see cref="AzureVmUserDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
-        [Pure]
-        public static AzureVmUserDeleteSettings SetNoWait(this AzureVmUserDeleteSettings toolSettings, string noWait)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = noWait;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUserDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
-        [Pure]
-        public static AzureVmUserDeleteSettings ResetNoWait(this AzureVmUserDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmUserDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmUserDeleteSettings SetDebug(this AzureVmUserDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUserDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmUserDeleteSettings ResetDebug(this AzureVmUserDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmUserDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmUserDeleteSettings SetHelp(this AzureVmUserDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUserDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmUserDeleteSettings ResetHelp(this AzureVmUserDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmUserDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmUserDeleteSettings SetOutput(this AzureVmUserDeleteSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUserDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmUserDeleteSettings ResetOutput(this AzureVmUserDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmUserDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmUserDeleteSettings SetQuery(this AzureVmUserDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUserDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmUserDeleteSettings ResetQuery(this AzureVmUserDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmUserDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmUserDeleteSettings SetVerbose(this AzureVmUserDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUserDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmUserDeleteSettings ResetVerbose(this AzureVmUserDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmUserResetSshSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmUserResetSshSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmUserResetSshSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmUserResetSshSettings SetName(this AzureVmUserResetSshSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUserResetSshSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmUserResetSshSettings ResetName(this AzureVmUserResetSshSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmUserResetSshSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmUserResetSshSettings SetResourceGroup(this AzureVmUserResetSshSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUserResetSshSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmUserResetSshSettings ResetResourceGroup(this AzureVmUserResetSshSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NoWait
-        /// <summary><p><em>Sets <see cref="AzureVmUserResetSshSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
-        [Pure]
-        public static AzureVmUserResetSshSettings SetNoWait(this AzureVmUserResetSshSettings toolSettings, string noWait)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = noWait;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUserResetSshSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
-        [Pure]
-        public static AzureVmUserResetSshSettings ResetNoWait(this AzureVmUserResetSshSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmUserResetSshSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmUserResetSshSettings SetDebug(this AzureVmUserResetSshSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUserResetSshSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmUserResetSshSettings ResetDebug(this AzureVmUserResetSshSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmUserResetSshSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmUserResetSshSettings SetHelp(this AzureVmUserResetSshSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUserResetSshSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmUserResetSshSettings ResetHelp(this AzureVmUserResetSshSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmUserResetSshSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmUserResetSshSettings SetOutput(this AzureVmUserResetSshSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUserResetSshSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmUserResetSshSettings ResetOutput(this AzureVmUserResetSshSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmUserResetSshSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmUserResetSshSettings SetQuery(this AzureVmUserResetSshSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUserResetSshSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmUserResetSshSettings ResetQuery(this AzureVmUserResetSshSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmUserResetSshSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmUserResetSshSettings SetVerbose(this AzureVmUserResetSshSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUserResetSshSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmUserResetSshSettings ResetVerbose(this AzureVmUserResetSshSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureVmUserUpdateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureVmTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureVmUserUpdateSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureVmUserUpdateSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmUserUpdateSettings SetName(this AzureVmUserUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUserUpdateSettings.Name"/>.</em></p><p>The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmUserUpdateSettings ResetName(this AzureVmUserUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureVmUserUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmUserUpdateSettings SetResourceGroup(this AzureVmUserUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUserUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureVmUserUpdateSettings ResetResourceGroup(this AzureVmUserUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Username
-        /// <summary><p><em>Sets <see cref="AzureVmUserUpdateSettings.Username"/>.</em></p><p>The user name.</p></summary>
-        [Pure]
-        public static AzureVmUserUpdateSettings SetUsername(this AzureVmUserUpdateSettings toolSettings, string username)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Username = username;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUserUpdateSettings.Username"/>.</em></p><p>The user name.</p></summary>
-        [Pure]
-        public static AzureVmUserUpdateSettings ResetUsername(this AzureVmUserUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Username = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NoWait
-        /// <summary><p><em>Sets <see cref="AzureVmUserUpdateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
-        [Pure]
-        public static AzureVmUserUpdateSettings SetNoWait(this AzureVmUserUpdateSettings toolSettings, string noWait)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = noWait;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUserUpdateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
-        [Pure]
-        public static AzureVmUserUpdateSettings ResetNoWait(this AzureVmUserUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Password
-        /// <summary><p><em>Sets <see cref="AzureVmUserUpdateSettings.Password"/>.</em></p><p>The user password.</p></summary>
-        [Pure]
-        public static AzureVmUserUpdateSettings SetPassword(this AzureVmUserUpdateSettings toolSettings, string password)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Password = password;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUserUpdateSettings.Password"/>.</em></p><p>The user password.</p></summary>
-        [Pure]
-        public static AzureVmUserUpdateSettings ResetPassword(this AzureVmUserUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Password = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SshKeyValue
-        /// <summary><p><em>Sets <see cref="AzureVmUserUpdateSettings.SshKeyValue"/>.</em></p><p>SSH public key file value or public key file path.</p></summary>
-        [Pure]
-        public static AzureVmUserUpdateSettings SetSshKeyValue(this AzureVmUserUpdateSettings toolSettings, string sshKeyValue)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SshKeyValue = sshKeyValue;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUserUpdateSettings.SshKeyValue"/>.</em></p><p>SSH public key file value or public key file path.</p></summary>
-        [Pure]
-        public static AzureVmUserUpdateSettings ResetSshKeyValue(this AzureVmUserUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SshKeyValue = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureVmUserUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmUserUpdateSettings SetDebug(this AzureVmUserUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUserUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureVmUserUpdateSettings ResetDebug(this AzureVmUserUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureVmUserUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmUserUpdateSettings SetHelp(this AzureVmUserUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUserUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureVmUserUpdateSettings ResetHelp(this AzureVmUserUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureVmUserUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmUserUpdateSettings SetOutput(this AzureVmUserUpdateSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUserUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureVmUserUpdateSettings ResetOutput(this AzureVmUserUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmUserUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmUserUpdateSettings SetQuery(this AzureVmUserUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUserUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureVmUserUpdateSettings ResetQuery(this AzureVmUserUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureVmUserUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmUserUpdateSettings SetVerbose(this AzureVmUserUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureVmUserUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureVmUserUpdateSettings ResetVerbose(this AzureVmUserUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -17135,7 +17156,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionImageListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionImageListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmExtensionImageListSettings SetQuery(this AzureVmExtensionImageListSettings toolSettings, string query)
         {
@@ -17143,7 +17164,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionImageListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionImageListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmExtensionImageListSettings ResetQuery(this AzureVmExtensionImageListSettings toolSettings)
         {
@@ -17269,7 +17290,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionImageListNamesSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionImageListNamesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmExtensionImageListNamesSettings SetQuery(this AzureVmExtensionImageListNamesSettings toolSettings, string query)
         {
@@ -17277,7 +17298,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionImageListNamesSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionImageListNamesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmExtensionImageListNamesSettings ResetQuery(this AzureVmExtensionImageListNamesSettings toolSettings)
         {
@@ -17475,7 +17496,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionImageListVersionsSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionImageListVersionsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmExtensionImageListVersionsSettings SetQuery(this AzureVmExtensionImageListVersionsSettings toolSettings, string query)
         {
@@ -17483,7 +17504,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionImageListVersionsSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionImageListVersionsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmExtensionImageListVersionsSettings ResetQuery(this AzureVmExtensionImageListVersionsSettings toolSettings)
         {
@@ -17645,7 +17666,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureVmExtensionImageShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureVmExtensionImageShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmExtensionImageShowSettings SetQuery(this AzureVmExtensionImageShowSettings toolSettings, string query)
         {
@@ -17653,7 +17674,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureVmExtensionImageShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureVmExtensionImageShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureVmExtensionImageShowSettings ResetQuery(this AzureVmExtensionImageShowSettings toolSettings)
         {

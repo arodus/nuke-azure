@@ -6,9 +6,9 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/maps.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/maps/account.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/maps/account/keys.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/maps.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/maps/account.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/maps/account/keys.yml"
   ],
   "name": "AzureMaps",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/maps?view=azure-cli-latest",
@@ -36,6 +36,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Resource group name."
+          },
+          {
+            "name": "AcceptTos",
+            "type": "string",
+            "format": "--accept-tos {value}",
+            "help": "Accept the Terms of Service, and do not prompt for confirmation."
           },
           {
             "name": "Sku",
@@ -226,7 +232,7 @@
       "name": "Query",
       "type": "string",
       "format": "--query {value}",
-      "help": "JMESPath query string. See &lt;a href=\"http://jmespath.org/\"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples."
+      "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
     },
     {
       "name": "Verbose",
