@@ -16,7 +16,7 @@ namespace Nuke.Azure.Generator
     {
         public static void GenerateSpecifications(SpecificationGeneratorSettings settings)
         {
-            Console.WriteLine($"Generating Azure specifications...");
+            Console.WriteLine("Generating Azure specifications...");
             Console.WriteLine($"Max depth: {settings.MaxDepth}");
             Console.WriteLine($"Min depth for category: {settings.MinDepthForCategory}");
             Console.WriteLine($"Min sub tasks for category: {settings.MinSubTasksForCategory}");

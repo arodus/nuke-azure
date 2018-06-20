@@ -4,6 +4,8 @@
 
 using System;
 using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
 using JetBrains.Annotations;
 
 namespace Nuke.Azure.Generator.Utility
@@ -65,7 +67,27 @@ namespace Nuke.Azure.Generator.Utility
         [CanBeNull]
         public static string EscapeForXmlDoc([CanBeNull] this string value)
         {
-            return string.IsNullOrEmpty(value) ? value : value.Replace("&", "&amp;").Replace("<", "&lt;").Replace(">", "&gt;");
+            if (string.IsNullOrEmpty(value)) return value;
+            string Escape(string str) => str.Replace("&", "&amp;").Replace("<", "&lt;").Replace(">", "&gt;");
+
+            var regex = new Regex(@"(<a.*>)(.+)(<\/a>)");
+            var start = 0;
+            var sb = new StringBuilder();
+            var match = regex.Match(value);
+
+            while (match.Success)
+            {
+                sb.Append(value.Substring(start, match.Index));
+                sb.Append(match.Groups[groupnum: 1].Value);
+                sb.Append(Escape(match.Groups[groupnum: 2].Value));
+                sb.Append(match.Groups[groupnum: 3].Value);
+
+                start = match.Index + match.Length;
+                match = match.NextMatch();
+            }
+
+            sb.Append(Escape(value.Substring(start)));
+            return sb.ToString();
         }
 
         [Pure]
