@@ -6,7 +6,7 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/identity.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d896279/latest/docs-ref-autogen/identity.yml"
   ],
   "name": "AzureIdentity",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/identity?view=azure-cli-latest",
