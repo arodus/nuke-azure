@@ -261,7 +261,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -309,7 +309,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -353,7 +353,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -398,7 +398,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -443,7 +443,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -488,7 +488,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -526,7 +526,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -559,7 +559,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -595,7 +595,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -635,7 +635,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -674,7 +674,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -722,7 +722,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -767,7 +767,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -806,7 +806,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -846,7 +846,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -885,7 +885,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -923,7 +923,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1219,7 +1219,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureRedisCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisCreateSettings SetQuery(this AzureRedisCreateSettings toolSettings, string query)
         {
@@ -1227,7 +1227,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisCreateSettings ResetQuery(this AzureRedisCreateSettings toolSettings)
         {
@@ -1353,7 +1353,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureRedisDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisDeleteSettings SetQuery(this AzureRedisDeleteSettings toolSettings, string query)
         {
@@ -1361,7 +1361,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisDeleteSettings ResetQuery(this AzureRedisDeleteSettings toolSettings)
         {
@@ -1541,7 +1541,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureRedisExportSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisExportSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisExportSettings SetQuery(this AzureRedisExportSettings toolSettings, string query)
         {
@@ -1549,7 +1549,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisExportSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisExportSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisExportSettings ResetQuery(this AzureRedisExportSettings toolSettings)
         {
@@ -1711,7 +1711,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureRedisForceRebootSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisForceRebootSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisForceRebootSettings SetQuery(this AzureRedisForceRebootSettings toolSettings, string query)
         {
@@ -1719,7 +1719,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisForceRebootSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisForceRebootSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisForceRebootSettings ResetQuery(this AzureRedisForceRebootSettings toolSettings)
         {
@@ -1923,7 +1923,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureRedisImportSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisImportSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisImportSettings SetQuery(this AzureRedisImportSettings toolSettings, string query)
         {
@@ -1931,7 +1931,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisImportSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisImportSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisImportSettings ResetQuery(this AzureRedisImportSettings toolSettings)
         {
@@ -2135,7 +2135,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureRedisImportMethodSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisImportMethodSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisImportMethodSettings SetQuery(this AzureRedisImportMethodSettings toolSettings, string query)
         {
@@ -2143,7 +2143,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisImportMethodSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisImportMethodSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisImportMethodSettings ResetQuery(this AzureRedisImportMethodSettings toolSettings)
         {
@@ -2251,7 +2251,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureRedisListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisListSettings SetQuery(this AzureRedisListSettings toolSettings, string query)
         {
@@ -2259,7 +2259,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisListSettings ResetQuery(this AzureRedisListSettings toolSettings)
         {
@@ -2349,7 +2349,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureRedisListAllSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisListAllSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisListAllSettings SetQuery(this AzureRedisListAllSettings toolSettings, string query)
         {
@@ -2357,7 +2357,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisListAllSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisListAllSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisListAllSettings ResetQuery(this AzureRedisListAllSettings toolSettings)
         {
@@ -2483,7 +2483,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureRedisListKeysSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisListKeysSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisListKeysSettings SetQuery(this AzureRedisListKeysSettings toolSettings, string query)
         {
@@ -2491,7 +2491,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisListKeysSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisListKeysSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisListKeysSettings ResetQuery(this AzureRedisListKeysSettings toolSettings)
         {
@@ -2635,7 +2635,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureRedisRegenerateKeysSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisRegenerateKeysSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisRegenerateKeysSettings SetQuery(this AzureRedisRegenerateKeysSettings toolSettings, string query)
         {
@@ -2643,7 +2643,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisRegenerateKeysSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisRegenerateKeysSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisRegenerateKeysSettings ResetQuery(this AzureRedisRegenerateKeysSettings toolSettings)
         {
@@ -2769,7 +2769,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureRedisShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisShowSettings SetQuery(this AzureRedisShowSettings toolSettings, string query)
         {
@@ -2777,7 +2777,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisShowSettings ResetQuery(this AzureRedisShowSettings toolSettings)
         {
@@ -2993,7 +2993,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisUpdateSettings SetQuery(this AzureRedisUpdateSettings toolSettings, string query)
         {
@@ -3001,7 +3001,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisUpdateSettings ResetQuery(this AzureRedisUpdateSettings toolSettings)
         {
@@ -3145,7 +3145,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettingsSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettingsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisUpdateSettingsSettings SetQuery(this AzureRedisUpdateSettingsSettings toolSettings, string query)
         {
@@ -3153,7 +3153,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisUpdateSettingsSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisUpdateSettingsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisUpdateSettingsSettings ResetQuery(this AzureRedisUpdateSettingsSettings toolSettings)
         {
@@ -3279,7 +3279,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisPatchScheduleDeleteSettings SetQuery(this AzureRedisPatchScheduleDeleteSettings toolSettings, string query)
         {
@@ -3287,7 +3287,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisPatchScheduleDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisPatchScheduleDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisPatchScheduleDeleteSettings ResetQuery(this AzureRedisPatchScheduleDeleteSettings toolSettings)
         {
@@ -3431,7 +3431,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleSetSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisPatchScheduleSetSettings SetQuery(this AzureRedisPatchScheduleSetSettings toolSettings, string query)
         {
@@ -3439,7 +3439,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisPatchScheduleSetSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisPatchScheduleSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisPatchScheduleSetSettings ResetQuery(this AzureRedisPatchScheduleSetSettings toolSettings)
         {
@@ -3565,7 +3565,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisPatchScheduleShowSettings SetQuery(this AzureRedisPatchScheduleShowSettings toolSettings, string query)
         {
@@ -3573,7 +3573,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisPatchScheduleShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisPatchScheduleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisPatchScheduleShowSettings ResetQuery(this AzureRedisPatchScheduleShowSettings toolSettings)
         {
@@ -3699,7 +3699,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureRedisPatchSchedulePatchScheduleShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisPatchSchedulePatchScheduleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisPatchSchedulePatchScheduleShowSettings SetQuery(this AzureRedisPatchSchedulePatchScheduleShowSettings toolSettings, string query)
         {
@@ -3707,7 +3707,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisPatchSchedulePatchScheduleShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisPatchSchedulePatchScheduleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureRedisPatchSchedulePatchScheduleShowSettings ResetQuery(this AzureRedisPatchSchedulePatchScheduleShowSettings toolSettings)
         {

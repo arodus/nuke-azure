@@ -6,14 +6,14 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/keyvault.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/keyvault/certificate.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/keyvault/key.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/keyvault/secret.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/keyvault/certificate/contact.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/keyvault/certificate/issuer.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/keyvault/certificate/pending.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/keyvault/certificate/issuer/admin.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/keyvault.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/keyvault/certificate.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/keyvault/secret.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/keyvault/key.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/keyvault/certificate/pending.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/keyvault/certificate/contact.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/keyvault/certificate/issuer.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/keyvault/certificate/issuer/admin.yml"
   ],
   "name": "AzureKeyvault",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest",
@@ -710,6 +710,386 @@
       }
     },
     {
+      "postfix": "SecretBackup",
+      "definiteArgument": "keyvault secret backup",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "FilePath",
+            "type": "string",
+            "format": "--file-path {value}",
+            "help": ""
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the secret."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretDelete",
+      "definiteArgument": "keyvault secret delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the secret."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretDownload",
+      "definiteArgument": "keyvault secret download",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "File",
+            "type": "string",
+            "format": "--file {value}",
+            "help": "File to receive the secret contents."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the secret."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "Encoding",
+            "type": "KeyvaultSecretEncoding",
+            "format": "--encoding {value}",
+            "help": "Encoding of the destination file. By default, will look for the 'file-encoding' tag on the secret. Otherwise will assume 'utf-8'."
+          },
+          {
+            "name": "Version",
+            "type": "string",
+            "format": "--version {value}",
+            "help": "The secret version. If omitted, uses the latest version."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretList",
+      "definiteArgument": "keyvault secret list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "Maxresults",
+            "type": "string",
+            "format": "--maxresults {value}",
+            "help": "Maximum number of results to return in a page. If not specified the service will return up to 25 results."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretListDeleted",
+      "definiteArgument": "keyvault secret list-deleted",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "Maxresults",
+            "type": "string",
+            "format": "--maxresults {value}",
+            "help": "Maximum number of results to return in a page. If not specified the service will return up to 25 results."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretListVersions",
+      "definiteArgument": "keyvault secret list-versions",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the secret."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "Maxresults",
+            "type": "string",
+            "format": "--maxresults {value}",
+            "help": "Maximum number of results to return in a page. If not specified the service will return up to 25 results."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretPurge",
+      "definiteArgument": "keyvault secret purge",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the secret."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretRecover",
+      "definiteArgument": "keyvault secret recover",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the secret."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretRestore",
+      "definiteArgument": "keyvault secret restore",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "FilePath",
+            "type": "string",
+            "format": "--file-path {value}",
+            "help": ""
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretSet",
+      "definiteArgument": "keyvault secret set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the secret."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "help": "Description of the secret contents (e.g. password, connection string, etc)."
+          },
+          {
+            "name": "Disabled",
+            "type": "bool",
+            "format": "--disabled",
+            "help": "Create secret in disabled state."
+          },
+          {
+            "name": "Expires",
+            "type": "string",
+            "format": "--expires {value}",
+            "help": "Expiration UTC datetime  (Y-m-d'T'H:M:S'Z')."
+          },
+          {
+            "name": "NotBefore",
+            "type": "string",
+            "format": "--not-before {value}",
+            "help": "Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z')."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Encoding",
+            "type": "KeyvaultSecretEncoding",
+            "format": "--encoding {value}",
+            "help": "Source file encoding. The value is saved as a tag (`file-encoding=&amp;lt;val&amp;gt;`) and used during download to automatically encode the resulting file."
+          },
+          {
+            "name": "File",
+            "type": "string",
+            "format": "--file {value}",
+            "help": "Source file for secret. Use in conjunction with '--encoding'."
+          },
+          {
+            "name": "Value",
+            "type": "string",
+            "format": "--value {value}",
+            "help": "Plain text secret value. Cannot be used with '--file' or '--encoding'."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretSetAttributes",
+      "definiteArgument": "keyvault secret set-attributes",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the secret."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "ContentType",
+            "type": "string",
+            "format": "--content-type {value}",
+            "help": "Type of the secret value such as a password."
+          },
+          {
+            "name": "Enabled",
+            "type": "bool",
+            "format": "--enabled",
+            "help": "Enable the secret."
+          },
+          {
+            "name": "Expires",
+            "type": "string",
+            "format": "--expires {value}",
+            "help": "Expiration UTC datetime  (Y-m-d'T'H:M:S'Z')."
+          },
+          {
+            "name": "NotBefore",
+            "type": "string",
+            "format": "--not-before {value}",
+            "help": "Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z')."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Version",
+            "type": "string",
+            "format": "--version {value}",
+            "help": "The secret version. If omitted, uses the latest version."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretShow",
+      "definiteArgument": "keyvault secret show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the secret."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "Version",
+            "type": "string",
+            "format": "--version {value}",
+            "help": "The secret version. If omitted, uses the latest version."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretShowDeleted",
+      "definiteArgument": "keyvault secret show-deleted",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the secret."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "KeyBackup",
       "definiteArgument": "keyvault key backup",
       "settingsClass": {
@@ -1124,21 +1504,15 @@
       }
     },
     {
-      "postfix": "SecretBackup",
-      "definiteArgument": "keyvault secret backup",
+      "postfix": "CertificatePendingDelete",
+      "definiteArgument": "keyvault certificate pending delete",
       "settingsClass": {
         "properties": [
-          {
-            "name": "FilePath",
-            "type": "string",
-            "format": "--file-path {value}",
-            "help": ""
-          },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the secret."
+            "help": "Name of the pending certificate."
           },
           {
             "name": "VaultName",
@@ -1150,217 +1524,33 @@
       }
     },
     {
-      "postfix": "SecretDelete",
-      "definiteArgument": "keyvault secret delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the secret."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretDownload",
-      "definiteArgument": "keyvault secret download",
+      "postfix": "CertificatePendingMerge",
+      "definiteArgument": "keyvault certificate pending merge",
       "settingsClass": {
         "properties": [
           {
             "name": "File",
             "type": "string",
             "format": "--file {value}",
-            "help": "File to receive the secret contents."
+            "help": "File containing the certificate or certificate chain to merge."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the secret."
+            "help": "Name of the pending certificate."
           },
           {
             "name": "VaultName",
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault."
-          },
-          {
-            "name": "Encoding",
-            "type": "KeyvaultSecretEncoding",
-            "format": "--encoding {value}",
-            "help": "Encoding of the destination file. By default, will look for the 'file-encoding' tag on the secret. Otherwise will assume 'utf-8'."
-          },
-          {
-            "name": "Version",
-            "type": "string",
-            "format": "--version {value}",
-            "help": "The secret version. If omitted, uses the latest version."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretList",
-      "definiteArgument": "keyvault secret list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          },
-          {
-            "name": "Maxresults",
-            "type": "string",
-            "format": "--maxresults {value}",
-            "help": "Maximum number of results to return in a page. If not specified the service will return up to 25 results."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretListDeleted",
-      "definiteArgument": "keyvault secret list-deleted",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          },
-          {
-            "name": "Maxresults",
-            "type": "string",
-            "format": "--maxresults {value}",
-            "help": "Maximum number of results to return in a page. If not specified the service will return up to 25 results."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretListVersions",
-      "definiteArgument": "keyvault secret list-versions",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the secret."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          },
-          {
-            "name": "Maxresults",
-            "type": "string",
-            "format": "--maxresults {value}",
-            "help": "Maximum number of results to return in a page. If not specified the service will return up to 25 results."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretPurge",
-      "definiteArgument": "keyvault secret purge",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the secret."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretRecover",
-      "definiteArgument": "keyvault secret recover",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the secret."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretRestore",
-      "definiteArgument": "keyvault secret restore",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "FilePath",
-            "type": "string",
-            "format": "--file-path {value}",
-            "help": ""
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretSet",
-      "definiteArgument": "keyvault secret set",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the secret."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          },
-          {
-            "name": "Description",
-            "type": "string",
-            "format": "--description {value}",
-            "help": "Description of the secret contents (e.g. password, connection string, etc)."
           },
           {
             "name": "Disabled",
             "type": "bool",
             "format": "--disabled",
-            "help": "Create secret in disabled state."
+            "help": "Create certificate in disabled state."
           },
           {
             "name": "Expires",
@@ -1379,120 +1569,20 @@
             "type": "string",
             "format": "--tags {value}",
             "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Encoding",
-            "type": "KeyvaultSecretEncoding",
-            "format": "--encoding {value}",
-            "help": "Source file encoding. The value is saved as a tag (`file-encoding=&amp;lt;val&amp;gt;`) and used during download to automatically encode the resulting file."
-          },
-          {
-            "name": "File",
-            "type": "string",
-            "format": "--file {value}",
-            "help": "Source file for secret. Use in conjunction with '--encoding'."
-          },
-          {
-            "name": "Value",
-            "type": "string",
-            "format": "--value {value}",
-            "help": "Plain text secret value. Cannot be used with '--file' or '--encoding'."
           }
         ]
       }
     },
     {
-      "postfix": "SecretSetAttributes",
-      "definiteArgument": "keyvault secret set-attributes",
+      "postfix": "CertificatePendingShow",
+      "definiteArgument": "keyvault certificate pending show",
       "settingsClass": {
         "properties": [
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the secret."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          },
-          {
-            "name": "ContentType",
-            "type": "string",
-            "format": "--content-type {value}",
-            "help": "Type of the secret value such as a password."
-          },
-          {
-            "name": "Enabled",
-            "type": "bool",
-            "format": "--enabled",
-            "help": "Enable the secret."
-          },
-          {
-            "name": "Expires",
-            "type": "string",
-            "format": "--expires {value}",
-            "help": "Expiration UTC datetime  (Y-m-d'T'H:M:S'Z')."
-          },
-          {
-            "name": "NotBefore",
-            "type": "string",
-            "format": "--not-before {value}",
-            "help": "Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z')."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Version",
-            "type": "string",
-            "format": "--version {value}",
-            "help": "The secret version. If omitted, uses the latest version."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretShow",
-      "definiteArgument": "keyvault secret show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the secret."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          },
-          {
-            "name": "Version",
-            "type": "string",
-            "format": "--version {value}",
-            "help": "The secret version. If omitted, uses the latest version."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretShowDeleted",
-      "definiteArgument": "keyvault secret show-deleted",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the secret."
+            "help": "Name of the pending certificate."
           },
           {
             "name": "VaultName",
@@ -1732,96 +1822,6 @@
       }
     },
     {
-      "postfix": "CertificatePendingDelete",
-      "definiteArgument": "keyvault certificate pending delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the pending certificate."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CertificatePendingMerge",
-      "definiteArgument": "keyvault certificate pending merge",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "File",
-            "type": "string",
-            "format": "--file {value}",
-            "help": "File containing the certificate or certificate chain to merge."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the pending certificate."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          },
-          {
-            "name": "Disabled",
-            "type": "bool",
-            "format": "--disabled",
-            "help": "Create certificate in disabled state."
-          },
-          {
-            "name": "Expires",
-            "type": "string",
-            "format": "--expires {value}",
-            "help": "Expiration UTC datetime  (Y-m-d'T'H:M:S'Z')."
-          },
-          {
-            "name": "NotBefore",
-            "type": "string",
-            "format": "--not-before {value}",
-            "help": "Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z')."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CertificatePendingShow",
-      "definiteArgument": "keyvault certificate pending show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the pending certificate."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
       "postfix": "CertificateIssuerAdminAdd",
       "definiteArgument": "keyvault certificate issuer admin add",
       "settingsClass": {
@@ -1935,7 +1935,7 @@
       "name": "Query",
       "type": "string",
       "format": "--query {value}",
-      "help": "JMESPath query string. See &lt;a href=\"http://jmespath.org/\"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples."
+      "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
     },
     {
       "name": "Verbose",

@@ -6,21 +6,21 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/servicebus.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/servicebus/georecovery-alias.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/servicebus/namespace.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/servicebus/queue.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/servicebus/topic.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/servicebus/georecovery-alias/authorization-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/servicebus/namespace/authorization-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/servicebus/queue/authorization-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/servicebus/topic/authorization-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/servicebus/topic/subscription.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/servicebus/georecovery-alias/authorization-rule/keys.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/servicebus/namespace/authorization-rule/keys.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/servicebus/queue/authorization-rule/keys.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/servicebus/topic/authorization-rule/keys.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/servicebus/topic/subscription/rule.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/servicebus.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/servicebus/queue.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/servicebus/georecovery-alias.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/servicebus/namespace.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/servicebus/topic.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/servicebus/namespace/authorization-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/servicebus/georecovery-alias/authorization-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/servicebus/topic/subscription.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/servicebus/topic/authorization-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/servicebus/queue/authorization-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/servicebus/namespace/authorization-rule/keys.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/servicebus/georecovery-alias/authorization-rule/keys.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/servicebus/topic/authorization-rule/keys.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/servicebus/topic/subscription/rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/servicebus/queue/authorization-rule/keys.yml"
   ],
   "name": "AzureServicebus",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest",
@@ -31,6 +31,316 @@
       "postfix": "",
       "definiteArgument": "servicebus",
       "settingsClass": {}
+    },
+    {
+      "postfix": "QueueCreate",
+      "definiteArgument": "servicebus queue create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Queue."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "AutoDeleteOnIdle",
+            "type": "string",
+            "format": "--auto-delete-on-idle {value}",
+            "help": "ISO 8601 timeSpan or duration time format for idle interval after which the queue is automatically deleted. The minimum duration is 5 minutes."
+          },
+          {
+            "name": "DefaultMessageTimeToLive",
+            "type": "string",
+            "format": "--default-message-time-to-live {value}",
+            "help": "ISO 8601 timespan or duration time format for default message to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself."
+          },
+          {
+            "name": "DuplicateDetectionHistoryTimeWindow",
+            "type": "string",
+            "format": "--duplicate-detection-history-time-window {value}",
+            "help": "ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes."
+          },
+          {
+            "name": "EnableDeadLetteringOnMessageExpiration",
+            "type": "bool",
+            "format": "--enable-dead-lettering-on-message-expiration",
+            "help": "A boolean value that indicates whether this queue has dead letter support when a message expires."
+          },
+          {
+            "name": "EnableDuplicateDetection",
+            "type": "bool",
+            "format": "--enable-duplicate-detection",
+            "help": "A boolean value indicating if this queue requires duplicate detection."
+          },
+          {
+            "name": "EnableExpress",
+            "type": "bool",
+            "format": "--enable-express",
+            "help": "A boolean value that indicates whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage."
+          },
+          {
+            "name": "EnablePartitioning",
+            "type": "bool",
+            "format": "--enable-partitioning",
+            "help": "A boolean value that indicates whether the queue is to be partitioned across multiple message brokers."
+          },
+          {
+            "name": "EnableSession",
+            "type": "bool",
+            "format": "--enable-session",
+            "help": "A boolean value indicating whether the queue supports the concept of sessions."
+          },
+          {
+            "name": "ForwardDeadLetteredMessagesTo",
+            "type": "string",
+            "format": "--forward-dead-lettered-messages-to {value}",
+            "help": "Queue/Topic name to forward the Dead Letter message."
+          },
+          {
+            "name": "ForwardTo",
+            "type": "string",
+            "format": "--forward-to {value}",
+            "help": "Queue/Topic name to forward the messages."
+          },
+          {
+            "name": "LockDuration",
+            "type": "string",
+            "format": "--lock-duration {value}",
+            "help": "String ISO 8601 timespan or duration format for duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. The maximum value for LockDuration is 5 minutes; the default value is 1 minute."
+          },
+          {
+            "name": "MaxDeliveryCount",
+            "type": "string",
+            "format": "--max-delivery-count {value}",
+            "help": "The maximum delivery count. A message is automatically deadlettered after this number of deliveries. default value is 10."
+          },
+          {
+            "name": "MaxSize",
+            "type": "ServicebusQueueMaxSize",
+            "format": "--max-size {value}",
+            "help": "The maximum size of queue in megabytes, which is the size of memory allocated for the queue. Default is 1024."
+          },
+          {
+            "name": "Status",
+            "type": "ServicebusQueueStatus",
+            "format": "--status {value}",
+            "help": "Enumerates the possible values for the status of a messaging entity."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "QueueDelete",
+      "definiteArgument": "servicebus queue delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Queue."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "QueueList",
+      "definiteArgument": "servicebus queue list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "QueueShow",
+      "definiteArgument": "servicebus queue show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Queue."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "QueueUpdate",
+      "definiteArgument": "servicebus queue update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Queue."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "AutoDeleteOnIdle",
+            "type": "string",
+            "format": "--auto-delete-on-idle {value}",
+            "help": "ISO 8601 timeSpan or duration time format for idle interval after which the queue is automatically deleted."
+          },
+          {
+            "name": "DefaultMessageTimeToLive",
+            "type": "string",
+            "format": "--default-message-time-to-live {value}",
+            "help": "ISO 8601 timespan or duration time format for default message to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself."
+          },
+          {
+            "name": "DuplicateDetectionHistoryTimeWindow",
+            "type": "string",
+            "format": "--duplicate-detection-history-time-window {value}",
+            "help": "ISO 8601 timeSpan structure that defines the duration of the duplicate detection history."
+          },
+          {
+            "name": "EnableDeadLetteringOnMessageExpiration",
+            "type": "bool",
+            "format": "--enable-dead-lettering-on-message-expiration",
+            "help": "A boolean value that indicates whether this queue has dead letter support when a message expires."
+          },
+          {
+            "name": "EnableDuplicateDetection",
+            "type": "bool",
+            "format": "--enable-duplicate-detection",
+            "help": "A boolean value indicating if this queue requires duplicate detection."
+          },
+          {
+            "name": "EnableExpress",
+            "type": "bool",
+            "format": "--enable-express",
+            "help": "A boolean value that indicates whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage."
+          },
+          {
+            "name": "EnablePartitioning",
+            "type": "bool",
+            "format": "--enable-partitioning",
+            "help": "A boolean value that indicates whether the queue is to be partitioned across multiple message brokers."
+          },
+          {
+            "name": "EnableSession",
+            "type": "bool",
+            "format": "--enable-session",
+            "help": "A boolean value indicating whether the queue supports the concept of sessions."
+          },
+          {
+            "name": "ForwardDeadLetteredMessagesTo",
+            "type": "string",
+            "format": "--forward-dead-lettered-messages-to {value}",
+            "help": "Queue/Topic name to forward the Dead Letter message."
+          },
+          {
+            "name": "ForwardTo",
+            "type": "string",
+            "format": "--forward-to {value}",
+            "help": "Queue/Topic name to forward the messages."
+          },
+          {
+            "name": "LockDuration",
+            "type": "string",
+            "format": "--lock-duration {value}",
+            "help": "String ISO 8601 timespan or duration format for duration of a peek-lock; that is, the amount of time that the message is locked for other receivers."
+          },
+          {
+            "name": "MaxDeliveryCount",
+            "type": "string",
+            "format": "--max-delivery-count {value}",
+            "help": "The maximum delivery count. A message is automatically deadlettered after this number of deliveries."
+          },
+          {
+            "name": "MaxSize",
+            "type": "ServicebusQueueMaxSize",
+            "format": "--max-size {value}",
+            "help": "The maximum size of queue in megabytes, which is the size of memory allocated for the queue."
+          },
+          {
+            "name": "Status",
+            "type": "ServicebusQueueStatus",
+            "format": "--status {value}",
+            "help": "Enumerates the possible values for the status of a messaging entity."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
     },
     {
       "postfix": "GeorecoveryAliasBreakPair",
@@ -389,316 +699,6 @@
       }
     },
     {
-      "postfix": "QueueCreate",
-      "definiteArgument": "servicebus queue create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Queue."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "AutoDeleteOnIdle",
-            "type": "string",
-            "format": "--auto-delete-on-idle {value}",
-            "help": "ISO 8601 timeSpan or duration time format for idle interval after which the queue is automatically deleted. The minimum duration is 5 minutes."
-          },
-          {
-            "name": "DefaultMessageTimeToLive",
-            "type": "string",
-            "format": "--default-message-time-to-live {value}",
-            "help": "ISO 8601 timespan or duration time format for default message to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself."
-          },
-          {
-            "name": "DuplicateDetectionHistoryTimeWindow",
-            "type": "string",
-            "format": "--duplicate-detection-history-time-window {value}",
-            "help": "ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes."
-          },
-          {
-            "name": "EnableDeadLetteringOnMessageExpiration",
-            "type": "bool",
-            "format": "--enable-dead-lettering-on-message-expiration",
-            "help": "A boolean value that indicates whether this queue has dead letter support when a message expires."
-          },
-          {
-            "name": "EnableDuplicateDetection",
-            "type": "bool",
-            "format": "--enable-duplicate-detection",
-            "help": "A boolean value indicating if this queue requires duplicate detection."
-          },
-          {
-            "name": "EnableExpress",
-            "type": "bool",
-            "format": "--enable-express",
-            "help": "A boolean value that indicates whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage."
-          },
-          {
-            "name": "EnablePartitioning",
-            "type": "bool",
-            "format": "--enable-partitioning",
-            "help": "A boolean value that indicates whether the queue is to be partitioned across multiple message brokers."
-          },
-          {
-            "name": "EnableSession",
-            "type": "bool",
-            "format": "--enable-session",
-            "help": "A boolean value indicating whether the queue supports the concept of sessions."
-          },
-          {
-            "name": "ForwardDeadLetteredMessagesTo",
-            "type": "string",
-            "format": "--forward-dead-lettered-messages-to {value}",
-            "help": "Queue/Topic name to forward the Dead Letter message."
-          },
-          {
-            "name": "ForwardTo",
-            "type": "string",
-            "format": "--forward-to {value}",
-            "help": "Queue/Topic name to forward the messages."
-          },
-          {
-            "name": "LockDuration",
-            "type": "string",
-            "format": "--lock-duration {value}",
-            "help": "String ISO 8601 timespan or duration format for duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. The maximum value for LockDuration is 5 minutes; the default value is 1 minute."
-          },
-          {
-            "name": "MaxDeliveryCount",
-            "type": "string",
-            "format": "--max-delivery-count {value}",
-            "help": "The maximum delivery count. A message is automatically deadlettered after this number of deliveries. default value is 10."
-          },
-          {
-            "name": "MaxSize",
-            "type": "ServicebusQueueMaxSize",
-            "format": "--max-size {value}",
-            "help": "The maximum size of queue in megabytes, which is the size of memory allocated for the queue. Default is 1024."
-          },
-          {
-            "name": "Status",
-            "type": "ServicebusQueueStatus",
-            "format": "--status {value}",
-            "help": "Enumerates the possible values for the status of a messaging entity."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "QueueDelete",
-      "definiteArgument": "servicebus queue delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Queue."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "QueueList",
-      "definiteArgument": "servicebus queue list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "QueueShow",
-      "definiteArgument": "servicebus queue show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Queue."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "QueueUpdate",
-      "definiteArgument": "servicebus queue update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Queue."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "AutoDeleteOnIdle",
-            "type": "string",
-            "format": "--auto-delete-on-idle {value}",
-            "help": "ISO 8601 timeSpan or duration time format for idle interval after which the queue is automatically deleted."
-          },
-          {
-            "name": "DefaultMessageTimeToLive",
-            "type": "string",
-            "format": "--default-message-time-to-live {value}",
-            "help": "ISO 8601 timespan or duration time format for default message to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself."
-          },
-          {
-            "name": "DuplicateDetectionHistoryTimeWindow",
-            "type": "string",
-            "format": "--duplicate-detection-history-time-window {value}",
-            "help": "ISO 8601 timeSpan structure that defines the duration of the duplicate detection history."
-          },
-          {
-            "name": "EnableDeadLetteringOnMessageExpiration",
-            "type": "bool",
-            "format": "--enable-dead-lettering-on-message-expiration",
-            "help": "A boolean value that indicates whether this queue has dead letter support when a message expires."
-          },
-          {
-            "name": "EnableDuplicateDetection",
-            "type": "bool",
-            "format": "--enable-duplicate-detection",
-            "help": "A boolean value indicating if this queue requires duplicate detection."
-          },
-          {
-            "name": "EnableExpress",
-            "type": "bool",
-            "format": "--enable-express",
-            "help": "A boolean value that indicates whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage."
-          },
-          {
-            "name": "EnablePartitioning",
-            "type": "bool",
-            "format": "--enable-partitioning",
-            "help": "A boolean value that indicates whether the queue is to be partitioned across multiple message brokers."
-          },
-          {
-            "name": "EnableSession",
-            "type": "bool",
-            "format": "--enable-session",
-            "help": "A boolean value indicating whether the queue supports the concept of sessions."
-          },
-          {
-            "name": "ForwardDeadLetteredMessagesTo",
-            "type": "string",
-            "format": "--forward-dead-lettered-messages-to {value}",
-            "help": "Queue/Topic name to forward the Dead Letter message."
-          },
-          {
-            "name": "ForwardTo",
-            "type": "string",
-            "format": "--forward-to {value}",
-            "help": "Queue/Topic name to forward the messages."
-          },
-          {
-            "name": "LockDuration",
-            "type": "string",
-            "format": "--lock-duration {value}",
-            "help": "String ISO 8601 timespan or duration format for duration of a peek-lock; that is, the amount of time that the message is locked for other receivers."
-          },
-          {
-            "name": "MaxDeliveryCount",
-            "type": "string",
-            "format": "--max-delivery-count {value}",
-            "help": "The maximum delivery count. A message is automatically deadlettered after this number of deliveries."
-          },
-          {
-            "name": "MaxSize",
-            "type": "ServicebusQueueMaxSize",
-            "format": "--max-size {value}",
-            "help": "The maximum size of queue in megabytes, which is the size of memory allocated for the queue."
-          },
-          {
-            "name": "Status",
-            "type": "ServicebusQueueStatus",
-            "format": "--status {value}",
-            "help": "Enumerates the possible values for the status of a messaging entity."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
       "postfix": "TopicCreate",
       "definiteArgument": "servicebus topic create",
       "settingsClass": {
@@ -961,64 +961,6 @@
       }
     },
     {
-      "postfix": "GeorecoveryAliasAuthorizationRuleList",
-      "definiteArgument": "servicebus georecovery-alias authorization-rule list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Alias",
-            "type": "string",
-            "format": "--alias {value}",
-            "help": "Name of Geo-Disaster Recovery Configuration Alias."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "GeorecoveryAliasAuthorizationRuleShow",
-      "definiteArgument": "servicebus georecovery-alias authorization-rule show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Alias",
-            "type": "string",
-            "format": "--alias {value}",
-            "help": "Name of the Geo-Disaster Recovery Configuration Alias."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Namespace Authorization Rule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
       "postfix": "NamespaceAuthorizationRuleCreate",
       "definiteArgument": "servicebus namespace authorization-rule create",
       "settingsClass": {
@@ -1175,201 +1117,47 @@
       }
     },
     {
-      "postfix": "QueueAuthorizationRuleCreate",
-      "definiteArgument": "servicebus queue authorization-rule create",
+      "postfix": "GeorecoveryAliasAuthorizationRuleList",
+      "definiteArgument": "servicebus georecovery-alias authorization-rule list",
       "settingsClass": {
         "properties": [
+          {
+            "name": "Alias",
+            "type": "string",
+            "format": "--alias {value}",
+            "help": "Name of Geo-Disaster Recovery Configuration Alias."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GeorecoveryAliasAuthorizationRuleShow",
+      "definiteArgument": "servicebus georecovery-alias authorization-rule show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Alias",
+            "type": "string",
+            "format": "--alias {value}",
+            "help": "Name of the Geo-Disaster Recovery Configuration Alias."
+          },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of Queue Authorization Rule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "QueueName",
-            "type": "string",
-            "format": "--queue-name {value}",
-            "help": "Name of Queue."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Rights",
-            "type": "List<ServicebusNamespaceAuthorizationRuleRights>",
-            "format": "--rights {value}",
-            "separator": " ",
-            "help": "Space-separated list of Authorization rule rights."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "QueueAuthorizationRuleDelete",
-      "definiteArgument": "servicebus queue authorization-rule delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Queue Authorization Rule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "QueueName",
-            "type": "string",
-            "format": "--queue-name {value}",
-            "help": "Name of Queue."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "QueueAuthorizationRuleList",
-      "definiteArgument": "servicebus queue authorization-rule list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "QueueName",
-            "type": "string",
-            "format": "--queue-name {value}",
-            "help": "Name of Queue."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "QueueAuthorizationRuleShow",
-      "definiteArgument": "servicebus queue authorization-rule show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Queue Authorization Rule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "QueueName",
-            "type": "string",
-            "format": "--queue-name {value}",
-            "help": "Name of Queue."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "QueueAuthorizationRuleUpdate",
-      "definiteArgument": "servicebus queue authorization-rule update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Queue Authorization Rule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "QueueName",
-            "type": "string",
-            "format": "--queue-name {value}",
-            "help": "Name of Queue."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Rights",
-            "type": "List<ServicebusNamespaceAuthorizationRuleRights>",
-            "format": "--rights {value}",
-            "separator": " ",
-            "help": "Space-separated list of Authorization rule rights."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TopicAuthorizationRuleCreate",
-      "definiteArgument": "servicebus topic authorization-rule create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Topic Authorization Rule."
+            "help": "Name of Namespace Authorization Rule."
           },
           {
             "name": "NamespaceName",
@@ -1382,166 +1170,6 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Rights",
-            "type": "List<ServicebusNamespaceAuthorizationRuleRights>",
-            "format": "--rights {value}",
-            "separator": " ",
-            "help": "Space-separated list of Authorization rule rights."
-          },
-          {
-            "name": "TopicName",
-            "type": "string",
-            "format": "--topic-name {value}",
-            "help": "Name of Topic."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TopicAuthorizationRuleDelete",
-      "definiteArgument": "servicebus topic authorization-rule delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Topic Authorization Rule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "TopicName",
-            "type": "string",
-            "format": "--topic-name {value}",
-            "help": "Name of Topic."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TopicAuthorizationRuleList",
-      "definiteArgument": "servicebus topic authorization-rule list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "TopicName",
-            "type": "string",
-            "format": "--topic-name {value}",
-            "help": "Name of Topic."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TopicAuthorizationRuleShow",
-      "definiteArgument": "servicebus topic authorization-rule show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Topic Authorization Rule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "TopicName",
-            "type": "string",
-            "format": "--topic-name {value}",
-            "help": "Name of Topic."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TopicAuthorizationRuleUpdate",
-      "definiteArgument": "servicebus topic authorization-rule update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Topic Authorization Rule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Rights",
-            "type": "List<ServicebusNamespaceAuthorizationRuleRights>",
-            "format": "--rights {value}",
-            "separator": " ",
-            "help": "Space-separated list of Authorization rule rights."
-          },
-          {
-            "name": "TopicName",
-            "type": "string",
-            "format": "--topic-name {value}",
-            "help": "Name of Topic."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
           }
         ]
       }
@@ -1839,21 +1467,15 @@
       }
     },
     {
-      "postfix": "GeorecoveryAliasAuthorizationRuleKeysList",
-      "definiteArgument": "servicebus georecovery-alias authorization-rule keys list",
+      "postfix": "TopicAuthorizationRuleCreate",
+      "definiteArgument": "servicebus topic authorization-rule create",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Alias",
-            "type": "string",
-            "format": "--alias {value}",
-            "help": "Name of Geo-Disaster Recovery Configuration Alias."
-          },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of Namespace AuthorizationRule."
+            "help": "Name of Topic Authorization Rule."
           },
           {
             "name": "NamespaceName",
@@ -1866,6 +1488,352 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Rights",
+            "type": "List<ServicebusNamespaceAuthorizationRuleRights>",
+            "format": "--rights {value}",
+            "separator": " ",
+            "help": "Space-separated list of Authorization rule rights."
+          },
+          {
+            "name": "TopicName",
+            "type": "string",
+            "format": "--topic-name {value}",
+            "help": "Name of Topic."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TopicAuthorizationRuleDelete",
+      "definiteArgument": "servicebus topic authorization-rule delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Topic Authorization Rule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "TopicName",
+            "type": "string",
+            "format": "--topic-name {value}",
+            "help": "Name of Topic."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TopicAuthorizationRuleList",
+      "definiteArgument": "servicebus topic authorization-rule list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "TopicName",
+            "type": "string",
+            "format": "--topic-name {value}",
+            "help": "Name of Topic."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TopicAuthorizationRuleShow",
+      "definiteArgument": "servicebus topic authorization-rule show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Topic Authorization Rule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "TopicName",
+            "type": "string",
+            "format": "--topic-name {value}",
+            "help": "Name of Topic."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TopicAuthorizationRuleUpdate",
+      "definiteArgument": "servicebus topic authorization-rule update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Topic Authorization Rule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Rights",
+            "type": "List<ServicebusNamespaceAuthorizationRuleRights>",
+            "format": "--rights {value}",
+            "separator": " ",
+            "help": "Space-separated list of Authorization rule rights."
+          },
+          {
+            "name": "TopicName",
+            "type": "string",
+            "format": "--topic-name {value}",
+            "help": "Name of Topic."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "QueueAuthorizationRuleCreate",
+      "definiteArgument": "servicebus queue authorization-rule create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Queue Authorization Rule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "QueueName",
+            "type": "string",
+            "format": "--queue-name {value}",
+            "help": "Name of Queue."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Rights",
+            "type": "List<ServicebusNamespaceAuthorizationRuleRights>",
+            "format": "--rights {value}",
+            "separator": " ",
+            "help": "Space-separated list of Authorization rule rights."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "QueueAuthorizationRuleDelete",
+      "definiteArgument": "servicebus queue authorization-rule delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Queue Authorization Rule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "QueueName",
+            "type": "string",
+            "format": "--queue-name {value}",
+            "help": "Name of Queue."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "QueueAuthorizationRuleList",
+      "definiteArgument": "servicebus queue authorization-rule list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "QueueName",
+            "type": "string",
+            "format": "--queue-name {value}",
+            "help": "Name of Queue."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "QueueAuthorizationRuleShow",
+      "definiteArgument": "servicebus queue authorization-rule show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Queue Authorization Rule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "QueueName",
+            "type": "string",
+            "format": "--queue-name {value}",
+            "help": "Name of Queue."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "QueueAuthorizationRuleUpdate",
+      "definiteArgument": "servicebus queue authorization-rule update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Queue Authorization Rule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "QueueName",
+            "type": "string",
+            "format": "--queue-name {value}",
+            "help": "Name of Queue."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Rights",
+            "type": "List<ServicebusNamespaceAuthorizationRuleRights>",
+            "format": "--rights {value}",
+            "separator": " ",
+            "help": "Space-separated list of Authorization rule rights."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
           }
         ]
       }
@@ -1935,15 +1903,21 @@
       }
     },
     {
-      "postfix": "QueueAuthorizationRuleKeysList",
-      "definiteArgument": "servicebus queue authorization-rule keys list",
+      "postfix": "GeorecoveryAliasAuthorizationRuleKeysList",
+      "definiteArgument": "servicebus georecovery-alias authorization-rule keys list",
       "settingsClass": {
         "properties": [
+          {
+            "name": "Alias",
+            "type": "string",
+            "format": "--alias {value}",
+            "help": "Name of Geo-Disaster Recovery Configuration Alias."
+          },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of Queue Authorization Rule."
+            "help": "Name of Namespace AuthorizationRule."
           },
           {
             "name": "NamespaceName",
@@ -1952,60 +1926,10 @@
             "help": "Name of Namespace."
           },
           {
-            "name": "QueueName",
-            "type": "string",
-            "format": "--queue-name {value}",
-            "help": "Name of Queue."
-          },
-          {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "QueueAuthorizationRuleKeysRenew",
-      "definiteArgument": "servicebus queue authorization-rule keys renew",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Key",
-            "type": "ServicebusNamespaceAuthorizationRuleKeysKey",
-            "format": "--key {value}",
-            "help": "Specifies Primary or Secondary key needs to be reset."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Queue Authorization Rule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "QueueName",
-            "type": "string",
-            "format": "--queue-name {value}",
-            "help": "Name of Queue."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "KeyValue",
-            "type": "string",
-            "format": "--key-value {value}",
-            "help": "Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType."
           }
         ]
       }
@@ -2455,6 +2379,82 @@
           }
         ]
       }
+    },
+    {
+      "postfix": "QueueAuthorizationRuleKeysList",
+      "definiteArgument": "servicebus queue authorization-rule keys list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Queue Authorization Rule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "QueueName",
+            "type": "string",
+            "format": "--queue-name {value}",
+            "help": "Name of Queue."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "QueueAuthorizationRuleKeysRenew",
+      "definiteArgument": "servicebus queue authorization-rule keys renew",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Key",
+            "type": "ServicebusNamespaceAuthorizationRuleKeysKey",
+            "format": "--key {value}",
+            "help": "Specifies Primary or Secondary key needs to be reset."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Queue Authorization Rule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "QueueName",
+            "type": "string",
+            "format": "--queue-name {value}",
+            "help": "Name of Queue."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "KeyValue",
+            "type": "string",
+            "format": "--key-value {value}",
+            "help": "Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType."
+          }
+        ]
+      }
     }
   ],
   "commonTaskProperties": [
@@ -2480,7 +2480,7 @@
       "name": "Query",
       "type": "string",
       "format": "--query {value}",
-      "help": "JMESPath query string. See &lt;a href=\"http://jmespath.org/\"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples."
+      "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
     },
     {
       "name": "Verbose",
@@ -2490,22 +2490,6 @@
     }
   ],
   "enumerations": [
-    {
-      "name": "ServicebusNamespaceCapacity",
-      "values": [
-        "1",
-        "2",
-        "4"
-      ]
-    },
-    {
-      "name": "ServicebusNamespaceSku",
-      "values": [
-        "basic",
-        "premium",
-        "standard"
-      ]
-    },
     {
       "name": "ServicebusQueueMaxSize",
       "values": [
@@ -2523,6 +2507,22 @@
         "disabled",
         "receivedisabled",
         "senddisabled"
+      ]
+    },
+    {
+      "name": "ServicebusNamespaceCapacity",
+      "values": [
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "name": "ServicebusNamespaceSku",
+      "values": [
+        "basic",
+        "premium",
+        "standard"
       ]
     },
     {

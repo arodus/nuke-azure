@@ -6,11 +6,11 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/reservations.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/reservations/catalog.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/reservations/reservation-order-id.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/reservations/reservation-order.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/reservations/reservation.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/reservations.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/reservations/reservation-order-id.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/reservations/reservation.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/reservations/catalog.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/reservations/reservation-order.yml"
   ],
   "name": "AzureReservations",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/reservations?view=azure-cli-latest",
@@ -23,20 +23,6 @@
       "settingsClass": {}
     },
     {
-      "postfix": "CatalogShow",
-      "definiteArgument": "reservations catalog show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "SubscriptionId",
-            "type": "string",
-            "format": "--subscription-id {value}",
-            "help": "Id of the subscription to get the catalog for."
-          }
-        ]
-      }
-    },
-    {
       "postfix": "ReservationOrderIdList",
       "definiteArgument": "reservations reservation-order-id list",
       "settingsClass": {
@@ -46,25 +32,6 @@
             "type": "string",
             "format": "--subscription-id {value}",
             "help": "Id of the subscription to look up applied reservations."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ReservationOrderList",
-      "definiteArgument": "reservations reservation-order list",
-      "settingsClass": {}
-    },
-    {
-      "postfix": "ReservationOrderShow",
-      "definiteArgument": "reservations reservation-order show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ReservationOrderId",
-            "type": "string",
-            "format": "--reservation-order-id {value}",
-            "help": "Id of reservation order to look up."
           }
         ]
       }
@@ -124,7 +91,7 @@
             "name": "ReservationOrderId",
             "type": "string",
             "format": "--reservation-order-id {value}",
-            "help": "Order id of original reservation."
+            "help": "Reservation order id of the reservations to merge."
           }
         ]
       }
@@ -170,13 +137,13 @@
             "name": "ReservationId",
             "type": "string",
             "format": "--reservation-id {value}",
-            "help": "Reservation id of original reservation."
+            "help": "Reservation id of the reservation to split."
           },
           {
             "name": "ReservationOrderId",
             "type": "string",
             "format": "--reservation-order-id {value}",
-            "help": "Order id of original reservation."
+            "help": "Reservation order id of the reservation to split."
           }
         ]
       }
@@ -188,27 +155,78 @@
         "properties": [
           {
             "name": "AppliedScopeType",
-            "type": "string",
+            "type": "ReservationsReservationUpdateAppliedScopeType",
             "format": "--applied-scope-type {value}",
-            "help": "Type is either Single or Shared."
+            "help": "Type of the Applied Scope to update the reservation with."
           },
           {
             "name": "ReservationId",
             "type": "string",
             "format": "--reservation-id {value}",
-            "help": "Reservation id of reservation to update."
+            "help": "Id of the reservation to update."
           },
           {
             "name": "ReservationOrderId",
             "type": "string",
             "format": "--reservation-order-id {value}",
-            "help": "Order id of reservation to update."
+            "help": "Reservation order id of the reservation to update."
           },
           {
             "name": "AppliedScopes",
             "type": "string",
             "format": "--applied-scopes {value}",
-            "help": "If applied scope type is Single, this field must be provided."
+            "help": "Subscription that the benefit will be applied. Do not specify if AppliedScopeType is Shared."
+          },
+          {
+            "name": "InstanceFlexibility",
+            "type": "ReservationsReservationUpdateInstanceFlexibility",
+            "format": "--instance-flexibility {value}",
+            "help": "Type of the Instance Flexibility to update the reservation with."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogShow",
+      "definiteArgument": "reservations catalog show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ReservedResourceType",
+            "type": "ReservationsCatalogShowReservedResourceType",
+            "format": "--reserved-resource-type {value}",
+            "help": "Type of the resource for which the skus should be provided."
+          },
+          {
+            "name": "SubscriptionId",
+            "type": "string",
+            "format": "--subscription-id {value}",
+            "help": "Id of the subscription to get the catalog for."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ReservationOrderList",
+      "definiteArgument": "reservations reservation-order list",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "ReservationOrderShow",
+      "definiteArgument": "reservations reservation-order show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ReservationOrderId",
+            "type": "string",
+            "format": "--reservation-order-id {value}",
+            "help": "Id of reservation order to look up."
           }
         ]
       }
@@ -237,13 +255,38 @@
       "name": "Query",
       "type": "string",
       "format": "--query {value}",
-      "help": "JMESPath query string. See &lt;a href=\"http://jmespath.org/\"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples."
+      "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
     },
     {
       "name": "Verbose",
       "type": "string",
       "format": "--verbose {value}",
       "help": "Increase logging verbosity. Use --debug for full debug logs."
+    }
+  ],
+  "enumerations": [
+    {
+      "name": "ReservationsReservationUpdateAppliedScopeType",
+      "values": [
+        "shared",
+        "single"
+      ]
+    },
+    {
+      "name": "ReservationsReservationUpdateInstanceFlexibility",
+      "values": [
+        "notsupported",
+        "off",
+        "on"
+      ]
+    },
+    {
+      "name": "ReservationsCatalogShowReservedResourceType",
+      "values": [
+        "sqldatabases",
+        "suselinux",
+        "virtualmachines"
+      ]
     }
   ]
 }

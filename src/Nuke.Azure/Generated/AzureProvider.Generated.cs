@@ -118,7 +118,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -155,7 +155,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -193,7 +193,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -231,7 +231,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -265,7 +265,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -299,7 +299,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -396,7 +396,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureProviderListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureProviderListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureProviderListSettings SetQuery(this AzureProviderListSettings toolSettings, string query)
         {
@@ -404,7 +404,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureProviderListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureProviderListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureProviderListSettings ResetQuery(this AzureProviderListSettings toolSettings)
         {
@@ -530,7 +530,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureProviderRegisterSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureProviderRegisterSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureProviderRegisterSettings SetQuery(this AzureProviderRegisterSettings toolSettings, string query)
         {
@@ -538,7 +538,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureProviderRegisterSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureProviderRegisterSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureProviderRegisterSettings ResetQuery(this AzureProviderRegisterSettings toolSettings)
         {
@@ -664,7 +664,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureProviderShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureProviderShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureProviderShowSettings SetQuery(this AzureProviderShowSettings toolSettings, string query)
         {
@@ -672,7 +672,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureProviderShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureProviderShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureProviderShowSettings ResetQuery(this AzureProviderShowSettings toolSettings)
         {
@@ -798,7 +798,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureProviderUnregisterSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureProviderUnregisterSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureProviderUnregisterSettings SetQuery(this AzureProviderUnregisterSettings toolSettings, string query)
         {
@@ -806,7 +806,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureProviderUnregisterSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureProviderUnregisterSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureProviderUnregisterSettings ResetQuery(this AzureProviderUnregisterSettings toolSettings)
         {
@@ -896,7 +896,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureProviderOperationListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureProviderOperationListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureProviderOperationListSettings SetQuery(this AzureProviderOperationListSettings toolSettings, string query)
         {
@@ -904,7 +904,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureProviderOperationListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureProviderOperationListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureProviderOperationListSettings ResetQuery(this AzureProviderOperationListSettings toolSettings)
         {
@@ -1012,7 +1012,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureProviderOperationShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureProviderOperationShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureProviderOperationShowSettings SetQuery(this AzureProviderOperationShowSettings toolSettings, string query)
         {
@@ -1020,7 +1020,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureProviderOperationShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureProviderOperationShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureProviderOperationShowSettings ResetQuery(this AzureProviderOperationShowSettings toolSettings)
         {

@@ -226,7 +226,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -280,7 +280,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -331,7 +331,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -377,7 +377,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -424,7 +424,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -487,7 +487,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -532,7 +532,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -566,7 +566,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -601,7 +601,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -642,7 +642,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -682,7 +682,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -718,7 +718,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -755,7 +755,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -801,7 +801,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -843,7 +843,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -883,7 +883,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -964,7 +964,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventgridSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventgridSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridSettings SetQuery(this AzureEventgridSettings toolSettings, string query)
         {
@@ -972,7 +972,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventgridSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventgridSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridSettings ResetQuery(this AzureEventgridSettings toolSettings)
         {
@@ -1284,7 +1284,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventgridEventSubscriptionCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventgridEventSubscriptionCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridEventSubscriptionCreateSettings SetQuery(this AzureEventgridEventSubscriptionCreateSettings toolSettings, string query)
         {
@@ -1292,7 +1292,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventgridEventSubscriptionCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventgridEventSubscriptionCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridEventSubscriptionCreateSettings ResetQuery(this AzureEventgridEventSubscriptionCreateSettings toolSettings)
         {
@@ -1454,7 +1454,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventgridEventSubscriptionDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventgridEventSubscriptionDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridEventSubscriptionDeleteSettings SetQuery(this AzureEventgridEventSubscriptionDeleteSettings toolSettings, string query)
         {
@@ -1462,7 +1462,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventgridEventSubscriptionDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventgridEventSubscriptionDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridEventSubscriptionDeleteSettings ResetQuery(this AzureEventgridEventSubscriptionDeleteSettings toolSettings)
         {
@@ -1642,7 +1642,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventgridEventSubscriptionListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventgridEventSubscriptionListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridEventSubscriptionListSettings SetQuery(this AzureEventgridEventSubscriptionListSettings toolSettings, string query)
         {
@@ -1650,7 +1650,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventgridEventSubscriptionListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventgridEventSubscriptionListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridEventSubscriptionListSettings ResetQuery(this AzureEventgridEventSubscriptionListSettings toolSettings)
         {
@@ -1854,7 +1854,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventgridEventSubscriptionShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventgridEventSubscriptionShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridEventSubscriptionShowSettings SetQuery(this AzureEventgridEventSubscriptionShowSettings toolSettings, string query)
         {
@@ -1862,7 +1862,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventgridEventSubscriptionShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventgridEventSubscriptionShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridEventSubscriptionShowSettings ResetQuery(this AzureEventgridEventSubscriptionShowSettings toolSettings)
         {
@@ -2186,7 +2186,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventgridEventSubscriptionUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventgridEventSubscriptionUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridEventSubscriptionUpdateSettings SetQuery(this AzureEventgridEventSubscriptionUpdateSettings toolSettings, string query)
         {
@@ -2194,7 +2194,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventgridEventSubscriptionUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventgridEventSubscriptionUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridEventSubscriptionUpdateSettings ResetQuery(this AzureEventgridEventSubscriptionUpdateSettings toolSettings)
         {
@@ -2284,7 +2284,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridTopicTypeListSettings SetQuery(this AzureEventgridTopicTypeListSettings toolSettings, string query)
         {
@@ -2292,7 +2292,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridTopicTypeListSettings ResetQuery(this AzureEventgridTopicTypeListSettings toolSettings)
         {
@@ -2400,7 +2400,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeListEventTypesSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeListEventTypesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridTopicTypeListEventTypesSettings SetQuery(this AzureEventgridTopicTypeListEventTypesSettings toolSettings, string query)
         {
@@ -2408,7 +2408,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeListEventTypesSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeListEventTypesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridTopicTypeListEventTypesSettings ResetQuery(this AzureEventgridTopicTypeListEventTypesSettings toolSettings)
         {
@@ -2516,7 +2516,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridTopicTypeShowSettings SetQuery(this AzureEventgridTopicTypeShowSettings toolSettings, string query)
         {
@@ -2524,7 +2524,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridTopicTypeShowSettings ResetQuery(this AzureEventgridTopicTypeShowSettings toolSettings)
         {
@@ -2686,7 +2686,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventgridTopicCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridTopicCreateSettings SetQuery(this AzureEventgridTopicCreateSettings toolSettings, string query)
         {
@@ -2694,7 +2694,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventgridTopicCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridTopicCreateSettings ResetQuery(this AzureEventgridTopicCreateSettings toolSettings)
         {
@@ -2820,7 +2820,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventgridTopicDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridTopicDeleteSettings SetQuery(this AzureEventgridTopicDeleteSettings toolSettings, string query)
         {
@@ -2828,7 +2828,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventgridTopicDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridTopicDeleteSettings ResetQuery(this AzureEventgridTopicDeleteSettings toolSettings)
         {
@@ -2936,7 +2936,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventgridTopicListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridTopicListSettings SetQuery(this AzureEventgridTopicListSettings toolSettings, string query)
         {
@@ -2944,7 +2944,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventgridTopicListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridTopicListSettings ResetQuery(this AzureEventgridTopicListSettings toolSettings)
         {
@@ -3070,7 +3070,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventgridTopicShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridTopicShowSettings SetQuery(this AzureEventgridTopicShowSettings toolSettings, string query)
         {
@@ -3078,7 +3078,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventgridTopicShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridTopicShowSettings ResetQuery(this AzureEventgridTopicShowSettings toolSettings)
         {
@@ -3276,7 +3276,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventgridTopicUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridTopicUpdateSettings SetQuery(this AzureEventgridTopicUpdateSettings toolSettings, string query)
         {
@@ -3284,7 +3284,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventgridTopicUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridTopicUpdateSettings ResetQuery(this AzureEventgridTopicUpdateSettings toolSettings)
         {
@@ -3410,7 +3410,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventgridTopicKeyListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicKeyListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridTopicKeyListSettings SetQuery(this AzureEventgridTopicKeyListSettings toolSettings, string query)
         {
@@ -3418,7 +3418,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventgridTopicKeyListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicKeyListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridTopicKeyListSettings ResetQuery(this AzureEventgridTopicKeyListSettings toolSettings)
         {
@@ -3562,7 +3562,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventgridTopicKeyRegenerateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicKeyRegenerateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridTopicKeyRegenerateSettings SetQuery(this AzureEventgridTopicKeyRegenerateSettings toolSettings, string query)
         {
@@ -3570,7 +3570,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventgridTopicKeyRegenerateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicKeyRegenerateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureEventgridTopicKeyRegenerateSettings ResetQuery(this AzureEventgridTopicKeyRegenerateSettings toolSettings)
         {
