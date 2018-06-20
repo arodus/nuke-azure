@@ -6,9 +6,9 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/redis.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/redis/patch-schedule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/redis/patch-schedule/patch-schedule.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d896279/latest/docs-ref-autogen/redis.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d896279/latest/docs-ref-autogen/redis/patch-schedule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/d896279/latest/docs-ref-autogen/redis/patch-schedule/patch-schedule.yml"
   ],
   "name": "AzureRedis",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest",
