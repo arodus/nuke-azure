@@ -230,7 +230,7 @@ class Build : NukeBuild
             var releaseNotes = ExtractChangelogSectionNotes(ChangelogFile)
                 .Select(x => x.Replace("- ", "\u2022 ").Replace("`", string.Empty).Replace(",", "%2C"))
                 .Concat(string.Empty)
-                .Concat($"Full changelog at {GitRepository.GetGitHubBrowseUrl(ChangelogFile)}")
+                .Concat($"Full changelog at {GitRepository.SetBranch("master").GetGitHubBrowseUrl(ChangelogFile)}")
                 .JoinNewLine();
 
             DotNetPack(s => DefaultDotNetPack
