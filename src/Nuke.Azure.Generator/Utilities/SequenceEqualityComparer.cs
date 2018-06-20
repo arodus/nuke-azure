@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Nuke.Azure.Generator.Utility
+namespace Nuke.Azure.Generator.Utilities
 {
     [Serializable]
     internal class SequenceEqualityComparer : IEqualityComparer<string[]>

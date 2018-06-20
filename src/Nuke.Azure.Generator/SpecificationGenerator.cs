@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Nuke.Azure.Generator.Model;
-using Nuke.Azure.Generator.Utility;
+using Nuke.Azure.Generator.Utilities;
 using Nuke.CodeGeneration.Model;
 using Nuke.Common;
 

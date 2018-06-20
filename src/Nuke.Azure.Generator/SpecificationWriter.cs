@@ -8,7 +8,7 @@ using System.IO;
 using System.Linq;
 using Newtonsoft.Json;
 using Nuke.Azure.Generator.Model;
-using Nuke.Azure.Generator.Utility;
+using Nuke.Azure.Generator.Utilities;
 using Nuke.Common;
 
 namespace Nuke.Azure.Generator

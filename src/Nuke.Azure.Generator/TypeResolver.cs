@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using JetBrains.Annotations;
 using Nuke.Azure.Generator.Model;
-using Nuke.Azure.Generator.Utility;
+using Nuke.Azure.Generator.Utilities;
 using Nuke.Core;
 using Nuke.Core.Utilities;
 

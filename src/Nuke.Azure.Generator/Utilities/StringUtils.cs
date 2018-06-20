@@ -8,7 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using JetBrains.Annotations;
 
-namespace Nuke.Azure.Generator.Utility
+namespace Nuke.Azure.Generator.Utilities
 {
     internal static class StringUtils
     {

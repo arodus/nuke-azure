@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using JetBrains.Annotations;
 using Newtonsoft.Json;
-using Nuke.Azure.Generator.Utility;
+using Nuke.Azure.Generator.Utilities;
 
 namespace Nuke.Azure.Generator.Model
 {
