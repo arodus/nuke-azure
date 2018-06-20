@@ -45,72 +45,6 @@ namespace Nuke.Azure
             process.AssertZeroExitCode();
             PostProcess(toolSettings);
         }
-        static partial void PreProcess(AzureDlsAccountCreateSettings toolSettings);
-        static partial void PostProcess(AzureDlsAccountCreateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDlsAccountCreate(Configure<AzureDlsAccountCreateSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureDlsAccountDeleteSettings toolSettings);
-        static partial void PostProcess(AzureDlsAccountDeleteSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDlsAccountDelete(Configure<AzureDlsAccountDeleteSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureDlsAccountEnableKeyVaultSettings toolSettings);
-        static partial void PostProcess(AzureDlsAccountEnableKeyVaultSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDlsAccountEnableKeyVault(Configure<AzureDlsAccountEnableKeyVaultSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountEnableKeyVaultSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureDlsAccountListSettings toolSettings);
-        static partial void PostProcess(AzureDlsAccountListSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDlsAccountList(Configure<AzureDlsAccountListSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureDlsAccountShowSettings toolSettings);
-        static partial void PostProcess(AzureDlsAccountShowSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDlsAccountShow(Configure<AzureDlsAccountShowSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureDlsAccountUpdateSettings toolSettings);
-        static partial void PostProcess(AzureDlsAccountUpdateSettings toolSettings);
-        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDlsAccountUpdate(Configure<AzureDlsAccountUpdateSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
         static partial void PreProcess(AzureDlsFsAppendSettings toolSettings);
         static partial void PostProcess(AzureDlsFsAppendSettings toolSettings);
         /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
@@ -249,6 +183,72 @@ namespace Nuke.Azure
         public static void AzureDlsFsUpload(Configure<AzureDlsFsUploadSettings> configurator = null, ProcessSettings processSettings = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDlsFsUploadSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureDlsAccountCreateSettings toolSettings);
+        static partial void PostProcess(AzureDlsAccountCreateSettings toolSettings);
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureDlsAccountCreate(Configure<AzureDlsAccountCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountCreateSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureDlsAccountDeleteSettings toolSettings);
+        static partial void PostProcess(AzureDlsAccountDeleteSettings toolSettings);
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureDlsAccountDelete(Configure<AzureDlsAccountDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountDeleteSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureDlsAccountEnableKeyVaultSettings toolSettings);
+        static partial void PostProcess(AzureDlsAccountEnableKeyVaultSettings toolSettings);
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureDlsAccountEnableKeyVault(Configure<AzureDlsAccountEnableKeyVaultSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountEnableKeyVaultSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureDlsAccountListSettings toolSettings);
+        static partial void PostProcess(AzureDlsAccountListSettings toolSettings);
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureDlsAccountList(Configure<AzureDlsAccountListSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountListSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureDlsAccountShowSettings toolSettings);
+        static partial void PostProcess(AzureDlsAccountShowSettings toolSettings);
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureDlsAccountShow(Configure<AzureDlsAccountShowSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountShowSettings());
+            PreProcess(toolSettings);
+            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            process.AssertZeroExitCode();
+            PostProcess(toolSettings);
+        }
+        static partial void PreProcess(AzureDlsAccountUpdateSettings toolSettings);
+        static partial void PostProcess(AzureDlsAccountUpdateSettings toolSettings);
+        /// <summary><p>(PREVIEW) Manage Data Lake Store accounts and filesystems.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p></summary>
+        public static void AzureDlsAccountUpdate(Configure<AzureDlsAccountUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureDlsAccountUpdateSettings());
             PreProcess(toolSettings);
             var process = ProcessTasks.StartProcess(toolSettings, processSettings);
             process.AssertZeroExitCode();
@@ -457,7 +457,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -465,279 +465,6 @@ namespace Nuke.Azure
         {
             arguments
               .Add("dls")
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlsAccountCreateSettings
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlsAccountCreateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDls executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>Name of the default group to give permissions to for freshly created files and folders in the Data Lake Store account.</p></summary>
-        public virtual string DefaultGroup { get; internal set; }
-        /// <summary><p>Indicates that the account will not have any form of encryption applied to it.</p></summary>
-        public virtual string DisableEncryption { get; internal set; }
-        /// <summary><p>Indicates what type of encryption to provision the account with. By default, encryption is ServiceManaged. If no encryption is desired, it must be explicitly set with the --disable-encryption flag.</p></summary>
-        public virtual DlsAccountCreateEncryptionType EncryptionType { get; internal set; }
-        /// <summary><p>Key name for the user-assigned encryption type.</p></summary>
-        public virtual string KeyName { get; internal set; }
-        /// <summary><p>Key vault for the user-assigned encryption type.</p></summary>
-        public virtual string KeyVaultId { get; internal set; }
-        /// <summary><p>Key version for the user-assigned encryption type.</p></summary>
-        public virtual string KeyVersion { get; internal set; }
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        public virtual string Location { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        public virtual string Tags { get; internal set; }
-        /// <summary><p>The desired commitment tier for this account to use.</p></summary>
-        public virtual DlsAccountTier Tier { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dls account create")
-              .Add("--account {value}", Account)
-              .Add("--default-group {value}", DefaultGroup)
-              .Add("--disable-encryption {value}", DisableEncryption)
-              .Add("--encryption-type {value}", EncryptionType)
-              .Add("--key-name {value}", KeyName)
-              .Add("--key-vault-id {value}", KeyVaultId)
-              .Add("--key-version {value}", KeyVersion)
-              .Add("--location {value}", Location)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--tags {value}", Tags)
-              .Add("--tier {value}", Tier)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlsAccountDeleteSettings
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlsAccountDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDls executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dls account delete")
-              .Add("--account {value}", Account)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlsAccountEnableKeyVaultSettings
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlsAccountEnableKeyVaultSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDls executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dls account enable-key-vault")
-              .Add("--account {value}", Account)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlsAccountListSettings
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlsAccountListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDls executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dls account list")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlsAccountShowSettings
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlsAccountShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDls executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dls account show")
-              .Add("--account {value}", Account)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlsAccountUpdateSettings
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlsAccountUpdateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureDls executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        /// <summary><p>Name of the Data Lake Store account.</p></summary>
-        public virtual string Account { get; internal set; }
-        /// <summary><p>Allow/block Azure originating IPs through the firewall.</p></summary>
-        public virtual DlsAccountUpdateAllowAzureIps AllowAzureIps { get; internal set; }
-        /// <summary><p></p></summary>
-        public virtual string DefaultGroup { get; internal set; }
-        /// <summary><p>Enable/disable existing firewall rules.</p></summary>
-        public virtual DlsAccountUpdateAllowAzureIps FirewallState { get; internal set; }
-        /// <summary><p></p></summary>
-        public virtual string KeyVersion { get; internal set; }
-        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        public virtual string Tags { get; internal set; }
-        /// <summary><p>The desired commitment tier for this account to use.</p></summary>
-        public virtual DlsAccountTier Tier { get; internal set; }
-        /// <summary><p>Enable/disable the existing trusted ID providers.</p></summary>
-        public virtual DlsAccountUpdateAllowAzureIps TrustedIdProviderState { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dls account update")
-              .Add("--account {value}", Account)
-              .Add("--allow-azure-ips {value}", AllowAzureIps)
-              .Add("--default-group {value}", DefaultGroup)
-              .Add("--firewall-state {value}", FirewallState)
-              .Add("--key-version {value}", KeyVersion)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--tags {value}", Tags)
-              .Add("--tier {value}", Tier)
-              .Add("--trusted-id-provider-state {value}", TrustedIdProviderState)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -768,7 +495,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -813,7 +540,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -856,7 +583,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -909,7 +636,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -958,7 +685,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -998,7 +725,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1040,7 +767,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1086,7 +813,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1127,7 +854,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1167,7 +894,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1206,7 +933,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1244,7 +971,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1296,7 +1023,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1313,6 +1040,279 @@ namespace Nuke.Azure
               .Add("--overwrite {value}", Overwrite)
               .Add("--progress-callback {value}", ProgressCallback)
               .Add("--thread-count {value}", ThreadCount)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountCreateSettings
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDls executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>Name of the default group to give permissions to for freshly created files and folders in the Data Lake Store account.</p></summary>
+        public virtual string DefaultGroup { get; internal set; }
+        /// <summary><p>Indicates that the account will not have any form of encryption applied to it.</p></summary>
+        public virtual string DisableEncryption { get; internal set; }
+        /// <summary><p>Indicates what type of encryption to provision the account with. By default, encryption is ServiceManaged. If no encryption is desired, it must be explicitly set with the --disable-encryption flag.</p></summary>
+        public virtual DlsAccountCreateEncryptionType EncryptionType { get; internal set; }
+        /// <summary><p>Key name for the user-assigned encryption type.</p></summary>
+        public virtual string KeyName { get; internal set; }
+        /// <summary><p>Key vault for the user-assigned encryption type.</p></summary>
+        public virtual string KeyVaultId { get; internal set; }
+        /// <summary><p>Key version for the user-assigned encryption type.</p></summary>
+        public virtual string KeyVersion { get; internal set; }
+        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        public virtual string Location { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        public virtual string Tags { get; internal set; }
+        /// <summary><p>The desired commitment tier for this account to use.</p></summary>
+        public virtual DlsAccountTier Tier { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account create")
+              .Add("--account {value}", Account)
+              .Add("--default-group {value}", DefaultGroup)
+              .Add("--disable-encryption {value}", DisableEncryption)
+              .Add("--encryption-type {value}", EncryptionType)
+              .Add("--key-name {value}", KeyName)
+              .Add("--key-vault-id {value}", KeyVaultId)
+              .Add("--key-version {value}", KeyVersion)
+              .Add("--location {value}", Location)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--tags {value}", Tags)
+              .Add("--tier {value}", Tier)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountDeleteSettings
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDls executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account delete")
+              .Add("--account {value}", Account)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountEnableKeyVaultSettings
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountEnableKeyVaultSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDls executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account enable-key-vault")
+              .Add("--account {value}", Account)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountListSettings
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDls executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account list")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountShowSettings
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDls executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account show")
+              .Add("--account {value}", Account)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountUpdateSettings
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountUpdateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureDls executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        /// <summary><p>Name of the Data Lake Store account.</p></summary>
+        public virtual string Account { get; internal set; }
+        /// <summary><p>Allow/block Azure originating IPs through the firewall.</p></summary>
+        public virtual DlsAccountUpdateAllowAzureIps AllowAzureIps { get; internal set; }
+        /// <summary><p></p></summary>
+        public virtual string DefaultGroup { get; internal set; }
+        /// <summary><p>Enable/disable existing firewall rules.</p></summary>
+        public virtual DlsAccountUpdateAllowAzureIps FirewallState { get; internal set; }
+        /// <summary><p></p></summary>
+        public virtual string KeyVersion { get; internal set; }
+        /// <summary><p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        public virtual string Tags { get; internal set; }
+        /// <summary><p>The desired commitment tier for this account to use.</p></summary>
+        public virtual DlsAccountTier Tier { get; internal set; }
+        /// <summary><p>Enable/disable the existing trusted ID providers.</p></summary>
+        public virtual DlsAccountUpdateAllowAzureIps TrustedIdProviderState { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual Output Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account update")
+              .Add("--account {value}", Account)
+              .Add("--allow-azure-ips {value}", AllowAzureIps)
+              .Add("--default-group {value}", DefaultGroup)
+              .Add("--firewall-state {value}", FirewallState)
+              .Add("--key-version {value}", KeyVersion)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--tags {value}", Tags)
+              .Add("--tier {value}", Tier)
+              .Add("--trusted-id-provider-state {value}", TrustedIdProviderState)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1347,7 +1347,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1390,7 +1390,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1429,7 +1429,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1469,7 +1469,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1514,7 +1514,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1561,7 +1561,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1604,7 +1604,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1643,7 +1643,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1683,7 +1683,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1726,7 +1726,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1768,7 +1768,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1809,7 +1809,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1850,7 +1850,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1891,7 +1891,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1934,7 +1934,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -1976,7 +1976,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -2015,7 +2015,7 @@ namespace Nuke.Azure
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
         public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         public virtual string Verbose { get; internal set; }
@@ -2095,7 +2095,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsSettings SetQuery(this AzureDlsSettings toolSettings, string query)
         {
@@ -2103,7 +2103,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsSettings ResetQuery(this AzureDlsSettings toolSettings)
         {
@@ -2124,6 +2124,2234 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureDlsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureDlsSettings ResetVerbose(this AzureDlsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsFsAppendSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsFsAppendSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAppendSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsAppendSettings SetAccount(this AzureDlsFsAppendSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsAppendSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsAppendSettings ResetAccount(this AzureDlsFsAppendSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Content
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAppendSettings.Content"/>.</em></p><p>Content to be appended to the file.</p></summary>
+        [Pure]
+        public static AzureDlsFsAppendSettings SetContent(this AzureDlsFsAppendSettings toolSettings, string content)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Content = content;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsAppendSettings.Content"/>.</em></p><p>Content to be appended to the file.</p></summary>
+        [Pure]
+        public static AzureDlsFsAppendSettings ResetContent(this AzureDlsFsAppendSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Content = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Path
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAppendSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        [Pure]
+        public static AzureDlsFsAppendSettings SetPath(this AzureDlsFsAppendSettings toolSettings, string path)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Path = path;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsAppendSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        [Pure]
+        public static AzureDlsFsAppendSettings ResetPath(this AzureDlsFsAppendSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Path = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAppendSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsAppendSettings SetDebug(this AzureDlsFsAppendSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsAppendSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsAppendSettings ResetDebug(this AzureDlsFsAppendSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAppendSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsFsAppendSettings SetHelp(this AzureDlsFsAppendSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsAppendSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsFsAppendSettings ResetHelp(this AzureDlsFsAppendSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAppendSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsFsAppendSettings SetOutput(this AzureDlsFsAppendSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsAppendSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsFsAppendSettings ResetOutput(this AzureDlsFsAppendSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAppendSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsFsAppendSettings SetQuery(this AzureDlsFsAppendSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsAppendSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsFsAppendSettings ResetQuery(this AzureDlsFsAppendSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAppendSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsAppendSettings SetVerbose(this AzureDlsFsAppendSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsAppendSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsAppendSettings ResetVerbose(this AzureDlsFsAppendSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsFsCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsFsCreateSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsFsCreateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsCreateSettings SetAccount(this AzureDlsFsCreateSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsCreateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsCreateSettings ResetAccount(this AzureDlsFsCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Path
+        /// <summary><p><em>Sets <see cref="AzureDlsFsCreateSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        [Pure]
+        public static AzureDlsFsCreateSettings SetPath(this AzureDlsFsCreateSettings toolSettings, string path)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Path = path;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsCreateSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        [Pure]
+        public static AzureDlsFsCreateSettings ResetPath(this AzureDlsFsCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Path = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Content
+        /// <summary><p><em>Sets <see cref="AzureDlsFsCreateSettings.Content"/>.</em></p><p>Content for the file to contain upon creation.</p></summary>
+        [Pure]
+        public static AzureDlsFsCreateSettings SetContent(this AzureDlsFsCreateSettings toolSettings, string content)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Content = content;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsCreateSettings.Content"/>.</em></p><p>Content for the file to contain upon creation.</p></summary>
+        [Pure]
+        public static AzureDlsFsCreateSettings ResetContent(this AzureDlsFsCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Content = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Folder
+        /// <summary><p><em>Sets <see cref="AzureDlsFsCreateSettings.Folder"/>.</em></p><p>Indicates that this new item is a folder and not a file.</p></summary>
+        [Pure]
+        public static AzureDlsFsCreateSettings SetFolder(this AzureDlsFsCreateSettings toolSettings, string folder)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Folder = folder;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsCreateSettings.Folder"/>.</em></p><p>Indicates that this new item is a folder and not a file.</p></summary>
+        [Pure]
+        public static AzureDlsFsCreateSettings ResetFolder(this AzureDlsFsCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Folder = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Force
+        /// <summary><p><em>Sets <see cref="AzureDlsFsCreateSettings.Force"/>.</em></p><p>Indicates that, if the file or folder exists, it should be overwritten.</p></summary>
+        [Pure]
+        public static AzureDlsFsCreateSettings SetForce(this AzureDlsFsCreateSettings toolSettings, string force)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Force = force;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsCreateSettings.Force"/>.</em></p><p>Indicates that, if the file or folder exists, it should be overwritten.</p></summary>
+        [Pure]
+        public static AzureDlsFsCreateSettings ResetForce(this AzureDlsFsCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Force = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsFsCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsCreateSettings SetDebug(this AzureDlsFsCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsCreateSettings ResetDebug(this AzureDlsFsCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsFsCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsFsCreateSettings SetHelp(this AzureDlsFsCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsFsCreateSettings ResetHelp(this AzureDlsFsCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsFsCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsFsCreateSettings SetOutput(this AzureDlsFsCreateSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsFsCreateSettings ResetOutput(this AzureDlsFsCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsFsCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsFsCreateSettings SetQuery(this AzureDlsFsCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsFsCreateSettings ResetQuery(this AzureDlsFsCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsFsCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsCreateSettings SetVerbose(this AzureDlsFsCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsCreateSettings ResetVerbose(this AzureDlsFsCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsFsDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsFsDeleteSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsFsDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsDeleteSettings SetAccount(this AzureDlsFsDeleteSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsDeleteSettings ResetAccount(this AzureDlsFsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Path
+        /// <summary><p><em>Sets <see cref="AzureDlsFsDeleteSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        [Pure]
+        public static AzureDlsFsDeleteSettings SetPath(this AzureDlsFsDeleteSettings toolSettings, string path)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Path = path;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsDeleteSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        [Pure]
+        public static AzureDlsFsDeleteSettings ResetPath(this AzureDlsFsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Path = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Recurse
+        /// <summary><p><em>Sets <see cref="AzureDlsFsDeleteSettings.Recurse"/>.</em></p><p>Indicates this should be a recursive delete of the folder.</p></summary>
+        [Pure]
+        public static AzureDlsFsDeleteSettings SetRecurse(this AzureDlsFsDeleteSettings toolSettings, string recurse)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Recurse = recurse;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsDeleteSettings.Recurse"/>.</em></p><p>Indicates this should be a recursive delete of the folder.</p></summary>
+        [Pure]
+        public static AzureDlsFsDeleteSettings ResetRecurse(this AzureDlsFsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Recurse = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsFsDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsDeleteSettings SetDebug(this AzureDlsFsDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsDeleteSettings ResetDebug(this AzureDlsFsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsFsDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsFsDeleteSettings SetHelp(this AzureDlsFsDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsFsDeleteSettings ResetHelp(this AzureDlsFsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsFsDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsFsDeleteSettings SetOutput(this AzureDlsFsDeleteSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsFsDeleteSettings ResetOutput(this AzureDlsFsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsFsDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsFsDeleteSettings SetQuery(this AzureDlsFsDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsFsDeleteSettings ResetQuery(this AzureDlsFsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsFsDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsDeleteSettings SetVerbose(this AzureDlsFsDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsDeleteSettings ResetVerbose(this AzureDlsFsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsFsDownloadSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsFsDownloadSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings SetAccount(this AzureDlsFsDownloadSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsDownloadSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings ResetAccount(this AzureDlsFsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DestinationPath
+        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.DestinationPath"/>.</em></p><p>The local path where the file or folder will be downloaded to.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings SetDestinationPath(this AzureDlsFsDownloadSettings toolSettings, string destinationPath)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DestinationPath = destinationPath;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsDownloadSettings.DestinationPath"/>.</em></p><p>The local path where the file or folder will be downloaded to.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings ResetDestinationPath(this AzureDlsFsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DestinationPath = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SourcePath
+        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.SourcePath"/>.</em></p><p>The full path in the Data Lake Store filesystem to download the file or folder from.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings SetSourcePath(this AzureDlsFsDownloadSettings toolSettings, string sourcePath)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SourcePath = sourcePath;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsDownloadSettings.SourcePath"/>.</em></p><p>The full path in the Data Lake Store filesystem to download the file or folder from.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings ResetSourcePath(this AzureDlsFsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SourcePath = null;
+            return toolSettings;
+        }
+        #endregion
+        #region BlockSize
+        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.BlockSize"/>.</em></p><p>Size of a block, in bytes.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings SetBlockSize(this AzureDlsFsDownloadSettings toolSettings, string blockSize)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BlockSize = blockSize;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsDownloadSettings.BlockSize"/>.</em></p><p>Size of a block, in bytes.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings ResetBlockSize(this AzureDlsFsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BlockSize = null;
+            return toolSettings;
+        }
+        #endregion
+        #region BufferSize
+        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.BufferSize"/>.</em></p><p>Size of the transfer buffer, in bytes.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings SetBufferSize(this AzureDlsFsDownloadSettings toolSettings, string bufferSize)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BufferSize = bufferSize;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsDownloadSettings.BufferSize"/>.</em></p><p>Size of the transfer buffer, in bytes.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings ResetBufferSize(this AzureDlsFsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BufferSize = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ChunkSize
+        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.ChunkSize"/>.</em></p><p>Size of a chunk, in bytes.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings SetChunkSize(this AzureDlsFsDownloadSettings toolSettings, string chunkSize)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ChunkSize = chunkSize;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsDownloadSettings.ChunkSize"/>.</em></p><p>Size of a chunk, in bytes.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings ResetChunkSize(this AzureDlsFsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ChunkSize = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Overwrite
+        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.Overwrite"/>.</em></p><p>Indicates that, if the destination file or folder exists, it should be overwritten.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings SetOverwrite(this AzureDlsFsDownloadSettings toolSettings, string overwrite)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Overwrite = overwrite;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsDownloadSettings.Overwrite"/>.</em></p><p>Indicates that, if the destination file or folder exists, it should be overwritten.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings ResetOverwrite(this AzureDlsFsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Overwrite = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ProgressCallback
+        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.ProgressCallback"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings SetProgressCallback(this AzureDlsFsDownloadSettings toolSettings, string progressCallback)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ProgressCallback = progressCallback;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsDownloadSettings.ProgressCallback"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings ResetProgressCallback(this AzureDlsFsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ProgressCallback = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ThreadCount
+        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.ThreadCount"/>.</em></p><p>Parallelism of the download. Default: The number of cores in the local machine.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings SetThreadCount(this AzureDlsFsDownloadSettings toolSettings, string threadCount)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ThreadCount = threadCount;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsDownloadSettings.ThreadCount"/>.</em></p><p>Parallelism of the download. Default: The number of cores in the local machine.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings ResetThreadCount(this AzureDlsFsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ThreadCount = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings SetDebug(this AzureDlsFsDownloadSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsDownloadSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings ResetDebug(this AzureDlsFsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings SetHelp(this AzureDlsFsDownloadSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsDownloadSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings ResetHelp(this AzureDlsFsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings SetOutput(this AzureDlsFsDownloadSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsDownloadSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings ResetOutput(this AzureDlsFsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings SetQuery(this AzureDlsFsDownloadSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsDownloadSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings ResetQuery(this AzureDlsFsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings SetVerbose(this AzureDlsFsDownloadSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsDownloadSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsDownloadSettings ResetVerbose(this AzureDlsFsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsFsJoinSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsFsJoinSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsFsJoinSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsJoinSettings SetAccount(this AzureDlsFsJoinSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsJoinSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsJoinSettings ResetAccount(this AzureDlsFsJoinSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DestinationPath
+        /// <summary><p><em>Sets <see cref="AzureDlsFsJoinSettings.DestinationPath"/>.</em></p><p>The destination path in the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsJoinSettings SetDestinationPath(this AzureDlsFsJoinSettings toolSettings, string destinationPath)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DestinationPath = destinationPath;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsJoinSettings.DestinationPath"/>.</em></p><p>The destination path in the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsJoinSettings ResetDestinationPath(this AzureDlsFsJoinSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DestinationPath = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SourcePaths
+        /// <summary><p><em>Sets <see cref="AzureDlsFsJoinSettings.SourcePaths"/>.</em></p><p>The space-separated list of files in the Data Lake Store account to join.</p></summary>
+        [Pure]
+        public static AzureDlsFsJoinSettings SetSourcePaths(this AzureDlsFsJoinSettings toolSettings, string sourcePaths)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SourcePaths = sourcePaths;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsJoinSettings.SourcePaths"/>.</em></p><p>The space-separated list of files in the Data Lake Store account to join.</p></summary>
+        [Pure]
+        public static AzureDlsFsJoinSettings ResetSourcePaths(this AzureDlsFsJoinSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SourcePaths = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Force
+        /// <summary><p><em>Sets <see cref="AzureDlsFsJoinSettings.Force"/>.</em></p><p>Indicates that, if the destination file already exists, it should be overwritten.</p></summary>
+        [Pure]
+        public static AzureDlsFsJoinSettings SetForce(this AzureDlsFsJoinSettings toolSettings, string force)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Force = force;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsJoinSettings.Force"/>.</em></p><p>Indicates that, if the destination file already exists, it should be overwritten.</p></summary>
+        [Pure]
+        public static AzureDlsFsJoinSettings ResetForce(this AzureDlsFsJoinSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Force = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsFsJoinSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsJoinSettings SetDebug(this AzureDlsFsJoinSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsJoinSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsJoinSettings ResetDebug(this AzureDlsFsJoinSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsFsJoinSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsFsJoinSettings SetHelp(this AzureDlsFsJoinSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsJoinSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsFsJoinSettings ResetHelp(this AzureDlsFsJoinSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsFsJoinSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsFsJoinSettings SetOutput(this AzureDlsFsJoinSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsJoinSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsFsJoinSettings ResetOutput(this AzureDlsFsJoinSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsFsJoinSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsFsJoinSettings SetQuery(this AzureDlsFsJoinSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsJoinSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsFsJoinSettings ResetQuery(this AzureDlsFsJoinSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsFsJoinSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsJoinSettings SetVerbose(this AzureDlsFsJoinSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsJoinSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsJoinSettings ResetVerbose(this AzureDlsFsJoinSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsFsListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsFsListSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsFsListSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsListSettings SetAccount(this AzureDlsFsListSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsListSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsListSettings ResetAccount(this AzureDlsFsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Path
+        /// <summary><p><em>Sets <see cref="AzureDlsFsListSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        [Pure]
+        public static AzureDlsFsListSettings SetPath(this AzureDlsFsListSettings toolSettings, string path)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Path = path;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsListSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        [Pure]
+        public static AzureDlsFsListSettings ResetPath(this AzureDlsFsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Path = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsFsListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsListSettings SetDebug(this AzureDlsFsListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsListSettings ResetDebug(this AzureDlsFsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsFsListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsFsListSettings SetHelp(this AzureDlsFsListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsFsListSettings ResetHelp(this AzureDlsFsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsFsListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsFsListSettings SetOutput(this AzureDlsFsListSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsFsListSettings ResetOutput(this AzureDlsFsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsFsListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsFsListSettings SetQuery(this AzureDlsFsListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsFsListSettings ResetQuery(this AzureDlsFsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsFsListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsListSettings SetVerbose(this AzureDlsFsListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsListSettings ResetVerbose(this AzureDlsFsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsFsMoveSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsFsMoveSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsFsMoveSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsMoveSettings SetAccount(this AzureDlsFsMoveSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsMoveSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsMoveSettings ResetAccount(this AzureDlsFsMoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DestinationPath
+        /// <summary><p><em>Sets <see cref="AzureDlsFsMoveSettings.DestinationPath"/>.</em></p><p>The destination path in the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsMoveSettings SetDestinationPath(this AzureDlsFsMoveSettings toolSettings, string destinationPath)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DestinationPath = destinationPath;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsMoveSettings.DestinationPath"/>.</em></p><p>The destination path in the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsMoveSettings ResetDestinationPath(this AzureDlsFsMoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DestinationPath = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SourcePath
+        /// <summary><p><em>Sets <see cref="AzureDlsFsMoveSettings.SourcePath"/>.</em></p><p>The file or folder to move.</p></summary>
+        [Pure]
+        public static AzureDlsFsMoveSettings SetSourcePath(this AzureDlsFsMoveSettings toolSettings, string sourcePath)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SourcePath = sourcePath;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsMoveSettings.SourcePath"/>.</em></p><p>The file or folder to move.</p></summary>
+        [Pure]
+        public static AzureDlsFsMoveSettings ResetSourcePath(this AzureDlsFsMoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SourcePath = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Force
+        /// <summary><p><em>Sets <see cref="AzureDlsFsMoveSettings.Force"/>.</em></p><p>Indicates that, if the destination file or folder already exists, it should be overwritten and replaced with the file or folder being moved.</p></summary>
+        [Pure]
+        public static AzureDlsFsMoveSettings SetForce(this AzureDlsFsMoveSettings toolSettings, string force)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Force = force;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsMoveSettings.Force"/>.</em></p><p>Indicates that, if the destination file or folder already exists, it should be overwritten and replaced with the file or folder being moved.</p></summary>
+        [Pure]
+        public static AzureDlsFsMoveSettings ResetForce(this AzureDlsFsMoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Force = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsFsMoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsMoveSettings SetDebug(this AzureDlsFsMoveSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsMoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsMoveSettings ResetDebug(this AzureDlsFsMoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsFsMoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsFsMoveSettings SetHelp(this AzureDlsFsMoveSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsMoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsFsMoveSettings ResetHelp(this AzureDlsFsMoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsFsMoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsFsMoveSettings SetOutput(this AzureDlsFsMoveSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsMoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsFsMoveSettings ResetOutput(this AzureDlsFsMoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsFsMoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsFsMoveSettings SetQuery(this AzureDlsFsMoveSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsMoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsFsMoveSettings ResetQuery(this AzureDlsFsMoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsFsMoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsMoveSettings SetVerbose(this AzureDlsFsMoveSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsMoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsMoveSettings ResetVerbose(this AzureDlsFsMoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsFsPreviewSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsFsPreviewSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsFsPreviewSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsPreviewSettings SetAccount(this AzureDlsFsPreviewSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsPreviewSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsPreviewSettings ResetAccount(this AzureDlsFsPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Path
+        /// <summary><p><em>Sets <see cref="AzureDlsFsPreviewSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        [Pure]
+        public static AzureDlsFsPreviewSettings SetPath(this AzureDlsFsPreviewSettings toolSettings, string path)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Path = path;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsPreviewSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        [Pure]
+        public static AzureDlsFsPreviewSettings ResetPath(this AzureDlsFsPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Path = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Force
+        /// <summary><p><em>Sets <see cref="AzureDlsFsPreviewSettings.Force"/>.</em></p><p>Indicates that, if the preview is larger than 1MB, still retrieve it. This can potentially be very slow, depending on how large the file is.</p></summary>
+        [Pure]
+        public static AzureDlsFsPreviewSettings SetForce(this AzureDlsFsPreviewSettings toolSettings, string force)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Force = force;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsPreviewSettings.Force"/>.</em></p><p>Indicates that, if the preview is larger than 1MB, still retrieve it. This can potentially be very slow, depending on how large the file is.</p></summary>
+        [Pure]
+        public static AzureDlsFsPreviewSettings ResetForce(this AzureDlsFsPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Force = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Length
+        /// <summary><p><em>Sets <see cref="AzureDlsFsPreviewSettings.Length"/>.</em></p><p>The amount of data to preview in bytes.</p></summary>
+        [Pure]
+        public static AzureDlsFsPreviewSettings SetLength(this AzureDlsFsPreviewSettings toolSettings, string length)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Length = length;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsPreviewSettings.Length"/>.</em></p><p>The amount of data to preview in bytes.</p></summary>
+        [Pure]
+        public static AzureDlsFsPreviewSettings ResetLength(this AzureDlsFsPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Length = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Offset
+        /// <summary><p><em>Sets <see cref="AzureDlsFsPreviewSettings.Offset"/>.</em></p><p>The position in bytes to start the preview from.</p></summary>
+        [Pure]
+        public static AzureDlsFsPreviewSettings SetOffset(this AzureDlsFsPreviewSettings toolSettings, string offset)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Offset = offset;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsPreviewSettings.Offset"/>.</em></p><p>The position in bytes to start the preview from.</p></summary>
+        [Pure]
+        public static AzureDlsFsPreviewSettings ResetOffset(this AzureDlsFsPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Offset = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsFsPreviewSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsPreviewSettings SetDebug(this AzureDlsFsPreviewSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsPreviewSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsPreviewSettings ResetDebug(this AzureDlsFsPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsFsPreviewSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsFsPreviewSettings SetHelp(this AzureDlsFsPreviewSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsPreviewSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsFsPreviewSettings ResetHelp(this AzureDlsFsPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsFsPreviewSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsFsPreviewSettings SetOutput(this AzureDlsFsPreviewSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsPreviewSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsFsPreviewSettings ResetOutput(this AzureDlsFsPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsFsPreviewSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsFsPreviewSettings SetQuery(this AzureDlsFsPreviewSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsPreviewSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsFsPreviewSettings ResetQuery(this AzureDlsFsPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsFsPreviewSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsPreviewSettings SetVerbose(this AzureDlsFsPreviewSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsPreviewSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsPreviewSettings ResetVerbose(this AzureDlsFsPreviewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsFsRemoveExpirySettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsFsRemoveExpirySettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsFsRemoveExpirySettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsRemoveExpirySettings SetAccount(this AzureDlsFsRemoveExpirySettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsRemoveExpirySettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsRemoveExpirySettings ResetAccount(this AzureDlsFsRemoveExpirySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Path
+        /// <summary><p><em>Sets <see cref="AzureDlsFsRemoveExpirySettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        [Pure]
+        public static AzureDlsFsRemoveExpirySettings SetPath(this AzureDlsFsRemoveExpirySettings toolSettings, string path)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Path = path;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsRemoveExpirySettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        [Pure]
+        public static AzureDlsFsRemoveExpirySettings ResetPath(this AzureDlsFsRemoveExpirySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Path = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsFsRemoveExpirySettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsRemoveExpirySettings SetDebug(this AzureDlsFsRemoveExpirySettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsRemoveExpirySettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsRemoveExpirySettings ResetDebug(this AzureDlsFsRemoveExpirySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsFsRemoveExpirySettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsFsRemoveExpirySettings SetHelp(this AzureDlsFsRemoveExpirySettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsRemoveExpirySettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsFsRemoveExpirySettings ResetHelp(this AzureDlsFsRemoveExpirySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsFsRemoveExpirySettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsFsRemoveExpirySettings SetOutput(this AzureDlsFsRemoveExpirySettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsRemoveExpirySettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsFsRemoveExpirySettings ResetOutput(this AzureDlsFsRemoveExpirySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsFsRemoveExpirySettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsFsRemoveExpirySettings SetQuery(this AzureDlsFsRemoveExpirySettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsRemoveExpirySettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsFsRemoveExpirySettings ResetQuery(this AzureDlsFsRemoveExpirySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsFsRemoveExpirySettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsRemoveExpirySettings SetVerbose(this AzureDlsFsRemoveExpirySettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsRemoveExpirySettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsRemoveExpirySettings ResetVerbose(this AzureDlsFsRemoveExpirySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsFsSetExpirySettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsFsSetExpirySettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsFsSetExpirySettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsSetExpirySettings SetAccount(this AzureDlsFsSetExpirySettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsSetExpirySettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsSetExpirySettings ResetAccount(this AzureDlsFsSetExpirySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ExpirationTime
+        /// <summary><p><em>Sets <see cref="AzureDlsFsSetExpirySettings.ExpirationTime"/>.</em></p><p>The absolute value of the expiration time expressed as milliseconds since the epoch.</p></summary>
+        [Pure]
+        public static AzureDlsFsSetExpirySettings SetExpirationTime(this AzureDlsFsSetExpirySettings toolSettings, string expirationTime)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ExpirationTime = expirationTime;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsSetExpirySettings.ExpirationTime"/>.</em></p><p>The absolute value of the expiration time expressed as milliseconds since the epoch.</p></summary>
+        [Pure]
+        public static AzureDlsFsSetExpirySettings ResetExpirationTime(this AzureDlsFsSetExpirySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ExpirationTime = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Path
+        /// <summary><p><em>Sets <see cref="AzureDlsFsSetExpirySettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        [Pure]
+        public static AzureDlsFsSetExpirySettings SetPath(this AzureDlsFsSetExpirySettings toolSettings, string path)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Path = path;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsSetExpirySettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        [Pure]
+        public static AzureDlsFsSetExpirySettings ResetPath(this AzureDlsFsSetExpirySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Path = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsFsSetExpirySettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsSetExpirySettings SetDebug(this AzureDlsFsSetExpirySettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsSetExpirySettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsSetExpirySettings ResetDebug(this AzureDlsFsSetExpirySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsFsSetExpirySettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsFsSetExpirySettings SetHelp(this AzureDlsFsSetExpirySettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsSetExpirySettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsFsSetExpirySettings ResetHelp(this AzureDlsFsSetExpirySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsFsSetExpirySettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsFsSetExpirySettings SetOutput(this AzureDlsFsSetExpirySettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsSetExpirySettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsFsSetExpirySettings ResetOutput(this AzureDlsFsSetExpirySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsFsSetExpirySettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsFsSetExpirySettings SetQuery(this AzureDlsFsSetExpirySettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsSetExpirySettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsFsSetExpirySettings ResetQuery(this AzureDlsFsSetExpirySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsFsSetExpirySettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsSetExpirySettings SetVerbose(this AzureDlsFsSetExpirySettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsSetExpirySettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsSetExpirySettings ResetVerbose(this AzureDlsFsSetExpirySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsFsShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsFsShowSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsFsShowSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsShowSettings SetAccount(this AzureDlsFsShowSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsShowSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsShowSettings ResetAccount(this AzureDlsFsShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Path
+        /// <summary><p><em>Sets <see cref="AzureDlsFsShowSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        [Pure]
+        public static AzureDlsFsShowSettings SetPath(this AzureDlsFsShowSettings toolSettings, string path)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Path = path;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsShowSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        [Pure]
+        public static AzureDlsFsShowSettings ResetPath(this AzureDlsFsShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Path = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsFsShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsShowSettings SetDebug(this AzureDlsFsShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsShowSettings ResetDebug(this AzureDlsFsShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsFsShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsFsShowSettings SetHelp(this AzureDlsFsShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsFsShowSettings ResetHelp(this AzureDlsFsShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsFsShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsFsShowSettings SetOutput(this AzureDlsFsShowSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsFsShowSettings ResetOutput(this AzureDlsFsShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsFsShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsFsShowSettings SetQuery(this AzureDlsFsShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsFsShowSettings ResetQuery(this AzureDlsFsShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsFsShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsShowSettings SetVerbose(this AzureDlsFsShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsShowSettings ResetVerbose(this AzureDlsFsShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsFsTestSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsFsTestSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsFsTestSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsTestSettings SetAccount(this AzureDlsFsTestSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsTestSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsTestSettings ResetAccount(this AzureDlsFsTestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Path
+        /// <summary><p><em>Sets <see cref="AzureDlsFsTestSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        [Pure]
+        public static AzureDlsFsTestSettings SetPath(this AzureDlsFsTestSettings toolSettings, string path)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Path = path;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsTestSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
+        [Pure]
+        public static AzureDlsFsTestSettings ResetPath(this AzureDlsFsTestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Path = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsFsTestSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsTestSettings SetDebug(this AzureDlsFsTestSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsTestSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsTestSettings ResetDebug(this AzureDlsFsTestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsFsTestSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsFsTestSettings SetHelp(this AzureDlsFsTestSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsTestSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsFsTestSettings ResetHelp(this AzureDlsFsTestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsFsTestSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsFsTestSettings SetOutput(this AzureDlsFsTestSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsTestSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsFsTestSettings ResetOutput(this AzureDlsFsTestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsFsTestSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsFsTestSettings SetQuery(this AzureDlsFsTestSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsTestSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsFsTestSettings ResetQuery(this AzureDlsFsTestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsFsTestSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsTestSettings SetVerbose(this AzureDlsFsTestSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsTestSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsTestSettings ResetVerbose(this AzureDlsFsTestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsFsUploadSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsFsUploadSettingsExtensions
+    {
+        #region Account
+        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings SetAccount(this AzureDlsFsUploadSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsUploadSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings ResetAccount(this AzureDlsFsUploadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DestinationPath
+        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.DestinationPath"/>.</em></p><p>The full path in the Data Lake Store filesystem to upload the file or folder to.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings SetDestinationPath(this AzureDlsFsUploadSettings toolSettings, string destinationPath)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DestinationPath = destinationPath;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsUploadSettings.DestinationPath"/>.</em></p><p>The full path in the Data Lake Store filesystem to upload the file or folder to.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings ResetDestinationPath(this AzureDlsFsUploadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DestinationPath = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SourcePath
+        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.SourcePath"/>.</em></p><p>The path to the file or folder to upload.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings SetSourcePath(this AzureDlsFsUploadSettings toolSettings, string sourcePath)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SourcePath = sourcePath;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsUploadSettings.SourcePath"/>.</em></p><p>The path to the file or folder to upload.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings ResetSourcePath(this AzureDlsFsUploadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SourcePath = null;
+            return toolSettings;
+        }
+        #endregion
+        #region BlockSize
+        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.BlockSize"/>.</em></p><p>Size of a block, in bytes.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings SetBlockSize(this AzureDlsFsUploadSettings toolSettings, string blockSize)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BlockSize = blockSize;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsUploadSettings.BlockSize"/>.</em></p><p>Size of a block, in bytes.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings ResetBlockSize(this AzureDlsFsUploadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BlockSize = null;
+            return toolSettings;
+        }
+        #endregion
+        #region BufferSize
+        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.BufferSize"/>.</em></p><p>Size of the transfer buffer, in bytes.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings SetBufferSize(this AzureDlsFsUploadSettings toolSettings, string bufferSize)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BufferSize = bufferSize;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsUploadSettings.BufferSize"/>.</em></p><p>Size of the transfer buffer, in bytes.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings ResetBufferSize(this AzureDlsFsUploadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BufferSize = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ChunkSize
+        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.ChunkSize"/>.</em></p><p>Size of a chunk, in bytes.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings SetChunkSize(this AzureDlsFsUploadSettings toolSettings, string chunkSize)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ChunkSize = chunkSize;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsUploadSettings.ChunkSize"/>.</em></p><p>Size of a chunk, in bytes.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings ResetChunkSize(this AzureDlsFsUploadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ChunkSize = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Overwrite
+        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.Overwrite"/>.</em></p><p>Indicates that, if the destination file or folder exists, it should be overwritten.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings SetOverwrite(this AzureDlsFsUploadSettings toolSettings, string overwrite)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Overwrite = overwrite;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsUploadSettings.Overwrite"/>.</em></p><p>Indicates that, if the destination file or folder exists, it should be overwritten.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings ResetOverwrite(this AzureDlsFsUploadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Overwrite = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ProgressCallback
+        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.ProgressCallback"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings SetProgressCallback(this AzureDlsFsUploadSettings toolSettings, string progressCallback)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ProgressCallback = progressCallback;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsUploadSettings.ProgressCallback"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings ResetProgressCallback(this AzureDlsFsUploadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ProgressCallback = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ThreadCount
+        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.ThreadCount"/>.</em></p><p>Parallelism of the upload. Default: The number of cores in the local machine.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings SetThreadCount(this AzureDlsFsUploadSettings toolSettings, string threadCount)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ThreadCount = threadCount;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsUploadSettings.ThreadCount"/>.</em></p><p>Parallelism of the upload. Default: The number of cores in the local machine.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings ResetThreadCount(this AzureDlsFsUploadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ThreadCount = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings SetDebug(this AzureDlsFsUploadSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsUploadSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings ResetDebug(this AzureDlsFsUploadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings SetHelp(this AzureDlsFsUploadSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsUploadSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings ResetHelp(this AzureDlsFsUploadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings SetOutput(this AzureDlsFsUploadSettings toolSettings, Output output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsUploadSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings ResetOutput(this AzureDlsFsUploadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings SetQuery(this AzureDlsFsUploadSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsUploadSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings ResetQuery(this AzureDlsFsUploadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings SetVerbose(this AzureDlsFsUploadSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDlsFsUploadSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureDlsFsUploadSettings ResetVerbose(this AzureDlsFsUploadSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -2391,7 +4619,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountCreateSettings SetQuery(this AzureDlsAccountCreateSettings toolSettings, string query)
         {
@@ -2399,7 +4627,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountCreateSettings ResetQuery(this AzureDlsAccountCreateSettings toolSettings)
         {
@@ -2525,7 +4753,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountDeleteSettings SetQuery(this AzureDlsAccountDeleteSettings toolSettings, string query)
         {
@@ -2533,7 +4761,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountDeleteSettings ResetQuery(this AzureDlsAccountDeleteSettings toolSettings)
         {
@@ -2659,7 +4887,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountEnableKeyVaultSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountEnableKeyVaultSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountEnableKeyVaultSettings SetQuery(this AzureDlsAccountEnableKeyVaultSettings toolSettings, string query)
         {
@@ -2667,7 +4895,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountEnableKeyVaultSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountEnableKeyVaultSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountEnableKeyVaultSettings ResetQuery(this AzureDlsAccountEnableKeyVaultSettings toolSettings)
         {
@@ -2775,7 +5003,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountListSettings SetQuery(this AzureDlsAccountListSettings toolSettings, string query)
         {
@@ -2783,7 +5011,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountListSettings ResetQuery(this AzureDlsAccountListSettings toolSettings)
         {
@@ -2909,7 +5137,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountShowSettings SetQuery(this AzureDlsAccountShowSettings toolSettings, string query)
         {
@@ -2917,7 +5145,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountShowSettings ResetQuery(this AzureDlsAccountShowSettings toolSettings)
         {
@@ -3169,7 +5397,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountUpdateSettings SetQuery(this AzureDlsAccountUpdateSettings toolSettings, string query)
         {
@@ -3177,7 +5405,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountUpdateSettings ResetQuery(this AzureDlsAccountUpdateSettings toolSettings)
         {
@@ -3198,2234 +5426,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureDlsAccountUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureDlsAccountUpdateSettings ResetVerbose(this AzureDlsAccountUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlsFsAppendSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsFsAppendSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsFsAppendSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsAppendSettings SetAccount(this AzureDlsFsAppendSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsAppendSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsAppendSettings ResetAccount(this AzureDlsFsAppendSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Content
-        /// <summary><p><em>Sets <see cref="AzureDlsFsAppendSettings.Content"/>.</em></p><p>Content to be appended to the file.</p></summary>
-        [Pure]
-        public static AzureDlsFsAppendSettings SetContent(this AzureDlsFsAppendSettings toolSettings, string content)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Content = content;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsAppendSettings.Content"/>.</em></p><p>Content to be appended to the file.</p></summary>
-        [Pure]
-        public static AzureDlsFsAppendSettings ResetContent(this AzureDlsFsAppendSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Content = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Path
-        /// <summary><p><em>Sets <see cref="AzureDlsFsAppendSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
-        [Pure]
-        public static AzureDlsFsAppendSettings SetPath(this AzureDlsFsAppendSettings toolSettings, string path)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Path = path;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsAppendSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
-        [Pure]
-        public static AzureDlsFsAppendSettings ResetPath(this AzureDlsFsAppendSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Path = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlsFsAppendSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsAppendSettings SetDebug(this AzureDlsFsAppendSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsAppendSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsAppendSettings ResetDebug(this AzureDlsFsAppendSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlsFsAppendSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsFsAppendSettings SetHelp(this AzureDlsFsAppendSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsAppendSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsFsAppendSettings ResetHelp(this AzureDlsFsAppendSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlsFsAppendSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsFsAppendSettings SetOutput(this AzureDlsFsAppendSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsAppendSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsFsAppendSettings ResetOutput(this AzureDlsFsAppendSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsFsAppendSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsFsAppendSettings SetQuery(this AzureDlsFsAppendSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsAppendSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsFsAppendSettings ResetQuery(this AzureDlsFsAppendSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlsFsAppendSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsAppendSettings SetVerbose(this AzureDlsFsAppendSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsAppendSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsAppendSettings ResetVerbose(this AzureDlsFsAppendSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlsFsCreateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsFsCreateSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsFsCreateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsCreateSettings SetAccount(this AzureDlsFsCreateSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsCreateSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsCreateSettings ResetAccount(this AzureDlsFsCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Path
-        /// <summary><p><em>Sets <see cref="AzureDlsFsCreateSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
-        [Pure]
-        public static AzureDlsFsCreateSettings SetPath(this AzureDlsFsCreateSettings toolSettings, string path)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Path = path;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsCreateSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
-        [Pure]
-        public static AzureDlsFsCreateSettings ResetPath(this AzureDlsFsCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Path = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Content
-        /// <summary><p><em>Sets <see cref="AzureDlsFsCreateSettings.Content"/>.</em></p><p>Content for the file to contain upon creation.</p></summary>
-        [Pure]
-        public static AzureDlsFsCreateSettings SetContent(this AzureDlsFsCreateSettings toolSettings, string content)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Content = content;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsCreateSettings.Content"/>.</em></p><p>Content for the file to contain upon creation.</p></summary>
-        [Pure]
-        public static AzureDlsFsCreateSettings ResetContent(this AzureDlsFsCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Content = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Folder
-        /// <summary><p><em>Sets <see cref="AzureDlsFsCreateSettings.Folder"/>.</em></p><p>Indicates that this new item is a folder and not a file.</p></summary>
-        [Pure]
-        public static AzureDlsFsCreateSettings SetFolder(this AzureDlsFsCreateSettings toolSettings, string folder)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Folder = folder;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsCreateSettings.Folder"/>.</em></p><p>Indicates that this new item is a folder and not a file.</p></summary>
-        [Pure]
-        public static AzureDlsFsCreateSettings ResetFolder(this AzureDlsFsCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Folder = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Force
-        /// <summary><p><em>Sets <see cref="AzureDlsFsCreateSettings.Force"/>.</em></p><p>Indicates that, if the file or folder exists, it should be overwritten.</p></summary>
-        [Pure]
-        public static AzureDlsFsCreateSettings SetForce(this AzureDlsFsCreateSettings toolSettings, string force)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Force = force;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsCreateSettings.Force"/>.</em></p><p>Indicates that, if the file or folder exists, it should be overwritten.</p></summary>
-        [Pure]
-        public static AzureDlsFsCreateSettings ResetForce(this AzureDlsFsCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Force = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlsFsCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsCreateSettings SetDebug(this AzureDlsFsCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsCreateSettings ResetDebug(this AzureDlsFsCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlsFsCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsFsCreateSettings SetHelp(this AzureDlsFsCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsFsCreateSettings ResetHelp(this AzureDlsFsCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlsFsCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsFsCreateSettings SetOutput(this AzureDlsFsCreateSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsFsCreateSettings ResetOutput(this AzureDlsFsCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsFsCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsFsCreateSettings SetQuery(this AzureDlsFsCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsFsCreateSettings ResetQuery(this AzureDlsFsCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlsFsCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsCreateSettings SetVerbose(this AzureDlsFsCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsCreateSettings ResetVerbose(this AzureDlsFsCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlsFsDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsFsDeleteSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsFsDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsDeleteSettings SetAccount(this AzureDlsFsDeleteSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsDeleteSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsDeleteSettings ResetAccount(this AzureDlsFsDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Path
-        /// <summary><p><em>Sets <see cref="AzureDlsFsDeleteSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
-        [Pure]
-        public static AzureDlsFsDeleteSettings SetPath(this AzureDlsFsDeleteSettings toolSettings, string path)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Path = path;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsDeleteSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
-        [Pure]
-        public static AzureDlsFsDeleteSettings ResetPath(this AzureDlsFsDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Path = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Recurse
-        /// <summary><p><em>Sets <see cref="AzureDlsFsDeleteSettings.Recurse"/>.</em></p><p>Indicates this should be a recursive delete of the folder.</p></summary>
-        [Pure]
-        public static AzureDlsFsDeleteSettings SetRecurse(this AzureDlsFsDeleteSettings toolSettings, string recurse)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Recurse = recurse;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsDeleteSettings.Recurse"/>.</em></p><p>Indicates this should be a recursive delete of the folder.</p></summary>
-        [Pure]
-        public static AzureDlsFsDeleteSettings ResetRecurse(this AzureDlsFsDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Recurse = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlsFsDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsDeleteSettings SetDebug(this AzureDlsFsDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsDeleteSettings ResetDebug(this AzureDlsFsDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlsFsDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsFsDeleteSettings SetHelp(this AzureDlsFsDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsFsDeleteSettings ResetHelp(this AzureDlsFsDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlsFsDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsFsDeleteSettings SetOutput(this AzureDlsFsDeleteSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsFsDeleteSettings ResetOutput(this AzureDlsFsDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsFsDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsFsDeleteSettings SetQuery(this AzureDlsFsDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsFsDeleteSettings ResetQuery(this AzureDlsFsDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlsFsDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsDeleteSettings SetVerbose(this AzureDlsFsDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsDeleteSettings ResetVerbose(this AzureDlsFsDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlsFsDownloadSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsFsDownloadSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsDownloadSettings SetAccount(this AzureDlsFsDownloadSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsDownloadSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsDownloadSettings ResetAccount(this AzureDlsFsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DestinationPath
-        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.DestinationPath"/>.</em></p><p>The local path where the file or folder will be downloaded to.</p></summary>
-        [Pure]
-        public static AzureDlsFsDownloadSettings SetDestinationPath(this AzureDlsFsDownloadSettings toolSettings, string destinationPath)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DestinationPath = destinationPath;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsDownloadSettings.DestinationPath"/>.</em></p><p>The local path where the file or folder will be downloaded to.</p></summary>
-        [Pure]
-        public static AzureDlsFsDownloadSettings ResetDestinationPath(this AzureDlsFsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DestinationPath = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SourcePath
-        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.SourcePath"/>.</em></p><p>The full path in the Data Lake Store filesystem to download the file or folder from.</p></summary>
-        [Pure]
-        public static AzureDlsFsDownloadSettings SetSourcePath(this AzureDlsFsDownloadSettings toolSettings, string sourcePath)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SourcePath = sourcePath;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsDownloadSettings.SourcePath"/>.</em></p><p>The full path in the Data Lake Store filesystem to download the file or folder from.</p></summary>
-        [Pure]
-        public static AzureDlsFsDownloadSettings ResetSourcePath(this AzureDlsFsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SourcePath = null;
-            return toolSettings;
-        }
-        #endregion
-        #region BlockSize
-        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.BlockSize"/>.</em></p><p>Size of a block, in bytes.</p></summary>
-        [Pure]
-        public static AzureDlsFsDownloadSettings SetBlockSize(this AzureDlsFsDownloadSettings toolSettings, string blockSize)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BlockSize = blockSize;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsDownloadSettings.BlockSize"/>.</em></p><p>Size of a block, in bytes.</p></summary>
-        [Pure]
-        public static AzureDlsFsDownloadSettings ResetBlockSize(this AzureDlsFsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BlockSize = null;
-            return toolSettings;
-        }
-        #endregion
-        #region BufferSize
-        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.BufferSize"/>.</em></p><p>Size of the transfer buffer, in bytes.</p></summary>
-        [Pure]
-        public static AzureDlsFsDownloadSettings SetBufferSize(this AzureDlsFsDownloadSettings toolSettings, string bufferSize)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BufferSize = bufferSize;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsDownloadSettings.BufferSize"/>.</em></p><p>Size of the transfer buffer, in bytes.</p></summary>
-        [Pure]
-        public static AzureDlsFsDownloadSettings ResetBufferSize(this AzureDlsFsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BufferSize = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ChunkSize
-        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.ChunkSize"/>.</em></p><p>Size of a chunk, in bytes.</p></summary>
-        [Pure]
-        public static AzureDlsFsDownloadSettings SetChunkSize(this AzureDlsFsDownloadSettings toolSettings, string chunkSize)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ChunkSize = chunkSize;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsDownloadSettings.ChunkSize"/>.</em></p><p>Size of a chunk, in bytes.</p></summary>
-        [Pure]
-        public static AzureDlsFsDownloadSettings ResetChunkSize(this AzureDlsFsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ChunkSize = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Overwrite
-        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.Overwrite"/>.</em></p><p>Indicates that, if the destination file or folder exists, it should be overwritten.</p></summary>
-        [Pure]
-        public static AzureDlsFsDownloadSettings SetOverwrite(this AzureDlsFsDownloadSettings toolSettings, string overwrite)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Overwrite = overwrite;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsDownloadSettings.Overwrite"/>.</em></p><p>Indicates that, if the destination file or folder exists, it should be overwritten.</p></summary>
-        [Pure]
-        public static AzureDlsFsDownloadSettings ResetOverwrite(this AzureDlsFsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Overwrite = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ProgressCallback
-        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.ProgressCallback"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureDlsFsDownloadSettings SetProgressCallback(this AzureDlsFsDownloadSettings toolSettings, string progressCallback)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ProgressCallback = progressCallback;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsDownloadSettings.ProgressCallback"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureDlsFsDownloadSettings ResetProgressCallback(this AzureDlsFsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ProgressCallback = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ThreadCount
-        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.ThreadCount"/>.</em></p><p>Parallelism of the download. Default: The number of cores in the local machine.</p></summary>
-        [Pure]
-        public static AzureDlsFsDownloadSettings SetThreadCount(this AzureDlsFsDownloadSettings toolSettings, string threadCount)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ThreadCount = threadCount;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsDownloadSettings.ThreadCount"/>.</em></p><p>Parallelism of the download. Default: The number of cores in the local machine.</p></summary>
-        [Pure]
-        public static AzureDlsFsDownloadSettings ResetThreadCount(this AzureDlsFsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ThreadCount = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsDownloadSettings SetDebug(this AzureDlsFsDownloadSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsDownloadSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsDownloadSettings ResetDebug(this AzureDlsFsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsFsDownloadSettings SetHelp(this AzureDlsFsDownloadSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsDownloadSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsFsDownloadSettings ResetHelp(this AzureDlsFsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsFsDownloadSettings SetOutput(this AzureDlsFsDownloadSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsDownloadSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsFsDownloadSettings ResetOutput(this AzureDlsFsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsFsDownloadSettings SetQuery(this AzureDlsFsDownloadSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsDownloadSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsFsDownloadSettings ResetQuery(this AzureDlsFsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlsFsDownloadSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsDownloadSettings SetVerbose(this AzureDlsFsDownloadSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsDownloadSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsDownloadSettings ResetVerbose(this AzureDlsFsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlsFsJoinSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsFsJoinSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsFsJoinSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsJoinSettings SetAccount(this AzureDlsFsJoinSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsJoinSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsJoinSettings ResetAccount(this AzureDlsFsJoinSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DestinationPath
-        /// <summary><p><em>Sets <see cref="AzureDlsFsJoinSettings.DestinationPath"/>.</em></p><p>The destination path in the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsJoinSettings SetDestinationPath(this AzureDlsFsJoinSettings toolSettings, string destinationPath)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DestinationPath = destinationPath;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsJoinSettings.DestinationPath"/>.</em></p><p>The destination path in the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsJoinSettings ResetDestinationPath(this AzureDlsFsJoinSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DestinationPath = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SourcePaths
-        /// <summary><p><em>Sets <see cref="AzureDlsFsJoinSettings.SourcePaths"/>.</em></p><p>The space-separated list of files in the Data Lake Store account to join.</p></summary>
-        [Pure]
-        public static AzureDlsFsJoinSettings SetSourcePaths(this AzureDlsFsJoinSettings toolSettings, string sourcePaths)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SourcePaths = sourcePaths;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsJoinSettings.SourcePaths"/>.</em></p><p>The space-separated list of files in the Data Lake Store account to join.</p></summary>
-        [Pure]
-        public static AzureDlsFsJoinSettings ResetSourcePaths(this AzureDlsFsJoinSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SourcePaths = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Force
-        /// <summary><p><em>Sets <see cref="AzureDlsFsJoinSettings.Force"/>.</em></p><p>Indicates that, if the destination file already exists, it should be overwritten.</p></summary>
-        [Pure]
-        public static AzureDlsFsJoinSettings SetForce(this AzureDlsFsJoinSettings toolSettings, string force)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Force = force;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsJoinSettings.Force"/>.</em></p><p>Indicates that, if the destination file already exists, it should be overwritten.</p></summary>
-        [Pure]
-        public static AzureDlsFsJoinSettings ResetForce(this AzureDlsFsJoinSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Force = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlsFsJoinSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsJoinSettings SetDebug(this AzureDlsFsJoinSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsJoinSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsJoinSettings ResetDebug(this AzureDlsFsJoinSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlsFsJoinSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsFsJoinSettings SetHelp(this AzureDlsFsJoinSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsJoinSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsFsJoinSettings ResetHelp(this AzureDlsFsJoinSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlsFsJoinSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsFsJoinSettings SetOutput(this AzureDlsFsJoinSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsJoinSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsFsJoinSettings ResetOutput(this AzureDlsFsJoinSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsFsJoinSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsFsJoinSettings SetQuery(this AzureDlsFsJoinSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsJoinSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsFsJoinSettings ResetQuery(this AzureDlsFsJoinSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlsFsJoinSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsJoinSettings SetVerbose(this AzureDlsFsJoinSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsJoinSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsJoinSettings ResetVerbose(this AzureDlsFsJoinSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlsFsListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsFsListSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsFsListSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsListSettings SetAccount(this AzureDlsFsListSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsListSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsListSettings ResetAccount(this AzureDlsFsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Path
-        /// <summary><p><em>Sets <see cref="AzureDlsFsListSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
-        [Pure]
-        public static AzureDlsFsListSettings SetPath(this AzureDlsFsListSettings toolSettings, string path)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Path = path;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsListSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
-        [Pure]
-        public static AzureDlsFsListSettings ResetPath(this AzureDlsFsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Path = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlsFsListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsListSettings SetDebug(this AzureDlsFsListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsListSettings ResetDebug(this AzureDlsFsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlsFsListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsFsListSettings SetHelp(this AzureDlsFsListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsFsListSettings ResetHelp(this AzureDlsFsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlsFsListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsFsListSettings SetOutput(this AzureDlsFsListSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsFsListSettings ResetOutput(this AzureDlsFsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsFsListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsFsListSettings SetQuery(this AzureDlsFsListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsFsListSettings ResetQuery(this AzureDlsFsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlsFsListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsListSettings SetVerbose(this AzureDlsFsListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsListSettings ResetVerbose(this AzureDlsFsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlsFsMoveSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsFsMoveSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsFsMoveSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsMoveSettings SetAccount(this AzureDlsFsMoveSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsMoveSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsMoveSettings ResetAccount(this AzureDlsFsMoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DestinationPath
-        /// <summary><p><em>Sets <see cref="AzureDlsFsMoveSettings.DestinationPath"/>.</em></p><p>The destination path in the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsMoveSettings SetDestinationPath(this AzureDlsFsMoveSettings toolSettings, string destinationPath)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DestinationPath = destinationPath;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsMoveSettings.DestinationPath"/>.</em></p><p>The destination path in the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsMoveSettings ResetDestinationPath(this AzureDlsFsMoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DestinationPath = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SourcePath
-        /// <summary><p><em>Sets <see cref="AzureDlsFsMoveSettings.SourcePath"/>.</em></p><p>The file or folder to move.</p></summary>
-        [Pure]
-        public static AzureDlsFsMoveSettings SetSourcePath(this AzureDlsFsMoveSettings toolSettings, string sourcePath)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SourcePath = sourcePath;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsMoveSettings.SourcePath"/>.</em></p><p>The file or folder to move.</p></summary>
-        [Pure]
-        public static AzureDlsFsMoveSettings ResetSourcePath(this AzureDlsFsMoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SourcePath = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Force
-        /// <summary><p><em>Sets <see cref="AzureDlsFsMoveSettings.Force"/>.</em></p><p>Indicates that, if the destination file or folder already exists, it should be overwritten and replaced with the file or folder being moved.</p></summary>
-        [Pure]
-        public static AzureDlsFsMoveSettings SetForce(this AzureDlsFsMoveSettings toolSettings, string force)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Force = force;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsMoveSettings.Force"/>.</em></p><p>Indicates that, if the destination file or folder already exists, it should be overwritten and replaced with the file or folder being moved.</p></summary>
-        [Pure]
-        public static AzureDlsFsMoveSettings ResetForce(this AzureDlsFsMoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Force = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlsFsMoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsMoveSettings SetDebug(this AzureDlsFsMoveSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsMoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsMoveSettings ResetDebug(this AzureDlsFsMoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlsFsMoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsFsMoveSettings SetHelp(this AzureDlsFsMoveSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsMoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsFsMoveSettings ResetHelp(this AzureDlsFsMoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlsFsMoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsFsMoveSettings SetOutput(this AzureDlsFsMoveSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsMoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsFsMoveSettings ResetOutput(this AzureDlsFsMoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsFsMoveSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsFsMoveSettings SetQuery(this AzureDlsFsMoveSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsMoveSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsFsMoveSettings ResetQuery(this AzureDlsFsMoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlsFsMoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsMoveSettings SetVerbose(this AzureDlsFsMoveSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsMoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsMoveSettings ResetVerbose(this AzureDlsFsMoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlsFsPreviewSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsFsPreviewSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsFsPreviewSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsPreviewSettings SetAccount(this AzureDlsFsPreviewSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsPreviewSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsPreviewSettings ResetAccount(this AzureDlsFsPreviewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Path
-        /// <summary><p><em>Sets <see cref="AzureDlsFsPreviewSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
-        [Pure]
-        public static AzureDlsFsPreviewSettings SetPath(this AzureDlsFsPreviewSettings toolSettings, string path)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Path = path;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsPreviewSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
-        [Pure]
-        public static AzureDlsFsPreviewSettings ResetPath(this AzureDlsFsPreviewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Path = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Force
-        /// <summary><p><em>Sets <see cref="AzureDlsFsPreviewSettings.Force"/>.</em></p><p>Indicates that, if the preview is larger than 1MB, still retrieve it. This can potentially be very slow, depending on how large the file is.</p></summary>
-        [Pure]
-        public static AzureDlsFsPreviewSettings SetForce(this AzureDlsFsPreviewSettings toolSettings, string force)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Force = force;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsPreviewSettings.Force"/>.</em></p><p>Indicates that, if the preview is larger than 1MB, still retrieve it. This can potentially be very slow, depending on how large the file is.</p></summary>
-        [Pure]
-        public static AzureDlsFsPreviewSettings ResetForce(this AzureDlsFsPreviewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Force = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Length
-        /// <summary><p><em>Sets <see cref="AzureDlsFsPreviewSettings.Length"/>.</em></p><p>The amount of data to preview in bytes.</p></summary>
-        [Pure]
-        public static AzureDlsFsPreviewSettings SetLength(this AzureDlsFsPreviewSettings toolSettings, string length)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Length = length;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsPreviewSettings.Length"/>.</em></p><p>The amount of data to preview in bytes.</p></summary>
-        [Pure]
-        public static AzureDlsFsPreviewSettings ResetLength(this AzureDlsFsPreviewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Length = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Offset
-        /// <summary><p><em>Sets <see cref="AzureDlsFsPreviewSettings.Offset"/>.</em></p><p>The position in bytes to start the preview from.</p></summary>
-        [Pure]
-        public static AzureDlsFsPreviewSettings SetOffset(this AzureDlsFsPreviewSettings toolSettings, string offset)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Offset = offset;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsPreviewSettings.Offset"/>.</em></p><p>The position in bytes to start the preview from.</p></summary>
-        [Pure]
-        public static AzureDlsFsPreviewSettings ResetOffset(this AzureDlsFsPreviewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Offset = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlsFsPreviewSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsPreviewSettings SetDebug(this AzureDlsFsPreviewSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsPreviewSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsPreviewSettings ResetDebug(this AzureDlsFsPreviewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlsFsPreviewSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsFsPreviewSettings SetHelp(this AzureDlsFsPreviewSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsPreviewSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsFsPreviewSettings ResetHelp(this AzureDlsFsPreviewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlsFsPreviewSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsFsPreviewSettings SetOutput(this AzureDlsFsPreviewSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsPreviewSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsFsPreviewSettings ResetOutput(this AzureDlsFsPreviewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsFsPreviewSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsFsPreviewSettings SetQuery(this AzureDlsFsPreviewSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsPreviewSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsFsPreviewSettings ResetQuery(this AzureDlsFsPreviewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlsFsPreviewSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsPreviewSettings SetVerbose(this AzureDlsFsPreviewSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsPreviewSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsPreviewSettings ResetVerbose(this AzureDlsFsPreviewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlsFsRemoveExpirySettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsFsRemoveExpirySettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsFsRemoveExpirySettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsRemoveExpirySettings SetAccount(this AzureDlsFsRemoveExpirySettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsRemoveExpirySettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsRemoveExpirySettings ResetAccount(this AzureDlsFsRemoveExpirySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Path
-        /// <summary><p><em>Sets <see cref="AzureDlsFsRemoveExpirySettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
-        [Pure]
-        public static AzureDlsFsRemoveExpirySettings SetPath(this AzureDlsFsRemoveExpirySettings toolSettings, string path)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Path = path;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsRemoveExpirySettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
-        [Pure]
-        public static AzureDlsFsRemoveExpirySettings ResetPath(this AzureDlsFsRemoveExpirySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Path = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlsFsRemoveExpirySettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsRemoveExpirySettings SetDebug(this AzureDlsFsRemoveExpirySettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsRemoveExpirySettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsRemoveExpirySettings ResetDebug(this AzureDlsFsRemoveExpirySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlsFsRemoveExpirySettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsFsRemoveExpirySettings SetHelp(this AzureDlsFsRemoveExpirySettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsRemoveExpirySettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsFsRemoveExpirySettings ResetHelp(this AzureDlsFsRemoveExpirySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlsFsRemoveExpirySettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsFsRemoveExpirySettings SetOutput(this AzureDlsFsRemoveExpirySettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsRemoveExpirySettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsFsRemoveExpirySettings ResetOutput(this AzureDlsFsRemoveExpirySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsFsRemoveExpirySettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsFsRemoveExpirySettings SetQuery(this AzureDlsFsRemoveExpirySettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsRemoveExpirySettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsFsRemoveExpirySettings ResetQuery(this AzureDlsFsRemoveExpirySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlsFsRemoveExpirySettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsRemoveExpirySettings SetVerbose(this AzureDlsFsRemoveExpirySettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsRemoveExpirySettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsRemoveExpirySettings ResetVerbose(this AzureDlsFsRemoveExpirySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlsFsSetExpirySettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsFsSetExpirySettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsFsSetExpirySettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsSetExpirySettings SetAccount(this AzureDlsFsSetExpirySettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsSetExpirySettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsSetExpirySettings ResetAccount(this AzureDlsFsSetExpirySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ExpirationTime
-        /// <summary><p><em>Sets <see cref="AzureDlsFsSetExpirySettings.ExpirationTime"/>.</em></p><p>The absolute value of the expiration time expressed as milliseconds since the epoch.</p></summary>
-        [Pure]
-        public static AzureDlsFsSetExpirySettings SetExpirationTime(this AzureDlsFsSetExpirySettings toolSettings, string expirationTime)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ExpirationTime = expirationTime;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsSetExpirySettings.ExpirationTime"/>.</em></p><p>The absolute value of the expiration time expressed as milliseconds since the epoch.</p></summary>
-        [Pure]
-        public static AzureDlsFsSetExpirySettings ResetExpirationTime(this AzureDlsFsSetExpirySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ExpirationTime = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Path
-        /// <summary><p><em>Sets <see cref="AzureDlsFsSetExpirySettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
-        [Pure]
-        public static AzureDlsFsSetExpirySettings SetPath(this AzureDlsFsSetExpirySettings toolSettings, string path)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Path = path;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsSetExpirySettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
-        [Pure]
-        public static AzureDlsFsSetExpirySettings ResetPath(this AzureDlsFsSetExpirySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Path = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlsFsSetExpirySettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsSetExpirySettings SetDebug(this AzureDlsFsSetExpirySettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsSetExpirySettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsSetExpirySettings ResetDebug(this AzureDlsFsSetExpirySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlsFsSetExpirySettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsFsSetExpirySettings SetHelp(this AzureDlsFsSetExpirySettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsSetExpirySettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsFsSetExpirySettings ResetHelp(this AzureDlsFsSetExpirySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlsFsSetExpirySettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsFsSetExpirySettings SetOutput(this AzureDlsFsSetExpirySettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsSetExpirySettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsFsSetExpirySettings ResetOutput(this AzureDlsFsSetExpirySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsFsSetExpirySettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsFsSetExpirySettings SetQuery(this AzureDlsFsSetExpirySettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsSetExpirySettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsFsSetExpirySettings ResetQuery(this AzureDlsFsSetExpirySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlsFsSetExpirySettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsSetExpirySettings SetVerbose(this AzureDlsFsSetExpirySettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsSetExpirySettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsSetExpirySettings ResetVerbose(this AzureDlsFsSetExpirySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlsFsShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsFsShowSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsFsShowSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsShowSettings SetAccount(this AzureDlsFsShowSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsShowSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsShowSettings ResetAccount(this AzureDlsFsShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Path
-        /// <summary><p><em>Sets <see cref="AzureDlsFsShowSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
-        [Pure]
-        public static AzureDlsFsShowSettings SetPath(this AzureDlsFsShowSettings toolSettings, string path)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Path = path;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsShowSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
-        [Pure]
-        public static AzureDlsFsShowSettings ResetPath(this AzureDlsFsShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Path = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlsFsShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsShowSettings SetDebug(this AzureDlsFsShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsShowSettings ResetDebug(this AzureDlsFsShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlsFsShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsFsShowSettings SetHelp(this AzureDlsFsShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsFsShowSettings ResetHelp(this AzureDlsFsShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlsFsShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsFsShowSettings SetOutput(this AzureDlsFsShowSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsFsShowSettings ResetOutput(this AzureDlsFsShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsFsShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsFsShowSettings SetQuery(this AzureDlsFsShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsFsShowSettings ResetQuery(this AzureDlsFsShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlsFsShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsShowSettings SetVerbose(this AzureDlsFsShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsShowSettings ResetVerbose(this AzureDlsFsShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlsFsTestSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsFsTestSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsFsTestSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsTestSettings SetAccount(this AzureDlsFsTestSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsTestSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsTestSettings ResetAccount(this AzureDlsFsTestSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Path
-        /// <summary><p><em>Sets <see cref="AzureDlsFsTestSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
-        [Pure]
-        public static AzureDlsFsTestSettings SetPath(this AzureDlsFsTestSettings toolSettings, string path)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Path = path;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsTestSettings.Path"/>.</em></p><p>The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system.</p></summary>
-        [Pure]
-        public static AzureDlsFsTestSettings ResetPath(this AzureDlsFsTestSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Path = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlsFsTestSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsTestSettings SetDebug(this AzureDlsFsTestSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsTestSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsTestSettings ResetDebug(this AzureDlsFsTestSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlsFsTestSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsFsTestSettings SetHelp(this AzureDlsFsTestSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsTestSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsFsTestSettings ResetHelp(this AzureDlsFsTestSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlsFsTestSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsFsTestSettings SetOutput(this AzureDlsFsTestSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsTestSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsFsTestSettings ResetOutput(this AzureDlsFsTestSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsFsTestSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsFsTestSettings SetQuery(this AzureDlsFsTestSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsTestSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsFsTestSettings ResetQuery(this AzureDlsFsTestSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlsFsTestSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsTestSettings SetVerbose(this AzureDlsFsTestSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsTestSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsTestSettings ResetVerbose(this AzureDlsFsTestSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlsFsUploadSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureDlsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsFsUploadSettingsExtensions
-    {
-        #region Account
-        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsUploadSettings SetAccount(this AzureDlsFsUploadSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsUploadSettings.Account"/>.</em></p><p>Name of the Data Lake Store account.</p></summary>
-        [Pure]
-        public static AzureDlsFsUploadSettings ResetAccount(this AzureDlsFsUploadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DestinationPath
-        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.DestinationPath"/>.</em></p><p>The full path in the Data Lake Store filesystem to upload the file or folder to.</p></summary>
-        [Pure]
-        public static AzureDlsFsUploadSettings SetDestinationPath(this AzureDlsFsUploadSettings toolSettings, string destinationPath)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DestinationPath = destinationPath;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsUploadSettings.DestinationPath"/>.</em></p><p>The full path in the Data Lake Store filesystem to upload the file or folder to.</p></summary>
-        [Pure]
-        public static AzureDlsFsUploadSettings ResetDestinationPath(this AzureDlsFsUploadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DestinationPath = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SourcePath
-        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.SourcePath"/>.</em></p><p>The path to the file or folder to upload.</p></summary>
-        [Pure]
-        public static AzureDlsFsUploadSettings SetSourcePath(this AzureDlsFsUploadSettings toolSettings, string sourcePath)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SourcePath = sourcePath;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsUploadSettings.SourcePath"/>.</em></p><p>The path to the file or folder to upload.</p></summary>
-        [Pure]
-        public static AzureDlsFsUploadSettings ResetSourcePath(this AzureDlsFsUploadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SourcePath = null;
-            return toolSettings;
-        }
-        #endregion
-        #region BlockSize
-        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.BlockSize"/>.</em></p><p>Size of a block, in bytes.</p></summary>
-        [Pure]
-        public static AzureDlsFsUploadSettings SetBlockSize(this AzureDlsFsUploadSettings toolSettings, string blockSize)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BlockSize = blockSize;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsUploadSettings.BlockSize"/>.</em></p><p>Size of a block, in bytes.</p></summary>
-        [Pure]
-        public static AzureDlsFsUploadSettings ResetBlockSize(this AzureDlsFsUploadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BlockSize = null;
-            return toolSettings;
-        }
-        #endregion
-        #region BufferSize
-        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.BufferSize"/>.</em></p><p>Size of the transfer buffer, in bytes.</p></summary>
-        [Pure]
-        public static AzureDlsFsUploadSettings SetBufferSize(this AzureDlsFsUploadSettings toolSettings, string bufferSize)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BufferSize = bufferSize;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsUploadSettings.BufferSize"/>.</em></p><p>Size of the transfer buffer, in bytes.</p></summary>
-        [Pure]
-        public static AzureDlsFsUploadSettings ResetBufferSize(this AzureDlsFsUploadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BufferSize = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ChunkSize
-        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.ChunkSize"/>.</em></p><p>Size of a chunk, in bytes.</p></summary>
-        [Pure]
-        public static AzureDlsFsUploadSettings SetChunkSize(this AzureDlsFsUploadSettings toolSettings, string chunkSize)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ChunkSize = chunkSize;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsUploadSettings.ChunkSize"/>.</em></p><p>Size of a chunk, in bytes.</p></summary>
-        [Pure]
-        public static AzureDlsFsUploadSettings ResetChunkSize(this AzureDlsFsUploadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ChunkSize = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Overwrite
-        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.Overwrite"/>.</em></p><p>Indicates that, if the destination file or folder exists, it should be overwritten.</p></summary>
-        [Pure]
-        public static AzureDlsFsUploadSettings SetOverwrite(this AzureDlsFsUploadSettings toolSettings, string overwrite)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Overwrite = overwrite;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsUploadSettings.Overwrite"/>.</em></p><p>Indicates that, if the destination file or folder exists, it should be overwritten.</p></summary>
-        [Pure]
-        public static AzureDlsFsUploadSettings ResetOverwrite(this AzureDlsFsUploadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Overwrite = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ProgressCallback
-        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.ProgressCallback"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureDlsFsUploadSettings SetProgressCallback(this AzureDlsFsUploadSettings toolSettings, string progressCallback)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ProgressCallback = progressCallback;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsUploadSettings.ProgressCallback"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureDlsFsUploadSettings ResetProgressCallback(this AzureDlsFsUploadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ProgressCallback = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ThreadCount
-        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.ThreadCount"/>.</em></p><p>Parallelism of the upload. Default: The number of cores in the local machine.</p></summary>
-        [Pure]
-        public static AzureDlsFsUploadSettings SetThreadCount(this AzureDlsFsUploadSettings toolSettings, string threadCount)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ThreadCount = threadCount;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsUploadSettings.ThreadCount"/>.</em></p><p>Parallelism of the upload. Default: The number of cores in the local machine.</p></summary>
-        [Pure]
-        public static AzureDlsFsUploadSettings ResetThreadCount(this AzureDlsFsUploadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ThreadCount = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsUploadSettings SetDebug(this AzureDlsFsUploadSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsUploadSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsUploadSettings ResetDebug(this AzureDlsFsUploadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsFsUploadSettings SetHelp(this AzureDlsFsUploadSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsUploadSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureDlsFsUploadSettings ResetHelp(this AzureDlsFsUploadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsFsUploadSettings SetOutput(this AzureDlsFsUploadSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsUploadSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureDlsFsUploadSettings ResetOutput(this AzureDlsFsUploadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsFsUploadSettings SetQuery(this AzureDlsFsUploadSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsUploadSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
-        [Pure]
-        public static AzureDlsFsUploadSettings ResetQuery(this AzureDlsFsUploadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureDlsFsUploadSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsUploadSettings SetVerbose(this AzureDlsFsUploadSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsUploadSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureDlsFsUploadSettings ResetVerbose(this AzureDlsFsUploadSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -5585,7 +5585,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountFirewallCreateSettings SetQuery(this AzureDlsAccountFirewallCreateSettings toolSettings, string query)
         {
@@ -5593,7 +5593,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountFirewallCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountFirewallCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountFirewallCreateSettings ResetQuery(this AzureDlsAccountFirewallCreateSettings toolSettings)
         {
@@ -5737,7 +5737,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountFirewallDeleteSettings SetQuery(this AzureDlsAccountFirewallDeleteSettings toolSettings, string query)
         {
@@ -5745,7 +5745,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountFirewallDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountFirewallDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountFirewallDeleteSettings ResetQuery(this AzureDlsAccountFirewallDeleteSettings toolSettings)
         {
@@ -5871,7 +5871,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountFirewallListSettings SetQuery(this AzureDlsAccountFirewallListSettings toolSettings, string query)
         {
@@ -5879,7 +5879,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountFirewallListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountFirewallListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountFirewallListSettings ResetQuery(this AzureDlsAccountFirewallListSettings toolSettings)
         {
@@ -6023,7 +6023,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountFirewallShowSettings SetQuery(this AzureDlsAccountFirewallShowSettings toolSettings, string query)
         {
@@ -6031,7 +6031,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountFirewallShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountFirewallShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountFirewallShowSettings ResetQuery(this AzureDlsAccountFirewallShowSettings toolSettings)
         {
@@ -6211,7 +6211,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountFirewallUpdateSettings SetQuery(this AzureDlsAccountFirewallUpdateSettings toolSettings, string query)
         {
@@ -6219,7 +6219,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountFirewallUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountFirewallUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountFirewallUpdateSettings ResetQuery(this AzureDlsAccountFirewallUpdateSettings toolSettings)
         {
@@ -6399,7 +6399,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountTrustedProviderCreateSettings SetQuery(this AzureDlsAccountTrustedProviderCreateSettings toolSettings, string query)
         {
@@ -6407,7 +6407,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountTrustedProviderCreateSettings ResetQuery(this AzureDlsAccountTrustedProviderCreateSettings toolSettings)
         {
@@ -6551,7 +6551,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountTrustedProviderDeleteSettings SetQuery(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings, string query)
         {
@@ -6559,7 +6559,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountTrustedProviderDeleteSettings ResetQuery(this AzureDlsAccountTrustedProviderDeleteSettings toolSettings)
         {
@@ -6685,7 +6685,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountTrustedProviderListSettings SetQuery(this AzureDlsAccountTrustedProviderListSettings toolSettings, string query)
         {
@@ -6693,7 +6693,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderListSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountTrustedProviderListSettings ResetQuery(this AzureDlsAccountTrustedProviderListSettings toolSettings)
         {
@@ -6837,7 +6837,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountTrustedProviderShowSettings SetQuery(this AzureDlsAccountTrustedProviderShowSettings toolSettings, string query)
         {
@@ -6845,7 +6845,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountTrustedProviderShowSettings ResetQuery(this AzureDlsAccountTrustedProviderShowSettings toolSettings)
         {
@@ -7007,7 +7007,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountTrustedProviderUpdateSettings SetQuery(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings, string query)
         {
@@ -7015,7 +7015,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlsAccountTrustedProviderUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsAccountTrustedProviderUpdateSettings ResetQuery(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
         {
@@ -7159,7 +7159,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessRemoveAllSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessRemoveAllSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsFsAccessRemoveAllSettings SetQuery(this AzureDlsFsAccessRemoveAllSettings toolSettings, string query)
         {
@@ -7167,7 +7167,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessRemoveAllSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessRemoveAllSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsFsAccessRemoveAllSettings ResetQuery(this AzureDlsFsAccessRemoveAllSettings toolSettings)
         {
@@ -7311,7 +7311,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessRemoveEntrySettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessRemoveEntrySettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsFsAccessRemoveEntrySettings SetQuery(this AzureDlsFsAccessRemoveEntrySettings toolSettings, string query)
         {
@@ -7319,7 +7319,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessRemoveEntrySettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessRemoveEntrySettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsFsAccessRemoveEntrySettings ResetQuery(this AzureDlsFsAccessRemoveEntrySettings toolSettings)
         {
@@ -7463,7 +7463,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsFsAccessSetSettings SetQuery(this AzureDlsFsAccessSetSettings toolSettings, string query)
         {
@@ -7471,7 +7471,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessSetSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsFsAccessSetSettings ResetQuery(this AzureDlsFsAccessSetSettings toolSettings)
         {
@@ -7615,7 +7615,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetEntrySettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetEntrySettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsFsAccessSetEntrySettings SetQuery(this AzureDlsFsAccessSetEntrySettings toolSettings, string query)
         {
@@ -7623,7 +7623,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessSetEntrySettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessSetEntrySettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsFsAccessSetEntrySettings ResetQuery(this AzureDlsFsAccessSetEntrySettings toolSettings)
         {
@@ -7785,7 +7785,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetOwnerSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetOwnerSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsFsAccessSetOwnerSettings SetQuery(this AzureDlsFsAccessSetOwnerSettings toolSettings, string query)
         {
@@ -7793,7 +7793,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessSetOwnerSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessSetOwnerSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsFsAccessSetOwnerSettings ResetQuery(this AzureDlsFsAccessSetOwnerSettings toolSettings)
         {
@@ -7937,7 +7937,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetPermissionSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessSetPermissionSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsFsAccessSetPermissionSettings SetQuery(this AzureDlsFsAccessSetPermissionSettings toolSettings, string query)
         {
@@ -7945,7 +7945,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessSetPermissionSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessSetPermissionSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsFsAccessSetPermissionSettings ResetQuery(this AzureDlsFsAccessSetPermissionSettings toolSettings)
         {
@@ -8071,7 +8071,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDlsFsAccessShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsFsAccessShowSettings SetQuery(this AzureDlsFsAccessShowSettings toolSettings, string query)
         {
@@ -8079,7 +8079,7 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessShowSettings.Query"/>.</em></p><p>JMESPath query string. See &lt;a href="http://jmespath.org/"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDlsFsAccessShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
         public static AzureDlsFsAccessShowSettings ResetQuery(this AzureDlsFsAccessShowSettings toolSettings)
         {

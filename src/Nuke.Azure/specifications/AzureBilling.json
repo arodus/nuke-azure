@@ -6,10 +6,10 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/billing.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/billing/enrollment-account.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/billing/invoice.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/billing/period.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/billing.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/billing/invoice.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/billing/enrollment-account.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/billing/period.yml"
   ],
   "name": "AzureBilling",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/billing?view=azure-cli-latest",
@@ -20,25 +20,6 @@
       "postfix": "",
       "definiteArgument": "billing",
       "settingsClass": {}
-    },
-    {
-      "postfix": "EnrollmentAccountList",
-      "definiteArgument": "billing enrollment-account list",
-      "settingsClass": {}
-    },
-    {
-      "postfix": "EnrollmentAccountShow",
-      "definiteArgument": "billing enrollment-account show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the enrollment account."
-          }
-        ]
-      }
     },
     {
       "postfix": "InvoiceList",
@@ -64,6 +45,25 @@
             "type": "string",
             "format": "--name {value}",
             "help": "Name of the invoice."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "EnrollmentAccountList",
+      "definiteArgument": "billing enrollment-account list",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "EnrollmentAccountShow",
+      "definiteArgument": "billing enrollment-account show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the enrollment account."
           }
         ]
       }
@@ -132,7 +132,7 @@
       "name": "Query",
       "type": "string",
       "format": "--query {value}",
-      "help": "JMESPath query string. See &lt;a href=\"http://jmespath.org/\"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples."
+      "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
     },
     {
       "name": "Verbose",

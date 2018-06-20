@@ -6,12 +6,12 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/acr.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/acr/build-task.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/acr/credential.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/acr/replication.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/acr/repository.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/acr/webhook.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/acr.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/acr/replication.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/acr/repository.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/acr/credential.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/acr/webhook.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/acr/build-task.yml"
   ],
   "name": "AzureAcr",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest",
@@ -354,499 +354,6 @@
             "type": "string",
             "format": "--set {value}",
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "BuildTaskCreate",
-      "definiteArgument": "acr build-task create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Context",
-            "type": "string",
-            "format": "--context {value}",
-            "help": "The full URL to the source code respository."
-          },
-          {
-            "name": "GitAccessToken",
-            "type": "string",
-            "format": "--git-access-token {value}",
-            "help": "The access token used to access the source control provider."
-          },
-          {
-            "name": "Image",
-            "type": "string",
-            "format": "--image {value}",
-            "help": "The image repository and optionally a tag in the 'repository:tag' format."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the build task."
-          },
-          {
-            "name": "Registry",
-            "type": "string",
-            "format": "--registry {value}",
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "Alias",
-            "type": "string",
-            "format": "--alias {value}",
-            "help": "The alternative name for build task. Default to the build task name."
-          },
-          {
-            "name": "BaseImageTrigger",
-            "type": "AcrBuildTaskBaseImageTrigger",
-            "format": "--base-image-trigger {value}",
-            "help": "The type of the auto trigger for base image dependency updates."
-          },
-          {
-            "name": "Branch",
-            "type": "string",
-            "format": "--branch {value}",
-            "help": "The source control branch name."
-          },
-          {
-            "name": "BuildArg",
-            "type": "string",
-            "format": "--build-arg {value}",
-            "help": "Build argument in 'name[=value]' format."
-          },
-          {
-            "name": "CommitTriggerEnabled",
-            "type": "bool",
-            "format": "--commit-trigger-enabled",
-            "help": "Indicates whether the source control commit trigger is enabled."
-          },
-          {
-            "name": "Cpu",
-            "type": "string",
-            "format": "--cpu {value}",
-            "help": "The CPU configuration in terms of number of cores required for the build."
-          },
-          {
-            "name": "File",
-            "type": "string",
-            "format": "--file {value}",
-            "help": "The relative path of the the docker file to the source code root folder."
-          },
-          {
-            "name": "NoCache",
-            "type": "bool",
-            "format": "--no-cache",
-            "help": "Indicates whether the image cache is enabled."
-          },
-          {
-            "name": "NoPush",
-            "type": "bool",
-            "format": "--no-push",
-            "help": "Indicates whether the image built should be pushed to the registry."
-          },
-          {
-            "name": "Os",
-            "type": "AcrBuildTaskOs",
-            "format": "--os {value}",
-            "help": "The operating system type required for the build."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "SecretBuildArg",
-            "type": "string",
-            "format": "--secret-build-arg {value}",
-            "secret": true,
-            "help": "Secret build argument in 'name[=value]' format."
-          },
-          {
-            "name": "Status",
-            "type": "AcrBuildTaskStatus",
-            "format": "--status {value}",
-            "help": "The current status of build task."
-          },
-          {
-            "name": "Timeout",
-            "type": "string",
-            "format": "--timeout {value}",
-            "help": "Build timeout in seconds."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "BuildTaskDelete",
-      "definiteArgument": "acr build-task delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the build task."
-          },
-          {
-            "name": "Registry",
-            "type": "string",
-            "format": "--registry {value}",
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "BuildTaskList",
-      "definiteArgument": "acr build-task list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Registry",
-            "type": "string",
-            "format": "--registry {value}",
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "BuildTaskListBuilds",
-      "definiteArgument": "acr build-task list-builds",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Registry",
-            "type": "string",
-            "format": "--registry {value}",
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "BuildStatus",
-            "type": "AcrBuildTaskListBuildsBuildStatus",
-            "format": "--build-status {value}",
-            "help": "The current status of build."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the build task."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Top",
-            "type": "string",
-            "format": "--top {value}",
-            "help": "Limit the number of latest builds in the results."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "BuildTaskLogs",
-      "definiteArgument": "acr build-task logs",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Registry",
-            "type": "string",
-            "format": "--registry {value}",
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "BuildId",
-            "type": "string",
-            "format": "--build-id {value}",
-            "help": "The unique build identifier."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the build task."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "BuildTaskRun",
-      "definiteArgument": "acr build-task run",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the build task."
-          },
-          {
-            "name": "Registry",
-            "type": "string",
-            "format": "--registry {value}",
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "NoLogs",
-            "type": "string",
-            "format": "--no-logs {value}",
-            "help": "Do not show logs after successfully queuing the build."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "BuildTaskShow",
-      "definiteArgument": "acr build-task show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the build task."
-          },
-          {
-            "name": "Registry",
-            "type": "string",
-            "format": "--registry {value}",
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "BuildTaskShowBuild",
-      "definiteArgument": "acr build-task show-build",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "BuildId",
-            "type": "string",
-            "format": "--build-id {value}",
-            "help": "The unique build identifier."
-          },
-          {
-            "name": "Registry",
-            "type": "string",
-            "format": "--registry {value}",
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "BuildTaskUpdate",
-      "definiteArgument": "acr build-task update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the build task."
-          },
-          {
-            "name": "Registry",
-            "type": "string",
-            "format": "--registry {value}",
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "Alias",
-            "type": "string",
-            "format": "--alias {value}",
-            "help": "The alternative name for build task. Default to the build task name."
-          },
-          {
-            "name": "BaseImageTrigger",
-            "type": "AcrBuildTaskBaseImageTrigger",
-            "format": "--base-image-trigger {value}",
-            "help": "The type of the auto trigger for base image dependency updates."
-          },
-          {
-            "name": "Branch",
-            "type": "string",
-            "format": "--branch {value}",
-            "help": "The source control branch name."
-          },
-          {
-            "name": "BuildArg",
-            "type": "string",
-            "format": "--build-arg {value}",
-            "help": "Build argument in 'name[=value]' format."
-          },
-          {
-            "name": "CommitTriggerEnabled",
-            "type": "bool",
-            "format": "--commit-trigger-enabled",
-            "help": "Indicates whether the source control commit trigger is enabled."
-          },
-          {
-            "name": "Context",
-            "type": "string",
-            "format": "--context {value}",
-            "help": "The full URL to the source code respository."
-          },
-          {
-            "name": "Cpu",
-            "type": "string",
-            "format": "--cpu {value}",
-            "help": "The CPU configuration in terms of number of cores required for the build."
-          },
-          {
-            "name": "File",
-            "type": "string",
-            "format": "--file {value}",
-            "help": "The relative path of the the docker file to the source code root folder."
-          },
-          {
-            "name": "GitAccessToken",
-            "type": "string",
-            "format": "--git-access-token {value}",
-            "help": "The access token used to access the source control provider."
-          },
-          {
-            "name": "Image",
-            "type": "string",
-            "format": "--image {value}",
-            "help": "The image repository and optionally a tag in the 'repository:tag' format."
-          },
-          {
-            "name": "NoCache",
-            "type": "bool",
-            "format": "--no-cache",
-            "help": "Indicates whether the image cache is enabled."
-          },
-          {
-            "name": "NoPush",
-            "type": "bool",
-            "format": "--no-push",
-            "help": "Indicates whether the image built should be pushed to the registry."
-          },
-          {
-            "name": "Os",
-            "type": "AcrBuildTaskOs",
-            "format": "--os {value}",
-            "help": "The operating system type required for the build."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "SecretBuildArg",
-            "type": "string",
-            "format": "--secret-build-arg {value}",
-            "secret": true,
-            "help": "Secret build argument in 'name[=value]' format."
-          },
-          {
-            "name": "Status",
-            "type": "AcrBuildTaskStatus",
-            "format": "--status {value}",
-            "help": "The current status of build task."
-          },
-          {
-            "name": "Timeout",
-            "type": "string",
-            "format": "--timeout {value}",
-            "help": "Build timeout in seconds."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CredentialRenew",
-      "definiteArgument": "acr credential renew",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "PasswordName",
-            "type": "AcrCredentialRenewPasswordName",
-            "format": "--password-name {value}",
-            "secret": true,
-            "help": "The name of password to regenerate."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CredentialShow",
-      "definiteArgument": "acr credential show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           }
         ]
       }
@@ -1213,6 +720,53 @@
       }
     },
     {
+      "postfix": "CredentialRenew",
+      "definiteArgument": "acr credential renew",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "PasswordName",
+            "type": "AcrCredentialRenewPasswordName",
+            "format": "--password-name {value}",
+            "secret": true,
+            "help": "The name of password to regenerate."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CredentialShow",
+      "definiteArgument": "acr credential show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "WebhookCreate",
       "definiteArgument": "acr webhook create",
       "settingsClass": {
@@ -1268,7 +822,7 @@
           },
           {
             "name": "Status",
-            "type": "AcrBuildTaskStatus",
+            "type": "AcrWebhookStatus",
             "format": "--status {value}",
             "help": "Indicates whether the webhook is enabled."
           },
@@ -1475,7 +1029,7 @@
           },
           {
             "name": "Status",
-            "type": "AcrBuildTaskStatus",
+            "type": "AcrWebhookStatus",
             "format": "--status {value}",
             "help": "Indicates whether the webhook is enabled."
           },
@@ -1511,6 +1065,452 @@
           }
         ]
       }
+    },
+    {
+      "postfix": "BuildTaskCreate",
+      "definiteArgument": "acr build-task create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Context",
+            "type": "string",
+            "format": "--context {value}",
+            "help": "The full URL to the source code respository."
+          },
+          {
+            "name": "GitAccessToken",
+            "type": "string",
+            "format": "--git-access-token {value}",
+            "help": "The access token used to access the source control provider."
+          },
+          {
+            "name": "Image",
+            "type": "string",
+            "format": "--image {value}",
+            "help": "The image repository and optionally a tag in the 'repository:tag' format."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the build task."
+          },
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "Alias",
+            "type": "string",
+            "format": "--alias {value}",
+            "help": "The alternative name for build task. Default to the build task name."
+          },
+          {
+            "name": "BaseImageTrigger",
+            "type": "AcrBuildTaskBaseImageTrigger",
+            "format": "--base-image-trigger {value}",
+            "help": "The type of the auto trigger for base image dependency updates."
+          },
+          {
+            "name": "Branch",
+            "type": "string",
+            "format": "--branch {value}",
+            "help": "The source control branch name."
+          },
+          {
+            "name": "BuildArg",
+            "type": "string",
+            "format": "--build-arg {value}",
+            "help": "Build argument in 'name[=value]' format."
+          },
+          {
+            "name": "CommitTriggerEnabled",
+            "type": "bool",
+            "format": "--commit-trigger-enabled",
+            "help": "Indicates whether the source control commit trigger is enabled."
+          },
+          {
+            "name": "Cpu",
+            "type": "string",
+            "format": "--cpu {value}",
+            "help": "The CPU configuration in terms of number of cores required for the build."
+          },
+          {
+            "name": "File",
+            "type": "string",
+            "format": "--file {value}",
+            "help": "The relative path of the the docker file to the source code root folder."
+          },
+          {
+            "name": "NoCache",
+            "type": "bool",
+            "format": "--no-cache",
+            "help": "Indicates whether the image cache is enabled."
+          },
+          {
+            "name": "NoPush",
+            "type": "bool",
+            "format": "--no-push",
+            "help": "Indicates whether the image built should be pushed to the registry."
+          },
+          {
+            "name": "Os",
+            "type": "AcrBuildTaskOs",
+            "format": "--os {value}",
+            "help": "The operating system type required for the build."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "SecretBuildArg",
+            "type": "string",
+            "format": "--secret-build-arg {value}",
+            "secret": true,
+            "help": "Secret build argument in 'name[=value]' format."
+          },
+          {
+            "name": "Status",
+            "type": "AcrWebhookStatus",
+            "format": "--status {value}",
+            "help": "The current status of build task."
+          },
+          {
+            "name": "Timeout",
+            "type": "string",
+            "format": "--timeout {value}",
+            "help": "Build timeout in seconds."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "BuildTaskDelete",
+      "definiteArgument": "acr build-task delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the build task."
+          },
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "BuildTaskList",
+      "definiteArgument": "acr build-task list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "BuildTaskListBuilds",
+      "definiteArgument": "acr build-task list-builds",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "BuildStatus",
+            "type": "AcrBuildTaskListBuildsBuildStatus",
+            "format": "--build-status {value}",
+            "help": "The current status of build."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the build task."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Top",
+            "type": "string",
+            "format": "--top {value}",
+            "help": "Limit the number of latest builds in the results."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "BuildTaskLogs",
+      "definiteArgument": "acr build-task logs",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "BuildId",
+            "type": "string",
+            "format": "--build-id {value}",
+            "help": "The unique build identifier."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the build task."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "BuildTaskRun",
+      "definiteArgument": "acr build-task run",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the build task."
+          },
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "NoLogs",
+            "type": "string",
+            "format": "--no-logs {value}",
+            "help": "Do not show logs after successfully queuing the build."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "BuildTaskShow",
+      "definiteArgument": "acr build-task show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the build task."
+          },
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "BuildTaskShowBuild",
+      "definiteArgument": "acr build-task show-build",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "BuildId",
+            "type": "string",
+            "format": "--build-id {value}",
+            "help": "The unique build identifier."
+          },
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "BuildTaskUpdate",
+      "definiteArgument": "acr build-task update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the build task."
+          },
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "Alias",
+            "type": "string",
+            "format": "--alias {value}",
+            "help": "The alternative name for build task. Default to the build task name."
+          },
+          {
+            "name": "BaseImageTrigger",
+            "type": "AcrBuildTaskBaseImageTrigger",
+            "format": "--base-image-trigger {value}",
+            "help": "The type of the auto trigger for base image dependency updates."
+          },
+          {
+            "name": "Branch",
+            "type": "string",
+            "format": "--branch {value}",
+            "help": "The source control branch name."
+          },
+          {
+            "name": "BuildArg",
+            "type": "string",
+            "format": "--build-arg {value}",
+            "help": "Build argument in 'name[=value]' format."
+          },
+          {
+            "name": "CommitTriggerEnabled",
+            "type": "bool",
+            "format": "--commit-trigger-enabled",
+            "help": "Indicates whether the source control commit trigger is enabled."
+          },
+          {
+            "name": "Context",
+            "type": "string",
+            "format": "--context {value}",
+            "help": "The full URL to the source code respository."
+          },
+          {
+            "name": "Cpu",
+            "type": "string",
+            "format": "--cpu {value}",
+            "help": "The CPU configuration in terms of number of cores required for the build."
+          },
+          {
+            "name": "File",
+            "type": "string",
+            "format": "--file {value}",
+            "help": "The relative path of the the docker file to the source code root folder."
+          },
+          {
+            "name": "GitAccessToken",
+            "type": "string",
+            "format": "--git-access-token {value}",
+            "help": "The access token used to access the source control provider."
+          },
+          {
+            "name": "Image",
+            "type": "string",
+            "format": "--image {value}",
+            "help": "The image repository and optionally a tag in the 'repository:tag' format."
+          },
+          {
+            "name": "NoCache",
+            "type": "bool",
+            "format": "--no-cache",
+            "help": "Indicates whether the image cache is enabled."
+          },
+          {
+            "name": "NoPush",
+            "type": "bool",
+            "format": "--no-push",
+            "help": "Indicates whether the image built should be pushed to the registry."
+          },
+          {
+            "name": "Os",
+            "type": "AcrBuildTaskOs",
+            "format": "--os {value}",
+            "help": "The operating system type required for the build."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "SecretBuildArg",
+            "type": "string",
+            "format": "--secret-build-arg {value}",
+            "secret": true,
+            "help": "Secret build argument in 'name[=value]' format."
+          },
+          {
+            "name": "Status",
+            "type": "AcrWebhookStatus",
+            "format": "--status {value}",
+            "help": "The current status of build task."
+          },
+          {
+            "name": "Timeout",
+            "type": "string",
+            "format": "--timeout {value}",
+            "help": "Build timeout in seconds."
+          }
+        ]
+      }
     }
   ],
   "commonTaskProperties": [
@@ -1536,7 +1536,7 @@
       "name": "Query",
       "type": "string",
       "format": "--query {value}",
-      "help": "JMESPath query string. See &lt;a href=\"http://jmespath.org/\"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples."
+      "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
     },
     {
       "name": "Verbose",
@@ -1556,6 +1556,27 @@
       ]
     },
     {
+      "name": "AcrCredentialRenewPasswordName",
+      "values": [
+        "password",
+        "password2"
+      ]
+    },
+    {
+      "name": "AcrWebhookActions",
+      "values": [
+        "delete",
+        "push"
+      ]
+    },
+    {
+      "name": "AcrWebhookStatus",
+      "values": [
+        "disabled",
+        "enabled"
+      ]
+    },
+    {
       "name": "AcrBuildTaskBaseImageTrigger",
       "values": [
         "all",
@@ -1571,13 +1592,6 @@
       ]
     },
     {
-      "name": "AcrBuildTaskStatus",
-      "values": [
-        "disabled",
-        "enabled"
-      ]
-    },
-    {
       "name": "AcrBuildTaskListBuildsBuildStatus",
       "values": [
         "canceled",
@@ -1588,20 +1602,6 @@
         "started",
         "succeeded",
         "timeout"
-      ]
-    },
-    {
-      "name": "AcrCredentialRenewPasswordName",
-      "values": [
-        "password",
-        "password2"
-      ]
-    },
-    {
-      "name": "AcrWebhookActions",
-      "values": [
-        "delete",
-        "push"
       ]
     }
   ]
