@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh '/bin/bash ./build.sh Test -Skip -NoInit'
+                sh '/bin/bash ./build.sh Test -Skip'
             }
             post {
                 always {
@@ -22,27 +22,27 @@ pipeline {
         }
 		stage('Clone') {
             steps {
-                sh '/bin/bash ./build.sh Clone -Skip -NoInit'
+                sh '/bin/bash ./build.sh Clone -Skip'
             }
         }
         stage('GenerateSpecifications') {
             steps {
-                sh '/bin/bash ./build.sh GenerateSpecifications -Skip -NoInit'
+                sh '/bin/bash ./build.sh GenerateSpecifications -Skip'
             }
         }
 		stage('GenerateTools') {
             steps {
-                sh '/bin/bash ./build.sh GenerateTools -Skip -NoInit'
+                sh '/bin/bash ./build.sh GenerateTools -Skip'
             }
         }
         stage('CompilePlugin') {
             steps {
-                sh '/bin/bash ./build.sh CompilePlugin -Skip -NoInit'
+                sh '/bin/bash ./build.sh CompilePlugin -Skip'
             }
         }
         stage('Pack') {
             steps {
-                sh '/bin/bash ./build.sh Pack -Skip -NoInit'
+                sh '/bin/bash ./build.sh Pack -Skip'
             }
 			post {
 				success {
