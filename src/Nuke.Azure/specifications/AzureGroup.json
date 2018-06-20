@@ -6,10 +6,10 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/group.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/group/deployment.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/group/lock.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/group/deployment/operation.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/group.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/group/lock.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/group/deployment.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/group/deployment/operation.yml"
   ],
   "name": "AzureGroup",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest",
@@ -220,6 +220,148 @@
             "type": "string",
             "format": "--updated {value}",
             "help": "Wait until updated with provisioningState at 'Succeeded'."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LockCreate",
+      "definiteArgument": "group lock create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LockType",
+            "type": "GroupLockLockType",
+            "format": "--lock-type {value}",
+            "help": ""
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the lock."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Notes",
+            "type": "string",
+            "format": "--notes {value}",
+            "help": "Notes about this lock."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LockDelete",
+      "definiteArgument": "group lock delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "string",
+            "format": "--ids {value}",
+            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the lock."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LockList",
+      "definiteArgument": "group lock list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "FilterString",
+            "type": "string",
+            "format": "--filter-string {value}",
+            "help": "A query filter to use to restrict the results."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LockShow",
+      "definiteArgument": "group lock show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "string",
+            "format": "--ids {value}",
+            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the lock."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LockUpdate",
+      "definiteArgument": "group lock update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "string",
+            "format": "--ids {value}",
+            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
+          },
+          {
+            "name": "LockType",
+            "type": "GroupLockLockType",
+            "format": "--lock-type {value}",
+            "help": ""
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the lock."
+          },
+          {
+            "name": "Notes",
+            "type": "string",
+            "format": "--notes {value}",
+            "help": "Notes about this lock."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           }
         ]
       }
@@ -461,148 +603,6 @@
       }
     },
     {
-      "postfix": "LockCreate",
-      "definiteArgument": "group lock create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "LockType",
-            "type": "GroupLockLockType",
-            "format": "--lock-type {value}",
-            "help": ""
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the lock."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Notes",
-            "type": "string",
-            "format": "--notes {value}",
-            "help": "Notes about this lock."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LockDelete",
-      "definiteArgument": "group lock delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Ids",
-            "type": "string",
-            "format": "--ids {value}",
-            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the lock."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LockList",
-      "definiteArgument": "group lock list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "FilterString",
-            "type": "string",
-            "format": "--filter-string {value}",
-            "help": "A query filter to use to restrict the results."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LockShow",
-      "definiteArgument": "group lock show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Ids",
-            "type": "string",
-            "format": "--ids {value}",
-            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the lock."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LockUpdate",
-      "definiteArgument": "group lock update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Ids",
-            "type": "string",
-            "format": "--ids {value}",
-            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
-          },
-          {
-            "name": "LockType",
-            "type": "GroupLockLockType",
-            "format": "--lock-type {value}",
-            "help": ""
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the lock."
-          },
-          {
-            "name": "Notes",
-            "type": "string",
-            "format": "--notes {value}",
-            "help": "Notes about this lock."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
       "postfix": "DeploymentOperationList",
       "definiteArgument": "group deployment operation list",
       "settingsClass": {
@@ -678,7 +678,7 @@
       "name": "Query",
       "type": "string",
       "format": "--query {value}",
-      "help": "JMESPath query string. See &lt;a href=\"http://jmespath.org/\"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples."
+      "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
     },
     {
       "name": "Verbose",
@@ -689,17 +689,17 @@
   ],
   "enumerations": [
     {
-      "name": "GroupDeploymentMode",
-      "values": [
-        "complete",
-        "incremental"
-      ]
-    },
-    {
       "name": "GroupLockLockType",
       "values": [
         "cannotdelete",
         "readonly"
+      ]
+    },
+    {
+      "name": "GroupDeploymentMode",
+      "values": [
+        "complete",
+        "incremental"
       ]
     }
   ]

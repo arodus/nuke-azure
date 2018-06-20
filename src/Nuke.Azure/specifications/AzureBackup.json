@@ -6,17 +6,17 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/backup.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/backup/container.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/backup/item.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/backup/job.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/backup/policy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/backup/protection.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/backup/recoverypoint.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/backup/restore.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/backup/vault.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/backup/restore/files.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/5c80e96e/latest/docs-ref-autogen/backup/vault/backup-properties.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/backup.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/backup/restore.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/backup/vault.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/backup/policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/backup/protection.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/backup/job.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/backup/container.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/backup/recoverypoint.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/backup/item.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/backup/vault/backup-properties.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/backup/restore/files.yml"
   ],
   "name": "AzureBackup",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest",
@@ -29,80 +29,8 @@
       "settingsClass": {}
     },
     {
-      "postfix": "ContainerList",
-      "definiteArgument": "backup container list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the Recovery services vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ContainerShow",
-      "definiteArgument": "backup container show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the container. You can use the backup container list command to get the name of a container."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the Recovery services vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ItemList",
-      "definiteArgument": "backup item list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the Recovery services vault."
-          },
-          {
-            "name": "ContainerName",
-            "type": "string",
-            "format": "--container-name {value}",
-            "help": "Name of the container."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ItemSetPolicy",
-      "definiteArgument": "backup item set-policy",
+      "postfix": "RestoreRestoreDisks",
+      "definiteArgument": "backup restore restore-disks",
       "settingsClass": {
         "properties": [
           {
@@ -112,16 +40,10 @@
             "help": "Name of the container."
           },
           {
-            "name": "Name",
+            "name": "ItemName",
             "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the backed up item. You can use the backup item list command to get the name of a backed up item."
-          },
-          {
-            "name": "PolicyName",
-            "type": "string",
-            "format": "--policy-name {value}",
-            "help": "Name of the Backup policy. You can use the backup policy list command to get the name of a backup policy."
+            "format": "--item-name {value}",
+            "help": "Name of the backed up item."
           },
           {
             "name": "ResourceGroup",
@@ -130,100 +52,68 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
+            "name": "RpName",
+            "type": "string",
+            "format": "--rp-name {value}",
+            "help": "Name of the recovery point."
+          },
+          {
+            "name": "StorageAccount",
+            "type": "string",
+            "format": "--storage-account {value}",
+            "help": "Name or ID of the staging storage account. The VM configuration will be restored to this storage account. See the help for --restore-to-staging-storage-account parameter for more info."
+          },
+          {
             "name": "VaultName",
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the Recovery services vault."
+          },
+          {
+            "name": "RestoreToStagingStorageAccount",
+            "type": "bool",
+            "format": "--restore-to-staging-storage-account",
+            "help": "Use this flag when you want disks to be restored to the staging storage account using the --storage-account parameter. When not specified, disks will be restored to their original storage accounts. Default: false."
           }
         ]
       }
     },
     {
-      "postfix": "ItemShow",
-      "definiteArgument": "backup item show",
+      "postfix": "VaultCreate",
+      "definiteArgument": "backup vault create",
       "settingsClass": {
         "properties": [
           {
-            "name": "ContainerName",
+            "name": "Location",
             "type": "string",
-            "format": "--container-name {value}",
-            "help": "Name of the container."
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the backed up item. You can use the backup item list command to get the name of a backed up item."
+            "help": "Name of the Recovery services vault."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the Recovery services vault."
           }
         ]
       }
     },
     {
-      "postfix": "JobList",
-      "definiteArgument": "backup job list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the Recovery services vault."
-          },
-          {
-            "name": "EndDate",
-            "type": "string",
-            "format": "--end-date {value}",
-            "help": "The end date of the range in UTC (d-m-Y)."
-          },
-          {
-            "name": "Operation",
-            "type": "BackupJobListOperation",
-            "format": "--operation {value}",
-            "help": "User initiated operation."
-          },
-          {
-            "name": "StartDate",
-            "type": "string",
-            "format": "--start-date {value}",
-            "help": "The start date of the range in UTC (d-m-Y)."
-          },
-          {
-            "name": "Status",
-            "type": "BackupJobListStatus",
-            "format": "--status {value}",
-            "help": "Status of the Job."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "JobShow",
-      "definiteArgument": "backup job show",
+      "postfix": "VaultDelete",
+      "definiteArgument": "backup vault delete",
       "settingsClass": {
         "properties": [
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the job. You can use the backup job list command to get the name of a job."
+            "help": "Name of the Recovery services vault."
           },
           {
             "name": "ResourceGroup",
@@ -232,68 +122,50 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "VaultName",
+            "name": "Force",
             "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the Recovery services vault."
+            "format": "--force {value}",
+            "help": "Force completion of the requested action."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "help": "Do not prompt for confirmation."
           }
         ]
       }
     },
     {
-      "postfix": "JobStop",
-      "definiteArgument": "backup job stop",
+      "postfix": "VaultList",
+      "definiteArgument": "backup vault list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "VaultShow",
+      "definiteArgument": "backup vault show",
       "settingsClass": {
         "properties": [
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the job. You can use the backup job list command to get the name of a job."
+            "help": "Name of the Recovery services vault."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the Recovery services vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "JobWait",
-      "definiteArgument": "backup job wait",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the job. You can use the backup job list command to get the name of a job."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the Recovery services vault."
-          },
-          {
-            "name": "Timeout",
-            "type": "string",
-            "format": "--timeout {value}",
-            "help": "Maximum time, in seconds, to wait before aborting."
           }
         ]
       }
@@ -571,6 +443,180 @@
       }
     },
     {
+      "postfix": "JobList",
+      "definiteArgument": "backup job list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the Recovery services vault."
+          },
+          {
+            "name": "EndDate",
+            "type": "string",
+            "format": "--end-date {value}",
+            "help": "The end date of the range in UTC (d-m-Y)."
+          },
+          {
+            "name": "Operation",
+            "type": "BackupJobListOperation",
+            "format": "--operation {value}",
+            "help": "User initiated operation."
+          },
+          {
+            "name": "StartDate",
+            "type": "string",
+            "format": "--start-date {value}",
+            "help": "The start date of the range in UTC (d-m-Y)."
+          },
+          {
+            "name": "Status",
+            "type": "BackupJobListStatus",
+            "format": "--status {value}",
+            "help": "Status of the Job."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "JobShow",
+      "definiteArgument": "backup job show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the job. You can use the backup job list command to get the name of a job."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the Recovery services vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "JobStop",
+      "definiteArgument": "backup job stop",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the job. You can use the backup job list command to get the name of a job."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the Recovery services vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "JobWait",
+      "definiteArgument": "backup job wait",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the job. You can use the backup job list command to get the name of a job."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the Recovery services vault."
+          },
+          {
+            "name": "Timeout",
+            "type": "string",
+            "format": "--timeout {value}",
+            "help": "Maximum time, in seconds, to wait before aborting."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ContainerList",
+      "definiteArgument": "backup container list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the Recovery services vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ContainerShow",
+      "definiteArgument": "backup container show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the container. You can use the backup container list command to get the name of a container."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the Recovery services vault."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "RecoverypointList",
       "definiteArgument": "backup recoverypoint list",
       "settingsClass": {
@@ -653,8 +699,34 @@
       }
     },
     {
-      "postfix": "RestoreRestoreDisks",
-      "definiteArgument": "backup restore restore-disks",
+      "postfix": "ItemList",
+      "definiteArgument": "backup item list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the Recovery services vault."
+          },
+          {
+            "name": "ContainerName",
+            "type": "string",
+            "format": "--container-name {value}",
+            "help": "Name of the container."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ItemSetPolicy",
+      "definiteArgument": "backup item set-policy",
       "settingsClass": {
         "properties": [
           {
@@ -664,54 +736,74 @@
             "help": "Name of the container."
           },
           {
-            "name": "ItemName",
+            "name": "Name",
             "type": "string",
-            "format": "--item-name {value}",
-            "help": "Name of the backed up item."
+            "format": "--name {value}",
+            "help": "Name of the backed up item. You can use the backup item list command to get the name of a backed up item."
+          },
+          {
+            "name": "PolicyName",
+            "type": "string",
+            "format": "--policy-name {value}",
+            "help": "Name of the Backup policy. You can use the backup policy list command to get the name of a backup policy."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "RpName",
-            "type": "string",
-            "format": "--rp-name {value}",
-            "help": "Name of the recovery point."
-          },
-          {
-            "name": "StorageAccount",
-            "type": "string",
-            "format": "--storage-account {value}",
-            "help": "Name or ID of the staging storage account. The VM configuration will be restored to this storage account. See the help for --restore-to-staging-storage-account parameter for more info."
           },
           {
             "name": "VaultName",
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the Recovery services vault."
-          },
-          {
-            "name": "RestoreToStagingStorageAccount",
-            "type": "bool",
-            "format": "--restore-to-staging-storage-account",
-            "help": "Use this flag when you want disks to be restored to the staging storage account using the --storage-account parameter. When not specified, disks will be restored to their original storage accounts. Default: false."
           }
         ]
       }
     },
     {
-      "postfix": "VaultCreate",
-      "definiteArgument": "backup vault create",
+      "postfix": "ItemShow",
+      "definiteArgument": "backup item show",
       "settingsClass": {
         "properties": [
           {
-            "name": "Location",
+            "name": "ContainerName",
             "type": "string",
-            "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "format": "--container-name {value}",
+            "help": "Name of the container."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the backed up item. You can use the backup item list command to get the name of a backed up item."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the Recovery services vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "VaultBackupPropertiesSet",
+      "definiteArgument": "backup vault backup-properties set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "BackupStorageRedundancy",
+            "type": "BackupVaultBackupPropertiesSetBackupStorageRedundancy",
+            "format": "--backup-storage-redundancy {value}",
+            "help": "Sets backup storage properties for a Recovery Services vault."
           },
           {
             "name": "Name",
@@ -729,54 +821,8 @@
       }
     },
     {
-      "postfix": "VaultDelete",
-      "definiteArgument": "backup vault delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the Recovery services vault."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Force",
-            "type": "string",
-            "format": "--force {value}",
-            "help": "Force completion of the requested action."
-          },
-          {
-            "name": "Yes",
-            "type": "string",
-            "format": "--yes {value}",
-            "help": "Do not prompt for confirmation."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "VaultList",
-      "definiteArgument": "backup vault list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "VaultShow",
-      "definiteArgument": "backup vault show",
+      "postfix": "VaultBackupPropertiesShow",
+      "definiteArgument": "backup vault backup-properties show",
       "settingsClass": {
         "properties": [
           {
@@ -869,52 +915,6 @@
           }
         ]
       }
-    },
-    {
-      "postfix": "VaultBackupPropertiesSet",
-      "definiteArgument": "backup vault backup-properties set",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "BackupStorageRedundancy",
-            "type": "BackupVaultBackupPropertiesSetBackupStorageRedundancy",
-            "format": "--backup-storage-redundancy {value}",
-            "help": "Sets backup storage properties for a Recovery Services vault."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the Recovery services vault."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "VaultBackupPropertiesShow",
-      "definiteArgument": "backup vault backup-properties show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the Recovery services vault."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
     }
   ],
   "commonTaskProperties": [
@@ -940,7 +940,7 @@
       "name": "Query",
       "type": "string",
       "format": "--query {value}",
-      "help": "JMESPath query string. See &lt;a href=\"http://jmespath.org/\"&gt;http://jmespath.org/&lt;/a&gt; for more information and examples."
+      "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
     },
     {
       "name": "Verbose",
