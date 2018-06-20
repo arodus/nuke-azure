@@ -280,14 +280,16 @@ class Build : NukeBuild
             var branch = $"{c_addonRepoName}-update-{release.Version}";
             var versionName = $"{c_addonName} v{release.Version}";
             var message = $"Regenerate for {versionName}";
+            var latestReleaseDate = LatestCliRelease.PublishedAt?.ToString("MMMM-d-yyyy");
+            var changelogUrl = $"https://docs.microsoft.com/cli/azure/release-notes-azure-cli?view=azure-cli-latest#{latestReleaseDate}";
 
             var commitMessage = new List<string> { message };
             if (release.Bump != GitVersionBump.Patch) commitMessage.Add($"+semver: {release.Bump.ToString().ToLowerInvariant()}");
-            var prBody = $"Regenerate for [{versionName}]({LatestCliRelease.HtmlUrl}).";
+            var prBody = $"Regenerate for [{versionName}]({LatestCliRelease.HtmlUrl}).\n[Changelog]({changelogUrl})";
 
             CheckoutBranchOrCreateNewFrom(branch, "master");
 
-            UpdateChangeLog(ChangelogFile, versionName, LatestCliRelease.HtmlUrl);
+            UpdateChangeLog(ChangelogFile, versionName, changelogUrl);
             FinalizeChangelog(ChangelogFile, GitVersion.NextSemVer(release.Bump), GitRepository);
             AddAndCommitChanges(commitMessage.ToArray(), new[] { AddonProject.Directory, ChangelogFile }, addUntracked: true);
             Git($"push --force --set-upstream origin {branch}");
