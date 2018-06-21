@@ -230,7 +230,7 @@ class Build : NukeBuild
             var releaseNotes = ExtractChangelogSectionNotes(ChangelogFile)
                 .Select(x => x.Replace("- ", "\u2022 ").Replace("`", string.Empty).Replace(",", "%2C"))
                 .Concat(string.Empty)
-                .Concat($"Full changelog at {GitRepository.GetGitHubBrowseUrl(ChangelogFile)}")
+                .Concat($"Full changelog at {GitRepository.SetBranch("master").GetGitHubBrowseUrl(ChangelogFile)}")
                 .JoinNewLine();
 
             DotNetPack(s => DefaultDotNetPack
@@ -268,13 +268,10 @@ class Build : NukeBuild
     Target Regenerate => _ => _
         .Requires(() => GitHubApiKey)
         .Requires(() => LatestCliRelease != null)
-        .OnlyWhen(() => IsUpdateAvailable($"{c_addonName} v{LatestCliRelease}", ChangelogFile))
+        .OnlyWhen(() => IsUpdateAvailable($"{c_addonName} v{ParseVersion(LatestCliRelease)}", ChangelogFile))
         .DependsOn(CompilePlugin)
         .Executes(() =>
         {
-            // var (fullVersion, version, preReleaseTag) = Regex.Match(LatestCliRelease.Name, @"((?:\d+\.){2}\d+)(?:-([\d\w-]+))?$").Groups.Select(x => x.Value).ToArray();
-            Version ParseVersion(Release x) => Version.Parse(Regex.Match(x.Name, @"(?'version'(?:\d+\.){2}\d+)$").Groups["version"].Value);
-
             var release = GetReleaseInformation(LatestCliReleases.Value, ParseVersion);
 
             var branch = $"{c_addonRepoName}-update-{release.Version}";
@@ -302,6 +299,7 @@ class Build : NukeBuild
         .Executes(() =>
         {
             var lastCommitMessage = GitLastCommitMessage();
+
             var tagAnnotations = lastCommitMessage.Aggregate(string.Empty, (x, y) => $"{x} -m \"{y}\"").Trim();
             var tagName = GitVersion.SemVer;
 
@@ -314,4 +312,6 @@ class Build : NukeBuild
                                  }.JoinNewLine();
             CreateRelease(GitRepository.Identifier, tagName, GitHubApiKey, $"{c_toolNamespace} v{tagName}", releaseMessage, !NuGet);
         });
+
+    Version ParseVersion(Release release) => Version.Parse(Regex.Match(release.Name, @"(?'version'(?:\d+\.){2}\d+)$").Groups["version"].Value);
 }
