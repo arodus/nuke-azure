@@ -4,10 +4,8 @@
 
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using JetBrains.Annotations;
-using Nuke.CodeGeneration.Model;
 using Nuke.Common.IO;
 using Nuke.Common.Tools.Git;
 using Nuke.Common.Tools.GitVersion;
