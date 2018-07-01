@@ -6,7 +6,7 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/lock.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/c6c3058/latest/docs-ref-autogen/lock.yml"
   ],
   "name": "AzureLock",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/lock?view=azure-cli-latest",
