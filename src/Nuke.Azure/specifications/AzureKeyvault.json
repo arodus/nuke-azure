@@ -6,14 +6,14 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/keyvault.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/keyvault/certificate.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/keyvault/secret.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/keyvault/key.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/keyvault/certificate/pending.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/keyvault/certificate/contact.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/keyvault/certificate/issuer.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/keyvault/certificate/issuer/admin.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/c6c3058/latest/docs-ref-autogen/keyvault.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/c6c3058/latest/docs-ref-autogen/keyvault/certificate.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/c6c3058/latest/docs-ref-autogen/keyvault/secret.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/c6c3058/latest/docs-ref-autogen/keyvault/key.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/c6c3058/latest/docs-ref-autogen/keyvault/certificate/pending.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/c6c3058/latest/docs-ref-autogen/keyvault/certificate/contact.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/c6c3058/latest/docs-ref-autogen/keyvault/certificate/issuer.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/c6c3058/latest/docs-ref-autogen/keyvault/certificate/issuer/admin.yml"
   ],
   "name": "AzureKeyvault",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest",

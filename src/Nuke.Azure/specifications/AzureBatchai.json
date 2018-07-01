@@ -6,16 +6,16 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/batchai.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/batchai/cluster.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/batchai/experiment.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/batchai/job.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/batchai/workspace.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/batchai/file-server.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/batchai/job/node.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/batchai/job/file.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/batchai/cluster/node.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/batchai/cluster/file.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/c6c3058/latest/docs-ref-autogen/batchai.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/c6c3058/latest/docs-ref-autogen/batchai/cluster.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/c6c3058/latest/docs-ref-autogen/batchai/experiment.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/c6c3058/latest/docs-ref-autogen/batchai/job.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/c6c3058/latest/docs-ref-autogen/batchai/workspace.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/c6c3058/latest/docs-ref-autogen/batchai/file-server.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/c6c3058/latest/docs-ref-autogen/batchai/job/node.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/c6c3058/latest/docs-ref-autogen/batchai/job/file.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/c6c3058/latest/docs-ref-autogen/batchai/cluster/node.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/c6c3058/latest/docs-ref-autogen/batchai/cluster/file.yml"
   ],
   "name": "AzureBatchai",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest",

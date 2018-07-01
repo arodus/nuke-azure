@@ -6,12 +6,12 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/policy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/policy/event.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/policy/assignment.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/policy/definition.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/policy/set-definition.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/policy/state.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/c6c3058/latest/docs-ref-autogen/policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/c6c3058/latest/docs-ref-autogen/policy/event.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/c6c3058/latest/docs-ref-autogen/policy/assignment.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/c6c3058/latest/docs-ref-autogen/policy/definition.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/c6c3058/latest/docs-ref-autogen/policy/set-definition.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/c6c3058/latest/docs-ref-autogen/policy/state.yml"
   ],
   "name": "AzurePolicy",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/policy?view=azure-cli-latest",
