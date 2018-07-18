@@ -6,17 +6,17 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/backup.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/backup/restore.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/backup/vault.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/backup/policy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/backup/protection.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/backup/job.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/backup/container.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/backup/recoverypoint.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/backup/item.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/backup/vault/backup-properties.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/backup/restore/files.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/backup.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/backup/restore.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/backup/vault.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/backup/policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/backup/protection.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/backup/job.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/backup/container.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/backup/recoverypoint.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/backup/item.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/backup/vault/backup-properties.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/backup/restore/files.yml"
   ],
   "name": "AzureBackup",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest",
