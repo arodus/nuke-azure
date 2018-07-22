@@ -6,15 +6,15 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/functionapp.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/functionapp/identity.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/functionapp/config.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/functionapp/deployment.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/functionapp/config/appsettings.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/functionapp/config/hostname.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/functionapp/config/ssl.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/functionapp/deployment/user.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/functionapp/deployment/source.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/functionapp.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/functionapp/identity.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/functionapp/config.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/functionapp/deployment.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/functionapp/config/appsettings.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/functionapp/config/hostname.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/functionapp/config/ssl.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/functionapp/deployment/user.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/functionapp/deployment/source.yml"
   ],
   "name": "AzureFunctionapp",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest",

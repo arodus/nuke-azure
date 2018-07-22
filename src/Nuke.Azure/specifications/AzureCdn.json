@@ -6,12 +6,12 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/cdn.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/cdn/origin.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/cdn/edge-node.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/cdn/endpoint.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/cdn/profile.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/cdn/custom-domain.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/cdn.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/cdn/origin.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/cdn/edge-node.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/cdn/endpoint.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/cdn/profile.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/cdn/custom-domain.yml"
   ],
   "name": "AzureCdn",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest",

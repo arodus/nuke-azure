@@ -6,12 +6,12 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/acr.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/acr/replication.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/acr/repository.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/acr/credential.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/acr/webhook.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/acr/build-task.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/acr.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/acr/replication.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/acr/repository.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/acr/credential.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/acr/webhook.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/acr/build-task.yml"
   ],
   "name": "AzureAcr",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest",
