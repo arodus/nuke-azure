@@ -6,15 +6,15 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/vmss.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/vmss/disk.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/vmss/diagnostics.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/vmss/identity.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/vmss/rolling-upgrade.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/vmss/nic.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/vmss/extension.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/vmss/encryption.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/vmss/extension/image.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/vmss.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/vmss/disk.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/vmss/diagnostics.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/vmss/identity.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/vmss/rolling-upgrade.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/vmss/nic.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/vmss/extension.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/vmss/encryption.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/da34d0e/latest/docs-ref-autogen/vmss/extension/image.yml"
   ],
   "name": "AzureVmss",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest",
