@@ -8,8 +8,8 @@ using System.Linq;
 using JetBrains.Annotations;
 using Nuke.Azure.Generator.Model;
 using Nuke.Azure.Generator.Utilities;
-using Nuke.Core;
-using Nuke.Core.Utilities;
+using Nuke.Common;
+using Nuke.Common.Utilities;
 
 namespace Nuke.Azure.Generator
 {
@@ -58,7 +58,8 @@ namespace Nuke.Azure.Generator
                                + (enumeration.Root.InstanceName == enumeration.Parent.InstanceName ? string.Empty : enumeration.Parent.InstanceName)
                                + enumeration.InstanceName;
 
-                    CreateEnumaration(name, enumeration.ParameterValueGroups);
+                    if (name == "Nuke.Azure.Output") name = "Nuke.Azure.AzureOutput";
+                    CreateEnumeration(name, enumeration.ParameterValueGroups);
                 }
                 else
                 {
@@ -66,12 +67,12 @@ namespace Nuke.Azure.Generator
 
                     foreach (var valueGroup in groupByValue)
                     {
-                        // same name differen value
+                        // same name different value
                         if (valueGroup.Count() == 1)
                         {
                             var enumeration = valueGroup.Single();
                             var name = ns + '.' + enumeration.Root.InstanceName + enumeration.Parent.InstanceName + enumeration.InstanceName;
-                            CreateEnumaration(name, valueGroup.Key);
+                            CreateEnumeration(name, valueGroup.Key);
                         }
                         // Multiple names same values
                         else
@@ -79,7 +80,7 @@ namespace Nuke.Azure.Generator
                             foreach (var enumeration in valueGroup)
                             {
                                 var name = ns + '.' + (isRoot ? string.Empty : enumeration.Root.InstanceName) + enumeration.InstanceName;
-                                CreateEnumaration(name, enumeration.ParameterValueGroups);
+                                CreateEnumeration(name, enumeration.ParameterValueGroups);
                             }
                         }
                     }
@@ -120,7 +121,7 @@ namespace Nuke.Azure.Generator
             else
                 typeReference.Type = "string";
 
-            if (IsSpaceSpearatedList(summary))
+            if (IsSpaceSeparatedList(summary))
             {
                 typeReference.Type = $"List<{typeReference.Type}>";
                 typeReference.Separator = ' ';
@@ -142,7 +143,7 @@ namespace Nuke.Azure.Generator
                 .Select(x => new KeyValuePair<string, string[]>(x.Value, x.Key));
         }
 
-        private void CreateEnumaration(string name, string[] values)
+        private void CreateEnumeration(string name, string[] values)
         {
             var enumeration = GetEnumeration(values);
             if (enumeration != null) return;
@@ -189,7 +190,7 @@ namespace Nuke.Azure.Generator
             return !IsDictionary(summary) && summary.IndexOf("comma-separated", StringComparison.OrdinalIgnoreCase) >= 0;
         }
 
-        private bool IsSpaceSpearatedList(string summary)
+        private bool IsSpaceSeparatedList(string summary)
         {
             return !IsDictionary(summary) && (summary.IndexOf("Space-separated list of", StringComparison.OrdinalIgnoreCase) == 0
                                               || summary.Contains("or specify individual disks"));

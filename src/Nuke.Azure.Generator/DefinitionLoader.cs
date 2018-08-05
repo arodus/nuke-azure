@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 using Nuke.Azure.Generator.Model;
 using Nuke.Common;
 using Nuke.Common.Git;
-using Nuke.Core.Utilities.Collections;
+using Nuke.Common.Utilities.Collections;
 using YamlDotNet.Serialization;
 
 namespace Nuke.Azure.Generator
@@ -22,9 +22,9 @@ namespace Nuke.Azure.Generator
         private const string c_tocFileName = "TOC.yml";
         private const string c_referenceUrl = "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/{0}/latest/docs-ref-autogen/";
 
-        public static IEnumerable<TableOfContentsEntry> LoadTablesOfContent(string definitonsPath)
+        public static IEnumerable<TableOfContentsEntry> LoadTablesOfContent(string definitionsPath)
         {
-            var tocPath = Path.Combine(definitonsPath, c_tocFileName);
+            var tocPath = Path.Combine(definitionsPath, c_tocFileName);
             ControlFlow.Assert(File.Exists(tocPath), $"Could not load TOC at '${tocPath}.'");
             var tocContent = File.ReadAllText(tocPath);
             var tocObject = new Deserializer().Deserialize<object>(tocContent);
@@ -33,13 +33,13 @@ namespace Nuke.Azure.Generator
             return tocs;
         }
 
-        public static List<Definiton> LoadCommandDefinitons(string path, string reference)
+        public static List<Definition> LoadCommandDefinitions(string path, string reference)
         {
             var repository = GitRepository.FromLocalDirectory(path, reference);
             path = path.Replace(oldChar: '\\', newChar: '/');
             path = path.EndsWith("/") ? path : path + '/';
             var files = Directory.EnumerateFiles(path, $"*{c_definitionFileExtension}", SearchOption.AllDirectories).ToList();
-            var definitions = new List<Definiton>();
+            var definitions = new List<Definition>();
 
             foreach (var file in files)
             {
@@ -54,16 +54,16 @@ namespace Nuke.Azure.Generator
             return definitions;
         }
 
-        private static Definiton ParseDefinition(string definitionYaml)
+        private static Definition ParseDefinition(string definitionYaml)
         {
             var yamlObject = new Deserializer().Deserialize<object>(definitionYaml);
             var json = JsonConvert.SerializeObject(yamlObject);
 
-            var definiton = JsonConvert.DeserializeObject<Definiton>(json);
-            return definiton;
+            var definition = JsonConvert.DeserializeObject<Definition>(json);
+            return definition;
         }
 
-        private static void PopulateDefinitionInfos(Definiton defintion, string referencePath, GitRepository repository)
+        private static void PopulateDefinitionInfos(Definition defintion, string referencePath, GitRepository repository)
         {
             var rawUrl = repository.GetGitHubDownloadUrl(referencePath);
             var browseUrl = repository.GetGitHubBrowseUrl(referencePath);

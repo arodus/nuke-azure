@@ -13,13 +13,13 @@ using Nuke.Common;
 
 namespace Nuke.Azure.Generator
 {
-    internal class DefinitonParser
+    internal class DefinitionParser
     {
         private const string c_defaultHelpText = "General Tasks.";
 
         public static Tool Parse(TableOfContentsEntry toc, string ns, List<Item> items, Parameter[] parameters, TypeResolver typeResolver)
         {
-            return new DefinitonParser(toc, ns, items, parameters, typeResolver).Parse();
+            return new DefinitionParser(toc, ns, items, parameters, typeResolver).Parse();
         }
 
         private readonly TableOfContentsEntry _toc;
@@ -29,7 +29,7 @@ namespace Nuke.Azure.Generator
         private readonly TypeResolver _typeResolver;
         private readonly Tool _tool;
 
-        private DefinitonParser(TableOfContentsEntry toc, string ns, List<Item> items, Parameter[] parameters, TypeResolver typeResolver)
+        private DefinitionParser(TableOfContentsEntry toc, string ns, List<Item> items, Parameter[] parameters, TypeResolver typeResolver)
         {
             _toc = toc;
             _namespace = ns;
@@ -101,10 +101,10 @@ namespace Nuke.Azure.Generator
             // if separator has a value the type is either a dictionary or a list and thus can't be a secret.
             var isSecret = !type.Separator.HasValue && (name.IndexOf("secret", StringComparison.OrdinalIgnoreCase) >= 0
                                                         || name.IndexOf("password", StringComparison.OrdinalIgnoreCase) >= 0);
-
+            name = parameter.InstanceName == "EnvironmentVariables" ? "AzureEnvironmentVariables" : parameter.InstanceName;
             var property = new Property
                            {
-                               Name = parameter.InstanceName,
+                               Name = name,
                                Type = type.Type,
                                Format = type.Format,
                                ItemFormat = type.ItemFormat,

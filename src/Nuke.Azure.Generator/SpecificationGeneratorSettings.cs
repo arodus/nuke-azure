@@ -9,7 +9,7 @@ namespace Nuke.Azure.Generator
 {
     public class SpecificationGeneratorSettings
     {
-        public string DefinitonFolder { get; set; }
+        public string DefinitionFolder { get; set; }
         public string OutputFolder { get; set; }
         public string BaseNamespace { get; set; }
         public string Reference { get; set; } = "live";

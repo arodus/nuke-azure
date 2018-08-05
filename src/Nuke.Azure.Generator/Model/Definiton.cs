@@ -13,7 +13,7 @@ namespace Nuke.Azure.Generator.Model
 {
     [UsedImplicitly]
     [DebuggerDisplay("Reference: {" + nameof(Name) + "}")]
-    internal class Definiton : IBrowsableDefinition
+    internal class Definition : IBrowsableDefinition
     {
         [JsonProperty(PropertyName = "items")] public List<Item> Items { get; set; }
 

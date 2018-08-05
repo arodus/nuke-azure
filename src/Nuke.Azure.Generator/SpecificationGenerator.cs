@@ -24,13 +24,13 @@ namespace Nuke.Azure.Generator
             Console.WriteLine();
 
             Console.WriteLine("Parsing ToC...");
-            var tocs = DefinitionLoader.LoadTablesOfContent(settings.DefinitonFolder);
+            var tocs = DefinitionLoader.LoadTablesOfContent(settings.DefinitionFolder);
             var referenceToc = tocs.Single(x => x.Uid == "az");
             Console.WriteLine($"ToC parsed. Commands found: {referenceToc.TotalCommandsInTable}.");
 
-            Console.WriteLine("Parsing definitons...");
-            var definitons = DefinitionLoader.LoadCommandDefinitons(settings.DefinitonFolder, settings.Reference);
-            var generator = new SpecificationGenerator(settings, definitons, referenceToc);
+            Console.WriteLine("Parsing definitions...");
+            var definitions = DefinitionLoader.LoadCommandDefinitions(settings.DefinitionFolder, settings.Reference);
+            var generator = new SpecificationGenerator(settings, definitions, referenceToc);
 
             Console.WriteLine("Generating specifications...");
             var tools = generator.Generate(out var categories).ToList();
@@ -47,17 +47,17 @@ namespace Nuke.Azure.Generator
             Console.WriteLine($"Created Enumerations: {tools.Aggregate(seed: 0, func: (x, tool) => x + tool.Tool.Enumerations.Count)}");
         }
 
-        private readonly IReadOnlyCollection<Definiton> _definitons;
+        private readonly IReadOnlyCollection<Definition> _definitions;
         private readonly TableOfContentsEntry _toc;
         private readonly SpecificationGeneratorSettings _settings;
 
         private SpecificationGenerator(
             SpecificationGeneratorSettings settings,
-            IReadOnlyCollection<Definiton> definitons,
+            IReadOnlyCollection<Definition> definitions,
             TableOfContentsEntry referenceToc)
         {
             _settings = settings;
-            _definitons = definitons;
+            _definitions = definitions;
             _toc = referenceToc;
         }
 
@@ -96,17 +96,17 @@ namespace Nuke.Azure.Generator
 
             var globalParameters = new Parameter[0];
             var includedItems = new List<Item>();
-            foreach (var definiton in _definitons)
+            foreach (var definition in _definitions)
             {
-                foreach (var definitonItem in definiton.Items)
+                foreach (var definitionItem in definition.Items)
                 {
-                    if (definitonItem.Uid != toc.Uid && !references.Contains(definitonItem.Uid)) continue;
-                    includedItems.Add(definitonItem);
-                    if (globalParameters.Length == 0) globalParameters = definiton.GlobalParameters;
+                    if (definitionItem.Uid != toc.Uid && !references.Contains(definitionItem.Uid)) continue;
+                    includedItems.Add(definitionItem);
+                    if (globalParameters.Length == 0) globalParameters = definition.GlobalParameters;
                 }
             }
 
-            return new ToolContext(ns, DefinitonParser.Parse(toc, ns, includedItems, globalParameters, typeResolver));
+            return new ToolContext(ns, DefinitionParser.Parse(toc, ns, includedItems, globalParameters, typeResolver));
         }
 
         private int CalculateReferenceDepth(TableOfContentsEntry toc)
