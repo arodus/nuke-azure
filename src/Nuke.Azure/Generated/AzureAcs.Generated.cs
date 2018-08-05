@@ -2,10 +2,11 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
+// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureAcs.json.
 
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.Tooling;
@@ -28,154 +29,115 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureAcs executable.</p></summary>
         public static string AzureAcsPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage Azure Container Services.</p></summary>
-        public static IEnumerable<string> AzureAcs(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
+        public static IReadOnlyCollection<Output> AzureAcs(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool logOutput = true, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureAcsPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
+            var process = ProcessTasks.StartProcess(AzureAcsPath, arguments, workingDirectory, environmentVariables, timeout, logOutput, null, outputFilter);
             process.AssertZeroExitCode();
-            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
+            return process.Output;
         }
-        static partial void PreProcess(AzureAcsBrowseSettings toolSettings);
-        static partial void PostProcess(AzureAcsBrowseSettings toolSettings);
         /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAcsBrowse(Configure<AzureAcsBrowseSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAcsBrowse(Configure<AzureAcsBrowseSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcsBrowseSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAcsCreateSettings toolSettings);
-        static partial void PostProcess(AzureAcsCreateSettings toolSettings);
         /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAcsCreate(Configure<AzureAcsCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAcsCreate(Configure<AzureAcsCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcsCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAcsDeleteSettings toolSettings);
-        static partial void PostProcess(AzureAcsDeleteSettings toolSettings);
         /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAcsDelete(Configure<AzureAcsDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAcsDelete(Configure<AzureAcsDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcsDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAcsListSettings toolSettings);
-        static partial void PostProcess(AzureAcsListSettings toolSettings);
         /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAcsList(Configure<AzureAcsListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAcsList(Configure<AzureAcsListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcsListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAcsListLocationsSettings toolSettings);
-        static partial void PostProcess(AzureAcsListLocationsSettings toolSettings);
         /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAcsListLocations(Configure<AzureAcsListLocationsSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAcsListLocations(Configure<AzureAcsListLocationsSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcsListLocationsSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAcsScaleSettings toolSettings);
-        static partial void PostProcess(AzureAcsScaleSettings toolSettings);
         /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAcsScale(Configure<AzureAcsScaleSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAcsScale(Configure<AzureAcsScaleSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcsScaleSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAcsShowSettings toolSettings);
-        static partial void PostProcess(AzureAcsShowSettings toolSettings);
         /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAcsShow(Configure<AzureAcsShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAcsShow(Configure<AzureAcsShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcsShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAcsWaitSettings toolSettings);
-        static partial void PostProcess(AzureAcsWaitSettings toolSettings);
         /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAcsWait(Configure<AzureAcsWaitSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAcsWait(Configure<AzureAcsWaitSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcsWaitSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAcsKubernetesBrowseSettings toolSettings);
-        static partial void PostProcess(AzureAcsKubernetesBrowseSettings toolSettings);
         /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAcsKubernetesBrowse(Configure<AzureAcsKubernetesBrowseSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAcsKubernetesBrowseSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureAcsKubernetesGetCredentialsSettings toolSettings);
-        static partial void PostProcess(AzureAcsKubernetesGetCredentialsSettings toolSettings);
-        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAcsKubernetesGetCredentials(Configure<AzureAcsKubernetesGetCredentialsSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAcsKubernetesGetCredentialsSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureAcsKubernetesInstallCliSettings toolSettings);
-        static partial void PostProcess(AzureAcsKubernetesInstallCliSettings toolSettings);
-        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAcsKubernetesInstallCli(Configure<AzureAcsKubernetesInstallCliSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAcsKubernetesInstallCliSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureAcsDcosBrowseSettings toolSettings);
-        static partial void PostProcess(AzureAcsDcosBrowseSettings toolSettings);
-        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAcsDcosBrowse(Configure<AzureAcsDcosBrowseSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAcsDcosBrowse(Configure<AzureAcsDcosBrowseSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcsDcosBrowseSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAcsDcosInstallCliSettings toolSettings);
-        static partial void PostProcess(AzureAcsDcosInstallCliSettings toolSettings);
         /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAcsDcosInstallCli(Configure<AzureAcsDcosInstallCliSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAcsDcosInstallCli(Configure<AzureAcsDcosInstallCliSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcsDcosInstallCliSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAcsKubernetesBrowse(Configure<AzureAcsKubernetesBrowseSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAcsKubernetesBrowseSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAcsKubernetesGetCredentials(Configure<AzureAcsKubernetesGetCredentialsSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAcsKubernetesGetCredentialsSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Container Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAcsKubernetesInstallCli(Configure<AzureAcsKubernetesInstallCliSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAcsKubernetesInstallCliSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
         }
     }
     #region AzureAcsBrowseSettings
@@ -200,7 +162,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -298,7 +260,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -367,7 +329,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -404,7 +366,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -437,7 +399,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -475,7 +437,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -514,7 +476,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -566,7 +528,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -584,6 +546,88 @@ namespace Nuke.Azure
               .Add("--interval {value}", Interval)
               .Add("--timeout {value}", Timeout)
               .Add("--updated {value}", Updated)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcsDcosBrowseSettings
+    /// <summary><p>Used within <see cref="AzureAcsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcsDcosBrowseSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcs executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcsTasks.AzureAcsPath;
+        /// <summary><p>Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p></p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Do not open browser after opening a proxy to the cluster web user interface.</p></summary>
+        public virtual string DisableBrowser { get; internal set; }
+        /// <summary><p>Path to an SSH key file to use.</p></summary>
+        public virtual string SshKeyFile { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acs dcos browse")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--disable-browser {value}", DisableBrowser)
+              .Add("--ssh-key-file {value}", SshKeyFile)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcsDcosInstallCliSettings
+    /// <summary><p>Used within <see cref="AzureAcsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcsDcosInstallCliSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcs executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcsTasks.AzureAcsPath;
+        /// <summary><p></p></summary>
+        public virtual string ClientVersion { get; internal set; }
+        /// <summary><p></p></summary>
+        public virtual string InstallLocation { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acs dcos install-cli")
+              .Add("--client-version {value}", ClientVersion)
+              .Add("--install-location {value}", InstallLocation)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -615,7 +659,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -659,7 +703,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -699,7 +743,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -708,88 +752,6 @@ namespace Nuke.Azure
         {
             arguments
               .Add("acs kubernetes install-cli")
-              .Add("--client-version {value}", ClientVersion)
-              .Add("--install-location {value}", InstallLocation)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcsDcosBrowseSettings
-    /// <summary><p>Used within <see cref="AzureAcsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcsDcosBrowseSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcs executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcsTasks.AzureAcsPath;
-        /// <summary><p>Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p></p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Do not open browser after opening a proxy to the cluster web user interface.</p></summary>
-        public virtual string DisableBrowser { get; internal set; }
-        /// <summary><p>Path to an SSH key file to use.</p></summary>
-        public virtual string SshKeyFile { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acs dcos browse")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--disable-browser {value}", DisableBrowser)
-              .Add("--ssh-key-file {value}", SshKeyFile)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcsDcosInstallCliSettings
-    /// <summary><p>Used within <see cref="AzureAcsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcsDcosInstallCliSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcs executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcsTasks.AzureAcsPath;
-        /// <summary><p></p></summary>
-        public virtual string ClientVersion { get; internal set; }
-        /// <summary><p></p></summary>
-        public virtual string InstallLocation { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acs dcos install-cli")
               .Add("--client-version {value}", ClientVersion)
               .Add("--install-location {value}", InstallLocation)
               .Add("--debug {value}", Debug)
@@ -918,7 +880,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAcsBrowseSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAcsBrowseSettings SetOutput(this AzureAcsBrowseSettings toolSettings, Output output)
+        public static AzureAcsBrowseSettings SetOutput(this AzureAcsBrowseSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1598,7 +1560,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAcsCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAcsCreateSettings SetOutput(this AzureAcsCreateSettings toolSettings, Output output)
+        public static AzureAcsCreateSettings SetOutput(this AzureAcsCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1750,7 +1712,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAcsDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAcsDeleteSettings SetOutput(this AzureAcsDeleteSettings toolSettings, Output output)
+        public static AzureAcsDeleteSettings SetOutput(this AzureAcsDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1866,7 +1828,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAcsListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAcsListSettings SetOutput(this AzureAcsListSettings toolSettings, Output output)
+        public static AzureAcsListSettings SetOutput(this AzureAcsListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1964,7 +1926,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAcsListLocationsSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAcsListLocationsSettings SetOutput(this AzureAcsListLocationsSettings toolSettings, Output output)
+        public static AzureAcsListLocationsSettings SetOutput(this AzureAcsListLocationsSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2116,7 +2078,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAcsScaleSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAcsScaleSettings SetOutput(this AzureAcsScaleSettings toolSettings, Output output)
+        public static AzureAcsScaleSettings SetOutput(this AzureAcsScaleSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2250,7 +2212,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAcsShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAcsShowSettings SetOutput(this AzureAcsShowSettings toolSettings, Output output)
+        public static AzureAcsShowSettings SetOutput(this AzureAcsShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2510,7 +2472,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAcsWaitSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAcsWaitSettings SetOutput(this AzureAcsWaitSettings toolSettings, Output output)
+        public static AzureAcsWaitSettings SetOutput(this AzureAcsWaitSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2555,6 +2517,310 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureAcsWaitSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureAcsWaitSettings ResetVerbose(this AzureAcsWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcsDcosBrowseSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcsDcosBrowseSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAcsDcosBrowseSettings.Name"/>.</em></p><p>Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcsDcosBrowseSettings SetName(this AzureAcsDcosBrowseSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsDcosBrowseSettings.Name"/>.</em></p><p>Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcsDcosBrowseSettings ResetName(this AzureAcsDcosBrowseSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAcsDcosBrowseSettings.ResourceGroup"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureAcsDcosBrowseSettings SetResourceGroup(this AzureAcsDcosBrowseSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsDcosBrowseSettings.ResourceGroup"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureAcsDcosBrowseSettings ResetResourceGroup(this AzureAcsDcosBrowseSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DisableBrowser
+        /// <summary><p><em>Sets <see cref="AzureAcsDcosBrowseSettings.DisableBrowser"/>.</em></p><p>Do not open browser after opening a proxy to the cluster web user interface.</p></summary>
+        [Pure]
+        public static AzureAcsDcosBrowseSettings SetDisableBrowser(this AzureAcsDcosBrowseSettings toolSettings, string disableBrowser)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableBrowser = disableBrowser;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsDcosBrowseSettings.DisableBrowser"/>.</em></p><p>Do not open browser after opening a proxy to the cluster web user interface.</p></summary>
+        [Pure]
+        public static AzureAcsDcosBrowseSettings ResetDisableBrowser(this AzureAcsDcosBrowseSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableBrowser = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SshKeyFile
+        /// <summary><p><em>Sets <see cref="AzureAcsDcosBrowseSettings.SshKeyFile"/>.</em></p><p>Path to an SSH key file to use.</p></summary>
+        [Pure]
+        public static AzureAcsDcosBrowseSettings SetSshKeyFile(this AzureAcsDcosBrowseSettings toolSettings, string sshKeyFile)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SshKeyFile = sshKeyFile;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsDcosBrowseSettings.SshKeyFile"/>.</em></p><p>Path to an SSH key file to use.</p></summary>
+        [Pure]
+        public static AzureAcsDcosBrowseSettings ResetSshKeyFile(this AzureAcsDcosBrowseSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SshKeyFile = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcsDcosBrowseSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcsDcosBrowseSettings SetDebug(this AzureAcsDcosBrowseSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsDcosBrowseSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcsDcosBrowseSettings ResetDebug(this AzureAcsDcosBrowseSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcsDcosBrowseSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcsDcosBrowseSettings SetHelp(this AzureAcsDcosBrowseSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsDcosBrowseSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcsDcosBrowseSettings ResetHelp(this AzureAcsDcosBrowseSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcsDcosBrowseSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcsDcosBrowseSettings SetOutput(this AzureAcsDcosBrowseSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsDcosBrowseSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcsDcosBrowseSettings ResetOutput(this AzureAcsDcosBrowseSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcsDcosBrowseSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcsDcosBrowseSettings SetQuery(this AzureAcsDcosBrowseSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsDcosBrowseSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcsDcosBrowseSettings ResetQuery(this AzureAcsDcosBrowseSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcsDcosBrowseSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcsDcosBrowseSettings SetVerbose(this AzureAcsDcosBrowseSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsDcosBrowseSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcsDcosBrowseSettings ResetVerbose(this AzureAcsDcosBrowseSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcsDcosInstallCliSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcsDcosInstallCliSettingsExtensions
+    {
+        #region ClientVersion
+        /// <summary><p><em>Sets <see cref="AzureAcsDcosInstallCliSettings.ClientVersion"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureAcsDcosInstallCliSettings SetClientVersion(this AzureAcsDcosInstallCliSettings toolSettings, string clientVersion)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClientVersion = clientVersion;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsDcosInstallCliSettings.ClientVersion"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureAcsDcosInstallCliSettings ResetClientVersion(this AzureAcsDcosInstallCliSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClientVersion = null;
+            return toolSettings;
+        }
+        #endregion
+        #region InstallLocation
+        /// <summary><p><em>Sets <see cref="AzureAcsDcosInstallCliSettings.InstallLocation"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureAcsDcosInstallCliSettings SetInstallLocation(this AzureAcsDcosInstallCliSettings toolSettings, string installLocation)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.InstallLocation = installLocation;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsDcosInstallCliSettings.InstallLocation"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureAcsDcosInstallCliSettings ResetInstallLocation(this AzureAcsDcosInstallCliSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.InstallLocation = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcsDcosInstallCliSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcsDcosInstallCliSettings SetDebug(this AzureAcsDcosInstallCliSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsDcosInstallCliSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcsDcosInstallCliSettings ResetDebug(this AzureAcsDcosInstallCliSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcsDcosInstallCliSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcsDcosInstallCliSettings SetHelp(this AzureAcsDcosInstallCliSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsDcosInstallCliSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcsDcosInstallCliSettings ResetHelp(this AzureAcsDcosInstallCliSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcsDcosInstallCliSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcsDcosInstallCliSettings SetOutput(this AzureAcsDcosInstallCliSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsDcosInstallCliSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcsDcosInstallCliSettings ResetOutput(this AzureAcsDcosInstallCliSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcsDcosInstallCliSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcsDcosInstallCliSettings SetQuery(this AzureAcsDcosInstallCliSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsDcosInstallCliSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcsDcosInstallCliSettings ResetQuery(this AzureAcsDcosInstallCliSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcsDcosInstallCliSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcsDcosInstallCliSettings SetVerbose(this AzureAcsDcosInstallCliSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcsDcosInstallCliSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcsDcosInstallCliSettings ResetVerbose(this AzureAcsDcosInstallCliSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -2680,7 +2946,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAcsKubernetesBrowseSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAcsKubernetesBrowseSettings SetOutput(this AzureAcsKubernetesBrowseSettings toolSettings, Output output)
+        public static AzureAcsKubernetesBrowseSettings SetOutput(this AzureAcsKubernetesBrowseSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2850,7 +3116,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAcsKubernetesGetCredentialsSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAcsKubernetesGetCredentialsSettings SetOutput(this AzureAcsKubernetesGetCredentialsSettings toolSettings, Output output)
+        public static AzureAcsKubernetesGetCredentialsSettings SetOutput(this AzureAcsKubernetesGetCredentialsSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2984,7 +3250,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAcsKubernetesInstallCliSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAcsKubernetesInstallCliSettings SetOutput(this AzureAcsKubernetesInstallCliSettings toolSettings, Output output)
+        public static AzureAcsKubernetesInstallCliSettings SetOutput(this AzureAcsKubernetesInstallCliSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3037,314 +3303,11 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureAcsDcosBrowseSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcsDcosBrowseSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAcsDcosBrowseSettings.Name"/>.</em></p><p>Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcsDcosBrowseSettings SetName(this AzureAcsDcosBrowseSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsDcosBrowseSettings.Name"/>.</em></p><p>Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcsDcosBrowseSettings ResetName(this AzureAcsDcosBrowseSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAcsDcosBrowseSettings.ResourceGroup"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureAcsDcosBrowseSettings SetResourceGroup(this AzureAcsDcosBrowseSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsDcosBrowseSettings.ResourceGroup"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureAcsDcosBrowseSettings ResetResourceGroup(this AzureAcsDcosBrowseSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DisableBrowser
-        /// <summary><p><em>Sets <see cref="AzureAcsDcosBrowseSettings.DisableBrowser"/>.</em></p><p>Do not open browser after opening a proxy to the cluster web user interface.</p></summary>
-        [Pure]
-        public static AzureAcsDcosBrowseSettings SetDisableBrowser(this AzureAcsDcosBrowseSettings toolSettings, string disableBrowser)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DisableBrowser = disableBrowser;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsDcosBrowseSettings.DisableBrowser"/>.</em></p><p>Do not open browser after opening a proxy to the cluster web user interface.</p></summary>
-        [Pure]
-        public static AzureAcsDcosBrowseSettings ResetDisableBrowser(this AzureAcsDcosBrowseSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DisableBrowser = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SshKeyFile
-        /// <summary><p><em>Sets <see cref="AzureAcsDcosBrowseSettings.SshKeyFile"/>.</em></p><p>Path to an SSH key file to use.</p></summary>
-        [Pure]
-        public static AzureAcsDcosBrowseSettings SetSshKeyFile(this AzureAcsDcosBrowseSettings toolSettings, string sshKeyFile)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SshKeyFile = sshKeyFile;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsDcosBrowseSettings.SshKeyFile"/>.</em></p><p>Path to an SSH key file to use.</p></summary>
-        [Pure]
-        public static AzureAcsDcosBrowseSettings ResetSshKeyFile(this AzureAcsDcosBrowseSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SshKeyFile = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcsDcosBrowseSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcsDcosBrowseSettings SetDebug(this AzureAcsDcosBrowseSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsDcosBrowseSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcsDcosBrowseSettings ResetDebug(this AzureAcsDcosBrowseSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcsDcosBrowseSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcsDcosBrowseSettings SetHelp(this AzureAcsDcosBrowseSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsDcosBrowseSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcsDcosBrowseSettings ResetHelp(this AzureAcsDcosBrowseSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcsDcosBrowseSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcsDcosBrowseSettings SetOutput(this AzureAcsDcosBrowseSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsDcosBrowseSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcsDcosBrowseSettings ResetOutput(this AzureAcsDcosBrowseSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcsDcosBrowseSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcsDcosBrowseSettings SetQuery(this AzureAcsDcosBrowseSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsDcosBrowseSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcsDcosBrowseSettings ResetQuery(this AzureAcsDcosBrowseSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcsDcosBrowseSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcsDcosBrowseSettings SetVerbose(this AzureAcsDcosBrowseSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsDcosBrowseSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcsDcosBrowseSettings ResetVerbose(this AzureAcsDcosBrowseSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAcsDcosInstallCliSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcsDcosInstallCliSettingsExtensions
-    {
-        #region ClientVersion
-        /// <summary><p><em>Sets <see cref="AzureAcsDcosInstallCliSettings.ClientVersion"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureAcsDcosInstallCliSettings SetClientVersion(this AzureAcsDcosInstallCliSettings toolSettings, string clientVersion)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClientVersion = clientVersion;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsDcosInstallCliSettings.ClientVersion"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureAcsDcosInstallCliSettings ResetClientVersion(this AzureAcsDcosInstallCliSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClientVersion = null;
-            return toolSettings;
-        }
-        #endregion
-        #region InstallLocation
-        /// <summary><p><em>Sets <see cref="AzureAcsDcosInstallCliSettings.InstallLocation"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureAcsDcosInstallCliSettings SetInstallLocation(this AzureAcsDcosInstallCliSettings toolSettings, string installLocation)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.InstallLocation = installLocation;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsDcosInstallCliSettings.InstallLocation"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureAcsDcosInstallCliSettings ResetInstallLocation(this AzureAcsDcosInstallCliSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.InstallLocation = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcsDcosInstallCliSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcsDcosInstallCliSettings SetDebug(this AzureAcsDcosInstallCliSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsDcosInstallCliSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcsDcosInstallCliSettings ResetDebug(this AzureAcsDcosInstallCliSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcsDcosInstallCliSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcsDcosInstallCliSettings SetHelp(this AzureAcsDcosInstallCliSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsDcosInstallCliSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcsDcosInstallCliSettings ResetHelp(this AzureAcsDcosInstallCliSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcsDcosInstallCliSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcsDcosInstallCliSettings SetOutput(this AzureAcsDcosInstallCliSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsDcosInstallCliSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcsDcosInstallCliSettings ResetOutput(this AzureAcsDcosInstallCliSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcsDcosInstallCliSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcsDcosInstallCliSettings SetQuery(this AzureAcsDcosInstallCliSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsDcosInstallCliSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcsDcosInstallCliSettings ResetQuery(this AzureAcsDcosInstallCliSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcsDcosInstallCliSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcsDcosInstallCliSettings SetVerbose(this AzureAcsDcosInstallCliSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcsDcosInstallCliSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcsDcosInstallCliSettings ResetVerbose(this AzureAcsDcosInstallCliSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region AcsCreateAgentStorageProfile
     /// <summary><p>Used within <see cref="AzureAcsTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class AcsCreateAgentStorageProfile : Enumeration
     {
         public static AcsCreateAgentStorageProfile manageddisks = new AcsCreateAgentStorageProfile { Value = "manageddisks" };
@@ -3355,6 +3318,7 @@ namespace Nuke.Azure
     /// <summary><p>Used within <see cref="AzureAcsTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class AcsCreateOrchestratorType : Enumeration
     {
         public static AcsCreateOrchestratorType custom = new AcsCreateOrchestratorType { Value = "custom" };

@@ -2,10 +2,11 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
+// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureBilling.json.
 
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.Tooling;
@@ -28,88 +29,67 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureBilling executable.</p></summary>
         public static string AzureBillingPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage Azure Billing.</p></summary>
-        public static IEnumerable<string> AzureBilling(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
+        public static IReadOnlyCollection<Output> AzureBilling(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool logOutput = true, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureBillingPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
+            var process = ProcessTasks.StartProcess(AzureBillingPath, arguments, workingDirectory, environmentVariables, timeout, logOutput, null, outputFilter);
             process.AssertZeroExitCode();
-            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
+            return process.Output;
         }
-        static partial void PreProcess(AzureBillingSettings toolSettings);
-        static partial void PostProcess(AzureBillingSettings toolSettings);
         /// <summary><p>Manage Azure Billing.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/billing?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureBilling(Configure<AzureBillingSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureBilling(Configure<AzureBillingSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBillingSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureBillingInvoiceListSettings toolSettings);
-        static partial void PostProcess(AzureBillingInvoiceListSettings toolSettings);
         /// <summary><p>Manage Azure Billing.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/billing?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureBillingInvoiceList(Configure<AzureBillingInvoiceListSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureBillingInvoiceListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureBillingInvoiceShowSettings toolSettings);
-        static partial void PostProcess(AzureBillingInvoiceShowSettings toolSettings);
-        /// <summary><p>Manage Azure Billing.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/billing?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureBillingInvoiceShow(Configure<AzureBillingInvoiceShowSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureBillingInvoiceShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureBillingEnrollmentAccountListSettings toolSettings);
-        static partial void PostProcess(AzureBillingEnrollmentAccountListSettings toolSettings);
-        /// <summary><p>Manage Azure Billing.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/billing?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureBillingEnrollmentAccountList(Configure<AzureBillingEnrollmentAccountListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureBillingEnrollmentAccountList(Configure<AzureBillingEnrollmentAccountListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBillingEnrollmentAccountListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureBillingEnrollmentAccountShowSettings toolSettings);
-        static partial void PostProcess(AzureBillingEnrollmentAccountShowSettings toolSettings);
         /// <summary><p>Manage Azure Billing.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/billing?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureBillingEnrollmentAccountShow(Configure<AzureBillingEnrollmentAccountShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureBillingEnrollmentAccountShow(Configure<AzureBillingEnrollmentAccountShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBillingEnrollmentAccountShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureBillingPeriodListSettings toolSettings);
-        static partial void PostProcess(AzureBillingPeriodListSettings toolSettings);
         /// <summary><p>Manage Azure Billing.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/billing?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureBillingPeriodList(Configure<AzureBillingPeriodListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureBillingInvoiceList(Configure<AzureBillingInvoiceListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureBillingInvoiceListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Billing.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/billing?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureBillingInvoiceShow(Configure<AzureBillingInvoiceShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureBillingInvoiceShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Billing.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/billing?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureBillingPeriodList(Configure<AzureBillingPeriodListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBillingPeriodListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureBillingPeriodShowSettings toolSettings);
-        static partial void PostProcess(AzureBillingPeriodShowSettings toolSettings);
         /// <summary><p>Manage Azure Billing.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/billing?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureBillingPeriodShow(Configure<AzureBillingPeriodShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureBillingPeriodShow(Configure<AzureBillingPeriodShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBillingPeriodShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
     }
     #region AzureBillingSettings
@@ -126,7 +106,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -135,6 +115,73 @@ namespace Nuke.Azure
         {
             arguments
               .Add("billing")
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureBillingEnrollmentAccountListSettings
+    /// <summary><p>Used within <see cref="AzureBillingTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureBillingEnrollmentAccountListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureBilling executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureBillingTasks.AzureBillingPath;
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("billing enrollment-account list")
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureBillingEnrollmentAccountShowSettings
+    /// <summary><p>Used within <see cref="AzureBillingTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureBillingEnrollmentAccountShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureBilling executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureBillingTasks.AzureBillingPath;
+        /// <summary><p>Name of the enrollment account.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("billing enrollment-account show")
+              .Add("--name {value}", Name)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -160,7 +207,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -195,7 +242,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -204,73 +251,6 @@ namespace Nuke.Azure
         {
             arguments
               .Add("billing invoice show")
-              .Add("--name {value}", Name)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureBillingEnrollmentAccountListSettings
-    /// <summary><p>Used within <see cref="AzureBillingTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureBillingEnrollmentAccountListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureBilling executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureBillingTasks.AzureBillingPath;
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("billing enrollment-account list")
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureBillingEnrollmentAccountShowSettings
-    /// <summary><p>Used within <see cref="AzureBillingTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureBillingEnrollmentAccountShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureBilling executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureBillingTasks.AzureBillingPath;
-        /// <summary><p>Name of the enrollment account.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("billing enrollment-account show")
               .Add("--name {value}", Name)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -301,7 +281,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -338,7 +318,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -402,7 +382,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureBillingSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBillingSettings SetOutput(this AzureBillingSettings toolSettings, Output output)
+        public static AzureBillingSettings SetOutput(this AzureBillingSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -447,238 +427,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureBillingSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureBillingSettings ResetVerbose(this AzureBillingSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureBillingInvoiceListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureBillingTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureBillingInvoiceListSettingsExtensions
-    {
-        #region GenerateDownloadUrl
-        /// <summary><p><em>Sets <see cref="AzureBillingInvoiceListSettings.GenerateDownloadUrl"/>.</em></p><p>Generate download url of the invoice.</p></summary>
-        [Pure]
-        public static AzureBillingInvoiceListSettings SetGenerateDownloadUrl(this AzureBillingInvoiceListSettings toolSettings, string generateDownloadUrl)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GenerateDownloadUrl = generateDownloadUrl;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBillingInvoiceListSettings.GenerateDownloadUrl"/>.</em></p><p>Generate download url of the invoice.</p></summary>
-        [Pure]
-        public static AzureBillingInvoiceListSettings ResetGenerateDownloadUrl(this AzureBillingInvoiceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GenerateDownloadUrl = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBillingInvoiceListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBillingInvoiceListSettings SetDebug(this AzureBillingInvoiceListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBillingInvoiceListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBillingInvoiceListSettings ResetDebug(this AzureBillingInvoiceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureBillingInvoiceListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBillingInvoiceListSettings SetHelp(this AzureBillingInvoiceListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBillingInvoiceListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBillingInvoiceListSettings ResetHelp(this AzureBillingInvoiceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureBillingInvoiceListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBillingInvoiceListSettings SetOutput(this AzureBillingInvoiceListSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBillingInvoiceListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBillingInvoiceListSettings ResetOutput(this AzureBillingInvoiceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureBillingInvoiceListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBillingInvoiceListSettings SetQuery(this AzureBillingInvoiceListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBillingInvoiceListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBillingInvoiceListSettings ResetQuery(this AzureBillingInvoiceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBillingInvoiceListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBillingInvoiceListSettings SetVerbose(this AzureBillingInvoiceListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBillingInvoiceListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBillingInvoiceListSettings ResetVerbose(this AzureBillingInvoiceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureBillingInvoiceShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureBillingTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureBillingInvoiceShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureBillingInvoiceShowSettings.Name"/>.</em></p><p>Name of the invoice.</p></summary>
-        [Pure]
-        public static AzureBillingInvoiceShowSettings SetName(this AzureBillingInvoiceShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBillingInvoiceShowSettings.Name"/>.</em></p><p>Name of the invoice.</p></summary>
-        [Pure]
-        public static AzureBillingInvoiceShowSettings ResetName(this AzureBillingInvoiceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBillingInvoiceShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBillingInvoiceShowSettings SetDebug(this AzureBillingInvoiceShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBillingInvoiceShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBillingInvoiceShowSettings ResetDebug(this AzureBillingInvoiceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureBillingInvoiceShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBillingInvoiceShowSettings SetHelp(this AzureBillingInvoiceShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBillingInvoiceShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBillingInvoiceShowSettings ResetHelp(this AzureBillingInvoiceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureBillingInvoiceShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBillingInvoiceShowSettings SetOutput(this AzureBillingInvoiceShowSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBillingInvoiceShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBillingInvoiceShowSettings ResetOutput(this AzureBillingInvoiceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureBillingInvoiceShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBillingInvoiceShowSettings SetQuery(this AzureBillingInvoiceShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBillingInvoiceShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBillingInvoiceShowSettings ResetQuery(this AzureBillingInvoiceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBillingInvoiceShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBillingInvoiceShowSettings SetVerbose(this AzureBillingInvoiceShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBillingInvoiceShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBillingInvoiceShowSettings ResetVerbose(this AzureBillingInvoiceShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -732,7 +480,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureBillingEnrollmentAccountListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBillingEnrollmentAccountListSettings SetOutput(this AzureBillingEnrollmentAccountListSettings toolSettings, Output output)
+        public static AzureBillingEnrollmentAccountListSettings SetOutput(this AzureBillingEnrollmentAccountListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -848,7 +596,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureBillingEnrollmentAccountShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBillingEnrollmentAccountShowSettings SetOutput(this AzureBillingEnrollmentAccountShowSettings toolSettings, Output output)
+        public static AzureBillingEnrollmentAccountShowSettings SetOutput(this AzureBillingEnrollmentAccountShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -893,6 +641,238 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureBillingEnrollmentAccountShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureBillingEnrollmentAccountShowSettings ResetVerbose(this AzureBillingEnrollmentAccountShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureBillingInvoiceListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureBillingTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureBillingInvoiceListSettingsExtensions
+    {
+        #region GenerateDownloadUrl
+        /// <summary><p><em>Sets <see cref="AzureBillingInvoiceListSettings.GenerateDownloadUrl"/>.</em></p><p>Generate download url of the invoice.</p></summary>
+        [Pure]
+        public static AzureBillingInvoiceListSettings SetGenerateDownloadUrl(this AzureBillingInvoiceListSettings toolSettings, string generateDownloadUrl)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GenerateDownloadUrl = generateDownloadUrl;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBillingInvoiceListSettings.GenerateDownloadUrl"/>.</em></p><p>Generate download url of the invoice.</p></summary>
+        [Pure]
+        public static AzureBillingInvoiceListSettings ResetGenerateDownloadUrl(this AzureBillingInvoiceListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GenerateDownloadUrl = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureBillingInvoiceListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBillingInvoiceListSettings SetDebug(this AzureBillingInvoiceListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBillingInvoiceListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBillingInvoiceListSettings ResetDebug(this AzureBillingInvoiceListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureBillingInvoiceListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBillingInvoiceListSettings SetHelp(this AzureBillingInvoiceListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBillingInvoiceListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBillingInvoiceListSettings ResetHelp(this AzureBillingInvoiceListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureBillingInvoiceListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBillingInvoiceListSettings SetOutput(this AzureBillingInvoiceListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBillingInvoiceListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBillingInvoiceListSettings ResetOutput(this AzureBillingInvoiceListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureBillingInvoiceListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBillingInvoiceListSettings SetQuery(this AzureBillingInvoiceListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBillingInvoiceListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBillingInvoiceListSettings ResetQuery(this AzureBillingInvoiceListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureBillingInvoiceListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBillingInvoiceListSettings SetVerbose(this AzureBillingInvoiceListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBillingInvoiceListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBillingInvoiceListSettings ResetVerbose(this AzureBillingInvoiceListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureBillingInvoiceShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureBillingTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureBillingInvoiceShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureBillingInvoiceShowSettings.Name"/>.</em></p><p>Name of the invoice.</p></summary>
+        [Pure]
+        public static AzureBillingInvoiceShowSettings SetName(this AzureBillingInvoiceShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBillingInvoiceShowSettings.Name"/>.</em></p><p>Name of the invoice.</p></summary>
+        [Pure]
+        public static AzureBillingInvoiceShowSettings ResetName(this AzureBillingInvoiceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureBillingInvoiceShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBillingInvoiceShowSettings SetDebug(this AzureBillingInvoiceShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBillingInvoiceShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBillingInvoiceShowSettings ResetDebug(this AzureBillingInvoiceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureBillingInvoiceShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBillingInvoiceShowSettings SetHelp(this AzureBillingInvoiceShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBillingInvoiceShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBillingInvoiceShowSettings ResetHelp(this AzureBillingInvoiceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureBillingInvoiceShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBillingInvoiceShowSettings SetOutput(this AzureBillingInvoiceShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBillingInvoiceShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBillingInvoiceShowSettings ResetOutput(this AzureBillingInvoiceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureBillingInvoiceShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBillingInvoiceShowSettings SetQuery(this AzureBillingInvoiceShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBillingInvoiceShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBillingInvoiceShowSettings ResetQuery(this AzureBillingInvoiceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureBillingInvoiceShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBillingInvoiceShowSettings SetVerbose(this AzureBillingInvoiceShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBillingInvoiceShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBillingInvoiceShowSettings ResetVerbose(this AzureBillingInvoiceShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -1000,7 +980,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureBillingPeriodListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBillingPeriodListSettings SetOutput(this AzureBillingPeriodListSettings toolSettings, Output output)
+        public static AzureBillingPeriodListSettings SetOutput(this AzureBillingPeriodListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1116,7 +1096,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureBillingPeriodShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureBillingPeriodShowSettings SetOutput(this AzureBillingPeriodShowSettings toolSettings, Output output)
+        public static AzureBillingPeriodShowSettings SetOutput(this AzureBillingPeriodShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;

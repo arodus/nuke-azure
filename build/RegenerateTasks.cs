@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using JetBrains.Annotations;
 using Nuke.Common.IO;
+using Nuke.Common.Tooling;
 using Nuke.Common.Tools.Git;
 using Nuke.Common.Tools.GitVersion;
 using Nuke.Common.Utilities;
@@ -22,9 +23,9 @@ internal static class RegenerateTasks
     public struct ReleaseInformation
     {
         public Version Version { get; }
-        public GitVersionBump Bump { get; }
+        public  Bump Bump { get; }
 
-        public ReleaseInformation(Version version, GitVersionBump bump)
+        public ReleaseInformation(Version version, Bump bump)
         {
             Version = version;
             Bump = bump;
@@ -43,15 +44,14 @@ internal static class RegenerateTasks
 
     public static void CheckoutBranchOrCreateNewFrom(string branch, string branchToCreateFrom)
     {
-        var currentBranch = GitTasks.GitCurrentBranch();
         try
         {
-            GitTasks.Git($"checkout -B {branch} --track  refs/remotes/origin/{branch}", redirectOutput: true);
+            GitTasks.Git($"checkout -B {branch} --track refs/remotes/origin/{branch}");
         }
         catch (Exception)
         {
             // remote branch does not exist
-            GitTasks.Git($"checkout -B {branch} --no-track  refs/remotes/origin/{branchToCreateFrom}", redirectOutput: true);
+            GitTasks.Git($"checkout -B {branch} --no-track refs/remotes/origin/{branchToCreateFrom}");
         }
     }
 
@@ -92,7 +92,7 @@ internal static class RegenerateTasks
 
     public static string[] GitLastCommitMessage()
     {
-        return GitTasks.Git("log -1 --pretty=%B", redirectOutput: true).ToArray();
+        return GitTasks.Git("log -1 --pretty=%B").Where(x => x.Type == OutputType.Std).Select(x => x.Text).ToArray();
     }
 
     public static void AddAndCommitChanges(string[] message, string[] refs, bool addUntracked = false)
@@ -101,25 +101,32 @@ internal static class RegenerateTasks
         GitCommit(message);
     }
 
-    private static GitVersionBump GetBump(Version latest, Version old)
+    private static Bump GetBump(Version latest, Version old)
     {
-        if (latest.Major > old.Major) return GitVersionBump.Major;
-        return latest.Minor > old.Minor ? GitVersionBump.Minor : GitVersionBump.Patch;
+        if (latest.Major > old.Major) return Bump.Major;
+        return latest.Minor > old.Minor ? Bump.Minor : Bump.Patch;
     }
 
     [Pure]
-    public static string NextSemVer(this GitVersion version, GitVersionBump bump)
+    public static string NextSemVer(this GitVersion version, Bump bump)
     {
         switch (bump)
         {
-            case GitVersionBump.Major:
+            case Bump.Major:
                 return string.Format("{0}.0.0", version.Major + 1);
-            case GitVersionBump.Minor:
+            case Bump.Minor:
                 return string.Format("{0}.{1}.0", version.Major, version.Minor + 1);
-            case GitVersionBump.Patch:
+            case Bump.Patch:
                 return string.Format("{0}.{1}.{2}", version.Major, version.Minor, version.Patch + 1);
             default:
                 throw new ArgumentOutOfRangeException(nameof(bump), bump, null);
         }
+    }
+
+    public  enum Bump
+    {
+        Patch,
+        Minor,
+        Major
     }
 }

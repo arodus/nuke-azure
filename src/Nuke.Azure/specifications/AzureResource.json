@@ -6,9 +6,9 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/resource.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/resource/link.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/resource/lock.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/resource.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/resource/link.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/resource/lock.yml"
   ],
   "name": "AzureResource",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest",
@@ -437,6 +437,12 @@
             "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
           },
           {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
             "name": "Remove",
             "type": "string",
             "format": "--remove {value}",
@@ -829,7 +835,7 @@
     },
     {
       "name": "Output",
-      "type": "Output",
+      "type": "AzureOutput",
       "format": "--output {value}",
       "help": "Output format."
     },

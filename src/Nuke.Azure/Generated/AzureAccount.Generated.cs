@@ -2,10 +2,11 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
+// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureAccount.json.
 
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.Tooling;
@@ -28,209 +29,155 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureAccount executable.</p></summary>
         public static string AzureAccountPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage Azure subscription information.</p></summary>
-        public static IEnumerable<string> AzureAccount(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
+        public static IReadOnlyCollection<Output> AzureAccount(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool logOutput = true, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureAccountPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
+            var process = ProcessTasks.StartProcess(AzureAccountPath, arguments, workingDirectory, environmentVariables, timeout, logOutput, null, outputFilter);
             process.AssertZeroExitCode();
-            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
+            return process.Output;
         }
-        static partial void PreProcess(AzureAccountClearSettings toolSettings);
-        static partial void PostProcess(AzureAccountClearSettings toolSettings);
         /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAccountClear(Configure<AzureAccountClearSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAccountClear(Configure<AzureAccountClearSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAccountClearSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAccountGetAccessTokenSettings toolSettings);
-        static partial void PostProcess(AzureAccountGetAccessTokenSettings toolSettings);
         /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAccountGetAccessToken(Configure<AzureAccountGetAccessTokenSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAccountGetAccessToken(Configure<AzureAccountGetAccessTokenSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAccountGetAccessTokenSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAccountListSettings toolSettings);
-        static partial void PostProcess(AzureAccountListSettings toolSettings);
         /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAccountList(Configure<AzureAccountListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAccountList(Configure<AzureAccountListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAccountListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAccountListLocationsSettings toolSettings);
-        static partial void PostProcess(AzureAccountListLocationsSettings toolSettings);
         /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAccountListLocations(Configure<AzureAccountListLocationsSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAccountListLocations(Configure<AzureAccountListLocationsSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAccountListLocationsSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAccountSetSettings toolSettings);
-        static partial void PostProcess(AzureAccountSetSettings toolSettings);
         /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAccountSet(Configure<AzureAccountSetSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAccountSet(Configure<AzureAccountSetSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAccountSetSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAccountShowSettings toolSettings);
-        static partial void PostProcess(AzureAccountShowSettings toolSettings);
         /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAccountShow(Configure<AzureAccountShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAccountShow(Configure<AzureAccountShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAccountShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAccountManagementGroupCreateSettings toolSettings);
-        static partial void PostProcess(AzureAccountManagementGroupCreateSettings toolSettings);
         /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAccountManagementGroupCreate(Configure<AzureAccountManagementGroupCreateSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAccountManagementGroupCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureAccountManagementGroupDeleteSettings toolSettings);
-        static partial void PostProcess(AzureAccountManagementGroupDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAccountManagementGroupDelete(Configure<AzureAccountManagementGroupDeleteSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAccountManagementGroupDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureAccountManagementGroupListSettings toolSettings);
-        static partial void PostProcess(AzureAccountManagementGroupListSettings toolSettings);
-        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAccountManagementGroupList(Configure<AzureAccountManagementGroupListSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAccountManagementGroupListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureAccountManagementGroupShowSettings toolSettings);
-        static partial void PostProcess(AzureAccountManagementGroupShowSettings toolSettings);
-        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAccountManagementGroupShow(Configure<AzureAccountManagementGroupShowSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAccountManagementGroupShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureAccountManagementGroupUpdateSettings toolSettings);
-        static partial void PostProcess(AzureAccountManagementGroupUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAccountManagementGroupUpdate(Configure<AzureAccountManagementGroupUpdateSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAccountManagementGroupUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureAccountLockCreateSettings toolSettings);
-        static partial void PostProcess(AzureAccountLockCreateSettings toolSettings);
-        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAccountLockCreate(Configure<AzureAccountLockCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAccountLockCreate(Configure<AzureAccountLockCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAccountLockCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAccountLockDeleteSettings toolSettings);
-        static partial void PostProcess(AzureAccountLockDeleteSettings toolSettings);
         /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAccountLockDelete(Configure<AzureAccountLockDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAccountLockDelete(Configure<AzureAccountLockDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAccountLockDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAccountLockListSettings toolSettings);
-        static partial void PostProcess(AzureAccountLockListSettings toolSettings);
         /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAccountLockList(Configure<AzureAccountLockListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAccountLockList(Configure<AzureAccountLockListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAccountLockListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAccountLockShowSettings toolSettings);
-        static partial void PostProcess(AzureAccountLockShowSettings toolSettings);
         /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAccountLockShow(Configure<AzureAccountLockShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAccountLockShow(Configure<AzureAccountLockShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAccountLockShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAccountLockUpdateSettings toolSettings);
-        static partial void PostProcess(AzureAccountLockUpdateSettings toolSettings);
         /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAccountLockUpdate(Configure<AzureAccountLockUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAccountLockUpdate(Configure<AzureAccountLockUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAccountLockUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAccountManagementGroupSubscriptionAddSettings toolSettings);
-        static partial void PostProcess(AzureAccountManagementGroupSubscriptionAddSettings toolSettings);
         /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAccountManagementGroupSubscriptionAdd(Configure<AzureAccountManagementGroupSubscriptionAddSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAccountManagementGroupCreate(Configure<AzureAccountManagementGroupCreateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAccountManagementGroupCreateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAccountManagementGroupDelete(Configure<AzureAccountManagementGroupDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAccountManagementGroupDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAccountManagementGroupList(Configure<AzureAccountManagementGroupListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAccountManagementGroupListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAccountManagementGroupShow(Configure<AzureAccountManagementGroupShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAccountManagementGroupShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAccountManagementGroupUpdate(Configure<AzureAccountManagementGroupUpdateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAccountManagementGroupUpdateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAccountManagementGroupSubscriptionAdd(Configure<AzureAccountManagementGroupSubscriptionAddSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAccountManagementGroupSubscriptionAddSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAccountManagementGroupSubscriptionRemoveSettings toolSettings);
-        static partial void PostProcess(AzureAccountManagementGroupSubscriptionRemoveSettings toolSettings);
         /// <summary><p>Manage Azure subscription information.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAccountManagementGroupSubscriptionRemove(Configure<AzureAccountManagementGroupSubscriptionRemoveSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAccountManagementGroupSubscriptionRemove(Configure<AzureAccountManagementGroupSubscriptionRemoveSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAccountManagementGroupSubscriptionRemoveSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
     }
     #region AzureAccountClearSettings
@@ -247,7 +194,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -283,7 +230,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -321,7 +268,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -355,7 +302,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -389,7 +336,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -426,7 +373,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -437,205 +384,6 @@ namespace Nuke.Azure
               .Add("account show")
               .Add("--sdk-auth {value}", SdkAuth)
               .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAccountManagementGroupCreateSettings
-    /// <summary><p>Used within <see cref="AzureAccountTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAccountManagementGroupCreateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAccount executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAccountTasks.AzureAccountPath;
-        /// <summary><p>Name of the management group.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Sets the display name of the management group. If null, the group name is set as the display name.</p></summary>
-        public virtual string DisplayName { get; internal set; }
-        /// <summary><p>Sets the parent of the management group. Can be the fully qualified id or the name of the management group. If null, the root tenant group is set as the parent.</p></summary>
-        public virtual string Parent { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("account management-group create")
-              .Add("--name {value}", Name)
-              .Add("--display-name {value}", DisplayName)
-              .Add("--parent {value}", Parent)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAccountManagementGroupDeleteSettings
-    /// <summary><p>Used within <see cref="AzureAccountTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAccountManagementGroupDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAccount executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAccountTasks.AzureAccountPath;
-        /// <summary><p>Name of the management group.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("account management-group delete")
-              .Add("--name {value}", Name)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAccountManagementGroupListSettings
-    /// <summary><p>Used within <see cref="AzureAccountTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAccountManagementGroupListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAccount executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAccountTasks.AzureAccountPath;
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("account management-group list")
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAccountManagementGroupShowSettings
-    /// <summary><p>Used within <see cref="AzureAccountTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAccountManagementGroupShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAccount executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAccountTasks.AzureAccountPath;
-        /// <summary><p>Name of the management group.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>If given, lists the children in the first level of hierarchy.</p></summary>
-        public virtual string Expand { get; internal set; }
-        /// <summary><p>If given, lists the children in all levels of hierarchy.</p></summary>
-        public virtual string Recurse { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("account management-group show")
-              .Add("--name {value}", Name)
-              .Add("--expand {value}", Expand)
-              .Add("--recurse {value}", Recurse)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAccountManagementGroupUpdateSettings
-    /// <summary><p>Used within <see cref="AzureAccountTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAccountManagementGroupUpdateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAccount executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAccountTasks.AzureAccountPath;
-        /// <summary><p>Name of the management group.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Updates the display name of the management group. If null, no change is made.</p></summary>
-        public virtual string DisplayName { get; internal set; }
-        /// <summary><p>Update the parent of the management group. Can be the fully qualified id or the name of the management group. If null, no change is made.</p></summary>
-        public virtual string Parent { get; internal set; }
-        /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        public virtual string Add { get; internal set; }
-        /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        public virtual string Remove { get; internal set; }
-        /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        public virtual string Set { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("account management-group update")
-              .Add("--name {value}", Name)
-              .Add("--display-name {value}", DisplayName)
-              .Add("--parent {value}", Parent)
-              .Add("--add {value}", Add)
-              .Add("--remove {value}", Remove)
-              .Add("--set {value}", Set)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -665,7 +413,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -704,7 +452,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -740,7 +488,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -777,7 +525,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -819,7 +567,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -832,6 +580,208 @@ namespace Nuke.Azure
               .Add("--lock-type {value}", LockType)
               .Add("--name {value}", Name)
               .Add("--notes {value}", Notes)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAccountManagementGroupCreateSettings
+    /// <summary><p>Used within <see cref="AzureAccountTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAccountManagementGroupCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAccount executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAccountTasks.AzureAccountPath;
+        /// <summary><p>Name of the management group.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Sets the display name of the management group. If null, the group name is set as the display name.</p></summary>
+        public virtual string DisplayName { get; internal set; }
+        /// <summary><p>Sets the parent of the management group. Can be the fully qualified id or the name of the management group. If null, the root tenant group is set as the parent.</p></summary>
+        public virtual string Parent { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("account management-group create")
+              .Add("--name {value}", Name)
+              .Add("--display-name {value}", DisplayName)
+              .Add("--parent {value}", Parent)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAccountManagementGroupDeleteSettings
+    /// <summary><p>Used within <see cref="AzureAccountTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAccountManagementGroupDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAccount executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAccountTasks.AzureAccountPath;
+        /// <summary><p>Name of the management group.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("account management-group delete")
+              .Add("--name {value}", Name)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAccountManagementGroupListSettings
+    /// <summary><p>Used within <see cref="AzureAccountTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAccountManagementGroupListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAccount executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAccountTasks.AzureAccountPath;
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("account management-group list")
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAccountManagementGroupShowSettings
+    /// <summary><p>Used within <see cref="AzureAccountTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAccountManagementGroupShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAccount executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAccountTasks.AzureAccountPath;
+        /// <summary><p>Name of the management group.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>If given, lists the children in the first level of hierarchy.</p></summary>
+        public virtual string Expand { get; internal set; }
+        /// <summary><p>If given, lists the children in all levels of hierarchy.</p></summary>
+        public virtual string Recurse { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("account management-group show")
+              .Add("--name {value}", Name)
+              .Add("--expand {value}", Expand)
+              .Add("--recurse {value}", Recurse)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAccountManagementGroupUpdateSettings
+    /// <summary><p>Used within <see cref="AzureAccountTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAccountManagementGroupUpdateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAccount executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAccountTasks.AzureAccountPath;
+        /// <summary><p>Name of the management group.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Updates the display name of the management group. If null, no change is made.</p></summary>
+        public virtual string DisplayName { get; internal set; }
+        /// <summary><p>Update the parent of the management group. Can be the fully qualified id or the name of the management group. If null, no change is made.</p></summary>
+        public virtual string Parent { get; internal set; }
+        /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        public virtual string Add { get; internal set; }
+        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        public virtual string ForceString { get; internal set; }
+        /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        public virtual string Remove { get; internal set; }
+        /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        public virtual string Set { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("account management-group update")
+              .Add("--name {value}", Name)
+              .Add("--display-name {value}", DisplayName)
+              .Add("--parent {value}", Parent)
+              .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
+              .Add("--remove {value}", Remove)
+              .Add("--set {value}", Set)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -859,7 +809,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -897,7 +847,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -962,7 +912,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAccountClearSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAccountClearSettings SetOutput(this AzureAccountClearSettings toolSettings, Output output)
+        public static AzureAccountClearSettings SetOutput(this AzureAccountClearSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1096,7 +1046,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAccountGetAccessTokenSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAccountGetAccessTokenSettings SetOutput(this AzureAccountGetAccessTokenSettings toolSettings, Output output)
+        public static AzureAccountGetAccessTokenSettings SetOutput(this AzureAccountGetAccessTokenSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1230,7 +1180,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAccountListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAccountListSettings SetOutput(this AzureAccountListSettings toolSettings, Output output)
+        public static AzureAccountListSettings SetOutput(this AzureAccountListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1328,7 +1278,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAccountListLocationsSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAccountListLocationsSettings SetOutput(this AzureAccountListLocationsSettings toolSettings, Output output)
+        public static AzureAccountListLocationsSettings SetOutput(this AzureAccountListLocationsSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1444,7 +1394,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAccountSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAccountSetSettings SetOutput(this AzureAccountSetSettings toolSettings, Output output)
+        public static AzureAccountSetSettings SetOutput(this AzureAccountSetSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1578,7 +1528,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAccountShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAccountShowSettings SetOutput(this AzureAccountShowSettings toolSettings, Output output)
+        public static AzureAccountShowSettings SetOutput(this AzureAccountShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1623,730 +1573,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureAccountShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureAccountShowSettings ResetVerbose(this AzureAccountShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAccountManagementGroupCreateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAccountTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAccountManagementGroupCreateSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupCreateSettings.Name"/>.</em></p><p>Name of the management group.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupCreateSettings SetName(this AzureAccountManagementGroupCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupCreateSettings.Name"/>.</em></p><p>Name of the management group.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupCreateSettings ResetName(this AzureAccountManagementGroupCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DisplayName
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupCreateSettings.DisplayName"/>.</em></p><p>Sets the display name of the management group. If null, the group name is set as the display name.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupCreateSettings SetDisplayName(this AzureAccountManagementGroupCreateSettings toolSettings, string displayName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DisplayName = displayName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupCreateSettings.DisplayName"/>.</em></p><p>Sets the display name of the management group. If null, the group name is set as the display name.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupCreateSettings ResetDisplayName(this AzureAccountManagementGroupCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DisplayName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Parent
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupCreateSettings.Parent"/>.</em></p><p>Sets the parent of the management group. Can be the fully qualified id or the name of the management group. If null, the root tenant group is set as the parent.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupCreateSettings SetParent(this AzureAccountManagementGroupCreateSettings toolSettings, string parent)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Parent = parent;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupCreateSettings.Parent"/>.</em></p><p>Sets the parent of the management group. Can be the fully qualified id or the name of the management group. If null, the root tenant group is set as the parent.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupCreateSettings ResetParent(this AzureAccountManagementGroupCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Parent = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupCreateSettings SetDebug(this AzureAccountManagementGroupCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupCreateSettings ResetDebug(this AzureAccountManagementGroupCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupCreateSettings SetHelp(this AzureAccountManagementGroupCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupCreateSettings ResetHelp(this AzureAccountManagementGroupCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupCreateSettings SetOutput(this AzureAccountManagementGroupCreateSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupCreateSettings ResetOutput(this AzureAccountManagementGroupCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupCreateSettings SetQuery(this AzureAccountManagementGroupCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupCreateSettings ResetQuery(this AzureAccountManagementGroupCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupCreateSettings SetVerbose(this AzureAccountManagementGroupCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupCreateSettings ResetVerbose(this AzureAccountManagementGroupCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAccountManagementGroupDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAccountTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAccountManagementGroupDeleteSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupDeleteSettings.Name"/>.</em></p><p>Name of the management group.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupDeleteSettings SetName(this AzureAccountManagementGroupDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupDeleteSettings.Name"/>.</em></p><p>Name of the management group.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupDeleteSettings ResetName(this AzureAccountManagementGroupDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupDeleteSettings SetDebug(this AzureAccountManagementGroupDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupDeleteSettings ResetDebug(this AzureAccountManagementGroupDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupDeleteSettings SetHelp(this AzureAccountManagementGroupDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupDeleteSettings ResetHelp(this AzureAccountManagementGroupDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupDeleteSettings SetOutput(this AzureAccountManagementGroupDeleteSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupDeleteSettings ResetOutput(this AzureAccountManagementGroupDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupDeleteSettings SetQuery(this AzureAccountManagementGroupDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupDeleteSettings ResetQuery(this AzureAccountManagementGroupDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupDeleteSettings SetVerbose(this AzureAccountManagementGroupDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupDeleteSettings ResetVerbose(this AzureAccountManagementGroupDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAccountManagementGroupListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAccountTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAccountManagementGroupListSettingsExtensions
-    {
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupListSettings SetDebug(this AzureAccountManagementGroupListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupListSettings ResetDebug(this AzureAccountManagementGroupListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupListSettings SetHelp(this AzureAccountManagementGroupListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupListSettings ResetHelp(this AzureAccountManagementGroupListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupListSettings SetOutput(this AzureAccountManagementGroupListSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupListSettings ResetOutput(this AzureAccountManagementGroupListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupListSettings SetQuery(this AzureAccountManagementGroupListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupListSettings ResetQuery(this AzureAccountManagementGroupListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupListSettings SetVerbose(this AzureAccountManagementGroupListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupListSettings ResetVerbose(this AzureAccountManagementGroupListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAccountManagementGroupShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAccountTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAccountManagementGroupShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupShowSettings.Name"/>.</em></p><p>Name of the management group.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupShowSettings SetName(this AzureAccountManagementGroupShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupShowSettings.Name"/>.</em></p><p>Name of the management group.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupShowSettings ResetName(this AzureAccountManagementGroupShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Expand
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupShowSettings.Expand"/>.</em></p><p>If given, lists the children in the first level of hierarchy.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupShowSettings SetExpand(this AzureAccountManagementGroupShowSettings toolSettings, string expand)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Expand = expand;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupShowSettings.Expand"/>.</em></p><p>If given, lists the children in the first level of hierarchy.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupShowSettings ResetExpand(this AzureAccountManagementGroupShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Expand = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Recurse
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupShowSettings.Recurse"/>.</em></p><p>If given, lists the children in all levels of hierarchy.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupShowSettings SetRecurse(this AzureAccountManagementGroupShowSettings toolSettings, string recurse)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Recurse = recurse;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupShowSettings.Recurse"/>.</em></p><p>If given, lists the children in all levels of hierarchy.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupShowSettings ResetRecurse(this AzureAccountManagementGroupShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Recurse = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupShowSettings SetDebug(this AzureAccountManagementGroupShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupShowSettings ResetDebug(this AzureAccountManagementGroupShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupShowSettings SetHelp(this AzureAccountManagementGroupShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupShowSettings ResetHelp(this AzureAccountManagementGroupShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupShowSettings SetOutput(this AzureAccountManagementGroupShowSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupShowSettings ResetOutput(this AzureAccountManagementGroupShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupShowSettings SetQuery(this AzureAccountManagementGroupShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupShowSettings ResetQuery(this AzureAccountManagementGroupShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupShowSettings SetVerbose(this AzureAccountManagementGroupShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupShowSettings ResetVerbose(this AzureAccountManagementGroupShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAccountManagementGroupUpdateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAccountTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAccountManagementGroupUpdateSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupUpdateSettings.Name"/>.</em></p><p>Name of the management group.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupUpdateSettings SetName(this AzureAccountManagementGroupUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupUpdateSettings.Name"/>.</em></p><p>Name of the management group.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupUpdateSettings ResetName(this AzureAccountManagementGroupUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DisplayName
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupUpdateSettings.DisplayName"/>.</em></p><p>Updates the display name of the management group. If null, no change is made.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupUpdateSettings SetDisplayName(this AzureAccountManagementGroupUpdateSettings toolSettings, string displayName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DisplayName = displayName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupUpdateSettings.DisplayName"/>.</em></p><p>Updates the display name of the management group. If null, no change is made.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupUpdateSettings ResetDisplayName(this AzureAccountManagementGroupUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DisplayName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Parent
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupUpdateSettings.Parent"/>.</em></p><p>Update the parent of the management group. Can be the fully qualified id or the name of the management group. If null, no change is made.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupUpdateSettings SetParent(this AzureAccountManagementGroupUpdateSettings toolSettings, string parent)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Parent = parent;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupUpdateSettings.Parent"/>.</em></p><p>Update the parent of the management group. Can be the fully qualified id or the name of the management group. If null, no change is made.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupUpdateSettings ResetParent(this AzureAccountManagementGroupUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Parent = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Add
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupUpdateSettings SetAdd(this AzureAccountManagementGroupUpdateSettings toolSettings, string add)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = add;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupUpdateSettings ResetAdd(this AzureAccountManagementGroupUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Remove
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupUpdateSettings SetRemove(this AzureAccountManagementGroupUpdateSettings toolSettings, string remove)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = remove;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupUpdateSettings ResetRemove(this AzureAccountManagementGroupUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Set
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupUpdateSettings SetSet(this AzureAccountManagementGroupUpdateSettings toolSettings, string set)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = set;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupUpdateSettings ResetSet(this AzureAccountManagementGroupUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupUpdateSettings SetDebug(this AzureAccountManagementGroupUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupUpdateSettings ResetDebug(this AzureAccountManagementGroupUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupUpdateSettings SetHelp(this AzureAccountManagementGroupUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupUpdateSettings ResetHelp(this AzureAccountManagementGroupUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupUpdateSettings SetOutput(this AzureAccountManagementGroupUpdateSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupUpdateSettings ResetOutput(this AzureAccountManagementGroupUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupUpdateSettings SetQuery(this AzureAccountManagementGroupUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupUpdateSettings ResetQuery(this AzureAccountManagementGroupUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupUpdateSettings SetVerbose(this AzureAccountManagementGroupUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAccountManagementGroupUpdateSettings ResetVerbose(this AzureAccountManagementGroupUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -2454,7 +1680,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAccountLockCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAccountLockCreateSettings SetOutput(this AzureAccountLockCreateSettings toolSettings, Output output)
+        public static AzureAccountLockCreateSettings SetOutput(this AzureAccountLockCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2588,7 +1814,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAccountLockDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAccountLockDeleteSettings SetOutput(this AzureAccountLockDeleteSettings toolSettings, Output output)
+        public static AzureAccountLockDeleteSettings SetOutput(this AzureAccountLockDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2704,7 +1930,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAccountLockListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAccountLockListSettings SetOutput(this AzureAccountLockListSettings toolSettings, Output output)
+        public static AzureAccountLockListSettings SetOutput(this AzureAccountLockListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2838,7 +2064,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAccountLockShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAccountLockShowSettings SetOutput(this AzureAccountLockShowSettings toolSettings, Output output)
+        public static AzureAccountLockShowSettings SetOutput(this AzureAccountLockShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3008,7 +2234,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAccountLockUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAccountLockUpdateSettings SetOutput(this AzureAccountLockUpdateSettings toolSettings, Output output)
+        public static AzureAccountLockUpdateSettings SetOutput(this AzureAccountLockUpdateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3053,6 +2279,748 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureAccountLockUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureAccountLockUpdateSettings ResetVerbose(this AzureAccountLockUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAccountManagementGroupCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAccountTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAccountManagementGroupCreateSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupCreateSettings.Name"/>.</em></p><p>Name of the management group.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupCreateSettings SetName(this AzureAccountManagementGroupCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupCreateSettings.Name"/>.</em></p><p>Name of the management group.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupCreateSettings ResetName(this AzureAccountManagementGroupCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DisplayName
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupCreateSettings.DisplayName"/>.</em></p><p>Sets the display name of the management group. If null, the group name is set as the display name.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupCreateSettings SetDisplayName(this AzureAccountManagementGroupCreateSettings toolSettings, string displayName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisplayName = displayName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupCreateSettings.DisplayName"/>.</em></p><p>Sets the display name of the management group. If null, the group name is set as the display name.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupCreateSettings ResetDisplayName(this AzureAccountManagementGroupCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisplayName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Parent
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupCreateSettings.Parent"/>.</em></p><p>Sets the parent of the management group. Can be the fully qualified id or the name of the management group. If null, the root tenant group is set as the parent.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupCreateSettings SetParent(this AzureAccountManagementGroupCreateSettings toolSettings, string parent)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Parent = parent;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupCreateSettings.Parent"/>.</em></p><p>Sets the parent of the management group. Can be the fully qualified id or the name of the management group. If null, the root tenant group is set as the parent.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupCreateSettings ResetParent(this AzureAccountManagementGroupCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Parent = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupCreateSettings SetDebug(this AzureAccountManagementGroupCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupCreateSettings ResetDebug(this AzureAccountManagementGroupCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupCreateSettings SetHelp(this AzureAccountManagementGroupCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupCreateSettings ResetHelp(this AzureAccountManagementGroupCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupCreateSettings SetOutput(this AzureAccountManagementGroupCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupCreateSettings ResetOutput(this AzureAccountManagementGroupCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupCreateSettings SetQuery(this AzureAccountManagementGroupCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupCreateSettings ResetQuery(this AzureAccountManagementGroupCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupCreateSettings SetVerbose(this AzureAccountManagementGroupCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupCreateSettings ResetVerbose(this AzureAccountManagementGroupCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAccountManagementGroupDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAccountTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAccountManagementGroupDeleteSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupDeleteSettings.Name"/>.</em></p><p>Name of the management group.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupDeleteSettings SetName(this AzureAccountManagementGroupDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupDeleteSettings.Name"/>.</em></p><p>Name of the management group.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupDeleteSettings ResetName(this AzureAccountManagementGroupDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupDeleteSettings SetDebug(this AzureAccountManagementGroupDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupDeleteSettings ResetDebug(this AzureAccountManagementGroupDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupDeleteSettings SetHelp(this AzureAccountManagementGroupDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupDeleteSettings ResetHelp(this AzureAccountManagementGroupDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupDeleteSettings SetOutput(this AzureAccountManagementGroupDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupDeleteSettings ResetOutput(this AzureAccountManagementGroupDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupDeleteSettings SetQuery(this AzureAccountManagementGroupDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupDeleteSettings ResetQuery(this AzureAccountManagementGroupDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupDeleteSettings SetVerbose(this AzureAccountManagementGroupDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupDeleteSettings ResetVerbose(this AzureAccountManagementGroupDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAccountManagementGroupListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAccountTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAccountManagementGroupListSettingsExtensions
+    {
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupListSettings SetDebug(this AzureAccountManagementGroupListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupListSettings ResetDebug(this AzureAccountManagementGroupListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupListSettings SetHelp(this AzureAccountManagementGroupListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupListSettings ResetHelp(this AzureAccountManagementGroupListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupListSettings SetOutput(this AzureAccountManagementGroupListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupListSettings ResetOutput(this AzureAccountManagementGroupListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupListSettings SetQuery(this AzureAccountManagementGroupListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupListSettings ResetQuery(this AzureAccountManagementGroupListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupListSettings SetVerbose(this AzureAccountManagementGroupListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupListSettings ResetVerbose(this AzureAccountManagementGroupListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAccountManagementGroupShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAccountTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAccountManagementGroupShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupShowSettings.Name"/>.</em></p><p>Name of the management group.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupShowSettings SetName(this AzureAccountManagementGroupShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupShowSettings.Name"/>.</em></p><p>Name of the management group.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupShowSettings ResetName(this AzureAccountManagementGroupShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Expand
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupShowSettings.Expand"/>.</em></p><p>If given, lists the children in the first level of hierarchy.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupShowSettings SetExpand(this AzureAccountManagementGroupShowSettings toolSettings, string expand)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Expand = expand;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupShowSettings.Expand"/>.</em></p><p>If given, lists the children in the first level of hierarchy.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupShowSettings ResetExpand(this AzureAccountManagementGroupShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Expand = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Recurse
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupShowSettings.Recurse"/>.</em></p><p>If given, lists the children in all levels of hierarchy.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupShowSettings SetRecurse(this AzureAccountManagementGroupShowSettings toolSettings, string recurse)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Recurse = recurse;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupShowSettings.Recurse"/>.</em></p><p>If given, lists the children in all levels of hierarchy.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupShowSettings ResetRecurse(this AzureAccountManagementGroupShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Recurse = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupShowSettings SetDebug(this AzureAccountManagementGroupShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupShowSettings ResetDebug(this AzureAccountManagementGroupShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupShowSettings SetHelp(this AzureAccountManagementGroupShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupShowSettings ResetHelp(this AzureAccountManagementGroupShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupShowSettings SetOutput(this AzureAccountManagementGroupShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupShowSettings ResetOutput(this AzureAccountManagementGroupShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupShowSettings SetQuery(this AzureAccountManagementGroupShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupShowSettings ResetQuery(this AzureAccountManagementGroupShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupShowSettings SetVerbose(this AzureAccountManagementGroupShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupShowSettings ResetVerbose(this AzureAccountManagementGroupShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAccountManagementGroupUpdateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAccountTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAccountManagementGroupUpdateSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupUpdateSettings.Name"/>.</em></p><p>Name of the management group.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupUpdateSettings SetName(this AzureAccountManagementGroupUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupUpdateSettings.Name"/>.</em></p><p>Name of the management group.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupUpdateSettings ResetName(this AzureAccountManagementGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DisplayName
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupUpdateSettings.DisplayName"/>.</em></p><p>Updates the display name of the management group. If null, no change is made.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupUpdateSettings SetDisplayName(this AzureAccountManagementGroupUpdateSettings toolSettings, string displayName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisplayName = displayName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupUpdateSettings.DisplayName"/>.</em></p><p>Updates the display name of the management group. If null, no change is made.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupUpdateSettings ResetDisplayName(this AzureAccountManagementGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisplayName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Parent
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupUpdateSettings.Parent"/>.</em></p><p>Update the parent of the management group. Can be the fully qualified id or the name of the management group. If null, no change is made.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupUpdateSettings SetParent(this AzureAccountManagementGroupUpdateSettings toolSettings, string parent)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Parent = parent;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupUpdateSettings.Parent"/>.</em></p><p>Update the parent of the management group. Can be the fully qualified id or the name of the management group. If null, no change is made.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupUpdateSettings ResetParent(this AzureAccountManagementGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Parent = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Add
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupUpdateSettings SetAdd(this AzureAccountManagementGroupUpdateSettings toolSettings, string add)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = add;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupUpdateSettings ResetAdd(this AzureAccountManagementGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ForceString
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupUpdateSettings SetForceString(this AzureAccountManagementGroupUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupUpdateSettings ResetForceString(this AzureAccountManagementGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Remove
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupUpdateSettings SetRemove(this AzureAccountManagementGroupUpdateSettings toolSettings, string remove)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = remove;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupUpdateSettings ResetRemove(this AzureAccountManagementGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Set
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupUpdateSettings SetSet(this AzureAccountManagementGroupUpdateSettings toolSettings, string set)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = set;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupUpdateSettings ResetSet(this AzureAccountManagementGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupUpdateSettings SetDebug(this AzureAccountManagementGroupUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupUpdateSettings ResetDebug(this AzureAccountManagementGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupUpdateSettings SetHelp(this AzureAccountManagementGroupUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupUpdateSettings ResetHelp(this AzureAccountManagementGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupUpdateSettings SetOutput(this AzureAccountManagementGroupUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupUpdateSettings ResetOutput(this AzureAccountManagementGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupUpdateSettings SetQuery(this AzureAccountManagementGroupUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupUpdateSettings ResetQuery(this AzureAccountManagementGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupUpdateSettings SetVerbose(this AzureAccountManagementGroupUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAccountManagementGroupUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAccountManagementGroupUpdateSettings ResetVerbose(this AzureAccountManagementGroupUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -3142,7 +3110,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupSubscriptionAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAccountManagementGroupSubscriptionAddSettings SetOutput(this AzureAccountManagementGroupSubscriptionAddSettings toolSettings, Output output)
+        public static AzureAccountManagementGroupSubscriptionAddSettings SetOutput(this AzureAccountManagementGroupSubscriptionAddSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3276,7 +3244,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAccountManagementGroupSubscriptionRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAccountManagementGroupSubscriptionRemoveSettings SetOutput(this AzureAccountManagementGroupSubscriptionRemoveSettings toolSettings, Output output)
+        public static AzureAccountManagementGroupSubscriptionRemoveSettings SetOutput(this AzureAccountManagementGroupSubscriptionRemoveSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3333,6 +3301,7 @@ namespace Nuke.Azure
     /// <summary><p>Used within <see cref="AzureAccountTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class AccountLockLockType : Enumeration
     {
         public static AccountLockLockType cannotdelete = new AccountLockLockType { Value = "cannotdelete" };

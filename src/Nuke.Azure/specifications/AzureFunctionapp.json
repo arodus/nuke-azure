@@ -6,15 +6,15 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/functionapp.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/functionapp/identity.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/functionapp/config.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/functionapp/deployment.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/functionapp/config/appsettings.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/functionapp/config/hostname.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/functionapp/config/ssl.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/functionapp/deployment/user.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/functionapp/deployment/source.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/functionapp.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/functionapp/config.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/functionapp/deployment.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/functionapp/identity.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/functionapp/config/appsettings.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/functionapp/config/hostname.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/functionapp/config/ssl.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/functionapp/deployment/source.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/functionapp/deployment/user.yml"
   ],
   "name": "AzureFunctionapp",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest",
@@ -226,6 +226,12 @@
             "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
           },
           {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
             "name": "Remove",
             "type": "string",
             "format": "--remove {value}",
@@ -236,6 +242,31 @@
             "type": "string",
             "format": "--set {value}",
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Config",
+      "definiteArgument": "functionapp config",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "DeploymentListPublishingProfiles",
+      "definiteArgument": "functionapp deployment list-publishing-profiles",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           }
         ]
       }
@@ -258,12 +289,6 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "DisableMsi",
-            "type": "string",
-            "format": "--disable-msi {value}",
-            "help": "Disable the identity."
-          },
-          {
             "name": "Role",
             "type": "string",
             "format": "--role {value}",
@@ -279,8 +304,8 @@
       }
     },
     {
-      "postfix": "IdentityShow",
-      "definiteArgument": "functionapp identity show",
+      "postfix": "IdentityRemove",
+      "definiteArgument": "functionapp identity remove",
       "settingsClass": {
         "properties": [
           {
@@ -299,13 +324,8 @@
       }
     },
     {
-      "postfix": "Config",
-      "definiteArgument": "functionapp config",
-      "settingsClass": {}
-    },
-    {
-      "postfix": "DeploymentListPublishingProfiles",
-      "definiteArgument": "functionapp deployment list-publishing-profiles",
+      "postfix": "IdentityShow",
+      "definiteArgument": "functionapp identity show",
       "settingsClass": {
         "properties": [
           {
@@ -619,32 +639,6 @@
       }
     },
     {
-      "postfix": "DeploymentUserSet",
-      "definiteArgument": "functionapp deployment user set",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "UserName",
-            "type": "string",
-            "format": "--user-name {value}",
-            "help": "User name."
-          },
-          {
-            "name": "Password",
-            "type": "string",
-            "format": "--password {value}",
-            "secret": true,
-            "help": "Password, will prompt if not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DeploymentUserShow",
-      "definiteArgument": "functionapp deployment user show",
-      "settingsClass": {}
-    },
-    {
       "postfix": "DeploymentSourceConfig",
       "definiteArgument": "functionapp deployment source config",
       "settingsClass": {
@@ -880,6 +874,32 @@
           }
         ]
       }
+    },
+    {
+      "postfix": "DeploymentUserSet",
+      "definiteArgument": "functionapp deployment user set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "UserName",
+            "type": "string",
+            "format": "--user-name {value}",
+            "help": "User name."
+          },
+          {
+            "name": "Password",
+            "type": "string",
+            "format": "--password {value}",
+            "secret": true,
+            "help": "Password, will prompt if not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentUserShow",
+      "definiteArgument": "functionapp deployment user show",
+      "settingsClass": {}
     }
   ],
   "commonTaskProperties": [
@@ -897,7 +917,7 @@
     },
     {
       "name": "Output",
-      "type": "Output",
+      "type": "AzureOutput",
       "format": "--output {value}",
       "help": "Output format."
     },

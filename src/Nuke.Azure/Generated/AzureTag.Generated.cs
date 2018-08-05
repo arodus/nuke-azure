@@ -2,10 +2,11 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
+// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureTag.json.
 
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.Tooling;
@@ -28,66 +29,51 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureTag executable.</p></summary>
         public static string AzureTagPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage resource tags.</p></summary>
-        public static IEnumerable<string> AzureTag(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
+        public static IReadOnlyCollection<Output> AzureTag(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool logOutput = true, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureTagPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
+            var process = ProcessTasks.StartProcess(AzureTagPath, arguments, workingDirectory, environmentVariables, timeout, logOutput, null, outputFilter);
             process.AssertZeroExitCode();
-            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
+            return process.Output;
         }
-        static partial void PreProcess(AzureTagAddValueSettings toolSettings);
-        static partial void PostProcess(AzureTagAddValueSettings toolSettings);
         /// <summary><p>Manage resource tags.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/tag?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureTagAddValue(Configure<AzureTagAddValueSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureTagAddValue(Configure<AzureTagAddValueSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureTagAddValueSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureTagCreateSettings toolSettings);
-        static partial void PostProcess(AzureTagCreateSettings toolSettings);
         /// <summary><p>Manage resource tags.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/tag?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureTagCreate(Configure<AzureTagCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureTagCreate(Configure<AzureTagCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureTagCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureTagDeleteSettings toolSettings);
-        static partial void PostProcess(AzureTagDeleteSettings toolSettings);
         /// <summary><p>Manage resource tags.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/tag?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureTagDelete(Configure<AzureTagDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureTagDelete(Configure<AzureTagDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureTagDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureTagListSettings toolSettings);
-        static partial void PostProcess(AzureTagListSettings toolSettings);
         /// <summary><p>Manage resource tags.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/tag?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureTagList(Configure<AzureTagListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureTagList(Configure<AzureTagListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureTagListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureTagRemoveValueSettings toolSettings);
-        static partial void PostProcess(AzureTagRemoveValueSettings toolSettings);
         /// <summary><p>Manage resource tags.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/tag?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureTagRemoveValue(Configure<AzureTagRemoveValueSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureTagRemoveValue(Configure<AzureTagRemoveValueSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureTagRemoveValueSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
     }
     #region AzureTagAddValueSettings
@@ -108,7 +94,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -144,7 +130,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -179,7 +165,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -212,7 +198,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -248,7 +234,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -349,7 +335,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureTagAddValueSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureTagAddValueSettings SetOutput(this AzureTagAddValueSettings toolSettings, Output output)
+        public static AzureTagAddValueSettings SetOutput(this AzureTagAddValueSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -465,7 +451,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureTagCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureTagCreateSettings SetOutput(this AzureTagCreateSettings toolSettings, Output output)
+        public static AzureTagCreateSettings SetOutput(this AzureTagCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -581,7 +567,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureTagDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureTagDeleteSettings SetOutput(this AzureTagDeleteSettings toolSettings, Output output)
+        public static AzureTagDeleteSettings SetOutput(this AzureTagDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -679,7 +665,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureTagListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureTagListSettings SetOutput(this AzureTagListSettings toolSettings, Output output)
+        public static AzureTagListSettings SetOutput(this AzureTagListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -813,7 +799,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureTagRemoveValueSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureTagRemoveValueSettings SetOutput(this AzureTagRemoveValueSettings toolSettings, Output output)
+        public static AzureTagRemoveValueSettings SetOutput(this AzureTagRemoveValueSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;

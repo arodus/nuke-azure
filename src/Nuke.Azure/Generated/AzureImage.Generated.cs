@@ -2,10 +2,11 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
+// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureImage.json.
 
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.Tooling;
@@ -28,55 +29,43 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureImage executable.</p></summary>
         public static string AzureImagePath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage custom virtual machine images.</p></summary>
-        public static IEnumerable<string> AzureImage(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
+        public static IReadOnlyCollection<Output> AzureImage(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool logOutput = true, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureImagePath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
+            var process = ProcessTasks.StartProcess(AzureImagePath, arguments, workingDirectory, environmentVariables, timeout, logOutput, null, outputFilter);
             process.AssertZeroExitCode();
-            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
+            return process.Output;
         }
-        static partial void PreProcess(AzureImageCreateSettings toolSettings);
-        static partial void PostProcess(AzureImageCreateSettings toolSettings);
         /// <summary><p>Manage custom virtual machine images.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/image?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureImageCreate(Configure<AzureImageCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureImageCreate(Configure<AzureImageCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureImageCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureImageDeleteSettings toolSettings);
-        static partial void PostProcess(AzureImageDeleteSettings toolSettings);
         /// <summary><p>Manage custom virtual machine images.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/image?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureImageDelete(Configure<AzureImageDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureImageDelete(Configure<AzureImageDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureImageDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureImageListSettings toolSettings);
-        static partial void PostProcess(AzureImageListSettings toolSettings);
         /// <summary><p>Manage custom virtual machine images.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/image?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureImageList(Configure<AzureImageListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureImageList(Configure<AzureImageListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureImageListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureImageShowSettings toolSettings);
-        static partial void PostProcess(AzureImageShowSettings toolSettings);
         /// <summary><p>Manage custom virtual machine images.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/image?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureImageShow(Configure<AzureImageShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureImageShow(Configure<AzureImageShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureImageShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
     }
     #region AzureImageCreateSettings
@@ -110,7 +99,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -154,7 +143,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -190,7 +179,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -229,7 +218,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -505,7 +494,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureImageCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureImageCreateSettings SetOutput(this AzureImageCreateSettings toolSettings, Output output)
+        public static AzureImageCreateSettings SetOutput(this AzureImageCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -639,7 +628,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureImageDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureImageDeleteSettings SetOutput(this AzureImageDeleteSettings toolSettings, Output output)
+        public static AzureImageDeleteSettings SetOutput(this AzureImageDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -755,7 +744,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureImageListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureImageListSettings SetOutput(this AzureImageListSettings toolSettings, Output output)
+        public static AzureImageListSettings SetOutput(this AzureImageListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -907,7 +896,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureImageShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureImageShowSettings SetOutput(this AzureImageShowSettings toolSettings, Output output)
+        public static AzureImageShowSettings SetOutput(this AzureImageShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -964,6 +953,7 @@ namespace Nuke.Azure
     /// <summary><p>Used within <see cref="AzureImageTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class ImageCreateOsType : Enumeration
     {
         public static ImageCreateOsType linux = new ImageCreateOsType { Value = "linux" };

@@ -2,10 +2,11 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
+// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureEventgrid.json.
 
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.Tooling;
@@ -28,187 +29,139 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureEventgrid executable.</p></summary>
         public static string AzureEventgridPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p></summary>
-        public static IEnumerable<string> AzureEventgrid(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
+        public static IReadOnlyCollection<Output> AzureEventgrid(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool logOutput = true, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureEventgridPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
+            var process = ProcessTasks.StartProcess(AzureEventgridPath, arguments, workingDirectory, environmentVariables, timeout, logOutput, null, outputFilter);
             process.AssertZeroExitCode();
-            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
+            return process.Output;
         }
-        static partial void PreProcess(AzureEventgridSettings toolSettings);
-        static partial void PostProcess(AzureEventgridSettings toolSettings);
         /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureEventgrid(Configure<AzureEventgridSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureEventgrid(Configure<AzureEventgridSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureEventgridEventSubscriptionCreateSettings toolSettings);
-        static partial void PostProcess(AzureEventgridEventSubscriptionCreateSettings toolSettings);
         /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureEventgridEventSubscriptionCreate(Configure<AzureEventgridEventSubscriptionCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureEventgridEventSubscriptionCreate(Configure<AzureEventgridEventSubscriptionCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridEventSubscriptionCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureEventgridEventSubscriptionDeleteSettings toolSettings);
-        static partial void PostProcess(AzureEventgridEventSubscriptionDeleteSettings toolSettings);
         /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureEventgridEventSubscriptionDelete(Configure<AzureEventgridEventSubscriptionDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureEventgridEventSubscriptionDelete(Configure<AzureEventgridEventSubscriptionDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridEventSubscriptionDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureEventgridEventSubscriptionListSettings toolSettings);
-        static partial void PostProcess(AzureEventgridEventSubscriptionListSettings toolSettings);
         /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureEventgridEventSubscriptionList(Configure<AzureEventgridEventSubscriptionListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureEventgridEventSubscriptionList(Configure<AzureEventgridEventSubscriptionListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridEventSubscriptionListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureEventgridEventSubscriptionShowSettings toolSettings);
-        static partial void PostProcess(AzureEventgridEventSubscriptionShowSettings toolSettings);
         /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureEventgridEventSubscriptionShow(Configure<AzureEventgridEventSubscriptionShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureEventgridEventSubscriptionShow(Configure<AzureEventgridEventSubscriptionShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridEventSubscriptionShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureEventgridEventSubscriptionUpdateSettings toolSettings);
-        static partial void PostProcess(AzureEventgridEventSubscriptionUpdateSettings toolSettings);
         /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureEventgridEventSubscriptionUpdate(Configure<AzureEventgridEventSubscriptionUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureEventgridEventSubscriptionUpdate(Configure<AzureEventgridEventSubscriptionUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridEventSubscriptionUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureEventgridTopicTypeListSettings toolSettings);
-        static partial void PostProcess(AzureEventgridTopicTypeListSettings toolSettings);
         /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureEventgridTopicTypeList(Configure<AzureEventgridTopicTypeListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureEventgridTopicTypeList(Configure<AzureEventgridTopicTypeListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridTopicTypeListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureEventgridTopicTypeListEventTypesSettings toolSettings);
-        static partial void PostProcess(AzureEventgridTopicTypeListEventTypesSettings toolSettings);
         /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureEventgridTopicTypeListEventTypes(Configure<AzureEventgridTopicTypeListEventTypesSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureEventgridTopicTypeListEventTypes(Configure<AzureEventgridTopicTypeListEventTypesSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridTopicTypeListEventTypesSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureEventgridTopicTypeShowSettings toolSettings);
-        static partial void PostProcess(AzureEventgridTopicTypeShowSettings toolSettings);
         /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureEventgridTopicTypeShow(Configure<AzureEventgridTopicTypeShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureEventgridTopicTypeShow(Configure<AzureEventgridTopicTypeShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridTopicTypeShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureEventgridTopicCreateSettings toolSettings);
-        static partial void PostProcess(AzureEventgridTopicCreateSettings toolSettings);
         /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureEventgridTopicCreate(Configure<AzureEventgridTopicCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureEventgridTopicCreate(Configure<AzureEventgridTopicCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridTopicCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureEventgridTopicDeleteSettings toolSettings);
-        static partial void PostProcess(AzureEventgridTopicDeleteSettings toolSettings);
         /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureEventgridTopicDelete(Configure<AzureEventgridTopicDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureEventgridTopicDelete(Configure<AzureEventgridTopicDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridTopicDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureEventgridTopicListSettings toolSettings);
-        static partial void PostProcess(AzureEventgridTopicListSettings toolSettings);
         /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureEventgridTopicList(Configure<AzureEventgridTopicListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureEventgridTopicList(Configure<AzureEventgridTopicListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridTopicListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureEventgridTopicShowSettings toolSettings);
-        static partial void PostProcess(AzureEventgridTopicShowSettings toolSettings);
         /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureEventgridTopicShow(Configure<AzureEventgridTopicShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureEventgridTopicShow(Configure<AzureEventgridTopicShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridTopicShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureEventgridTopicUpdateSettings toolSettings);
-        static partial void PostProcess(AzureEventgridTopicUpdateSettings toolSettings);
         /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureEventgridTopicUpdate(Configure<AzureEventgridTopicUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureEventgridTopicUpdate(Configure<AzureEventgridTopicUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridTopicUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureEventgridTopicKeyListSettings toolSettings);
-        static partial void PostProcess(AzureEventgridTopicKeyListSettings toolSettings);
         /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureEventgridTopicKeyList(Configure<AzureEventgridTopicKeyListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureEventgridTopicKeyList(Configure<AzureEventgridTopicKeyListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridTopicKeyListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureEventgridTopicKeyRegenerateSettings toolSettings);
-        static partial void PostProcess(AzureEventgridTopicKeyRegenerateSettings toolSettings);
         /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureEventgridTopicKeyRegenerate(Configure<AzureEventgridTopicKeyRegenerateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureEventgridTopicKeyRegenerate(Configure<AzureEventgridTopicKeyRegenerateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridTopicKeyRegenerateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
     }
     #region AzureEventgridSettings
@@ -225,7 +178,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -279,7 +232,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -330,7 +283,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -376,7 +329,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -423,7 +376,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -477,6 +430,8 @@ namespace Nuke.Azure
         public virtual string TopicName { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
+        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        public virtual string ForceString { get; internal set; }
         /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         public virtual string Remove { get; internal set; }
         /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
@@ -486,7 +441,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -506,6 +461,7 @@ namespace Nuke.Azure
               .Add("--subject-ends-with {value}", SubjectEndsWith)
               .Add("--topic-name {value}", TopicName)
               .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
               .Add("--debug {value}", Debug)
@@ -531,7 +487,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -565,7 +521,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -600,7 +556,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -641,7 +597,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -681,7 +637,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -717,7 +673,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -754,7 +710,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -791,6 +747,8 @@ namespace Nuke.Azure
         public virtual string Tags { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
+        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        public virtual string ForceString { get; internal set; }
         /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         public virtual string Remove { get; internal set; }
         /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
@@ -800,7 +758,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -813,6 +771,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--tags {value}", Tags)
               .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
               .Add("--debug {value}", Debug)
@@ -842,7 +801,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -882,7 +841,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -948,7 +907,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureEventgridSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventgridSettings SetOutput(this AzureEventgridSettings toolSettings, Output output)
+        public static AzureEventgridSettings SetOutput(this AzureEventgridSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1268,7 +1227,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureEventgridEventSubscriptionCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventgridEventSubscriptionCreateSettings SetOutput(this AzureEventgridEventSubscriptionCreateSettings toolSettings, Output output)
+        public static AzureEventgridEventSubscriptionCreateSettings SetOutput(this AzureEventgridEventSubscriptionCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1438,7 +1397,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureEventgridEventSubscriptionDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventgridEventSubscriptionDeleteSettings SetOutput(this AzureEventgridEventSubscriptionDeleteSettings toolSettings, Output output)
+        public static AzureEventgridEventSubscriptionDeleteSettings SetOutput(this AzureEventgridEventSubscriptionDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1626,7 +1585,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureEventgridEventSubscriptionListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventgridEventSubscriptionListSettings SetOutput(this AzureEventgridEventSubscriptionListSettings toolSettings, Output output)
+        public static AzureEventgridEventSubscriptionListSettings SetOutput(this AzureEventgridEventSubscriptionListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1838,7 +1797,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureEventgridEventSubscriptionShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventgridEventSubscriptionShowSettings SetOutput(this AzureEventgridEventSubscriptionShowSettings toolSettings, Output output)
+        public static AzureEventgridEventSubscriptionShowSettings SetOutput(this AzureEventgridEventSubscriptionShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2095,6 +2054,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region ForceString
+        /// <summary><p><em>Sets <see cref="AzureEventgridEventSubscriptionUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureEventgridEventSubscriptionUpdateSettings SetForceString(this AzureEventgridEventSubscriptionUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridEventSubscriptionUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureEventgridEventSubscriptionUpdateSettings ResetForceString(this AzureEventgridEventSubscriptionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
         #region Remove
         /// <summary><p><em>Sets <see cref="AzureEventgridEventSubscriptionUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         [Pure]
@@ -2170,7 +2147,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureEventgridEventSubscriptionUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventgridEventSubscriptionUpdateSettings SetOutput(this AzureEventgridEventSubscriptionUpdateSettings toolSettings, Output output)
+        public static AzureEventgridEventSubscriptionUpdateSettings SetOutput(this AzureEventgridEventSubscriptionUpdateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2268,7 +2245,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventgridTopicTypeListSettings SetOutput(this AzureEventgridTopicTypeListSettings toolSettings, Output output)
+        public static AzureEventgridTopicTypeListSettings SetOutput(this AzureEventgridTopicTypeListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2384,7 +2361,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeListEventTypesSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventgridTopicTypeListEventTypesSettings SetOutput(this AzureEventgridTopicTypeListEventTypesSettings toolSettings, Output output)
+        public static AzureEventgridTopicTypeListEventTypesSettings SetOutput(this AzureEventgridTopicTypeListEventTypesSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2500,7 +2477,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventgridTopicTypeShowSettings SetOutput(this AzureEventgridTopicTypeShowSettings toolSettings, Output output)
+        public static AzureEventgridTopicTypeShowSettings SetOutput(this AzureEventgridTopicTypeShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2670,7 +2647,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureEventgridTopicCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventgridTopicCreateSettings SetOutput(this AzureEventgridTopicCreateSettings toolSettings, Output output)
+        public static AzureEventgridTopicCreateSettings SetOutput(this AzureEventgridTopicCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2804,7 +2781,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureEventgridTopicDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventgridTopicDeleteSettings SetOutput(this AzureEventgridTopicDeleteSettings toolSettings, Output output)
+        public static AzureEventgridTopicDeleteSettings SetOutput(this AzureEventgridTopicDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2920,7 +2897,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureEventgridTopicListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventgridTopicListSettings SetOutput(this AzureEventgridTopicListSettings toolSettings, Output output)
+        public static AzureEventgridTopicListSettings SetOutput(this AzureEventgridTopicListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3054,7 +3031,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureEventgridTopicShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventgridTopicShowSettings SetOutput(this AzureEventgridTopicShowSettings toolSettings, Output output)
+        public static AzureEventgridTopicShowSettings SetOutput(this AzureEventgridTopicShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3185,6 +3162,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region ForceString
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicUpdateSettings SetForceString(this AzureEventgridTopicUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicUpdateSettings ResetForceString(this AzureEventgridTopicUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
         #region Remove
         /// <summary><p><em>Sets <see cref="AzureEventgridTopicUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         [Pure]
@@ -3260,7 +3255,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureEventgridTopicUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventgridTopicUpdateSettings SetOutput(this AzureEventgridTopicUpdateSettings toolSettings, Output output)
+        public static AzureEventgridTopicUpdateSettings SetOutput(this AzureEventgridTopicUpdateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3394,7 +3389,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureEventgridTopicKeyListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventgridTopicKeyListSettings SetOutput(this AzureEventgridTopicKeyListSettings toolSettings, Output output)
+        public static AzureEventgridTopicKeyListSettings SetOutput(this AzureEventgridTopicKeyListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3546,7 +3541,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureEventgridTopicKeyRegenerateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventgridTopicKeyRegenerateSettings SetOutput(this AzureEventgridTopicKeyRegenerateSettings toolSettings, Output output)
+        public static AzureEventgridTopicKeyRegenerateSettings SetOutput(this AzureEventgridTopicKeyRegenerateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3603,6 +3598,7 @@ namespace Nuke.Azure
     /// <summary><p>Used within <see cref="AzureEventgridTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class EventgridEventSubscriptionEndpointType : Enumeration
     {
         public static EventgridEventSubscriptionEndpointType eventhub = new EventgridEventSubscriptionEndpointType { Value = "eventhub" };

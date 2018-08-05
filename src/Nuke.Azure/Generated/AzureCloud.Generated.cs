@@ -2,10 +2,11 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
+// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureCloud.json.
 
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.Tooling;
@@ -28,88 +29,67 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureCloud executable.</p></summary>
         public static string AzureCloudPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage registered Azure clouds.</p></summary>
-        public static IEnumerable<string> AzureCloud(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
+        public static IReadOnlyCollection<Output> AzureCloud(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool logOutput = true, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureCloudPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
+            var process = ProcessTasks.StartProcess(AzureCloudPath, arguments, workingDirectory, environmentVariables, timeout, logOutput, null, outputFilter);
             process.AssertZeroExitCode();
-            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
+            return process.Output;
         }
-        static partial void PreProcess(AzureCloudListSettings toolSettings);
-        static partial void PostProcess(AzureCloudListSettings toolSettings);
         /// <summary><p>Manage registered Azure clouds.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cloud?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCloudList(Configure<AzureCloudListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCloudList(Configure<AzureCloudListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCloudListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCloudListProfilesSettings toolSettings);
-        static partial void PostProcess(AzureCloudListProfilesSettings toolSettings);
         /// <summary><p>Manage registered Azure clouds.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cloud?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCloudListProfiles(Configure<AzureCloudListProfilesSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCloudListProfiles(Configure<AzureCloudListProfilesSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCloudListProfilesSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCloudRegisterSettings toolSettings);
-        static partial void PostProcess(AzureCloudRegisterSettings toolSettings);
         /// <summary><p>Manage registered Azure clouds.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cloud?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCloudRegister(Configure<AzureCloudRegisterSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCloudRegister(Configure<AzureCloudRegisterSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCloudRegisterSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCloudSetSettings toolSettings);
-        static partial void PostProcess(AzureCloudSetSettings toolSettings);
         /// <summary><p>Manage registered Azure clouds.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cloud?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCloudSet(Configure<AzureCloudSetSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCloudSet(Configure<AzureCloudSetSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCloudSetSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCloudShowSettings toolSettings);
-        static partial void PostProcess(AzureCloudShowSettings toolSettings);
         /// <summary><p>Manage registered Azure clouds.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cloud?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCloudShow(Configure<AzureCloudShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCloudShow(Configure<AzureCloudShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCloudShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCloudUnregisterSettings toolSettings);
-        static partial void PostProcess(AzureCloudUnregisterSettings toolSettings);
         /// <summary><p>Manage registered Azure clouds.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cloud?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCloudUnregister(Configure<AzureCloudUnregisterSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCloudUnregister(Configure<AzureCloudUnregisterSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCloudUnregisterSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCloudUpdateSettings toolSettings);
-        static partial void PostProcess(AzureCloudUpdateSettings toolSettings);
         /// <summary><p>Manage registered Azure clouds.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cloud?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCloudUpdate(Configure<AzureCloudUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCloudUpdate(Configure<AzureCloudUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCloudUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
     }
     #region AzureCloudListSettings
@@ -126,7 +106,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -162,7 +142,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -215,6 +195,8 @@ namespace Nuke.Azure
         public virtual string EndpointVmImageAliasDoc { get; internal set; }
         /// <summary><p>Profile to use for this cloud.</p></summary>
         public virtual CloudProfile Profile { get; internal set; }
+        /// <summary><p>The Azure Container Registry login server suffix.</p></summary>
+        public virtual string SuffixAcrLoginServerEndpoint { get; internal set; }
         /// <summary><p>The Data Lake analytics job and catalog service dns suffix.</p></summary>
         public virtual string SuffixAzureDatalakeAnalyticsCatalogAndJobEndpoint { get; internal set; }
         /// <summary><p>The Data Lake store filesystem service dns suffix.</p></summary>
@@ -230,7 +212,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -251,6 +233,7 @@ namespace Nuke.Azure
               .Add("--endpoint-sql-management {value}", EndpointSqlManagement)
               .Add("--endpoint-vm-image-alias-doc {value}", EndpointVmImageAliasDoc)
               .Add("--profile {value}", Profile)
+              .Add("--suffix-acr-login-server-endpoint {value}", SuffixAcrLoginServerEndpoint)
               .Add("--suffix-azure-datalake-analytics-catalog-and-job-endpoint {value}", SuffixAzureDatalakeAnalyticsCatalogAndJobEndpoint)
               .Add("--suffix-azure-datalake-store-file-system-endpoint {value}", SuffixAzureDatalakeStoreFileSystemEndpoint)
               .Add("--suffix-keyvault-dns {value}", SuffixKeyvaultDns)
@@ -283,7 +266,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -319,7 +302,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -354,7 +337,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -406,6 +389,8 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Profile to use for this cloud.</p></summary>
         public virtual CloudProfile Profile { get; internal set; }
+        /// <summary><p>The Azure Container Registry login server suffix.</p></summary>
+        public virtual string SuffixAcrLoginServerEndpoint { get; internal set; }
         /// <summary><p>The Data Lake analytics job and catalog service dns suffix.</p></summary>
         public virtual string SuffixAzureDatalakeAnalyticsCatalogAndJobEndpoint { get; internal set; }
         /// <summary><p>The Data Lake store filesystem service dns suffix.</p></summary>
@@ -421,7 +406,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -442,6 +427,7 @@ namespace Nuke.Azure
               .Add("--endpoint-vm-image-alias-doc {value}", EndpointVmImageAliasDoc)
               .Add("--name {value}", Name)
               .Add("--profile {value}", Profile)
+              .Add("--suffix-acr-login-server-endpoint {value}", SuffixAcrLoginServerEndpoint)
               .Add("--suffix-azure-datalake-analytics-catalog-and-job-endpoint {value}", SuffixAzureDatalakeAnalyticsCatalogAndJobEndpoint)
               .Add("--suffix-azure-datalake-store-file-system-endpoint {value}", SuffixAzureDatalakeStoreFileSystemEndpoint)
               .Add("--suffix-keyvault-dns {value}", SuffixKeyvaultDns)
@@ -501,7 +487,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCloudListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCloudListSettings SetOutput(this AzureCloudListSettings toolSettings, Output output)
+        public static AzureCloudListSettings SetOutput(this AzureCloudListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -635,7 +621,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCloudListProfilesSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCloudListProfilesSettings SetOutput(this AzureCloudListProfilesSettings toolSettings, Output output)
+        public static AzureCloudListProfilesSettings SetOutput(this AzureCloudListProfilesSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -910,6 +896,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region SuffixAcrLoginServerEndpoint
+        /// <summary><p><em>Sets <see cref="AzureCloudRegisterSettings.SuffixAcrLoginServerEndpoint"/>.</em></p><p>The Azure Container Registry login server suffix.</p></summary>
+        [Pure]
+        public static AzureCloudRegisterSettings SetSuffixAcrLoginServerEndpoint(this AzureCloudRegisterSettings toolSettings, string suffixAcrLoginServerEndpoint)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SuffixAcrLoginServerEndpoint = suffixAcrLoginServerEndpoint;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCloudRegisterSettings.SuffixAcrLoginServerEndpoint"/>.</em></p><p>The Azure Container Registry login server suffix.</p></summary>
+        [Pure]
+        public static AzureCloudRegisterSettings ResetSuffixAcrLoginServerEndpoint(this AzureCloudRegisterSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SuffixAcrLoginServerEndpoint = null;
+            return toolSettings;
+        }
+        #endregion
         #region SuffixAzureDatalakeAnalyticsCatalogAndJobEndpoint
         /// <summary><p><em>Sets <see cref="AzureCloudRegisterSettings.SuffixAzureDatalakeAnalyticsCatalogAndJobEndpoint"/>.</em></p><p>The Data Lake analytics job and catalog service dns suffix.</p></summary>
         [Pure]
@@ -1039,7 +1043,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCloudRegisterSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCloudRegisterSettings SetOutput(this AzureCloudRegisterSettings toolSettings, Output output)
+        public static AzureCloudRegisterSettings SetOutput(this AzureCloudRegisterSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1173,7 +1177,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCloudSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCloudSetSettings SetOutput(this AzureCloudSetSettings toolSettings, Output output)
+        public static AzureCloudSetSettings SetOutput(this AzureCloudSetSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1289,7 +1293,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCloudShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCloudShowSettings SetOutput(this AzureCloudShowSettings toolSettings, Output output)
+        public static AzureCloudShowSettings SetOutput(this AzureCloudShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1405,7 +1409,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCloudUnregisterSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCloudUnregisterSettings SetOutput(this AzureCloudUnregisterSettings toolSettings, Output output)
+        public static AzureCloudUnregisterSettings SetOutput(this AzureCloudUnregisterSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1680,6 +1684,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region SuffixAcrLoginServerEndpoint
+        /// <summary><p><em>Sets <see cref="AzureCloudUpdateSettings.SuffixAcrLoginServerEndpoint"/>.</em></p><p>The Azure Container Registry login server suffix.</p></summary>
+        [Pure]
+        public static AzureCloudUpdateSettings SetSuffixAcrLoginServerEndpoint(this AzureCloudUpdateSettings toolSettings, string suffixAcrLoginServerEndpoint)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SuffixAcrLoginServerEndpoint = suffixAcrLoginServerEndpoint;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCloudUpdateSettings.SuffixAcrLoginServerEndpoint"/>.</em></p><p>The Azure Container Registry login server suffix.</p></summary>
+        [Pure]
+        public static AzureCloudUpdateSettings ResetSuffixAcrLoginServerEndpoint(this AzureCloudUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SuffixAcrLoginServerEndpoint = null;
+            return toolSettings;
+        }
+        #endregion
         #region SuffixAzureDatalakeAnalyticsCatalogAndJobEndpoint
         /// <summary><p><em>Sets <see cref="AzureCloudUpdateSettings.SuffixAzureDatalakeAnalyticsCatalogAndJobEndpoint"/>.</em></p><p>The Data Lake analytics job and catalog service dns suffix.</p></summary>
         [Pure]
@@ -1809,7 +1831,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCloudUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCloudUpdateSettings SetOutput(this AzureCloudUpdateSettings toolSettings, Output output)
+        public static AzureCloudUpdateSettings SetOutput(this AzureCloudUpdateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1866,6 +1888,7 @@ namespace Nuke.Azure
     /// <summary><p>Used within <see cref="AzureCloudTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class CloudProfile : Enumeration
     {
         public static CloudProfile _2017_03_09_profile = new CloudProfile { Value = "2017-03-09-profile" };

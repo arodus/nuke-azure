@@ -6,12 +6,12 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/policy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/policy/event.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/policy/assignment.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/policy/definition.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/policy/set-definition.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/policy/state.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/policy/assignment.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/policy/definition.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/policy/event.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/policy/set-definition.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/policy/state.yml"
   ],
   "name": "AzurePolicy",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/policy?view=azure-cli-latest",
@@ -22,110 +22,6 @@
       "postfix": "",
       "definiteArgument": "policy",
       "settingsClass": {}
-    },
-    {
-      "postfix": "EventList",
-      "definiteArgument": "policy event list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Apply",
-            "type": "string",
-            "format": "--apply {value}",
-            "help": "Apply expression for aggregations using OData notation."
-          },
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "help": "Filter expression using OData notation."
-          },
-          {
-            "name": "From",
-            "type": "string",
-            "format": "--from {value}",
-            "help": "ISO 8601 formatted timestamp specifying the start time of the interval to query."
-          },
-          {
-            "name": "OrderBy",
-            "type": "string",
-            "format": "--order-by {value}",
-            "help": "Ordering expression using OData notation."
-          },
-          {
-            "name": "Select",
-            "type": "string",
-            "format": "--select {value}",
-            "help": "Select expression using OData notation."
-          },
-          {
-            "name": "To",
-            "type": "string",
-            "format": "--to {value}",
-            "help": "ISO 8601 formatted timestamp specifying the end time of the interval to query."
-          },
-          {
-            "name": "Top",
-            "type": "string",
-            "format": "--top {value}",
-            "help": "Maximum number of records to return."
-          },
-          {
-            "name": "Namespace",
-            "type": "string",
-            "format": "--namespace {value}",
-            "help": "Provider namespace (Ex: Microsoft.Provider)."
-          },
-          {
-            "name": "Parent",
-            "type": "string",
-            "format": "--parent {value}",
-            "help": "The parent path (Ex: resA/myA/resB/myB)."
-          },
-          {
-            "name": "Resource",
-            "type": "string",
-            "format": "--resource {value}",
-            "help": "Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments."
-          },
-          {
-            "name": "ResourceType",
-            "type": "string",
-            "format": "--resource-type {value}",
-            "help": "Resource type (Ex: resC)."
-          },
-          {
-            "name": "ManagementGroup",
-            "type": "string",
-            "format": "--management-group {value}",
-            "help": "Name of management group."
-          },
-          {
-            "name": "PolicyAssignment",
-            "type": "string",
-            "format": "--policy-assignment {value}",
-            "help": "Name of policy assignment."
-          },
-          {
-            "name": "PolicyDefinition",
-            "type": "string",
-            "format": "--policy-definition {value}",
-            "help": "Name of policy definition."
-          },
-          {
-            "name": "PolicySetDefinition",
-            "type": "string",
-            "format": "--policy-set-definition {value}",
-            "help": "Name of policy set definition."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
     },
     {
       "postfix": "AssignmentCreate",
@@ -402,6 +298,12 @@
             "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
           },
           {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
             "name": "Remove",
             "type": "string",
             "format": "--remove {value}",
@@ -412,6 +314,110 @@
             "type": "string",
             "format": "--set {value}",
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "EventList",
+      "definiteArgument": "policy event list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Apply",
+            "type": "string",
+            "format": "--apply {value}",
+            "help": "Apply expression for aggregations using OData notation."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "help": "Filter expression using OData notation."
+          },
+          {
+            "name": "From",
+            "type": "string",
+            "format": "--from {value}",
+            "help": "ISO 8601 formatted timestamp specifying the start time of the interval to query."
+          },
+          {
+            "name": "OrderBy",
+            "type": "string",
+            "format": "--order-by {value}",
+            "help": "Ordering expression using OData notation."
+          },
+          {
+            "name": "Select",
+            "type": "string",
+            "format": "--select {value}",
+            "help": "Select expression using OData notation."
+          },
+          {
+            "name": "To",
+            "type": "string",
+            "format": "--to {value}",
+            "help": "ISO 8601 formatted timestamp specifying the end time of the interval to query."
+          },
+          {
+            "name": "Top",
+            "type": "string",
+            "format": "--top {value}",
+            "help": "Maximum number of records to return."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "help": "Provider namespace (Ex: Microsoft.Provider)."
+          },
+          {
+            "name": "Parent",
+            "type": "string",
+            "format": "--parent {value}",
+            "help": "The parent path (Ex: resA/myA/resB/myB)."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "help": "Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "Resource type (Ex: resC)."
+          },
+          {
+            "name": "ManagementGroup",
+            "type": "string",
+            "format": "--management-group {value}",
+            "help": "Name of management group."
+          },
+          {
+            "name": "PolicyAssignment",
+            "type": "string",
+            "format": "--policy-assignment {value}",
+            "help": "Name of policy assignment."
+          },
+          {
+            "name": "PolicyDefinition",
+            "type": "string",
+            "format": "--policy-definition {value}",
+            "help": "Name of policy definition."
+          },
+          {
+            "name": "PolicySetDefinition",
+            "type": "string",
+            "format": "--policy-set-definition {value}",
+            "help": "Name of policy set definition."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           }
         ]
       }
@@ -737,7 +743,7 @@
     },
     {
       "name": "Output",
-      "type": "Output",
+      "type": "AzureOutput",
       "format": "--output {value}",
       "help": "Output format."
     },

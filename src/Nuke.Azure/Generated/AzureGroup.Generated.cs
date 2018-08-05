@@ -2,10 +2,11 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
+// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureGroup.json.
 
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.Tooling;
@@ -28,253 +29,187 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureGroup executable.</p></summary>
         public static string AzureGroupPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage resource groups and template deployments.</p></summary>
-        public static IEnumerable<string> AzureGroup(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
+        public static IReadOnlyCollection<Output> AzureGroup(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool logOutput = true, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureGroupPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
+            var process = ProcessTasks.StartProcess(AzureGroupPath, arguments, workingDirectory, environmentVariables, timeout, logOutput, null, outputFilter);
             process.AssertZeroExitCode();
-            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
+            return process.Output;
         }
-        static partial void PreProcess(AzureGroupCreateSettings toolSettings);
-        static partial void PostProcess(AzureGroupCreateSettings toolSettings);
         /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureGroupCreate(Configure<AzureGroupCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureGroupCreate(Configure<AzureGroupCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureGroupDeleteSettings toolSettings);
-        static partial void PostProcess(AzureGroupDeleteSettings toolSettings);
         /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureGroupDelete(Configure<AzureGroupDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureGroupDelete(Configure<AzureGroupDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureGroupExistsSettings toolSettings);
-        static partial void PostProcess(AzureGroupExistsSettings toolSettings);
         /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureGroupExists(Configure<AzureGroupExistsSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureGroupExists(Configure<AzureGroupExistsSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupExistsSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureGroupExportSettings toolSettings);
-        static partial void PostProcess(AzureGroupExportSettings toolSettings);
         /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureGroupExport(Configure<AzureGroupExportSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureGroupExport(Configure<AzureGroupExportSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupExportSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureGroupListSettings toolSettings);
-        static partial void PostProcess(AzureGroupListSettings toolSettings);
         /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureGroupList(Configure<AzureGroupListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureGroupList(Configure<AzureGroupListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureGroupShowSettings toolSettings);
-        static partial void PostProcess(AzureGroupShowSettings toolSettings);
         /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureGroupShow(Configure<AzureGroupShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureGroupShow(Configure<AzureGroupShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureGroupUpdateSettings toolSettings);
-        static partial void PostProcess(AzureGroupUpdateSettings toolSettings);
         /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureGroupUpdate(Configure<AzureGroupUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureGroupUpdate(Configure<AzureGroupUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureGroupWaitSettings toolSettings);
-        static partial void PostProcess(AzureGroupWaitSettings toolSettings);
         /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureGroupWait(Configure<AzureGroupWaitSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureGroupWait(Configure<AzureGroupWaitSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupWaitSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureGroupLockCreateSettings toolSettings);
-        static partial void PostProcess(AzureGroupLockCreateSettings toolSettings);
         /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureGroupLockCreate(Configure<AzureGroupLockCreateSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureGroupLockCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureGroupLockDeleteSettings toolSettings);
-        static partial void PostProcess(AzureGroupLockDeleteSettings toolSettings);
-        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureGroupLockDelete(Configure<AzureGroupLockDeleteSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureGroupLockDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureGroupLockListSettings toolSettings);
-        static partial void PostProcess(AzureGroupLockListSettings toolSettings);
-        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureGroupLockList(Configure<AzureGroupLockListSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureGroupLockListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureGroupLockShowSettings toolSettings);
-        static partial void PostProcess(AzureGroupLockShowSettings toolSettings);
-        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureGroupLockShow(Configure<AzureGroupLockShowSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureGroupLockShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureGroupLockUpdateSettings toolSettings);
-        static partial void PostProcess(AzureGroupLockUpdateSettings toolSettings);
-        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureGroupLockUpdate(Configure<AzureGroupLockUpdateSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureGroupLockUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureGroupDeploymentCreateSettings toolSettings);
-        static partial void PostProcess(AzureGroupDeploymentCreateSettings toolSettings);
-        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureGroupDeploymentCreate(Configure<AzureGroupDeploymentCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureGroupDeploymentCreate(Configure<AzureGroupDeploymentCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupDeploymentCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureGroupDeploymentDeleteSettings toolSettings);
-        static partial void PostProcess(AzureGroupDeploymentDeleteSettings toolSettings);
         /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureGroupDeploymentDelete(Configure<AzureGroupDeploymentDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureGroupDeploymentDelete(Configure<AzureGroupDeploymentDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupDeploymentDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureGroupDeploymentExportSettings toolSettings);
-        static partial void PostProcess(AzureGroupDeploymentExportSettings toolSettings);
         /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureGroupDeploymentExport(Configure<AzureGroupDeploymentExportSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureGroupDeploymentExport(Configure<AzureGroupDeploymentExportSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupDeploymentExportSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureGroupDeploymentListSettings toolSettings);
-        static partial void PostProcess(AzureGroupDeploymentListSettings toolSettings);
         /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureGroupDeploymentList(Configure<AzureGroupDeploymentListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureGroupDeploymentList(Configure<AzureGroupDeploymentListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupDeploymentListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureGroupDeploymentShowSettings toolSettings);
-        static partial void PostProcess(AzureGroupDeploymentShowSettings toolSettings);
         /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureGroupDeploymentShow(Configure<AzureGroupDeploymentShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureGroupDeploymentShow(Configure<AzureGroupDeploymentShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupDeploymentShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureGroupDeploymentValidateSettings toolSettings);
-        static partial void PostProcess(AzureGroupDeploymentValidateSettings toolSettings);
         /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureGroupDeploymentValidate(Configure<AzureGroupDeploymentValidateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureGroupDeploymentValidate(Configure<AzureGroupDeploymentValidateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupDeploymentValidateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureGroupDeploymentWaitSettings toolSettings);
-        static partial void PostProcess(AzureGroupDeploymentWaitSettings toolSettings);
         /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureGroupDeploymentWait(Configure<AzureGroupDeploymentWaitSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureGroupDeploymentWait(Configure<AzureGroupDeploymentWaitSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupDeploymentWaitSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureGroupDeploymentOperationListSettings toolSettings);
-        static partial void PostProcess(AzureGroupDeploymentOperationListSettings toolSettings);
         /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureGroupDeploymentOperationList(Configure<AzureGroupDeploymentOperationListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureGroupLockCreate(Configure<AzureGroupLockCreateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureGroupLockCreateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureGroupLockDelete(Configure<AzureGroupLockDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureGroupLockDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureGroupLockList(Configure<AzureGroupLockListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureGroupLockListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureGroupLockShow(Configure<AzureGroupLockShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureGroupLockShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureGroupLockUpdate(Configure<AzureGroupLockUpdateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureGroupLockUpdateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureGroupDeploymentOperationList(Configure<AzureGroupDeploymentOperationListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupDeploymentOperationListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureGroupDeploymentOperationShowSettings toolSettings);
-        static partial void PostProcess(AzureGroupDeploymentOperationShowSettings toolSettings);
         /// <summary><p>Manage resource groups and template deployments.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureGroupDeploymentOperationShow(Configure<AzureGroupDeploymentOperationShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureGroupDeploymentOperationShow(Configure<AzureGroupDeploymentOperationShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureGroupDeploymentOperationShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
     }
     #region AzureGroupCreateSettings
@@ -297,7 +232,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -338,7 +273,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -375,7 +310,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -414,7 +349,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -451,7 +386,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -486,7 +421,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -516,8 +451,12 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureGroupTasks.AzureGroupPath;
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        public virtual string Tags { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
+        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        public virtual string ForceString { get; internal set; }
         /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         public virtual string Remove { get; internal set; }
         /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
@@ -527,7 +466,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -537,7 +476,9 @@ namespace Nuke.Azure
             arguments
               .Add("group update")
               .Add("--name {value}", Name)
+              .Add("--tags {value}", Tags)
               .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
               .Add("--debug {value}", Debug)
@@ -579,7 +520,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -589,6 +530,329 @@ namespace Nuke.Azure
             arguments
               .Add("group wait")
               .Add("--name {value}", Name)
+              .Add("--created {value}", Created)
+              .Add("--custom {value}", Custom)
+              .Add("--deleted {value}", Deleted)
+              .Add("--exists {value}", Exists)
+              .Add("--interval {value}", Interval)
+              .Add("--timeout {value}", Timeout)
+              .Add("--updated {value}", Updated)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureGroupDeploymentCreateSettings
+    /// <summary><p>Used within <see cref="AzureGroupTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureGroupDeploymentCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureGroup executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureGroupTasks.AzureGroupPath;
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Incremental (only add resources to resource group) or Complete (remove extra resources from resource group).</p></summary>
+        public virtual GroupDeploymentMode Mode { get; internal set; }
+        /// <summary><p>The deployment name. Default to template file base name.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
+        public virtual string NoWait { get; internal set; }
+        /// <summary><p>Supply deployment parameter values.</p></summary>
+        public virtual string Parameters { get; internal set; }
+        /// <summary><p>The name of a deployment to roll back to on error, or use as a flag to roll back to the last successful deployment.</p></summary>
+        public virtual string RollbackOnError { get; internal set; }
+        /// <summary><p>A template file path in the file system.</p></summary>
+        public virtual string TemplateFile { get; internal set; }
+        /// <summary><p>A uri to a remote template file.</p></summary>
+        public virtual string TemplateUri { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("group deployment create")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--mode {value}", Mode)
+              .Add("--name {value}", Name)
+              .Add("--no-wait {value}", NoWait)
+              .Add("--parameters {value}", Parameters)
+              .Add("--rollback-on-error {value}", RollbackOnError)
+              .Add("--template-file {value}", TemplateFile)
+              .Add("--template-uri {value}", TemplateUri)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureGroupDeploymentDeleteSettings
+    /// <summary><p>Used within <see cref="AzureGroupTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureGroupDeploymentDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureGroup executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureGroupTasks.AzureGroupPath;
+        /// <summary><p>The deployment name.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
+        public virtual string NoWait { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("group deployment delete")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--no-wait {value}", NoWait)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureGroupDeploymentExportSettings
+    /// <summary><p>Used within <see cref="AzureGroupTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureGroupDeploymentExportSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureGroup executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureGroupTasks.AzureGroupPath;
+        /// <summary><p>The deployment name.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("group deployment export")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureGroupDeploymentListSettings
+    /// <summary><p>Used within <see cref="AzureGroupTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureGroupDeploymentListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureGroup executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureGroupTasks.AzureGroupPath;
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The filter to apply on the operation. For example, you can use $filter=provisioningState eq '{state}'.</p></summary>
+        public virtual string Filter { get; internal set; }
+        /// <summary><p>The number of results to get. If null is passed, returns all deployments.</p></summary>
+        public virtual string Top { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("group deployment list")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--filter {value}", Filter)
+              .Add("--top {value}", Top)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureGroupDeploymentShowSettings
+    /// <summary><p>Used within <see cref="AzureGroupTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureGroupDeploymentShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureGroup executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureGroupTasks.AzureGroupPath;
+        /// <summary><p>The deployment name.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("group deployment show")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureGroupDeploymentValidateSettings
+    /// <summary><p>Used within <see cref="AzureGroupTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureGroupDeploymentValidateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureGroup executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureGroupTasks.AzureGroupPath;
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Incremental (only add resources to resource group) or Complete (remove extra resources from resource group).</p></summary>
+        public virtual GroupDeploymentMode Mode { get; internal set; }
+        /// <summary><p>Supply deployment parameter values.</p></summary>
+        public virtual string Parameters { get; internal set; }
+        /// <summary><p>The name of a deployment to roll back to on error, or use as a flag to roll back to the last successful deployment.</p></summary>
+        public virtual string RollbackOnError { get; internal set; }
+        /// <summary><p>A template file path in the file system.</p></summary>
+        public virtual string TemplateFile { get; internal set; }
+        /// <summary><p>A uri to a remote template file.</p></summary>
+        public virtual string TemplateUri { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("group deployment validate")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--mode {value}", Mode)
+              .Add("--parameters {value}", Parameters)
+              .Add("--rollback-on-error {value}", RollbackOnError)
+              .Add("--template-file {value}", TemplateFile)
+              .Add("--template-uri {value}", TemplateUri)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureGroupDeploymentWaitSettings
+    /// <summary><p>Used within <see cref="AzureGroupTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureGroupDeploymentWaitSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureGroup executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureGroupTasks.AzureGroupPath;
+        /// <summary><p>The deployment name.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Wait until created with 'provisioningState' at 'Succeeded'.</p></summary>
+        public virtual string Created { get; internal set; }
+        /// <summary><p>Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].</p></summary>
+        public virtual string Custom { get; internal set; }
+        /// <summary><p>Wait until deleted.</p></summary>
+        public virtual string Deleted { get; internal set; }
+        /// <summary><p>Wait until the resource exists.</p></summary>
+        public virtual string Exists { get; internal set; }
+        /// <summary><p>Polling interval in seconds.</p></summary>
+        public virtual string Interval { get; internal set; }
+        /// <summary><p>Maximum wait in seconds.</p></summary>
+        public virtual string Timeout { get; internal set; }
+        /// <summary><p>Wait until updated with provisioningState at 'Succeeded'.</p></summary>
+        public virtual string Updated { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("group deployment wait")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
               .Add("--created {value}", Created)
               .Add("--custom {value}", Custom)
               .Add("--deleted {value}", Deleted)
@@ -627,7 +891,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -669,7 +933,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -708,7 +972,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -748,7 +1012,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -793,7 +1057,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -807,320 +1071,6 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--notes {value}", Notes)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureGroupDeploymentCreateSettings
-    /// <summary><p>Used within <see cref="AzureGroupTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureGroupDeploymentCreateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureGroup executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureGroupTasks.AzureGroupPath;
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Incremental (only add resources to resource group) or Complete (remove extra resources from resource group).</p></summary>
-        public virtual GroupDeploymentMode Mode { get; internal set; }
-        /// <summary><p>The deployment name. Default to template file base name.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
-        public virtual string NoWait { get; internal set; }
-        /// <summary><p>Supply deployment parameter values.</p></summary>
-        public virtual string Parameters { get; internal set; }
-        /// <summary><p>A template file path in the file system.</p></summary>
-        public virtual string TemplateFile { get; internal set; }
-        /// <summary><p>A uri to a remote template file.</p></summary>
-        public virtual string TemplateUri { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("group deployment create")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--mode {value}", Mode)
-              .Add("--name {value}", Name)
-              .Add("--no-wait {value}", NoWait)
-              .Add("--parameters {value}", Parameters)
-              .Add("--template-file {value}", TemplateFile)
-              .Add("--template-uri {value}", TemplateUri)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureGroupDeploymentDeleteSettings
-    /// <summary><p>Used within <see cref="AzureGroupTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureGroupDeploymentDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureGroup executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureGroupTasks.AzureGroupPath;
-        /// <summary><p>The deployment name.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("group deployment delete")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureGroupDeploymentExportSettings
-    /// <summary><p>Used within <see cref="AzureGroupTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureGroupDeploymentExportSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureGroup executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureGroupTasks.AzureGroupPath;
-        /// <summary><p>The deployment name.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("group deployment export")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureGroupDeploymentListSettings
-    /// <summary><p>Used within <see cref="AzureGroupTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureGroupDeploymentListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureGroup executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureGroupTasks.AzureGroupPath;
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The filter to apply on the operation. For example, you can use $filter=provisioningState eq '{state}'.</p></summary>
-        public virtual string Filter { get; internal set; }
-        /// <summary><p>The number of results to get. If null is passed, returns all deployments.</p></summary>
-        public virtual string Top { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("group deployment list")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--filter {value}", Filter)
-              .Add("--top {value}", Top)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureGroupDeploymentShowSettings
-    /// <summary><p>Used within <see cref="AzureGroupTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureGroupDeploymentShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureGroup executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureGroupTasks.AzureGroupPath;
-        /// <summary><p>The deployment name.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("group deployment show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureGroupDeploymentValidateSettings
-    /// <summary><p>Used within <see cref="AzureGroupTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureGroupDeploymentValidateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureGroup executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureGroupTasks.AzureGroupPath;
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Incremental (only add resources to resource group) or Complete (remove extra resources from resource group).</p></summary>
-        public virtual GroupDeploymentMode Mode { get; internal set; }
-        /// <summary><p>Supply deployment parameter values.</p></summary>
-        public virtual string Parameters { get; internal set; }
-        /// <summary><p>A template file path in the file system.</p></summary>
-        public virtual string TemplateFile { get; internal set; }
-        /// <summary><p>A uri to a remote template file.</p></summary>
-        public virtual string TemplateUri { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("group deployment validate")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--mode {value}", Mode)
-              .Add("--parameters {value}", Parameters)
-              .Add("--template-file {value}", TemplateFile)
-              .Add("--template-uri {value}", TemplateUri)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureGroupDeploymentWaitSettings
-    /// <summary><p>Used within <see cref="AzureGroupTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureGroupDeploymentWaitSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureGroup executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureGroupTasks.AzureGroupPath;
-        /// <summary><p>The deployment name.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Wait until created with 'provisioningState' at 'Succeeded'.</p></summary>
-        public virtual string Created { get; internal set; }
-        /// <summary><p>Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].</p></summary>
-        public virtual string Custom { get; internal set; }
-        /// <summary><p>Wait until deleted.</p></summary>
-        public virtual string Deleted { get; internal set; }
-        /// <summary><p>Wait until the resource exists.</p></summary>
-        public virtual string Exists { get; internal set; }
-        /// <summary><p>Polling interval in seconds.</p></summary>
-        public virtual string Interval { get; internal set; }
-        /// <summary><p>Maximum wait in seconds.</p></summary>
-        public virtual string Timeout { get; internal set; }
-        /// <summary><p>Wait until updated with provisioningState at 'Succeeded'.</p></summary>
-        public virtual string Updated { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("group deployment wait")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--created {value}", Created)
-              .Add("--custom {value}", Custom)
-              .Add("--deleted {value}", Deleted)
-              .Add("--exists {value}", Exists)
-              .Add("--interval {value}", Interval)
-              .Add("--timeout {value}", Timeout)
-              .Add("--updated {value}", Updated)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1150,7 +1100,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1191,7 +1141,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1311,7 +1261,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureGroupCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureGroupCreateSettings SetOutput(this AzureGroupCreateSettings toolSettings, Output output)
+        public static AzureGroupCreateSettings SetOutput(this AzureGroupCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1463,7 +1413,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureGroupDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureGroupDeleteSettings SetOutput(this AzureGroupDeleteSettings toolSettings, Output output)
+        public static AzureGroupDeleteSettings SetOutput(this AzureGroupDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1579,7 +1529,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureGroupExistsSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureGroupExistsSettings SetOutput(this AzureGroupExistsSettings toolSettings, Output output)
+        public static AzureGroupExistsSettings SetOutput(this AzureGroupExistsSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1731,7 +1681,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureGroupExportSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureGroupExportSettings SetOutput(this AzureGroupExportSettings toolSettings, Output output)
+        public static AzureGroupExportSettings SetOutput(this AzureGroupExportSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1847,7 +1797,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureGroupListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureGroupListSettings SetOutput(this AzureGroupListSettings toolSettings, Output output)
+        public static AzureGroupListSettings SetOutput(this AzureGroupListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1963,7 +1913,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureGroupShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureGroupShowSettings SetOutput(this AzureGroupShowSettings toolSettings, Output output)
+        public static AzureGroupShowSettings SetOutput(this AzureGroupShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2040,6 +1990,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Tags
+        /// <summary><p><em>Sets <see cref="AzureGroupUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureGroupUpdateSettings SetTags(this AzureGroupUpdateSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureGroupUpdateSettings ResetTags(this AzureGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
         #region Add
         /// <summary><p><em>Sets <see cref="AzureGroupUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         [Pure]
@@ -2055,6 +2023,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Add = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ForceString
+        /// <summary><p><em>Sets <see cref="AzureGroupUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureGroupUpdateSettings SetForceString(this AzureGroupUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureGroupUpdateSettings ResetForceString(this AzureGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
             return toolSettings;
         }
         #endregion
@@ -2133,7 +2119,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureGroupUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureGroupUpdateSettings SetOutput(this AzureGroupUpdateSettings toolSettings, Output output)
+        public static AzureGroupUpdateSettings SetOutput(this AzureGroupUpdateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2375,7 +2361,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureGroupWaitSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureGroupWaitSettings SetOutput(this AzureGroupWaitSettings toolSettings, Output output)
+        public static AzureGroupWaitSettings SetOutput(this AzureGroupWaitSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2420,802 +2406,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureGroupWaitSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureGroupWaitSettings ResetVerbose(this AzureGroupWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureGroupLockCreateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureGroupTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureGroupLockCreateSettingsExtensions
-    {
-        #region LockType
-        /// <summary><p><em>Sets <see cref="AzureGroupLockCreateSettings.LockType"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureGroupLockCreateSettings SetLockType(this AzureGroupLockCreateSettings toolSettings, GroupLockLockType lockType)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LockType = lockType;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockCreateSettings.LockType"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureGroupLockCreateSettings ResetLockType(this AzureGroupLockCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LockType = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureGroupLockCreateSettings.Name"/>.</em></p><p>Name of the lock.</p></summary>
-        [Pure]
-        public static AzureGroupLockCreateSettings SetName(this AzureGroupLockCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockCreateSettings.Name"/>.</em></p><p>Name of the lock.</p></summary>
-        [Pure]
-        public static AzureGroupLockCreateSettings ResetName(this AzureGroupLockCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureGroupLockCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureGroupLockCreateSettings SetResourceGroup(this AzureGroupLockCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureGroupLockCreateSettings ResetResourceGroup(this AzureGroupLockCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Notes
-        /// <summary><p><em>Sets <see cref="AzureGroupLockCreateSettings.Notes"/>.</em></p><p>Notes about this lock.</p></summary>
-        [Pure]
-        public static AzureGroupLockCreateSettings SetNotes(this AzureGroupLockCreateSettings toolSettings, string notes)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Notes = notes;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockCreateSettings.Notes"/>.</em></p><p>Notes about this lock.</p></summary>
-        [Pure]
-        public static AzureGroupLockCreateSettings ResetNotes(this AzureGroupLockCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Notes = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureGroupLockCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureGroupLockCreateSettings SetDebug(this AzureGroupLockCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureGroupLockCreateSettings ResetDebug(this AzureGroupLockCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureGroupLockCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureGroupLockCreateSettings SetHelp(this AzureGroupLockCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureGroupLockCreateSettings ResetHelp(this AzureGroupLockCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureGroupLockCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureGroupLockCreateSettings SetOutput(this AzureGroupLockCreateSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureGroupLockCreateSettings ResetOutput(this AzureGroupLockCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureGroupLockCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureGroupLockCreateSettings SetQuery(this AzureGroupLockCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureGroupLockCreateSettings ResetQuery(this AzureGroupLockCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureGroupLockCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureGroupLockCreateSettings SetVerbose(this AzureGroupLockCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureGroupLockCreateSettings ResetVerbose(this AzureGroupLockCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureGroupLockDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureGroupTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureGroupLockDeleteSettingsExtensions
-    {
-        #region Ids
-        /// <summary><p><em>Sets <see cref="AzureGroupLockDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
-        [Pure]
-        public static AzureGroupLockDeleteSettings SetIds(this AzureGroupLockDeleteSettings toolSettings, string ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Ids = ids;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
-        [Pure]
-        public static AzureGroupLockDeleteSettings ResetIds(this AzureGroupLockDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Ids = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureGroupLockDeleteSettings.Name"/>.</em></p><p>Name of the lock.</p></summary>
-        [Pure]
-        public static AzureGroupLockDeleteSettings SetName(this AzureGroupLockDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockDeleteSettings.Name"/>.</em></p><p>Name of the lock.</p></summary>
-        [Pure]
-        public static AzureGroupLockDeleteSettings ResetName(this AzureGroupLockDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureGroupLockDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureGroupLockDeleteSettings SetResourceGroup(this AzureGroupLockDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureGroupLockDeleteSettings ResetResourceGroup(this AzureGroupLockDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureGroupLockDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureGroupLockDeleteSettings SetDebug(this AzureGroupLockDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureGroupLockDeleteSettings ResetDebug(this AzureGroupLockDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureGroupLockDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureGroupLockDeleteSettings SetHelp(this AzureGroupLockDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureGroupLockDeleteSettings ResetHelp(this AzureGroupLockDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureGroupLockDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureGroupLockDeleteSettings SetOutput(this AzureGroupLockDeleteSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureGroupLockDeleteSettings ResetOutput(this AzureGroupLockDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureGroupLockDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureGroupLockDeleteSettings SetQuery(this AzureGroupLockDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureGroupLockDeleteSettings ResetQuery(this AzureGroupLockDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureGroupLockDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureGroupLockDeleteSettings SetVerbose(this AzureGroupLockDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureGroupLockDeleteSettings ResetVerbose(this AzureGroupLockDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureGroupLockListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureGroupTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureGroupLockListSettingsExtensions
-    {
-        #region FilterString
-        /// <summary><p><em>Sets <see cref="AzureGroupLockListSettings.FilterString"/>.</em></p><p>A query filter to use to restrict the results.</p></summary>
-        [Pure]
-        public static AzureGroupLockListSettings SetFilterString(this AzureGroupLockListSettings toolSettings, string filterString)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FilterString = filterString;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockListSettings.FilterString"/>.</em></p><p>A query filter to use to restrict the results.</p></summary>
-        [Pure]
-        public static AzureGroupLockListSettings ResetFilterString(this AzureGroupLockListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FilterString = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureGroupLockListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureGroupLockListSettings SetResourceGroup(this AzureGroupLockListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureGroupLockListSettings ResetResourceGroup(this AzureGroupLockListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureGroupLockListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureGroupLockListSettings SetDebug(this AzureGroupLockListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureGroupLockListSettings ResetDebug(this AzureGroupLockListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureGroupLockListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureGroupLockListSettings SetHelp(this AzureGroupLockListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureGroupLockListSettings ResetHelp(this AzureGroupLockListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureGroupLockListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureGroupLockListSettings SetOutput(this AzureGroupLockListSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureGroupLockListSettings ResetOutput(this AzureGroupLockListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureGroupLockListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureGroupLockListSettings SetQuery(this AzureGroupLockListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureGroupLockListSettings ResetQuery(this AzureGroupLockListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureGroupLockListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureGroupLockListSettings SetVerbose(this AzureGroupLockListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureGroupLockListSettings ResetVerbose(this AzureGroupLockListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureGroupLockShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureGroupTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureGroupLockShowSettingsExtensions
-    {
-        #region Ids
-        /// <summary><p><em>Sets <see cref="AzureGroupLockShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
-        [Pure]
-        public static AzureGroupLockShowSettings SetIds(this AzureGroupLockShowSettings toolSettings, string ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Ids = ids;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
-        [Pure]
-        public static AzureGroupLockShowSettings ResetIds(this AzureGroupLockShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Ids = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureGroupLockShowSettings.Name"/>.</em></p><p>Name of the lock.</p></summary>
-        [Pure]
-        public static AzureGroupLockShowSettings SetName(this AzureGroupLockShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockShowSettings.Name"/>.</em></p><p>Name of the lock.</p></summary>
-        [Pure]
-        public static AzureGroupLockShowSettings ResetName(this AzureGroupLockShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureGroupLockShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureGroupLockShowSettings SetResourceGroup(this AzureGroupLockShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureGroupLockShowSettings ResetResourceGroup(this AzureGroupLockShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureGroupLockShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureGroupLockShowSettings SetDebug(this AzureGroupLockShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureGroupLockShowSettings ResetDebug(this AzureGroupLockShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureGroupLockShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureGroupLockShowSettings SetHelp(this AzureGroupLockShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureGroupLockShowSettings ResetHelp(this AzureGroupLockShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureGroupLockShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureGroupLockShowSettings SetOutput(this AzureGroupLockShowSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureGroupLockShowSettings ResetOutput(this AzureGroupLockShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureGroupLockShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureGroupLockShowSettings SetQuery(this AzureGroupLockShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureGroupLockShowSettings ResetQuery(this AzureGroupLockShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureGroupLockShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureGroupLockShowSettings SetVerbose(this AzureGroupLockShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureGroupLockShowSettings ResetVerbose(this AzureGroupLockShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureGroupLockUpdateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureGroupTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureGroupLockUpdateSettingsExtensions
-    {
-        #region Ids
-        /// <summary><p><em>Sets <see cref="AzureGroupLockUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
-        [Pure]
-        public static AzureGroupLockUpdateSettings SetIds(this AzureGroupLockUpdateSettings toolSettings, string ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Ids = ids;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
-        [Pure]
-        public static AzureGroupLockUpdateSettings ResetIds(this AzureGroupLockUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Ids = null;
-            return toolSettings;
-        }
-        #endregion
-        #region LockType
-        /// <summary><p><em>Sets <see cref="AzureGroupLockUpdateSettings.LockType"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureGroupLockUpdateSettings SetLockType(this AzureGroupLockUpdateSettings toolSettings, GroupLockLockType lockType)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LockType = lockType;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockUpdateSettings.LockType"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureGroupLockUpdateSettings ResetLockType(this AzureGroupLockUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LockType = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureGroupLockUpdateSettings.Name"/>.</em></p><p>Name of the lock.</p></summary>
-        [Pure]
-        public static AzureGroupLockUpdateSettings SetName(this AzureGroupLockUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockUpdateSettings.Name"/>.</em></p><p>Name of the lock.</p></summary>
-        [Pure]
-        public static AzureGroupLockUpdateSettings ResetName(this AzureGroupLockUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Notes
-        /// <summary><p><em>Sets <see cref="AzureGroupLockUpdateSettings.Notes"/>.</em></p><p>Notes about this lock.</p></summary>
-        [Pure]
-        public static AzureGroupLockUpdateSettings SetNotes(this AzureGroupLockUpdateSettings toolSettings, string notes)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Notes = notes;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockUpdateSettings.Notes"/>.</em></p><p>Notes about this lock.</p></summary>
-        [Pure]
-        public static AzureGroupLockUpdateSettings ResetNotes(this AzureGroupLockUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Notes = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureGroupLockUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureGroupLockUpdateSettings SetResourceGroup(this AzureGroupLockUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureGroupLockUpdateSettings ResetResourceGroup(this AzureGroupLockUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureGroupLockUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureGroupLockUpdateSettings SetDebug(this AzureGroupLockUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureGroupLockUpdateSettings ResetDebug(this AzureGroupLockUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureGroupLockUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureGroupLockUpdateSettings SetHelp(this AzureGroupLockUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureGroupLockUpdateSettings ResetHelp(this AzureGroupLockUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureGroupLockUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureGroupLockUpdateSettings SetOutput(this AzureGroupLockUpdateSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureGroupLockUpdateSettings ResetOutput(this AzureGroupLockUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureGroupLockUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureGroupLockUpdateSettings SetQuery(this AzureGroupLockUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureGroupLockUpdateSettings ResetQuery(this AzureGroupLockUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureGroupLockUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureGroupLockUpdateSettings SetVerbose(this AzureGroupLockUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureGroupLockUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureGroupLockUpdateSettings ResetVerbose(this AzureGroupLockUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -3320,6 +2510,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region RollbackOnError
+        /// <summary><p><em>Sets <see cref="AzureGroupDeploymentCreateSettings.RollbackOnError"/>.</em></p><p>The name of a deployment to roll back to on error, or use as a flag to roll back to the last successful deployment.</p></summary>
+        [Pure]
+        public static AzureGroupDeploymentCreateSettings SetRollbackOnError(this AzureGroupDeploymentCreateSettings toolSettings, string rollbackOnError)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RollbackOnError = rollbackOnError;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupDeploymentCreateSettings.RollbackOnError"/>.</em></p><p>The name of a deployment to roll back to on error, or use as a flag to roll back to the last successful deployment.</p></summary>
+        [Pure]
+        public static AzureGroupDeploymentCreateSettings ResetRollbackOnError(this AzureGroupDeploymentCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RollbackOnError = null;
+            return toolSettings;
+        }
+        #endregion
         #region TemplateFile
         /// <summary><p><em>Sets <see cref="AzureGroupDeploymentCreateSettings.TemplateFile"/>.</em></p><p>A template file path in the file system.</p></summary>
         [Pure]
@@ -3395,7 +2603,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureGroupDeploymentCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureGroupDeploymentCreateSettings SetOutput(this AzureGroupDeploymentCreateSettings toolSettings, Output output)
+        public static AzureGroupDeploymentCreateSettings SetOutput(this AzureGroupDeploymentCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3490,6 +2698,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region NoWait
+        /// <summary><p><em>Sets <see cref="AzureGroupDeploymentDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureGroupDeploymentDeleteSettings SetNoWait(this AzureGroupDeploymentDeleteSettings toolSettings, string noWait)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = noWait;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupDeploymentDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureGroupDeploymentDeleteSettings ResetNoWait(this AzureGroupDeploymentDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureGroupDeploymentDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -3529,7 +2755,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureGroupDeploymentDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureGroupDeploymentDeleteSettings SetOutput(this AzureGroupDeploymentDeleteSettings toolSettings, Output output)
+        public static AzureGroupDeploymentDeleteSettings SetOutput(this AzureGroupDeploymentDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3663,7 +2889,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureGroupDeploymentExportSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureGroupDeploymentExportSettings SetOutput(this AzureGroupDeploymentExportSettings toolSettings, Output output)
+        public static AzureGroupDeploymentExportSettings SetOutput(this AzureGroupDeploymentExportSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3815,7 +3041,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureGroupDeploymentListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureGroupDeploymentListSettings SetOutput(this AzureGroupDeploymentListSettings toolSettings, Output output)
+        public static AzureGroupDeploymentListSettings SetOutput(this AzureGroupDeploymentListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3949,7 +3175,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureGroupDeploymentShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureGroupDeploymentShowSettings SetOutput(this AzureGroupDeploymentShowSettings toolSettings, Output output)
+        public static AzureGroupDeploymentShowSettings SetOutput(this AzureGroupDeploymentShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4062,6 +3288,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region RollbackOnError
+        /// <summary><p><em>Sets <see cref="AzureGroupDeploymentValidateSettings.RollbackOnError"/>.</em></p><p>The name of a deployment to roll back to on error, or use as a flag to roll back to the last successful deployment.</p></summary>
+        [Pure]
+        public static AzureGroupDeploymentValidateSettings SetRollbackOnError(this AzureGroupDeploymentValidateSettings toolSettings, string rollbackOnError)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RollbackOnError = rollbackOnError;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupDeploymentValidateSettings.RollbackOnError"/>.</em></p><p>The name of a deployment to roll back to on error, or use as a flag to roll back to the last successful deployment.</p></summary>
+        [Pure]
+        public static AzureGroupDeploymentValidateSettings ResetRollbackOnError(this AzureGroupDeploymentValidateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RollbackOnError = null;
+            return toolSettings;
+        }
+        #endregion
         #region TemplateFile
         /// <summary><p><em>Sets <see cref="AzureGroupDeploymentValidateSettings.TemplateFile"/>.</em></p><p>A template file path in the file system.</p></summary>
         [Pure]
@@ -4137,7 +3381,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureGroupDeploymentValidateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureGroupDeploymentValidateSettings SetOutput(this AzureGroupDeploymentValidateSettings toolSettings, Output output)
+        public static AzureGroupDeploymentValidateSettings SetOutput(this AzureGroupDeploymentValidateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4397,7 +3641,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureGroupDeploymentWaitSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureGroupDeploymentWaitSettings SetOutput(this AzureGroupDeploymentWaitSettings toolSettings, Output output)
+        public static AzureGroupDeploymentWaitSettings SetOutput(this AzureGroupDeploymentWaitSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4442,6 +3686,802 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureGroupDeploymentWaitSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureGroupDeploymentWaitSettings ResetVerbose(this AzureGroupDeploymentWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureGroupLockCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureGroupTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureGroupLockCreateSettingsExtensions
+    {
+        #region LockType
+        /// <summary><p><em>Sets <see cref="AzureGroupLockCreateSettings.LockType"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureGroupLockCreateSettings SetLockType(this AzureGroupLockCreateSettings toolSettings, GroupLockLockType lockType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LockType = lockType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockCreateSettings.LockType"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureGroupLockCreateSettings ResetLockType(this AzureGroupLockCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LockType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureGroupLockCreateSettings.Name"/>.</em></p><p>Name of the lock.</p></summary>
+        [Pure]
+        public static AzureGroupLockCreateSettings SetName(this AzureGroupLockCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockCreateSettings.Name"/>.</em></p><p>Name of the lock.</p></summary>
+        [Pure]
+        public static AzureGroupLockCreateSettings ResetName(this AzureGroupLockCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureGroupLockCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureGroupLockCreateSettings SetResourceGroup(this AzureGroupLockCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureGroupLockCreateSettings ResetResourceGroup(this AzureGroupLockCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Notes
+        /// <summary><p><em>Sets <see cref="AzureGroupLockCreateSettings.Notes"/>.</em></p><p>Notes about this lock.</p></summary>
+        [Pure]
+        public static AzureGroupLockCreateSettings SetNotes(this AzureGroupLockCreateSettings toolSettings, string notes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Notes = notes;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockCreateSettings.Notes"/>.</em></p><p>Notes about this lock.</p></summary>
+        [Pure]
+        public static AzureGroupLockCreateSettings ResetNotes(this AzureGroupLockCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Notes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureGroupLockCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureGroupLockCreateSettings SetDebug(this AzureGroupLockCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureGroupLockCreateSettings ResetDebug(this AzureGroupLockCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureGroupLockCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureGroupLockCreateSettings SetHelp(this AzureGroupLockCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureGroupLockCreateSettings ResetHelp(this AzureGroupLockCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureGroupLockCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureGroupLockCreateSettings SetOutput(this AzureGroupLockCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureGroupLockCreateSettings ResetOutput(this AzureGroupLockCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureGroupLockCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureGroupLockCreateSettings SetQuery(this AzureGroupLockCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureGroupLockCreateSettings ResetQuery(this AzureGroupLockCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureGroupLockCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureGroupLockCreateSettings SetVerbose(this AzureGroupLockCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureGroupLockCreateSettings ResetVerbose(this AzureGroupLockCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureGroupLockDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureGroupTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureGroupLockDeleteSettingsExtensions
+    {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureGroupLockDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureGroupLockDeleteSettings SetIds(this AzureGroupLockDeleteSettings toolSettings, string ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Ids = ids;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureGroupLockDeleteSettings ResetIds(this AzureGroupLockDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Ids = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureGroupLockDeleteSettings.Name"/>.</em></p><p>Name of the lock.</p></summary>
+        [Pure]
+        public static AzureGroupLockDeleteSettings SetName(this AzureGroupLockDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockDeleteSettings.Name"/>.</em></p><p>Name of the lock.</p></summary>
+        [Pure]
+        public static AzureGroupLockDeleteSettings ResetName(this AzureGroupLockDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureGroupLockDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureGroupLockDeleteSettings SetResourceGroup(this AzureGroupLockDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureGroupLockDeleteSettings ResetResourceGroup(this AzureGroupLockDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureGroupLockDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureGroupLockDeleteSettings SetDebug(this AzureGroupLockDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureGroupLockDeleteSettings ResetDebug(this AzureGroupLockDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureGroupLockDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureGroupLockDeleteSettings SetHelp(this AzureGroupLockDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureGroupLockDeleteSettings ResetHelp(this AzureGroupLockDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureGroupLockDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureGroupLockDeleteSettings SetOutput(this AzureGroupLockDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureGroupLockDeleteSettings ResetOutput(this AzureGroupLockDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureGroupLockDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureGroupLockDeleteSettings SetQuery(this AzureGroupLockDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureGroupLockDeleteSettings ResetQuery(this AzureGroupLockDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureGroupLockDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureGroupLockDeleteSettings SetVerbose(this AzureGroupLockDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureGroupLockDeleteSettings ResetVerbose(this AzureGroupLockDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureGroupLockListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureGroupTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureGroupLockListSettingsExtensions
+    {
+        #region FilterString
+        /// <summary><p><em>Sets <see cref="AzureGroupLockListSettings.FilterString"/>.</em></p><p>A query filter to use to restrict the results.</p></summary>
+        [Pure]
+        public static AzureGroupLockListSettings SetFilterString(this AzureGroupLockListSettings toolSettings, string filterString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FilterString = filterString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockListSettings.FilterString"/>.</em></p><p>A query filter to use to restrict the results.</p></summary>
+        [Pure]
+        public static AzureGroupLockListSettings ResetFilterString(this AzureGroupLockListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FilterString = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureGroupLockListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureGroupLockListSettings SetResourceGroup(this AzureGroupLockListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureGroupLockListSettings ResetResourceGroup(this AzureGroupLockListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureGroupLockListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureGroupLockListSettings SetDebug(this AzureGroupLockListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureGroupLockListSettings ResetDebug(this AzureGroupLockListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureGroupLockListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureGroupLockListSettings SetHelp(this AzureGroupLockListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureGroupLockListSettings ResetHelp(this AzureGroupLockListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureGroupLockListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureGroupLockListSettings SetOutput(this AzureGroupLockListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureGroupLockListSettings ResetOutput(this AzureGroupLockListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureGroupLockListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureGroupLockListSettings SetQuery(this AzureGroupLockListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureGroupLockListSettings ResetQuery(this AzureGroupLockListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureGroupLockListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureGroupLockListSettings SetVerbose(this AzureGroupLockListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureGroupLockListSettings ResetVerbose(this AzureGroupLockListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureGroupLockShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureGroupTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureGroupLockShowSettingsExtensions
+    {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureGroupLockShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureGroupLockShowSettings SetIds(this AzureGroupLockShowSettings toolSettings, string ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Ids = ids;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureGroupLockShowSettings ResetIds(this AzureGroupLockShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Ids = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureGroupLockShowSettings.Name"/>.</em></p><p>Name of the lock.</p></summary>
+        [Pure]
+        public static AzureGroupLockShowSettings SetName(this AzureGroupLockShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockShowSettings.Name"/>.</em></p><p>Name of the lock.</p></summary>
+        [Pure]
+        public static AzureGroupLockShowSettings ResetName(this AzureGroupLockShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureGroupLockShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureGroupLockShowSettings SetResourceGroup(this AzureGroupLockShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureGroupLockShowSettings ResetResourceGroup(this AzureGroupLockShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureGroupLockShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureGroupLockShowSettings SetDebug(this AzureGroupLockShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureGroupLockShowSettings ResetDebug(this AzureGroupLockShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureGroupLockShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureGroupLockShowSettings SetHelp(this AzureGroupLockShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureGroupLockShowSettings ResetHelp(this AzureGroupLockShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureGroupLockShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureGroupLockShowSettings SetOutput(this AzureGroupLockShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureGroupLockShowSettings ResetOutput(this AzureGroupLockShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureGroupLockShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureGroupLockShowSettings SetQuery(this AzureGroupLockShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureGroupLockShowSettings ResetQuery(this AzureGroupLockShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureGroupLockShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureGroupLockShowSettings SetVerbose(this AzureGroupLockShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureGroupLockShowSettings ResetVerbose(this AzureGroupLockShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureGroupLockUpdateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureGroupTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureGroupLockUpdateSettingsExtensions
+    {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureGroupLockUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureGroupLockUpdateSettings SetIds(this AzureGroupLockUpdateSettings toolSettings, string ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Ids = ids;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureGroupLockUpdateSettings ResetIds(this AzureGroupLockUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Ids = null;
+            return toolSettings;
+        }
+        #endregion
+        #region LockType
+        /// <summary><p><em>Sets <see cref="AzureGroupLockUpdateSettings.LockType"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureGroupLockUpdateSettings SetLockType(this AzureGroupLockUpdateSettings toolSettings, GroupLockLockType lockType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LockType = lockType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockUpdateSettings.LockType"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureGroupLockUpdateSettings ResetLockType(this AzureGroupLockUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LockType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureGroupLockUpdateSettings.Name"/>.</em></p><p>Name of the lock.</p></summary>
+        [Pure]
+        public static AzureGroupLockUpdateSettings SetName(this AzureGroupLockUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockUpdateSettings.Name"/>.</em></p><p>Name of the lock.</p></summary>
+        [Pure]
+        public static AzureGroupLockUpdateSettings ResetName(this AzureGroupLockUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Notes
+        /// <summary><p><em>Sets <see cref="AzureGroupLockUpdateSettings.Notes"/>.</em></p><p>Notes about this lock.</p></summary>
+        [Pure]
+        public static AzureGroupLockUpdateSettings SetNotes(this AzureGroupLockUpdateSettings toolSettings, string notes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Notes = notes;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockUpdateSettings.Notes"/>.</em></p><p>Notes about this lock.</p></summary>
+        [Pure]
+        public static AzureGroupLockUpdateSettings ResetNotes(this AzureGroupLockUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Notes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureGroupLockUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureGroupLockUpdateSettings SetResourceGroup(this AzureGroupLockUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureGroupLockUpdateSettings ResetResourceGroup(this AzureGroupLockUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureGroupLockUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureGroupLockUpdateSettings SetDebug(this AzureGroupLockUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureGroupLockUpdateSettings ResetDebug(this AzureGroupLockUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureGroupLockUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureGroupLockUpdateSettings SetHelp(this AzureGroupLockUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureGroupLockUpdateSettings ResetHelp(this AzureGroupLockUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureGroupLockUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureGroupLockUpdateSettings SetOutput(this AzureGroupLockUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureGroupLockUpdateSettings ResetOutput(this AzureGroupLockUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureGroupLockUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureGroupLockUpdateSettings SetQuery(this AzureGroupLockUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureGroupLockUpdateSettings ResetQuery(this AzureGroupLockUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureGroupLockUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureGroupLockUpdateSettings SetVerbose(this AzureGroupLockUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureGroupLockUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureGroupLockUpdateSettings ResetVerbose(this AzureGroupLockUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -4549,7 +4589,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureGroupDeploymentOperationListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureGroupDeploymentOperationListSettings SetOutput(this AzureGroupDeploymentOperationListSettings toolSettings, Output output)
+        public static AzureGroupDeploymentOperationListSettings SetOutput(this AzureGroupDeploymentOperationListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4701,7 +4741,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureGroupDeploymentOperationShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureGroupDeploymentOperationShowSettings SetOutput(this AzureGroupDeploymentOperationShowSettings toolSettings, Output output)
+        public static AzureGroupDeploymentOperationShowSettings SetOutput(this AzureGroupDeploymentOperationShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4754,24 +4794,26 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region GroupLockLockType
-    /// <summary><p>Used within <see cref="AzureGroupTasks"/>.</p></summary>
-    [PublicAPI]
-    [Serializable]
-    public partial class GroupLockLockType : Enumeration
-    {
-        public static GroupLockLockType cannotdelete = new GroupLockLockType { Value = "cannotdelete" };
-        public static GroupLockLockType readonly_ = new GroupLockLockType { Value = "readonly" };
-    }
-    #endregion
     #region GroupDeploymentMode
     /// <summary><p>Used within <see cref="AzureGroupTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class GroupDeploymentMode : Enumeration
     {
         public static GroupDeploymentMode complete = new GroupDeploymentMode { Value = "complete" };
         public static GroupDeploymentMode incremental = new GroupDeploymentMode { Value = "incremental" };
+    }
+    #endregion
+    #region GroupLockLockType
+    /// <summary><p>Used within <see cref="AzureGroupTasks"/>.</p></summary>
+    [PublicAPI]
+    [Serializable]
+    [ExcludeFromCodeCoverage]
+    public partial class GroupLockLockType : Enumeration
+    {
+        public static GroupLockLockType cannotdelete = new GroupLockLockType { Value = "cannotdelete" };
+        public static GroupLockLockType readonly_ = new GroupLockLockType { Value = "readonly" };
     }
     #endregion
 }

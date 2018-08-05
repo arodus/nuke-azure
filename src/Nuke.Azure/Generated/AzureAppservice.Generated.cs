@@ -2,10 +2,11 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
+// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureAppservice.json.
 
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.Tooling;
@@ -28,77 +29,59 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureAppservice executable.</p></summary>
         public static string AzureAppservicePath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage App Service plans.</p></summary>
-        public static IEnumerable<string> AzureAppservice(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
+        public static IReadOnlyCollection<Output> AzureAppservice(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool logOutput = true, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureAppservicePath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
+            var process = ProcessTasks.StartProcess(AzureAppservicePath, arguments, workingDirectory, environmentVariables, timeout, logOutput, null, outputFilter);
             process.AssertZeroExitCode();
-            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
+            return process.Output;
         }
-        static partial void PreProcess(AzureAppserviceListLocationsSettings toolSettings);
-        static partial void PostProcess(AzureAppserviceListLocationsSettings toolSettings);
         /// <summary><p>Manage App Service plans.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/appservice?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAppserviceListLocations(Configure<AzureAppserviceListLocationsSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAppserviceListLocations(Configure<AzureAppserviceListLocationsSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAppserviceListLocationsSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAppservicePlanCreateSettings toolSettings);
-        static partial void PostProcess(AzureAppservicePlanCreateSettings toolSettings);
         /// <summary><p>Manage App Service plans.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/appservice?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAppservicePlanCreate(Configure<AzureAppservicePlanCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAppservicePlanCreate(Configure<AzureAppservicePlanCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAppservicePlanCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAppservicePlanDeleteSettings toolSettings);
-        static partial void PostProcess(AzureAppservicePlanDeleteSettings toolSettings);
         /// <summary><p>Manage App Service plans.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/appservice?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAppservicePlanDelete(Configure<AzureAppservicePlanDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAppservicePlanDelete(Configure<AzureAppservicePlanDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAppservicePlanDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAppservicePlanListSettings toolSettings);
-        static partial void PostProcess(AzureAppservicePlanListSettings toolSettings);
         /// <summary><p>Manage App Service plans.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/appservice?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAppservicePlanList(Configure<AzureAppservicePlanListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAppservicePlanList(Configure<AzureAppservicePlanListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAppservicePlanListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAppservicePlanShowSettings toolSettings);
-        static partial void PostProcess(AzureAppservicePlanShowSettings toolSettings);
         /// <summary><p>Manage App Service plans.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/appservice?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAppservicePlanShow(Configure<AzureAppservicePlanShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAppservicePlanShow(Configure<AzureAppservicePlanShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAppservicePlanShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAppservicePlanUpdateSettings toolSettings);
-        static partial void PostProcess(AzureAppservicePlanUpdateSettings toolSettings);
         /// <summary><p>Manage App Service plans.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/appservice?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAppservicePlanUpdate(Configure<AzureAppservicePlanUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAppservicePlanUpdate(Configure<AzureAppservicePlanUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAppservicePlanUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
     }
     #region AzureAppserviceListLocationsSettings
@@ -119,7 +102,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -165,7 +148,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -209,7 +192,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -246,7 +229,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -283,7 +266,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -324,6 +307,8 @@ namespace Nuke.Azure
         public virtual AppserviceSku Sku { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
+        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        public virtual string ForceString { get; internal set; }
         /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         public virtual string Remove { get; internal set; }
         /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
@@ -333,7 +318,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -348,6 +333,7 @@ namespace Nuke.Azure
               .Add("--number-of-workers {value}", NumberOfWorkers)
               .Add("--sku {value}", Sku)
               .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
               .Add("--debug {value}", Debug)
@@ -440,7 +426,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAppserviceListLocationsSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAppserviceListLocationsSettings SetOutput(this AzureAppserviceListLocationsSettings toolSettings, Output output)
+        public static AzureAppserviceListLocationsSettings SetOutput(this AzureAppserviceListLocationsSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -646,7 +632,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAppservicePlanCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAppservicePlanCreateSettings SetOutput(this AzureAppservicePlanCreateSettings toolSettings, Output output)
+        public static AzureAppservicePlanCreateSettings SetOutput(this AzureAppservicePlanCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -798,7 +784,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAppservicePlanDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAppservicePlanDeleteSettings SetOutput(this AzureAppservicePlanDeleteSettings toolSettings, Output output)
+        public static AzureAppservicePlanDeleteSettings SetOutput(this AzureAppservicePlanDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -914,7 +900,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAppservicePlanListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAppservicePlanListSettings SetOutput(this AzureAppservicePlanListSettings toolSettings, Output output)
+        public static AzureAppservicePlanListSettings SetOutput(this AzureAppservicePlanListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1048,7 +1034,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAppservicePlanShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAppservicePlanShowSettings SetOutput(this AzureAppservicePlanShowSettings toolSettings, Output output)
+        public static AzureAppservicePlanShowSettings SetOutput(this AzureAppservicePlanShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1215,6 +1201,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region ForceString
+        /// <summary><p><em>Sets <see cref="AzureAppservicePlanUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureAppservicePlanUpdateSettings SetForceString(this AzureAppservicePlanUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAppservicePlanUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureAppservicePlanUpdateSettings ResetForceString(this AzureAppservicePlanUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
         #region Remove
         /// <summary><p><em>Sets <see cref="AzureAppservicePlanUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         [Pure]
@@ -1290,7 +1294,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAppservicePlanUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAppservicePlanUpdateSettings SetOutput(this AzureAppservicePlanUpdateSettings toolSettings, Output output)
+        public static AzureAppservicePlanUpdateSettings SetOutput(this AzureAppservicePlanUpdateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1347,6 +1351,7 @@ namespace Nuke.Azure
     /// <summary><p>Used within <see cref="AzureAppserviceTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class AppserviceSku : Enumeration
     {
         public static AppserviceSku b1 = new AppserviceSku { Value = "b1" };

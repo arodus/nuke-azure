@@ -14,6 +14,7 @@ using Nuke.Common.Tools.DotNet;
 using Nuke.Common.Tools.GitVersion;
 using Nuke.Common;
 using Nuke.Common.ProjectModel;
+using Nuke.Common.Tools.Git;
 using Nuke.Common.Tools.Xunit;
 using Nuke.Common.Tools.OpenCover;
 using Nuke.Common.Utilities;
@@ -132,19 +133,19 @@ class Build : NukeBuild
         .DependsOn(Clone)
         .Executes(() =>
         {
-            var reference = Git($"rev-parse --short {c_documentationBranch}", DefinitionRepositoryPath, redirectOutput: true).Single();
+            var reference = Git($"rev-parse --short {c_documentationBranch}", DefinitionRepositoryPath).Single();
             Logger.Log($"Generating specifications for {reference}");
             var generationSettings = new SpecificationGeneratorSettings
                                      {
                                          BaseNamespace = AddonProject.Name,
-                                         DefinitonFolder = DefinitionRepositoryPath / "latest" / "docs-ref-autogen",
+                                         DefinitionFolder = DefinitionRepositoryPath / "latest" / "docs-ref-autogen",
                                          OutputFolder = SpecificationPath,
                                          GenerateExtension = false,
                                          MaxDepth = 1,
                                          MinDepthForCategory = 1,
                                          MinSubTasksForCategory = 0,
                                          SingleNamespace = true,
-                                         Reference = reference
+                                         Reference = reference.Text,
                                      };
             SpecificationGenerator.GenerateSpecifications(generationSettings);
         });
@@ -251,7 +252,7 @@ class Build : NukeBuild
     Target Push => _ => _
         .DependsOn(Pack)
         .Requires(() => ApiKey)
-        .Requires(() => !GitHasUncommitedChanges())
+        .Requires(() => GitHasCleanWorkingCopy())
         .Requires(() => !NuGet || Configuration.EqualsOrdinalIgnoreCase("release"))
         .Requires(() => !NuGet || GitVersion.BranchName.Equals("master"))
         .Executes(() =>
@@ -269,6 +270,7 @@ class Build : NukeBuild
         .Requires(() => GitHubApiKey)
         .Requires(() => LatestCliRelease != null)
         .OnlyWhen(() => IsUpdateAvailable($"{c_addonName} v{ParseVersion(LatestCliRelease)}", ChangelogFile))
+        .WhenSkipped(DependencyBehavior.Skip)
         .DependsOn(CompilePlugin)
         .Executes(() =>
         {
@@ -281,7 +283,7 @@ class Build : NukeBuild
             var changelogUrl = $"https://docs.microsoft.com/cli/azure/release-notes-azure-cli?view=azure-cli-latest#{latestReleaseDate}";
 
             var commitMessage = new List<string> { message };
-            if (release.Bump != GitVersionBump.Patch) commitMessage.Add($"+semver: {release.Bump.ToString().ToLowerInvariant()}");
+            if (release.Bump != Bump.Patch) commitMessage.Add($"+semver: {release.Bump.ToString().ToLowerInvariant()}");
             var prBody = $"Regenerate for [{versionName}]({LatestCliRelease.HtmlUrl}).\n[Changelog]({changelogUrl})";
 
             CheckoutBranchOrCreateNewFrom(branch, "master");
@@ -307,7 +309,7 @@ class Build : NukeBuild
             Git($"push origin {tagName}");
             var releaseMessage = new[]
                                  {
-                                     "- [Nuget](https://www.nuget.org/packages/{c_toolNamespace}/)",
+                                     $"- [Nuget](https://www.nuget.org/packages/{c_toolNamespace}/{tagName})",
                                      $"- [Changelog](https://github.com/{c_addonRepoOwner}/{c_addonRepoName}/blob/{tagName}/CHANGELOG.md)"
                                  }.JoinNewLine();
             CreateRelease(GitRepository.Identifier, tagName, GitHubApiKey, $"{c_toolNamespace} v{tagName}", releaseMessage, !NuGet);

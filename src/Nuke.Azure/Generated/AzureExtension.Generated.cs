@@ -2,10 +2,11 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
+// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureExtension.json.
 
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.Tooling;
@@ -28,77 +29,59 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureExtension executable.</p></summary>
         public static string AzureExtensionPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage and update CLI extensions.</p></summary>
-        public static IEnumerable<string> AzureExtension(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
+        public static IReadOnlyCollection<Output> AzureExtension(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool logOutput = true, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureExtensionPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
+            var process = ProcessTasks.StartProcess(AzureExtensionPath, arguments, workingDirectory, environmentVariables, timeout, logOutput, null, outputFilter);
             process.AssertZeroExitCode();
-            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
+            return process.Output;
         }
-        static partial void PreProcess(AzureExtensionAddSettings toolSettings);
-        static partial void PostProcess(AzureExtensionAddSettings toolSettings);
         /// <summary><p>Manage and update CLI extensions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureExtensionAdd(Configure<AzureExtensionAddSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureExtensionAdd(Configure<AzureExtensionAddSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureExtensionAddSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureExtensionListSettings toolSettings);
-        static partial void PostProcess(AzureExtensionListSettings toolSettings);
         /// <summary><p>Manage and update CLI extensions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureExtensionList(Configure<AzureExtensionListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureExtensionList(Configure<AzureExtensionListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureExtensionListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureExtensionListAvailableSettings toolSettings);
-        static partial void PostProcess(AzureExtensionListAvailableSettings toolSettings);
         /// <summary><p>Manage and update CLI extensions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureExtensionListAvailable(Configure<AzureExtensionListAvailableSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureExtensionListAvailable(Configure<AzureExtensionListAvailableSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureExtensionListAvailableSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureExtensionRemoveSettings toolSettings);
-        static partial void PostProcess(AzureExtensionRemoveSettings toolSettings);
         /// <summary><p>Manage and update CLI extensions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureExtensionRemove(Configure<AzureExtensionRemoveSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureExtensionRemove(Configure<AzureExtensionRemoveSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureExtensionRemoveSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureExtensionShowSettings toolSettings);
-        static partial void PostProcess(AzureExtensionShowSettings toolSettings);
         /// <summary><p>Manage and update CLI extensions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureExtensionShow(Configure<AzureExtensionShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureExtensionShow(Configure<AzureExtensionShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureExtensionShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureExtensionUpdateSettings toolSettings);
-        static partial void PostProcess(AzureExtensionUpdateSettings toolSettings);
         /// <summary><p>Manage and update CLI extensions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureExtensionUpdate(Configure<AzureExtensionUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureExtensionUpdate(Configure<AzureExtensionUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureExtensionUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
     }
     #region AzureExtensionAddSettings
@@ -126,7 +109,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -163,7 +146,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -197,7 +180,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -232,7 +215,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -267,7 +250,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -307,7 +290,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -505,7 +488,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureExtensionAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureExtensionAddSettings SetOutput(this AzureExtensionAddSettings toolSettings, Output output)
+        public static AzureExtensionAddSettings SetOutput(this AzureExtensionAddSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -603,7 +586,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureExtensionListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureExtensionListSettings SetOutput(this AzureExtensionListSettings toolSettings, Output output)
+        public static AzureExtensionListSettings SetOutput(this AzureExtensionListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -743,7 +726,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureExtensionListAvailableSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureExtensionListAvailableSettings SetOutput(this AzureExtensionListAvailableSettings toolSettings, Output output)
+        public static AzureExtensionListAvailableSettings SetOutput(this AzureExtensionListAvailableSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -859,7 +842,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureExtensionRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureExtensionRemoveSettings SetOutput(this AzureExtensionRemoveSettings toolSettings, Output output)
+        public static AzureExtensionRemoveSettings SetOutput(this AzureExtensionRemoveSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -975,7 +958,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureExtensionShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureExtensionShowSettings SetOutput(this AzureExtensionShowSettings toolSettings, Output output)
+        public static AzureExtensionShowSettings SetOutput(this AzureExtensionShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1169,7 +1152,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureExtensionUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureExtensionUpdateSettings SetOutput(this AzureExtensionUpdateSettings toolSettings, Output output)
+        public static AzureExtensionUpdateSettings SetOutput(this AzureExtensionUpdateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;

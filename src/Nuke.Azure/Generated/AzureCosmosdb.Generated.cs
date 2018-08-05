@@ -2,10 +2,11 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
+// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureCosmosdb.json.
 
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.Tooling;
@@ -28,253 +29,187 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureCosmosdb executable.</p></summary>
         public static string AzureCosmosdbPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage Azure Cosmos DB database accounts.</p></summary>
-        public static IEnumerable<string> AzureCosmosdb(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
+        public static IReadOnlyCollection<Output> AzureCosmosdb(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool logOutput = true, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureCosmosdbPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
+            var process = ProcessTasks.StartProcess(AzureCosmosdbPath, arguments, workingDirectory, environmentVariables, timeout, logOutput, null, outputFilter);
             process.AssertZeroExitCode();
-            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
+            return process.Output;
         }
-        static partial void PreProcess(AzureCosmosdbCheckNameExistsSettings toolSettings);
-        static partial void PostProcess(AzureCosmosdbCheckNameExistsSettings toolSettings);
         /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCosmosdbCheckNameExists(Configure<AzureCosmosdbCheckNameExistsSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCosmosdbCheckNameExists(Configure<AzureCosmosdbCheckNameExistsSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbCheckNameExistsSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCosmosdbCreateSettings toolSettings);
-        static partial void PostProcess(AzureCosmosdbCreateSettings toolSettings);
         /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCosmosdbCreate(Configure<AzureCosmosdbCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCosmosdbCreate(Configure<AzureCosmosdbCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCosmosdbDeleteSettings toolSettings);
-        static partial void PostProcess(AzureCosmosdbDeleteSettings toolSettings);
         /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCosmosdbDelete(Configure<AzureCosmosdbDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCosmosdbDelete(Configure<AzureCosmosdbDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCosmosdbFailoverPriorityChangeSettings toolSettings);
-        static partial void PostProcess(AzureCosmosdbFailoverPriorityChangeSettings toolSettings);
         /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCosmosdbFailoverPriorityChange(Configure<AzureCosmosdbFailoverPriorityChangeSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCosmosdbFailoverPriorityChange(Configure<AzureCosmosdbFailoverPriorityChangeSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbFailoverPriorityChangeSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCosmosdbListSettings toolSettings);
-        static partial void PostProcess(AzureCosmosdbListSettings toolSettings);
         /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCosmosdbList(Configure<AzureCosmosdbListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCosmosdbList(Configure<AzureCosmosdbListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCosmosdbListConnectionStringsSettings toolSettings);
-        static partial void PostProcess(AzureCosmosdbListConnectionStringsSettings toolSettings);
         /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCosmosdbListConnectionStrings(Configure<AzureCosmosdbListConnectionStringsSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCosmosdbListConnectionStrings(Configure<AzureCosmosdbListConnectionStringsSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbListConnectionStringsSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCosmosdbListKeysSettings toolSettings);
-        static partial void PostProcess(AzureCosmosdbListKeysSettings toolSettings);
         /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCosmosdbListKeys(Configure<AzureCosmosdbListKeysSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCosmosdbListKeys(Configure<AzureCosmosdbListKeysSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbListKeysSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCosmosdbListReadOnlyKeysSettings toolSettings);
-        static partial void PostProcess(AzureCosmosdbListReadOnlyKeysSettings toolSettings);
         /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCosmosdbListReadOnlyKeys(Configure<AzureCosmosdbListReadOnlyKeysSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCosmosdbListReadOnlyKeys(Configure<AzureCosmosdbListReadOnlyKeysSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbListReadOnlyKeysSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCosmosdbRegenerateKeySettings toolSettings);
-        static partial void PostProcess(AzureCosmosdbRegenerateKeySettings toolSettings);
         /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCosmosdbRegenerateKey(Configure<AzureCosmosdbRegenerateKeySettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCosmosdbRegenerateKey(Configure<AzureCosmosdbRegenerateKeySettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbRegenerateKeySettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCosmosdbShowSettings toolSettings);
-        static partial void PostProcess(AzureCosmosdbShowSettings toolSettings);
         /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCosmosdbShow(Configure<AzureCosmosdbShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCosmosdbShow(Configure<AzureCosmosdbShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCosmosdbUpdateSettings toolSettings);
-        static partial void PostProcess(AzureCosmosdbUpdateSettings toolSettings);
         /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCosmosdbUpdate(Configure<AzureCosmosdbUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCosmosdbUpdate(Configure<AzureCosmosdbUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCosmosdbCollectionCreateSettings toolSettings);
-        static partial void PostProcess(AzureCosmosdbCollectionCreateSettings toolSettings);
         /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCosmosdbCollectionCreate(Configure<AzureCosmosdbCollectionCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCosmosdbCollectionCreate(Configure<AzureCosmosdbCollectionCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbCollectionCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCosmosdbCollectionDeleteSettings toolSettings);
-        static partial void PostProcess(AzureCosmosdbCollectionDeleteSettings toolSettings);
         /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCosmosdbCollectionDelete(Configure<AzureCosmosdbCollectionDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCosmosdbCollectionDelete(Configure<AzureCosmosdbCollectionDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbCollectionDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCosmosdbCollectionExistsSettings toolSettings);
-        static partial void PostProcess(AzureCosmosdbCollectionExistsSettings toolSettings);
         /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCosmosdbCollectionExists(Configure<AzureCosmosdbCollectionExistsSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCosmosdbCollectionExists(Configure<AzureCosmosdbCollectionExistsSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbCollectionExistsSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCosmosdbCollectionListSettings toolSettings);
-        static partial void PostProcess(AzureCosmosdbCollectionListSettings toolSettings);
         /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCosmosdbCollectionList(Configure<AzureCosmosdbCollectionListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCosmosdbCollectionList(Configure<AzureCosmosdbCollectionListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbCollectionListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCosmosdbCollectionShowSettings toolSettings);
-        static partial void PostProcess(AzureCosmosdbCollectionShowSettings toolSettings);
         /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCosmosdbCollectionShow(Configure<AzureCosmosdbCollectionShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCosmosdbCollectionShow(Configure<AzureCosmosdbCollectionShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbCollectionShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCosmosdbCollectionUpdateSettings toolSettings);
-        static partial void PostProcess(AzureCosmosdbCollectionUpdateSettings toolSettings);
         /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCosmosdbCollectionUpdate(Configure<AzureCosmosdbCollectionUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCosmosdbCollectionUpdate(Configure<AzureCosmosdbCollectionUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbCollectionUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCosmosdbDatabaseCreateSettings toolSettings);
-        static partial void PostProcess(AzureCosmosdbDatabaseCreateSettings toolSettings);
         /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCosmosdbDatabaseCreate(Configure<AzureCosmosdbDatabaseCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCosmosdbDatabaseCreate(Configure<AzureCosmosdbDatabaseCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbDatabaseCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCosmosdbDatabaseDeleteSettings toolSettings);
-        static partial void PostProcess(AzureCosmosdbDatabaseDeleteSettings toolSettings);
         /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCosmosdbDatabaseDelete(Configure<AzureCosmosdbDatabaseDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCosmosdbDatabaseDelete(Configure<AzureCosmosdbDatabaseDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbDatabaseDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCosmosdbDatabaseExistsSettings toolSettings);
-        static partial void PostProcess(AzureCosmosdbDatabaseExistsSettings toolSettings);
         /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCosmosdbDatabaseExists(Configure<AzureCosmosdbDatabaseExistsSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCosmosdbDatabaseExists(Configure<AzureCosmosdbDatabaseExistsSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbDatabaseExistsSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCosmosdbDatabaseListSettings toolSettings);
-        static partial void PostProcess(AzureCosmosdbDatabaseListSettings toolSettings);
         /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCosmosdbDatabaseList(Configure<AzureCosmosdbDatabaseListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCosmosdbDatabaseList(Configure<AzureCosmosdbDatabaseListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbDatabaseListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCosmosdbDatabaseShowSettings toolSettings);
-        static partial void PostProcess(AzureCosmosdbDatabaseShowSettings toolSettings);
         /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCosmosdbDatabaseShow(Configure<AzureCosmosdbDatabaseShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCosmosdbDatabaseShow(Configure<AzureCosmosdbDatabaseShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbDatabaseShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
     }
     #region AzureCosmosdbCheckNameExistsSettings
@@ -293,7 +228,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -353,7 +288,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -402,7 +337,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -442,7 +377,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -479,7 +414,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -516,7 +451,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -554,7 +489,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -592,7 +527,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -632,7 +567,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -671,7 +606,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -730,7 +665,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -794,7 +729,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -848,7 +783,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -898,7 +833,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -946,7 +881,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -995,7 +930,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1051,7 +986,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1102,7 +1037,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1149,7 +1084,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1196,7 +1131,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1241,7 +1176,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1287,7 +1222,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1373,7 +1308,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCosmosdbCheckNameExistsSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCosmosdbCheckNameExistsSettings SetOutput(this AzureCosmosdbCheckNameExistsSettings toolSettings, Output output)
+        public static AzureCosmosdbCheckNameExistsSettings SetOutput(this AzureCosmosdbCheckNameExistsSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1795,7 +1730,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCosmosdbCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCosmosdbCreateSettings SetOutput(this AzureCosmosdbCreateSettings toolSettings, Output output)
+        public static AzureCosmosdbCreateSettings SetOutput(this AzureCosmosdbCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1929,7 +1864,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCosmosdbDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCosmosdbDeleteSettings SetOutput(this AzureCosmosdbDeleteSettings toolSettings, Output output)
+        public static AzureCosmosdbDeleteSettings SetOutput(this AzureCosmosdbDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2081,7 +2016,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCosmosdbFailoverPriorityChangeSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCosmosdbFailoverPriorityChangeSettings SetOutput(this AzureCosmosdbFailoverPriorityChangeSettings toolSettings, Output output)
+        public static AzureCosmosdbFailoverPriorityChangeSettings SetOutput(this AzureCosmosdbFailoverPriorityChangeSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2197,7 +2132,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCosmosdbListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCosmosdbListSettings SetOutput(this AzureCosmosdbListSettings toolSettings, Output output)
+        public static AzureCosmosdbListSettings SetOutput(this AzureCosmosdbListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2331,7 +2266,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCosmosdbListConnectionStringsSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCosmosdbListConnectionStringsSettings SetOutput(this AzureCosmosdbListConnectionStringsSettings toolSettings, Output output)
+        public static AzureCosmosdbListConnectionStringsSettings SetOutput(this AzureCosmosdbListConnectionStringsSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2465,7 +2400,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCosmosdbListKeysSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCosmosdbListKeysSettings SetOutput(this AzureCosmosdbListKeysSettings toolSettings, Output output)
+        public static AzureCosmosdbListKeysSettings SetOutput(this AzureCosmosdbListKeysSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2599,7 +2534,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCosmosdbListReadOnlyKeysSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCosmosdbListReadOnlyKeysSettings SetOutput(this AzureCosmosdbListReadOnlyKeysSettings toolSettings, Output output)
+        public static AzureCosmosdbListReadOnlyKeysSettings SetOutput(this AzureCosmosdbListReadOnlyKeysSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2751,7 +2686,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCosmosdbRegenerateKeySettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCosmosdbRegenerateKeySettings SetOutput(this AzureCosmosdbRegenerateKeySettings toolSettings, Output output)
+        public static AzureCosmosdbRegenerateKeySettings SetOutput(this AzureCosmosdbRegenerateKeySettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2885,7 +2820,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCosmosdbShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCosmosdbShowSettings SetOutput(this AzureCosmosdbShowSettings toolSettings, Output output)
+        public static AzureCosmosdbShowSettings SetOutput(this AzureCosmosdbShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3289,7 +3224,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCosmosdbUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCosmosdbUpdateSettings SetOutput(this AzureCosmosdbUpdateSettings toolSettings, Output output)
+        public static AzureCosmosdbUpdateSettings SetOutput(this AzureCosmosdbUpdateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3567,7 +3502,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCosmosdbCollectionCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCosmosdbCollectionCreateSettings SetOutput(this AzureCosmosdbCollectionCreateSettings toolSettings, Output output)
+        public static AzureCosmosdbCollectionCreateSettings SetOutput(this AzureCosmosdbCollectionCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3773,7 +3708,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCosmosdbCollectionDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCosmosdbCollectionDeleteSettings SetOutput(this AzureCosmosdbCollectionDeleteSettings toolSettings, Output output)
+        public static AzureCosmosdbCollectionDeleteSettings SetOutput(this AzureCosmosdbCollectionDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3979,7 +3914,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCosmosdbCollectionExistsSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCosmosdbCollectionExistsSettings SetOutput(this AzureCosmosdbCollectionExistsSettings toolSettings, Output output)
+        public static AzureCosmosdbCollectionExistsSettings SetOutput(this AzureCosmosdbCollectionExistsSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4167,7 +4102,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCosmosdbCollectionListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCosmosdbCollectionListSettings SetOutput(this AzureCosmosdbCollectionListSettings toolSettings, Output output)
+        public static AzureCosmosdbCollectionListSettings SetOutput(this AzureCosmosdbCollectionListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4373,7 +4308,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCosmosdbCollectionShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCosmosdbCollectionShowSettings SetOutput(this AzureCosmosdbCollectionShowSettings toolSettings, Output output)
+        public static AzureCosmosdbCollectionShowSettings SetOutput(this AzureCosmosdbCollectionShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4633,7 +4568,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCosmosdbCollectionUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCosmosdbCollectionUpdateSettings SetOutput(this AzureCosmosdbCollectionUpdateSettings toolSettings, Output output)
+        public static AzureCosmosdbCollectionUpdateSettings SetOutput(this AzureCosmosdbCollectionUpdateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4821,7 +4756,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCosmosdbDatabaseCreateSettings SetOutput(this AzureCosmosdbDatabaseCreateSettings toolSettings, Output output)
+        public static AzureCosmosdbDatabaseCreateSettings SetOutput(this AzureCosmosdbDatabaseCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -5009,7 +4944,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCosmosdbDatabaseDeleteSettings SetOutput(this AzureCosmosdbDatabaseDeleteSettings toolSettings, Output output)
+        public static AzureCosmosdbDatabaseDeleteSettings SetOutput(this AzureCosmosdbDatabaseDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -5197,7 +5132,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseExistsSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCosmosdbDatabaseExistsSettings SetOutput(this AzureCosmosdbDatabaseExistsSettings toolSettings, Output output)
+        public static AzureCosmosdbDatabaseExistsSettings SetOutput(this AzureCosmosdbDatabaseExistsSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -5367,7 +5302,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCosmosdbDatabaseListSettings SetOutput(this AzureCosmosdbDatabaseListSettings toolSettings, Output output)
+        public static AzureCosmosdbDatabaseListSettings SetOutput(this AzureCosmosdbDatabaseListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -5555,7 +5490,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCosmosdbDatabaseShowSettings SetOutput(this AzureCosmosdbDatabaseShowSettings toolSettings, Output output)
+        public static AzureCosmosdbDatabaseShowSettings SetOutput(this AzureCosmosdbDatabaseShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -5612,6 +5547,7 @@ namespace Nuke.Azure
     /// <summary><p>Used within <see cref="AzureCosmosdbTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class CosmosdbDefaultConsistencyLevel : Enumeration
     {
         public static CosmosdbDefaultConsistencyLevel boundedstaleness = new CosmosdbDefaultConsistencyLevel { Value = "boundedstaleness" };
@@ -5625,6 +5561,7 @@ namespace Nuke.Azure
     /// <summary><p>Used within <see cref="AzureCosmosdbTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class CosmosdbCreateKind : Enumeration
     {
         public static CosmosdbCreateKind globaldocumentdb = new CosmosdbCreateKind { Value = "globaldocumentdb" };
@@ -5636,6 +5573,7 @@ namespace Nuke.Azure
     /// <summary><p>Used within <see cref="AzureCosmosdbTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class CosmosdbRegenerateKeyKeyKind : Enumeration
     {
         public static CosmosdbRegenerateKeyKeyKind primary = new CosmosdbRegenerateKeyKeyKind { Value = "primary" };

@@ -12,7 +12,7 @@ namespace Nuke.Azure.Generator
         private static void Main()
         {
             var args = Environment.GetCommandLineArgs();
-            SpecificationGenerator.GenerateSpecifications(new SpecificationGeneratorSettings { DefinitonFolder = args[1], OutputFolder = args[2] });
+            SpecificationGenerator.GenerateSpecifications(new SpecificationGeneratorSettings { DefinitionFolder = args[1], OutputFolder = args[2] });
         }
     }
 }

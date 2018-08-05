@@ -2,10 +2,11 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
+// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureRedis.json.
 
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.Tooling;
@@ -27,199 +28,140 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureRedis executable.</p></summary>
         public static string AzureRedisPath => ToolPathResolver.GetPathExecutable("az");
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p></summary>
-        public static IEnumerable<string> AzureRedis(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
+        /// <summary><p>Manage dedicated Redis caches for your Azure applications.</p></summary>
+        public static IReadOnlyCollection<Output> AzureRedis(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool logOutput = true, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureRedisPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
+            var process = ProcessTasks.StartProcess(AzureRedisPath, arguments, workingDirectory, environmentVariables, timeout, logOutput, null, outputFilter);
             process.AssertZeroExitCode();
-            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
+            return process.Output;
         }
-        static partial void PreProcess(AzureRedisCreateSettings toolSettings);
-        static partial void PostProcess(AzureRedisCreateSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureRedisCreate(Configure<AzureRedisCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        /// <summary><p>Manage dedicated Redis caches for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureRedisCreate(Configure<AzureRedisCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRedisCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureRedisDeleteSettings toolSettings);
-        static partial void PostProcess(AzureRedisDeleteSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureRedisDelete(Configure<AzureRedisDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        /// <summary><p>Manage dedicated Redis caches for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureRedisDelete(Configure<AzureRedisDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRedisDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureRedisExportSettings toolSettings);
-        static partial void PostProcess(AzureRedisExportSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureRedisExport(Configure<AzureRedisExportSettings> configurator = null, ProcessSettings processSettings = null)
+        /// <summary><p>Manage dedicated Redis caches for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureRedisExport(Configure<AzureRedisExportSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRedisExportSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureRedisForceRebootSettings toolSettings);
-        static partial void PostProcess(AzureRedisForceRebootSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureRedisForceReboot(Configure<AzureRedisForceRebootSettings> configurator = null, ProcessSettings processSettings = null)
+        /// <summary><p>Manage dedicated Redis caches for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureRedisForceReboot(Configure<AzureRedisForceRebootSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRedisForceRebootSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureRedisImportSettings toolSettings);
-        static partial void PostProcess(AzureRedisImportSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureRedisImport(Configure<AzureRedisImportSettings> configurator = null, ProcessSettings processSettings = null)
+        /// <summary><p>Manage dedicated Redis caches for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureRedisImport(Configure<AzureRedisImportSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRedisImportSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureRedisImportMethodSettings toolSettings);
-        static partial void PostProcess(AzureRedisImportMethodSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureRedisImportMethod(Configure<AzureRedisImportMethodSettings> configurator = null, ProcessSettings processSettings = null)
+        /// <summary><p>Manage dedicated Redis caches for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureRedisImportMethod(Configure<AzureRedisImportMethodSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRedisImportMethodSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureRedisListSettings toolSettings);
-        static partial void PostProcess(AzureRedisListSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureRedisList(Configure<AzureRedisListSettings> configurator = null, ProcessSettings processSettings = null)
+        /// <summary><p>Manage dedicated Redis caches for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureRedisList(Configure<AzureRedisListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRedisListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureRedisListAllSettings toolSettings);
-        static partial void PostProcess(AzureRedisListAllSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureRedisListAll(Configure<AzureRedisListAllSettings> configurator = null, ProcessSettings processSettings = null)
+        /// <summary><p>Manage dedicated Redis caches for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureRedisListAll(Configure<AzureRedisListAllSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRedisListAllSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureRedisListKeysSettings toolSettings);
-        static partial void PostProcess(AzureRedisListKeysSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureRedisListKeys(Configure<AzureRedisListKeysSettings> configurator = null, ProcessSettings processSettings = null)
+        /// <summary><p>Manage dedicated Redis caches for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureRedisListKeys(Configure<AzureRedisListKeysSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRedisListKeysSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureRedisRegenerateKeysSettings toolSettings);
-        static partial void PostProcess(AzureRedisRegenerateKeysSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureRedisRegenerateKeys(Configure<AzureRedisRegenerateKeysSettings> configurator = null, ProcessSettings processSettings = null)
+        /// <summary><p>Manage dedicated Redis caches for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureRedisRegenerateKeys(Configure<AzureRedisRegenerateKeysSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRedisRegenerateKeysSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureRedisShowSettings toolSettings);
-        static partial void PostProcess(AzureRedisShowSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureRedisShow(Configure<AzureRedisShowSettings> configurator = null, ProcessSettings processSettings = null)
+        /// <summary><p>Manage dedicated Redis caches for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureRedisShow(Configure<AzureRedisShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRedisShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureRedisUpdateSettings toolSettings);
-        static partial void PostProcess(AzureRedisUpdateSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureRedisUpdate(Configure<AzureRedisUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        /// <summary><p>Manage dedicated Redis caches for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureRedisUpdate(Configure<AzureRedisUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRedisUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureRedisUpdateSettingsSettings toolSettings);
-        static partial void PostProcess(AzureRedisUpdateSettingsSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureRedisUpdateSettings(Configure<AzureRedisUpdateSettingsSettings> configurator = null, ProcessSettings processSettings = null)
+        /// <summary><p>Manage dedicated Redis caches for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureRedisUpdateSettings(Configure<AzureRedisUpdateSettingsSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRedisUpdateSettingsSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureRedisPatchScheduleDeleteSettings toolSettings);
-        static partial void PostProcess(AzureRedisPatchScheduleDeleteSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureRedisPatchScheduleDelete(Configure<AzureRedisPatchScheduleDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        /// <summary><p>Manage dedicated Redis caches for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureRedisPatchScheduleDelete(Configure<AzureRedisPatchScheduleDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRedisPatchScheduleDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureRedisPatchScheduleSetSettings toolSettings);
-        static partial void PostProcess(AzureRedisPatchScheduleSetSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureRedisPatchScheduleSet(Configure<AzureRedisPatchScheduleSetSettings> configurator = null, ProcessSettings processSettings = null)
+        /// <summary><p>Manage dedicated Redis caches for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureRedisPatchScheduleSet(Configure<AzureRedisPatchScheduleSetSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRedisPatchScheduleSetSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureRedisPatchScheduleShowSettings toolSettings);
-        static partial void PostProcess(AzureRedisPatchScheduleShowSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureRedisPatchScheduleShow(Configure<AzureRedisPatchScheduleShowSettings> configurator = null, ProcessSettings processSettings = null)
+        /// <summary><p>Manage dedicated Redis caches for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureRedisPatchScheduleShow(Configure<AzureRedisPatchScheduleShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRedisPatchScheduleShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureRedisPatchSchedulePatchScheduleShowSettings toolSettings);
-        static partial void PostProcess(AzureRedisPatchSchedulePatchScheduleShowSettings toolSettings);
-        /// <summary><p>Access to a secure, dedicated Redis cache for your Azure applications.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureRedisPatchSchedulePatchScheduleShow(Configure<AzureRedisPatchSchedulePatchScheduleShowSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureRedisPatchSchedulePatchScheduleShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
     }
     #region AzureRedisCreateSettings
@@ -260,7 +202,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -308,7 +250,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -352,7 +294,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -397,7 +339,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -442,7 +384,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -487,7 +429,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -525,7 +467,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -558,7 +500,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -594,7 +536,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -634,7 +576,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -673,7 +615,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -712,6 +654,8 @@ namespace Nuke.Azure
         public virtual string VmSize { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
+        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        public virtual string ForceString { get; internal set; }
         /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         public virtual string Remove { get; internal set; }
         /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
@@ -721,7 +665,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -735,6 +679,7 @@ namespace Nuke.Azure
               .Add("--sku {value}", Sku)
               .Add("--vm-size {value}", VmSize)
               .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
               .Add("--debug {value}", Debug)
@@ -766,7 +711,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -805,7 +750,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -845,7 +790,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -884,7 +829,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -893,44 +838,6 @@ namespace Nuke.Azure
         {
             arguments
               .Add("redis patch-schedule show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureRedisPatchSchedulePatchScheduleShowSettings
-    /// <summary><p>Used within <see cref="AzureRedisTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureRedisPatchSchedulePatchScheduleShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureRedis executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
-        /// <summary><p>Name of the Redis cache.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("redis patch-schedule patch-schedule show")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
@@ -1203,7 +1110,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureRedisCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureRedisCreateSettings SetOutput(this AzureRedisCreateSettings toolSettings, Output output)
+        public static AzureRedisCreateSettings SetOutput(this AzureRedisCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1337,7 +1244,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureRedisDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureRedisDeleteSettings SetOutput(this AzureRedisDeleteSettings toolSettings, Output output)
+        public static AzureRedisDeleteSettings SetOutput(this AzureRedisDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1525,7 +1432,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureRedisExportSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureRedisExportSettings SetOutput(this AzureRedisExportSettings toolSettings, Output output)
+        public static AzureRedisExportSettings SetOutput(this AzureRedisExportSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1695,7 +1602,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureRedisForceRebootSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureRedisForceRebootSettings SetOutput(this AzureRedisForceRebootSettings toolSettings, Output output)
+        public static AzureRedisForceRebootSettings SetOutput(this AzureRedisForceRebootSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1907,7 +1814,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureRedisImportSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureRedisImportSettings SetOutput(this AzureRedisImportSettings toolSettings, Output output)
+        public static AzureRedisImportSettings SetOutput(this AzureRedisImportSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2119,7 +2026,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureRedisImportMethodSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureRedisImportMethodSettings SetOutput(this AzureRedisImportMethodSettings toolSettings, Output output)
+        public static AzureRedisImportMethodSettings SetOutput(this AzureRedisImportMethodSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2235,7 +2142,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureRedisListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureRedisListSettings SetOutput(this AzureRedisListSettings toolSettings, Output output)
+        public static AzureRedisListSettings SetOutput(this AzureRedisListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2333,7 +2240,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureRedisListAllSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureRedisListAllSettings SetOutput(this AzureRedisListAllSettings toolSettings, Output output)
+        public static AzureRedisListAllSettings SetOutput(this AzureRedisListAllSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2467,7 +2374,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureRedisListKeysSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureRedisListKeysSettings SetOutput(this AzureRedisListKeysSettings toolSettings, Output output)
+        public static AzureRedisListKeysSettings SetOutput(this AzureRedisListKeysSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2619,7 +2526,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureRedisRegenerateKeysSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureRedisRegenerateKeysSettings SetOutput(this AzureRedisRegenerateKeysSettings toolSettings, Output output)
+        public static AzureRedisRegenerateKeysSettings SetOutput(this AzureRedisRegenerateKeysSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2753,7 +2660,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureRedisShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureRedisShowSettings SetOutput(this AzureRedisShowSettings toolSettings, Output output)
+        public static AzureRedisShowSettings SetOutput(this AzureRedisShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2902,6 +2809,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region ForceString
+        /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureRedisUpdateSettings SetForceString(this AzureRedisUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureRedisUpdateSettings ResetForceString(this AzureRedisUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
         #region Remove
         /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         [Pure]
@@ -2977,7 +2902,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureRedisUpdateSettings SetOutput(this AzureRedisUpdateSettings toolSettings, Output output)
+        public static AzureRedisUpdateSettings SetOutput(this AzureRedisUpdateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3129,7 +3054,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettingsSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureRedisUpdateSettingsSettings SetOutput(this AzureRedisUpdateSettingsSettings toolSettings, Output output)
+        public static AzureRedisUpdateSettingsSettings SetOutput(this AzureRedisUpdateSettingsSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3263,7 +3188,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureRedisPatchScheduleDeleteSettings SetOutput(this AzureRedisPatchScheduleDeleteSettings toolSettings, Output output)
+        public static AzureRedisPatchScheduleDeleteSettings SetOutput(this AzureRedisPatchScheduleDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3415,7 +3340,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureRedisPatchScheduleSetSettings SetOutput(this AzureRedisPatchScheduleSetSettings toolSettings, Output output)
+        public static AzureRedisPatchScheduleSetSettings SetOutput(this AzureRedisPatchScheduleSetSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3549,7 +3474,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureRedisPatchScheduleShowSettings SetOutput(this AzureRedisPatchScheduleShowSettings toolSettings, Output output)
+        public static AzureRedisPatchScheduleShowSettings SetOutput(this AzureRedisPatchScheduleShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3602,144 +3527,11 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureRedisPatchSchedulePatchScheduleShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureRedisTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureRedisPatchSchedulePatchScheduleShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureRedisPatchSchedulePatchScheduleShowSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
-        [Pure]
-        public static AzureRedisPatchSchedulePatchScheduleShowSettings SetName(this AzureRedisPatchSchedulePatchScheduleShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRedisPatchSchedulePatchScheduleShowSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
-        [Pure]
-        public static AzureRedisPatchSchedulePatchScheduleShowSettings ResetName(this AzureRedisPatchSchedulePatchScheduleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureRedisPatchSchedulePatchScheduleShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureRedisPatchSchedulePatchScheduleShowSettings SetResourceGroup(this AzureRedisPatchSchedulePatchScheduleShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRedisPatchSchedulePatchScheduleShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureRedisPatchSchedulePatchScheduleShowSettings ResetResourceGroup(this AzureRedisPatchSchedulePatchScheduleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureRedisPatchSchedulePatchScheduleShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureRedisPatchSchedulePatchScheduleShowSettings SetDebug(this AzureRedisPatchSchedulePatchScheduleShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRedisPatchSchedulePatchScheduleShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureRedisPatchSchedulePatchScheduleShowSettings ResetDebug(this AzureRedisPatchSchedulePatchScheduleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureRedisPatchSchedulePatchScheduleShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureRedisPatchSchedulePatchScheduleShowSettings SetHelp(this AzureRedisPatchSchedulePatchScheduleShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRedisPatchSchedulePatchScheduleShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureRedisPatchSchedulePatchScheduleShowSettings ResetHelp(this AzureRedisPatchSchedulePatchScheduleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureRedisPatchSchedulePatchScheduleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureRedisPatchSchedulePatchScheduleShowSettings SetOutput(this AzureRedisPatchSchedulePatchScheduleShowSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRedisPatchSchedulePatchScheduleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureRedisPatchSchedulePatchScheduleShowSettings ResetOutput(this AzureRedisPatchSchedulePatchScheduleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureRedisPatchSchedulePatchScheduleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureRedisPatchSchedulePatchScheduleShowSettings SetQuery(this AzureRedisPatchSchedulePatchScheduleShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRedisPatchSchedulePatchScheduleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureRedisPatchSchedulePatchScheduleShowSettings ResetQuery(this AzureRedisPatchSchedulePatchScheduleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureRedisPatchSchedulePatchScheduleShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureRedisPatchSchedulePatchScheduleShowSettings SetVerbose(this AzureRedisPatchSchedulePatchScheduleShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRedisPatchSchedulePatchScheduleShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureRedisPatchSchedulePatchScheduleShowSettings ResetVerbose(this AzureRedisPatchSchedulePatchScheduleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region RedisSku
     /// <summary><p>Used within <see cref="AzureRedisTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class RedisSku : Enumeration
     {
         public static RedisSku basic = new RedisSku { Value = "basic" };
@@ -3751,6 +3543,7 @@ namespace Nuke.Azure
     /// <summary><p>Used within <see cref="AzureRedisTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class RedisForceRebootRebootType : Enumeration
     {
         public static RedisForceRebootRebootType allnodes = new RedisForceRebootRebootType { Value = "allnodes" };
@@ -3762,6 +3555,7 @@ namespace Nuke.Azure
     /// <summary><p>Used within <see cref="AzureRedisTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class RedisRegenerateKeysKeyType : Enumeration
     {
         public static RedisRegenerateKeysKeyType primary = new RedisRegenerateKeysKeyType { Value = "primary" };

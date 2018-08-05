@@ -6,7 +6,7 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/reference-index.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/reference-index.yml"
   ],
   "name": "Azure",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest",
@@ -97,6 +97,12 @@
             "help": "The AAD tenant, must provide when using service principals."
           },
           {
+            "name": "UseDeviceCode",
+            "type": "string",
+            "format": "--use-device-code {value}",
+            "help": "Use CLI's old authentication flow based on device code. CLI will also use this if it can't launch a browser in your behalf, e.g. in remote SSH or Cloud Shell."
+          },
+          {
             "name": "Username",
             "type": "string",
             "format": "--username {value}",
@@ -141,7 +147,7 @@
     },
     {
       "name": "Output",
-      "type": "Output",
+      "type": "AzureOutput",
       "format": "--output {value}",
       "help": "Output format."
     },
@@ -177,7 +183,7 @@
       ]
     },
     {
-      "name": "Output",
+      "name": "AzureOutput",
       "values": [
         "json",
         "jsonc",

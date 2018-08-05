@@ -2,10 +2,11 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
+// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureServicebus.json.
 
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.Tooling;
@@ -28,649 +29,507 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureServicebus executable.</p></summary>
         public static string AzureServicebusPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p></summary>
-        public static IEnumerable<string> AzureServicebus(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
+        public static IReadOnlyCollection<Output> AzureServicebus(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool logOutput = true, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureServicebusPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
+            var process = ProcessTasks.StartProcess(AzureServicebusPath, arguments, workingDirectory, environmentVariables, timeout, logOutput, null, outputFilter);
             process.AssertZeroExitCode();
-            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusSettings toolSettings);
-        static partial void PostProcess(AzureServicebusSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebus(Configure<AzureServicebusSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebus(Configure<AzureServicebusSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusQueueCreateSettings toolSettings);
-        static partial void PostProcess(AzureServicebusQueueCreateSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusQueueCreate(Configure<AzureServicebusQueueCreateSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureServicebusQueueDeleteSettings toolSettings);
-        static partial void PostProcess(AzureServicebusQueueDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusQueueDelete(Configure<AzureServicebusQueueDeleteSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureServicebusQueueListSettings toolSettings);
-        static partial void PostProcess(AzureServicebusQueueListSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusQueueList(Configure<AzureServicebusQueueListSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureServicebusQueueShowSettings toolSettings);
-        static partial void PostProcess(AzureServicebusQueueShowSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusQueueShow(Configure<AzureServicebusQueueShowSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureServicebusQueueUpdateSettings toolSettings);
-        static partial void PostProcess(AzureServicebusQueueUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusQueueUpdate(Configure<AzureServicebusQueueUpdateSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings);
-        static partial void PostProcess(AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusGeorecoveryAliasBreakPair(Configure<AzureServicebusGeorecoveryAliasBreakPairSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusGeorecoveryAliasBreakPair(Configure<AzureServicebusGeorecoveryAliasBreakPairSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusGeorecoveryAliasBreakPairSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusGeorecoveryAliasDeleteSettings toolSettings);
-        static partial void PostProcess(AzureServicebusGeorecoveryAliasDeleteSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusGeorecoveryAliasDelete(Configure<AzureServicebusGeorecoveryAliasDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusGeorecoveryAliasDelete(Configure<AzureServicebusGeorecoveryAliasDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusGeorecoveryAliasDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusGeorecoveryAliasExistsSettings toolSettings);
-        static partial void PostProcess(AzureServicebusGeorecoveryAliasExistsSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusGeorecoveryAliasExists(Configure<AzureServicebusGeorecoveryAliasExistsSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusGeorecoveryAliasExists(Configure<AzureServicebusGeorecoveryAliasExistsSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusGeorecoveryAliasExistsSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusGeorecoveryAliasFailOverSettings toolSettings);
-        static partial void PostProcess(AzureServicebusGeorecoveryAliasFailOverSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusGeorecoveryAliasFailOver(Configure<AzureServicebusGeorecoveryAliasFailOverSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusGeorecoveryAliasFailOver(Configure<AzureServicebusGeorecoveryAliasFailOverSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusGeorecoveryAliasFailOverSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusGeorecoveryAliasListSettings toolSettings);
-        static partial void PostProcess(AzureServicebusGeorecoveryAliasListSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusGeorecoveryAliasList(Configure<AzureServicebusGeorecoveryAliasListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusGeorecoveryAliasList(Configure<AzureServicebusGeorecoveryAliasListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusGeorecoveryAliasListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusGeorecoveryAliasSetSettings toolSettings);
-        static partial void PostProcess(AzureServicebusGeorecoveryAliasSetSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusGeorecoveryAliasSet(Configure<AzureServicebusGeorecoveryAliasSetSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusGeorecoveryAliasSet(Configure<AzureServicebusGeorecoveryAliasSetSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusGeorecoveryAliasSetSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusGeorecoveryAliasShowSettings toolSettings);
-        static partial void PostProcess(AzureServicebusGeorecoveryAliasShowSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusGeorecoveryAliasShow(Configure<AzureServicebusGeorecoveryAliasShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusGeorecoveryAliasShow(Configure<AzureServicebusGeorecoveryAliasShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusGeorecoveryAliasShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusNamespaceCreateSettings toolSettings);
-        static partial void PostProcess(AzureServicebusNamespaceCreateSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusNamespaceCreate(Configure<AzureServicebusNamespaceCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusMigrationAbort(Configure<AzureServicebusMigrationAbortSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusMigrationAbortSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureServicebusMigrationComplete(Configure<AzureServicebusMigrationCompleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusMigrationCompleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureServicebusMigrationShow(Configure<AzureServicebusMigrationShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusMigrationShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureServicebusMigrationStart(Configure<AzureServicebusMigrationStartSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusMigrationStartSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureServicebusNamespaceCreate(Configure<AzureServicebusNamespaceCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusNamespaceDeleteSettings toolSettings);
-        static partial void PostProcess(AzureServicebusNamespaceDeleteSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusNamespaceDelete(Configure<AzureServicebusNamespaceDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusNamespaceDelete(Configure<AzureServicebusNamespaceDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusNamespaceExistsSettings toolSettings);
-        static partial void PostProcess(AzureServicebusNamespaceExistsSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusNamespaceExists(Configure<AzureServicebusNamespaceExistsSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusNamespaceExists(Configure<AzureServicebusNamespaceExistsSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceExistsSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusNamespaceListSettings toolSettings);
-        static partial void PostProcess(AzureServicebusNamespaceListSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusNamespaceList(Configure<AzureServicebusNamespaceListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusNamespaceList(Configure<AzureServicebusNamespaceListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusNamespaceShowSettings toolSettings);
-        static partial void PostProcess(AzureServicebusNamespaceShowSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusNamespaceShow(Configure<AzureServicebusNamespaceShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusNamespaceShow(Configure<AzureServicebusNamespaceShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusNamespaceUpdateSettings toolSettings);
-        static partial void PostProcess(AzureServicebusNamespaceUpdateSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusNamespaceUpdate(Configure<AzureServicebusNamespaceUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusNamespaceUpdate(Configure<AzureServicebusNamespaceUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusTopicCreateSettings toolSettings);
-        static partial void PostProcess(AzureServicebusTopicCreateSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusTopicCreate(Configure<AzureServicebusTopicCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusQueueCreate(Configure<AzureServicebusQueueCreateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueCreateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureServicebusQueueDelete(Configure<AzureServicebusQueueDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureServicebusQueueList(Configure<AzureServicebusQueueListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureServicebusQueueShow(Configure<AzureServicebusQueueShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureServicebusQueueUpdate(Configure<AzureServicebusQueueUpdateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueUpdateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureServicebusTopicCreate(Configure<AzureServicebusTopicCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusTopicDeleteSettings toolSettings);
-        static partial void PostProcess(AzureServicebusTopicDeleteSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusTopicDelete(Configure<AzureServicebusTopicDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusTopicDelete(Configure<AzureServicebusTopicDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusTopicListSettings toolSettings);
-        static partial void PostProcess(AzureServicebusTopicListSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusTopicList(Configure<AzureServicebusTopicListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusTopicList(Configure<AzureServicebusTopicListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusTopicShowSettings toolSettings);
-        static partial void PostProcess(AzureServicebusTopicShowSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusTopicShow(Configure<AzureServicebusTopicShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusTopicShow(Configure<AzureServicebusTopicShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusTopicUpdateSettings toolSettings);
-        static partial void PostProcess(AzureServicebusTopicUpdateSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusTopicUpdate(Configure<AzureServicebusTopicUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusTopicUpdate(Configure<AzureServicebusTopicUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusNamespaceAuthorizationRuleCreateSettings toolSettings);
-        static partial void PostProcess(AzureServicebusNamespaceAuthorizationRuleCreateSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusNamespaceAuthorizationRuleCreate(Configure<AzureServicebusNamespaceAuthorizationRuleCreateSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceAuthorizationRuleCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureServicebusNamespaceAuthorizationRuleDeleteSettings toolSettings);
-        static partial void PostProcess(AzureServicebusNamespaceAuthorizationRuleDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusNamespaceAuthorizationRuleDelete(Configure<AzureServicebusNamespaceAuthorizationRuleDeleteSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceAuthorizationRuleDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureServicebusNamespaceAuthorizationRuleListSettings toolSettings);
-        static partial void PostProcess(AzureServicebusNamespaceAuthorizationRuleListSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusNamespaceAuthorizationRuleList(Configure<AzureServicebusNamespaceAuthorizationRuleListSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceAuthorizationRuleListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureServicebusNamespaceAuthorizationRuleShowSettings toolSettings);
-        static partial void PostProcess(AzureServicebusNamespaceAuthorizationRuleShowSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusNamespaceAuthorizationRuleShow(Configure<AzureServicebusNamespaceAuthorizationRuleShowSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceAuthorizationRuleShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureServicebusNamespaceAuthorizationRuleUpdateSettings toolSettings);
-        static partial void PostProcess(AzureServicebusNamespaceAuthorizationRuleUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusNamespaceAuthorizationRuleUpdate(Configure<AzureServicebusNamespaceAuthorizationRuleUpdateSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceAuthorizationRuleUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings);
-        static partial void PostProcess(AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusGeorecoveryAliasAuthorizationRuleList(Configure<AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusGeorecoveryAliasAuthorizationRuleList(Configure<AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings);
-        static partial void PostProcess(AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusGeorecoveryAliasAuthorizationRuleShow(Configure<AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusGeorecoveryAliasAuthorizationRuleShow(Configure<AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusTopicSubscriptionCreateSettings toolSettings);
-        static partial void PostProcess(AzureServicebusTopicSubscriptionCreateSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusTopicSubscriptionCreate(Configure<AzureServicebusTopicSubscriptionCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusNamespaceAuthorizationRuleCreate(Configure<AzureServicebusNamespaceAuthorizationRuleCreateSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicSubscriptionCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceAuthorizationRuleCreateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusTopicSubscriptionDeleteSettings toolSettings);
-        static partial void PostProcess(AzureServicebusTopicSubscriptionDeleteSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusTopicSubscriptionDelete(Configure<AzureServicebusTopicSubscriptionDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusNamespaceAuthorizationRuleDelete(Configure<AzureServicebusNamespaceAuthorizationRuleDeleteSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicSubscriptionDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceAuthorizationRuleDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusTopicSubscriptionListSettings toolSettings);
-        static partial void PostProcess(AzureServicebusTopicSubscriptionListSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusTopicSubscriptionList(Configure<AzureServicebusTopicSubscriptionListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusNamespaceAuthorizationRuleList(Configure<AzureServicebusNamespaceAuthorizationRuleListSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicSubscriptionListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceAuthorizationRuleListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusTopicSubscriptionShowSettings toolSettings);
-        static partial void PostProcess(AzureServicebusTopicSubscriptionShowSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusTopicSubscriptionShow(Configure<AzureServicebusTopicSubscriptionShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusNamespaceAuthorizationRuleShow(Configure<AzureServicebusNamespaceAuthorizationRuleShowSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicSubscriptionShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceAuthorizationRuleShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusTopicSubscriptionUpdateSettings toolSettings);
-        static partial void PostProcess(AzureServicebusTopicSubscriptionUpdateSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusTopicSubscriptionUpdate(Configure<AzureServicebusTopicSubscriptionUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusNamespaceAuthorizationRuleUpdate(Configure<AzureServicebusNamespaceAuthorizationRuleUpdateSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicSubscriptionUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceAuthorizationRuleUpdateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings);
-        static partial void PostProcess(AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusTopicAuthorizationRuleCreate(Configure<AzureServicebusTopicAuthorizationRuleCreateSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicAuthorizationRuleCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings);
-        static partial void PostProcess(AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusTopicAuthorizationRuleDelete(Configure<AzureServicebusTopicAuthorizationRuleDeleteSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicAuthorizationRuleDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureServicebusTopicAuthorizationRuleListSettings toolSettings);
-        static partial void PostProcess(AzureServicebusTopicAuthorizationRuleListSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusTopicAuthorizationRuleList(Configure<AzureServicebusTopicAuthorizationRuleListSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicAuthorizationRuleListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureServicebusTopicAuthorizationRuleShowSettings toolSettings);
-        static partial void PostProcess(AzureServicebusTopicAuthorizationRuleShowSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusTopicAuthorizationRuleShow(Configure<AzureServicebusTopicAuthorizationRuleShowSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicAuthorizationRuleShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings);
-        static partial void PostProcess(AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusTopicAuthorizationRuleUpdate(Configure<AzureServicebusTopicAuthorizationRuleUpdateSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicAuthorizationRuleUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings);
-        static partial void PostProcess(AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusQueueAuthorizationRuleCreate(Configure<AzureServicebusQueueAuthorizationRuleCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusQueueAuthorizationRuleCreate(Configure<AzureServicebusQueueAuthorizationRuleCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueAuthorizationRuleCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings);
-        static partial void PostProcess(AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusQueueAuthorizationRuleDelete(Configure<AzureServicebusQueueAuthorizationRuleDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusQueueAuthorizationRuleDelete(Configure<AzureServicebusQueueAuthorizationRuleDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueAuthorizationRuleDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusQueueAuthorizationRuleListSettings toolSettings);
-        static partial void PostProcess(AzureServicebusQueueAuthorizationRuleListSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusQueueAuthorizationRuleList(Configure<AzureServicebusQueueAuthorizationRuleListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusQueueAuthorizationRuleList(Configure<AzureServicebusQueueAuthorizationRuleListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueAuthorizationRuleListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusQueueAuthorizationRuleShowSettings toolSettings);
-        static partial void PostProcess(AzureServicebusQueueAuthorizationRuleShowSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusQueueAuthorizationRuleShow(Configure<AzureServicebusQueueAuthorizationRuleShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusQueueAuthorizationRuleShow(Configure<AzureServicebusQueueAuthorizationRuleShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueAuthorizationRuleShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings);
-        static partial void PostProcess(AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusQueueAuthorizationRuleUpdate(Configure<AzureServicebusQueueAuthorizationRuleUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusQueueAuthorizationRuleUpdate(Configure<AzureServicebusQueueAuthorizationRuleUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueAuthorizationRuleUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings);
-        static partial void PostProcess(AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusNamespaceAuthorizationRuleKeysList(Configure<AzureServicebusNamespaceAuthorizationRuleKeysListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusTopicAuthorizationRuleCreate(Configure<AzureServicebusTopicAuthorizationRuleCreateSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceAuthorizationRuleKeysListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicAuthorizationRuleCreateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings);
-        static partial void PostProcess(AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusNamespaceAuthorizationRuleKeysRenew(Configure<AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusTopicAuthorizationRuleDelete(Configure<AzureServicebusTopicAuthorizationRuleDeleteSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicAuthorizationRuleDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings);
-        static partial void PostProcess(AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusGeorecoveryAliasAuthorizationRuleKeysList(Configure<AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusTopicAuthorizationRuleList(Configure<AzureServicebusTopicAuthorizationRuleListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicAuthorizationRuleListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureServicebusTopicAuthorizationRuleShow(Configure<AzureServicebusTopicAuthorizationRuleShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicAuthorizationRuleShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureServicebusTopicAuthorizationRuleUpdate(Configure<AzureServicebusTopicAuthorizationRuleUpdateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicAuthorizationRuleUpdateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureServicebusTopicSubscriptionCreate(Configure<AzureServicebusTopicSubscriptionCreateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicSubscriptionCreateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureServicebusTopicSubscriptionDelete(Configure<AzureServicebusTopicSubscriptionDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicSubscriptionDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureServicebusTopicSubscriptionList(Configure<AzureServicebusTopicSubscriptionListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicSubscriptionListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureServicebusTopicSubscriptionShow(Configure<AzureServicebusTopicSubscriptionShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicSubscriptionShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureServicebusTopicSubscriptionUpdate(Configure<AzureServicebusTopicSubscriptionUpdateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicSubscriptionUpdateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureServicebusGeorecoveryAliasAuthorizationRuleKeysList(Configure<AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusTopicAuthorizationRuleKeysListSettings toolSettings);
-        static partial void PostProcess(AzureServicebusTopicAuthorizationRuleKeysListSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusTopicAuthorizationRuleKeysList(Configure<AzureServicebusTopicAuthorizationRuleKeysListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusNamespaceAuthorizationRuleKeysList(Configure<AzureServicebusNamespaceAuthorizationRuleKeysListSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicAuthorizationRuleKeysListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceAuthorizationRuleKeysListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusTopicAuthorizationRuleKeysRenewSettings toolSettings);
-        static partial void PostProcess(AzureServicebusTopicAuthorizationRuleKeysRenewSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusTopicAuthorizationRuleKeysRenew(Configure<AzureServicebusTopicAuthorizationRuleKeysRenewSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusNamespaceAuthorizationRuleKeysRenew(Configure<AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicAuthorizationRuleKeysRenewSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusTopicSubscriptionRuleCreateSettings toolSettings);
-        static partial void PostProcess(AzureServicebusTopicSubscriptionRuleCreateSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusTopicSubscriptionRuleCreate(Configure<AzureServicebusTopicSubscriptionRuleCreateSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicSubscriptionRuleCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureServicebusTopicSubscriptionRuleDeleteSettings toolSettings);
-        static partial void PostProcess(AzureServicebusTopicSubscriptionRuleDeleteSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusTopicSubscriptionRuleDelete(Configure<AzureServicebusTopicSubscriptionRuleDeleteSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicSubscriptionRuleDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureServicebusTopicSubscriptionRuleListSettings toolSettings);
-        static partial void PostProcess(AzureServicebusTopicSubscriptionRuleListSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusTopicSubscriptionRuleList(Configure<AzureServicebusTopicSubscriptionRuleListSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicSubscriptionRuleListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureServicebusTopicSubscriptionRuleShowSettings toolSettings);
-        static partial void PostProcess(AzureServicebusTopicSubscriptionRuleShowSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusTopicSubscriptionRuleShow(Configure<AzureServicebusTopicSubscriptionRuleShowSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicSubscriptionRuleShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureServicebusTopicSubscriptionRuleUpdateSettings toolSettings);
-        static partial void PostProcess(AzureServicebusTopicSubscriptionRuleUpdateSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusTopicSubscriptionRuleUpdate(Configure<AzureServicebusTopicSubscriptionRuleUpdateSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicSubscriptionRuleUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings);
-        static partial void PostProcess(AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings);
-        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusQueueAuthorizationRuleKeysList(Configure<AzureServicebusQueueAuthorizationRuleKeysListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusQueueAuthorizationRuleKeysList(Configure<AzureServicebusQueueAuthorizationRuleKeysListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueAuthorizationRuleKeysListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings);
-        static partial void PostProcess(AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings);
         /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureServicebusQueueAuthorizationRuleKeysRenew(Configure<AzureServicebusQueueAuthorizationRuleKeysRenewSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureServicebusQueueAuthorizationRuleKeysRenew(Configure<AzureServicebusQueueAuthorizationRuleKeysRenewSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureServicebusQueueAuthorizationRuleKeysRenewSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureServicebusTopicAuthorizationRuleKeysList(Configure<AzureServicebusTopicAuthorizationRuleKeysListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicAuthorizationRuleKeysListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureServicebusTopicAuthorizationRuleKeysRenew(Configure<AzureServicebusTopicAuthorizationRuleKeysRenewSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicAuthorizationRuleKeysRenewSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureServicebusTopicSubscriptionRuleCreate(Configure<AzureServicebusTopicSubscriptionRuleCreateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicSubscriptionRuleCreateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureServicebusTopicSubscriptionRuleDelete(Configure<AzureServicebusTopicSubscriptionRuleDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicSubscriptionRuleDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureServicebusTopicSubscriptionRuleList(Configure<AzureServicebusTopicSubscriptionRuleListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicSubscriptionRuleListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureServicebusTopicSubscriptionRuleShow(Configure<AzureServicebusTopicSubscriptionRuleShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicSubscriptionRuleShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Service Bus namespaces, queues, topics, subscriptions, rules and geo-disaster recovery configuration alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureServicebusTopicSubscriptionRuleUpdate(Configure<AzureServicebusTopicSubscriptionRuleUpdateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureServicebusTopicSubscriptionRuleUpdateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
         }
     }
     #region AzureServicebusSettings
@@ -687,7 +546,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -696,301 +555,6 @@ namespace Nuke.Azure
         {
             arguments
               .Add("servicebus")
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureServicebusQueueCreateSettings
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureServicebusQueueCreateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
-        /// <summary><p>Name of Queue.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>ISO 8601 timeSpan or duration time format for idle interval after which the queue is automatically deleted. The minimum duration is 5 minutes.</p></summary>
-        public virtual string AutoDeleteOnIdle { get; internal set; }
-        /// <summary><p>ISO 8601 timespan or duration time format for default message to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.</p></summary>
-        public virtual string DefaultMessageTimeToLive { get; internal set; }
-        /// <summary><p>ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.</p></summary>
-        public virtual string DuplicateDetectionHistoryTimeWindow { get; internal set; }
-        /// <summary><p>A boolean value that indicates whether this queue has dead letter support when a message expires.</p></summary>
-        public virtual bool? EnableDeadLetteringOnMessageExpiration { get; internal set; }
-        /// <summary><p>A boolean value indicating if this queue requires duplicate detection.</p></summary>
-        public virtual bool? EnableDuplicateDetection { get; internal set; }
-        /// <summary><p>A boolean value that indicates whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage.</p></summary>
-        public virtual bool? EnableExpress { get; internal set; }
-        /// <summary><p>A boolean value that indicates whether the queue is to be partitioned across multiple message brokers.</p></summary>
-        public virtual bool? EnablePartitioning { get; internal set; }
-        /// <summary><p>A boolean value indicating whether the queue supports the concept of sessions.</p></summary>
-        public virtual bool? EnableSession { get; internal set; }
-        /// <summary><p>Queue/Topic name to forward the Dead Letter message.</p></summary>
-        public virtual string ForwardDeadLetteredMessagesTo { get; internal set; }
-        /// <summary><p>Queue/Topic name to forward the messages.</p></summary>
-        public virtual string ForwardTo { get; internal set; }
-        /// <summary><p>String ISO 8601 timespan or duration format for duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. The maximum value for LockDuration is 5 minutes; the default value is 1 minute.</p></summary>
-        public virtual string LockDuration { get; internal set; }
-        /// <summary><p>The maximum delivery count. A message is automatically deadlettered after this number of deliveries. default value is 10.</p></summary>
-        public virtual string MaxDeliveryCount { get; internal set; }
-        /// <summary><p>The maximum size of queue in megabytes, which is the size of memory allocated for the queue. Default is 1024.</p></summary>
-        public virtual ServicebusQueueMaxSize MaxSize { get; internal set; }
-        /// <summary><p>Enumerates the possible values for the status of a messaging entity.</p></summary>
-        public virtual ServicebusQueueStatus Status { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("servicebus queue create")
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--auto-delete-on-idle {value}", AutoDeleteOnIdle)
-              .Add("--default-message-time-to-live {value}", DefaultMessageTimeToLive)
-              .Add("--duplicate-detection-history-time-window {value}", DuplicateDetectionHistoryTimeWindow)
-              .Add("--enable-dead-lettering-on-message-expiration", EnableDeadLetteringOnMessageExpiration)
-              .Add("--enable-duplicate-detection", EnableDuplicateDetection)
-              .Add("--enable-express", EnableExpress)
-              .Add("--enable-partitioning", EnablePartitioning)
-              .Add("--enable-session", EnableSession)
-              .Add("--forward-dead-lettered-messages-to {value}", ForwardDeadLetteredMessagesTo)
-              .Add("--forward-to {value}", ForwardTo)
-              .Add("--lock-duration {value}", LockDuration)
-              .Add("--max-delivery-count {value}", MaxDeliveryCount)
-              .Add("--max-size {value}", MaxSize)
-              .Add("--status {value}", Status)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureServicebusQueueDeleteSettings
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureServicebusQueueDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
-        /// <summary><p>Name of Queue.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("servicebus queue delete")
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureServicebusQueueListSettings
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureServicebusQueueListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("servicebus queue list")
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureServicebusQueueShowSettings
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureServicebusQueueShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
-        /// <summary><p>Name of Queue.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("servicebus queue show")
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureServicebusQueueUpdateSettings
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureServicebusQueueUpdateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
-        /// <summary><p>Name of Queue.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>ISO 8601 timeSpan or duration time format for idle interval after which the queue is automatically deleted.</p></summary>
-        public virtual string AutoDeleteOnIdle { get; internal set; }
-        /// <summary><p>ISO 8601 timespan or duration time format for default message to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.</p></summary>
-        public virtual string DefaultMessageTimeToLive { get; internal set; }
-        /// <summary><p>ISO 8601 timeSpan structure that defines the duration of the duplicate detection history.</p></summary>
-        public virtual string DuplicateDetectionHistoryTimeWindow { get; internal set; }
-        /// <summary><p>A boolean value that indicates whether this queue has dead letter support when a message expires.</p></summary>
-        public virtual bool? EnableDeadLetteringOnMessageExpiration { get; internal set; }
-        /// <summary><p>A boolean value indicating if this queue requires duplicate detection.</p></summary>
-        public virtual bool? EnableDuplicateDetection { get; internal set; }
-        /// <summary><p>A boolean value that indicates whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage.</p></summary>
-        public virtual bool? EnableExpress { get; internal set; }
-        /// <summary><p>A boolean value that indicates whether the queue is to be partitioned across multiple message brokers.</p></summary>
-        public virtual bool? EnablePartitioning { get; internal set; }
-        /// <summary><p>A boolean value indicating whether the queue supports the concept of sessions.</p></summary>
-        public virtual bool? EnableSession { get; internal set; }
-        /// <summary><p>Queue/Topic name to forward the Dead Letter message.</p></summary>
-        public virtual string ForwardDeadLetteredMessagesTo { get; internal set; }
-        /// <summary><p>Queue/Topic name to forward the messages.</p></summary>
-        public virtual string ForwardTo { get; internal set; }
-        /// <summary><p>String ISO 8601 timespan or duration format for duration of a peek-lock; that is, the amount of time that the message is locked for other receivers.</p></summary>
-        public virtual string LockDuration { get; internal set; }
-        /// <summary><p>The maximum delivery count. A message is automatically deadlettered after this number of deliveries.</p></summary>
-        public virtual string MaxDeliveryCount { get; internal set; }
-        /// <summary><p>The maximum size of queue in megabytes, which is the size of memory allocated for the queue.</p></summary>
-        public virtual ServicebusQueueMaxSize MaxSize { get; internal set; }
-        /// <summary><p>Enumerates the possible values for the status of a messaging entity.</p></summary>
-        public virtual ServicebusQueueStatus Status { get; internal set; }
-        /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        public virtual string Add { get; internal set; }
-        /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        public virtual string Remove { get; internal set; }
-        /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        public virtual string Set { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("servicebus queue update")
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--auto-delete-on-idle {value}", AutoDeleteOnIdle)
-              .Add("--default-message-time-to-live {value}", DefaultMessageTimeToLive)
-              .Add("--duplicate-detection-history-time-window {value}", DuplicateDetectionHistoryTimeWindow)
-              .Add("--enable-dead-lettering-on-message-expiration", EnableDeadLetteringOnMessageExpiration)
-              .Add("--enable-duplicate-detection", EnableDuplicateDetection)
-              .Add("--enable-express", EnableExpress)
-              .Add("--enable-partitioning", EnablePartitioning)
-              .Add("--enable-session", EnableSession)
-              .Add("--forward-dead-lettered-messages-to {value}", ForwardDeadLetteredMessagesTo)
-              .Add("--forward-to {value}", ForwardTo)
-              .Add("--lock-duration {value}", LockDuration)
-              .Add("--max-delivery-count {value}", MaxDeliveryCount)
-              .Add("--max-size {value}", MaxSize)
-              .Add("--status {value}", Status)
-              .Add("--add {value}", Add)
-              .Add("--remove {value}", Remove)
-              .Add("--set {value}", Set)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1020,7 +584,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1061,7 +625,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1102,7 +666,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1143,7 +707,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1182,7 +746,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1215,7 +779,7 @@ namespace Nuke.Azure
         public virtual string Alias { get; internal set; }
         /// <summary><p>Name of Namespace.</p></summary>
         public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name (if within the same resource group) or ARM Id of Primary/Secondary eventhub namespace name, which is part of GEO DR pairing.</p></summary>
+        /// <summary><p>Name (if within the same resource group) or ARM Id of Primary/Secondary Service Bus  namespace name, which is part of GEO DR pairing.</p></summary>
         public virtual string PartnerNamespace { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
@@ -1226,7 +790,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1269,7 +833,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1281,6 +845,164 @@ namespace Nuke.Azure
               .Add("--alias {value}", Alias)
               .Add("--namespace-name {value}", NamespaceName)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureServicebusMigrationAbortSettings
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureServicebusMigrationAbortSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
+        /// <summary><p>Name of Standard Namespace.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("servicebus migration abort")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureServicebusMigrationCompleteSettings
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureServicebusMigrationCompleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
+        /// <summary><p>Name of Standard Namespace.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("servicebus migration complete")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureServicebusMigrationShowSettings
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureServicebusMigrationShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
+        /// <summary><p>Name of Standard Namespace.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("servicebus migration show")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureServicebusMigrationStartSettings
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureServicebusMigrationStartSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
+        /// <summary><p>Name of Standard Namespace used as source of the migration.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Post migration name is the name that can be used to connect to standard namespace after migration is complete.</p></summary>
+        public virtual string PostMigrationName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name (if within the same resource group) or ARM Id of empty Premium Service Bus namespace name that will be target of the migration.</p></summary>
+        public virtual string TargetNamespace { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("servicebus migration start")
+              .Add("--name {value}", Name)
+              .Add("--post-migration-name {value}", PostMigrationName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--target-namespace {value}", TargetNamespace)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1316,7 +1038,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1358,7 +1080,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1394,7 +1116,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1429,7 +1151,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1466,7 +1188,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1507,6 +1229,8 @@ namespace Nuke.Azure
         public virtual string Tags { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
+        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        public virtual string ForceString { get; internal set; }
         /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         public virtual string Remove { get; internal set; }
         /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
@@ -1516,7 +1240,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1531,6 +1255,317 @@ namespace Nuke.Azure
               .Add("--sku {value}", Sku)
               .Add("--tags {value}", Tags)
               .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
+              .Add("--remove {value}", Remove)
+              .Add("--set {value}", Set)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureServicebusQueueCreateSettings
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureServicebusQueueCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
+        /// <summary><p>Name of Queue.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>ISO 8601 timeSpan or duration time format for idle interval after which the queue is automatically deleted. The minimum duration is 5 minutes.</p></summary>
+        public virtual string AutoDeleteOnIdle { get; internal set; }
+        /// <summary><p>ISO 8601 timespan or duration time format for default message to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.</p></summary>
+        public virtual string DefaultMessageTimeToLive { get; internal set; }
+        /// <summary><p>ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.</p></summary>
+        public virtual string DuplicateDetectionHistoryTimeWindow { get; internal set; }
+        /// <summary><p>Allow server-side batched operations.</p></summary>
+        public virtual bool? EnableBatchedOperations { get; internal set; }
+        /// <summary><p>A boolean value that indicates whether this queue has dead letter support when a message expires.</p></summary>
+        public virtual bool? EnableDeadLetteringOnMessageExpiration { get; internal set; }
+        /// <summary><p>A boolean value indicating if this queue requires duplicate detection.</p></summary>
+        public virtual bool? EnableDuplicateDetection { get; internal set; }
+        /// <summary><p>A boolean value that indicates whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage.</p></summary>
+        public virtual bool? EnableExpress { get; internal set; }
+        /// <summary><p>A boolean value that indicates whether the queue is to be partitioned across multiple message brokers.</p></summary>
+        public virtual bool? EnablePartitioning { get; internal set; }
+        /// <summary><p>A boolean value indicating whether the queue supports the concept of sessions.</p></summary>
+        public virtual bool? EnableSession { get; internal set; }
+        /// <summary><p>Queue/Topic name to forward the Dead Letter message.</p></summary>
+        public virtual string ForwardDeadLetteredMessagesTo { get; internal set; }
+        /// <summary><p>Queue/Topic name to forward the messages.</p></summary>
+        public virtual string ForwardTo { get; internal set; }
+        /// <summary><p>String ISO 8601 timespan or duration format for duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. The maximum value for LockDuration is 5 minutes; the default value is 1 minute.</p></summary>
+        public virtual string LockDuration { get; internal set; }
+        /// <summary><p>The maximum delivery count. A message is automatically deadlettered after this number of deliveries. default value is 10.</p></summary>
+        public virtual string MaxDeliveryCount { get; internal set; }
+        /// <summary><p>The maximum size of queue in megabytes, which is the size of memory allocated for the queue. Default is 1024.</p></summary>
+        public virtual ServicebusQueueMaxSize MaxSize { get; internal set; }
+        /// <summary><p>Enumerates the possible values for the status of a messaging entity.</p></summary>
+        public virtual ServicebusQueueStatus Status { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("servicebus queue create")
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--auto-delete-on-idle {value}", AutoDeleteOnIdle)
+              .Add("--default-message-time-to-live {value}", DefaultMessageTimeToLive)
+              .Add("--duplicate-detection-history-time-window {value}", DuplicateDetectionHistoryTimeWindow)
+              .Add("--enable-batched-operations", EnableBatchedOperations)
+              .Add("--enable-dead-lettering-on-message-expiration", EnableDeadLetteringOnMessageExpiration)
+              .Add("--enable-duplicate-detection", EnableDuplicateDetection)
+              .Add("--enable-express", EnableExpress)
+              .Add("--enable-partitioning", EnablePartitioning)
+              .Add("--enable-session", EnableSession)
+              .Add("--forward-dead-lettered-messages-to {value}", ForwardDeadLetteredMessagesTo)
+              .Add("--forward-to {value}", ForwardTo)
+              .Add("--lock-duration {value}", LockDuration)
+              .Add("--max-delivery-count {value}", MaxDeliveryCount)
+              .Add("--max-size {value}", MaxSize)
+              .Add("--status {value}", Status)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureServicebusQueueDeleteSettings
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureServicebusQueueDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
+        /// <summary><p>Name of Queue.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("servicebus queue delete")
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureServicebusQueueListSettings
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureServicebusQueueListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Skip is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skip parameter that specifies a starting point to use for subsequent calls.</p></summary>
+        public virtual string Skip { get; internal set; }
+        /// <summary><p>May be used to limit the number of results to the most recent N usageDetails.</p></summary>
+        public virtual string Top { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("servicebus queue list")
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--skip {value}", Skip)
+              .Add("--top {value}", Top)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureServicebusQueueShowSettings
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureServicebusQueueShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
+        /// <summary><p>Name of Queue.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("servicebus queue show")
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureServicebusQueueUpdateSettings
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureServicebusQueueUpdateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
+        /// <summary><p>Name of Queue.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>ISO 8601 timeSpan or duration time format for idle interval after which the queue is automatically deleted. The minimum duration is 5 minutes.</p></summary>
+        public virtual string AutoDeleteOnIdle { get; internal set; }
+        /// <summary><p>ISO 8601 timespan or duration time format for default message to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.</p></summary>
+        public virtual string DefaultMessageTimeToLive { get; internal set; }
+        /// <summary><p>ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.</p></summary>
+        public virtual string DuplicateDetectionHistoryTimeWindow { get; internal set; }
+        /// <summary><p>Allow server-side batched operations.</p></summary>
+        public virtual bool? EnableBatchedOperations { get; internal set; }
+        /// <summary><p>A boolean value that indicates whether this queue has dead letter support when a message expires.</p></summary>
+        public virtual bool? EnableDeadLetteringOnMessageExpiration { get; internal set; }
+        /// <summary><p>A boolean value indicating if this queue requires duplicate detection.</p></summary>
+        public virtual bool? EnableDuplicateDetection { get; internal set; }
+        /// <summary><p>A boolean value that indicates whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage.</p></summary>
+        public virtual bool? EnableExpress { get; internal set; }
+        /// <summary><p>A boolean value that indicates whether the queue is to be partitioned across multiple message brokers.</p></summary>
+        public virtual bool? EnablePartitioning { get; internal set; }
+        /// <summary><p>A boolean value indicating whether the queue supports the concept of sessions.</p></summary>
+        public virtual bool? EnableSession { get; internal set; }
+        /// <summary><p>Queue/Topic name to forward the Dead Letter message.</p></summary>
+        public virtual string ForwardDeadLetteredMessagesTo { get; internal set; }
+        /// <summary><p>Queue/Topic name to forward the messages.</p></summary>
+        public virtual string ForwardTo { get; internal set; }
+        /// <summary><p>String ISO 8601 timespan or duration format for duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. The maximum value for LockDuration is 5 minutes; the default value is 1 minute.</p></summary>
+        public virtual string LockDuration { get; internal set; }
+        /// <summary><p>The maximum delivery count. A message is automatically deadlettered after this number of deliveries. default value is 10.</p></summary>
+        public virtual string MaxDeliveryCount { get; internal set; }
+        /// <summary><p>The maximum size of queue in megabytes, which is the size of memory allocated for the queue. Default is 1024.</p></summary>
+        public virtual ServicebusQueueMaxSize MaxSize { get; internal set; }
+        /// <summary><p>Enumerates the possible values for the status of a messaging entity.</p></summary>
+        public virtual ServicebusQueueStatus Status { get; internal set; }
+        /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        public virtual string Add { get; internal set; }
+        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        public virtual string ForceString { get; internal set; }
+        /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        public virtual string Remove { get; internal set; }
+        /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        public virtual string Set { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("servicebus queue update")
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--auto-delete-on-idle {value}", AutoDeleteOnIdle)
+              .Add("--default-message-time-to-live {value}", DefaultMessageTimeToLive)
+              .Add("--duplicate-detection-history-time-window {value}", DuplicateDetectionHistoryTimeWindow)
+              .Add("--enable-batched-operations", EnableBatchedOperations)
+              .Add("--enable-dead-lettering-on-message-expiration", EnableDeadLetteringOnMessageExpiration)
+              .Add("--enable-duplicate-detection", EnableDuplicateDetection)
+              .Add("--enable-express", EnableExpress)
+              .Add("--enable-partitioning", EnablePartitioning)
+              .Add("--enable-session", EnableSession)
+              .Add("--forward-dead-lettered-messages-to {value}", ForwardDeadLetteredMessagesTo)
+              .Add("--forward-to {value}", ForwardTo)
+              .Add("--lock-duration {value}", LockDuration)
+              .Add("--max-delivery-count {value}", MaxDeliveryCount)
+              .Add("--max-size {value}", MaxSize)
+              .Add("--status {value}", Status)
+              .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
               .Add("--debug {value}", Debug)
@@ -1563,7 +1598,7 @@ namespace Nuke.Azure
         public virtual string DefaultMessageTimeToLive { get; internal set; }
         /// <summary><p>ISO 8601 timespan or duration time format for structure that defines the duration of the duplicate detection history. The default value is 10 minutes.</p></summary>
         public virtual string DuplicateDetectionHistoryTimeWindow { get; internal set; }
-        /// <summary><p>Value that indicates whether server-side batched operations are enabled.</p></summary>
+        /// <summary><p>Allow server-side batched operations.</p></summary>
         public virtual bool? EnableBatchedOperations { get; internal set; }
         /// <summary><p>A boolean value indicating if this topic requires duplicate detection.</p></summary>
         public virtual bool? EnableDuplicateDetection { get; internal set; }
@@ -1582,7 +1617,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1633,7 +1668,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1667,12 +1702,16 @@ namespace Nuke.Azure
         public virtual string NamespaceName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Skip is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skip parameter that specifies a starting point to use for subsequent calls.</p></summary>
+        public virtual string Skip { get; internal set; }
+        /// <summary><p>May be used to limit the number of results to the most recent N usageDetails.</p></summary>
+        public virtual string Top { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1683,6 +1722,8 @@ namespace Nuke.Azure
               .Add("servicebus topic list")
               .Add("--namespace-name {value}", NamespaceName)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--skip {value}", Skip)
+              .Add("--top {value}", Top)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1712,7 +1753,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1748,13 +1789,13 @@ namespace Nuke.Azure
         public virtual string NamespaceName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>ISO 8601 timespan or duration time format for idle interval after which the topic is automatically deleted.</p></summary>
+        /// <summary><p>ISO 8601 timespan or duration time format for idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.</p></summary>
         public virtual string AutoDeleteOnIdle { get; internal set; }
         /// <summary><p>ISO 8601 or duration time format for Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.</p></summary>
         public virtual string DefaultMessageTimeToLive { get; internal set; }
-        /// <summary><p>ISO 8601 timespan or duration time format for structure that defines the duration of the duplicate detection history.</p></summary>
+        /// <summary><p>ISO 8601 timespan or duration time format for structure that defines the duration of the duplicate detection history. The default value is 10 minutes.</p></summary>
         public virtual string DuplicateDetectionHistoryTimeWindow { get; internal set; }
-        /// <summary><p>Value that indicates whether server-side batched operations are enabled.</p></summary>
+        /// <summary><p>Allow server-side batched operations.</p></summary>
         public virtual bool? EnableBatchedOperations { get; internal set; }
         /// <summary><p>A boolean value indicating if this topic requires duplicate detection.</p></summary>
         public virtual bool? EnableDuplicateDetection { get; internal set; }
@@ -1764,12 +1805,14 @@ namespace Nuke.Azure
         public virtual bool? EnableOrdering { get; internal set; }
         /// <summary><p>A boolean value that indicates whether the topic to be partitioned across multiple message brokers is enabled.</p></summary>
         public virtual bool? EnablePartitioning { get; internal set; }
-        /// <summary><p>Maximum size of topic in megabytes, which is the size of the memory allocated for the topic.</p></summary>
+        /// <summary><p>Maximum size of topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024.</p></summary>
         public virtual ServicebusQueueMaxSize MaxSize { get; internal set; }
         /// <summary><p>Enumerates the possible values for the status of a messaging entity.</p></summary>
         public virtual ServicebusQueueStatus Status { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
+        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        public virtual string ForceString { get; internal set; }
         /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         public virtual string Remove { get; internal set; }
         /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
@@ -1779,7 +1822,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1802,225 +1845,7 @@ namespace Nuke.Azure
               .Add("--max-size {value}", MaxSize)
               .Add("--status {value}", Status)
               .Add("--add {value}", Add)
-              .Add("--remove {value}", Remove)
-              .Add("--set {value}", Set)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureServicebusNamespaceAuthorizationRuleCreateSettings
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureServicebusNamespaceAuthorizationRuleCreateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
-        /// <summary><p>Name of Namespace Authorization Rule.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Space-separated list of Authorization rule rights.</p></summary>
-        public virtual IReadOnlyList<ServicebusNamespaceAuthorizationRuleRights> Rights => RightsInternal.AsReadOnly();
-        internal List<ServicebusNamespaceAuthorizationRuleRights> RightsInternal { get; set; } = new List<ServicebusNamespaceAuthorizationRuleRights>();
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("servicebus namespace authorization-rule create")
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--rights {value}", Rights, separator: ' ')
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureServicebusNamespaceAuthorizationRuleDeleteSettings
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureServicebusNamespaceAuthorizationRuleDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
-        /// <summary><p>Name of Namespace Authorization Rule.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("servicebus namespace authorization-rule delete")
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureServicebusNamespaceAuthorizationRuleListSettings
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureServicebusNamespaceAuthorizationRuleListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
-        /// <summary><p>Name of the Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("servicebus namespace authorization-rule list")
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureServicebusNamespaceAuthorizationRuleShowSettings
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureServicebusNamespaceAuthorizationRuleShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
-        /// <summary><p>Name of Namespace Authorization Rule.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("servicebus namespace authorization-rule show")
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureServicebusNamespaceAuthorizationRuleUpdateSettings
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureServicebusNamespaceAuthorizationRuleUpdateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
-        /// <summary><p>Name of Namespace Authorization Rule.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Space-separated list of Authorization rule rights.</p></summary>
-        public virtual IReadOnlyList<ServicebusNamespaceAuthorizationRuleRights> Rights => RightsInternal.AsReadOnly();
-        internal List<ServicebusNamespaceAuthorizationRuleRights> RightsInternal { get; set; } = new List<ServicebusNamespaceAuthorizationRuleRights>();
-        /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        public virtual string Add { get; internal set; }
-        /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        public virtual string Remove { get; internal set; }
-        /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        public virtual string Set { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("servicebus namespace authorization-rule update")
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--rights {value}", Rights, separator: ' ')
-              .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
               .Add("--debug {value}", Debug)
@@ -2052,7 +1877,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -2095,7 +1920,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -2117,49 +1942,30 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureServicebusTopicSubscriptionCreateSettings
+    #region AzureServicebusNamespaceAuthorizationRuleCreateSettings
     /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureServicebusTopicSubscriptionCreateSettings : ToolSettings
+    public partial class AzureServicebusNamespaceAuthorizationRuleCreateSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureServicebus executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
-        /// <summary><p>Name of Subscription.</p></summary>
+        /// <summary><p>Name of Namespace Authorization Rule.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of Namespace.</p></summary>
         public virtual string NamespaceName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of Topic.</p></summary>
-        public virtual string TopicName { get; internal set; }
-        /// <summary><p>ISO 8601 timeSpan  or duration time format for idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.</p></summary>
-        public virtual string AutoDeleteOnIdle { get; internal set; }
-        /// <summary><p>ISO 8601 or duration time format for Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.</p></summary>
-        public virtual string DefaultMessageTimeToLive { get; internal set; }
-        /// <summary><p>A boolean value that indicates whether server-side batched operations are enabled.</p></summary>
-        public virtual bool? EnableBatchedOperations { get; internal set; }
-        /// <summary><p>A boolean Value that indicates whether a subscription has dead letter support when a message expires.</p></summary>
-        public virtual bool? EnableDeadLetteringOnMessageExpiration { get; internal set; }
-        /// <summary><p>A boolean value indicating if a subscription supports the concept of sessions.</p></summary>
-        public virtual bool? EnableSession { get; internal set; }
-        /// <summary><p>Queue/Topic name to forward the Dead Letter message.</p></summary>
-        public virtual string ForwardDeadLetteredMessagesTo { get; internal set; }
-        /// <summary><p>Queue/Topic name to forward the messages.</p></summary>
-        public virtual string ForwardTo { get; internal set; }
-        /// <summary><p>ISO 8601 or duration format (day:minute:seconds) for lock duration timespan for the subscription. The default value is 1 minute.</p></summary>
-        public virtual string LockDuration { get; internal set; }
-        /// <summary><p>Number of maximum deliveries.</p></summary>
-        public virtual int? MaxDeliveryCount { get; internal set; }
-        /// <summary><p></p></summary>
-        public virtual ServicebusQueueStatus Status { get; internal set; }
+        /// <summary><p>Space-separated list of Authorization rule rights.</p></summary>
+        public virtual IReadOnlyList<ServicebusNamespaceAuthorizationRuleRights> Rights => RightsInternal.AsReadOnly();
+        internal List<ServicebusNamespaceAuthorizationRuleRights> RightsInternal { get; set; } = new List<ServicebusNamespaceAuthorizationRuleRights>();
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -2167,21 +1973,11 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("servicebus topic subscription create")
+              .Add("servicebus namespace authorization-rule create")
               .Add("--name {value}", Name)
               .Add("--namespace-name {value}", NamespaceName)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--topic-name {value}", TopicName)
-              .Add("--auto-delete-on-idle {value}", AutoDeleteOnIdle)
-              .Add("--default-message-time-to-live {value}", DefaultMessageTimeToLive)
-              .Add("--enable-batched-operations", EnableBatchedOperations)
-              .Add("--enable-dead-lettering-on-message-expiration", EnableDeadLetteringOnMessageExpiration)
-              .Add("--enable-session", EnableSession)
-              .Add("--forward-dead-lettered-messages-to {value}", ForwardDeadLetteredMessagesTo)
-              .Add("--forward-to {value}", ForwardTo)
-              .Add("--lock-duration {value}", LockDuration)
-              .Add("--max-delivery-count {value}", MaxDeliveryCount)
-              .Add("--status {value}", Status)
+              .Add("--rights {value}", Rights, separator: ' ')
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2191,29 +1987,27 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureServicebusTopicSubscriptionDeleteSettings
+    #region AzureServicebusNamespaceAuthorizationRuleDeleteSettings
     /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureServicebusTopicSubscriptionDeleteSettings : ToolSettings
+    public partial class AzureServicebusNamespaceAuthorizationRuleDeleteSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureServicebus executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
-        /// <summary><p>Name of Subscription.</p></summary>
+        /// <summary><p>Name of Namespace Authorization Rule.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of Namespace.</p></summary>
         public virtual string NamespaceName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of Topic.</p></summary>
-        public virtual string TopicName { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -2221,11 +2015,10 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("servicebus topic subscription delete")
+              .Add("servicebus namespace authorization-rule delete")
               .Add("--name {value}", Name)
               .Add("--namespace-name {value}", NamespaceName)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--topic-name {value}", TopicName)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2235,27 +2028,25 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureServicebusTopicSubscriptionListSettings
+    #region AzureServicebusNamespaceAuthorizationRuleListSettings
     /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureServicebusTopicSubscriptionListSettings : ToolSettings
+    public partial class AzureServicebusNamespaceAuthorizationRuleListSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureServicebus executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
-        /// <summary><p>Name of Namespace.</p></summary>
+        /// <summary><p>Name of the Namespace.</p></summary>
         public virtual string NamespaceName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of Topic.</p></summary>
-        public virtual string TopicName { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -2263,10 +2054,9 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("servicebus topic subscription list")
+              .Add("servicebus namespace authorization-rule list")
               .Add("--namespace-name {value}", NamespaceName)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--topic-name {value}", TopicName)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2276,29 +2066,27 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureServicebusTopicSubscriptionShowSettings
+    #region AzureServicebusNamespaceAuthorizationRuleShowSettings
     /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureServicebusTopicSubscriptionShowSettings : ToolSettings
+    public partial class AzureServicebusNamespaceAuthorizationRuleShowSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureServicebus executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
-        /// <summary><p>Name of Subscription.</p></summary>
+        /// <summary><p>Name of Namespace Authorization Rule.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of Namespace.</p></summary>
         public virtual string NamespaceName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of Topic.</p></summary>
-        public virtual string TopicName { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -2306,11 +2094,10 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("servicebus topic subscription show")
+              .Add("servicebus namespace authorization-rule show")
               .Add("--name {value}", Name)
               .Add("--namespace-name {value}", NamespaceName)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--topic-name {value}", TopicName)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2320,45 +2107,28 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureServicebusTopicSubscriptionUpdateSettings
+    #region AzureServicebusNamespaceAuthorizationRuleUpdateSettings
     /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureServicebusTopicSubscriptionUpdateSettings : ToolSettings
+    public partial class AzureServicebusNamespaceAuthorizationRuleUpdateSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureServicebus executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
-        /// <summary><p>Name of Subscription.</p></summary>
+        /// <summary><p>Name of Namespace Authorization Rule.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of Namespace.</p></summary>
         public virtual string NamespaceName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of Topic.</p></summary>
-        public virtual string TopicName { get; internal set; }
-        /// <summary><p>ISO 8601 timeSpan  or duration time format for idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.</p></summary>
-        public virtual string AutoDeleteOnIdle { get; internal set; }
-        /// <summary><p>ISO 8601 or duration time format for Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.</p></summary>
-        public virtual string DefaultMessageTimeToLive { get; internal set; }
-        /// <summary><p>A boolean value that indicates whether server-side batched operations are enabled.</p></summary>
-        public virtual bool? EnableBatchedOperations { get; internal set; }
-        /// <summary><p>A boolean Value that indicates whether a subscription has dead letter support when a message expires.</p></summary>
-        public virtual bool? EnableDeadLetteringOnMessageExpiration { get; internal set; }
-        /// <summary><p>A boolean value indicating if a subscription supports the concept of sessions.</p></summary>
-        public virtual bool? EnableSession { get; internal set; }
-        /// <summary><p>Queue/Topic name to forward the Dead Letter message.</p></summary>
-        public virtual string ForwardDeadLetteredMessagesTo { get; internal set; }
-        /// <summary><p>Queue/Topic name to forward the messages.</p></summary>
-        public virtual string ForwardTo { get; internal set; }
-        /// <summary><p>ISO 8601 or duration format (day:minute:seconds) for lock duration timespan for the subscription.</p></summary>
-        public virtual string LockDuration { get; internal set; }
-        /// <summary><p>Number of maximum deliveries.</p></summary>
-        public virtual int? MaxDeliveryCount { get; internal set; }
-        /// <summary><p></p></summary>
-        public virtual ServicebusQueueStatus Status { get; internal set; }
+        /// <summary><p>Space-separated list of Authorization rule rights.</p></summary>
+        public virtual IReadOnlyList<ServicebusNamespaceAuthorizationRuleRights> Rights => RightsInternal.AsReadOnly();
+        internal List<ServicebusNamespaceAuthorizationRuleRights> RightsInternal { get; set; } = new List<ServicebusNamespaceAuthorizationRuleRights>();
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
+        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        public virtual string ForceString { get; internal set; }
         /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         public virtual string Remove { get; internal set; }
         /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
@@ -2368,7 +2138,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -2376,256 +2146,13 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("servicebus topic subscription update")
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--topic-name {value}", TopicName)
-              .Add("--auto-delete-on-idle {value}", AutoDeleteOnIdle)
-              .Add("--default-message-time-to-live {value}", DefaultMessageTimeToLive)
-              .Add("--enable-batched-operations", EnableBatchedOperations)
-              .Add("--enable-dead-lettering-on-message-expiration", EnableDeadLetteringOnMessageExpiration)
-              .Add("--enable-session", EnableSession)
-              .Add("--forward-dead-lettered-messages-to {value}", ForwardDeadLetteredMessagesTo)
-              .Add("--forward-to {value}", ForwardTo)
-              .Add("--lock-duration {value}", LockDuration)
-              .Add("--max-delivery-count {value}", MaxDeliveryCount)
-              .Add("--status {value}", Status)
-              .Add("--add {value}", Add)
-              .Add("--remove {value}", Remove)
-              .Add("--set {value}", Set)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureServicebusTopicAuthorizationRuleCreateSettings
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureServicebusTopicAuthorizationRuleCreateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
-        /// <summary><p>Name of Topic Authorization Rule.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Space-separated list of Authorization rule rights.</p></summary>
-        public virtual IReadOnlyList<ServicebusNamespaceAuthorizationRuleRights> Rights => RightsInternal.AsReadOnly();
-        internal List<ServicebusNamespaceAuthorizationRuleRights> RightsInternal { get; set; } = new List<ServicebusNamespaceAuthorizationRuleRights>();
-        /// <summary><p>Name of Topic.</p></summary>
-        public virtual string TopicName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("servicebus topic authorization-rule create")
+              .Add("servicebus namespace authorization-rule update")
               .Add("--name {value}", Name)
               .Add("--namespace-name {value}", NamespaceName)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--rights {value}", Rights, separator: ' ')
-              .Add("--topic-name {value}", TopicName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureServicebusTopicAuthorizationRuleDeleteSettings
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureServicebusTopicAuthorizationRuleDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
-        /// <summary><p>Name of Topic Authorization Rule.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of Topic.</p></summary>
-        public virtual string TopicName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("servicebus topic authorization-rule delete")
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--topic-name {value}", TopicName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureServicebusTopicAuthorizationRuleListSettings
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureServicebusTopicAuthorizationRuleListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of Topic.</p></summary>
-        public virtual string TopicName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("servicebus topic authorization-rule list")
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--topic-name {value}", TopicName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureServicebusTopicAuthorizationRuleShowSettings
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureServicebusTopicAuthorizationRuleShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
-        /// <summary><p>Name of Topic Authorization Rule.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of Topic.</p></summary>
-        public virtual string TopicName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("servicebus topic authorization-rule show")
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--topic-name {value}", TopicName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureServicebusTopicAuthorizationRuleUpdateSettings
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureServicebusTopicAuthorizationRuleUpdateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
-        /// <summary><p>Name of Topic Authorization Rule.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Space-separated list of Authorization rule rights.</p></summary>
-        public virtual IReadOnlyList<ServicebusNamespaceAuthorizationRuleRights> Rights => RightsInternal.AsReadOnly();
-        internal List<ServicebusNamespaceAuthorizationRuleRights> RightsInternal { get; set; } = new List<ServicebusNamespaceAuthorizationRuleRights>();
-        /// <summary><p>Name of Topic.</p></summary>
-        public virtual string TopicName { get; internal set; }
-        /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        public virtual string Add { get; internal set; }
-        /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        public virtual string Remove { get; internal set; }
-        /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        public virtual string Set { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("servicebus topic authorization-rule update")
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--rights {value}", Rights, separator: ' ')
-              .Add("--topic-name {value}", TopicName)
               .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
               .Add("--debug {value}", Debug)
@@ -2662,7 +2189,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -2707,7 +2234,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -2749,7 +2276,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -2792,7 +2319,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -2836,6 +2363,8 @@ namespace Nuke.Azure
         internal List<ServicebusNamespaceAuthorizationRuleRights> RightsInternal { get; set; } = new List<ServicebusNamespaceAuthorizationRuleRights>();
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
+        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        public virtual string ForceString { get; internal set; }
         /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         public virtual string Remove { get; internal set; }
         /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
@@ -2845,7 +2374,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -2860,8 +2389,591 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--rights {value}", Rights, separator: ' ')
               .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureServicebusTopicAuthorizationRuleCreateSettings
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureServicebusTopicAuthorizationRuleCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
+        /// <summary><p>Name of Topic Authorization Rule.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Space-separated list of Authorization rule rights.</p></summary>
+        public virtual IReadOnlyList<ServicebusNamespaceAuthorizationRuleRights> Rights => RightsInternal.AsReadOnly();
+        internal List<ServicebusNamespaceAuthorizationRuleRights> RightsInternal { get; set; } = new List<ServicebusNamespaceAuthorizationRuleRights>();
+        /// <summary><p>Name of Topic.</p></summary>
+        public virtual string TopicName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("servicebus topic authorization-rule create")
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--rights {value}", Rights, separator: ' ')
+              .Add("--topic-name {value}", TopicName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureServicebusTopicAuthorizationRuleDeleteSettings
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureServicebusTopicAuthorizationRuleDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
+        /// <summary><p>Name of Topic Authorization Rule.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of Topic.</p></summary>
+        public virtual string TopicName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("servicebus topic authorization-rule delete")
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--topic-name {value}", TopicName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureServicebusTopicAuthorizationRuleListSettings
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureServicebusTopicAuthorizationRuleListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of Topic.</p></summary>
+        public virtual string TopicName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("servicebus topic authorization-rule list")
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--topic-name {value}", TopicName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureServicebusTopicAuthorizationRuleShowSettings
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureServicebusTopicAuthorizationRuleShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
+        /// <summary><p>Name of Topic Authorization Rule.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of Topic.</p></summary>
+        public virtual string TopicName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("servicebus topic authorization-rule show")
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--topic-name {value}", TopicName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureServicebusTopicAuthorizationRuleUpdateSettings
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureServicebusTopicAuthorizationRuleUpdateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
+        /// <summary><p>Name of Topic Authorization Rule.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Space-separated list of Authorization rule rights.</p></summary>
+        public virtual IReadOnlyList<ServicebusNamespaceAuthorizationRuleRights> Rights => RightsInternal.AsReadOnly();
+        internal List<ServicebusNamespaceAuthorizationRuleRights> RightsInternal { get; set; } = new List<ServicebusNamespaceAuthorizationRuleRights>();
+        /// <summary><p>Name of Topic.</p></summary>
+        public virtual string TopicName { get; internal set; }
+        /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        public virtual string Add { get; internal set; }
+        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        public virtual string ForceString { get; internal set; }
+        /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        public virtual string Remove { get; internal set; }
+        /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        public virtual string Set { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("servicebus topic authorization-rule update")
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--rights {value}", Rights, separator: ' ')
+              .Add("--topic-name {value}", TopicName)
+              .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
+              .Add("--remove {value}", Remove)
+              .Add("--set {value}", Set)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureServicebusTopicSubscriptionCreateSettings
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureServicebusTopicSubscriptionCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
+        /// <summary><p>Name of Subscription.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of Topic.</p></summary>
+        public virtual string TopicName { get; internal set; }
+        /// <summary><p>ISO 8601 timeSpan  or duration time format for idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.</p></summary>
+        public virtual string AutoDeleteOnIdle { get; internal set; }
+        /// <summary><p>Allow dead lettering when filter evaluation exceptions occur.</p></summary>
+        public virtual bool? DeadLetterOnFilterExceptions { get; internal set; }
+        /// <summary><p>ISO 8601 or duration time format for Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.</p></summary>
+        public virtual string DefaultMessageTimeToLive { get; internal set; }
+        /// <summary><p>Allow server-side batched operations.</p></summary>
+        public virtual bool? EnableBatchedOperations { get; internal set; }
+        /// <summary><p>A boolean Value that indicates whether a subscription has dead letter support when a message expires.</p></summary>
+        public virtual bool? EnableDeadLetteringOnMessageExpiration { get; internal set; }
+        /// <summary><p>A boolean value indicating if a subscription supports the concept of sessions.</p></summary>
+        public virtual bool? EnableSession { get; internal set; }
+        /// <summary><p>Queue/Topic name to forward the Dead Letter message.</p></summary>
+        public virtual string ForwardDeadLetteredMessagesTo { get; internal set; }
+        /// <summary><p>Queue/Topic name to forward the messages.</p></summary>
+        public virtual string ForwardTo { get; internal set; }
+        /// <summary><p>ISO 8601 or duration format (day:minute:seconds) for lock duration timespan for the subscription. The default value is 1 minute.</p></summary>
+        public virtual string LockDuration { get; internal set; }
+        /// <summary><p>Number of maximum deliveries.</p></summary>
+        public virtual int? MaxDeliveryCount { get; internal set; }
+        /// <summary><p></p></summary>
+        public virtual ServicebusQueueStatus Status { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("servicebus topic subscription create")
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--topic-name {value}", TopicName)
+              .Add("--auto-delete-on-idle {value}", AutoDeleteOnIdle)
+              .Add("--dead-letter-on-filter-exceptions", DeadLetterOnFilterExceptions)
+              .Add("--default-message-time-to-live {value}", DefaultMessageTimeToLive)
+              .Add("--enable-batched-operations", EnableBatchedOperations)
+              .Add("--enable-dead-lettering-on-message-expiration", EnableDeadLetteringOnMessageExpiration)
+              .Add("--enable-session", EnableSession)
+              .Add("--forward-dead-lettered-messages-to {value}", ForwardDeadLetteredMessagesTo)
+              .Add("--forward-to {value}", ForwardTo)
+              .Add("--lock-duration {value}", LockDuration)
+              .Add("--max-delivery-count {value}", MaxDeliveryCount)
+              .Add("--status {value}", Status)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureServicebusTopicSubscriptionDeleteSettings
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureServicebusTopicSubscriptionDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
+        /// <summary><p>Name of Subscription.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of Topic.</p></summary>
+        public virtual string TopicName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("servicebus topic subscription delete")
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--topic-name {value}", TopicName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureServicebusTopicSubscriptionListSettings
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureServicebusTopicSubscriptionListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of Topic.</p></summary>
+        public virtual string TopicName { get; internal set; }
+        /// <summary><p>Skip is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skip parameter that specifies a starting point to use for subsequent calls.</p></summary>
+        public virtual string Skip { get; internal set; }
+        /// <summary><p>May be used to limit the number of results to the most recent N usageDetails.</p></summary>
+        public virtual string Top { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("servicebus topic subscription list")
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--topic-name {value}", TopicName)
+              .Add("--skip {value}", Skip)
+              .Add("--top {value}", Top)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureServicebusTopicSubscriptionShowSettings
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureServicebusTopicSubscriptionShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
+        /// <summary><p>Name of Subscription.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of Topic.</p></summary>
+        public virtual string TopicName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("servicebus topic subscription show")
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--topic-name {value}", TopicName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureServicebusTopicSubscriptionUpdateSettings
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureServicebusTopicSubscriptionUpdateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
+        /// <summary><p>Name of Subscription.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of Topic.</p></summary>
+        public virtual string TopicName { get; internal set; }
+        /// <summary><p>ISO 8601 timeSpan  or duration time format for idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.</p></summary>
+        public virtual string AutoDeleteOnIdle { get; internal set; }
+        /// <summary><p>Allow dead lettering when filter evaluation exceptions occur.</p></summary>
+        public virtual bool? DeadLetterOnFilterExceptions { get; internal set; }
+        /// <summary><p>ISO 8601 or duration time format for Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.</p></summary>
+        public virtual string DefaultMessageTimeToLive { get; internal set; }
+        /// <summary><p>Allow server-side batched operations.</p></summary>
+        public virtual bool? EnableBatchedOperations { get; internal set; }
+        /// <summary><p>A boolean Value that indicates whether a subscription has dead letter support when a message expires.</p></summary>
+        public virtual bool? EnableDeadLetteringOnMessageExpiration { get; internal set; }
+        /// <summary><p>A boolean value indicating if a subscription supports the concept of sessions.</p></summary>
+        public virtual bool? EnableSession { get; internal set; }
+        /// <summary><p>Queue/Topic name to forward the Dead Letter message.</p></summary>
+        public virtual string ForwardDeadLetteredMessagesTo { get; internal set; }
+        /// <summary><p>Queue/Topic name to forward the messages.</p></summary>
+        public virtual string ForwardTo { get; internal set; }
+        /// <summary><p>ISO 8601 or duration format (day:minute:seconds) for lock duration timespan for the subscription. The default value is 1 minute.</p></summary>
+        public virtual string LockDuration { get; internal set; }
+        /// <summary><p>Number of maximum deliveries.</p></summary>
+        public virtual int? MaxDeliveryCount { get; internal set; }
+        /// <summary><p></p></summary>
+        public virtual ServicebusQueueStatus Status { get; internal set; }
+        /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        public virtual string Add { get; internal set; }
+        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        public virtual string ForceString { get; internal set; }
+        /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        public virtual string Remove { get; internal set; }
+        /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        public virtual string Set { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("servicebus topic subscription update")
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--topic-name {value}", TopicName)
+              .Add("--auto-delete-on-idle {value}", AutoDeleteOnIdle)
+              .Add("--dead-letter-on-filter-exceptions", DeadLetterOnFilterExceptions)
+              .Add("--default-message-time-to-live {value}", DefaultMessageTimeToLive)
+              .Add("--enable-batched-operations", EnableBatchedOperations)
+              .Add("--enable-dead-lettering-on-message-expiration", EnableDeadLetteringOnMessageExpiration)
+              .Add("--enable-session", EnableSession)
+              .Add("--forward-dead-lettered-messages-to {value}", ForwardDeadLetteredMessagesTo)
+              .Add("--forward-to {value}", ForwardTo)
+              .Add("--lock-duration {value}", LockDuration)
+              .Add("--max-delivery-count {value}", MaxDeliveryCount)
+              .Add("--status {value}", Status)
+              .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
+              .Add("--remove {value}", Remove)
+              .Add("--set {value}", Set)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
+        /// <summary><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        public virtual string Alias { get; internal set; }
+        /// <summary><p>Name of Namespace AuthorizationRule.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("servicebus georecovery-alias authorization-rule keys list")
+              .Add("--alias {value}", Alias)
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2891,7 +3003,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -2936,7 +3048,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -2959,21 +3071,21 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings
+    #region AzureServicebusQueueAuthorizationRuleKeysListSettings
     /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings : ToolSettings
+    public partial class AzureServicebusQueueAuthorizationRuleKeysListSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureServicebus executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
-        /// <summary><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
-        public virtual string Alias { get; internal set; }
-        /// <summary><p>Name of Namespace AuthorizationRule.</p></summary>
+        /// <summary><p>Name of Queue Authorization Rule.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of Namespace.</p></summary>
         public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of Queue.</p></summary>
+        public virtual string QueueName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
@@ -2981,7 +3093,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -2989,11 +3101,61 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("servicebus georecovery-alias authorization-rule keys list")
-              .Add("--alias {value}", Alias)
+              .Add("servicebus queue authorization-rule keys list")
               .Add("--name {value}", Name)
               .Add("--namespace-name {value}", NamespaceName)
+              .Add("--queue-name {value}", QueueName)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureServicebusQueueAuthorizationRuleKeysRenewSettings
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureServicebusQueueAuthorizationRuleKeysRenewSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
+        /// <summary><p>Specifies Primary or Secondary key needs to be reset.</p></summary>
+        public virtual ServicebusNamespaceAuthorizationRuleKeysKey Key { get; internal set; }
+        /// <summary><p>Name of Queue Authorization Rule.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of Queue.</p></summary>
+        public virtual string QueueName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p></summary>
+        public virtual string KeyValue { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("servicebus queue authorization-rule keys renew")
+              .Add("--key {value}", Key)
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--queue-name {value}", QueueName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--key-value {value}", KeyValue)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3025,7 +3187,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -3073,7 +3235,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -3149,7 +3311,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -3210,7 +3372,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -3250,12 +3412,16 @@ namespace Nuke.Azure
         public virtual string SubscriptionName { get; internal set; }
         /// <summary><p>Name of Topic.</p></summary>
         public virtual string TopicName { get; internal set; }
+        /// <summary><p>Skip is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skip parameter that specifies a starting point to use for subsequent calls.</p></summary>
+        public virtual string Skip { get; internal set; }
+        /// <summary><p>May be used to limit the number of results to the most recent N usageDetails.</p></summary>
+        public virtual string Top { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -3268,6 +3434,8 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--subscription-name {value}", SubscriptionName)
               .Add("--topic-name {value}", TopicName)
+              .Add("--skip {value}", Skip)
+              .Add("--top {value}", Top)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3301,7 +3469,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -3373,6 +3541,8 @@ namespace Nuke.Azure
         public virtual string FilterSqlExpression { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
+        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        public virtual string ForceString { get; internal set; }
         /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         public virtual string Remove { get; internal set; }
         /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
@@ -3382,7 +3552,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -3411,102 +3581,9 @@ namespace Nuke.Azure
               .Add("--enable-sql-preprocessing", EnableSqlPreprocessing)
               .Add("--filter-sql-expression {value}", FilterSqlExpression)
               .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureServicebusQueueAuthorizationRuleKeysListSettings
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureServicebusQueueAuthorizationRuleKeysListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
-        /// <summary><p>Name of Queue Authorization Rule.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of Queue.</p></summary>
-        public virtual string QueueName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("servicebus queue authorization-rule keys list")
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--queue-name {value}", QueueName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureServicebusQueueAuthorizationRuleKeysRenewSettings
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureServicebusQueueAuthorizationRuleKeysRenewSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureServicebus executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureServicebusTasks.AzureServicebusPath;
-        /// <summary><p>Specifies Primary or Secondary key needs to be reset.</p></summary>
-        public virtual ServicebusNamespaceAuthorizationRuleKeysKey Key { get; internal set; }
-        /// <summary><p>Name of Queue Authorization Rule.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of Queue.</p></summary>
-        public virtual string QueueName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p></summary>
-        public virtual string KeyValue { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("servicebus queue authorization-rule keys renew")
-              .Add("--key {value}", Key)
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--queue-name {value}", QueueName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--key-value {value}", KeyValue)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3561,7 +3638,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureServicebusSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusSettings SetOutput(this AzureServicebusSettings toolSettings, Output output)
+        public static AzureServicebusSettings SetOutput(this AzureServicebusSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3606,6 +3683,2626 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureServicebusSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureServicebusSettings ResetVerbose(this AzureServicebusSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusGeorecoveryAliasBreakPairSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusGeorecoveryAliasBreakPairSettingsExtensions
+    {
+        #region Alias
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.Alias"/>.</em></p><p>Name of the Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasBreakPairSettings SetAlias(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings, string alias)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = alias;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.Alias"/>.</em></p><p>Name of the Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasBreakPairSettings ResetAlias(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasBreakPairSettings SetNamespaceName(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasBreakPairSettings ResetNamespaceName(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasBreakPairSettings SetResourceGroup(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasBreakPairSettings ResetResourceGroup(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasBreakPairSettings SetDebug(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasBreakPairSettings ResetDebug(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasBreakPairSettings SetHelp(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasBreakPairSettings ResetHelp(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasBreakPairSettings SetOutput(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasBreakPairSettings ResetOutput(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasBreakPairSettings SetQuery(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasBreakPairSettings ResetQuery(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasBreakPairSettings SetVerbose(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasBreakPairSettings ResetVerbose(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusGeorecoveryAliasDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusGeorecoveryAliasDeleteSettingsExtensions
+    {
+        #region Alias
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.Alias"/>.</em></p><p>Name of the Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasDeleteSettings SetAlias(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings, string alias)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = alias;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.Alias"/>.</em></p><p>Name of the Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasDeleteSettings ResetAlias(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasDeleteSettings SetNamespaceName(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasDeleteSettings ResetNamespaceName(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasDeleteSettings SetResourceGroup(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasDeleteSettings ResetResourceGroup(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasDeleteSettings SetDebug(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasDeleteSettings ResetDebug(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasDeleteSettings SetHelp(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasDeleteSettings ResetHelp(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasDeleteSettings SetOutput(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasDeleteSettings ResetOutput(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasDeleteSettings SetQuery(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasDeleteSettings ResetQuery(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasDeleteSettings SetVerbose(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasDeleteSettings ResetVerbose(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusGeorecoveryAliasExistsSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusGeorecoveryAliasExistsSettingsExtensions
+    {
+        #region Alias
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias to check availability.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasExistsSettings SetAlias(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings, string alias)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = alias;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias to check availability.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasExistsSettings ResetAlias(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasExistsSettings SetNamespaceName(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasExistsSettings ResetNamespaceName(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasExistsSettings SetResourceGroup(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasExistsSettings ResetResourceGroup(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasExistsSettings SetDebug(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasExistsSettings ResetDebug(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasExistsSettings SetHelp(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasExistsSettings ResetHelp(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasExistsSettings SetOutput(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasExistsSettings ResetOutput(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasExistsSettings SetQuery(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasExistsSettings ResetQuery(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasExistsSettings SetVerbose(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasExistsSettings ResetVerbose(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusGeorecoveryAliasFailOverSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusGeorecoveryAliasFailOverSettingsExtensions
+    {
+        #region Alias
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.Alias"/>.</em></p><p>Name of the Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasFailOverSettings SetAlias(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings, string alias)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = alias;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.Alias"/>.</em></p><p>Name of the Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasFailOverSettings ResetAlias(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasFailOverSettings SetNamespaceName(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasFailOverSettings ResetNamespaceName(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasFailOverSettings SetResourceGroup(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasFailOverSettings ResetResourceGroup(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasFailOverSettings SetDebug(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasFailOverSettings ResetDebug(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasFailOverSettings SetHelp(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasFailOverSettings ResetHelp(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasFailOverSettings SetOutput(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasFailOverSettings ResetOutput(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasFailOverSettings SetQuery(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasFailOverSettings ResetQuery(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasFailOverSettings SetVerbose(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasFailOverSettings ResetVerbose(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusGeorecoveryAliasListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusGeorecoveryAliasListSettingsExtensions
+    {
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasListSettings SetNamespaceName(this AzureServicebusGeorecoveryAliasListSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasListSettings ResetNamespaceName(this AzureServicebusGeorecoveryAliasListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasListSettings SetResourceGroup(this AzureServicebusGeorecoveryAliasListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasListSettings ResetResourceGroup(this AzureServicebusGeorecoveryAliasListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasListSettings SetDebug(this AzureServicebusGeorecoveryAliasListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasListSettings ResetDebug(this AzureServicebusGeorecoveryAliasListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasListSettings SetHelp(this AzureServicebusGeorecoveryAliasListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasListSettings ResetHelp(this AzureServicebusGeorecoveryAliasListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasListSettings SetOutput(this AzureServicebusGeorecoveryAliasListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasListSettings ResetOutput(this AzureServicebusGeorecoveryAliasListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasListSettings SetQuery(this AzureServicebusGeorecoveryAliasListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasListSettings ResetQuery(this AzureServicebusGeorecoveryAliasListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasListSettings SetVerbose(this AzureServicebusGeorecoveryAliasListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasListSettings ResetVerbose(this AzureServicebusGeorecoveryAliasListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusGeorecoveryAliasSetSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusGeorecoveryAliasSetSettingsExtensions
+    {
+        #region Alias
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasSetSettings.Alias"/>.</em></p><p>Name of the Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasSetSettings SetAlias(this AzureServicebusGeorecoveryAliasSetSettings toolSettings, string alias)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = alias;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasSetSettings.Alias"/>.</em></p><p>Name of the Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasSetSettings ResetAlias(this AzureServicebusGeorecoveryAliasSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasSetSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasSetSettings SetNamespaceName(this AzureServicebusGeorecoveryAliasSetSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasSetSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasSetSettings ResetNamespaceName(this AzureServicebusGeorecoveryAliasSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region PartnerNamespace
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasSetSettings.PartnerNamespace"/>.</em></p><p>Name (if within the same resource group) or ARM Id of Primary/Secondary Service Bus  namespace name, which is part of GEO DR pairing.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasSetSettings SetPartnerNamespace(this AzureServicebusGeorecoveryAliasSetSettings toolSettings, string partnerNamespace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PartnerNamespace = partnerNamespace;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasSetSettings.PartnerNamespace"/>.</em></p><p>Name (if within the same resource group) or ARM Id of Primary/Secondary Service Bus  namespace name, which is part of GEO DR pairing.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasSetSettings ResetPartnerNamespace(this AzureServicebusGeorecoveryAliasSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PartnerNamespace = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasSetSettings SetResourceGroup(this AzureServicebusGeorecoveryAliasSetSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasSetSettings ResetResourceGroup(this AzureServicebusGeorecoveryAliasSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AlternateName
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasSetSettings.AlternateName"/>.</em></p><p>Alternate Name (Post failover) for Primary Namespace, when Namespace name and Alias name are same.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasSetSettings SetAlternateName(this AzureServicebusGeorecoveryAliasSetSettings toolSettings, string alternateName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AlternateName = alternateName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasSetSettings.AlternateName"/>.</em></p><p>Alternate Name (Post failover) for Primary Namespace, when Namespace name and Alias name are same.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasSetSettings ResetAlternateName(this AzureServicebusGeorecoveryAliasSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AlternateName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasSetSettings SetDebug(this AzureServicebusGeorecoveryAliasSetSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasSetSettings ResetDebug(this AzureServicebusGeorecoveryAliasSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasSetSettings SetHelp(this AzureServicebusGeorecoveryAliasSetSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasSetSettings ResetHelp(this AzureServicebusGeorecoveryAliasSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasSetSettings SetOutput(this AzureServicebusGeorecoveryAliasSetSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasSetSettings ResetOutput(this AzureServicebusGeorecoveryAliasSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasSetSettings SetQuery(this AzureServicebusGeorecoveryAliasSetSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasSetSettings ResetQuery(this AzureServicebusGeorecoveryAliasSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasSetSettings SetVerbose(this AzureServicebusGeorecoveryAliasSetSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasSetSettings ResetVerbose(this AzureServicebusGeorecoveryAliasSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusGeorecoveryAliasShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusGeorecoveryAliasShowSettingsExtensions
+    {
+        #region Alias
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasShowSettings.Alias"/>.</em></p><p>Name of the Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasShowSettings SetAlias(this AzureServicebusGeorecoveryAliasShowSettings toolSettings, string alias)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = alias;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasShowSettings.Alias"/>.</em></p><p>Name of the Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasShowSettings ResetAlias(this AzureServicebusGeorecoveryAliasShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasShowSettings SetNamespaceName(this AzureServicebusGeorecoveryAliasShowSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasShowSettings ResetNamespaceName(this AzureServicebusGeorecoveryAliasShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasShowSettings SetResourceGroup(this AzureServicebusGeorecoveryAliasShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasShowSettings ResetResourceGroup(this AzureServicebusGeorecoveryAliasShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasShowSettings SetDebug(this AzureServicebusGeorecoveryAliasShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasShowSettings ResetDebug(this AzureServicebusGeorecoveryAliasShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasShowSettings SetHelp(this AzureServicebusGeorecoveryAliasShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasShowSettings ResetHelp(this AzureServicebusGeorecoveryAliasShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasShowSettings SetOutput(this AzureServicebusGeorecoveryAliasShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasShowSettings ResetOutput(this AzureServicebusGeorecoveryAliasShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasShowSettings SetQuery(this AzureServicebusGeorecoveryAliasShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasShowSettings ResetQuery(this AzureServicebusGeorecoveryAliasShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasShowSettings SetVerbose(this AzureServicebusGeorecoveryAliasShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasShowSettings ResetVerbose(this AzureServicebusGeorecoveryAliasShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusMigrationAbortSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusMigrationAbortSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureServicebusMigrationAbortSettings.Name"/>.</em></p><p>Name of Standard Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationAbortSettings SetName(this AzureServicebusMigrationAbortSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusMigrationAbortSettings.Name"/>.</em></p><p>Name of Standard Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationAbortSettings ResetName(this AzureServicebusMigrationAbortSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusMigrationAbortSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationAbortSettings SetResourceGroup(this AzureServicebusMigrationAbortSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusMigrationAbortSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationAbortSettings ResetResourceGroup(this AzureServicebusMigrationAbortSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusMigrationAbortSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationAbortSettings SetDebug(this AzureServicebusMigrationAbortSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusMigrationAbortSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationAbortSettings ResetDebug(this AzureServicebusMigrationAbortSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusMigrationAbortSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationAbortSettings SetHelp(this AzureServicebusMigrationAbortSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusMigrationAbortSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationAbortSettings ResetHelp(this AzureServicebusMigrationAbortSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusMigrationAbortSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationAbortSettings SetOutput(this AzureServicebusMigrationAbortSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusMigrationAbortSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationAbortSettings ResetOutput(this AzureServicebusMigrationAbortSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusMigrationAbortSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationAbortSettings SetQuery(this AzureServicebusMigrationAbortSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusMigrationAbortSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationAbortSettings ResetQuery(this AzureServicebusMigrationAbortSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusMigrationAbortSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationAbortSettings SetVerbose(this AzureServicebusMigrationAbortSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusMigrationAbortSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationAbortSettings ResetVerbose(this AzureServicebusMigrationAbortSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusMigrationCompleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusMigrationCompleteSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureServicebusMigrationCompleteSettings.Name"/>.</em></p><p>Name of Standard Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationCompleteSettings SetName(this AzureServicebusMigrationCompleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusMigrationCompleteSettings.Name"/>.</em></p><p>Name of Standard Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationCompleteSettings ResetName(this AzureServicebusMigrationCompleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusMigrationCompleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationCompleteSettings SetResourceGroup(this AzureServicebusMigrationCompleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusMigrationCompleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationCompleteSettings ResetResourceGroup(this AzureServicebusMigrationCompleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusMigrationCompleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationCompleteSettings SetDebug(this AzureServicebusMigrationCompleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusMigrationCompleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationCompleteSettings ResetDebug(this AzureServicebusMigrationCompleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusMigrationCompleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationCompleteSettings SetHelp(this AzureServicebusMigrationCompleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusMigrationCompleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationCompleteSettings ResetHelp(this AzureServicebusMigrationCompleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusMigrationCompleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationCompleteSettings SetOutput(this AzureServicebusMigrationCompleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusMigrationCompleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationCompleteSettings ResetOutput(this AzureServicebusMigrationCompleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusMigrationCompleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationCompleteSettings SetQuery(this AzureServicebusMigrationCompleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusMigrationCompleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationCompleteSettings ResetQuery(this AzureServicebusMigrationCompleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusMigrationCompleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationCompleteSettings SetVerbose(this AzureServicebusMigrationCompleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusMigrationCompleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationCompleteSettings ResetVerbose(this AzureServicebusMigrationCompleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusMigrationShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusMigrationShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureServicebusMigrationShowSettings.Name"/>.</em></p><p>Name of Standard Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationShowSettings SetName(this AzureServicebusMigrationShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusMigrationShowSettings.Name"/>.</em></p><p>Name of Standard Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationShowSettings ResetName(this AzureServicebusMigrationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusMigrationShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationShowSettings SetResourceGroup(this AzureServicebusMigrationShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusMigrationShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationShowSettings ResetResourceGroup(this AzureServicebusMigrationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusMigrationShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationShowSettings SetDebug(this AzureServicebusMigrationShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusMigrationShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationShowSettings ResetDebug(this AzureServicebusMigrationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusMigrationShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationShowSettings SetHelp(this AzureServicebusMigrationShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusMigrationShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationShowSettings ResetHelp(this AzureServicebusMigrationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusMigrationShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationShowSettings SetOutput(this AzureServicebusMigrationShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusMigrationShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationShowSettings ResetOutput(this AzureServicebusMigrationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusMigrationShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationShowSettings SetQuery(this AzureServicebusMigrationShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusMigrationShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationShowSettings ResetQuery(this AzureServicebusMigrationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusMigrationShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationShowSettings SetVerbose(this AzureServicebusMigrationShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusMigrationShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationShowSettings ResetVerbose(this AzureServicebusMigrationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusMigrationStartSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusMigrationStartSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureServicebusMigrationStartSettings.Name"/>.</em></p><p>Name of Standard Namespace used as source of the migration.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationStartSettings SetName(this AzureServicebusMigrationStartSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusMigrationStartSettings.Name"/>.</em></p><p>Name of Standard Namespace used as source of the migration.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationStartSettings ResetName(this AzureServicebusMigrationStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region PostMigrationName
+        /// <summary><p><em>Sets <see cref="AzureServicebusMigrationStartSettings.PostMigrationName"/>.</em></p><p>Post migration name is the name that can be used to connect to standard namespace after migration is complete.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationStartSettings SetPostMigrationName(this AzureServicebusMigrationStartSettings toolSettings, string postMigrationName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PostMigrationName = postMigrationName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusMigrationStartSettings.PostMigrationName"/>.</em></p><p>Post migration name is the name that can be used to connect to standard namespace after migration is complete.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationStartSettings ResetPostMigrationName(this AzureServicebusMigrationStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PostMigrationName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusMigrationStartSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationStartSettings SetResourceGroup(this AzureServicebusMigrationStartSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusMigrationStartSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationStartSettings ResetResourceGroup(this AzureServicebusMigrationStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region TargetNamespace
+        /// <summary><p><em>Sets <see cref="AzureServicebusMigrationStartSettings.TargetNamespace"/>.</em></p><p>Name (if within the same resource group) or ARM Id of empty Premium Service Bus namespace name that will be target of the migration.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationStartSettings SetTargetNamespace(this AzureServicebusMigrationStartSettings toolSettings, string targetNamespace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetNamespace = targetNamespace;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusMigrationStartSettings.TargetNamespace"/>.</em></p><p>Name (if within the same resource group) or ARM Id of empty Premium Service Bus namespace name that will be target of the migration.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationStartSettings ResetTargetNamespace(this AzureServicebusMigrationStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetNamespace = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusMigrationStartSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationStartSettings SetDebug(this AzureServicebusMigrationStartSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusMigrationStartSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationStartSettings ResetDebug(this AzureServicebusMigrationStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusMigrationStartSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationStartSettings SetHelp(this AzureServicebusMigrationStartSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusMigrationStartSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationStartSettings ResetHelp(this AzureServicebusMigrationStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusMigrationStartSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationStartSettings SetOutput(this AzureServicebusMigrationStartSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusMigrationStartSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationStartSettings ResetOutput(this AzureServicebusMigrationStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusMigrationStartSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationStartSettings SetQuery(this AzureServicebusMigrationStartSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusMigrationStartSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationStartSettings ResetQuery(this AzureServicebusMigrationStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusMigrationStartSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationStartSettings SetVerbose(this AzureServicebusMigrationStartSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusMigrationStartSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusMigrationStartSettings ResetVerbose(this AzureServicebusMigrationStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusNamespaceCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusNamespaceCreateSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceCreateSettings.Name"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceCreateSettings SetName(this AzureServicebusNamespaceCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceCreateSettings.Name"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceCreateSettings ResetName(this AzureServicebusNamespaceCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceCreateSettings SetResourceGroup(this AzureServicebusNamespaceCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceCreateSettings ResetResourceGroup(this AzureServicebusNamespaceCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Capacity
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceCreateSettings.Capacity"/>.</em></p><p>Number of message units. This property is only applicable to namespaces of Premium SKU.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceCreateSettings SetCapacity(this AzureServicebusNamespaceCreateSettings toolSettings, ServicebusNamespaceCapacity capacity)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Capacity = capacity;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceCreateSettings.Capacity"/>.</em></p><p>Number of message units. This property is only applicable to namespaces of Premium SKU.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceCreateSettings ResetCapacity(this AzureServicebusNamespaceCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Capacity = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Location
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceCreateSettings SetLocation(this AzureServicebusNamespaceCreateSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceCreateSettings ResetLocation(this AzureServicebusNamespaceCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Sku
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceCreateSettings.Sku"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceCreateSettings SetSku(this AzureServicebusNamespaceCreateSettings toolSettings, ServicebusNamespaceSku sku)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Sku = sku;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceCreateSettings.Sku"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceCreateSettings ResetSku(this AzureServicebusNamespaceCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Sku = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tags
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceCreateSettings SetTags(this AzureServicebusNamespaceCreateSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceCreateSettings ResetTags(this AzureServicebusNamespaceCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceCreateSettings SetDebug(this AzureServicebusNamespaceCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceCreateSettings ResetDebug(this AzureServicebusNamespaceCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceCreateSettings SetHelp(this AzureServicebusNamespaceCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceCreateSettings ResetHelp(this AzureServicebusNamespaceCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceCreateSettings SetOutput(this AzureServicebusNamespaceCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceCreateSettings ResetOutput(this AzureServicebusNamespaceCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceCreateSettings SetQuery(this AzureServicebusNamespaceCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceCreateSettings ResetQuery(this AzureServicebusNamespaceCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceCreateSettings SetVerbose(this AzureServicebusNamespaceCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceCreateSettings ResetVerbose(this AzureServicebusNamespaceCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusNamespaceDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusNamespaceDeleteSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceDeleteSettings.Name"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceDeleteSettings SetName(this AzureServicebusNamespaceDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceDeleteSettings.Name"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceDeleteSettings ResetName(this AzureServicebusNamespaceDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceDeleteSettings SetResourceGroup(this AzureServicebusNamespaceDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceDeleteSettings ResetResourceGroup(this AzureServicebusNamespaceDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceDeleteSettings SetDebug(this AzureServicebusNamespaceDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceDeleteSettings ResetDebug(this AzureServicebusNamespaceDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceDeleteSettings SetHelp(this AzureServicebusNamespaceDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceDeleteSettings ResetHelp(this AzureServicebusNamespaceDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceDeleteSettings SetOutput(this AzureServicebusNamespaceDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceDeleteSettings ResetOutput(this AzureServicebusNamespaceDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceDeleteSettings SetQuery(this AzureServicebusNamespaceDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceDeleteSettings ResetQuery(this AzureServicebusNamespaceDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceDeleteSettings SetVerbose(this AzureServicebusNamespaceDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceDeleteSettings ResetVerbose(this AzureServicebusNamespaceDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusNamespaceExistsSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusNamespaceExistsSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceExistsSettings.Name"/>.</em></p><p>Namespace name. Name can contain only letters, numbers, and hyphens. The namespace must start with a letter, and it must end with a letter or number.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceExistsSettings SetName(this AzureServicebusNamespaceExistsSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceExistsSettings.Name"/>.</em></p><p>Namespace name. Name can contain only letters, numbers, and hyphens. The namespace must start with a letter, and it must end with a letter or number.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceExistsSettings ResetName(this AzureServicebusNamespaceExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceExistsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceExistsSettings SetDebug(this AzureServicebusNamespaceExistsSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceExistsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceExistsSettings ResetDebug(this AzureServicebusNamespaceExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceExistsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceExistsSettings SetHelp(this AzureServicebusNamespaceExistsSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceExistsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceExistsSettings ResetHelp(this AzureServicebusNamespaceExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceExistsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceExistsSettings SetOutput(this AzureServicebusNamespaceExistsSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceExistsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceExistsSettings ResetOutput(this AzureServicebusNamespaceExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceExistsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceExistsSettings SetQuery(this AzureServicebusNamespaceExistsSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceExistsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceExistsSettings ResetQuery(this AzureServicebusNamespaceExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceExistsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceExistsSettings SetVerbose(this AzureServicebusNamespaceExistsSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceExistsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceExistsSettings ResetVerbose(this AzureServicebusNamespaceExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusNamespaceListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusNamespaceListSettingsExtensions
+    {
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceListSettings SetResourceGroup(this AzureServicebusNamespaceListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceListSettings ResetResourceGroup(this AzureServicebusNamespaceListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceListSettings SetDebug(this AzureServicebusNamespaceListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceListSettings ResetDebug(this AzureServicebusNamespaceListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceListSettings SetHelp(this AzureServicebusNamespaceListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceListSettings ResetHelp(this AzureServicebusNamespaceListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceListSettings SetOutput(this AzureServicebusNamespaceListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceListSettings ResetOutput(this AzureServicebusNamespaceListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceListSettings SetQuery(this AzureServicebusNamespaceListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceListSettings ResetQuery(this AzureServicebusNamespaceListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceListSettings SetVerbose(this AzureServicebusNamespaceListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceListSettings ResetVerbose(this AzureServicebusNamespaceListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusNamespaceShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusNamespaceShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceShowSettings.Name"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceShowSettings SetName(this AzureServicebusNamespaceShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceShowSettings.Name"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceShowSettings ResetName(this AzureServicebusNamespaceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceShowSettings SetResourceGroup(this AzureServicebusNamespaceShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceShowSettings ResetResourceGroup(this AzureServicebusNamespaceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceShowSettings SetDebug(this AzureServicebusNamespaceShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceShowSettings ResetDebug(this AzureServicebusNamespaceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceShowSettings SetHelp(this AzureServicebusNamespaceShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceShowSettings ResetHelp(this AzureServicebusNamespaceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceShowSettings SetOutput(this AzureServicebusNamespaceShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceShowSettings ResetOutput(this AzureServicebusNamespaceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceShowSettings SetQuery(this AzureServicebusNamespaceShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceShowSettings ResetQuery(this AzureServicebusNamespaceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceShowSettings SetVerbose(this AzureServicebusNamespaceShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceShowSettings ResetVerbose(this AzureServicebusNamespaceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusNamespaceUpdateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusNamespaceUpdateSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceUpdateSettings.Name"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceUpdateSettings SetName(this AzureServicebusNamespaceUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceUpdateSettings.Name"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceUpdateSettings ResetName(this AzureServicebusNamespaceUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceUpdateSettings SetResourceGroup(this AzureServicebusNamespaceUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceUpdateSettings ResetResourceGroup(this AzureServicebusNamespaceUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Capacity
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceUpdateSettings.Capacity"/>.</em></p><p>Number of message units. This property is only applicable to namespaces of Premium SKU.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceUpdateSettings SetCapacity(this AzureServicebusNamespaceUpdateSettings toolSettings, ServicebusNamespaceCapacity capacity)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Capacity = capacity;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceUpdateSettings.Capacity"/>.</em></p><p>Number of message units. This property is only applicable to namespaces of Premium SKU.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceUpdateSettings ResetCapacity(this AzureServicebusNamespaceUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Capacity = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Sku
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceUpdateSettings.Sku"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceUpdateSettings SetSku(this AzureServicebusNamespaceUpdateSettings toolSettings, ServicebusNamespaceSku sku)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Sku = sku;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceUpdateSettings.Sku"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceUpdateSettings ResetSku(this AzureServicebusNamespaceUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Sku = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tags
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceUpdateSettings SetTags(this AzureServicebusNamespaceUpdateSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceUpdateSettings ResetTags(this AzureServicebusNamespaceUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Add
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceUpdateSettings SetAdd(this AzureServicebusNamespaceUpdateSettings toolSettings, string add)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = add;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceUpdateSettings ResetAdd(this AzureServicebusNamespaceUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ForceString
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceUpdateSettings SetForceString(this AzureServicebusNamespaceUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceUpdateSettings ResetForceString(this AzureServicebusNamespaceUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Remove
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceUpdateSettings SetRemove(this AzureServicebusNamespaceUpdateSettings toolSettings, string remove)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = remove;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceUpdateSettings ResetRemove(this AzureServicebusNamespaceUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Set
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceUpdateSettings SetSet(this AzureServicebusNamespaceUpdateSettings toolSettings, string set)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = set;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceUpdateSettings ResetSet(this AzureServicebusNamespaceUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceUpdateSettings SetDebug(this AzureServicebusNamespaceUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceUpdateSettings ResetDebug(this AzureServicebusNamespaceUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceUpdateSettings SetHelp(this AzureServicebusNamespaceUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceUpdateSettings ResetHelp(this AzureServicebusNamespaceUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceUpdateSettings SetOutput(this AzureServicebusNamespaceUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceUpdateSettings ResetOutput(this AzureServicebusNamespaceUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceUpdateSettings SetQuery(this AzureServicebusNamespaceUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceUpdateSettings ResetQuery(this AzureServicebusNamespaceUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceUpdateSettings SetVerbose(this AzureServicebusNamespaceUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceUpdateSettings ResetVerbose(this AzureServicebusNamespaceUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -3725,6 +6422,48 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.DuplicateDetectionHistoryTimeWindow = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EnableBatchedOperations
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueCreateSettings.EnableBatchedOperations"/>.</em></p><p>Allow server-side batched operations.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueCreateSettings SetEnableBatchedOperations(this AzureServicebusQueueCreateSettings toolSettings, bool? enableBatchedOperations)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableBatchedOperations = enableBatchedOperations;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueCreateSettings.EnableBatchedOperations"/>.</em></p><p>Allow server-side batched operations.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueCreateSettings ResetEnableBatchedOperations(this AzureServicebusQueueCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableBatchedOperations = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureServicebusQueueCreateSettings.EnableBatchedOperations"/>.</em></p><p>Allow server-side batched operations.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueCreateSettings EnableEnableBatchedOperations(this AzureServicebusQueueCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableBatchedOperations = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureServicebusQueueCreateSettings.EnableBatchedOperations"/>.</em></p><p>Allow server-side batched operations.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueCreateSettings DisableEnableBatchedOperations(this AzureServicebusQueueCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableBatchedOperations = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureServicebusQueueCreateSettings.EnableBatchedOperations"/>.</em></p><p>Allow server-side batched operations.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueCreateSettings ToggleEnableBatchedOperations(this AzureServicebusQueueCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableBatchedOperations = !toolSettings.EnableBatchedOperations;
             return toolSettings;
         }
         #endregion
@@ -4085,7 +6824,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureServicebusQueueCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusQueueCreateSettings SetOutput(this AzureServicebusQueueCreateSettings toolSettings, Output output)
+        public static AzureServicebusQueueCreateSettings SetOutput(this AzureServicebusQueueCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4237,7 +6976,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureServicebusQueueDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusQueueDeleteSettings SetOutput(this AzureServicebusQueueDeleteSettings toolSettings, Output output)
+        public static AzureServicebusQueueDeleteSettings SetOutput(this AzureServicebusQueueDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4332,6 +7071,42 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Skip
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueListSettings.Skip"/>.</em></p><p>Skip is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skip parameter that specifies a starting point to use for subsequent calls.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueListSettings SetSkip(this AzureServicebusQueueListSettings toolSettings, string skip)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Skip = skip;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueListSettings.Skip"/>.</em></p><p>Skip is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skip parameter that specifies a starting point to use for subsequent calls.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueListSettings ResetSkip(this AzureServicebusQueueListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Skip = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Top
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueListSettings.Top"/>.</em></p><p>May be used to limit the number of results to the most recent N usageDetails.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueListSettings SetTop(this AzureServicebusQueueListSettings toolSettings, string top)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = top;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueListSettings.Top"/>.</em></p><p>May be used to limit the number of results to the most recent N usageDetails.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueListSettings ResetTop(this AzureServicebusQueueListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureServicebusQueueListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -4371,7 +7146,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureServicebusQueueListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusQueueListSettings SetOutput(this AzureServicebusQueueListSettings toolSettings, Output output)
+        public static AzureServicebusQueueListSettings SetOutput(this AzureServicebusQueueListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4523,7 +7298,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureServicebusQueueShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusQueueShowSettings SetOutput(this AzureServicebusQueueShowSettings toolSettings, Output output)
+        public static AzureServicebusQueueShowSettings SetOutput(this AzureServicebusQueueShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4637,7 +7412,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region AutoDeleteOnIdle
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueUpdateSettings.AutoDeleteOnIdle"/>.</em></p><p>ISO 8601 timeSpan or duration time format for idle interval after which the queue is automatically deleted.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueUpdateSettings.AutoDeleteOnIdle"/>.</em></p><p>ISO 8601 timeSpan or duration time format for idle interval after which the queue is automatically deleted. The minimum duration is 5 minutes.</p></summary>
         [Pure]
         public static AzureServicebusQueueUpdateSettings SetAutoDeleteOnIdle(this AzureServicebusQueueUpdateSettings toolSettings, string autoDeleteOnIdle)
         {
@@ -4645,7 +7420,7 @@ namespace Nuke.Azure
             toolSettings.AutoDeleteOnIdle = autoDeleteOnIdle;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueUpdateSettings.AutoDeleteOnIdle"/>.</em></p><p>ISO 8601 timeSpan or duration time format for idle interval after which the queue is automatically deleted.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueUpdateSettings.AutoDeleteOnIdle"/>.</em></p><p>ISO 8601 timeSpan or duration time format for idle interval after which the queue is automatically deleted. The minimum duration is 5 minutes.</p></summary>
         [Pure]
         public static AzureServicebusQueueUpdateSettings ResetAutoDeleteOnIdle(this AzureServicebusQueueUpdateSettings toolSettings)
         {
@@ -4673,7 +7448,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region DuplicateDetectionHistoryTimeWindow
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueUpdateSettings.DuplicateDetectionHistoryTimeWindow"/>.</em></p><p>ISO 8601 timeSpan structure that defines the duration of the duplicate detection history.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueUpdateSettings.DuplicateDetectionHistoryTimeWindow"/>.</em></p><p>ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.</p></summary>
         [Pure]
         public static AzureServicebusQueueUpdateSettings SetDuplicateDetectionHistoryTimeWindow(this AzureServicebusQueueUpdateSettings toolSettings, string duplicateDetectionHistoryTimeWindow)
         {
@@ -4681,12 +7456,54 @@ namespace Nuke.Azure
             toolSettings.DuplicateDetectionHistoryTimeWindow = duplicateDetectionHistoryTimeWindow;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueUpdateSettings.DuplicateDetectionHistoryTimeWindow"/>.</em></p><p>ISO 8601 timeSpan structure that defines the duration of the duplicate detection history.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueUpdateSettings.DuplicateDetectionHistoryTimeWindow"/>.</em></p><p>ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.</p></summary>
         [Pure]
         public static AzureServicebusQueueUpdateSettings ResetDuplicateDetectionHistoryTimeWindow(this AzureServicebusQueueUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.DuplicateDetectionHistoryTimeWindow = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EnableBatchedOperations
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueUpdateSettings.EnableBatchedOperations"/>.</em></p><p>Allow server-side batched operations.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueUpdateSettings SetEnableBatchedOperations(this AzureServicebusQueueUpdateSettings toolSettings, bool? enableBatchedOperations)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableBatchedOperations = enableBatchedOperations;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueUpdateSettings.EnableBatchedOperations"/>.</em></p><p>Allow server-side batched operations.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueUpdateSettings ResetEnableBatchedOperations(this AzureServicebusQueueUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableBatchedOperations = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureServicebusQueueUpdateSettings.EnableBatchedOperations"/>.</em></p><p>Allow server-side batched operations.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueUpdateSettings EnableEnableBatchedOperations(this AzureServicebusQueueUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableBatchedOperations = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureServicebusQueueUpdateSettings.EnableBatchedOperations"/>.</em></p><p>Allow server-side batched operations.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueUpdateSettings DisableEnableBatchedOperations(this AzureServicebusQueueUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableBatchedOperations = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureServicebusQueueUpdateSettings.EnableBatchedOperations"/>.</em></p><p>Allow server-side batched operations.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueUpdateSettings ToggleEnableBatchedOperations(this AzureServicebusQueueUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableBatchedOperations = !toolSettings.EnableBatchedOperations;
             return toolSettings;
         }
         #endregion
@@ -4937,7 +7754,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region LockDuration
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueUpdateSettings.LockDuration"/>.</em></p><p>String ISO 8601 timespan or duration format for duration of a peek-lock; that is, the amount of time that the message is locked for other receivers.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueUpdateSettings.LockDuration"/>.</em></p><p>String ISO 8601 timespan or duration format for duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. The maximum value for LockDuration is 5 minutes; the default value is 1 minute.</p></summary>
         [Pure]
         public static AzureServicebusQueueUpdateSettings SetLockDuration(this AzureServicebusQueueUpdateSettings toolSettings, string lockDuration)
         {
@@ -4945,7 +7762,7 @@ namespace Nuke.Azure
             toolSettings.LockDuration = lockDuration;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueUpdateSettings.LockDuration"/>.</em></p><p>String ISO 8601 timespan or duration format for duration of a peek-lock; that is, the amount of time that the message is locked for other receivers.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueUpdateSettings.LockDuration"/>.</em></p><p>String ISO 8601 timespan or duration format for duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. The maximum value for LockDuration is 5 minutes; the default value is 1 minute.</p></summary>
         [Pure]
         public static AzureServicebusQueueUpdateSettings ResetLockDuration(this AzureServicebusQueueUpdateSettings toolSettings)
         {
@@ -4955,7 +7772,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region MaxDeliveryCount
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueUpdateSettings.MaxDeliveryCount"/>.</em></p><p>The maximum delivery count. A message is automatically deadlettered after this number of deliveries.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueUpdateSettings.MaxDeliveryCount"/>.</em></p><p>The maximum delivery count. A message is automatically deadlettered after this number of deliveries. default value is 10.</p></summary>
         [Pure]
         public static AzureServicebusQueueUpdateSettings SetMaxDeliveryCount(this AzureServicebusQueueUpdateSettings toolSettings, string maxDeliveryCount)
         {
@@ -4963,7 +7780,7 @@ namespace Nuke.Azure
             toolSettings.MaxDeliveryCount = maxDeliveryCount;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueUpdateSettings.MaxDeliveryCount"/>.</em></p><p>The maximum delivery count. A message is automatically deadlettered after this number of deliveries.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueUpdateSettings.MaxDeliveryCount"/>.</em></p><p>The maximum delivery count. A message is automatically deadlettered after this number of deliveries. default value is 10.</p></summary>
         [Pure]
         public static AzureServicebusQueueUpdateSettings ResetMaxDeliveryCount(this AzureServicebusQueueUpdateSettings toolSettings)
         {
@@ -4973,7 +7790,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region MaxSize
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueUpdateSettings.MaxSize"/>.</em></p><p>The maximum size of queue in megabytes, which is the size of memory allocated for the queue.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueUpdateSettings.MaxSize"/>.</em></p><p>The maximum size of queue in megabytes, which is the size of memory allocated for the queue. Default is 1024.</p></summary>
         [Pure]
         public static AzureServicebusQueueUpdateSettings SetMaxSize(this AzureServicebusQueueUpdateSettings toolSettings, ServicebusQueueMaxSize maxSize)
         {
@@ -4981,7 +7798,7 @@ namespace Nuke.Azure
             toolSettings.MaxSize = maxSize;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueUpdateSettings.MaxSize"/>.</em></p><p>The maximum size of queue in megabytes, which is the size of memory allocated for the queue.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueUpdateSettings.MaxSize"/>.</em></p><p>The maximum size of queue in megabytes, which is the size of memory allocated for the queue. Default is 1024.</p></summary>
         [Pure]
         public static AzureServicebusQueueUpdateSettings ResetMaxSize(this AzureServicebusQueueUpdateSettings toolSettings)
         {
@@ -5023,6 +7840,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Add = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ForceString
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueUpdateSettings SetForceString(this AzureServicebusQueueUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueUpdateSettings ResetForceString(this AzureServicebusQueueUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
             return toolSettings;
         }
         #endregion
@@ -5101,7 +7936,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureServicebusQueueUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusQueueUpdateSettings SetOutput(this AzureServicebusQueueUpdateSettings toolSettings, Output output)
+        public static AzureServicebusQueueUpdateSettings SetOutput(this AzureServicebusQueueUpdateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -5146,2036 +7981,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureServicebusQueueUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureServicebusQueueUpdateSettings ResetVerbose(this AzureServicebusQueueUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureServicebusGeorecoveryAliasBreakPairSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusGeorecoveryAliasBreakPairSettingsExtensions
-    {
-        #region Alias
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.Alias"/>.</em></p><p>Name of the Geo-Disaster Recovery Configuration Alias.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasBreakPairSettings SetAlias(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings, string alias)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = alias;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.Alias"/>.</em></p><p>Name of the Geo-Disaster Recovery Configuration Alias.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasBreakPairSettings ResetAlias(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasBreakPairSettings SetNamespaceName(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasBreakPairSettings ResetNamespaceName(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasBreakPairSettings SetResourceGroup(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasBreakPairSettings ResetResourceGroup(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasBreakPairSettings SetDebug(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasBreakPairSettings ResetDebug(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasBreakPairSettings SetHelp(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasBreakPairSettings ResetHelp(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasBreakPairSettings SetOutput(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasBreakPairSettings ResetOutput(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasBreakPairSettings SetQuery(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasBreakPairSettings ResetQuery(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasBreakPairSettings SetVerbose(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasBreakPairSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasBreakPairSettings ResetVerbose(this AzureServicebusGeorecoveryAliasBreakPairSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureServicebusGeorecoveryAliasDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusGeorecoveryAliasDeleteSettingsExtensions
-    {
-        #region Alias
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.Alias"/>.</em></p><p>Name of the Geo-Disaster Recovery Configuration Alias.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasDeleteSettings SetAlias(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings, string alias)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = alias;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.Alias"/>.</em></p><p>Name of the Geo-Disaster Recovery Configuration Alias.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasDeleteSettings ResetAlias(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasDeleteSettings SetNamespaceName(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasDeleteSettings ResetNamespaceName(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasDeleteSettings SetResourceGroup(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasDeleteSettings ResetResourceGroup(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasDeleteSettings SetDebug(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasDeleteSettings ResetDebug(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasDeleteSettings SetHelp(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasDeleteSettings ResetHelp(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasDeleteSettings SetOutput(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasDeleteSettings ResetOutput(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasDeleteSettings SetQuery(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasDeleteSettings ResetQuery(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasDeleteSettings SetVerbose(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasDeleteSettings ResetVerbose(this AzureServicebusGeorecoveryAliasDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureServicebusGeorecoveryAliasExistsSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusGeorecoveryAliasExistsSettingsExtensions
-    {
-        #region Alias
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias to check availability.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasExistsSettings SetAlias(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings, string alias)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = alias;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias to check availability.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasExistsSettings ResetAlias(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasExistsSettings SetNamespaceName(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasExistsSettings ResetNamespaceName(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasExistsSettings SetResourceGroup(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasExistsSettings ResetResourceGroup(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasExistsSettings SetDebug(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasExistsSettings ResetDebug(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasExistsSettings SetHelp(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasExistsSettings ResetHelp(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasExistsSettings SetOutput(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasExistsSettings ResetOutput(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasExistsSettings SetQuery(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasExistsSettings ResetQuery(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasExistsSettings SetVerbose(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasExistsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasExistsSettings ResetVerbose(this AzureServicebusGeorecoveryAliasExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureServicebusGeorecoveryAliasFailOverSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusGeorecoveryAliasFailOverSettingsExtensions
-    {
-        #region Alias
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.Alias"/>.</em></p><p>Name of the Geo-Disaster Recovery Configuration Alias.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasFailOverSettings SetAlias(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings, string alias)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = alias;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.Alias"/>.</em></p><p>Name of the Geo-Disaster Recovery Configuration Alias.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasFailOverSettings ResetAlias(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasFailOverSettings SetNamespaceName(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasFailOverSettings ResetNamespaceName(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasFailOverSettings SetResourceGroup(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasFailOverSettings ResetResourceGroup(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasFailOverSettings SetDebug(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasFailOverSettings ResetDebug(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasFailOverSettings SetHelp(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasFailOverSettings ResetHelp(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasFailOverSettings SetOutput(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasFailOverSettings ResetOutput(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasFailOverSettings SetQuery(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasFailOverSettings ResetQuery(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasFailOverSettings SetVerbose(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasFailOverSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasFailOverSettings ResetVerbose(this AzureServicebusGeorecoveryAliasFailOverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureServicebusGeorecoveryAliasListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusGeorecoveryAliasListSettingsExtensions
-    {
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasListSettings SetNamespaceName(this AzureServicebusGeorecoveryAliasListSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasListSettings ResetNamespaceName(this AzureServicebusGeorecoveryAliasListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasListSettings SetResourceGroup(this AzureServicebusGeorecoveryAliasListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasListSettings ResetResourceGroup(this AzureServicebusGeorecoveryAliasListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasListSettings SetDebug(this AzureServicebusGeorecoveryAliasListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasListSettings ResetDebug(this AzureServicebusGeorecoveryAliasListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasListSettings SetHelp(this AzureServicebusGeorecoveryAliasListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasListSettings ResetHelp(this AzureServicebusGeorecoveryAliasListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasListSettings SetOutput(this AzureServicebusGeorecoveryAliasListSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasListSettings ResetOutput(this AzureServicebusGeorecoveryAliasListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasListSettings SetQuery(this AzureServicebusGeorecoveryAliasListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasListSettings ResetQuery(this AzureServicebusGeorecoveryAliasListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasListSettings SetVerbose(this AzureServicebusGeorecoveryAliasListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasListSettings ResetVerbose(this AzureServicebusGeorecoveryAliasListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureServicebusGeorecoveryAliasSetSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusGeorecoveryAliasSetSettingsExtensions
-    {
-        #region Alias
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasSetSettings.Alias"/>.</em></p><p>Name of the Geo-Disaster Recovery Configuration Alias.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasSetSettings SetAlias(this AzureServicebusGeorecoveryAliasSetSettings toolSettings, string alias)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = alias;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasSetSettings.Alias"/>.</em></p><p>Name of the Geo-Disaster Recovery Configuration Alias.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasSetSettings ResetAlias(this AzureServicebusGeorecoveryAliasSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasSetSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasSetSettings SetNamespaceName(this AzureServicebusGeorecoveryAliasSetSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasSetSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasSetSettings ResetNamespaceName(this AzureServicebusGeorecoveryAliasSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region PartnerNamespace
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasSetSettings.PartnerNamespace"/>.</em></p><p>Name (if within the same resource group) or ARM Id of Primary/Secondary eventhub namespace name, which is part of GEO DR pairing.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasSetSettings SetPartnerNamespace(this AzureServicebusGeorecoveryAliasSetSettings toolSettings, string partnerNamespace)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PartnerNamespace = partnerNamespace;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasSetSettings.PartnerNamespace"/>.</em></p><p>Name (if within the same resource group) or ARM Id of Primary/Secondary eventhub namespace name, which is part of GEO DR pairing.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasSetSettings ResetPartnerNamespace(this AzureServicebusGeorecoveryAliasSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PartnerNamespace = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasSetSettings SetResourceGroup(this AzureServicebusGeorecoveryAliasSetSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasSetSettings ResetResourceGroup(this AzureServicebusGeorecoveryAliasSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region AlternateName
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasSetSettings.AlternateName"/>.</em></p><p>Alternate Name (Post failover) for Primary Namespace, when Namespace name and Alias name are same.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasSetSettings SetAlternateName(this AzureServicebusGeorecoveryAliasSetSettings toolSettings, string alternateName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AlternateName = alternateName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasSetSettings.AlternateName"/>.</em></p><p>Alternate Name (Post failover) for Primary Namespace, when Namespace name and Alias name are same.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasSetSettings ResetAlternateName(this AzureServicebusGeorecoveryAliasSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AlternateName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasSetSettings SetDebug(this AzureServicebusGeorecoveryAliasSetSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasSetSettings ResetDebug(this AzureServicebusGeorecoveryAliasSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasSetSettings SetHelp(this AzureServicebusGeorecoveryAliasSetSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasSetSettings ResetHelp(this AzureServicebusGeorecoveryAliasSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasSetSettings SetOutput(this AzureServicebusGeorecoveryAliasSetSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasSetSettings ResetOutput(this AzureServicebusGeorecoveryAliasSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasSetSettings SetQuery(this AzureServicebusGeorecoveryAliasSetSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasSetSettings ResetQuery(this AzureServicebusGeorecoveryAliasSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasSetSettings SetVerbose(this AzureServicebusGeorecoveryAliasSetSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasSetSettings ResetVerbose(this AzureServicebusGeorecoveryAliasSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureServicebusGeorecoveryAliasShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusGeorecoveryAliasShowSettingsExtensions
-    {
-        #region Alias
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasShowSettings.Alias"/>.</em></p><p>Name of the Geo-Disaster Recovery Configuration Alias.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasShowSettings SetAlias(this AzureServicebusGeorecoveryAliasShowSettings toolSettings, string alias)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = alias;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasShowSettings.Alias"/>.</em></p><p>Name of the Geo-Disaster Recovery Configuration Alias.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasShowSettings ResetAlias(this AzureServicebusGeorecoveryAliasShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasShowSettings SetNamespaceName(this AzureServicebusGeorecoveryAliasShowSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasShowSettings ResetNamespaceName(this AzureServicebusGeorecoveryAliasShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasShowSettings SetResourceGroup(this AzureServicebusGeorecoveryAliasShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasShowSettings ResetResourceGroup(this AzureServicebusGeorecoveryAliasShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasShowSettings SetDebug(this AzureServicebusGeorecoveryAliasShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasShowSettings ResetDebug(this AzureServicebusGeorecoveryAliasShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasShowSettings SetHelp(this AzureServicebusGeorecoveryAliasShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasShowSettings ResetHelp(this AzureServicebusGeorecoveryAliasShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasShowSettings SetOutput(this AzureServicebusGeorecoveryAliasShowSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasShowSettings ResetOutput(this AzureServicebusGeorecoveryAliasShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasShowSettings SetQuery(this AzureServicebusGeorecoveryAliasShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasShowSettings ResetQuery(this AzureServicebusGeorecoveryAliasShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasShowSettings SetVerbose(this AzureServicebusGeorecoveryAliasShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasShowSettings ResetVerbose(this AzureServicebusGeorecoveryAliasShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureServicebusNamespaceCreateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusNamespaceCreateSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceCreateSettings.Name"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceCreateSettings SetName(this AzureServicebusNamespaceCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceCreateSettings.Name"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceCreateSettings ResetName(this AzureServicebusNamespaceCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceCreateSettings SetResourceGroup(this AzureServicebusNamespaceCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceCreateSettings ResetResourceGroup(this AzureServicebusNamespaceCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Capacity
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceCreateSettings.Capacity"/>.</em></p><p>Number of message units. This property is only applicable to namespaces of Premium SKU.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceCreateSettings SetCapacity(this AzureServicebusNamespaceCreateSettings toolSettings, ServicebusNamespaceCapacity capacity)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Capacity = capacity;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceCreateSettings.Capacity"/>.</em></p><p>Number of message units. This property is only applicable to namespaces of Premium SKU.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceCreateSettings ResetCapacity(this AzureServicebusNamespaceCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Capacity = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Location
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceCreateSettings SetLocation(this AzureServicebusNamespaceCreateSettings toolSettings, string location)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = location;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceCreateSettings ResetLocation(this AzureServicebusNamespaceCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Sku
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceCreateSettings.Sku"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceCreateSettings SetSku(this AzureServicebusNamespaceCreateSettings toolSettings, ServicebusNamespaceSku sku)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Sku = sku;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceCreateSettings.Sku"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceCreateSettings ResetSku(this AzureServicebusNamespaceCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Sku = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Tags
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceCreateSettings SetTags(this AzureServicebusNamespaceCreateSettings toolSettings, string tags)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = tags;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceCreateSettings ResetTags(this AzureServicebusNamespaceCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceCreateSettings SetDebug(this AzureServicebusNamespaceCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceCreateSettings ResetDebug(this AzureServicebusNamespaceCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceCreateSettings SetHelp(this AzureServicebusNamespaceCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceCreateSettings ResetHelp(this AzureServicebusNamespaceCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceCreateSettings SetOutput(this AzureServicebusNamespaceCreateSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceCreateSettings ResetOutput(this AzureServicebusNamespaceCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceCreateSettings SetQuery(this AzureServicebusNamespaceCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceCreateSettings ResetQuery(this AzureServicebusNamespaceCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceCreateSettings SetVerbose(this AzureServicebusNamespaceCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceCreateSettings ResetVerbose(this AzureServicebusNamespaceCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureServicebusNamespaceDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusNamespaceDeleteSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceDeleteSettings.Name"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceDeleteSettings SetName(this AzureServicebusNamespaceDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceDeleteSettings.Name"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceDeleteSettings ResetName(this AzureServicebusNamespaceDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceDeleteSettings SetResourceGroup(this AzureServicebusNamespaceDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceDeleteSettings ResetResourceGroup(this AzureServicebusNamespaceDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceDeleteSettings SetDebug(this AzureServicebusNamespaceDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceDeleteSettings ResetDebug(this AzureServicebusNamespaceDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceDeleteSettings SetHelp(this AzureServicebusNamespaceDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceDeleteSettings ResetHelp(this AzureServicebusNamespaceDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceDeleteSettings SetOutput(this AzureServicebusNamespaceDeleteSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceDeleteSettings ResetOutput(this AzureServicebusNamespaceDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceDeleteSettings SetQuery(this AzureServicebusNamespaceDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceDeleteSettings ResetQuery(this AzureServicebusNamespaceDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceDeleteSettings SetVerbose(this AzureServicebusNamespaceDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceDeleteSettings ResetVerbose(this AzureServicebusNamespaceDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureServicebusNamespaceExistsSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusNamespaceExistsSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceExistsSettings.Name"/>.</em></p><p>Namespace name. Name can contain only letters, numbers, and hyphens. The namespace must start with a letter, and it must end with a letter or number.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceExistsSettings SetName(this AzureServicebusNamespaceExistsSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceExistsSettings.Name"/>.</em></p><p>Namespace name. Name can contain only letters, numbers, and hyphens. The namespace must start with a letter, and it must end with a letter or number.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceExistsSettings ResetName(this AzureServicebusNamespaceExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceExistsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceExistsSettings SetDebug(this AzureServicebusNamespaceExistsSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceExistsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceExistsSettings ResetDebug(this AzureServicebusNamespaceExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceExistsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceExistsSettings SetHelp(this AzureServicebusNamespaceExistsSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceExistsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceExistsSettings ResetHelp(this AzureServicebusNamespaceExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceExistsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceExistsSettings SetOutput(this AzureServicebusNamespaceExistsSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceExistsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceExistsSettings ResetOutput(this AzureServicebusNamespaceExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceExistsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceExistsSettings SetQuery(this AzureServicebusNamespaceExistsSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceExistsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceExistsSettings ResetQuery(this AzureServicebusNamespaceExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceExistsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceExistsSettings SetVerbose(this AzureServicebusNamespaceExistsSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceExistsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceExistsSettings ResetVerbose(this AzureServicebusNamespaceExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureServicebusNamespaceListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusNamespaceListSettingsExtensions
-    {
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceListSettings SetResourceGroup(this AzureServicebusNamespaceListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceListSettings ResetResourceGroup(this AzureServicebusNamespaceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceListSettings SetDebug(this AzureServicebusNamespaceListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceListSettings ResetDebug(this AzureServicebusNamespaceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceListSettings SetHelp(this AzureServicebusNamespaceListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceListSettings ResetHelp(this AzureServicebusNamespaceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceListSettings SetOutput(this AzureServicebusNamespaceListSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceListSettings ResetOutput(this AzureServicebusNamespaceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceListSettings SetQuery(this AzureServicebusNamespaceListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceListSettings ResetQuery(this AzureServicebusNamespaceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceListSettings SetVerbose(this AzureServicebusNamespaceListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceListSettings ResetVerbose(this AzureServicebusNamespaceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureServicebusNamespaceShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusNamespaceShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceShowSettings.Name"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceShowSettings SetName(this AzureServicebusNamespaceShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceShowSettings.Name"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceShowSettings ResetName(this AzureServicebusNamespaceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceShowSettings SetResourceGroup(this AzureServicebusNamespaceShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceShowSettings ResetResourceGroup(this AzureServicebusNamespaceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceShowSettings SetDebug(this AzureServicebusNamespaceShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceShowSettings ResetDebug(this AzureServicebusNamespaceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceShowSettings SetHelp(this AzureServicebusNamespaceShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceShowSettings ResetHelp(this AzureServicebusNamespaceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceShowSettings SetOutput(this AzureServicebusNamespaceShowSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceShowSettings ResetOutput(this AzureServicebusNamespaceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceShowSettings SetQuery(this AzureServicebusNamespaceShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceShowSettings ResetQuery(this AzureServicebusNamespaceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceShowSettings SetVerbose(this AzureServicebusNamespaceShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceShowSettings ResetVerbose(this AzureServicebusNamespaceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureServicebusNamespaceUpdateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusNamespaceUpdateSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceUpdateSettings.Name"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceUpdateSettings SetName(this AzureServicebusNamespaceUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceUpdateSettings.Name"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceUpdateSettings ResetName(this AzureServicebusNamespaceUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceUpdateSettings SetResourceGroup(this AzureServicebusNamespaceUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceUpdateSettings ResetResourceGroup(this AzureServicebusNamespaceUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Capacity
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceUpdateSettings.Capacity"/>.</em></p><p>Number of message units. This property is only applicable to namespaces of Premium SKU.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceUpdateSettings SetCapacity(this AzureServicebusNamespaceUpdateSettings toolSettings, ServicebusNamespaceCapacity capacity)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Capacity = capacity;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceUpdateSettings.Capacity"/>.</em></p><p>Number of message units. This property is only applicable to namespaces of Premium SKU.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceUpdateSettings ResetCapacity(this AzureServicebusNamespaceUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Capacity = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Sku
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceUpdateSettings.Sku"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceUpdateSettings SetSku(this AzureServicebusNamespaceUpdateSettings toolSettings, ServicebusNamespaceSku sku)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Sku = sku;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceUpdateSettings.Sku"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceUpdateSettings ResetSku(this AzureServicebusNamespaceUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Sku = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Tags
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceUpdateSettings SetTags(this AzureServicebusNamespaceUpdateSettings toolSettings, string tags)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = tags;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceUpdateSettings ResetTags(this AzureServicebusNamespaceUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Add
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceUpdateSettings SetAdd(this AzureServicebusNamespaceUpdateSettings toolSettings, string add)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = add;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceUpdateSettings ResetAdd(this AzureServicebusNamespaceUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Remove
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceUpdateSettings SetRemove(this AzureServicebusNamespaceUpdateSettings toolSettings, string remove)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = remove;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceUpdateSettings ResetRemove(this AzureServicebusNamespaceUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Set
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceUpdateSettings SetSet(this AzureServicebusNamespaceUpdateSettings toolSettings, string set)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = set;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceUpdateSettings ResetSet(this AzureServicebusNamespaceUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceUpdateSettings SetDebug(this AzureServicebusNamespaceUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceUpdateSettings ResetDebug(this AzureServicebusNamespaceUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceUpdateSettings SetHelp(this AzureServicebusNamespaceUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceUpdateSettings ResetHelp(this AzureServicebusNamespaceUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceUpdateSettings SetOutput(this AzureServicebusNamespaceUpdateSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceUpdateSettings ResetOutput(this AzureServicebusNamespaceUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceUpdateSettings SetQuery(this AzureServicebusNamespaceUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceUpdateSettings ResetQuery(this AzureServicebusNamespaceUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceUpdateSettings SetVerbose(this AzureServicebusNamespaceUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusNamespaceUpdateSettings ResetVerbose(this AzureServicebusNamespaceUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -7299,7 +8104,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region EnableBatchedOperations
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicCreateSettings.EnableBatchedOperations"/>.</em></p><p>Value that indicates whether server-side batched operations are enabled.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicCreateSettings.EnableBatchedOperations"/>.</em></p><p>Allow server-side batched operations.</p></summary>
         [Pure]
         public static AzureServicebusTopicCreateSettings SetEnableBatchedOperations(this AzureServicebusTopicCreateSettings toolSettings, bool? enableBatchedOperations)
         {
@@ -7307,7 +8112,7 @@ namespace Nuke.Azure
             toolSettings.EnableBatchedOperations = enableBatchedOperations;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicCreateSettings.EnableBatchedOperations"/>.</em></p><p>Value that indicates whether server-side batched operations are enabled.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicCreateSettings.EnableBatchedOperations"/>.</em></p><p>Allow server-side batched operations.</p></summary>
         [Pure]
         public static AzureServicebusTopicCreateSettings ResetEnableBatchedOperations(this AzureServicebusTopicCreateSettings toolSettings)
         {
@@ -7315,7 +8120,7 @@ namespace Nuke.Azure
             toolSettings.EnableBatchedOperations = null;
             return toolSettings;
         }
-        /// <summary><p><em>Enables <see cref="AzureServicebusTopicCreateSettings.EnableBatchedOperations"/>.</em></p><p>Value that indicates whether server-side batched operations are enabled.</p></summary>
+        /// <summary><p><em>Enables <see cref="AzureServicebusTopicCreateSettings.EnableBatchedOperations"/>.</em></p><p>Allow server-side batched operations.</p></summary>
         [Pure]
         public static AzureServicebusTopicCreateSettings EnableEnableBatchedOperations(this AzureServicebusTopicCreateSettings toolSettings)
         {
@@ -7323,7 +8128,7 @@ namespace Nuke.Azure
             toolSettings.EnableBatchedOperations = true;
             return toolSettings;
         }
-        /// <summary><p><em>Disables <see cref="AzureServicebusTopicCreateSettings.EnableBatchedOperations"/>.</em></p><p>Value that indicates whether server-side batched operations are enabled.</p></summary>
+        /// <summary><p><em>Disables <see cref="AzureServicebusTopicCreateSettings.EnableBatchedOperations"/>.</em></p><p>Allow server-side batched operations.</p></summary>
         [Pure]
         public static AzureServicebusTopicCreateSettings DisableEnableBatchedOperations(this AzureServicebusTopicCreateSettings toolSettings)
         {
@@ -7331,7 +8136,7 @@ namespace Nuke.Azure
             toolSettings.EnableBatchedOperations = false;
             return toolSettings;
         }
-        /// <summary><p><em>Toggles <see cref="AzureServicebusTopicCreateSettings.EnableBatchedOperations"/>.</em></p><p>Value that indicates whether server-side batched operations are enabled.</p></summary>
+        /// <summary><p><em>Toggles <see cref="AzureServicebusTopicCreateSettings.EnableBatchedOperations"/>.</em></p><p>Allow server-side batched operations.</p></summary>
         [Pure]
         public static AzureServicebusTopicCreateSettings ToggleEnableBatchedOperations(this AzureServicebusTopicCreateSettings toolSettings)
         {
@@ -7583,7 +8388,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureServicebusTopicCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusTopicCreateSettings SetOutput(this AzureServicebusTopicCreateSettings toolSettings, Output output)
+        public static AzureServicebusTopicCreateSettings SetOutput(this AzureServicebusTopicCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -7735,7 +8540,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureServicebusTopicDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusTopicDeleteSettings SetOutput(this AzureServicebusTopicDeleteSettings toolSettings, Output output)
+        public static AzureServicebusTopicDeleteSettings SetOutput(this AzureServicebusTopicDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -7830,6 +8635,42 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Skip
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicListSettings.Skip"/>.</em></p><p>Skip is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skip parameter that specifies a starting point to use for subsequent calls.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicListSettings SetSkip(this AzureServicebusTopicListSettings toolSettings, string skip)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Skip = skip;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicListSettings.Skip"/>.</em></p><p>Skip is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skip parameter that specifies a starting point to use for subsequent calls.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicListSettings ResetSkip(this AzureServicebusTopicListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Skip = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Top
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicListSettings.Top"/>.</em></p><p>May be used to limit the number of results to the most recent N usageDetails.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicListSettings SetTop(this AzureServicebusTopicListSettings toolSettings, string top)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = top;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicListSettings.Top"/>.</em></p><p>May be used to limit the number of results to the most recent N usageDetails.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicListSettings ResetTop(this AzureServicebusTopicListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureServicebusTopicListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -7869,7 +8710,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureServicebusTopicListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusTopicListSettings SetOutput(this AzureServicebusTopicListSettings toolSettings, Output output)
+        public static AzureServicebusTopicListSettings SetOutput(this AzureServicebusTopicListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -8021,7 +8862,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureServicebusTopicShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusTopicShowSettings SetOutput(this AzureServicebusTopicShowSettings toolSettings, Output output)
+        public static AzureServicebusTopicShowSettings SetOutput(this AzureServicebusTopicShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -8135,7 +8976,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region AutoDeleteOnIdle
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicUpdateSettings.AutoDeleteOnIdle"/>.</em></p><p>ISO 8601 timespan or duration time format for idle interval after which the topic is automatically deleted.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicUpdateSettings.AutoDeleteOnIdle"/>.</em></p><p>ISO 8601 timespan or duration time format for idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.</p></summary>
         [Pure]
         public static AzureServicebusTopicUpdateSettings SetAutoDeleteOnIdle(this AzureServicebusTopicUpdateSettings toolSettings, string autoDeleteOnIdle)
         {
@@ -8143,7 +8984,7 @@ namespace Nuke.Azure
             toolSettings.AutoDeleteOnIdle = autoDeleteOnIdle;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicUpdateSettings.AutoDeleteOnIdle"/>.</em></p><p>ISO 8601 timespan or duration time format for idle interval after which the topic is automatically deleted.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicUpdateSettings.AutoDeleteOnIdle"/>.</em></p><p>ISO 8601 timespan or duration time format for idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.</p></summary>
         [Pure]
         public static AzureServicebusTopicUpdateSettings ResetAutoDeleteOnIdle(this AzureServicebusTopicUpdateSettings toolSettings)
         {
@@ -8171,7 +9012,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region DuplicateDetectionHistoryTimeWindow
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicUpdateSettings.DuplicateDetectionHistoryTimeWindow"/>.</em></p><p>ISO 8601 timespan or duration time format for structure that defines the duration of the duplicate detection history.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicUpdateSettings.DuplicateDetectionHistoryTimeWindow"/>.</em></p><p>ISO 8601 timespan or duration time format for structure that defines the duration of the duplicate detection history. The default value is 10 minutes.</p></summary>
         [Pure]
         public static AzureServicebusTopicUpdateSettings SetDuplicateDetectionHistoryTimeWindow(this AzureServicebusTopicUpdateSettings toolSettings, string duplicateDetectionHistoryTimeWindow)
         {
@@ -8179,7 +9020,7 @@ namespace Nuke.Azure
             toolSettings.DuplicateDetectionHistoryTimeWindow = duplicateDetectionHistoryTimeWindow;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicUpdateSettings.DuplicateDetectionHistoryTimeWindow"/>.</em></p><p>ISO 8601 timespan or duration time format for structure that defines the duration of the duplicate detection history.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicUpdateSettings.DuplicateDetectionHistoryTimeWindow"/>.</em></p><p>ISO 8601 timespan or duration time format for structure that defines the duration of the duplicate detection history. The default value is 10 minutes.</p></summary>
         [Pure]
         public static AzureServicebusTopicUpdateSettings ResetDuplicateDetectionHistoryTimeWindow(this AzureServicebusTopicUpdateSettings toolSettings)
         {
@@ -8189,7 +9030,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region EnableBatchedOperations
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicUpdateSettings.EnableBatchedOperations"/>.</em></p><p>Value that indicates whether server-side batched operations are enabled.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicUpdateSettings.EnableBatchedOperations"/>.</em></p><p>Allow server-side batched operations.</p></summary>
         [Pure]
         public static AzureServicebusTopicUpdateSettings SetEnableBatchedOperations(this AzureServicebusTopicUpdateSettings toolSettings, bool? enableBatchedOperations)
         {
@@ -8197,7 +9038,7 @@ namespace Nuke.Azure
             toolSettings.EnableBatchedOperations = enableBatchedOperations;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicUpdateSettings.EnableBatchedOperations"/>.</em></p><p>Value that indicates whether server-side batched operations are enabled.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicUpdateSettings.EnableBatchedOperations"/>.</em></p><p>Allow server-side batched operations.</p></summary>
         [Pure]
         public static AzureServicebusTopicUpdateSettings ResetEnableBatchedOperations(this AzureServicebusTopicUpdateSettings toolSettings)
         {
@@ -8205,7 +9046,7 @@ namespace Nuke.Azure
             toolSettings.EnableBatchedOperations = null;
             return toolSettings;
         }
-        /// <summary><p><em>Enables <see cref="AzureServicebusTopicUpdateSettings.EnableBatchedOperations"/>.</em></p><p>Value that indicates whether server-side batched operations are enabled.</p></summary>
+        /// <summary><p><em>Enables <see cref="AzureServicebusTopicUpdateSettings.EnableBatchedOperations"/>.</em></p><p>Allow server-side batched operations.</p></summary>
         [Pure]
         public static AzureServicebusTopicUpdateSettings EnableEnableBatchedOperations(this AzureServicebusTopicUpdateSettings toolSettings)
         {
@@ -8213,7 +9054,7 @@ namespace Nuke.Azure
             toolSettings.EnableBatchedOperations = true;
             return toolSettings;
         }
-        /// <summary><p><em>Disables <see cref="AzureServicebusTopicUpdateSettings.EnableBatchedOperations"/>.</em></p><p>Value that indicates whether server-side batched operations are enabled.</p></summary>
+        /// <summary><p><em>Disables <see cref="AzureServicebusTopicUpdateSettings.EnableBatchedOperations"/>.</em></p><p>Allow server-side batched operations.</p></summary>
         [Pure]
         public static AzureServicebusTopicUpdateSettings DisableEnableBatchedOperations(this AzureServicebusTopicUpdateSettings toolSettings)
         {
@@ -8221,7 +9062,7 @@ namespace Nuke.Azure
             toolSettings.EnableBatchedOperations = false;
             return toolSettings;
         }
-        /// <summary><p><em>Toggles <see cref="AzureServicebusTopicUpdateSettings.EnableBatchedOperations"/>.</em></p><p>Value that indicates whether server-side batched operations are enabled.</p></summary>
+        /// <summary><p><em>Toggles <see cref="AzureServicebusTopicUpdateSettings.EnableBatchedOperations"/>.</em></p><p>Allow server-side batched operations.</p></summary>
         [Pure]
         public static AzureServicebusTopicUpdateSettings ToggleEnableBatchedOperations(this AzureServicebusTopicUpdateSettings toolSettings)
         {
@@ -8399,7 +9240,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region MaxSize
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicUpdateSettings.MaxSize"/>.</em></p><p>Maximum size of topic in megabytes, which is the size of the memory allocated for the topic.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicUpdateSettings.MaxSize"/>.</em></p><p>Maximum size of topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024.</p></summary>
         [Pure]
         public static AzureServicebusTopicUpdateSettings SetMaxSize(this AzureServicebusTopicUpdateSettings toolSettings, ServicebusQueueMaxSize maxSize)
         {
@@ -8407,7 +9248,7 @@ namespace Nuke.Azure
             toolSettings.MaxSize = maxSize;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicUpdateSettings.MaxSize"/>.</em></p><p>Maximum size of topic in megabytes, which is the size of the memory allocated for the topic.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicUpdateSettings.MaxSize"/>.</em></p><p>Maximum size of topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024.</p></summary>
         [Pure]
         public static AzureServicebusTopicUpdateSettings ResetMaxSize(this AzureServicebusTopicUpdateSettings toolSettings)
         {
@@ -8449,6 +9290,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Add = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ForceString
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicUpdateSettings SetForceString(this AzureServicebusTopicUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicUpdateSettings ResetForceString(this AzureServicebusTopicUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
             return toolSettings;
         }
         #endregion
@@ -8527,7 +9386,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureServicebusTopicUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusTopicUpdateSettings SetOutput(this AzureServicebusTopicUpdateSettings toolSettings, Output output)
+        public static AzureServicebusTopicUpdateSettings SetOutput(this AzureServicebusTopicUpdateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -8572,6 +9431,328 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureServicebusTopicUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureServicebusTopicUpdateSettings ResetVerbose(this AzureServicebusTopicUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusGeorecoveryAliasAuthorizationRuleListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusGeorecoveryAliasAuthorizationRuleListSettingsExtensions
+    {
+        #region Alias
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings SetAlias(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings, string alias)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = alias;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings ResetAlias(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings SetNamespaceName(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings ResetNamespaceName(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings SetResourceGroup(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings ResetResourceGroup(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings SetDebug(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings ResetDebug(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings SetHelp(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings ResetHelp(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings SetOutput(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings ResetOutput(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings SetQuery(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings ResetQuery(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings SetVerbose(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings ResetVerbose(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettingsExtensions
+    {
+        #region Alias
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.Alias"/>.</em></p><p>Name of the Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings SetAlias(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string alias)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = alias;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.Alias"/>.</em></p><p>Name of the Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings ResetAlias(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.Name"/>.</em></p><p>Name of Namespace Authorization Rule.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings SetName(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.Name"/>.</em></p><p>Name of Namespace Authorization Rule.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings ResetName(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings SetNamespaceName(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings ResetNamespaceName(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings SetResourceGroup(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings ResetResourceGroup(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings SetDebug(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings ResetDebug(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings SetHelp(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings ResetHelp(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings SetOutput(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings ResetOutput(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings SetQuery(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings ResetQuery(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings SetVerbose(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings ResetVerbose(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -8739,7 +9920,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleCreateSettings SetOutput(this AzureServicebusNamespaceAuthorizationRuleCreateSettings toolSettings, Output output)
+        public static AzureServicebusNamespaceAuthorizationRuleCreateSettings SetOutput(this AzureServicebusNamespaceAuthorizationRuleCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -8891,7 +10072,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleDeleteSettings SetOutput(this AzureServicebusNamespaceAuthorizationRuleDeleteSettings toolSettings, Output output)
+        public static AzureServicebusNamespaceAuthorizationRuleDeleteSettings SetOutput(this AzureServicebusNamespaceAuthorizationRuleDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -9025,7 +10206,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleListSettings SetOutput(this AzureServicebusNamespaceAuthorizationRuleListSettings toolSettings, Output output)
+        public static AzureServicebusNamespaceAuthorizationRuleListSettings SetOutput(this AzureServicebusNamespaceAuthorizationRuleListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -9177,7 +10358,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleShowSettings SetOutput(this AzureServicebusNamespaceAuthorizationRuleShowSettings toolSettings, Output output)
+        public static AzureServicebusNamespaceAuthorizationRuleShowSettings SetOutput(this AzureServicebusNamespaceAuthorizationRuleShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -9368,6 +10549,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region ForceString
+        /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleUpdateSettings SetForceString(this AzureServicebusNamespaceAuthorizationRuleUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusNamespaceAuthorizationRuleUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureServicebusNamespaceAuthorizationRuleUpdateSettings ResetForceString(this AzureServicebusNamespaceAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
         #region Remove
         /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         [Pure]
@@ -9443,7 +10642,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleUpdateSettings SetOutput(this AzureServicebusNamespaceAuthorizationRuleUpdateSettings toolSettings, Output output)
+        public static AzureServicebusNamespaceAuthorizationRuleUpdateSettings SetOutput(this AzureServicebusNamespaceAuthorizationRuleUpdateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -9496,78 +10695,156 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureServicebusGeorecoveryAliasAuthorizationRuleListSettingsExtensions
+    #region AzureServicebusQueueAuthorizationRuleCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusGeorecoveryAliasAuthorizationRuleListSettingsExtensions
+    public static partial class AzureServicebusQueueAuthorizationRuleCreateSettingsExtensions
     {
-        #region Alias
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings SetAlias(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings, string alias)
+        public static AzureServicebusQueueAuthorizationRuleCreateSettings SetName(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = alias;
+            toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings ResetAlias(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
+        public static AzureServicebusQueueAuthorizationRuleCreateSettings ResetName(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = null;
+            toolSettings.Name = null;
             return toolSettings;
         }
         #endregion
         #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings SetNamespaceName(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings, string namespaceName)
+        public static AzureServicebusQueueAuthorizationRuleCreateSettings SetNamespaceName(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings, string namespaceName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = namespaceName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings ResetNamespaceName(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
+        public static AzureServicebusQueueAuthorizationRuleCreateSettings ResetNamespaceName(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = null;
             return toolSettings;
         }
         #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        #region QueueName
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings SetResourceGroup(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings, string resourceGroup)
+        public static AzureServicebusQueueAuthorizationRuleCreateSettings SetQueueName(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings, string queueName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.QueueName = queueName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleCreateSettings ResetQueueName(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.QueueName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleCreateSettings SetResourceGroup(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings ResetResourceGroup(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
+        public static AzureServicebusQueueAuthorizationRuleCreateSettings ResetResourceGroup(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region Rights
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings SetDebug(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings, string debug)
+        public static AzureServicebusQueueAuthorizationRuleCreateSettings SetRights(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings, params ServicebusNamespaceAuthorizationRuleRights[] rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal = rights.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleCreateSettings SetRights(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings, IEnumerable<ServicebusNamespaceAuthorizationRuleRights> rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal = rights.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleCreateSettings AddRights(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings, params ServicebusNamespaceAuthorizationRuleRights[] rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal.AddRange(rights);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleCreateSettings AddRights(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings, IEnumerable<ServicebusNamespaceAuthorizationRuleRights> rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal.AddRange(rights);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleCreateSettings ClearRights(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleCreateSettings RemoveRights(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings, params ServicebusNamespaceAuthorizationRuleRights[] rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<ServicebusNamespaceAuthorizationRuleRights>(rights);
+            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleCreateSettings RemoveRights(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings, IEnumerable<ServicebusNamespaceAuthorizationRuleRights> rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<ServicebusNamespaceAuthorizationRuleRights>(rights);
+            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleCreateSettings SetDebug(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings ResetDebug(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
+        public static AzureServicebusQueueAuthorizationRuleCreateSettings ResetDebug(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -9575,17 +10852,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings SetHelp(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings, string help)
+        public static AzureServicebusQueueAuthorizationRuleCreateSettings SetHelp(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings ResetHelp(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
+        public static AzureServicebusQueueAuthorizationRuleCreateSettings ResetHelp(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -9593,17 +10870,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings SetOutput(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings, Output output)
+        public static AzureServicebusQueueAuthorizationRuleCreateSettings SetOutput(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings ResetOutput(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
+        public static AzureServicebusQueueAuthorizationRuleCreateSettings ResetOutput(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -9611,17 +10888,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings SetQuery(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings, string query)
+        public static AzureServicebusQueueAuthorizationRuleCreateSettings SetQuery(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings ResetQuery(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
+        public static AzureServicebusQueueAuthorizationRuleCreateSettings ResetQuery(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -9629,17 +10906,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings SetVerbose(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings, string verbose)
+        public static AzureServicebusQueueAuthorizationRuleCreateSettings SetVerbose(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings ResetVerbose(this AzureServicebusGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
+        public static AzureServicebusQueueAuthorizationRuleCreateSettings ResetVerbose(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -9648,42 +10925,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettingsExtensions
+    #region AzureServicebusQueueAuthorizationRuleDeleteSettingsExtensions
     /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettingsExtensions
+    public static partial class AzureServicebusQueueAuthorizationRuleDeleteSettingsExtensions
     {
-        #region Alias
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.Alias"/>.</em></p><p>Name of the Geo-Disaster Recovery Configuration Alias.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings SetAlias(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string alias)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = alias;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.Alias"/>.</em></p><p>Name of the Geo-Disaster Recovery Configuration Alias.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings ResetAlias(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = null;
-            return toolSettings;
-        }
-        #endregion
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.Name"/>.</em></p><p>Name of Namespace Authorization Rule.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings SetName(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string name)
+        public static AzureServicebusQueueAuthorizationRuleDeleteSettings SetName(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.Name"/>.</em></p><p>Name of Namespace Authorization Rule.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings ResetName(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
+        public static AzureServicebusQueueAuthorizationRuleDeleteSettings ResetName(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -9691,35 +10950,53 @@ namespace Nuke.Azure
         }
         #endregion
         #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings SetNamespaceName(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string namespaceName)
+        public static AzureServicebusQueueAuthorizationRuleDeleteSettings SetNamespaceName(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings, string namespaceName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = namespaceName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings ResetNamespaceName(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
+        public static AzureServicebusQueueAuthorizationRuleDeleteSettings ResetNamespaceName(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = null;
             return toolSettings;
         }
         #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        #region QueueName
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings SetResourceGroup(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string resourceGroup)
+        public static AzureServicebusQueueAuthorizationRuleDeleteSettings SetQueueName(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings, string queueName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.QueueName = queueName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleDeleteSettings ResetQueueName(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.QueueName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleDeleteSettings SetResourceGroup(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings ResetResourceGroup(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
+        public static AzureServicebusQueueAuthorizationRuleDeleteSettings ResetResourceGroup(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -9727,17 +11004,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings SetDebug(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string debug)
+        public static AzureServicebusQueueAuthorizationRuleDeleteSettings SetDebug(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings ResetDebug(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
+        public static AzureServicebusQueueAuthorizationRuleDeleteSettings ResetDebug(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -9745,17 +11022,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings SetHelp(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string help)
+        public static AzureServicebusQueueAuthorizationRuleDeleteSettings SetHelp(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings ResetHelp(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
+        public static AzureServicebusQueueAuthorizationRuleDeleteSettings ResetHelp(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -9763,17 +11040,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings SetOutput(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, Output output)
+        public static AzureServicebusQueueAuthorizationRuleDeleteSettings SetOutput(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings ResetOutput(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
+        public static AzureServicebusQueueAuthorizationRuleDeleteSettings ResetOutput(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -9781,17 +11058,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings SetQuery(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string query)
+        public static AzureServicebusQueueAuthorizationRuleDeleteSettings SetQuery(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings ResetQuery(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
+        public static AzureServicebusQueueAuthorizationRuleDeleteSettings ResetQuery(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -9799,17 +11076,1665 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings SetVerbose(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string verbose)
+        public static AzureServicebusQueueAuthorizationRuleDeleteSettings SetVerbose(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings ResetVerbose(this AzureServicebusGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
+        public static AzureServicebusQueueAuthorizationRuleDeleteSettings ResetVerbose(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusQueueAuthorizationRuleListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusQueueAuthorizationRuleListSettingsExtensions
+    {
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleListSettings SetNamespaceName(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleListSettings ResetNamespaceName(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region QueueName
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleListSettings SetQueueName(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings, string queueName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.QueueName = queueName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleListSettings ResetQueueName(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.QueueName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleListSettings SetResourceGroup(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleListSettings ResetResourceGroup(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleListSettings SetDebug(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleListSettings ResetDebug(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleListSettings SetHelp(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleListSettings ResetHelp(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleListSettings SetOutput(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleListSettings ResetOutput(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleListSettings SetQuery(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleListSettings ResetQuery(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleListSettings SetVerbose(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleListSettings ResetVerbose(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusQueueAuthorizationRuleShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusQueueAuthorizationRuleShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleShowSettings SetName(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleShowSettings ResetName(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleShowSettings SetNamespaceName(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleShowSettings ResetNamespaceName(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region QueueName
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleShowSettings SetQueueName(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings, string queueName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.QueueName = queueName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleShowSettings ResetQueueName(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.QueueName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleShowSettings SetResourceGroup(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleShowSettings ResetResourceGroup(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleShowSettings SetDebug(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleShowSettings ResetDebug(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleShowSettings SetHelp(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleShowSettings ResetHelp(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleShowSettings SetOutput(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleShowSettings ResetOutput(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleShowSettings SetQuery(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleShowSettings ResetQuery(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleShowSettings SetVerbose(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleShowSettings ResetVerbose(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusQueueAuthorizationRuleUpdateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusQueueAuthorizationRuleUpdateSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings SetName(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings ResetName(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings SetNamespaceName(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings ResetNamespaceName(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region QueueName
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings SetQueueName(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, string queueName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.QueueName = queueName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings ResetQueueName(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.QueueName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings SetResourceGroup(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings ResetResourceGroup(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Rights
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings SetRights(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, params ServicebusNamespaceAuthorizationRuleRights[] rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal = rights.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings SetRights(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, IEnumerable<ServicebusNamespaceAuthorizationRuleRights> rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal = rights.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings AddRights(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, params ServicebusNamespaceAuthorizationRuleRights[] rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal.AddRange(rights);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings AddRights(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, IEnumerable<ServicebusNamespaceAuthorizationRuleRights> rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal.AddRange(rights);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings ClearRights(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings RemoveRights(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, params ServicebusNamespaceAuthorizationRuleRights[] rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<ServicebusNamespaceAuthorizationRuleRights>(rights);
+            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings RemoveRights(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, IEnumerable<ServicebusNamespaceAuthorizationRuleRights> rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<ServicebusNamespaceAuthorizationRuleRights>(rights);
+            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Add
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings SetAdd(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, string add)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = add;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings ResetAdd(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ForceString
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings SetForceString(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings ResetForceString(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Remove
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings SetRemove(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, string remove)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = remove;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings ResetRemove(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Set
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings SetSet(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, string set)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = set;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings ResetSet(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings SetDebug(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings ResetDebug(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings SetHelp(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings ResetHelp(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings SetOutput(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings ResetOutput(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings SetQuery(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings ResetQuery(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings SetVerbose(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleUpdateSettings ResetVerbose(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusTopicAuthorizationRuleCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusTopicAuthorizationRuleCreateSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Name"/>.</em></p><p>Name of Topic Authorization Rule.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleCreateSettings SetName(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Name"/>.</em></p><p>Name of Topic Authorization Rule.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleCreateSettings ResetName(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleCreateSettings SetNamespaceName(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleCreateSettings ResetNamespaceName(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleCreateSettings SetResourceGroup(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleCreateSettings ResetResourceGroup(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Rights
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleCreateSettings SetRights(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings, params ServicebusNamespaceAuthorizationRuleRights[] rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal = rights.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleCreateSettings SetRights(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings, IEnumerable<ServicebusNamespaceAuthorizationRuleRights> rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal = rights.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleCreateSettings AddRights(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings, params ServicebusNamespaceAuthorizationRuleRights[] rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal.AddRange(rights);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleCreateSettings AddRights(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings, IEnumerable<ServicebusNamespaceAuthorizationRuleRights> rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal.AddRange(rights);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleCreateSettings ClearRights(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleCreateSettings RemoveRights(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings, params ServicebusNamespaceAuthorizationRuleRights[] rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<ServicebusNamespaceAuthorizationRuleRights>(rights);
+            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleCreateSettings RemoveRights(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings, IEnumerable<ServicebusNamespaceAuthorizationRuleRights> rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<ServicebusNamespaceAuthorizationRuleRights>(rights);
+            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region TopicName
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.TopicName"/>.</em></p><p>Name of Topic.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleCreateSettings SetTopicName(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings, string topicName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TopicName = topicName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.TopicName"/>.</em></p><p>Name of Topic.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleCreateSettings ResetTopicName(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TopicName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleCreateSettings SetDebug(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleCreateSettings ResetDebug(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleCreateSettings SetHelp(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleCreateSettings ResetHelp(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleCreateSettings SetOutput(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleCreateSettings ResetOutput(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleCreateSettings SetQuery(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleCreateSettings ResetQuery(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleCreateSettings SetVerbose(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleCreateSettings ResetVerbose(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusTopicAuthorizationRuleDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusTopicAuthorizationRuleDeleteSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.Name"/>.</em></p><p>Name of Topic Authorization Rule.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleDeleteSettings SetName(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.Name"/>.</em></p><p>Name of Topic Authorization Rule.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleDeleteSettings ResetName(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleDeleteSettings SetNamespaceName(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleDeleteSettings ResetNamespaceName(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleDeleteSettings SetResourceGroup(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleDeleteSettings ResetResourceGroup(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region TopicName
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.TopicName"/>.</em></p><p>Name of Topic.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleDeleteSettings SetTopicName(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings, string topicName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TopicName = topicName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.TopicName"/>.</em></p><p>Name of Topic.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleDeleteSettings ResetTopicName(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TopicName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleDeleteSettings SetDebug(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleDeleteSettings ResetDebug(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleDeleteSettings SetHelp(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleDeleteSettings ResetHelp(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleDeleteSettings SetOutput(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleDeleteSettings ResetOutput(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleDeleteSettings SetQuery(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleDeleteSettings ResetQuery(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleDeleteSettings SetVerbose(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleDeleteSettings ResetVerbose(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusTopicAuthorizationRuleListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusTopicAuthorizationRuleListSettingsExtensions
+    {
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleListSettings SetNamespaceName(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleListSettings ResetNamespaceName(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleListSettings SetResourceGroup(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleListSettings ResetResourceGroup(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region TopicName
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.TopicName"/>.</em></p><p>Name of Topic.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleListSettings SetTopicName(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings, string topicName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TopicName = topicName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.TopicName"/>.</em></p><p>Name of Topic.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleListSettings ResetTopicName(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TopicName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleListSettings SetDebug(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleListSettings ResetDebug(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleListSettings SetHelp(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleListSettings ResetHelp(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleListSettings SetOutput(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleListSettings ResetOutput(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleListSettings SetQuery(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleListSettings ResetQuery(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleListSettings SetVerbose(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleListSettings ResetVerbose(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusTopicAuthorizationRuleShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusTopicAuthorizationRuleShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.Name"/>.</em></p><p>Name of Topic Authorization Rule.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleShowSettings SetName(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.Name"/>.</em></p><p>Name of Topic Authorization Rule.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleShowSettings ResetName(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleShowSettings SetNamespaceName(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleShowSettings ResetNamespaceName(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleShowSettings SetResourceGroup(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleShowSettings ResetResourceGroup(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region TopicName
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.TopicName"/>.</em></p><p>Name of Topic.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleShowSettings SetTopicName(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings, string topicName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TopicName = topicName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.TopicName"/>.</em></p><p>Name of Topic.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleShowSettings ResetTopicName(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TopicName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleShowSettings SetDebug(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleShowSettings ResetDebug(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleShowSettings SetHelp(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleShowSettings ResetHelp(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleShowSettings SetOutput(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleShowSettings ResetOutput(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleShowSettings SetQuery(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleShowSettings ResetQuery(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleShowSettings SetVerbose(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleShowSettings ResetVerbose(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusTopicAuthorizationRuleUpdateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusTopicAuthorizationRuleUpdateSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Name"/>.</em></p><p>Name of Topic Authorization Rule.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings SetName(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Name"/>.</em></p><p>Name of Topic Authorization Rule.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings ResetName(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings SetNamespaceName(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings ResetNamespaceName(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings SetResourceGroup(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings ResetResourceGroup(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Rights
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings SetRights(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, params ServicebusNamespaceAuthorizationRuleRights[] rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal = rights.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings SetRights(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, IEnumerable<ServicebusNamespaceAuthorizationRuleRights> rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal = rights.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings AddRights(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, params ServicebusNamespaceAuthorizationRuleRights[] rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal.AddRange(rights);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings AddRights(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, IEnumerable<ServicebusNamespaceAuthorizationRuleRights> rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal.AddRange(rights);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings ClearRights(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings RemoveRights(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, params ServicebusNamespaceAuthorizationRuleRights[] rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<ServicebusNamespaceAuthorizationRuleRights>(rights);
+            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings RemoveRights(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, IEnumerable<ServicebusNamespaceAuthorizationRuleRights> rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<ServicebusNamespaceAuthorizationRuleRights>(rights);
+            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region TopicName
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.TopicName"/>.</em></p><p>Name of Topic.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings SetTopicName(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, string topicName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TopicName = topicName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.TopicName"/>.</em></p><p>Name of Topic.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings ResetTopicName(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TopicName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Add
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings SetAdd(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, string add)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = add;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings ResetAdd(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ForceString
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings SetForceString(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings ResetForceString(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Remove
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings SetRemove(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, string remove)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = remove;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings ResetRemove(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Set
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings SetSet(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, string set)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = set;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings ResetSet(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings SetDebug(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings ResetDebug(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings SetHelp(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings ResetHelp(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings SetOutput(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings ResetOutput(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings SetQuery(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings ResetQuery(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings SetVerbose(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicAuthorizationRuleUpdateSettings ResetVerbose(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -9914,6 +12839,48 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region DeadLetterOnFilterExceptions
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicSubscriptionCreateSettings.DeadLetterOnFilterExceptions"/>.</em></p><p>Allow dead lettering when filter evaluation exceptions occur.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicSubscriptionCreateSettings SetDeadLetterOnFilterExceptions(this AzureServicebusTopicSubscriptionCreateSettings toolSettings, bool? deadLetterOnFilterExceptions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DeadLetterOnFilterExceptions = deadLetterOnFilterExceptions;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicSubscriptionCreateSettings.DeadLetterOnFilterExceptions"/>.</em></p><p>Allow dead lettering when filter evaluation exceptions occur.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicSubscriptionCreateSettings ResetDeadLetterOnFilterExceptions(this AzureServicebusTopicSubscriptionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DeadLetterOnFilterExceptions = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureServicebusTopicSubscriptionCreateSettings.DeadLetterOnFilterExceptions"/>.</em></p><p>Allow dead lettering when filter evaluation exceptions occur.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicSubscriptionCreateSettings EnableDeadLetterOnFilterExceptions(this AzureServicebusTopicSubscriptionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DeadLetterOnFilterExceptions = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureServicebusTopicSubscriptionCreateSettings.DeadLetterOnFilterExceptions"/>.</em></p><p>Allow dead lettering when filter evaluation exceptions occur.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicSubscriptionCreateSettings DisableDeadLetterOnFilterExceptions(this AzureServicebusTopicSubscriptionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DeadLetterOnFilterExceptions = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureServicebusTopicSubscriptionCreateSettings.DeadLetterOnFilterExceptions"/>.</em></p><p>Allow dead lettering when filter evaluation exceptions occur.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicSubscriptionCreateSettings ToggleDeadLetterOnFilterExceptions(this AzureServicebusTopicSubscriptionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DeadLetterOnFilterExceptions = !toolSettings.DeadLetterOnFilterExceptions;
+            return toolSettings;
+        }
+        #endregion
         #region DefaultMessageTimeToLive
         /// <summary><p><em>Sets <see cref="AzureServicebusTopicSubscriptionCreateSettings.DefaultMessageTimeToLive"/>.</em></p><p>ISO 8601 or duration time format for Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.</p></summary>
         [Pure]
@@ -9933,7 +12900,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region EnableBatchedOperations
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicSubscriptionCreateSettings.EnableBatchedOperations"/>.</em></p><p>A boolean value that indicates whether server-side batched operations are enabled.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicSubscriptionCreateSettings.EnableBatchedOperations"/>.</em></p><p>Allow server-side batched operations.</p></summary>
         [Pure]
         public static AzureServicebusTopicSubscriptionCreateSettings SetEnableBatchedOperations(this AzureServicebusTopicSubscriptionCreateSettings toolSettings, bool? enableBatchedOperations)
         {
@@ -9941,7 +12908,7 @@ namespace Nuke.Azure
             toolSettings.EnableBatchedOperations = enableBatchedOperations;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicSubscriptionCreateSettings.EnableBatchedOperations"/>.</em></p><p>A boolean value that indicates whether server-side batched operations are enabled.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicSubscriptionCreateSettings.EnableBatchedOperations"/>.</em></p><p>Allow server-side batched operations.</p></summary>
         [Pure]
         public static AzureServicebusTopicSubscriptionCreateSettings ResetEnableBatchedOperations(this AzureServicebusTopicSubscriptionCreateSettings toolSettings)
         {
@@ -9949,7 +12916,7 @@ namespace Nuke.Azure
             toolSettings.EnableBatchedOperations = null;
             return toolSettings;
         }
-        /// <summary><p><em>Enables <see cref="AzureServicebusTopicSubscriptionCreateSettings.EnableBatchedOperations"/>.</em></p><p>A boolean value that indicates whether server-side batched operations are enabled.</p></summary>
+        /// <summary><p><em>Enables <see cref="AzureServicebusTopicSubscriptionCreateSettings.EnableBatchedOperations"/>.</em></p><p>Allow server-side batched operations.</p></summary>
         [Pure]
         public static AzureServicebusTopicSubscriptionCreateSettings EnableEnableBatchedOperations(this AzureServicebusTopicSubscriptionCreateSettings toolSettings)
         {
@@ -9957,7 +12924,7 @@ namespace Nuke.Azure
             toolSettings.EnableBatchedOperations = true;
             return toolSettings;
         }
-        /// <summary><p><em>Disables <see cref="AzureServicebusTopicSubscriptionCreateSettings.EnableBatchedOperations"/>.</em></p><p>A boolean value that indicates whether server-side batched operations are enabled.</p></summary>
+        /// <summary><p><em>Disables <see cref="AzureServicebusTopicSubscriptionCreateSettings.EnableBatchedOperations"/>.</em></p><p>Allow server-side batched operations.</p></summary>
         [Pure]
         public static AzureServicebusTopicSubscriptionCreateSettings DisableEnableBatchedOperations(this AzureServicebusTopicSubscriptionCreateSettings toolSettings)
         {
@@ -9965,7 +12932,7 @@ namespace Nuke.Azure
             toolSettings.EnableBatchedOperations = false;
             return toolSettings;
         }
-        /// <summary><p><em>Toggles <see cref="AzureServicebusTopicSubscriptionCreateSettings.EnableBatchedOperations"/>.</em></p><p>A boolean value that indicates whether server-side batched operations are enabled.</p></summary>
+        /// <summary><p><em>Toggles <see cref="AzureServicebusTopicSubscriptionCreateSettings.EnableBatchedOperations"/>.</em></p><p>Allow server-side batched operations.</p></summary>
         [Pure]
         public static AzureServicebusTopicSubscriptionCreateSettings ToggleEnableBatchedOperations(this AzureServicebusTopicSubscriptionCreateSettings toolSettings)
         {
@@ -10187,7 +13154,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureServicebusTopicSubscriptionCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusTopicSubscriptionCreateSettings SetOutput(this AzureServicebusTopicSubscriptionCreateSettings toolSettings, Output output)
+        public static AzureServicebusTopicSubscriptionCreateSettings SetOutput(this AzureServicebusTopicSubscriptionCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -10357,7 +13324,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureServicebusTopicSubscriptionDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusTopicSubscriptionDeleteSettings SetOutput(this AzureServicebusTopicSubscriptionDeleteSettings toolSettings, Output output)
+        public static AzureServicebusTopicSubscriptionDeleteSettings SetOutput(this AzureServicebusTopicSubscriptionDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -10470,6 +13437,42 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Skip
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicSubscriptionListSettings.Skip"/>.</em></p><p>Skip is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skip parameter that specifies a starting point to use for subsequent calls.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicSubscriptionListSettings SetSkip(this AzureServicebusTopicSubscriptionListSettings toolSettings, string skip)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Skip = skip;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicSubscriptionListSettings.Skip"/>.</em></p><p>Skip is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skip parameter that specifies a starting point to use for subsequent calls.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicSubscriptionListSettings ResetSkip(this AzureServicebusTopicSubscriptionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Skip = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Top
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicSubscriptionListSettings.Top"/>.</em></p><p>May be used to limit the number of results to the most recent N usageDetails.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicSubscriptionListSettings SetTop(this AzureServicebusTopicSubscriptionListSettings toolSettings, string top)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = top;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicSubscriptionListSettings.Top"/>.</em></p><p>May be used to limit the number of results to the most recent N usageDetails.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicSubscriptionListSettings ResetTop(this AzureServicebusTopicSubscriptionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureServicebusTopicSubscriptionListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -10509,7 +13512,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureServicebusTopicSubscriptionListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusTopicSubscriptionListSettings SetOutput(this AzureServicebusTopicSubscriptionListSettings toolSettings, Output output)
+        public static AzureServicebusTopicSubscriptionListSettings SetOutput(this AzureServicebusTopicSubscriptionListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -10679,7 +13682,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureServicebusTopicSubscriptionShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusTopicSubscriptionShowSettings SetOutput(this AzureServicebusTopicSubscriptionShowSettings toolSettings, Output output)
+        public static AzureServicebusTopicSubscriptionShowSettings SetOutput(this AzureServicebusTopicSubscriptionShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -10828,6 +13831,48 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region DeadLetterOnFilterExceptions
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicSubscriptionUpdateSettings.DeadLetterOnFilterExceptions"/>.</em></p><p>Allow dead lettering when filter evaluation exceptions occur.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicSubscriptionUpdateSettings SetDeadLetterOnFilterExceptions(this AzureServicebusTopicSubscriptionUpdateSettings toolSettings, bool? deadLetterOnFilterExceptions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DeadLetterOnFilterExceptions = deadLetterOnFilterExceptions;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicSubscriptionUpdateSettings.DeadLetterOnFilterExceptions"/>.</em></p><p>Allow dead lettering when filter evaluation exceptions occur.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicSubscriptionUpdateSettings ResetDeadLetterOnFilterExceptions(this AzureServicebusTopicSubscriptionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DeadLetterOnFilterExceptions = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureServicebusTopicSubscriptionUpdateSettings.DeadLetterOnFilterExceptions"/>.</em></p><p>Allow dead lettering when filter evaluation exceptions occur.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicSubscriptionUpdateSettings EnableDeadLetterOnFilterExceptions(this AzureServicebusTopicSubscriptionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DeadLetterOnFilterExceptions = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureServicebusTopicSubscriptionUpdateSettings.DeadLetterOnFilterExceptions"/>.</em></p><p>Allow dead lettering when filter evaluation exceptions occur.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicSubscriptionUpdateSettings DisableDeadLetterOnFilterExceptions(this AzureServicebusTopicSubscriptionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DeadLetterOnFilterExceptions = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureServicebusTopicSubscriptionUpdateSettings.DeadLetterOnFilterExceptions"/>.</em></p><p>Allow dead lettering when filter evaluation exceptions occur.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicSubscriptionUpdateSettings ToggleDeadLetterOnFilterExceptions(this AzureServicebusTopicSubscriptionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DeadLetterOnFilterExceptions = !toolSettings.DeadLetterOnFilterExceptions;
+            return toolSettings;
+        }
+        #endregion
         #region DefaultMessageTimeToLive
         /// <summary><p><em>Sets <see cref="AzureServicebusTopicSubscriptionUpdateSettings.DefaultMessageTimeToLive"/>.</em></p><p>ISO 8601 or duration time format for Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.</p></summary>
         [Pure]
@@ -10847,7 +13892,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region EnableBatchedOperations
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicSubscriptionUpdateSettings.EnableBatchedOperations"/>.</em></p><p>A boolean value that indicates whether server-side batched operations are enabled.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicSubscriptionUpdateSettings.EnableBatchedOperations"/>.</em></p><p>Allow server-side batched operations.</p></summary>
         [Pure]
         public static AzureServicebusTopicSubscriptionUpdateSettings SetEnableBatchedOperations(this AzureServicebusTopicSubscriptionUpdateSettings toolSettings, bool? enableBatchedOperations)
         {
@@ -10855,7 +13900,7 @@ namespace Nuke.Azure
             toolSettings.EnableBatchedOperations = enableBatchedOperations;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicSubscriptionUpdateSettings.EnableBatchedOperations"/>.</em></p><p>A boolean value that indicates whether server-side batched operations are enabled.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicSubscriptionUpdateSettings.EnableBatchedOperations"/>.</em></p><p>Allow server-side batched operations.</p></summary>
         [Pure]
         public static AzureServicebusTopicSubscriptionUpdateSettings ResetEnableBatchedOperations(this AzureServicebusTopicSubscriptionUpdateSettings toolSettings)
         {
@@ -10863,7 +13908,7 @@ namespace Nuke.Azure
             toolSettings.EnableBatchedOperations = null;
             return toolSettings;
         }
-        /// <summary><p><em>Enables <see cref="AzureServicebusTopicSubscriptionUpdateSettings.EnableBatchedOperations"/>.</em></p><p>A boolean value that indicates whether server-side batched operations are enabled.</p></summary>
+        /// <summary><p><em>Enables <see cref="AzureServicebusTopicSubscriptionUpdateSettings.EnableBatchedOperations"/>.</em></p><p>Allow server-side batched operations.</p></summary>
         [Pure]
         public static AzureServicebusTopicSubscriptionUpdateSettings EnableEnableBatchedOperations(this AzureServicebusTopicSubscriptionUpdateSettings toolSettings)
         {
@@ -10871,7 +13916,7 @@ namespace Nuke.Azure
             toolSettings.EnableBatchedOperations = true;
             return toolSettings;
         }
-        /// <summary><p><em>Disables <see cref="AzureServicebusTopicSubscriptionUpdateSettings.EnableBatchedOperations"/>.</em></p><p>A boolean value that indicates whether server-side batched operations are enabled.</p></summary>
+        /// <summary><p><em>Disables <see cref="AzureServicebusTopicSubscriptionUpdateSettings.EnableBatchedOperations"/>.</em></p><p>Allow server-side batched operations.</p></summary>
         [Pure]
         public static AzureServicebusTopicSubscriptionUpdateSettings DisableEnableBatchedOperations(this AzureServicebusTopicSubscriptionUpdateSettings toolSettings)
         {
@@ -10879,7 +13924,7 @@ namespace Nuke.Azure
             toolSettings.EnableBatchedOperations = false;
             return toolSettings;
         }
-        /// <summary><p><em>Toggles <see cref="AzureServicebusTopicSubscriptionUpdateSettings.EnableBatchedOperations"/>.</em></p><p>A boolean value that indicates whether server-side batched operations are enabled.</p></summary>
+        /// <summary><p><em>Toggles <see cref="AzureServicebusTopicSubscriptionUpdateSettings.EnableBatchedOperations"/>.</em></p><p>Allow server-side batched operations.</p></summary>
         [Pure]
         public static AzureServicebusTopicSubscriptionUpdateSettings ToggleEnableBatchedOperations(this AzureServicebusTopicSubscriptionUpdateSettings toolSettings)
         {
@@ -11009,7 +14054,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region LockDuration
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicSubscriptionUpdateSettings.LockDuration"/>.</em></p><p>ISO 8601 or duration format (day:minute:seconds) for lock duration timespan for the subscription.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicSubscriptionUpdateSettings.LockDuration"/>.</em></p><p>ISO 8601 or duration format (day:minute:seconds) for lock duration timespan for the subscription. The default value is 1 minute.</p></summary>
         [Pure]
         public static AzureServicebusTopicSubscriptionUpdateSettings SetLockDuration(this AzureServicebusTopicSubscriptionUpdateSettings toolSettings, string lockDuration)
         {
@@ -11017,7 +14062,7 @@ namespace Nuke.Azure
             toolSettings.LockDuration = lockDuration;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicSubscriptionUpdateSettings.LockDuration"/>.</em></p><p>ISO 8601 or duration format (day:minute:seconds) for lock duration timespan for the subscription.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicSubscriptionUpdateSettings.LockDuration"/>.</em></p><p>ISO 8601 or duration format (day:minute:seconds) for lock duration timespan for the subscription. The default value is 1 minute.</p></summary>
         [Pure]
         public static AzureServicebusTopicSubscriptionUpdateSettings ResetLockDuration(this AzureServicebusTopicSubscriptionUpdateSettings toolSettings)
         {
@@ -11077,6 +14122,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Add = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ForceString
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicSubscriptionUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicSubscriptionUpdateSettings SetForceString(this AzureServicebusTopicSubscriptionUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicSubscriptionUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicSubscriptionUpdateSettings ResetForceString(this AzureServicebusTopicSubscriptionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
             return toolSettings;
         }
         #endregion
@@ -11155,7 +14218,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureServicebusTopicSubscriptionUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusTopicSubscriptionUpdateSettings SetOutput(this AzureServicebusTopicSubscriptionUpdateSettings toolSettings, Output output)
+        public static AzureServicebusTopicSubscriptionUpdateSettings SetOutput(this AzureServicebusTopicSubscriptionUpdateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -11208,24 +14271,42 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureServicebusTopicAuthorizationRuleCreateSettingsExtensions
+    #region AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettingsExtensions
     /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusTopicAuthorizationRuleCreateSettingsExtensions
+    public static partial class AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Name"/>.</em></p><p>Name of Topic Authorization Rule.</p></summary>
+        #region Alias
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
         [Pure]
-        public static AzureServicebusTopicAuthorizationRuleCreateSettings SetName(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings, string name)
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetAlias(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string alias)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = alias;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetAlias(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
+        [Pure]
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetName(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Name"/>.</em></p><p>Name of Topic Authorization Rule.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
         [Pure]
-        public static AzureServicebusTopicAuthorizationRuleCreateSettings ResetName(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings)
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetName(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -11233,17 +14314,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
         [Pure]
-        public static AzureServicebusTopicAuthorizationRuleCreateSettings SetNamespaceName(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings, string namespaceName)
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetNamespaceName(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string namespaceName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = namespaceName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
         [Pure]
-        public static AzureServicebusTopicAuthorizationRuleCreateSettings ResetNamespaceName(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings)
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetNamespaceName(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = null;
@@ -11251,1271 +14332,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureServicebusTopicAuthorizationRuleCreateSettings SetResourceGroup(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings, string resourceGroup)
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetResourceGroup(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureServicebusTopicAuthorizationRuleCreateSettings ResetResourceGroup(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Rights
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleCreateSettings SetRights(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings, params ServicebusNamespaceAuthorizationRuleRights[] rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal = rights.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleCreateSettings SetRights(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings, IEnumerable<ServicebusNamespaceAuthorizationRuleRights> rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal = rights.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleCreateSettings AddRights(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings, params ServicebusNamespaceAuthorizationRuleRights[] rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal.AddRange(rights);
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleCreateSettings AddRights(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings, IEnumerable<ServicebusNamespaceAuthorizationRuleRights> rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal.AddRange(rights);
-            return toolSettings;
-        }
-        /// <summary><p><em>Clears <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleCreateSettings ClearRights(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleCreateSettings RemoveRights(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings, params ServicebusNamespaceAuthorizationRuleRights[] rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<ServicebusNamespaceAuthorizationRuleRights>(rights);
-            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleCreateSettings RemoveRights(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings, IEnumerable<ServicebusNamespaceAuthorizationRuleRights> rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<ServicebusNamespaceAuthorizationRuleRights>(rights);
-            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region TopicName
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.TopicName"/>.</em></p><p>Name of Topic.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleCreateSettings SetTopicName(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings, string topicName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TopicName = topicName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.TopicName"/>.</em></p><p>Name of Topic.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleCreateSettings ResetTopicName(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TopicName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleCreateSettings SetDebug(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleCreateSettings ResetDebug(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleCreateSettings SetHelp(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleCreateSettings ResetHelp(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleCreateSettings SetOutput(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleCreateSettings ResetOutput(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleCreateSettings SetQuery(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleCreateSettings ResetQuery(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleCreateSettings SetVerbose(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleCreateSettings ResetVerbose(this AzureServicebusTopicAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureServicebusTopicAuthorizationRuleDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusTopicAuthorizationRuleDeleteSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.Name"/>.</em></p><p>Name of Topic Authorization Rule.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleDeleteSettings SetName(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.Name"/>.</em></p><p>Name of Topic Authorization Rule.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleDeleteSettings ResetName(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleDeleteSettings SetNamespaceName(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleDeleteSettings ResetNamespaceName(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleDeleteSettings SetResourceGroup(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleDeleteSettings ResetResourceGroup(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region TopicName
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.TopicName"/>.</em></p><p>Name of Topic.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleDeleteSettings SetTopicName(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings, string topicName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TopicName = topicName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.TopicName"/>.</em></p><p>Name of Topic.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleDeleteSettings ResetTopicName(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TopicName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleDeleteSettings SetDebug(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleDeleteSettings ResetDebug(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleDeleteSettings SetHelp(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleDeleteSettings ResetHelp(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleDeleteSettings SetOutput(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleDeleteSettings ResetOutput(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleDeleteSettings SetQuery(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleDeleteSettings ResetQuery(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleDeleteSettings SetVerbose(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleDeleteSettings ResetVerbose(this AzureServicebusTopicAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureServicebusTopicAuthorizationRuleListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusTopicAuthorizationRuleListSettingsExtensions
-    {
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleListSettings SetNamespaceName(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleListSettings ResetNamespaceName(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleListSettings SetResourceGroup(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleListSettings ResetResourceGroup(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region TopicName
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.TopicName"/>.</em></p><p>Name of Topic.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleListSettings SetTopicName(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings, string topicName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TopicName = topicName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.TopicName"/>.</em></p><p>Name of Topic.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleListSettings ResetTopicName(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TopicName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleListSettings SetDebug(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleListSettings ResetDebug(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleListSettings SetHelp(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleListSettings ResetHelp(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleListSettings SetOutput(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleListSettings ResetOutput(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleListSettings SetQuery(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleListSettings ResetQuery(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleListSettings SetVerbose(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleListSettings ResetVerbose(this AzureServicebusTopicAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureServicebusTopicAuthorizationRuleShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusTopicAuthorizationRuleShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.Name"/>.</em></p><p>Name of Topic Authorization Rule.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleShowSettings SetName(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.Name"/>.</em></p><p>Name of Topic Authorization Rule.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleShowSettings ResetName(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleShowSettings SetNamespaceName(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleShowSettings ResetNamespaceName(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleShowSettings SetResourceGroup(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleShowSettings ResetResourceGroup(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region TopicName
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.TopicName"/>.</em></p><p>Name of Topic.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleShowSettings SetTopicName(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings, string topicName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TopicName = topicName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.TopicName"/>.</em></p><p>Name of Topic.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleShowSettings ResetTopicName(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TopicName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleShowSettings SetDebug(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleShowSettings ResetDebug(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleShowSettings SetHelp(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleShowSettings ResetHelp(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleShowSettings SetOutput(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleShowSettings ResetOutput(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleShowSettings SetQuery(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleShowSettings ResetQuery(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleShowSettings SetVerbose(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleShowSettings ResetVerbose(this AzureServicebusTopicAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureServicebusTopicAuthorizationRuleUpdateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusTopicAuthorizationRuleUpdateSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Name"/>.</em></p><p>Name of Topic Authorization Rule.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleUpdateSettings SetName(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Name"/>.</em></p><p>Name of Topic Authorization Rule.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleUpdateSettings ResetName(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleUpdateSettings SetNamespaceName(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleUpdateSettings ResetNamespaceName(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleUpdateSettings SetResourceGroup(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleUpdateSettings ResetResourceGroup(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Rights
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleUpdateSettings SetRights(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, params ServicebusNamespaceAuthorizationRuleRights[] rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal = rights.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleUpdateSettings SetRights(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, IEnumerable<ServicebusNamespaceAuthorizationRuleRights> rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal = rights.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleUpdateSettings AddRights(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, params ServicebusNamespaceAuthorizationRuleRights[] rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal.AddRange(rights);
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleUpdateSettings AddRights(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, IEnumerable<ServicebusNamespaceAuthorizationRuleRights> rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal.AddRange(rights);
-            return toolSettings;
-        }
-        /// <summary><p><em>Clears <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleUpdateSettings ClearRights(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleUpdateSettings RemoveRights(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, params ServicebusNamespaceAuthorizationRuleRights[] rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<ServicebusNamespaceAuthorizationRuleRights>(rights);
-            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleUpdateSettings RemoveRights(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, IEnumerable<ServicebusNamespaceAuthorizationRuleRights> rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<ServicebusNamespaceAuthorizationRuleRights>(rights);
-            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region TopicName
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.TopicName"/>.</em></p><p>Name of Topic.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleUpdateSettings SetTopicName(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, string topicName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TopicName = topicName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.TopicName"/>.</em></p><p>Name of Topic.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleUpdateSettings ResetTopicName(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TopicName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Add
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleUpdateSettings SetAdd(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, string add)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = add;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleUpdateSettings ResetAdd(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Remove
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleUpdateSettings SetRemove(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, string remove)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = remove;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleUpdateSettings ResetRemove(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Set
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleUpdateSettings SetSet(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, string set)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = set;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleUpdateSettings ResetSet(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleUpdateSettings SetDebug(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleUpdateSettings ResetDebug(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleUpdateSettings SetHelp(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleUpdateSettings ResetHelp(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleUpdateSettings SetOutput(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleUpdateSettings ResetOutput(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleUpdateSettings SetQuery(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleUpdateSettings ResetQuery(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleUpdateSettings SetVerbose(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusTopicAuthorizationRuleUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusTopicAuthorizationRuleUpdateSettings ResetVerbose(this AzureServicebusTopicAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureServicebusQueueAuthorizationRuleCreateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusQueueAuthorizationRuleCreateSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleCreateSettings SetName(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleCreateSettings ResetName(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleCreateSettings SetNamespaceName(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleCreateSettings ResetNamespaceName(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region QueueName
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleCreateSettings SetQueueName(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings, string queueName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.QueueName = queueName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleCreateSettings ResetQueueName(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.QueueName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleCreateSettings SetResourceGroup(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleCreateSettings ResetResourceGroup(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Rights
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleCreateSettings SetRights(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings, params ServicebusNamespaceAuthorizationRuleRights[] rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal = rights.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleCreateSettings SetRights(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings, IEnumerable<ServicebusNamespaceAuthorizationRuleRights> rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal = rights.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleCreateSettings AddRights(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings, params ServicebusNamespaceAuthorizationRuleRights[] rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal.AddRange(rights);
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleCreateSettings AddRights(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings, IEnumerable<ServicebusNamespaceAuthorizationRuleRights> rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal.AddRange(rights);
-            return toolSettings;
-        }
-        /// <summary><p><em>Clears <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleCreateSettings ClearRights(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleCreateSettings RemoveRights(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings, params ServicebusNamespaceAuthorizationRuleRights[] rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<ServicebusNamespaceAuthorizationRuleRights>(rights);
-            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleCreateSettings RemoveRights(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings, IEnumerable<ServicebusNamespaceAuthorizationRuleRights> rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<ServicebusNamespaceAuthorizationRuleRights>(rights);
-            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleCreateSettings SetDebug(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleCreateSettings ResetDebug(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleCreateSettings SetHelp(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleCreateSettings ResetHelp(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleCreateSettings SetOutput(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleCreateSettings ResetOutput(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleCreateSettings SetQuery(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleCreateSettings ResetQuery(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleCreateSettings SetVerbose(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleCreateSettings ResetVerbose(this AzureServicebusQueueAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureServicebusQueueAuthorizationRuleDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusQueueAuthorizationRuleDeleteSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleDeleteSettings SetName(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleDeleteSettings ResetName(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleDeleteSettings SetNamespaceName(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleDeleteSettings ResetNamespaceName(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region QueueName
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleDeleteSettings SetQueueName(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings, string queueName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.QueueName = queueName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleDeleteSettings ResetQueueName(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.QueueName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleDeleteSettings SetResourceGroup(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleDeleteSettings ResetResourceGroup(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings)
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetResourceGroup(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -12523,17 +14350,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureServicebusQueueAuthorizationRuleDeleteSettings SetDebug(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings, string debug)
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetDebug(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureServicebusQueueAuthorizationRuleDeleteSettings ResetDebug(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings)
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetDebug(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -12541,17 +14368,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureServicebusQueueAuthorizationRuleDeleteSettings SetHelp(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings, string help)
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetHelp(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureServicebusQueueAuthorizationRuleDeleteSettings ResetHelp(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings)
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetHelp(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -12559,17 +14386,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusQueueAuthorizationRuleDeleteSettings SetOutput(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings, Output output)
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetOutput(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusQueueAuthorizationRuleDeleteSettings ResetOutput(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings)
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetOutput(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -12577,17 +14404,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureServicebusQueueAuthorizationRuleDeleteSettings SetQuery(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings, string query)
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetQuery(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureServicebusQueueAuthorizationRuleDeleteSettings ResetQuery(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings)
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetQuery(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -12595,623 +14422,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureServicebusQueueAuthorizationRuleDeleteSettings SetVerbose(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings, string verbose)
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetVerbose(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureServicebusQueueAuthorizationRuleDeleteSettings ResetVerbose(this AzureServicebusQueueAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureServicebusQueueAuthorizationRuleListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusQueueAuthorizationRuleListSettingsExtensions
-    {
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleListSettings SetNamespaceName(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleListSettings ResetNamespaceName(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region QueueName
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleListSettings SetQueueName(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings, string queueName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.QueueName = queueName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleListSettings ResetQueueName(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.QueueName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleListSettings SetResourceGroup(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleListSettings ResetResourceGroup(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleListSettings SetDebug(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleListSettings ResetDebug(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleListSettings SetHelp(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleListSettings ResetHelp(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleListSettings SetOutput(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleListSettings ResetOutput(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleListSettings SetQuery(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleListSettings ResetQuery(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleListSettings SetVerbose(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleListSettings ResetVerbose(this AzureServicebusQueueAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureServicebusQueueAuthorizationRuleShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusQueueAuthorizationRuleShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleShowSettings SetName(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleShowSettings ResetName(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleShowSettings SetNamespaceName(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleShowSettings ResetNamespaceName(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region QueueName
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleShowSettings SetQueueName(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings, string queueName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.QueueName = queueName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleShowSettings ResetQueueName(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.QueueName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleShowSettings SetResourceGroup(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleShowSettings ResetResourceGroup(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleShowSettings SetDebug(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleShowSettings ResetDebug(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleShowSettings SetHelp(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleShowSettings ResetHelp(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleShowSettings SetOutput(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleShowSettings ResetOutput(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleShowSettings SetQuery(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleShowSettings ResetQuery(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleShowSettings SetVerbose(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleShowSettings ResetVerbose(this AzureServicebusQueueAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureServicebusQueueAuthorizationRuleUpdateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusQueueAuthorizationRuleUpdateSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleUpdateSettings SetName(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleUpdateSettings ResetName(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleUpdateSettings SetNamespaceName(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleUpdateSettings ResetNamespaceName(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region QueueName
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleUpdateSettings SetQueueName(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, string queueName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.QueueName = queueName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleUpdateSettings ResetQueueName(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.QueueName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleUpdateSettings SetResourceGroup(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleUpdateSettings ResetResourceGroup(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Rights
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleUpdateSettings SetRights(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, params ServicebusNamespaceAuthorizationRuleRights[] rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal = rights.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleUpdateSettings SetRights(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, IEnumerable<ServicebusNamespaceAuthorizationRuleRights> rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal = rights.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleUpdateSettings AddRights(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, params ServicebusNamespaceAuthorizationRuleRights[] rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal.AddRange(rights);
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleUpdateSettings AddRights(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, IEnumerable<ServicebusNamespaceAuthorizationRuleRights> rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal.AddRange(rights);
-            return toolSettings;
-        }
-        /// <summary><p><em>Clears <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleUpdateSettings ClearRights(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleUpdateSettings RemoveRights(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, params ServicebusNamespaceAuthorizationRuleRights[] rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<ServicebusNamespaceAuthorizationRuleRights>(rights);
-            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleUpdateSettings RemoveRights(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, IEnumerable<ServicebusNamespaceAuthorizationRuleRights> rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<ServicebusNamespaceAuthorizationRuleRights>(rights);
-            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Add
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleUpdateSettings SetAdd(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, string add)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = add;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleUpdateSettings ResetAdd(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Remove
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleUpdateSettings SetRemove(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, string remove)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = remove;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleUpdateSettings ResetRemove(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Set
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleUpdateSettings SetSet(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, string set)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = set;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleUpdateSettings ResetSet(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleUpdateSettings SetDebug(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleUpdateSettings ResetDebug(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleUpdateSettings SetHelp(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleUpdateSettings ResetHelp(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleUpdateSettings SetOutput(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleUpdateSettings ResetOutput(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleUpdateSettings SetQuery(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleUpdateSettings ResetQuery(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleUpdateSettings SetVerbose(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleUpdateSettings ResetVerbose(this AzureServicebusQueueAuthorizationRuleUpdateSettings toolSettings)
+        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetVerbose(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -13319,7 +14540,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings SetOutput(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings, Output output)
+        public static AzureServicebusNamespaceAuthorizationRuleKeysListSettings SetOutput(this AzureServicebusNamespaceAuthorizationRuleKeysListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -13507,7 +14728,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings SetOutput(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings, Output output)
+        public static AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings SetOutput(this AzureServicebusNamespaceAuthorizationRuleKeysRenewSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -13560,42 +14781,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettingsExtensions
+    #region AzureServicebusQueueAuthorizationRuleKeysListSettingsExtensions
     /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettingsExtensions
+    public static partial class AzureServicebusQueueAuthorizationRuleKeysListSettingsExtensions
     {
-        #region Alias
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetAlias(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string alias)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = alias;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
-        [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetAlias(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = null;
-            return toolSettings;
-        }
-        #endregion
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetName(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string name)
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetName(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetName(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetName(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -13603,35 +14806,53 @@ namespace Nuke.Azure
         }
         #endregion
         #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetNamespaceName(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string namespaceName)
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetNamespaceName(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string namespaceName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = namespaceName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetNamespaceName(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetNamespaceName(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = null;
             return toolSettings;
         }
         #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        #region QueueName
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetResourceGroup(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string resourceGroup)
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetQueueName(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string queueName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.QueueName = queueName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetQueueName(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.QueueName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetResourceGroup(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetResourceGroup(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetResourceGroup(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -13639,17 +14860,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetDebug(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string debug)
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetDebug(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetDebug(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetDebug(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -13657,17 +14878,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetHelp(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string help)
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetHelp(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetHelp(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetHelp(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -13675,17 +14896,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetOutput(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, Output output)
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetOutput(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetOutput(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetOutput(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -13693,17 +14914,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetQuery(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string query)
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetQuery(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetQuery(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetQuery(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -13711,17 +14932,223 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings SetVerbose(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string verbose)
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetVerbose(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings ResetVerbose(this AzureServicebusGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
+        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetVerbose(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureServicebusQueueAuthorizationRuleKeysRenewSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureServicebusQueueAuthorizationRuleKeysRenewSettingsExtensions
+    {
+        #region Key
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Key"/>.</em></p><p>Specifies Primary or Secondary key needs to be reset.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetKey(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, ServicebusNamespaceAuthorizationRuleKeysKey key)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Key = key;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Key"/>.</em></p><p>Specifies Primary or Secondary key needs to be reset.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetKey(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Key = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetName(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetName(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetNamespaceName(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetNamespaceName(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region QueueName
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetQueueName(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string queueName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.QueueName = queueName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetQueueName(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.QueueName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetResourceGroup(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetResourceGroup(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region KeyValue
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.KeyValue"/>.</em></p><p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetKeyValue(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string keyValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyValue = keyValue;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.KeyValue"/>.</em></p><p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetKeyValue(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyValue = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetDebug(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetDebug(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetHelp(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetHelp(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetOutput(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetOutput(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetQuery(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetQuery(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetVerbose(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetVerbose(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -13847,7 +15274,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusTopicAuthorizationRuleKeysListSettings SetOutput(this AzureServicebusTopicAuthorizationRuleKeysListSettings toolSettings, Output output)
+        public static AzureServicebusTopicAuthorizationRuleKeysListSettings SetOutput(this AzureServicebusTopicAuthorizationRuleKeysListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -14053,7 +15480,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureServicebusTopicAuthorizationRuleKeysRenewSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusTopicAuthorizationRuleKeysRenewSettings SetOutput(this AzureServicebusTopicAuthorizationRuleKeysRenewSettings toolSettings, Output output)
+        public static AzureServicebusTopicAuthorizationRuleKeysRenewSettings SetOutput(this AzureServicebusTopicAuthorizationRuleKeysRenewSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -14565,7 +15992,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureServicebusTopicSubscriptionRuleCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusTopicSubscriptionRuleCreateSettings SetOutput(this AzureServicebusTopicSubscriptionRuleCreateSettings toolSettings, Output output)
+        public static AzureServicebusTopicSubscriptionRuleCreateSettings SetOutput(this AzureServicebusTopicSubscriptionRuleCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -14753,7 +16180,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureServicebusTopicSubscriptionRuleDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusTopicSubscriptionRuleDeleteSettings SetOutput(this AzureServicebusTopicSubscriptionRuleDeleteSettings toolSettings, Output output)
+        public static AzureServicebusTopicSubscriptionRuleDeleteSettings SetOutput(this AzureServicebusTopicSubscriptionRuleDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -14884,6 +16311,42 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Skip
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicSubscriptionRuleListSettings.Skip"/>.</em></p><p>Skip is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skip parameter that specifies a starting point to use for subsequent calls.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicSubscriptionRuleListSettings SetSkip(this AzureServicebusTopicSubscriptionRuleListSettings toolSettings, string skip)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Skip = skip;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicSubscriptionRuleListSettings.Skip"/>.</em></p><p>Skip is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skip parameter that specifies a starting point to use for subsequent calls.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicSubscriptionRuleListSettings ResetSkip(this AzureServicebusTopicSubscriptionRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Skip = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Top
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicSubscriptionRuleListSettings.Top"/>.</em></p><p>May be used to limit the number of results to the most recent N usageDetails.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicSubscriptionRuleListSettings SetTop(this AzureServicebusTopicSubscriptionRuleListSettings toolSettings, string top)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = top;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicSubscriptionRuleListSettings.Top"/>.</em></p><p>May be used to limit the number of results to the most recent N usageDetails.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicSubscriptionRuleListSettings ResetTop(this AzureServicebusTopicSubscriptionRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureServicebusTopicSubscriptionRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -14923,7 +16386,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureServicebusTopicSubscriptionRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusTopicSubscriptionRuleListSettings SetOutput(this AzureServicebusTopicSubscriptionRuleListSettings toolSettings, Output output)
+        public static AzureServicebusTopicSubscriptionRuleListSettings SetOutput(this AzureServicebusTopicSubscriptionRuleListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -15111,7 +16574,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureServicebusTopicSubscriptionRuleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusTopicSubscriptionRuleShowSettings SetOutput(this AzureServicebusTopicSubscriptionRuleShowSettings toolSettings, Output output)
+        public static AzureServicebusTopicSubscriptionRuleShowSettings SetOutput(this AzureServicebusTopicSubscriptionRuleShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -15602,6 +17065,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region ForceString
+        /// <summary><p><em>Sets <see cref="AzureServicebusTopicSubscriptionRuleUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicSubscriptionRuleUpdateSettings SetForceString(this AzureServicebusTopicSubscriptionRuleUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureServicebusTopicSubscriptionRuleUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureServicebusTopicSubscriptionRuleUpdateSettings ResetForceString(this AzureServicebusTopicSubscriptionRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
         #region Remove
         /// <summary><p><em>Sets <see cref="AzureServicebusTopicSubscriptionRuleUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         [Pure]
@@ -15677,7 +17158,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureServicebusTopicSubscriptionRuleUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureServicebusTopicSubscriptionRuleUpdateSettings SetOutput(this AzureServicebusTopicSubscriptionRuleUpdateSettings toolSettings, Output output)
+        public static AzureServicebusTopicSubscriptionRuleUpdateSettings SetOutput(this AzureServicebusTopicSubscriptionRuleUpdateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -15730,386 +17211,35 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureServicebusQueueAuthorizationRuleKeysListSettingsExtensions
+    #region ServicebusNamespaceCapacity
     /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
     [PublicAPI]
+    [Serializable]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusQueueAuthorizationRuleKeysListSettingsExtensions
+    public partial class ServicebusNamespaceCapacity : Enumeration
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetName(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetName(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetNamespaceName(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetNamespaceName(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region QueueName
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetQueueName(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string queueName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.QueueName = queueName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetQueueName(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.QueueName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetResourceGroup(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetResourceGroup(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetDebug(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetDebug(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetHelp(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetHelp(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetOutput(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetOutput(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetQuery(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetQuery(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings SetVerbose(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysListSettings ResetVerbose(this AzureServicebusQueueAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
+        public static ServicebusNamespaceCapacity _1 = new ServicebusNamespaceCapacity { Value = "1" };
+        public static ServicebusNamespaceCapacity _2 = new ServicebusNamespaceCapacity { Value = "2" };
+        public static ServicebusNamespaceCapacity _4 = new ServicebusNamespaceCapacity { Value = "4" };
     }
     #endregion
-    #region AzureServicebusQueueAuthorizationRuleKeysRenewSettingsExtensions
+    #region ServicebusNamespaceSku
     /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
     [PublicAPI]
+    [Serializable]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureServicebusQueueAuthorizationRuleKeysRenewSettingsExtensions
+    public partial class ServicebusNamespaceSku : Enumeration
     {
-        #region Key
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Key"/>.</em></p><p>Specifies Primary or Secondary key needs to be reset.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetKey(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, ServicebusNamespaceAuthorizationRuleKeysKey key)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Key = key;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Key"/>.</em></p><p>Specifies Primary or Secondary key needs to be reset.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetKey(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Key = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetName(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Name"/>.</em></p><p>Name of Queue Authorization Rule.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetName(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetNamespaceName(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetNamespaceName(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region QueueName
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetQueueName(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string queueName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.QueueName = queueName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.QueueName"/>.</em></p><p>Name of Queue.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetQueueName(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.QueueName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetResourceGroup(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetResourceGroup(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region KeyValue
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.KeyValue"/>.</em></p><p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetKeyValue(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string keyValue)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.KeyValue = keyValue;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.KeyValue"/>.</em></p><p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetKeyValue(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.KeyValue = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetDebug(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetDebug(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetHelp(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetHelp(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetOutput(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetOutput(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetQuery(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetQuery(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings SetVerbose(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureServicebusQueueAuthorizationRuleKeysRenewSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureServicebusQueueAuthorizationRuleKeysRenewSettings ResetVerbose(this AzureServicebusQueueAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
+        public static ServicebusNamespaceSku basic = new ServicebusNamespaceSku { Value = "basic" };
+        public static ServicebusNamespaceSku premium = new ServicebusNamespaceSku { Value = "premium" };
+        public static ServicebusNamespaceSku standard = new ServicebusNamespaceSku { Value = "standard" };
     }
     #endregion
     #region ServicebusQueueMaxSize
     /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class ServicebusQueueMaxSize : Enumeration
     {
         public static ServicebusQueueMaxSize _1024 = new ServicebusQueueMaxSize { Value = "1024" };
@@ -16123,6 +17253,7 @@ namespace Nuke.Azure
     /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class ServicebusQueueStatus : Enumeration
     {
         public static ServicebusQueueStatus active = new ServicebusQueueStatus { Value = "active" };
@@ -16131,32 +17262,11 @@ namespace Nuke.Azure
         public static ServicebusQueueStatus senddisabled = new ServicebusQueueStatus { Value = "senddisabled" };
     }
     #endregion
-    #region ServicebusNamespaceCapacity
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [Serializable]
-    public partial class ServicebusNamespaceCapacity : Enumeration
-    {
-        public static ServicebusNamespaceCapacity _1 = new ServicebusNamespaceCapacity { Value = "1" };
-        public static ServicebusNamespaceCapacity _2 = new ServicebusNamespaceCapacity { Value = "2" };
-        public static ServicebusNamespaceCapacity _4 = new ServicebusNamespaceCapacity { Value = "4" };
-    }
-    #endregion
-    #region ServicebusNamespaceSku
-    /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
-    [PublicAPI]
-    [Serializable]
-    public partial class ServicebusNamespaceSku : Enumeration
-    {
-        public static ServicebusNamespaceSku basic = new ServicebusNamespaceSku { Value = "basic" };
-        public static ServicebusNamespaceSku premium = new ServicebusNamespaceSku { Value = "premium" };
-        public static ServicebusNamespaceSku standard = new ServicebusNamespaceSku { Value = "standard" };
-    }
-    #endregion
     #region ServicebusNamespaceAuthorizationRuleRights
     /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class ServicebusNamespaceAuthorizationRuleRights : Enumeration
     {
         public static ServicebusNamespaceAuthorizationRuleRights listen = new ServicebusNamespaceAuthorizationRuleRights { Value = "listen" };
@@ -16168,6 +17278,7 @@ namespace Nuke.Azure
     /// <summary><p>Used within <see cref="AzureServicebusTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class ServicebusNamespaceAuthorizationRuleKeysKey : Enumeration
     {
         public static ServicebusNamespaceAuthorizationRuleKeysKey primarykey = new ServicebusNamespaceAuthorizationRuleKeysKey { Value = "primarykey" };

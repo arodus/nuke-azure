@@ -2,10 +2,11 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
+// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureDisk.json.
 
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.Tooling;
@@ -28,99 +29,75 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureDisk executable.</p></summary>
         public static string AzureDiskPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage Azure Managed Disks.</p></summary>
-        public static IEnumerable<string> AzureDisk(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
+        public static IReadOnlyCollection<Output> AzureDisk(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool logOutput = true, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureDiskPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
+            var process = ProcessTasks.StartProcess(AzureDiskPath, arguments, workingDirectory, environmentVariables, timeout, logOutput, null, outputFilter);
             process.AssertZeroExitCode();
-            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
+            return process.Output;
         }
-        static partial void PreProcess(AzureDiskCreateSettings toolSettings);
-        static partial void PostProcess(AzureDiskCreateSettings toolSettings);
         /// <summary><p>Manage Azure Managed Disks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/disk?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDiskCreate(Configure<AzureDiskCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureDiskCreate(Configure<AzureDiskCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDiskCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureDiskDeleteSettings toolSettings);
-        static partial void PostProcess(AzureDiskDeleteSettings toolSettings);
         /// <summary><p>Manage Azure Managed Disks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/disk?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDiskDelete(Configure<AzureDiskDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureDiskDelete(Configure<AzureDiskDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDiskDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureDiskGrantAccessSettings toolSettings);
-        static partial void PostProcess(AzureDiskGrantAccessSettings toolSettings);
         /// <summary><p>Manage Azure Managed Disks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/disk?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDiskGrantAccess(Configure<AzureDiskGrantAccessSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureDiskGrantAccess(Configure<AzureDiskGrantAccessSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDiskGrantAccessSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureDiskListSettings toolSettings);
-        static partial void PostProcess(AzureDiskListSettings toolSettings);
         /// <summary><p>Manage Azure Managed Disks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/disk?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDiskList(Configure<AzureDiskListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureDiskList(Configure<AzureDiskListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDiskListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureDiskRevokeAccessSettings toolSettings);
-        static partial void PostProcess(AzureDiskRevokeAccessSettings toolSettings);
         /// <summary><p>Manage Azure Managed Disks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/disk?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDiskRevokeAccess(Configure<AzureDiskRevokeAccessSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureDiskRevokeAccess(Configure<AzureDiskRevokeAccessSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDiskRevokeAccessSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureDiskShowSettings toolSettings);
-        static partial void PostProcess(AzureDiskShowSettings toolSettings);
         /// <summary><p>Manage Azure Managed Disks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/disk?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDiskShow(Configure<AzureDiskShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureDiskShow(Configure<AzureDiskShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDiskShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureDiskUpdateSettings toolSettings);
-        static partial void PostProcess(AzureDiskUpdateSettings toolSettings);
         /// <summary><p>Manage Azure Managed Disks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/disk?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDiskUpdate(Configure<AzureDiskUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureDiskUpdate(Configure<AzureDiskUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDiskUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureDiskWaitSettings toolSettings);
-        static partial void PostProcess(AzureDiskWaitSettings toolSettings);
         /// <summary><p>Manage Azure Managed Disks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/disk?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDiskWait(Configure<AzureDiskWaitSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureDiskWait(Configure<AzureDiskWaitSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDiskWaitSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
     }
     #region AzureDiskCreateSettings
@@ -157,7 +134,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -207,7 +184,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -249,7 +226,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -286,7 +263,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -323,7 +300,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -361,7 +338,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -402,6 +379,8 @@ namespace Nuke.Azure
         public virtual DiskSku Sku { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
+        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        public virtual string ForceString { get; internal set; }
         /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         public virtual string Remove { get; internal set; }
         /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
@@ -411,7 +390,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -426,6 +405,7 @@ namespace Nuke.Azure
               .Add("--size-gb {value}", SizeGb)
               .Add("--sku {value}", Sku)
               .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
               .Add("--debug {value}", Debug)
@@ -469,7 +449,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -721,7 +701,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureDiskCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDiskCreateSettings SetOutput(this AzureDiskCreateSettings toolSettings, Output output)
+        public static AzureDiskCreateSettings SetOutput(this AzureDiskCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -891,7 +871,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureDiskDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDiskDeleteSettings SetOutput(this AzureDiskDeleteSettings toolSettings, Output output)
+        public static AzureDiskDeleteSettings SetOutput(this AzureDiskDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1043,7 +1023,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureDiskGrantAccessSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDiskGrantAccessSettings SetOutput(this AzureDiskGrantAccessSettings toolSettings, Output output)
+        public static AzureDiskGrantAccessSettings SetOutput(this AzureDiskGrantAccessSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1159,7 +1139,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureDiskListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDiskListSettings SetOutput(this AzureDiskListSettings toolSettings, Output output)
+        public static AzureDiskListSettings SetOutput(this AzureDiskListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1293,7 +1273,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureDiskRevokeAccessSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDiskRevokeAccessSettings SetOutput(this AzureDiskRevokeAccessSettings toolSettings, Output output)
+        public static AzureDiskRevokeAccessSettings SetOutput(this AzureDiskRevokeAccessSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1427,7 +1407,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureDiskShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDiskShowSettings SetOutput(this AzureDiskShowSettings toolSettings, Output output)
+        public static AzureDiskShowSettings SetOutput(this AzureDiskShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1594,6 +1574,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region ForceString
+        /// <summary><p><em>Sets <see cref="AzureDiskUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureDiskUpdateSettings SetForceString(this AzureDiskUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDiskUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureDiskUpdateSettings ResetForceString(this AzureDiskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
         #region Remove
         /// <summary><p><em>Sets <see cref="AzureDiskUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         [Pure]
@@ -1669,7 +1667,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureDiskUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDiskUpdateSettings SetOutput(this AzureDiskUpdateSettings toolSettings, Output output)
+        public static AzureDiskUpdateSettings SetOutput(this AzureDiskUpdateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1929,7 +1927,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureDiskWaitSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDiskWaitSettings SetOutput(this AzureDiskWaitSettings toolSettings, Output output)
+        public static AzureDiskWaitSettings SetOutput(this AzureDiskWaitSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1986,9 +1984,11 @@ namespace Nuke.Azure
     /// <summary><p>Used within <see cref="AzureDiskTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class DiskSku : Enumeration
     {
         public static DiskSku premium_lrs = new DiskSku { Value = "premium_lrs" };
+        public static DiskSku standardssd_lrs = new DiskSku { Value = "standardssd_lrs" };
         public static DiskSku standard_lrs = new DiskSku { Value = "standard_lrs" };
     }
     #endregion
@@ -1996,6 +1996,7 @@ namespace Nuke.Azure
     /// <summary><p>Used within <see cref="AzureDiskTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class DiskCreateZone : Enumeration
     {
         public static DiskCreateZone _1 = new DiskCreateZone { Value = "1" };

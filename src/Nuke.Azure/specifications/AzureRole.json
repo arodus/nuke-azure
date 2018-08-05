@@ -6,9 +6,9 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/role.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/role/assignment.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/role/definition.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/role.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/role/assignment.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/role/definition.yml"
   ],
   "name": "AzureRole",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/role?view=azure-cli-latest",
@@ -129,7 +129,7 @@
             "name": "IncludeGroups",
             "type": "string",
             "format": "--include-groups {value}",
-            "help": "Include extra assignments to the groups of which the user is a member(transitively). Supported only for a user principal."
+            "help": "Include extra assignments to the groups of which the user is a member(transitively)."
           },
           {
             "name": "IncludeInherited",
@@ -286,7 +286,7 @@
     },
     {
       "name": "Output",
-      "type": "Output",
+      "type": "AzureOutput",
       "format": "--output {value}",
       "help": "Output format."
     },

@@ -2,10 +2,11 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
+// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureManagedapp.json.
 
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.Tooling;
@@ -28,99 +29,75 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureManagedapp executable.</p></summary>
         public static string AzureManagedappPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage template solutions provided and maintained by Independent Software Vendors (ISVs).</p></summary>
-        public static IEnumerable<string> AzureManagedapp(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
+        public static IReadOnlyCollection<Output> AzureManagedapp(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool logOutput = true, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureManagedappPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
+            var process = ProcessTasks.StartProcess(AzureManagedappPath, arguments, workingDirectory, environmentVariables, timeout, logOutput, null, outputFilter);
             process.AssertZeroExitCode();
-            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
+            return process.Output;
         }
-        static partial void PreProcess(AzureManagedappCreateSettings toolSettings);
-        static partial void PostProcess(AzureManagedappCreateSettings toolSettings);
         /// <summary><p>Manage template solutions provided and maintained by Independent Software Vendors (ISVs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/managedapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureManagedappCreate(Configure<AzureManagedappCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureManagedappCreate(Configure<AzureManagedappCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureManagedappCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureManagedappDeleteSettings toolSettings);
-        static partial void PostProcess(AzureManagedappDeleteSettings toolSettings);
         /// <summary><p>Manage template solutions provided and maintained by Independent Software Vendors (ISVs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/managedapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureManagedappDelete(Configure<AzureManagedappDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureManagedappDelete(Configure<AzureManagedappDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureManagedappDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureManagedappListSettings toolSettings);
-        static partial void PostProcess(AzureManagedappListSettings toolSettings);
         /// <summary><p>Manage template solutions provided and maintained by Independent Software Vendors (ISVs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/managedapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureManagedappList(Configure<AzureManagedappListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureManagedappList(Configure<AzureManagedappListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureManagedappListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureManagedappShowSettings toolSettings);
-        static partial void PostProcess(AzureManagedappShowSettings toolSettings);
         /// <summary><p>Manage template solutions provided and maintained by Independent Software Vendors (ISVs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/managedapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureManagedappShow(Configure<AzureManagedappShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureManagedappShow(Configure<AzureManagedappShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureManagedappShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureManagedappDefinitionCreateSettings toolSettings);
-        static partial void PostProcess(AzureManagedappDefinitionCreateSettings toolSettings);
         /// <summary><p>Manage template solutions provided and maintained by Independent Software Vendors (ISVs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/managedapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureManagedappDefinitionCreate(Configure<AzureManagedappDefinitionCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureManagedappDefinitionCreate(Configure<AzureManagedappDefinitionCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureManagedappDefinitionCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureManagedappDefinitionDeleteSettings toolSettings);
-        static partial void PostProcess(AzureManagedappDefinitionDeleteSettings toolSettings);
         /// <summary><p>Manage template solutions provided and maintained by Independent Software Vendors (ISVs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/managedapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureManagedappDefinitionDelete(Configure<AzureManagedappDefinitionDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureManagedappDefinitionDelete(Configure<AzureManagedappDefinitionDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureManagedappDefinitionDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureManagedappDefinitionListSettings toolSettings);
-        static partial void PostProcess(AzureManagedappDefinitionListSettings toolSettings);
         /// <summary><p>Manage template solutions provided and maintained by Independent Software Vendors (ISVs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/managedapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureManagedappDefinitionList(Configure<AzureManagedappDefinitionListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureManagedappDefinitionList(Configure<AzureManagedappDefinitionListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureManagedappDefinitionListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureManagedappDefinitionShowSettings toolSettings);
-        static partial void PostProcess(AzureManagedappDefinitionShowSettings toolSettings);
         /// <summary><p>Manage template solutions provided and maintained by Independent Software Vendors (ISVs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/managedapp?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureManagedappDefinitionShow(Configure<AzureManagedappDefinitionShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureManagedappDefinitionShow(Configure<AzureManagedappDefinitionShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureManagedappDefinitionShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
     }
     #region AzureManagedappCreateSettings
@@ -161,7 +138,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -209,7 +186,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -245,7 +222,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -282,7 +259,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -338,7 +315,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -385,7 +362,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -421,7 +398,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -458,7 +435,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -739,7 +716,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureManagedappCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureManagedappCreateSettings SetOutput(this AzureManagedappCreateSettings toolSettings, Output output)
+        public static AzureManagedappCreateSettings SetOutput(this AzureManagedappCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -873,7 +850,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureManagedappDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureManagedappDeleteSettings SetOutput(this AzureManagedappDeleteSettings toolSettings, Output output)
+        public static AzureManagedappDeleteSettings SetOutput(this AzureManagedappDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -989,7 +966,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureManagedappListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureManagedappListSettings SetOutput(this AzureManagedappListSettings toolSettings, Output output)
+        public static AzureManagedappListSettings SetOutput(this AzureManagedappListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1123,7 +1100,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureManagedappShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureManagedappShowSettings SetOutput(this AzureManagedappShowSettings toolSettings, Output output)
+        public static AzureManagedappShowSettings SetOutput(this AzureManagedappShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1419,7 +1396,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureManagedappDefinitionCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureManagedappDefinitionCreateSettings SetOutput(this AzureManagedappDefinitionCreateSettings toolSettings, Output output)
+        public static AzureManagedappDefinitionCreateSettings SetOutput(this AzureManagedappDefinitionCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1553,7 +1530,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureManagedappDefinitionDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureManagedappDefinitionDeleteSettings SetOutput(this AzureManagedappDefinitionDeleteSettings toolSettings, Output output)
+        public static AzureManagedappDefinitionDeleteSettings SetOutput(this AzureManagedappDefinitionDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1669,7 +1646,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureManagedappDefinitionListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureManagedappDefinitionListSettings SetOutput(this AzureManagedappDefinitionListSettings toolSettings, Output output)
+        public static AzureManagedappDefinitionListSettings SetOutput(this AzureManagedappDefinitionListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1803,7 +1780,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureManagedappDefinitionShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureManagedappDefinitionShowSettings SetOutput(this AzureManagedappDefinitionShowSettings toolSettings, Output output)
+        public static AzureManagedappDefinitionShowSettings SetOutput(this AzureManagedappDefinitionShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1860,6 +1837,7 @@ namespace Nuke.Azure
     /// <summary><p>Used within <see cref="AzureManagedappTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class ManagedappDefinitionCreateLockLevel : Enumeration
     {
         public static ManagedappDefinitionCreateLockLevel cannotdelete = new ManagedappDefinitionCreateLockLevel { Value = "cannotdelete" };
