@@ -6,25 +6,25 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/vm.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/vm/availability-set.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/vm/disk.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/vm/run-command.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/vm/diagnostics.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/vm/identity.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/vm/unmanaged-disk.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/vm/boot-diagnostics.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/vm/nic.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/vm/secret.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/vm/user.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/vm/image.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/vm/extension.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/vm/encryption.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/vm/extension/image.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/vm.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/vm/availability-set.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/vm/boot-diagnostics.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/vm/diagnostics.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/vm/disk.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/vm/encryption.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/vm/extension.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/vm/identity.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/vm/image.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/vm/nic.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/vm/run-command.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/vm/secret.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/vm/unmanaged-disk.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/vm/user.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/vm/extension/image.yml"
   ],
   "name": "AzureVm",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest",
-  "help": "Provision Linux or Windows virtual machines.",
+  "help": "Manage Linux or Windows virtual machines.",
   "pathExecutable": "az",
   "tasks": [
     {
@@ -403,7 +403,7 @@
             "name": "StorageSku",
             "type": "VmCreateStorageSku",
             "format": "--storage-sku {value}",
-            "help": "The SKU of the storage account with which to persist VM. By default, only Standard_LRS and Premium_LRS are allowed. With `--use-unmanaged-disk`, all are available."
+            "help": "The SKU of the storage account with which to persist VM."
           },
           {
             "name": "UseUnmanagedDisk",
@@ -902,6 +902,12 @@
             "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
           },
           {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
             "name": "Remove",
             "type": "string",
             "format": "--remove {value}",
@@ -1158,6 +1164,12 @@
             "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
           },
           {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
             "name": "Remove",
             "type": "string",
             "format": "--remove {value}",
@@ -1168,410 +1180,6 @@
             "type": "string",
             "format": "--set {value}",
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DiskAttach",
-      "definiteArgument": "vm disk attach",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Disk",
-            "type": "string",
-            "format": "--disk {value}",
-            "help": "Disk name or ID."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "VmName",
-            "type": "string",
-            "format": "--vm-name {value}",
-            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Caching",
-            "type": "VmCreateOsDiskCaching",
-            "format": "--caching {value}",
-            "help": "Disk caching policy."
-          },
-          {
-            "name": "EnableWriteAccelerator",
-            "type": "string",
-            "format": "--enable-write-accelerator {value}",
-            "help": "Enable write accelerator."
-          },
-          {
-            "name": "Lun",
-            "type": "string",
-            "format": "--lun {value}",
-            "help": "0-based logical unit number (LUN). Max value depends on the Virtual Machine size."
-          },
-          {
-            "name": "New",
-            "type": "string",
-            "format": "--new {value}",
-            "help": "Create a new disk."
-          },
-          {
-            "name": "SizeGb",
-            "type": "string",
-            "format": "--size-gb {value}",
-            "help": "Size in GB."
-          },
-          {
-            "name": "Sku",
-            "type": "VmDiskAttachSku",
-            "format": "--sku {value}",
-            "help": "Underlying storage SKU."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DiskDetach",
-      "definiteArgument": "vm disk detach",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The data disk name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "VmName",
-            "type": "string",
-            "format": "--vm-name {value}",
-            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "RunCommandInvoke",
-      "definiteArgument": "vm run-command invoke",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "CommandId",
-            "type": "string",
-            "format": "--command-id {value}",
-            "help": "The run command ID."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Parameters",
-            "type": "string",
-            "format": "--parameters {value}",
-            "help": "Space-separated parameters in the format of '[name=]value'."
-          },
-          {
-            "name": "Scripts",
-            "type": "string",
-            "format": "--scripts {value}",
-            "help": "Script lines separated by whites spaces. Use @{file} to load from a file."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "RunCommandList",
-      "definiteArgument": "vm run-command list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Location",
-            "type": "string",
-            "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "RunCommandShow",
-      "definiteArgument": "vm run-command show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "CommandId",
-            "type": "string",
-            "format": "--command-id {value}",
-            "help": "The run command ID."
-          },
-          {
-            "name": "Location",
-            "type": "string",
-            "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DiagnosticsGetDefaultConfig",
-      "definiteArgument": "vm diagnostics get-default-config",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "IsWindowsOs",
-            "type": "string",
-            "format": "--is-windows-os {value}",
-            "help": "For Windows VMs."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DiagnosticsSet",
-      "definiteArgument": "vm diagnostics set",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Settings",
-            "type": "string",
-            "format": "--settings {value}",
-            "help": "Json string or a file path, which defines data to be collected."
-          },
-          {
-            "name": "VmName",
-            "type": "string",
-            "format": "--vm-name {value}",
-            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "NoAutoUpgrade",
-            "type": "string",
-            "format": "--no-auto-upgrade {value}",
-            "help": "By doing this, extension system will not pick the highest minor version for the specified version number, and will not auto update to the latest build/revision number on any scale set updates in future."
-          },
-          {
-            "name": "ProtectedSettings",
-            "type": "string",
-            "format": "--protected-settings {value}",
-            "help": "Json string or a file path containing private configurations such as storage account keys, etc."
-          },
-          {
-            "name": "Version",
-            "type": "string",
-            "format": "--version {value}",
-            "help": "Version of the diagnostics extension. Will use the latest if not specfied."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "IdentityAssign",
-      "definiteArgument": "vm identity assign",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Identities",
-            "type": "string",
-            "format": "--identities {value}",
-            "help": "The identities to assign."
-          },
-          {
-            "name": "Role",
-            "type": "string",
-            "format": "--role {value}",
-            "help": "Role name or id the system assigned identity will have."
-          },
-          {
-            "name": "Scope",
-            "type": "string",
-            "format": "--scope {value}",
-            "help": "Scope that the system assigned identity can access."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "IdentityRemove",
-      "definiteArgument": "vm identity remove",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Identities",
-            "type": "string",
-            "format": "--identities {value}",
-            "help": "Space-separated user assigned identities to remove."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "IdentityShow",
-      "definiteArgument": "vm identity show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "UnmanagedDiskAttach",
-      "definiteArgument": "vm unmanaged-disk attach",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "VmName",
-            "type": "string",
-            "format": "--vm-name {value}",
-            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Caching",
-            "type": "VmCreateOsDiskCaching",
-            "format": "--caching {value}",
-            "help": "Disk caching policy."
-          },
-          {
-            "name": "Lun",
-            "type": "string",
-            "format": "--lun {value}",
-            "help": "0-based logical unit number (LUN). Max value depends on the Virtual Machine size."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The data disk name(optional when create a new disk)."
-          },
-          {
-            "name": "New",
-            "type": "string",
-            "format": "--new {value}",
-            "help": "Create a new disk."
-          },
-          {
-            "name": "SizeGb",
-            "type": "string",
-            "format": "--size-gb {value}",
-            "help": ""
-          },
-          {
-            "name": "VhdUri",
-            "type": "string",
-            "format": "--vhd-uri {value}",
-            "help": "Virtual hard disk URI. For example: <a href=\"https://mystorage.blob.core.windows.net/vhds/d1.vhd\">https://mystorage.blob.core.windows.net/vhds/d1.vhd</a>."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "UnmanagedDiskDetach",
-      "definiteArgument": "vm unmanaged-disk detach",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The data disk name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "VmName",
-            "type": "string",
-            "format": "--vm-name {value}",
-            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "UnmanagedDiskList",
-      "definiteArgument": "vm unmanaged-disk list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           }
         ]
       }
@@ -1638,6 +1246,763 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DiagnosticsGetDefaultConfig",
+      "definiteArgument": "vm diagnostics get-default-config",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "IsWindowsOs",
+            "type": "string",
+            "format": "--is-windows-os {value}",
+            "help": "For Windows VMs."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DiagnosticsSet",
+      "definiteArgument": "vm diagnostics set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Settings",
+            "type": "string",
+            "format": "--settings {value}",
+            "help": "Json string or a file path, which defines data to be collected."
+          },
+          {
+            "name": "VmName",
+            "type": "string",
+            "format": "--vm-name {value}",
+            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "NoAutoUpgrade",
+            "type": "string",
+            "format": "--no-auto-upgrade {value}",
+            "help": "By doing this, extension system will not pick the highest minor version for the specified version number, and will not auto update to the latest build/revision number on any scale set updates in future."
+          },
+          {
+            "name": "ProtectedSettings",
+            "type": "string",
+            "format": "--protected-settings {value}",
+            "help": "Json string or a file path containing private configurations such as storage account keys, etc."
+          },
+          {
+            "name": "Version",
+            "type": "string",
+            "format": "--version {value}",
+            "help": "Version of the diagnostics extension. Will use the latest if not specfied."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DiskAttach",
+      "definiteArgument": "vm disk attach",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Disk",
+            "type": "string",
+            "format": "--disk {value}",
+            "help": "Disk name or ID."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "VmName",
+            "type": "string",
+            "format": "--vm-name {value}",
+            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Caching",
+            "type": "VmCreateOsDiskCaching",
+            "format": "--caching {value}",
+            "help": "Disk caching policy."
+          },
+          {
+            "name": "EnableWriteAccelerator",
+            "type": "string",
+            "format": "--enable-write-accelerator {value}",
+            "help": "Enable write accelerator."
+          },
+          {
+            "name": "Lun",
+            "type": "string",
+            "format": "--lun {value}",
+            "help": "0-based logical unit number (LUN). Max value depends on the Virtual Machine size."
+          },
+          {
+            "name": "New",
+            "type": "string",
+            "format": "--new {value}",
+            "help": "Create a new disk."
+          },
+          {
+            "name": "SizeGb",
+            "type": "string",
+            "format": "--size-gb {value}",
+            "help": "Size in GB."
+          },
+          {
+            "name": "Sku",
+            "type": "VmCreateStorageSku",
+            "format": "--sku {value}",
+            "help": "Underlying storage SKU."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DiskDetach",
+      "definiteArgument": "vm disk detach",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The data disk name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "VmName",
+            "type": "string",
+            "format": "--vm-name {value}",
+            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "EncryptionDisable",
+      "definiteArgument": "vm encryption disable",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Force",
+            "type": "string",
+            "format": "--force {value}",
+            "help": "Continue by ignoring client side validation errors."
+          },
+          {
+            "name": "VolumeType",
+            "type": "VmEncryptionVolumeType",
+            "format": "--volume-type {value}",
+            "help": "Type of volume that the encryption operation is performed on."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "EncryptionEnable",
+      "definiteArgument": "vm encryption enable",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DiskEncryptionKeyvault",
+            "type": "string",
+            "format": "--disk-encryption-keyvault {value}",
+            "help": "The key vault where the generated encryption key will be placed."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "AadClientCertThumbprint",
+            "type": "string",
+            "format": "--aad-client-cert-thumbprint {value}",
+            "help": "Thumbprint of the AAD app certificate with permissions to write secrets to the key vault."
+          },
+          {
+            "name": "AadClientId",
+            "type": "string",
+            "format": "--aad-client-id {value}",
+            "help": "Client ID of an AAD app with permissions to write secrets to the key vault."
+          },
+          {
+            "name": "AadClientSecret",
+            "type": "string",
+            "format": "--aad-client-secret {value}",
+            "secret": true,
+            "help": "Client secret of the AAD app with permissions to write secrets to the key vault."
+          },
+          {
+            "name": "EncryptFormatAll",
+            "type": "string",
+            "format": "--encrypt-format-all {value}",
+            "help": "Encrypts-formats data disks instead of encrypting them. Encrypt-formatting is a lot faster than in-place encryption but wipes out the partition getting encrypt-formatted."
+          },
+          {
+            "name": "KeyEncryptionAlgorithm",
+            "type": "string",
+            "format": "--key-encryption-algorithm {value}",
+            "help": ""
+          },
+          {
+            "name": "KeyEncryptionKey",
+            "type": "string",
+            "format": "--key-encryption-key {value}",
+            "help": "Key vault key name or URL used to encrypt the disk encryption key."
+          },
+          {
+            "name": "KeyEncryptionKeyvault",
+            "type": "string",
+            "format": "--key-encryption-keyvault {value}",
+            "help": "The key vault containing the key encryption key used to encrypt the disk encryption key. If missing, CLI will use `--disk-encryption-keyvault`."
+          },
+          {
+            "name": "VolumeType",
+            "type": "VmEncryptionVolumeType",
+            "format": "--volume-type {value}",
+            "help": "Type of volume that the encryption operation is performed on."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "EncryptionShow",
+      "definiteArgument": "vm encryption show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ExtensionDelete",
+      "definiteArgument": "vm extension delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Extension name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "VmName",
+            "type": "string",
+            "format": "--vm-name {value}",
+            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "NoWait",
+            "type": "string",
+            "format": "--no-wait {value}",
+            "help": "Do not wait for the long-running operation to finish."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ExtensionList",
+      "definiteArgument": "vm extension list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "VmName",
+            "type": "string",
+            "format": "--vm-name {value}",
+            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ExtensionSet",
+      "definiteArgument": "vm extension set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Extension name."
+          },
+          {
+            "name": "Publisher",
+            "type": "string",
+            "format": "--publisher {value}",
+            "help": "The name of the extension publisher."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "VmName",
+            "type": "string",
+            "format": "--vm-name {value}",
+            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ForceUpdate",
+            "type": "string",
+            "format": "--force-update {value}",
+            "help": "Force to update even if the extension configuration has not changed."
+          },
+          {
+            "name": "NoAutoUpgrade",
+            "type": "string",
+            "format": "--no-auto-upgrade {value}",
+            "help": "By doing this, extension system will not pick the highest minor version for the specified version number, and will not auto update to the latest build/revision number on any scale set updates in future."
+          },
+          {
+            "name": "NoWait",
+            "type": "string",
+            "format": "--no-wait {value}",
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "ProtectedSettings",
+            "type": "string",
+            "format": "--protected-settings {value}",
+            "help": "Protected settings in JSON format for sensitive information like credentials. A JSON file path is also accepted."
+          },
+          {
+            "name": "Settings",
+            "type": "string",
+            "format": "--settings {value}",
+            "help": "Extension settings in JSON format. A JSON file path is also accepted."
+          },
+          {
+            "name": "Version",
+            "type": "string",
+            "format": "--version {value}",
+            "help": "The version of the extension."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ExtensionShow",
+      "definiteArgument": "vm extension show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Extension name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "VmName",
+            "type": "string",
+            "format": "--vm-name {value}",
+            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Expand",
+            "type": "string",
+            "format": "--expand {value}",
+            "help": "The expand expression to apply on the operation."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ExtensionWait",
+      "definiteArgument": "vm extension wait",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Extension name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "VmName",
+            "type": "string",
+            "format": "--vm-name {value}",
+            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Expand",
+            "type": "string",
+            "format": "--expand {value}",
+            "help": "The expand expression to apply on the operation."
+          },
+          {
+            "name": "Created",
+            "type": "string",
+            "format": "--created {value}",
+            "help": "Wait until created with 'provisioningState' at 'Succeeded'."
+          },
+          {
+            "name": "Custom",
+            "type": "string",
+            "format": "--custom {value}",
+            "help": "Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running']."
+          },
+          {
+            "name": "Deleted",
+            "type": "string",
+            "format": "--deleted {value}",
+            "help": "Wait until deleted."
+          },
+          {
+            "name": "Exists",
+            "type": "string",
+            "format": "--exists {value}",
+            "help": "Wait until the resource exists."
+          },
+          {
+            "name": "Interval",
+            "type": "string",
+            "format": "--interval {value}",
+            "help": "Polling interval in seconds."
+          },
+          {
+            "name": "Timeout",
+            "type": "string",
+            "format": "--timeout {value}",
+            "help": "Maximum wait in seconds."
+          },
+          {
+            "name": "Updated",
+            "type": "string",
+            "format": "--updated {value}",
+            "help": "Wait until updated with provisioningState at 'Succeeded'."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "IdentityAssign",
+      "definiteArgument": "vm identity assign",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Identities",
+            "type": "string",
+            "format": "--identities {value}",
+            "help": "The identities to assign."
+          },
+          {
+            "name": "Role",
+            "type": "string",
+            "format": "--role {value}",
+            "help": "Role name or id the system assigned identity will have."
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "format": "--scope {value}",
+            "help": "Scope that the system assigned identity can access."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "IdentityRemove",
+      "definiteArgument": "vm identity remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Identities",
+            "type": "string",
+            "format": "--identities {value}",
+            "help": "Space-separated identities to remove. Use '[system]' to refer system assigned identity."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "IdentityShow",
+      "definiteArgument": "vm identity show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ImageAcceptTerms",
+      "definiteArgument": "vm image accept-terms",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Offer",
+            "type": "string",
+            "format": "--offer {value}",
+            "help": "Image offer."
+          },
+          {
+            "name": "Plan",
+            "type": "string",
+            "format": "--plan {value}",
+            "help": "Image billing plan."
+          },
+          {
+            "name": "Publisher",
+            "type": "string",
+            "format": "--publisher {value}",
+            "help": "Image publisher."
+          },
+          {
+            "name": "Urn",
+            "type": "string",
+            "format": "--urn {value}",
+            "help": "URN, in format of 'publisher:offer:sku:version'. If specified, other argument values can be omitted."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ImageList",
+      "definiteArgument": "vm image list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "All",
+            "type": "string",
+            "format": "--all {value}",
+            "help": "Retrieve image list from live Azure service rather using an offline image list."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Offer",
+            "type": "string",
+            "format": "--offer {value}",
+            "help": "Image offer name, partial name is accepted."
+          },
+          {
+            "name": "Publisher",
+            "type": "string",
+            "format": "--publisher {value}",
+            "help": "Image publisher name, partial name is accepted."
+          },
+          {
+            "name": "Sku",
+            "type": "string",
+            "format": "--sku {value}",
+            "help": "Image sku name, partial name is accepted."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ImageListOffers",
+      "definiteArgument": "vm image list-offers",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Publisher",
+            "type": "string",
+            "format": "--publisher {value}",
+            "help": "A valid image publisher."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ImageListPublishers",
+      "definiteArgument": "vm image list-publishers",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ImageListSkus",
+      "definiteArgument": "vm image list-skus",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Offer",
+            "type": "string",
+            "format": "--offer {value}",
+            "help": "Image offer."
+          },
+          {
+            "name": "Publisher",
+            "type": "string",
+            "format": "--publisher {value}",
+            "help": "A valid image publisher."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ImageShow",
+      "definiteArgument": "vm image show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Offer",
+            "type": "string",
+            "format": "--offer {value}",
+            "help": "Image offer."
+          },
+          {
+            "name": "Publisher",
+            "type": "string",
+            "format": "--publisher {value}",
+            "help": "Image publisher."
+          },
+          {
+            "name": "Sku",
+            "type": "string",
+            "format": "--sku {value}",
+            "help": "Image sku."
+          },
+          {
+            "name": "Urn",
+            "type": "string",
+            "format": "--urn {value}",
+            "help": "URN, in format of 'publisher:offer:sku:version'. If specified, other argument values can be omitted."
+          },
+          {
+            "name": "Version",
+            "type": "string",
+            "format": "--version {value}",
+            "help": "Image sku's version."
           }
         ]
       }
@@ -1785,6 +2150,78 @@
       }
     },
     {
+      "postfix": "RunCommandInvoke",
+      "definiteArgument": "vm run-command invoke",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CommandId",
+            "type": "string",
+            "format": "--command-id {value}",
+            "help": "The run command ID."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Parameters",
+            "type": "string",
+            "format": "--parameters {value}",
+            "help": "Space-separated parameters in the format of '[name=]value'."
+          },
+          {
+            "name": "Scripts",
+            "type": "string",
+            "format": "--scripts {value}",
+            "help": "Script lines separated by whites spaces. Use @{file} to load from a file."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RunCommandList",
+      "definiteArgument": "vm run-command list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RunCommandShow",
+      "definiteArgument": "vm run-command show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CommandId",
+            "type": "string",
+            "format": "--command-id {value}",
+            "help": "The run command ID."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "SecretAdd",
       "definiteArgument": "vm secret add",
       "settingsClass": {
@@ -1908,6 +2345,108 @@
       }
     },
     {
+      "postfix": "UnmanagedDiskAttach",
+      "definiteArgument": "vm unmanaged-disk attach",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "VmName",
+            "type": "string",
+            "format": "--vm-name {value}",
+            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Caching",
+            "type": "VmCreateOsDiskCaching",
+            "format": "--caching {value}",
+            "help": "Disk caching policy."
+          },
+          {
+            "name": "Lun",
+            "type": "string",
+            "format": "--lun {value}",
+            "help": "0-based logical unit number (LUN). Max value depends on the Virtual Machine size."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The data disk name(optional when create a new disk)."
+          },
+          {
+            "name": "New",
+            "type": "string",
+            "format": "--new {value}",
+            "help": "Create a new disk."
+          },
+          {
+            "name": "SizeGb",
+            "type": "string",
+            "format": "--size-gb {value}",
+            "help": ""
+          },
+          {
+            "name": "VhdUri",
+            "type": "string",
+            "format": "--vhd-uri {value}",
+            "help": "Virtual hard disk URI. For example: <a href=\"https://mystorage.blob.core.windows.net/vhds/d1.vhd\">https://mystorage.blob.core.windows.net/vhds/d1.vhd</a>."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "UnmanagedDiskDetach",
+      "definiteArgument": "vm unmanaged-disk detach",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The data disk name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "VmName",
+            "type": "string",
+            "format": "--vm-name {value}",
+            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "UnmanagedDiskList",
+      "definiteArgument": "vm unmanaged-disk list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "UserDelete",
       "definiteArgument": "vm user delete",
       "settingsClass": {
@@ -2006,447 +2545,6 @@
             "type": "string",
             "format": "--ssh-key-value {value}",
             "help": "SSH public key file value or public key file path."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ImageAcceptTerms",
-      "definiteArgument": "vm image accept-terms",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Offer",
-            "type": "string",
-            "format": "--offer {value}",
-            "help": "Image offer."
-          },
-          {
-            "name": "Plan",
-            "type": "string",
-            "format": "--plan {value}",
-            "help": "Image billing plan."
-          },
-          {
-            "name": "Publisher",
-            "type": "string",
-            "format": "--publisher {value}",
-            "help": "Image publisher."
-          },
-          {
-            "name": "Urn",
-            "type": "string",
-            "format": "--urn {value}",
-            "help": "URN, in format of 'publisher:offer:sku:versin'. If specified, other argument values can be omitted."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ImageList",
-      "definiteArgument": "vm image list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "All",
-            "type": "string",
-            "format": "--all {value}",
-            "help": "Retrieve image list from live Azure service rather using an offline image list."
-          },
-          {
-            "name": "Location",
-            "type": "string",
-            "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
-          },
-          {
-            "name": "Offer",
-            "type": "string",
-            "format": "--offer {value}",
-            "help": "Image offer name, partial name is accepted."
-          },
-          {
-            "name": "Publisher",
-            "type": "string",
-            "format": "--publisher {value}",
-            "help": "Image publisher name, partial name is accepted."
-          },
-          {
-            "name": "Sku",
-            "type": "string",
-            "format": "--sku {value}",
-            "help": "Image sku name, partial name is accepted."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ImageListOffers",
-      "definiteArgument": "vm image list-offers",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Location",
-            "type": "string",
-            "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
-          },
-          {
-            "name": "Publisher",
-            "type": "string",
-            "format": "--publisher {value}",
-            "help": "A valid image publisher."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ImageListPublishers",
-      "definiteArgument": "vm image list-publishers",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Location",
-            "type": "string",
-            "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ImageListSkus",
-      "definiteArgument": "vm image list-skus",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Location",
-            "type": "string",
-            "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
-          },
-          {
-            "name": "Offer",
-            "type": "string",
-            "format": "--offer {value}",
-            "help": "Image offer."
-          },
-          {
-            "name": "Publisher",
-            "type": "string",
-            "format": "--publisher {value}",
-            "help": "A valid image publisher."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ImageShow",
-      "definiteArgument": "vm image show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Location",
-            "type": "string",
-            "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
-          },
-          {
-            "name": "Offer",
-            "type": "string",
-            "format": "--offer {value}",
-            "help": "Image offer."
-          },
-          {
-            "name": "Publisher",
-            "type": "string",
-            "format": "--publisher {value}",
-            "help": "Image publisher."
-          },
-          {
-            "name": "Sku",
-            "type": "string",
-            "format": "--sku {value}",
-            "help": "Image sku."
-          },
-          {
-            "name": "Urn",
-            "type": "string",
-            "format": "--urn {value}",
-            "help": "URN, in format of 'publisher:offer:sku:versin'. If specified, other argument values can be omitted."
-          },
-          {
-            "name": "Version",
-            "type": "string",
-            "format": "--version {value}",
-            "help": "Image sku's version."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ExtensionDelete",
-      "definiteArgument": "vm extension delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Extension name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "VmName",
-            "type": "string",
-            "format": "--vm-name {value}",
-            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ExtensionList",
-      "definiteArgument": "vm extension list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "VmName",
-            "type": "string",
-            "format": "--vm-name {value}",
-            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ExtensionSet",
-      "definiteArgument": "vm extension set",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Extension name."
-          },
-          {
-            "name": "Publisher",
-            "type": "string",
-            "format": "--publisher {value}",
-            "help": "The name of the extension publisher."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "VmName",
-            "type": "string",
-            "format": "--vm-name {value}",
-            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ForceUpdate",
-            "type": "string",
-            "format": "--force-update {value}",
-            "help": "Force to update even if the extension configuration has not changed."
-          },
-          {
-            "name": "NoAutoUpgrade",
-            "type": "string",
-            "format": "--no-auto-upgrade {value}",
-            "help": "By doing this, extension system will not pick the highest minor version for the specified version number, and will not auto update to the latest build/revision number on any scale set updates in future."
-          },
-          {
-            "name": "ProtectedSettings",
-            "type": "string",
-            "format": "--protected-settings {value}",
-            "help": "Protected settings in JSON format for sensitive information like credentials. A JSON file path is also accepted."
-          },
-          {
-            "name": "Settings",
-            "type": "string",
-            "format": "--settings {value}",
-            "help": "Extension settings in JSON format. A JSON file path is also accepted."
-          },
-          {
-            "name": "Version",
-            "type": "string",
-            "format": "--version {value}",
-            "help": "The version of the extension."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ExtensionShow",
-      "definiteArgument": "vm extension show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Extension name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "VmName",
-            "type": "string",
-            "format": "--vm-name {value}",
-            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Expand",
-            "type": "string",
-            "format": "--expand {value}",
-            "help": "The expand expression to apply on the operation."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "EncryptionDisable",
-      "definiteArgument": "vm encryption disable",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Force",
-            "type": "string",
-            "format": "--force {value}",
-            "help": "Continue by ignoring client side validation errors."
-          },
-          {
-            "name": "VolumeType",
-            "type": "VmEncryptionVolumeType",
-            "format": "--volume-type {value}",
-            "help": "Type of volume that the encryption operation is performed on."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "EncryptionEnable",
-      "definiteArgument": "vm encryption enable",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "DiskEncryptionKeyvault",
-            "type": "string",
-            "format": "--disk-encryption-keyvault {value}",
-            "help": "The key vault where the generated encryption key will be placed."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "AadClientCertThumbprint",
-            "type": "string",
-            "format": "--aad-client-cert-thumbprint {value}",
-            "help": "Thumbprint of the AAD app certificate with permissions to write secrets to the key vault."
-          },
-          {
-            "name": "AadClientId",
-            "type": "string",
-            "format": "--aad-client-id {value}",
-            "help": "Client ID of an AAD app with permissions to write secrets to the key vault."
-          },
-          {
-            "name": "AadClientSecret",
-            "type": "string",
-            "format": "--aad-client-secret {value}",
-            "secret": true,
-            "help": "Client secret of the AAD app with permissions to write secrets to the key vault."
-          },
-          {
-            "name": "EncryptFormatAll",
-            "type": "string",
-            "format": "--encrypt-format-all {value}",
-            "help": "Encrypts-formats data disks instead of encrypting them. Encrypt-formatting is a lot faster than in-place encryption but wipes out the partition getting encrypt-formatted."
-          },
-          {
-            "name": "KeyEncryptionAlgorithm",
-            "type": "string",
-            "format": "--key-encryption-algorithm {value}",
-            "help": ""
-          },
-          {
-            "name": "KeyEncryptionKey",
-            "type": "string",
-            "format": "--key-encryption-key {value}",
-            "help": "Key vault key name or URL used to encrypt the disk encryption key."
-          },
-          {
-            "name": "KeyEncryptionKeyvault",
-            "type": "string",
-            "format": "--key-encryption-keyvault {value}",
-            "help": "The key vault containing the key encryption key used to encrypt the disk encryption key. If missing, CLI will use `--disk-encryption-keyvault`."
-          },
-          {
-            "name": "VolumeType",
-            "type": "VmEncryptionVolumeType",
-            "format": "--volume-type {value}",
-            "help": "Type of volume that the encryption operation is performed on."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "EncryptionShow",
-      "definiteArgument": "vm encryption show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           }
         ]
       }
@@ -2601,7 +2699,7 @@
     },
     {
       "name": "Output",
-      "type": "Output",
+      "type": "AzureOutput",
       "format": "--output {value}",
       "help": "Output format."
     },
@@ -2682,16 +2780,7 @@
       "name": "VmCreateStorageSku",
       "values": [
         "premium_lrs",
-        "standard_grs",
-        "standard_lrs",
-        "standard_ragrs",
-        "standard_zrs"
-      ]
-    },
-    {
-      "name": "VmDiskAttachSku",
-      "values": [
-        "premium_lrs",
+        "standardssd_lrs",
         "standard_lrs"
       ]
     },

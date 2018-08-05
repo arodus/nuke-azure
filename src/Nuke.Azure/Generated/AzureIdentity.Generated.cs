@@ -2,10 +2,11 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
+// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureIdentity.json.
 
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.Tooling;
@@ -28,66 +29,51 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureIdentity executable.</p></summary>
         public static string AzureIdentityPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Managed Service Identities.</p></summary>
-        public static IEnumerable<string> AzureIdentity(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
+        public static IReadOnlyCollection<Output> AzureIdentity(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool logOutput = true, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureIdentityPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
+            var process = ProcessTasks.StartProcess(AzureIdentityPath, arguments, workingDirectory, environmentVariables, timeout, logOutput, null, outputFilter);
             process.AssertZeroExitCode();
-            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
+            return process.Output;
         }
-        static partial void PreProcess(AzureIdentityCreateSettings toolSettings);
-        static partial void PostProcess(AzureIdentityCreateSettings toolSettings);
         /// <summary><p>Managed Service Identities.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/identity?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureIdentityCreate(Configure<AzureIdentityCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureIdentityCreate(Configure<AzureIdentityCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIdentityCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureIdentityDeleteSettings toolSettings);
-        static partial void PostProcess(AzureIdentityDeleteSettings toolSettings);
         /// <summary><p>Managed Service Identities.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/identity?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureIdentityDelete(Configure<AzureIdentityDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureIdentityDelete(Configure<AzureIdentityDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIdentityDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureIdentityListSettings toolSettings);
-        static partial void PostProcess(AzureIdentityListSettings toolSettings);
         /// <summary><p>Managed Service Identities.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/identity?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureIdentityList(Configure<AzureIdentityListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureIdentityList(Configure<AzureIdentityListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIdentityListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureIdentityListOperationsSettings toolSettings);
-        static partial void PostProcess(AzureIdentityListOperationsSettings toolSettings);
         /// <summary><p>Managed Service Identities.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/identity?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureIdentityListOperations(Configure<AzureIdentityListOperationsSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureIdentityListOperations(Configure<AzureIdentityListOperationsSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIdentityListOperationsSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureIdentityShowSettings toolSettings);
-        static partial void PostProcess(AzureIdentityShowSettings toolSettings);
         /// <summary><p>Managed Service Identities.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/identity?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureIdentityShow(Configure<AzureIdentityShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureIdentityShow(Configure<AzureIdentityShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIdentityShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
     }
     #region AzureIdentityCreateSettings
@@ -112,7 +98,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -152,7 +138,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -188,7 +174,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -221,7 +207,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -257,7 +243,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -394,7 +380,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureIdentityCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureIdentityCreateSettings SetOutput(this AzureIdentityCreateSettings toolSettings, Output output)
+        public static AzureIdentityCreateSettings SetOutput(this AzureIdentityCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -528,7 +514,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureIdentityDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureIdentityDeleteSettings SetOutput(this AzureIdentityDeleteSettings toolSettings, Output output)
+        public static AzureIdentityDeleteSettings SetOutput(this AzureIdentityDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -644,7 +630,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureIdentityListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureIdentityListSettings SetOutput(this AzureIdentityListSettings toolSettings, Output output)
+        public static AzureIdentityListSettings SetOutput(this AzureIdentityListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -742,7 +728,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureIdentityListOperationsSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureIdentityListOperationsSettings SetOutput(this AzureIdentityListOperationsSettings toolSettings, Output output)
+        public static AzureIdentityListOperationsSettings SetOutput(this AzureIdentityListOperationsSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -876,7 +862,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureIdentityShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureIdentityShowSettings SetOutput(this AzureIdentityShowSettings toolSettings, Output output)
+        public static AzureIdentityShowSettings SetOutput(this AzureIdentityShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;

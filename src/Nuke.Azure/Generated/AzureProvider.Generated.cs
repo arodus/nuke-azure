@@ -2,10 +2,11 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
+// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureProvider.json.
 
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.Tooling;
@@ -28,77 +29,59 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureProvider executable.</p></summary>
         public static string AzureProviderPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage resource providers.</p></summary>
-        public static IEnumerable<string> AzureProvider(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
+        public static IReadOnlyCollection<Output> AzureProvider(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool logOutput = true, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureProviderPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
+            var process = ProcessTasks.StartProcess(AzureProviderPath, arguments, workingDirectory, environmentVariables, timeout, logOutput, null, outputFilter);
             process.AssertZeroExitCode();
-            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
+            return process.Output;
         }
-        static partial void PreProcess(AzureProviderListSettings toolSettings);
-        static partial void PostProcess(AzureProviderListSettings toolSettings);
         /// <summary><p>Manage resource providers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/provider?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureProviderList(Configure<AzureProviderListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureProviderList(Configure<AzureProviderListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureProviderListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureProviderRegisterSettings toolSettings);
-        static partial void PostProcess(AzureProviderRegisterSettings toolSettings);
         /// <summary><p>Manage resource providers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/provider?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureProviderRegister(Configure<AzureProviderRegisterSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureProviderRegister(Configure<AzureProviderRegisterSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureProviderRegisterSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureProviderShowSettings toolSettings);
-        static partial void PostProcess(AzureProviderShowSettings toolSettings);
         /// <summary><p>Manage resource providers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/provider?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureProviderShow(Configure<AzureProviderShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureProviderShow(Configure<AzureProviderShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureProviderShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureProviderUnregisterSettings toolSettings);
-        static partial void PostProcess(AzureProviderUnregisterSettings toolSettings);
         /// <summary><p>Manage resource providers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/provider?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureProviderUnregister(Configure<AzureProviderUnregisterSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureProviderUnregister(Configure<AzureProviderUnregisterSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureProviderUnregisterSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureProviderOperationListSettings toolSettings);
-        static partial void PostProcess(AzureProviderOperationListSettings toolSettings);
         /// <summary><p>Manage resource providers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/provider?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureProviderOperationList(Configure<AzureProviderOperationListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureProviderOperationList(Configure<AzureProviderOperationListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureProviderOperationListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureProviderOperationShowSettings toolSettings);
-        static partial void PostProcess(AzureProviderOperationShowSettings toolSettings);
         /// <summary><p>Manage resource providers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/provider?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureProviderOperationShow(Configure<AzureProviderOperationShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureProviderOperationShow(Configure<AzureProviderOperationShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureProviderOperationShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
     }
     #region AzureProviderListSettings
@@ -117,7 +100,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -154,7 +137,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -192,7 +175,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -230,7 +213,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -264,7 +247,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -298,7 +281,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -380,7 +363,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureProviderListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureProviderListSettings SetOutput(this AzureProviderListSettings toolSettings, Output output)
+        public static AzureProviderListSettings SetOutput(this AzureProviderListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -514,7 +497,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureProviderRegisterSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureProviderRegisterSettings SetOutput(this AzureProviderRegisterSettings toolSettings, Output output)
+        public static AzureProviderRegisterSettings SetOutput(this AzureProviderRegisterSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -648,7 +631,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureProviderShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureProviderShowSettings SetOutput(this AzureProviderShowSettings toolSettings, Output output)
+        public static AzureProviderShowSettings SetOutput(this AzureProviderShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -782,7 +765,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureProviderUnregisterSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureProviderUnregisterSettings SetOutput(this AzureProviderUnregisterSettings toolSettings, Output output)
+        public static AzureProviderUnregisterSettings SetOutput(this AzureProviderUnregisterSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -880,7 +863,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureProviderOperationListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureProviderOperationListSettings SetOutput(this AzureProviderOperationListSettings toolSettings, Output output)
+        public static AzureProviderOperationListSettings SetOutput(this AzureProviderOperationListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -996,7 +979,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureProviderOperationShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureProviderOperationShowSettings SetOutput(this AzureProviderOperationShowSettings toolSettings, Output output)
+        public static AzureProviderOperationShowSettings SetOutput(this AzureProviderOperationShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;

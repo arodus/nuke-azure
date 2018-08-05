@@ -2,10 +2,11 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
+// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureRole.json.
 
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.Tooling;
@@ -28,110 +29,83 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureRole executable.</p></summary>
         public static string AzureRolePath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p></summary>
-        public static IEnumerable<string> AzureRole(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
+        public static IReadOnlyCollection<Output> AzureRole(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool logOutput = true, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureRolePath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
+            var process = ProcessTasks.StartProcess(AzureRolePath, arguments, workingDirectory, environmentVariables, timeout, logOutput, null, outputFilter);
             process.AssertZeroExitCode();
-            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
+            return process.Output;
         }
-        static partial void PreProcess(AzureRoleSettings toolSettings);
-        static partial void PostProcess(AzureRoleSettings toolSettings);
         /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/role?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureRole(Configure<AzureRoleSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureRole(Configure<AzureRoleSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRoleSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureRoleAssignmentCreateSettings toolSettings);
-        static partial void PostProcess(AzureRoleAssignmentCreateSettings toolSettings);
         /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/role?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureRoleAssignmentCreate(Configure<AzureRoleAssignmentCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureRoleAssignmentCreate(Configure<AzureRoleAssignmentCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRoleAssignmentCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureRoleAssignmentDeleteSettings toolSettings);
-        static partial void PostProcess(AzureRoleAssignmentDeleteSettings toolSettings);
         /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/role?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureRoleAssignmentDelete(Configure<AzureRoleAssignmentDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureRoleAssignmentDelete(Configure<AzureRoleAssignmentDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRoleAssignmentDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureRoleAssignmentListSettings toolSettings);
-        static partial void PostProcess(AzureRoleAssignmentListSettings toolSettings);
         /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/role?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureRoleAssignmentList(Configure<AzureRoleAssignmentListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureRoleAssignmentList(Configure<AzureRoleAssignmentListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRoleAssignmentListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureRoleAssignmentListChangelogsSettings toolSettings);
-        static partial void PostProcess(AzureRoleAssignmentListChangelogsSettings toolSettings);
         /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/role?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureRoleAssignmentListChangelogs(Configure<AzureRoleAssignmentListChangelogsSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureRoleAssignmentListChangelogs(Configure<AzureRoleAssignmentListChangelogsSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRoleAssignmentListChangelogsSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureRoleDefinitionCreateSettings toolSettings);
-        static partial void PostProcess(AzureRoleDefinitionCreateSettings toolSettings);
         /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/role?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureRoleDefinitionCreate(Configure<AzureRoleDefinitionCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureRoleDefinitionCreate(Configure<AzureRoleDefinitionCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRoleDefinitionCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureRoleDefinitionDeleteSettings toolSettings);
-        static partial void PostProcess(AzureRoleDefinitionDeleteSettings toolSettings);
         /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/role?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureRoleDefinitionDelete(Configure<AzureRoleDefinitionDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureRoleDefinitionDelete(Configure<AzureRoleDefinitionDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRoleDefinitionDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureRoleDefinitionListSettings toolSettings);
-        static partial void PostProcess(AzureRoleDefinitionListSettings toolSettings);
         /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/role?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureRoleDefinitionList(Configure<AzureRoleDefinitionListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureRoleDefinitionList(Configure<AzureRoleDefinitionListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRoleDefinitionListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureRoleDefinitionUpdateSettings toolSettings);
-        static partial void PostProcess(AzureRoleDefinitionUpdateSettings toolSettings);
         /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/role?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureRoleDefinitionUpdate(Configure<AzureRoleDefinitionUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureRoleDefinitionUpdate(Configure<AzureRoleDefinitionUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRoleDefinitionUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
     }
     #region AzureRoleSettings
@@ -148,7 +122,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -190,7 +164,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -239,7 +213,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -278,7 +252,7 @@ namespace Nuke.Azure
         public virtual string Assignee { get; internal set; }
         /// <summary><p>List default role assignments for subscription classic administrators, aka co-admins.</p></summary>
         public virtual bool? IncludeClassicAdministrators { get; internal set; }
-        /// <summary><p>Include extra assignments to the groups of which the user is a member(transitively). Supported only for a user principal.</p></summary>
+        /// <summary><p>Include extra assignments to the groups of which the user is a member(transitively).</p></summary>
         public virtual string IncludeGroups { get; internal set; }
         /// <summary><p>Include assignments applied on parent scopes.</p></summary>
         public virtual string IncludeInherited { get; internal set; }
@@ -293,7 +267,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -337,7 +311,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -373,7 +347,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -414,7 +388,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -458,7 +432,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -496,7 +470,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -560,7 +534,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureRoleSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureRoleSettings SetOutput(this AzureRoleSettings toolSettings, Output output)
+        public static AzureRoleSettings SetOutput(this AzureRoleSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -748,7 +722,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureRoleAssignmentCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureRoleAssignmentCreateSettings SetOutput(this AzureRoleAssignmentCreateSettings toolSettings, Output output)
+        public static AzureRoleAssignmentCreateSettings SetOutput(this AzureRoleAssignmentCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -954,7 +928,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureRoleAssignmentDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureRoleAssignmentDeleteSettings SetOutput(this AzureRoleAssignmentDeleteSettings toolSettings, Output output)
+        public static AzureRoleAssignmentDeleteSettings SetOutput(this AzureRoleAssignmentDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1092,7 +1066,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region IncludeGroups
-        /// <summary><p><em>Sets <see cref="AzureRoleAssignmentListSettings.IncludeGroups"/>.</em></p><p>Include extra assignments to the groups of which the user is a member(transitively). Supported only for a user principal.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRoleAssignmentListSettings.IncludeGroups"/>.</em></p><p>Include extra assignments to the groups of which the user is a member(transitively).</p></summary>
         [Pure]
         public static AzureRoleAssignmentListSettings SetIncludeGroups(this AzureRoleAssignmentListSettings toolSettings, string includeGroups)
         {
@@ -1100,7 +1074,7 @@ namespace Nuke.Azure
             toolSettings.IncludeGroups = includeGroups;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRoleAssignmentListSettings.IncludeGroups"/>.</em></p><p>Include extra assignments to the groups of which the user is a member(transitively). Supported only for a user principal.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRoleAssignmentListSettings.IncludeGroups"/>.</em></p><p>Include extra assignments to the groups of which the user is a member(transitively).</p></summary>
         [Pure]
         public static AzureRoleAssignmentListSettings ResetIncludeGroups(this AzureRoleAssignmentListSettings toolSettings)
         {
@@ -1220,7 +1194,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureRoleAssignmentListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureRoleAssignmentListSettings SetOutput(this AzureRoleAssignmentListSettings toolSettings, Output output)
+        public static AzureRoleAssignmentListSettings SetOutput(this AzureRoleAssignmentListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1354,7 +1328,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureRoleAssignmentListChangelogsSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureRoleAssignmentListChangelogsSettings SetOutput(this AzureRoleAssignmentListChangelogsSettings toolSettings, Output output)
+        public static AzureRoleAssignmentListChangelogsSettings SetOutput(this AzureRoleAssignmentListChangelogsSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1470,7 +1444,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureRoleDefinitionCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureRoleDefinitionCreateSettings SetOutput(this AzureRoleDefinitionCreateSettings toolSettings, Output output)
+        public static AzureRoleDefinitionCreateSettings SetOutput(this AzureRoleDefinitionCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1664,7 +1638,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureRoleDefinitionDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureRoleDefinitionDeleteSettings SetOutput(this AzureRoleDefinitionDeleteSettings toolSettings, Output output)
+        public static AzureRoleDefinitionDeleteSettings SetOutput(this AzureRoleDefinitionDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1858,7 +1832,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureRoleDefinitionListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureRoleDefinitionListSettings SetOutput(this AzureRoleDefinitionListSettings toolSettings, Output output)
+        public static AzureRoleDefinitionListSettings SetOutput(this AzureRoleDefinitionListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1974,7 +1948,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureRoleDefinitionUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureRoleDefinitionUpdateSettings SetOutput(this AzureRoleDefinitionUpdateSettings toolSettings, Output output)
+        public static AzureRoleDefinitionUpdateSettings SetOutput(this AzureRoleDefinitionUpdateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;

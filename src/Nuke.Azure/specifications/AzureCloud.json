@@ -6,7 +6,7 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/cloud.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/cloud.yml"
   ],
   "name": "AzureCloud",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/cloud?view=azure-cli-latest",
@@ -114,6 +114,12 @@
             "type": "CloudProfile",
             "format": "--profile {value}",
             "help": "Profile to use for this cloud."
+          },
+          {
+            "name": "SuffixAcrLoginServerEndpoint",
+            "type": "string",
+            "format": "--suffix-acr-login-server-endpoint {value}",
+            "help": "The Azure Container Registry login server suffix."
           },
           {
             "name": "SuffixAzureDatalakeAnalyticsCatalogAndJobEndpoint",
@@ -274,6 +280,12 @@
             "help": "Profile to use for this cloud."
           },
           {
+            "name": "SuffixAcrLoginServerEndpoint",
+            "type": "string",
+            "format": "--suffix-acr-login-server-endpoint {value}",
+            "help": "The Azure Container Registry login server suffix."
+          },
+          {
             "name": "SuffixAzureDatalakeAnalyticsCatalogAndJobEndpoint",
             "type": "string",
             "format": "--suffix-azure-datalake-analytics-catalog-and-job-endpoint {value}",
@@ -322,7 +334,7 @@
     },
     {
       "name": "Output",
-      "type": "Output",
+      "type": "AzureOutput",
       "format": "--output {value}",
       "help": "Output format."
     },

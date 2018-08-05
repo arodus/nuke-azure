@@ -2,10 +2,11 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
+// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureSnapshot.json.
 
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.Tooling;
@@ -28,88 +29,67 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureSnapshot executable.</p></summary>
         public static string AzureSnapshotPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage point-in-time copies of managed disks, native blobs, or other snapshots.</p></summary>
-        public static IEnumerable<string> AzureSnapshot(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
+        public static IReadOnlyCollection<Output> AzureSnapshot(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool logOutput = true, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureSnapshotPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
+            var process = ProcessTasks.StartProcess(AzureSnapshotPath, arguments, workingDirectory, environmentVariables, timeout, logOutput, null, outputFilter);
             process.AssertZeroExitCode();
-            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
+            return process.Output;
         }
-        static partial void PreProcess(AzureSnapshotCreateSettings toolSettings);
-        static partial void PostProcess(AzureSnapshotCreateSettings toolSettings);
         /// <summary><p>Manage point-in-time copies of managed disks, native blobs, or other snapshots.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/snapshot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureSnapshotCreate(Configure<AzureSnapshotCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureSnapshotCreate(Configure<AzureSnapshotCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSnapshotCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureSnapshotDeleteSettings toolSettings);
-        static partial void PostProcess(AzureSnapshotDeleteSettings toolSettings);
         /// <summary><p>Manage point-in-time copies of managed disks, native blobs, or other snapshots.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/snapshot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureSnapshotDelete(Configure<AzureSnapshotDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureSnapshotDelete(Configure<AzureSnapshotDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSnapshotDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureSnapshotGrantAccessSettings toolSettings);
-        static partial void PostProcess(AzureSnapshotGrantAccessSettings toolSettings);
         /// <summary><p>Manage point-in-time copies of managed disks, native blobs, or other snapshots.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/snapshot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureSnapshotGrantAccess(Configure<AzureSnapshotGrantAccessSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureSnapshotGrantAccess(Configure<AzureSnapshotGrantAccessSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSnapshotGrantAccessSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureSnapshotListSettings toolSettings);
-        static partial void PostProcess(AzureSnapshotListSettings toolSettings);
         /// <summary><p>Manage point-in-time copies of managed disks, native blobs, or other snapshots.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/snapshot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureSnapshotList(Configure<AzureSnapshotListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureSnapshotList(Configure<AzureSnapshotListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSnapshotListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureSnapshotRevokeAccessSettings toolSettings);
-        static partial void PostProcess(AzureSnapshotRevokeAccessSettings toolSettings);
         /// <summary><p>Manage point-in-time copies of managed disks, native blobs, or other snapshots.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/snapshot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureSnapshotRevokeAccess(Configure<AzureSnapshotRevokeAccessSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureSnapshotRevokeAccess(Configure<AzureSnapshotRevokeAccessSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSnapshotRevokeAccessSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureSnapshotShowSettings toolSettings);
-        static partial void PostProcess(AzureSnapshotShowSettings toolSettings);
         /// <summary><p>Manage point-in-time copies of managed disks, native blobs, or other snapshots.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/snapshot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureSnapshotShow(Configure<AzureSnapshotShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureSnapshotShow(Configure<AzureSnapshotShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSnapshotShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureSnapshotUpdateSettings toolSettings);
-        static partial void PostProcess(AzureSnapshotUpdateSettings toolSettings);
         /// <summary><p>Manage point-in-time copies of managed disks, native blobs, or other snapshots.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/snapshot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureSnapshotUpdate(Configure<AzureSnapshotUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureSnapshotUpdate(Configure<AzureSnapshotUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSnapshotUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
     }
     #region AzureSnapshotCreateSettings
@@ -142,7 +122,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -186,7 +166,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -226,7 +206,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -263,7 +243,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -300,7 +280,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -338,7 +318,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -375,6 +355,8 @@ namespace Nuke.Azure
         public virtual SnapshotSku Sku { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
+        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        public virtual string ForceString { get; internal set; }
         /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         public virtual string Remove { get; internal set; }
         /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
@@ -384,7 +366,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -397,6 +379,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--sku {value}", Sku)
               .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
               .Add("--debug {value}", Debug)
@@ -597,7 +580,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureSnapshotCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureSnapshotCreateSettings SetOutput(this AzureSnapshotCreateSettings toolSettings, Output output)
+        public static AzureSnapshotCreateSettings SetOutput(this AzureSnapshotCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -731,7 +714,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureSnapshotDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureSnapshotDeleteSettings SetOutput(this AzureSnapshotDeleteSettings toolSettings, Output output)
+        public static AzureSnapshotDeleteSettings SetOutput(this AzureSnapshotDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -883,7 +866,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureSnapshotGrantAccessSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureSnapshotGrantAccessSettings SetOutput(this AzureSnapshotGrantAccessSettings toolSettings, Output output)
+        public static AzureSnapshotGrantAccessSettings SetOutput(this AzureSnapshotGrantAccessSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -999,7 +982,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureSnapshotListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureSnapshotListSettings SetOutput(this AzureSnapshotListSettings toolSettings, Output output)
+        public static AzureSnapshotListSettings SetOutput(this AzureSnapshotListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1133,7 +1116,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureSnapshotRevokeAccessSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureSnapshotRevokeAccessSettings SetOutput(this AzureSnapshotRevokeAccessSettings toolSettings, Output output)
+        public static AzureSnapshotRevokeAccessSettings SetOutput(this AzureSnapshotRevokeAccessSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1267,7 +1250,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureSnapshotShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureSnapshotShowSettings SetOutput(this AzureSnapshotShowSettings toolSettings, Output output)
+        public static AzureSnapshotShowSettings SetOutput(this AzureSnapshotShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1398,6 +1381,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region ForceString
+        /// <summary><p><em>Sets <see cref="AzureSnapshotUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureSnapshotUpdateSettings SetForceString(this AzureSnapshotUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSnapshotUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureSnapshotUpdateSettings ResetForceString(this AzureSnapshotUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
         #region Remove
         /// <summary><p><em>Sets <see cref="AzureSnapshotUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         [Pure]
@@ -1473,7 +1474,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureSnapshotUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureSnapshotUpdateSettings SetOutput(this AzureSnapshotUpdateSettings toolSettings, Output output)
+        public static AzureSnapshotUpdateSettings SetOutput(this AzureSnapshotUpdateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1530,6 +1531,7 @@ namespace Nuke.Azure
     /// <summary><p>Used within <see cref="AzureSnapshotTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class SnapshotSku : Enumeration
     {
         public static SnapshotSku premium_lrs = new SnapshotSku { Value = "premium_lrs" };

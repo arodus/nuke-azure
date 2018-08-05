@@ -2,10 +2,11 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
+// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureContainer.json.
 
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.Tooling;
@@ -28,99 +29,75 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureContainer executable.</p></summary>
         public static string AzureContainerPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage Azure Container Instances.</p></summary>
-        public static IEnumerable<string> AzureContainer(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
+        public static IReadOnlyCollection<Output> AzureContainer(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool logOutput = true, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureContainerPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
+            var process = ProcessTasks.StartProcess(AzureContainerPath, arguments, workingDirectory, environmentVariables, timeout, logOutput, null, outputFilter);
             process.AssertZeroExitCode();
-            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
+            return process.Output;
         }
-        static partial void PreProcess(AzureContainerAttachSettings toolSettings);
-        static partial void PostProcess(AzureContainerAttachSettings toolSettings);
         /// <summary><p>Manage Azure Container Instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/container?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureContainerAttach(Configure<AzureContainerAttachSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureContainerAttach(Configure<AzureContainerAttachSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureContainerAttachSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureContainerCreateSettings toolSettings);
-        static partial void PostProcess(AzureContainerCreateSettings toolSettings);
         /// <summary><p>Manage Azure Container Instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/container?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureContainerCreate(Configure<AzureContainerCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureContainerCreate(Configure<AzureContainerCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureContainerCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureContainerDeleteSettings toolSettings);
-        static partial void PostProcess(AzureContainerDeleteSettings toolSettings);
         /// <summary><p>Manage Azure Container Instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/container?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureContainerDelete(Configure<AzureContainerDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureContainerDelete(Configure<AzureContainerDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureContainerDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureContainerExecSettings toolSettings);
-        static partial void PostProcess(AzureContainerExecSettings toolSettings);
         /// <summary><p>Manage Azure Container Instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/container?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureContainerExec(Configure<AzureContainerExecSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureContainerExec(Configure<AzureContainerExecSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureContainerExecSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureContainerExportSettings toolSettings);
-        static partial void PostProcess(AzureContainerExportSettings toolSettings);
         /// <summary><p>Manage Azure Container Instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/container?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureContainerExport(Configure<AzureContainerExportSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureContainerExport(Configure<AzureContainerExportSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureContainerExportSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureContainerListSettings toolSettings);
-        static partial void PostProcess(AzureContainerListSettings toolSettings);
         /// <summary><p>Manage Azure Container Instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/container?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureContainerList(Configure<AzureContainerListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureContainerList(Configure<AzureContainerListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureContainerListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureContainerLogsSettings toolSettings);
-        static partial void PostProcess(AzureContainerLogsSettings toolSettings);
         /// <summary><p>Manage Azure Container Instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/container?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureContainerLogs(Configure<AzureContainerLogsSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureContainerLogs(Configure<AzureContainerLogsSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureContainerLogsSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureContainerShowSettings toolSettings);
-        static partial void PostProcess(AzureContainerShowSettings toolSettings);
         /// <summary><p>Manage Azure Container Instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/container?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureContainerShow(Configure<AzureContainerShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureContainerShow(Configure<AzureContainerShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureContainerShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
     }
     #region AzureContainerAttachSettings
@@ -143,7 +120,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -182,8 +159,8 @@ namespace Nuke.Azure
         /// <summary><p>The dns name label for container group with public IP.</p></summary>
         public virtual string DnsNameLabel { get; internal set; }
         /// <summary><p>A list of environment variable for the container. Space-separated values in 'key=value' format.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> EnvironmentVariables => EnvironmentVariablesInternal.AsReadOnly();
-        internal Dictionary<string,string> EnvironmentVariablesInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, string> AzureEnvironmentVariables => AzureEnvironmentVariablesInternal.AsReadOnly();
+        internal Dictionary<string,string> AzureEnvironmentVariablesInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>The path to the input file.</p></summary>
         public virtual string File { get; internal set; }
         /// <summary><p>The container image name.</p></summary>
@@ -196,10 +173,14 @@ namespace Nuke.Azure
         public virtual string Memory { get; internal set; }
         /// <summary><p>The name of the container group.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
+        public virtual string NoWait { get; internal set; }
         /// <summary><p>The OS type of the containers.</p></summary>
         public virtual ContainerCreateOsType OsType { get; internal set; }
         /// <summary><p>The ports to open.</p></summary>
         public virtual string Ports { get; internal set; }
+        /// <summary><p>The network protocol to use.</p></summary>
+        public virtual ContainerCreateProtocol Protocol { get; internal set; }
         /// <summary><p>Restart policy for all containers within the container group.</p></summary>
         public virtual ContainerCreateRestartPolicy RestartPolicy { get; internal set; }
         /// <summary><p>Space-separated secrets in 'key=value' format.</p></summary>
@@ -229,12 +210,16 @@ namespace Nuke.Azure
         public virtual string RegistryPassword { get; internal set; }
         /// <summary><p>The username to log in container image registry server.</p></summary>
         public virtual string RegistryUsername { get; internal set; }
+        /// <summary><p>The Log Analytics workspace name or id. Use the current subscription or use --subscription flag to set the desired subscription.</p></summary>
+        public virtual string LogAnalyticsWorkspace { get; internal set; }
+        /// <summary><p>The Log Analytics workspace key.</p></summary>
+        public virtual string LogAnalyticsWorkspaceKey { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -247,15 +232,17 @@ namespace Nuke.Azure
               .Add("--command-line {value}", CommandLine)
               .Add("--cpu {value}", Cpu)
               .Add("--dns-name-label {value}", DnsNameLabel)
-              .Add("--environment-variables {value}", EnvironmentVariables, "{key}={value}", separator: ' ')
+              .Add("--environment-variables {value}", AzureEnvironmentVariables, "{key}={value}", separator: ' ')
               .Add("--file {value}", File)
               .Add("--image {value}", Image)
               .Add("--ip-address {value}", IpAddress)
               .Add("--location {value}", Location)
               .Add("--memory {value}", Memory)
               .Add("--name {value}", Name)
+              .Add("--no-wait {value}", NoWait)
               .Add("--os-type {value}", OsType)
               .Add("--ports {value}", Ports)
+              .Add("--protocol {value}", Protocol)
               .Add("--restart-policy {value}", RestartPolicy)
               .Add("--secrets {value}", Secrets, "{key}={value}", separator: ' ')
               .Add("--secrets-mount-path {value}", SecretsMountPath, secret: true)
@@ -270,6 +257,8 @@ namespace Nuke.Azure
               .Add("--registry-login-server {value}", RegistryLoginServer)
               .Add("--registry-password {value}", RegistryPassword, secret: true)
               .Add("--registry-username {value}", RegistryUsername)
+              .Add("--log-analytics-workspace {value}", LogAnalyticsWorkspace)
+              .Add("--log-analytics-workspace-key {value}", LogAnalyticsWorkspaceKey)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -299,7 +288,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -346,7 +335,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -390,7 +379,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -427,7 +416,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -468,7 +457,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -508,7 +497,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -627,7 +616,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureContainerAttachSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureContainerAttachSettings SetOutput(this AzureContainerAttachSettings toolSettings, Output output)
+        public static AzureContainerAttachSettings SetOutput(this AzureContainerAttachSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -758,45 +747,45 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region EnvironmentVariables
-        /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.EnvironmentVariables"/> to a new dictionary.</em></p><p>A list of environment variable for the container. Space-separated values in 'key=value' format.</p></summary>
+        #region AzureEnvironmentVariables
+        /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.AzureEnvironmentVariables"/> to a new dictionary.</em></p><p>A list of environment variable for the container. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureContainerCreateSettings SetEnvironmentVariables(this AzureContainerCreateSettings toolSettings, IDictionary<string, string> environmentVariables)
+        public static AzureContainerCreateSettings SetAzureEnvironmentVariables(this AzureContainerCreateSettings toolSettings, IDictionary<string, string> azureEnvironmentVariables)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.EnvironmentVariablesInternal = environmentVariables.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
+            toolSettings.AzureEnvironmentVariablesInternal = azureEnvironmentVariables.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
             return toolSettings;
         }
-        /// <summary><p><em>Clears <see cref="AzureContainerCreateSettings.EnvironmentVariables"/>.</em></p><p>A list of environment variable for the container. Space-separated values in 'key=value' format.</p></summary>
+        /// <summary><p><em>Clears <see cref="AzureContainerCreateSettings.AzureEnvironmentVariables"/>.</em></p><p>A list of environment variable for the container. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureContainerCreateSettings ClearEnvironmentVariables(this AzureContainerCreateSettings toolSettings)
+        public static AzureContainerCreateSettings ClearAzureEnvironmentVariables(this AzureContainerCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.EnvironmentVariablesInternal.Clear();
+            toolSettings.AzureEnvironmentVariablesInternal.Clear();
             return toolSettings;
         }
-        /// <summary><p><em>Adds a new key-value-pair <see cref="AzureContainerCreateSettings.EnvironmentVariables"/>.</em></p><p>A list of environment variable for the container. Space-separated values in 'key=value' format.</p></summary>
+        /// <summary><p><em>Adds a new key-value-pair <see cref="AzureContainerCreateSettings.AzureEnvironmentVariables"/>.</em></p><p>A list of environment variable for the container. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureContainerCreateSettings AddEnvironmentVariable(this AzureContainerCreateSettings toolSettings, string environmentVariableKey, string environmentVariableValue)
+        public static AzureContainerCreateSettings AddAzureEnvironmentVariable(this AzureContainerCreateSettings toolSettings, string azureEnvironmentVariableKey, string azureEnvironmentVariableValue)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.EnvironmentVariablesInternal.Add(environmentVariableKey, environmentVariableValue);
+            toolSettings.AzureEnvironmentVariablesInternal.Add(azureEnvironmentVariableKey, azureEnvironmentVariableValue);
             return toolSettings;
         }
-        /// <summary><p><em>Removes a key-value-pair from <see cref="AzureContainerCreateSettings.EnvironmentVariables"/>.</em></p><p>A list of environment variable for the container. Space-separated values in 'key=value' format.</p></summary>
+        /// <summary><p><em>Removes a key-value-pair from <see cref="AzureContainerCreateSettings.AzureEnvironmentVariables"/>.</em></p><p>A list of environment variable for the container. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureContainerCreateSettings RemoveEnvironmentVariable(this AzureContainerCreateSettings toolSettings, string environmentVariableKey)
+        public static AzureContainerCreateSettings RemoveAzureEnvironmentVariable(this AzureContainerCreateSettings toolSettings, string azureEnvironmentVariableKey)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.EnvironmentVariablesInternal.Remove(environmentVariableKey);
+            toolSettings.AzureEnvironmentVariablesInternal.Remove(azureEnvironmentVariableKey);
             return toolSettings;
         }
-        /// <summary><p><em>Sets a key-value-pair in <see cref="AzureContainerCreateSettings.EnvironmentVariables"/>.</em></p><p>A list of environment variable for the container. Space-separated values in 'key=value' format.</p></summary>
+        /// <summary><p><em>Sets a key-value-pair in <see cref="AzureContainerCreateSettings.AzureEnvironmentVariables"/>.</em></p><p>A list of environment variable for the container. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureContainerCreateSettings SetEnvironmentVariable(this AzureContainerCreateSettings toolSettings, string environmentVariableKey, string environmentVariableValue)
+        public static AzureContainerCreateSettings SetAzureEnvironmentVariable(this AzureContainerCreateSettings toolSettings, string azureEnvironmentVariableKey, string azureEnvironmentVariableValue)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.EnvironmentVariablesInternal[environmentVariableKey] = environmentVariableValue;
+            toolSettings.AzureEnvironmentVariablesInternal[azureEnvironmentVariableKey] = azureEnvironmentVariableValue;
             return toolSettings;
         }
         #endregion
@@ -908,6 +897,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region NoWait
+        /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings SetNoWait(this AzureContainerCreateSettings toolSettings, string noWait)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = noWait;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings ResetNoWait(this AzureContainerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        #endregion
         #region OsType
         /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.OsType"/>.</em></p><p>The OS type of the containers.</p></summary>
         [Pure]
@@ -941,6 +948,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Ports = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Protocol
+        /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.Protocol"/>.</em></p><p>The network protocol to use.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings SetProtocol(this AzureContainerCreateSettings toolSettings, ContainerCreateProtocol protocol)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Protocol = protocol;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerCreateSettings.Protocol"/>.</em></p><p>The network protocol to use.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings ResetProtocol(this AzureContainerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Protocol = null;
             return toolSettings;
         }
         #endregion
@@ -1220,6 +1245,42 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region LogAnalyticsWorkspace
+        /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.LogAnalyticsWorkspace"/>.</em></p><p>The Log Analytics workspace name or id. Use the current subscription or use --subscription flag to set the desired subscription.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings SetLogAnalyticsWorkspace(this AzureContainerCreateSettings toolSettings, string logAnalyticsWorkspace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogAnalyticsWorkspace = logAnalyticsWorkspace;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerCreateSettings.LogAnalyticsWorkspace"/>.</em></p><p>The Log Analytics workspace name or id. Use the current subscription or use --subscription flag to set the desired subscription.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings ResetLogAnalyticsWorkspace(this AzureContainerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogAnalyticsWorkspace = null;
+            return toolSettings;
+        }
+        #endregion
+        #region LogAnalyticsWorkspaceKey
+        /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.LogAnalyticsWorkspaceKey"/>.</em></p><p>The Log Analytics workspace key.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings SetLogAnalyticsWorkspaceKey(this AzureContainerCreateSettings toolSettings, string logAnalyticsWorkspaceKey)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogAnalyticsWorkspaceKey = logAnalyticsWorkspaceKey;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureContainerCreateSettings.LogAnalyticsWorkspaceKey"/>.</em></p><p>The Log Analytics workspace key.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings ResetLogAnalyticsWorkspaceKey(this AzureContainerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LogAnalyticsWorkspaceKey = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -1259,7 +1320,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureContainerCreateSettings SetOutput(this AzureContainerCreateSettings toolSettings, Output output)
+        public static AzureContainerCreateSettings SetOutput(this AzureContainerCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1411,7 +1472,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureContainerDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureContainerDeleteSettings SetOutput(this AzureContainerDeleteSettings toolSettings, Output output)
+        public static AzureContainerDeleteSettings SetOutput(this AzureContainerDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1617,7 +1678,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureContainerExecSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureContainerExecSettings SetOutput(this AzureContainerExecSettings toolSettings, Output output)
+        public static AzureContainerExecSettings SetOutput(this AzureContainerExecSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1769,7 +1830,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureContainerExportSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureContainerExportSettings SetOutput(this AzureContainerExportSettings toolSettings, Output output)
+        public static AzureContainerExportSettings SetOutput(this AzureContainerExportSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1885,7 +1946,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureContainerListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureContainerListSettings SetOutput(this AzureContainerListSettings toolSettings, Output output)
+        public static AzureContainerListSettings SetOutput(this AzureContainerListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2055,7 +2116,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureContainerLogsSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureContainerLogsSettings SetOutput(this AzureContainerLogsSettings toolSettings, Output output)
+        public static AzureContainerLogsSettings SetOutput(this AzureContainerLogsSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2189,7 +2250,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureContainerShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureContainerShowSettings SetOutput(this AzureContainerShowSettings toolSettings, Output output)
+        public static AzureContainerShowSettings SetOutput(this AzureContainerShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2246,6 +2307,7 @@ namespace Nuke.Azure
     /// <summary><p>Used within <see cref="AzureContainerTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class ContainerCreateIpAddress : Enumeration
     {
         public static ContainerCreateIpAddress public_ = new ContainerCreateIpAddress { Value = "public" };
@@ -2255,16 +2317,29 @@ namespace Nuke.Azure
     /// <summary><p>Used within <see cref="AzureContainerTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class ContainerCreateOsType : Enumeration
     {
         public static ContainerCreateOsType linux = new ContainerCreateOsType { Value = "linux" };
         public static ContainerCreateOsType windows = new ContainerCreateOsType { Value = "windows" };
     }
     #endregion
+    #region ContainerCreateProtocol
+    /// <summary><p>Used within <see cref="AzureContainerTasks"/>.</p></summary>
+    [PublicAPI]
+    [Serializable]
+    [ExcludeFromCodeCoverage]
+    public partial class ContainerCreateProtocol : Enumeration
+    {
+        public static ContainerCreateProtocol tcp = new ContainerCreateProtocol { Value = "tcp" };
+        public static ContainerCreateProtocol udp = new ContainerCreateProtocol { Value = "udp" };
+    }
+    #endregion
     #region ContainerCreateRestartPolicy
     /// <summary><p>Used within <see cref="AzureContainerTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class ContainerCreateRestartPolicy : Enumeration
     {
         public static ContainerCreateRestartPolicy always = new ContainerCreateRestartPolicy { Value = "always" };

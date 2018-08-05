@@ -6,13 +6,12 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/redis.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/redis/patch-schedule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/redis/patch-schedule/patch-schedule.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/redis.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/redis/patch-schedule.yml"
   ],
   "name": "AzureRedis",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest",
-  "help": "Access to a secure, dedicated Redis cache for your Azure applications.",
+  "help": "Manage dedicated Redis caches for your Azure applications.",
   "pathExecutable": "az",
   "tasks": [
     {
@@ -372,6 +371,12 @@
             "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
           },
           {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
             "name": "Remove",
             "type": "string",
             "format": "--remove {value}",
@@ -477,26 +482,6 @@
           }
         ]
       }
-    },
-    {
-      "postfix": "PatchSchedulePatchScheduleShow",
-      "definiteArgument": "redis patch-schedule patch-schedule show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the Redis cache."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
     }
   ],
   "commonTaskProperties": [
@@ -514,7 +499,7 @@
     },
     {
       "name": "Output",
-      "type": "Output",
+      "type": "AzureOutput",
       "format": "--output {value}",
       "help": "Output format."
     },

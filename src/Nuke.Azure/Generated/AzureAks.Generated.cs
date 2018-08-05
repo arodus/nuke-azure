@@ -2,10 +2,11 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
+// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureAks.json.
 
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.Tooling;
@@ -28,198 +29,163 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureAks executable.</p></summary>
         public static string AzureAksPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage Azure Kubernetes Services.</p></summary>
-        public static IEnumerable<string> AzureAks(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
+        public static IReadOnlyCollection<Output> AzureAks(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool logOutput = true, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureAksPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
+            var process = ProcessTasks.StartProcess(AzureAksPath, arguments, workingDirectory, environmentVariables, timeout, logOutput, null, outputFilter);
             process.AssertZeroExitCode();
-            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
+            return process.Output;
         }
-        static partial void PreProcess(AzureAksBrowseSettings toolSettings);
-        static partial void PostProcess(AzureAksBrowseSettings toolSettings);
         /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAksBrowse(Configure<AzureAksBrowseSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAksBrowse(Configure<AzureAksBrowseSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksBrowseSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAksCreateSettings toolSettings);
-        static partial void PostProcess(AzureAksCreateSettings toolSettings);
         /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAksCreate(Configure<AzureAksCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAksCreate(Configure<AzureAksCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAksDeleteSettings toolSettings);
-        static partial void PostProcess(AzureAksDeleteSettings toolSettings);
         /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAksDelete(Configure<AzureAksDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAksDelete(Configure<AzureAksDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAksGetCredentialsSettings toolSettings);
-        static partial void PostProcess(AzureAksGetCredentialsSettings toolSettings);
         /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAksGetCredentials(Configure<AzureAksGetCredentialsSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAksDisableAddons(Configure<AzureAksDisableAddonsSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAksDisableAddonsSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAksEnableAddons(Configure<AzureAksEnableAddonsSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAksEnableAddonsSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAksGetCredentials(Configure<AzureAksGetCredentialsSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksGetCredentialsSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAksGetUpgradesSettings toolSettings);
-        static partial void PostProcess(AzureAksGetUpgradesSettings toolSettings);
         /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAksGetUpgrades(Configure<AzureAksGetUpgradesSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAksGetUpgrades(Configure<AzureAksGetUpgradesSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksGetUpgradesSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAksGetVersionsSettings toolSettings);
-        static partial void PostProcess(AzureAksGetVersionsSettings toolSettings);
         /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAksGetVersions(Configure<AzureAksGetVersionsSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAksGetVersions(Configure<AzureAksGetVersionsSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksGetVersionsSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAksInstallCliSettings toolSettings);
-        static partial void PostProcess(AzureAksInstallCliSettings toolSettings);
         /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAksInstallCli(Configure<AzureAksInstallCliSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAksInstallCli(Configure<AzureAksInstallCliSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksInstallCliSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAksInstallConnectorSettings toolSettings);
-        static partial void PostProcess(AzureAksInstallConnectorSettings toolSettings);
         /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAksInstallConnector(Configure<AzureAksInstallConnectorSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAksInstallConnector(Configure<AzureAksInstallConnectorSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksInstallConnectorSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAksListSettings toolSettings);
-        static partial void PostProcess(AzureAksListSettings toolSettings);
         /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAksList(Configure<AzureAksListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAksList(Configure<AzureAksListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAksRemoveConnectorSettings toolSettings);
-        static partial void PostProcess(AzureAksRemoveConnectorSettings toolSettings);
         /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAksRemoveConnector(Configure<AzureAksRemoveConnectorSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAksRemoveConnector(Configure<AzureAksRemoveConnectorSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksRemoveConnectorSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAksRemoveDevSpacesSettings toolSettings);
-        static partial void PostProcess(AzureAksRemoveDevSpacesSettings toolSettings);
         /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAksRemoveDevSpaces(Configure<AzureAksRemoveDevSpacesSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAksRemoveDevSpaces(Configure<AzureAksRemoveDevSpacesSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksRemoveDevSpacesSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAksScaleSettings toolSettings);
-        static partial void PostProcess(AzureAksScaleSettings toolSettings);
         /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAksScale(Configure<AzureAksScaleSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAksScale(Configure<AzureAksScaleSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksScaleSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAksShowSettings toolSettings);
-        static partial void PostProcess(AzureAksShowSettings toolSettings);
         /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAksShow(Configure<AzureAksShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAksShow(Configure<AzureAksShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAksUpgradeSettings toolSettings);
-        static partial void PostProcess(AzureAksUpgradeSettings toolSettings);
         /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAksUpgrade(Configure<AzureAksUpgradeSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAksUpgrade(Configure<AzureAksUpgradeSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksUpgradeSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAksUpgradeConnectorSettings toolSettings);
-        static partial void PostProcess(AzureAksUpgradeConnectorSettings toolSettings);
         /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAksUpgradeConnector(Configure<AzureAksUpgradeConnectorSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAksUpgradeConnector(Configure<AzureAksUpgradeConnectorSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksUpgradeConnectorSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAksUseDevSpacesSettings toolSettings);
-        static partial void PostProcess(AzureAksUseDevSpacesSettings toolSettings);
         /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAksUseDevSpaces(Configure<AzureAksUseDevSpacesSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAksUseDevSpaces(Configure<AzureAksUseDevSpacesSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksUseDevSpacesSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAksWaitSettings toolSettings);
-        static partial void PostProcess(AzureAksWaitSettings toolSettings);
         /// <summary><p>Manage Azure Kubernetes Services.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAksWait(Configure<AzureAksWaitSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAksWait(Configure<AzureAksWaitSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAksWaitSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
     }
     #region AzureAksBrowseSettings
@@ -237,12 +203,14 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Don't launch a web browser after establishing port-forwarding.</p></summary>
         public virtual string DisableBrowser { get; internal set; }
+        /// <summary><p>The listening port for the dashboard.</p></summary>
+        public virtual string ListenPort { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -254,6 +222,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--disable-browser {value}", DisableBrowser)
+              .Add("--listen-port {value}", ListenPort)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -288,6 +257,8 @@ namespace Nuke.Azure
         public virtual string AdminUsername { get; internal set; }
         /// <summary><p>Secret associated with the service principal. This argument is required if `--service-principal` is specified.</p></summary>
         public virtual string ClientSecret { get; internal set; }
+        /// <summary><p>Disable Kubernetes Role-Based Access Control.</p></summary>
+        public virtual string DisableRbac { get; internal set; }
         /// <summary><p>Prefix for hostnames that are created. If not specified, generate a hostname using the managed cluster and resource group names.</p></summary>
         public virtual string DnsNamePrefix { get; internal set; }
         /// <summary><p>An IP address assigned to the Kubernetes DNS service.</p></summary>
@@ -297,7 +268,7 @@ namespace Nuke.Azure
         /// <summary><p>Enable the Kubernetes addons in a comma-separated list.</p></summary>
         public virtual IReadOnlyList<string> EnableAddons => EnableAddonsInternal.AsReadOnly();
         internal List<string> EnableAddonsInternal { get; set; } = new List<string>();
-        /// <summary><p>Enable Kubernetes Role-Based Access Control.</p></summary>
+        /// <summary><p>Enable Kubernetes Role-Based Access Control. Default: enabled.</p></summary>
         public virtual string EnableRbac { get; internal set; }
         /// <summary><p>Generate SSH public and private key files if missing.</p></summary>
         public virtual string GenerateSshKeys { get; internal set; }
@@ -315,7 +286,7 @@ namespace Nuke.Azure
         public virtual string NoWait { get; internal set; }
         /// <summary><p>Number of nodes in the Kubernetes node pool. After creating a cluster, you can change the size of its node pool with `az aks scale`.</p></summary>
         public virtual int? NodeCount { get; internal set; }
-        /// <summary><p>Size in GB of the OS disk for each node in the node pool.</p></summary>
+        /// <summary><p>Size in GB of the OS disk for each node in the node pool. Minimum 30 GB.</p></summary>
         public virtual string NodeOsdiskSize { get; internal set; }
         /// <summary><p>Size of Virtual Machines to create as Kubernetes nodes.</p></summary>
         public virtual string NodeVmSize { get; internal set; }
@@ -331,14 +302,14 @@ namespace Nuke.Azure
         public virtual string Tags { get; internal set; }
         /// <summary><p>The ID of a subnet in an existing VNet into which to deploy the cluster.</p></summary>
         public virtual string VnetSubnetId { get; internal set; }
-        /// <summary><p>The resource ID of an existing Log Analytics Workspace to use for storing monitoring data.</p></summary>
+        /// <summary><p>The resource ID of an existing Log Analytics Workspace to use for storing monitoring data. If not specified, uses the default Log Analytics Workspace if it exists, otherwise creates one.</p></summary>
         public virtual string WorkspaceResourceId { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -355,6 +326,7 @@ namespace Nuke.Azure
               .Add("--aad-tenant-id {value}", AadTenantId)
               .Add("--admin-username {value}", AdminUsername)
               .Add("--client-secret {value}", ClientSecret, secret: true)
+              .Add("--disable-rbac {value}", DisableRbac)
               .Add("--dns-name-prefix {value}", DnsNamePrefix)
               .Add("--dns-service-ip {value}", DnsServiceIp)
               .Add("--docker-bridge-address {value}", DockerBridgeAddress)
@@ -408,7 +380,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -421,6 +393,99 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--no-wait {value}", NoWait)
               .Add("--yes {value}", Yes)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAksDisableAddonsSettings
+    /// <summary><p>Used within <see cref="AzureAksTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAksDisableAddonsSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAks executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAksTasks.AzureAksPath;
+        /// <summary><p>Disable the Kubernetes addons in a comma-separated list.</p></summary>
+        public virtual IReadOnlyList<string> Addons => AddonsInternal.AsReadOnly();
+        internal List<string> AddonsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of the managed cluster.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
+        public virtual string NoWait { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("aks disable-addons")
+              .Add("--addons {value}", Addons, separator: ',')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--no-wait {value}", NoWait)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAksEnableAddonsSettings
+    /// <summary><p>Used within <see cref="AzureAksTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAksEnableAddonsSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAks executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAksTasks.AzureAksPath;
+        /// <summary><p>Enable the Kubernetes addons in a comma-separated list.</p></summary>
+        public virtual IReadOnlyList<string> Addons => AddonsInternal.AsReadOnly();
+        internal List<string> AddonsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of the managed cluster.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
+        public virtual string NoWait { get; internal set; }
+        /// <summary><p>The resource ID of an existing Log Analytics Workspace to use for storing monitoring data.</p></summary>
+        public virtual string WorkspaceResourceId { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("aks enable-addons")
+              .Add("--addons {value}", Addons, separator: ',')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--no-wait {value}", NoWait)
+              .Add("--workspace-resource-id {value}", WorkspaceResourceId)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -452,7 +517,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -492,7 +557,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -528,7 +593,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -565,7 +630,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -619,7 +684,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -663,7 +728,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -708,7 +773,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -752,7 +817,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -795,7 +860,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -835,7 +900,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -879,7 +944,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -936,7 +1001,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -988,7 +1053,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1043,7 +1108,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1130,6 +1195,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region ListenPort
+        /// <summary><p><em>Sets <see cref="AzureAksBrowseSettings.ListenPort"/>.</em></p><p>The listening port for the dashboard.</p></summary>
+        [Pure]
+        public static AzureAksBrowseSettings SetListenPort(this AzureAksBrowseSettings toolSettings, string listenPort)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ListenPort = listenPort;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksBrowseSettings.ListenPort"/>.</em></p><p>The listening port for the dashboard.</p></summary>
+        [Pure]
+        public static AzureAksBrowseSettings ResetListenPort(this AzureAksBrowseSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ListenPort = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureAksBrowseSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -1169,7 +1252,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAksBrowseSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAksBrowseSettings SetOutput(this AzureAksBrowseSettings toolSettings, Output output)
+        public static AzureAksBrowseSettings SetOutput(this AzureAksBrowseSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1372,6 +1455,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region DisableRbac
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.DisableRbac"/>.</em></p><p>Disable Kubernetes Role-Based Access Control.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings SetDisableRbac(this AzureAksCreateSettings toolSettings, string disableRbac)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableRbac = disableRbac;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.DisableRbac"/>.</em></p><p>Disable Kubernetes Role-Based Access Control.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings ResetDisableRbac(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableRbac = null;
+            return toolSettings;
+        }
+        #endregion
         #region DnsNamePrefix
         /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.DnsNamePrefix"/>.</em></p><p>Prefix for hostnames that are created. If not specified, generate a hostname using the managed cluster and resource group names.</p></summary>
         [Pure]
@@ -1487,7 +1588,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region EnableRbac
-        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.EnableRbac"/>.</em></p><p>Enable Kubernetes Role-Based Access Control.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.EnableRbac"/>.</em></p><p>Enable Kubernetes Role-Based Access Control. Default: enabled.</p></summary>
         [Pure]
         public static AzureAksCreateSettings SetEnableRbac(this AzureAksCreateSettings toolSettings, string enableRbac)
         {
@@ -1495,7 +1596,7 @@ namespace Nuke.Azure
             toolSettings.EnableRbac = enableRbac;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.EnableRbac"/>.</em></p><p>Enable Kubernetes Role-Based Access Control.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.EnableRbac"/>.</em></p><p>Enable Kubernetes Role-Based Access Control. Default: enabled.</p></summary>
         [Pure]
         public static AzureAksCreateSettings ResetEnableRbac(this AzureAksCreateSettings toolSettings)
         {
@@ -1649,7 +1750,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region NodeOsdiskSize
-        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.NodeOsdiskSize"/>.</em></p><p>Size in GB of the OS disk for each node in the node pool.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.NodeOsdiskSize"/>.</em></p><p>Size in GB of the OS disk for each node in the node pool. Minimum 30 GB.</p></summary>
         [Pure]
         public static AzureAksCreateSettings SetNodeOsdiskSize(this AzureAksCreateSettings toolSettings, string nodeOsdiskSize)
         {
@@ -1657,7 +1758,7 @@ namespace Nuke.Azure
             toolSettings.NodeOsdiskSize = nodeOsdiskSize;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.NodeOsdiskSize"/>.</em></p><p>Size in GB of the OS disk for each node in the node pool.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.NodeOsdiskSize"/>.</em></p><p>Size in GB of the OS disk for each node in the node pool. Minimum 30 GB.</p></summary>
         [Pure]
         public static AzureAksCreateSettings ResetNodeOsdiskSize(this AzureAksCreateSettings toolSettings)
         {
@@ -1817,7 +1918,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region WorkspaceResourceId
-        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.WorkspaceResourceId"/>.</em></p><p>The resource ID of an existing Log Analytics Workspace to use for storing monitoring data.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.WorkspaceResourceId"/>.</em></p><p>The resource ID of an existing Log Analytics Workspace to use for storing monitoring data. If not specified, uses the default Log Analytics Workspace if it exists, otherwise creates one.</p></summary>
         [Pure]
         public static AzureAksCreateSettings SetWorkspaceResourceId(this AzureAksCreateSettings toolSettings, string workspaceResourceId)
         {
@@ -1825,7 +1926,7 @@ namespace Nuke.Azure
             toolSettings.WorkspaceResourceId = workspaceResourceId;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.WorkspaceResourceId"/>.</em></p><p>The resource ID of an existing Log Analytics Workspace to use for storing monitoring data.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.WorkspaceResourceId"/>.</em></p><p>The resource ID of an existing Log Analytics Workspace to use for storing monitoring data. If not specified, uses the default Log Analytics Workspace if it exists, otherwise creates one.</p></summary>
         [Pure]
         public static AzureAksCreateSettings ResetWorkspaceResourceId(this AzureAksCreateSettings toolSettings)
         {
@@ -1873,7 +1974,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAksCreateSettings SetOutput(this AzureAksCreateSettings toolSettings, Output output)
+        public static AzureAksCreateSettings SetOutput(this AzureAksCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2043,7 +2144,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAksDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAksDeleteSettings SetOutput(this AzureAksDeleteSettings toolSettings, Output output)
+        public static AzureAksDeleteSettings SetOutput(this AzureAksDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2088,6 +2189,448 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureAksDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureAksDeleteSettings ResetVerbose(this AzureAksDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAksDisableAddonsSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAksTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAksDisableAddonsSettingsExtensions
+    {
+        #region Addons
+        /// <summary><p><em>Sets <see cref="AzureAksDisableAddonsSettings.Addons"/> to a new list.</em></p><p>Disable the Kubernetes addons in a comma-separated list.</p></summary>
+        [Pure]
+        public static AzureAksDisableAddonsSettings SetAddons(this AzureAksDisableAddonsSettings toolSettings, params string[] addons)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AddonsInternal = addons.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureAksDisableAddonsSettings.Addons"/> to a new list.</em></p><p>Disable the Kubernetes addons in a comma-separated list.</p></summary>
+        [Pure]
+        public static AzureAksDisableAddonsSettings SetAddons(this AzureAksDisableAddonsSettings toolSettings, IEnumerable<string> addons)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AddonsInternal = addons.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureAksDisableAddonsSettings.Addons"/>.</em></p><p>Disable the Kubernetes addons in a comma-separated list.</p></summary>
+        [Pure]
+        public static AzureAksDisableAddonsSettings AddAddons(this AzureAksDisableAddonsSettings toolSettings, params string[] addons)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AddonsInternal.AddRange(addons);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureAksDisableAddonsSettings.Addons"/>.</em></p><p>Disable the Kubernetes addons in a comma-separated list.</p></summary>
+        [Pure]
+        public static AzureAksDisableAddonsSettings AddAddons(this AzureAksDisableAddonsSettings toolSettings, IEnumerable<string> addons)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AddonsInternal.AddRange(addons);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureAksDisableAddonsSettings.Addons"/>.</em></p><p>Disable the Kubernetes addons in a comma-separated list.</p></summary>
+        [Pure]
+        public static AzureAksDisableAddonsSettings ClearAddons(this AzureAksDisableAddonsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AddonsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureAksDisableAddonsSettings.Addons"/>.</em></p><p>Disable the Kubernetes addons in a comma-separated list.</p></summary>
+        [Pure]
+        public static AzureAksDisableAddonsSettings RemoveAddons(this AzureAksDisableAddonsSettings toolSettings, params string[] addons)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(addons);
+            toolSettings.AddonsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureAksDisableAddonsSettings.Addons"/>.</em></p><p>Disable the Kubernetes addons in a comma-separated list.</p></summary>
+        [Pure]
+        public static AzureAksDisableAddonsSettings RemoveAddons(this AzureAksDisableAddonsSettings toolSettings, IEnumerable<string> addons)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(addons);
+            toolSettings.AddonsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAksDisableAddonsSettings.Name"/>.</em></p><p>Name of the managed cluster.</p></summary>
+        [Pure]
+        public static AzureAksDisableAddonsSettings SetName(this AzureAksDisableAddonsSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksDisableAddonsSettings.Name"/>.</em></p><p>Name of the managed cluster.</p></summary>
+        [Pure]
+        public static AzureAksDisableAddonsSettings ResetName(this AzureAksDisableAddonsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAksDisableAddonsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAksDisableAddonsSettings SetResourceGroup(this AzureAksDisableAddonsSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksDisableAddonsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAksDisableAddonsSettings ResetResourceGroup(this AzureAksDisableAddonsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NoWait
+        /// <summary><p><em>Sets <see cref="AzureAksDisableAddonsSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureAksDisableAddonsSettings SetNoWait(this AzureAksDisableAddonsSettings toolSettings, string noWait)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = noWait;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksDisableAddonsSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureAksDisableAddonsSettings ResetNoWait(this AzureAksDisableAddonsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAksDisableAddonsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAksDisableAddonsSettings SetDebug(this AzureAksDisableAddonsSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksDisableAddonsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAksDisableAddonsSettings ResetDebug(this AzureAksDisableAddonsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAksDisableAddonsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAksDisableAddonsSettings SetHelp(this AzureAksDisableAddonsSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksDisableAddonsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAksDisableAddonsSettings ResetHelp(this AzureAksDisableAddonsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAksDisableAddonsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAksDisableAddonsSettings SetOutput(this AzureAksDisableAddonsSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksDisableAddonsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAksDisableAddonsSettings ResetOutput(this AzureAksDisableAddonsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAksDisableAddonsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAksDisableAddonsSettings SetQuery(this AzureAksDisableAddonsSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksDisableAddonsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAksDisableAddonsSettings ResetQuery(this AzureAksDisableAddonsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAksDisableAddonsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAksDisableAddonsSettings SetVerbose(this AzureAksDisableAddonsSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksDisableAddonsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAksDisableAddonsSettings ResetVerbose(this AzureAksDisableAddonsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAksEnableAddonsSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAksTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAksEnableAddonsSettingsExtensions
+    {
+        #region Addons
+        /// <summary><p><em>Sets <see cref="AzureAksEnableAddonsSettings.Addons"/> to a new list.</em></p><p>Enable the Kubernetes addons in a comma-separated list.</p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings SetAddons(this AzureAksEnableAddonsSettings toolSettings, params string[] addons)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AddonsInternal = addons.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureAksEnableAddonsSettings.Addons"/> to a new list.</em></p><p>Enable the Kubernetes addons in a comma-separated list.</p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings SetAddons(this AzureAksEnableAddonsSettings toolSettings, IEnumerable<string> addons)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AddonsInternal = addons.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureAksEnableAddonsSettings.Addons"/>.</em></p><p>Enable the Kubernetes addons in a comma-separated list.</p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings AddAddons(this AzureAksEnableAddonsSettings toolSettings, params string[] addons)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AddonsInternal.AddRange(addons);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureAksEnableAddonsSettings.Addons"/>.</em></p><p>Enable the Kubernetes addons in a comma-separated list.</p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings AddAddons(this AzureAksEnableAddonsSettings toolSettings, IEnumerable<string> addons)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AddonsInternal.AddRange(addons);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureAksEnableAddonsSettings.Addons"/>.</em></p><p>Enable the Kubernetes addons in a comma-separated list.</p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings ClearAddons(this AzureAksEnableAddonsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AddonsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureAksEnableAddonsSettings.Addons"/>.</em></p><p>Enable the Kubernetes addons in a comma-separated list.</p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings RemoveAddons(this AzureAksEnableAddonsSettings toolSettings, params string[] addons)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(addons);
+            toolSettings.AddonsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureAksEnableAddonsSettings.Addons"/>.</em></p><p>Enable the Kubernetes addons in a comma-separated list.</p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings RemoveAddons(this AzureAksEnableAddonsSettings toolSettings, IEnumerable<string> addons)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(addons);
+            toolSettings.AddonsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAksEnableAddonsSettings.Name"/>.</em></p><p>Name of the managed cluster.</p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings SetName(this AzureAksEnableAddonsSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksEnableAddonsSettings.Name"/>.</em></p><p>Name of the managed cluster.</p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings ResetName(this AzureAksEnableAddonsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAksEnableAddonsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings SetResourceGroup(this AzureAksEnableAddonsSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksEnableAddonsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings ResetResourceGroup(this AzureAksEnableAddonsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NoWait
+        /// <summary><p><em>Sets <see cref="AzureAksEnableAddonsSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings SetNoWait(this AzureAksEnableAddonsSettings toolSettings, string noWait)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = noWait;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksEnableAddonsSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings ResetNoWait(this AzureAksEnableAddonsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        #endregion
+        #region WorkspaceResourceId
+        /// <summary><p><em>Sets <see cref="AzureAksEnableAddonsSettings.WorkspaceResourceId"/>.</em></p><p>The resource ID of an existing Log Analytics Workspace to use for storing monitoring data.</p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings SetWorkspaceResourceId(this AzureAksEnableAddonsSettings toolSettings, string workspaceResourceId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WorkspaceResourceId = workspaceResourceId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksEnableAddonsSettings.WorkspaceResourceId"/>.</em></p><p>The resource ID of an existing Log Analytics Workspace to use for storing monitoring data.</p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings ResetWorkspaceResourceId(this AzureAksEnableAddonsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WorkspaceResourceId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAksEnableAddonsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings SetDebug(this AzureAksEnableAddonsSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksEnableAddonsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings ResetDebug(this AzureAksEnableAddonsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAksEnableAddonsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings SetHelp(this AzureAksEnableAddonsSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksEnableAddonsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings ResetHelp(this AzureAksEnableAddonsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAksEnableAddonsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings SetOutput(this AzureAksEnableAddonsSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksEnableAddonsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings ResetOutput(this AzureAksEnableAddonsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAksEnableAddonsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings SetQuery(this AzureAksEnableAddonsSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksEnableAddonsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings ResetQuery(this AzureAksEnableAddonsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAksEnableAddonsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings SetVerbose(this AzureAksEnableAddonsSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksEnableAddonsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings ResetVerbose(this AzureAksEnableAddonsSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -2213,7 +2756,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAksGetCredentialsSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAksGetCredentialsSettings SetOutput(this AzureAksGetCredentialsSettings toolSettings, Output output)
+        public static AzureAksGetCredentialsSettings SetOutput(this AzureAksGetCredentialsSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2347,7 +2890,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAksGetUpgradesSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAksGetUpgradesSettings SetOutput(this AzureAksGetUpgradesSettings toolSettings, Output output)
+        public static AzureAksGetUpgradesSettings SetOutput(this AzureAksGetUpgradesSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2463,7 +3006,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAksGetVersionsSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAksGetVersionsSettings SetOutput(this AzureAksGetVersionsSettings toolSettings, Output output)
+        public static AzureAksGetVersionsSettings SetOutput(this AzureAksGetVersionsSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2597,7 +3140,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAksInstallCliSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAksInstallCliSettings SetOutput(this AzureAksInstallCliSettings toolSettings, Output output)
+        public static AzureAksInstallCliSettings SetOutput(this AzureAksInstallCliSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2899,7 +3442,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAksInstallConnectorSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAksInstallConnectorSettings SetOutput(this AzureAksInstallConnectorSettings toolSettings, Output output)
+        public static AzureAksInstallConnectorSettings SetOutput(this AzureAksInstallConnectorSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3015,7 +3558,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAksListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAksListSettings SetOutput(this AzureAksListSettings toolSettings, Output output)
+        public static AzureAksListSettings SetOutput(this AzureAksListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3221,7 +3764,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAksRemoveConnectorSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAksRemoveConnectorSettings SetOutput(this AzureAksRemoveConnectorSettings toolSettings, Output output)
+        public static AzureAksRemoveConnectorSettings SetOutput(this AzureAksRemoveConnectorSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3373,7 +3916,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAksRemoveDevSpacesSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAksRemoveDevSpacesSettings SetOutput(this AzureAksRemoveDevSpacesSettings toolSettings, Output output)
+        public static AzureAksRemoveDevSpacesSettings SetOutput(this AzureAksRemoveDevSpacesSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3543,7 +4086,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAksScaleSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAksScaleSettings SetOutput(this AzureAksScaleSettings toolSettings, Output output)
+        public static AzureAksScaleSettings SetOutput(this AzureAksScaleSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3677,7 +4220,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAksShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAksShowSettings SetOutput(this AzureAksShowSettings toolSettings, Output output)
+        public static AzureAksShowSettings SetOutput(this AzureAksShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3865,7 +4408,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAksUpgradeSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAksUpgradeSettings SetOutput(this AzureAksUpgradeSettings toolSettings, Output output)
+        public static AzureAksUpgradeSettings SetOutput(this AzureAksUpgradeSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4167,7 +4710,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAksUpgradeConnectorSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAksUpgradeConnectorSettings SetOutput(this AzureAksUpgradeConnectorSettings toolSettings, Output output)
+        public static AzureAksUpgradeConnectorSettings SetOutput(this AzureAksUpgradeConnectorSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4355,7 +4898,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAksUseDevSpacesSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAksUseDevSpacesSettings SetOutput(this AzureAksUseDevSpacesSettings toolSettings, Output output)
+        public static AzureAksUseDevSpacesSettings SetOutput(this AzureAksUseDevSpacesSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4615,7 +5158,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAksWaitSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAksWaitSettings SetOutput(this AzureAksWaitSettings toolSettings, Output output)
+        public static AzureAksWaitSettings SetOutput(this AzureAksWaitSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4672,6 +5215,7 @@ namespace Nuke.Azure
     /// <summary><p>Used within <see cref="AzureAksTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class AksOsType : Enumeration
     {
         public static AksOsType both = new AksOsType { Value = "both" };

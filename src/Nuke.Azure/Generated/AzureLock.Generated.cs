@@ -2,10 +2,11 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
+// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureLock.json.
 
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.Tooling;
@@ -28,66 +29,51 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureLock executable.</p></summary>
         public static string AzureLockPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage Azure locks.</p></summary>
-        public static IEnumerable<string> AzureLock(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
+        public static IReadOnlyCollection<Output> AzureLock(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool logOutput = true, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureLockPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
+            var process = ProcessTasks.StartProcess(AzureLockPath, arguments, workingDirectory, environmentVariables, timeout, logOutput, null, outputFilter);
             process.AssertZeroExitCode();
-            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
+            return process.Output;
         }
-        static partial void PreProcess(AzureLockCreateSettings toolSettings);
-        static partial void PostProcess(AzureLockCreateSettings toolSettings);
         /// <summary><p>Manage Azure locks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lock?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureLockCreate(Configure<AzureLockCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureLockCreate(Configure<AzureLockCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLockCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureLockDeleteSettings toolSettings);
-        static partial void PostProcess(AzureLockDeleteSettings toolSettings);
         /// <summary><p>Manage Azure locks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lock?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureLockDelete(Configure<AzureLockDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureLockDelete(Configure<AzureLockDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLockDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureLockListSettings toolSettings);
-        static partial void PostProcess(AzureLockListSettings toolSettings);
         /// <summary><p>Manage Azure locks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lock?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureLockList(Configure<AzureLockListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureLockList(Configure<AzureLockListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLockListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureLockShowSettings toolSettings);
-        static partial void PostProcess(AzureLockShowSettings toolSettings);
         /// <summary><p>Manage Azure locks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lock?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureLockShow(Configure<AzureLockShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureLockShow(Configure<AzureLockShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLockShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureLockUpdateSettings toolSettings);
-        static partial void PostProcess(AzureLockUpdateSettings toolSettings);
         /// <summary><p>Manage Azure locks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lock?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureLockUpdate(Configure<AzureLockUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureLockUpdate(Configure<AzureLockUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLockUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
     }
     #region AzureLockCreateSettings
@@ -120,7 +106,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -174,7 +160,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -225,7 +211,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -277,7 +263,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -334,7 +320,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -550,7 +536,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureLockCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureLockCreateSettings SetOutput(this AzureLockCreateSettings toolSettings, Output output)
+        public static AzureLockCreateSettings SetOutput(this AzureLockCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -774,7 +760,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureLockDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureLockDeleteSettings SetOutput(this AzureLockDeleteSettings toolSettings, Output output)
+        public static AzureLockDeleteSettings SetOutput(this AzureLockDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -980,7 +966,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureLockListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureLockListSettings SetOutput(this AzureLockListSettings toolSettings, Output output)
+        public static AzureLockListSettings SetOutput(this AzureLockListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1204,7 +1190,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureLockShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureLockShowSettings SetOutput(this AzureLockShowSettings toolSettings, Output output)
+        public static AzureLockShowSettings SetOutput(this AzureLockShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1464,7 +1450,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureLockUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureLockUpdateSettings SetOutput(this AzureLockUpdateSettings toolSettings, Output output)
+        public static AzureLockUpdateSettings SetOutput(this AzureLockUpdateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1521,6 +1507,7 @@ namespace Nuke.Azure
     /// <summary><p>Used within <see cref="AzureLockTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class LockLockType : Enumeration
     {
         public static LockLockType cannotdelete = new LockLockType { Value = "cannotdelete" };

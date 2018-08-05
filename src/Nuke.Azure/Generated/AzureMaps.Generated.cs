@@ -2,10 +2,11 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
+// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureMaps.json.
 
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.Tooling;
@@ -28,99 +29,75 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureMaps executable.</p></summary>
         public static string AzureMapsPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage Azure Maps.</p></summary>
-        public static IEnumerable<string> AzureMaps(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
+        public static IReadOnlyCollection<Output> AzureMaps(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool logOutput = true, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureMapsPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
+            var process = ProcessTasks.StartProcess(AzureMapsPath, arguments, workingDirectory, environmentVariables, timeout, logOutput, null, outputFilter);
             process.AssertZeroExitCode();
-            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
+            return process.Output;
         }
-        static partial void PreProcess(AzureMapsSettings toolSettings);
-        static partial void PostProcess(AzureMapsSettings toolSettings);
         /// <summary><p>Manage Azure Maps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/maps?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureMaps(Configure<AzureMapsSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureMaps(Configure<AzureMapsSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMapsSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureMapsAccountCreateSettings toolSettings);
-        static partial void PostProcess(AzureMapsAccountCreateSettings toolSettings);
         /// <summary><p>Manage Azure Maps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/maps?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureMapsAccountCreate(Configure<AzureMapsAccountCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureMapsAccountCreate(Configure<AzureMapsAccountCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMapsAccountCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureMapsAccountDeleteSettings toolSettings);
-        static partial void PostProcess(AzureMapsAccountDeleteSettings toolSettings);
         /// <summary><p>Manage Azure Maps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/maps?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureMapsAccountDelete(Configure<AzureMapsAccountDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureMapsAccountDelete(Configure<AzureMapsAccountDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMapsAccountDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureMapsAccountListSettings toolSettings);
-        static partial void PostProcess(AzureMapsAccountListSettings toolSettings);
         /// <summary><p>Manage Azure Maps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/maps?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureMapsAccountList(Configure<AzureMapsAccountListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureMapsAccountList(Configure<AzureMapsAccountListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMapsAccountListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureMapsAccountShowSettings toolSettings);
-        static partial void PostProcess(AzureMapsAccountShowSettings toolSettings);
         /// <summary><p>Manage Azure Maps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/maps?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureMapsAccountShow(Configure<AzureMapsAccountShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureMapsAccountShow(Configure<AzureMapsAccountShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMapsAccountShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureMapsAccountUpdateSettings toolSettings);
-        static partial void PostProcess(AzureMapsAccountUpdateSettings toolSettings);
         /// <summary><p>Manage Azure Maps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/maps?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureMapsAccountUpdate(Configure<AzureMapsAccountUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureMapsAccountUpdate(Configure<AzureMapsAccountUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMapsAccountUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureMapsAccountKeysListSettings toolSettings);
-        static partial void PostProcess(AzureMapsAccountKeysListSettings toolSettings);
         /// <summary><p>Manage Azure Maps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/maps?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureMapsAccountKeysList(Configure<AzureMapsAccountKeysListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureMapsAccountKeysList(Configure<AzureMapsAccountKeysListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMapsAccountKeysListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureMapsAccountKeysRenewSettings toolSettings);
-        static partial void PostProcess(AzureMapsAccountKeysRenewSettings toolSettings);
         /// <summary><p>Manage Azure Maps.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/maps?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureMapsAccountKeysRenew(Configure<AzureMapsAccountKeysRenewSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureMapsAccountKeysRenew(Configure<AzureMapsAccountKeysRenewSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMapsAccountKeysRenewSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
     }
     #region AzureMapsSettings
@@ -137,7 +114,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -179,7 +156,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -220,7 +197,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -256,7 +233,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -293,7 +270,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -332,6 +309,8 @@ namespace Nuke.Azure
         public virtual string Tags { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
+        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        public virtual string ForceString { get; internal set; }
         /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         public virtual string Remove { get; internal set; }
         /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
@@ -341,7 +320,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -355,6 +334,7 @@ namespace Nuke.Azure
               .Add("--sku {value}", Sku)
               .Add("--tags {value}", Tags)
               .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
               .Add("--debug {value}", Debug)
@@ -384,7 +364,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -424,7 +404,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -490,7 +470,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureMapsSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureMapsSettings SetOutput(this AzureMapsSettings toolSettings, Output output)
+        public static AzureMapsSettings SetOutput(this AzureMapsSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -678,7 +658,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureMapsAccountCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureMapsAccountCreateSettings SetOutput(this AzureMapsAccountCreateSettings toolSettings, Output output)
+        public static AzureMapsAccountCreateSettings SetOutput(this AzureMapsAccountCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -812,7 +792,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureMapsAccountDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureMapsAccountDeleteSettings SetOutput(this AzureMapsAccountDeleteSettings toolSettings, Output output)
+        public static AzureMapsAccountDeleteSettings SetOutput(this AzureMapsAccountDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -928,7 +908,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureMapsAccountListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureMapsAccountListSettings SetOutput(this AzureMapsAccountListSettings toolSettings, Output output)
+        public static AzureMapsAccountListSettings SetOutput(this AzureMapsAccountListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1062,7 +1042,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureMapsAccountShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureMapsAccountShowSettings SetOutput(this AzureMapsAccountShowSettings toolSettings, Output output)
+        public static AzureMapsAccountShowSettings SetOutput(this AzureMapsAccountShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1211,6 +1191,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region ForceString
+        /// <summary><p><em>Sets <see cref="AzureMapsAccountUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureMapsAccountUpdateSettings SetForceString(this AzureMapsAccountUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMapsAccountUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureMapsAccountUpdateSettings ResetForceString(this AzureMapsAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
         #region Remove
         /// <summary><p><em>Sets <see cref="AzureMapsAccountUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         [Pure]
@@ -1286,7 +1284,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureMapsAccountUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureMapsAccountUpdateSettings SetOutput(this AzureMapsAccountUpdateSettings toolSettings, Output output)
+        public static AzureMapsAccountUpdateSettings SetOutput(this AzureMapsAccountUpdateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1420,7 +1418,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureMapsAccountKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureMapsAccountKeysListSettings SetOutput(this AzureMapsAccountKeysListSettings toolSettings, Output output)
+        public static AzureMapsAccountKeysListSettings SetOutput(this AzureMapsAccountKeysListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1572,7 +1570,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureMapsAccountKeysRenewSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureMapsAccountKeysRenewSettings SetOutput(this AzureMapsAccountKeysRenewSettings toolSettings, Output output)
+        public static AzureMapsAccountKeysRenewSettings SetOutput(this AzureMapsAccountKeysRenewSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1629,6 +1627,7 @@ namespace Nuke.Azure
     /// <summary><p>Used within <see cref="AzureMapsTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class MapsAccountSku : Enumeration
     {
         public static MapsAccountSku s0 = new MapsAccountSku { Value = "s0" };
@@ -1638,6 +1637,7 @@ namespace Nuke.Azure
     /// <summary><p>Used within <see cref="AzureMapsTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class MapsAccountKeysRenewKey : Enumeration
     {
         public static MapsAccountKeysRenewKey primary = new MapsAccountKeysRenewKey { Value = "primary" };

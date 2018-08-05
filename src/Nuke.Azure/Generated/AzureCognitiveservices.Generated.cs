@@ -2,10 +2,11 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
+// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureCognitiveservices.json.
 
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.Tooling;
@@ -28,99 +29,75 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureCognitiveservices executable.</p></summary>
         public static string AzureCognitiveservicesPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage Azure Cognitive Services accounts.</p></summary>
-        public static IEnumerable<string> AzureCognitiveservices(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
+        public static IReadOnlyCollection<Output> AzureCognitiveservices(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool logOutput = true, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureCognitiveservicesPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
+            var process = ProcessTasks.StartProcess(AzureCognitiveservicesPath, arguments, workingDirectory, environmentVariables, timeout, logOutput, null, outputFilter);
             process.AssertZeroExitCode();
-            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
+            return process.Output;
         }
-        static partial void PreProcess(AzureCognitiveservicesListSettings toolSettings);
-        static partial void PostProcess(AzureCognitiveservicesListSettings toolSettings);
         /// <summary><p>Manage Azure Cognitive Services accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cognitiveservices?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCognitiveservicesList(Configure<AzureCognitiveservicesListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCognitiveservicesList(Configure<AzureCognitiveservicesListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCognitiveservicesListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCognitiveservicesAccountCreateSettings toolSettings);
-        static partial void PostProcess(AzureCognitiveservicesAccountCreateSettings toolSettings);
         /// <summary><p>Manage Azure Cognitive Services accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cognitiveservices?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCognitiveservicesAccountCreate(Configure<AzureCognitiveservicesAccountCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCognitiveservicesAccountCreate(Configure<AzureCognitiveservicesAccountCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCognitiveservicesAccountCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCognitiveservicesAccountDeleteSettings toolSettings);
-        static partial void PostProcess(AzureCognitiveservicesAccountDeleteSettings toolSettings);
         /// <summary><p>Manage Azure Cognitive Services accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cognitiveservices?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCognitiveservicesAccountDelete(Configure<AzureCognitiveservicesAccountDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCognitiveservicesAccountDelete(Configure<AzureCognitiveservicesAccountDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCognitiveservicesAccountDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCognitiveservicesAccountListSkusSettings toolSettings);
-        static partial void PostProcess(AzureCognitiveservicesAccountListSkusSettings toolSettings);
         /// <summary><p>Manage Azure Cognitive Services accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cognitiveservices?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCognitiveservicesAccountListSkus(Configure<AzureCognitiveservicesAccountListSkusSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCognitiveservicesAccountListSkus(Configure<AzureCognitiveservicesAccountListSkusSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCognitiveservicesAccountListSkusSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCognitiveservicesAccountShowSettings toolSettings);
-        static partial void PostProcess(AzureCognitiveservicesAccountShowSettings toolSettings);
         /// <summary><p>Manage Azure Cognitive Services accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cognitiveservices?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCognitiveservicesAccountShow(Configure<AzureCognitiveservicesAccountShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCognitiveservicesAccountShow(Configure<AzureCognitiveservicesAccountShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCognitiveservicesAccountShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCognitiveservicesAccountUpdateSettings toolSettings);
-        static partial void PostProcess(AzureCognitiveservicesAccountUpdateSettings toolSettings);
         /// <summary><p>Manage Azure Cognitive Services accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cognitiveservices?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCognitiveservicesAccountUpdate(Configure<AzureCognitiveservicesAccountUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCognitiveservicesAccountUpdate(Configure<AzureCognitiveservicesAccountUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCognitiveservicesAccountUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCognitiveservicesAccountKeysListSettings toolSettings);
-        static partial void PostProcess(AzureCognitiveservicesAccountKeysListSettings toolSettings);
         /// <summary><p>Manage Azure Cognitive Services accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cognitiveservices?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCognitiveservicesAccountKeysList(Configure<AzureCognitiveservicesAccountKeysListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCognitiveservicesAccountKeysList(Configure<AzureCognitiveservicesAccountKeysListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCognitiveservicesAccountKeysListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureCognitiveservicesAccountKeysRegenerateSettings toolSettings);
-        static partial void PostProcess(AzureCognitiveservicesAccountKeysRegenerateSettings toolSettings);
         /// <summary><p>Manage Azure Cognitive Services accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cognitiveservices?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureCognitiveservicesAccountKeysRegenerate(Configure<AzureCognitiveservicesAccountKeysRegenerateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureCognitiveservicesAccountKeysRegenerate(Configure<AzureCognitiveservicesAccountKeysRegenerateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCognitiveservicesAccountKeysRegenerateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
     }
     #region AzureCognitiveservicesListSettings
@@ -139,7 +116,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -186,7 +163,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -229,7 +206,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -267,7 +244,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -305,7 +282,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -347,7 +324,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -387,7 +364,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -427,7 +404,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -511,7 +488,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCognitiveservicesListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCognitiveservicesListSettings SetOutput(this AzureCognitiveservicesListSettings toolSettings, Output output)
+        public static AzureCognitiveservicesListSettings SetOutput(this AzureCognitiveservicesListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -735,7 +712,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCognitiveservicesAccountCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCognitiveservicesAccountCreateSettings SetOutput(this AzureCognitiveservicesAccountCreateSettings toolSettings, Output output)
+        public static AzureCognitiveservicesAccountCreateSettings SetOutput(this AzureCognitiveservicesAccountCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -869,7 +846,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCognitiveservicesAccountDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCognitiveservicesAccountDeleteSettings SetOutput(this AzureCognitiveservicesAccountDeleteSettings toolSettings, Output output)
+        public static AzureCognitiveservicesAccountDeleteSettings SetOutput(this AzureCognitiveservicesAccountDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1003,7 +980,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCognitiveservicesAccountListSkusSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCognitiveservicesAccountListSkusSettings SetOutput(this AzureCognitiveservicesAccountListSkusSettings toolSettings, Output output)
+        public static AzureCognitiveservicesAccountListSkusSettings SetOutput(this AzureCognitiveservicesAccountListSkusSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1137,7 +1114,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCognitiveservicesAccountShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCognitiveservicesAccountShowSettings SetOutput(this AzureCognitiveservicesAccountShowSettings toolSettings, Output output)
+        public static AzureCognitiveservicesAccountShowSettings SetOutput(this AzureCognitiveservicesAccountShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1307,7 +1284,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCognitiveservicesAccountUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCognitiveservicesAccountUpdateSettings SetOutput(this AzureCognitiveservicesAccountUpdateSettings toolSettings, Output output)
+        public static AzureCognitiveservicesAccountUpdateSettings SetOutput(this AzureCognitiveservicesAccountUpdateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1441,7 +1418,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCognitiveservicesAccountKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCognitiveservicesAccountKeysListSettings SetOutput(this AzureCognitiveservicesAccountKeysListSettings toolSettings, Output output)
+        public static AzureCognitiveservicesAccountKeysListSettings SetOutput(this AzureCognitiveservicesAccountKeysListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1593,7 +1570,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureCognitiveservicesAccountKeysRegenerateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCognitiveservicesAccountKeysRegenerateSettings SetOutput(this AzureCognitiveservicesAccountKeysRegenerateSettings toolSettings, Output output)
+        public static AzureCognitiveservicesAccountKeysRegenerateSettings SetOutput(this AzureCognitiveservicesAccountKeysRegenerateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1650,6 +1627,7 @@ namespace Nuke.Azure
     /// <summary><p>Used within <see cref="AzureCognitiveservicesTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class CognitiveservicesAccountKeysRegenerateKeyName : Enumeration
     {
         public static CognitiveservicesAccountKeysRegenerateKeyName key1 = new CognitiveservicesAccountKeysRegenerateKeyName { Value = "key1" };

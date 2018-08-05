@@ -2,10 +2,11 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
+// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureResource.json.
 
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.Tooling;
@@ -28,209 +29,155 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureResource executable.</p></summary>
         public static string AzureResourcePath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage Azure resources.</p></summary>
-        public static IEnumerable<string> AzureResource(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
+        public static IReadOnlyCollection<Output> AzureResource(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool logOutput = true, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureResourcePath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
+            var process = ProcessTasks.StartProcess(AzureResourcePath, arguments, workingDirectory, environmentVariables, timeout, logOutput, null, outputFilter);
             process.AssertZeroExitCode();
-            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
+            return process.Output;
         }
-        static partial void PreProcess(AzureResourceCreateSettings toolSettings);
-        static partial void PostProcess(AzureResourceCreateSettings toolSettings);
         /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureResourceCreate(Configure<AzureResourceCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureResourceCreate(Configure<AzureResourceCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureResourceDeleteSettings toolSettings);
-        static partial void PostProcess(AzureResourceDeleteSettings toolSettings);
         /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureResourceDelete(Configure<AzureResourceDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureResourceDelete(Configure<AzureResourceDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureResourceInvokeActionSettings toolSettings);
-        static partial void PostProcess(AzureResourceInvokeActionSettings toolSettings);
         /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureResourceInvokeAction(Configure<AzureResourceInvokeActionSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureResourceInvokeAction(Configure<AzureResourceInvokeActionSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceInvokeActionSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureResourceListSettings toolSettings);
-        static partial void PostProcess(AzureResourceListSettings toolSettings);
         /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureResourceList(Configure<AzureResourceListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureResourceList(Configure<AzureResourceListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureResourceMoveSettings toolSettings);
-        static partial void PostProcess(AzureResourceMoveSettings toolSettings);
         /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureResourceMove(Configure<AzureResourceMoveSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureResourceMove(Configure<AzureResourceMoveSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceMoveSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureResourceShowSettings toolSettings);
-        static partial void PostProcess(AzureResourceShowSettings toolSettings);
         /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureResourceShow(Configure<AzureResourceShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureResourceShow(Configure<AzureResourceShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureResourceTagSettings toolSettings);
-        static partial void PostProcess(AzureResourceTagSettings toolSettings);
         /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureResourceTag(Configure<AzureResourceTagSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureResourceTag(Configure<AzureResourceTagSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceTagSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureResourceUpdateSettings toolSettings);
-        static partial void PostProcess(AzureResourceUpdateSettings toolSettings);
         /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureResourceUpdate(Configure<AzureResourceUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureResourceUpdate(Configure<AzureResourceUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureResourceLinkCreateSettings toolSettings);
-        static partial void PostProcess(AzureResourceLinkCreateSettings toolSettings);
         /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureResourceLinkCreate(Configure<AzureResourceLinkCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureResourceLinkCreate(Configure<AzureResourceLinkCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceLinkCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureResourceLinkDeleteSettings toolSettings);
-        static partial void PostProcess(AzureResourceLinkDeleteSettings toolSettings);
         /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureResourceLinkDelete(Configure<AzureResourceLinkDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureResourceLinkDelete(Configure<AzureResourceLinkDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceLinkDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureResourceLinkListSettings toolSettings);
-        static partial void PostProcess(AzureResourceLinkListSettings toolSettings);
         /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureResourceLinkList(Configure<AzureResourceLinkListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureResourceLinkList(Configure<AzureResourceLinkListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceLinkListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureResourceLinkShowSettings toolSettings);
-        static partial void PostProcess(AzureResourceLinkShowSettings toolSettings);
         /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureResourceLinkShow(Configure<AzureResourceLinkShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureResourceLinkShow(Configure<AzureResourceLinkShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceLinkShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureResourceLinkUpdateSettings toolSettings);
-        static partial void PostProcess(AzureResourceLinkUpdateSettings toolSettings);
         /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureResourceLinkUpdate(Configure<AzureResourceLinkUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureResourceLinkUpdate(Configure<AzureResourceLinkUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceLinkUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureResourceLockCreateSettings toolSettings);
-        static partial void PostProcess(AzureResourceLockCreateSettings toolSettings);
         /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureResourceLockCreate(Configure<AzureResourceLockCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureResourceLockCreate(Configure<AzureResourceLockCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceLockCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureResourceLockDeleteSettings toolSettings);
-        static partial void PostProcess(AzureResourceLockDeleteSettings toolSettings);
         /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureResourceLockDelete(Configure<AzureResourceLockDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureResourceLockDelete(Configure<AzureResourceLockDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceLockDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureResourceLockListSettings toolSettings);
-        static partial void PostProcess(AzureResourceLockListSettings toolSettings);
         /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureResourceLockList(Configure<AzureResourceLockListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureResourceLockList(Configure<AzureResourceLockListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceLockListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureResourceLockShowSettings toolSettings);
-        static partial void PostProcess(AzureResourceLockShowSettings toolSettings);
         /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureResourceLockShow(Configure<AzureResourceLockShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureResourceLockShow(Configure<AzureResourceLockShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceLockShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureResourceLockUpdateSettings toolSettings);
-        static partial void PostProcess(AzureResourceLockUpdateSettings toolSettings);
         /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureResourceLockUpdate(Configure<AzureResourceLockUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureResourceLockUpdate(Configure<AzureResourceLockUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceLockUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
     }
     #region AzureResourceCreateSettings
@@ -267,7 +214,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -323,7 +270,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -380,7 +327,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -433,7 +380,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -477,7 +424,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -528,7 +475,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -584,7 +531,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -637,6 +584,8 @@ namespace Nuke.Azure
         public virtual string ResourceType { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
+        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        public virtual string ForceString { get; internal set; }
         /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         public virtual string Remove { get; internal set; }
         /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
@@ -646,7 +595,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -664,6 +613,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--resource-type {value}", ResourceType)
               .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
               .Add("--debug {value}", Debug)
@@ -695,7 +645,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -732,7 +682,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -769,7 +719,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -805,7 +755,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -844,7 +794,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -895,7 +845,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -949,7 +899,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1000,7 +950,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1052,7 +1002,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1109,7 +1059,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1361,7 +1311,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureResourceCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureResourceCreateSettings SetOutput(this AzureResourceCreateSettings toolSettings, Output output)
+        public static AzureResourceCreateSettings SetOutput(this AzureResourceCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1585,7 +1535,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureResourceDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureResourceDeleteSettings SetOutput(this AzureResourceDeleteSettings toolSettings, Output output)
+        public static AzureResourceDeleteSettings SetOutput(this AzureResourceDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1845,7 +1795,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureResourceInvokeActionSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureResourceInvokeActionSettings SetOutput(this AzureResourceInvokeActionSettings toolSettings, Output output)
+        public static AzureResourceInvokeActionSettings SetOutput(this AzureResourceInvokeActionSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2051,7 +2001,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureResourceListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureResourceListSettings SetOutput(this AzureResourceListSettings toolSettings, Output output)
+        public static AzureResourceListSettings SetOutput(this AzureResourceListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2203,7 +2153,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureResourceMoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureResourceMoveSettings SetOutput(this AzureResourceMoveSettings toolSettings, Output output)
+        public static AzureResourceMoveSettings SetOutput(this AzureResourceMoveSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2469,7 +2419,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureResourceShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureResourceShowSettings SetOutput(this AzureResourceShowSettings toolSettings, Output output)
+        public static AzureResourceShowSettings SetOutput(this AzureResourceShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2711,7 +2661,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureResourceTagSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureResourceTagSettings SetOutput(this AzureResourceTagSettings toolSettings, Output output)
+        public static AzureResourceTagSettings SetOutput(this AzureResourceTagSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2956,6 +2906,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region ForceString
+        /// <summary><p><em>Sets <see cref="AzureResourceUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureResourceUpdateSettings SetForceString(this AzureResourceUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureResourceUpdateSettings ResetForceString(this AzureResourceUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
         #region Remove
         /// <summary><p><em>Sets <see cref="AzureResourceUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         [Pure]
@@ -3031,7 +2999,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureResourceUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureResourceUpdateSettings SetOutput(this AzureResourceUpdateSettings toolSettings, Output output)
+        public static AzureResourceUpdateSettings SetOutput(this AzureResourceUpdateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3183,7 +3151,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureResourceLinkCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureResourceLinkCreateSettings SetOutput(this AzureResourceLinkCreateSettings toolSettings, Output output)
+        public static AzureResourceLinkCreateSettings SetOutput(this AzureResourceLinkCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3299,7 +3267,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureResourceLinkDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureResourceLinkDeleteSettings SetOutput(this AzureResourceLinkDeleteSettings toolSettings, Output output)
+        public static AzureResourceLinkDeleteSettings SetOutput(this AzureResourceLinkDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3433,7 +3401,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureResourceLinkListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureResourceLinkListSettings SetOutput(this AzureResourceLinkListSettings toolSettings, Output output)
+        public static AzureResourceLinkListSettings SetOutput(this AzureResourceLinkListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3549,7 +3517,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureResourceLinkShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureResourceLinkShowSettings SetOutput(this AzureResourceLinkShowSettings toolSettings, Output output)
+        public static AzureResourceLinkShowSettings SetOutput(this AzureResourceLinkShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3701,7 +3669,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureResourceLinkUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureResourceLinkUpdateSettings SetOutput(this AzureResourceLinkUpdateSettings toolSettings, Output output)
+        public static AzureResourceLinkUpdateSettings SetOutput(this AzureResourceLinkUpdateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3943,7 +3911,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureResourceLockCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureResourceLockCreateSettings SetOutput(this AzureResourceLockCreateSettings toolSettings, Output output)
+        public static AzureResourceLockCreateSettings SetOutput(this AzureResourceLockCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4167,7 +4135,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureResourceLockDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureResourceLockDeleteSettings SetOutput(this AzureResourceLockDeleteSettings toolSettings, Output output)
+        public static AzureResourceLockDeleteSettings SetOutput(this AzureResourceLockDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4373,7 +4341,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureResourceLockListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureResourceLockListSettings SetOutput(this AzureResourceLockListSettings toolSettings, Output output)
+        public static AzureResourceLockListSettings SetOutput(this AzureResourceLockListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4597,7 +4565,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureResourceLockShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureResourceLockShowSettings SetOutput(this AzureResourceLockShowSettings toolSettings, Output output)
+        public static AzureResourceLockShowSettings SetOutput(this AzureResourceLockShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4857,7 +4825,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureResourceLockUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureResourceLockUpdateSettings SetOutput(this AzureResourceLockUpdateSettings toolSettings, Output output)
+        public static AzureResourceLockUpdateSettings SetOutput(this AzureResourceLockUpdateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4914,6 +4882,7 @@ namespace Nuke.Azure
     /// <summary><p>Used within <see cref="AzureResourceTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class ResourceLockLockType : Enumeration
     {
         public static ResourceLockLockType cannotdelete = new ResourceLockLockType { Value = "cannotdelete" };

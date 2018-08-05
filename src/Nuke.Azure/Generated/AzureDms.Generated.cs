@@ -2,10 +2,11 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
+// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureDms.json.
 
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.Tooling;
@@ -28,242 +29,179 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureDms executable.</p></summary>
         public static string AzureDmsPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage Azure Data Migration Service (DMS) instances.</p></summary>
-        public static IEnumerable<string> AzureDms(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
+        public static IReadOnlyCollection<Output> AzureDms(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool logOutput = true, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureDmsPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
+            var process = ProcessTasks.StartProcess(AzureDmsPath, arguments, workingDirectory, environmentVariables, timeout, logOutput, null, outputFilter);
             process.AssertZeroExitCode();
-            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
+            return process.Output;
         }
-        static partial void PreProcess(AzureDmsCheckNameSettings toolSettings);
-        static partial void PostProcess(AzureDmsCheckNameSettings toolSettings);
         /// <summary><p>Manage Azure Data Migration Service (DMS) instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dms?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDmsCheckName(Configure<AzureDmsCheckNameSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureDmsCheckName(Configure<AzureDmsCheckNameSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDmsCheckNameSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureDmsCheckStatusSettings toolSettings);
-        static partial void PostProcess(AzureDmsCheckStatusSettings toolSettings);
         /// <summary><p>Manage Azure Data Migration Service (DMS) instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dms?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDmsCheckStatus(Configure<AzureDmsCheckStatusSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureDmsCheckStatus(Configure<AzureDmsCheckStatusSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDmsCheckStatusSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureDmsCreateSettings toolSettings);
-        static partial void PostProcess(AzureDmsCreateSettings toolSettings);
         /// <summary><p>Manage Azure Data Migration Service (DMS) instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dms?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDmsCreate(Configure<AzureDmsCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureDmsCreate(Configure<AzureDmsCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDmsCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureDmsDeleteSettings toolSettings);
-        static partial void PostProcess(AzureDmsDeleteSettings toolSettings);
         /// <summary><p>Manage Azure Data Migration Service (DMS) instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dms?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDmsDelete(Configure<AzureDmsDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureDmsDelete(Configure<AzureDmsDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDmsDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureDmsListSettings toolSettings);
-        static partial void PostProcess(AzureDmsListSettings toolSettings);
         /// <summary><p>Manage Azure Data Migration Service (DMS) instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dms?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDmsList(Configure<AzureDmsListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureDmsList(Configure<AzureDmsListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDmsListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureDmsListSkusSettings toolSettings);
-        static partial void PostProcess(AzureDmsListSkusSettings toolSettings);
         /// <summary><p>Manage Azure Data Migration Service (DMS) instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dms?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDmsListSkus(Configure<AzureDmsListSkusSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureDmsListSkus(Configure<AzureDmsListSkusSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDmsListSkusSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureDmsShowSettings toolSettings);
-        static partial void PostProcess(AzureDmsShowSettings toolSettings);
         /// <summary><p>Manage Azure Data Migration Service (DMS) instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dms?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDmsShow(Configure<AzureDmsShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureDmsShow(Configure<AzureDmsShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDmsShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureDmsStartSettings toolSettings);
-        static partial void PostProcess(AzureDmsStartSettings toolSettings);
         /// <summary><p>Manage Azure Data Migration Service (DMS) instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dms?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDmsStart(Configure<AzureDmsStartSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureDmsStart(Configure<AzureDmsStartSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDmsStartSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureDmsStopSettings toolSettings);
-        static partial void PostProcess(AzureDmsStopSettings toolSettings);
         /// <summary><p>Manage Azure Data Migration Service (DMS) instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dms?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDmsStop(Configure<AzureDmsStopSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureDmsStop(Configure<AzureDmsStopSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDmsStopSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureDmsWaitSettings toolSettings);
-        static partial void PostProcess(AzureDmsWaitSettings toolSettings);
         /// <summary><p>Manage Azure Data Migration Service (DMS) instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dms?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDmsWait(Configure<AzureDmsWaitSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureDmsWait(Configure<AzureDmsWaitSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDmsWaitSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureDmsProjectCheckNameSettings toolSettings);
-        static partial void PostProcess(AzureDmsProjectCheckNameSettings toolSettings);
         /// <summary><p>Manage Azure Data Migration Service (DMS) instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dms?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDmsProjectCheckName(Configure<AzureDmsProjectCheckNameSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureDmsProjectCheckName(Configure<AzureDmsProjectCheckNameSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDmsProjectCheckNameSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureDmsProjectCreateSettings toolSettings);
-        static partial void PostProcess(AzureDmsProjectCreateSettings toolSettings);
         /// <summary><p>Manage Azure Data Migration Service (DMS) instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dms?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDmsProjectCreate(Configure<AzureDmsProjectCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureDmsProjectCreate(Configure<AzureDmsProjectCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDmsProjectCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureDmsProjectDeleteSettings toolSettings);
-        static partial void PostProcess(AzureDmsProjectDeleteSettings toolSettings);
         /// <summary><p>Manage Azure Data Migration Service (DMS) instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dms?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDmsProjectDelete(Configure<AzureDmsProjectDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureDmsProjectDelete(Configure<AzureDmsProjectDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDmsProjectDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureDmsProjectListSettings toolSettings);
-        static partial void PostProcess(AzureDmsProjectListSettings toolSettings);
         /// <summary><p>Manage Azure Data Migration Service (DMS) instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dms?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDmsProjectList(Configure<AzureDmsProjectListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureDmsProjectList(Configure<AzureDmsProjectListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDmsProjectListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureDmsProjectShowSettings toolSettings);
-        static partial void PostProcess(AzureDmsProjectShowSettings toolSettings);
         /// <summary><p>Manage Azure Data Migration Service (DMS) instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dms?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDmsProjectShow(Configure<AzureDmsProjectShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureDmsProjectShow(Configure<AzureDmsProjectShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDmsProjectShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureDmsProjectTaskCancelSettings toolSettings);
-        static partial void PostProcess(AzureDmsProjectTaskCancelSettings toolSettings);
         /// <summary><p>Manage Azure Data Migration Service (DMS) instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dms?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDmsProjectTaskCancel(Configure<AzureDmsProjectTaskCancelSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureDmsProjectTaskCancel(Configure<AzureDmsProjectTaskCancelSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDmsProjectTaskCancelSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureDmsProjectTaskCheckNameSettings toolSettings);
-        static partial void PostProcess(AzureDmsProjectTaskCheckNameSettings toolSettings);
         /// <summary><p>Manage Azure Data Migration Service (DMS) instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dms?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDmsProjectTaskCheckName(Configure<AzureDmsProjectTaskCheckNameSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureDmsProjectTaskCheckName(Configure<AzureDmsProjectTaskCheckNameSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDmsProjectTaskCheckNameSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureDmsProjectTaskCreateSettings toolSettings);
-        static partial void PostProcess(AzureDmsProjectTaskCreateSettings toolSettings);
         /// <summary><p>Manage Azure Data Migration Service (DMS) instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dms?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDmsProjectTaskCreate(Configure<AzureDmsProjectTaskCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureDmsProjectTaskCreate(Configure<AzureDmsProjectTaskCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDmsProjectTaskCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureDmsProjectTaskDeleteSettings toolSettings);
-        static partial void PostProcess(AzureDmsProjectTaskDeleteSettings toolSettings);
         /// <summary><p>Manage Azure Data Migration Service (DMS) instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dms?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDmsProjectTaskDelete(Configure<AzureDmsProjectTaskDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureDmsProjectTaskDelete(Configure<AzureDmsProjectTaskDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDmsProjectTaskDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureDmsProjectTaskListSettings toolSettings);
-        static partial void PostProcess(AzureDmsProjectTaskListSettings toolSettings);
         /// <summary><p>Manage Azure Data Migration Service (DMS) instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dms?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDmsProjectTaskList(Configure<AzureDmsProjectTaskListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureDmsProjectTaskList(Configure<AzureDmsProjectTaskListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDmsProjectTaskListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureDmsProjectTaskShowSettings toolSettings);
-        static partial void PostProcess(AzureDmsProjectTaskShowSettings toolSettings);
         /// <summary><p>Manage Azure Data Migration Service (DMS) instances.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dms?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureDmsProjectTaskShow(Configure<AzureDmsProjectTaskShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureDmsProjectTaskShow(Configure<AzureDmsProjectTaskShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureDmsProjectTaskShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
     }
     #region AzureDmsCheckNameSettings
@@ -284,7 +222,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -322,7 +260,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -370,7 +308,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -419,7 +357,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -458,7 +396,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -491,7 +429,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -527,7 +465,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -567,7 +505,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -608,7 +546,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -661,7 +599,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -708,7 +646,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -757,7 +695,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -806,7 +744,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -847,7 +785,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -887,7 +825,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -930,7 +868,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -974,7 +912,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1030,7 +968,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1084,7 +1022,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1130,7 +1068,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1176,7 +1114,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1280,7 +1218,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureDmsCheckNameSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDmsCheckNameSettings SetOutput(this AzureDmsCheckNameSettings toolSettings, Output output)
+        public static AzureDmsCheckNameSettings SetOutput(this AzureDmsCheckNameSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1414,7 +1352,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureDmsCheckStatusSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDmsCheckStatusSettings SetOutput(this AzureDmsCheckStatusSettings toolSettings, Output output)
+        public static AzureDmsCheckStatusSettings SetOutput(this AzureDmsCheckStatusSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1638,7 +1576,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureDmsCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDmsCreateSettings SetOutput(this AzureDmsCreateSettings toolSettings, Output output)
+        public static AzureDmsCreateSettings SetOutput(this AzureDmsCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1826,7 +1764,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureDmsDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDmsDeleteSettings SetOutput(this AzureDmsDeleteSettings toolSettings, Output output)
+        public static AzureDmsDeleteSettings SetOutput(this AzureDmsDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1942,7 +1880,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureDmsListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDmsListSettings SetOutput(this AzureDmsListSettings toolSettings, Output output)
+        public static AzureDmsListSettings SetOutput(this AzureDmsListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2040,7 +1978,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureDmsListSkusSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDmsListSkusSettings SetOutput(this AzureDmsListSkusSettings toolSettings, Output output)
+        public static AzureDmsListSkusSettings SetOutput(this AzureDmsListSkusSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2174,7 +2112,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureDmsShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDmsShowSettings SetOutput(this AzureDmsShowSettings toolSettings, Output output)
+        public static AzureDmsShowSettings SetOutput(this AzureDmsShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2326,7 +2264,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureDmsStartSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDmsStartSettings SetOutput(this AzureDmsStartSettings toolSettings, Output output)
+        public static AzureDmsStartSettings SetOutput(this AzureDmsStartSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2478,7 +2416,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureDmsStopSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDmsStopSettings SetOutput(this AzureDmsStopSettings toolSettings, Output output)
+        public static AzureDmsStopSettings SetOutput(this AzureDmsStopSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2738,7 +2676,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureDmsWaitSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDmsWaitSettings SetOutput(this AzureDmsWaitSettings toolSettings, Output output)
+        public static AzureDmsWaitSettings SetOutput(this AzureDmsWaitSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2890,7 +2828,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureDmsProjectCheckNameSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDmsProjectCheckNameSettings SetOutput(this AzureDmsProjectCheckNameSettings toolSettings, Output output)
+        public static AzureDmsProjectCheckNameSettings SetOutput(this AzureDmsProjectCheckNameSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3114,7 +3052,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureDmsProjectCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDmsProjectCreateSettings SetOutput(this AzureDmsProjectCreateSettings toolSettings, Output output)
+        public static AzureDmsProjectCreateSettings SetOutput(this AzureDmsProjectCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3302,7 +3240,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureDmsProjectDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDmsProjectDeleteSettings SetOutput(this AzureDmsProjectDeleteSettings toolSettings, Output output)
+        public static AzureDmsProjectDeleteSettings SetOutput(this AzureDmsProjectDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3436,7 +3374,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureDmsProjectListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDmsProjectListSettings SetOutput(this AzureDmsProjectListSettings toolSettings, Output output)
+        public static AzureDmsProjectListSettings SetOutput(this AzureDmsProjectListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3588,7 +3526,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureDmsProjectShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDmsProjectShowSettings SetOutput(this AzureDmsProjectShowSettings toolSettings, Output output)
+        public static AzureDmsProjectShowSettings SetOutput(this AzureDmsProjectShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3758,7 +3696,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureDmsProjectTaskCancelSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDmsProjectTaskCancelSettings SetOutput(this AzureDmsProjectTaskCancelSettings toolSettings, Output output)
+        public static AzureDmsProjectTaskCancelSettings SetOutput(this AzureDmsProjectTaskCancelSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3928,7 +3866,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureDmsProjectTaskCheckNameSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDmsProjectTaskCheckNameSettings SetOutput(this AzureDmsProjectTaskCheckNameSettings toolSettings, Output output)
+        public static AzureDmsProjectTaskCheckNameSettings SetOutput(this AzureDmsProjectTaskCheckNameSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4206,7 +4144,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureDmsProjectTaskCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDmsProjectTaskCreateSettings SetOutput(this AzureDmsProjectTaskCreateSettings toolSettings, Output output)
+        public static AzureDmsProjectTaskCreateSettings SetOutput(this AzureDmsProjectTaskCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4412,7 +4350,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureDmsProjectTaskDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDmsProjectTaskDeleteSettings SetOutput(this AzureDmsProjectTaskDeleteSettings toolSettings, Output output)
+        public static AzureDmsProjectTaskDeleteSettings SetOutput(this AzureDmsProjectTaskDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4582,7 +4520,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureDmsProjectTaskListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDmsProjectTaskListSettings SetOutput(this AzureDmsProjectTaskListSettings toolSettings, Output output)
+        public static AzureDmsProjectTaskListSettings SetOutput(this AzureDmsProjectTaskListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4770,7 +4708,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureDmsProjectTaskShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureDmsProjectTaskShowSettings SetOutput(this AzureDmsProjectTaskShowSettings toolSettings, Output output)
+        public static AzureDmsProjectTaskShowSettings SetOutput(this AzureDmsProjectTaskShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;

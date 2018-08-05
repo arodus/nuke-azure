@@ -2,10 +2,11 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
+// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureAd.json.
 
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.Tooling;
@@ -28,308 +29,227 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureAd executable.</p></summary>
         public static string AzureAdPath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p></summary>
-        public static IEnumerable<string> AzureAd(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
+        public static IReadOnlyCollection<Output> AzureAd(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool logOutput = true, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureAdPath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
+            var process = ProcessTasks.StartProcess(AzureAdPath, arguments, workingDirectory, environmentVariables, timeout, logOutput, null, outputFilter);
             process.AssertZeroExitCode();
-            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
+            return process.Output;
         }
-        static partial void PreProcess(AzureAdSettings toolSettings);
-        static partial void PostProcess(AzureAdSettings toolSettings);
         /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAd(Configure<AzureAdSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAd(Configure<AzureAdSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAdAppCreateSettings toolSettings);
-        static partial void PostProcess(AzureAdAppCreateSettings toolSettings);
         /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAdAppCreate(Configure<AzureAdAppCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAdAppCreate(Configure<AzureAdAppCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdAppCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAdAppDeleteSettings toolSettings);
-        static partial void PostProcess(AzureAdAppDeleteSettings toolSettings);
         /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAdAppDelete(Configure<AzureAdAppDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAdAppDelete(Configure<AzureAdAppDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdAppDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAdAppListSettings toolSettings);
-        static partial void PostProcess(AzureAdAppListSettings toolSettings);
         /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAdAppList(Configure<AzureAdAppListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAdAppList(Configure<AzureAdAppListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdAppListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAdAppShowSettings toolSettings);
-        static partial void PostProcess(AzureAdAppShowSettings toolSettings);
         /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAdAppShow(Configure<AzureAdAppShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAdAppShow(Configure<AzureAdAppShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdAppShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAdAppUpdateSettings toolSettings);
-        static partial void PostProcess(AzureAdAppUpdateSettings toolSettings);
         /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAdAppUpdate(Configure<AzureAdAppUpdateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAdAppUpdate(Configure<AzureAdAppUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdAppUpdateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAdGroupCreateSettings toolSettings);
-        static partial void PostProcess(AzureAdGroupCreateSettings toolSettings);
         /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAdGroupCreate(Configure<AzureAdGroupCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAdGroupCreate(Configure<AzureAdGroupCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdGroupCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAdGroupDeleteSettings toolSettings);
-        static partial void PostProcess(AzureAdGroupDeleteSettings toolSettings);
         /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAdGroupDelete(Configure<AzureAdGroupDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAdGroupDelete(Configure<AzureAdGroupDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdGroupDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAdGroupGetMemberGroupsSettings toolSettings);
-        static partial void PostProcess(AzureAdGroupGetMemberGroupsSettings toolSettings);
         /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAdGroupGetMemberGroups(Configure<AzureAdGroupGetMemberGroupsSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAdGroupGetMemberGroups(Configure<AzureAdGroupGetMemberGroupsSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdGroupGetMemberGroupsSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAdGroupListSettings toolSettings);
-        static partial void PostProcess(AzureAdGroupListSettings toolSettings);
         /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAdGroupList(Configure<AzureAdGroupListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAdGroupList(Configure<AzureAdGroupListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdGroupListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAdGroupShowSettings toolSettings);
-        static partial void PostProcess(AzureAdGroupShowSettings toolSettings);
         /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAdGroupShow(Configure<AzureAdGroupShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAdGroupShow(Configure<AzureAdGroupShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdGroupShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAdSpCreateSettings toolSettings);
-        static partial void PostProcess(AzureAdSpCreateSettings toolSettings);
         /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAdSpCreate(Configure<AzureAdSpCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAdSpCreate(Configure<AzureAdSpCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdSpCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAdSpCreateForRbacSettings toolSettings);
-        static partial void PostProcess(AzureAdSpCreateForRbacSettings toolSettings);
         /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAdSpCreateForRbac(Configure<AzureAdSpCreateForRbacSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAdSpCreateForRbac(Configure<AzureAdSpCreateForRbacSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdSpCreateForRbacSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAdSpDeleteSettings toolSettings);
-        static partial void PostProcess(AzureAdSpDeleteSettings toolSettings);
         /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAdSpDelete(Configure<AzureAdSpDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAdSpDelete(Configure<AzureAdSpDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdSpDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAdSpListSettings toolSettings);
-        static partial void PostProcess(AzureAdSpListSettings toolSettings);
         /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAdSpList(Configure<AzureAdSpListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAdSpList(Configure<AzureAdSpListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdSpListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAdSpShowSettings toolSettings);
-        static partial void PostProcess(AzureAdSpShowSettings toolSettings);
         /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAdSpShow(Configure<AzureAdSpShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAdSpShow(Configure<AzureAdSpShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdSpShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAdUserCreateSettings toolSettings);
-        static partial void PostProcess(AzureAdUserCreateSettings toolSettings);
         /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAdUserCreate(Configure<AzureAdUserCreateSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAdUserCreate(Configure<AzureAdUserCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdUserCreateSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAdUserDeleteSettings toolSettings);
-        static partial void PostProcess(AzureAdUserDeleteSettings toolSettings);
         /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAdUserDelete(Configure<AzureAdUserDeleteSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAdUserDelete(Configure<AzureAdUserDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdUserDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAdUserListSettings toolSettings);
-        static partial void PostProcess(AzureAdUserListSettings toolSettings);
         /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAdUserList(Configure<AzureAdUserListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAdUserList(Configure<AzureAdUserListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdUserListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAdUserShowSettings toolSettings);
-        static partial void PostProcess(AzureAdUserShowSettings toolSettings);
         /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAdUserShow(Configure<AzureAdUserShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAdUserShow(Configure<AzureAdUserShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdUserShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAdSpCredentialDeleteSettings toolSettings);
-        static partial void PostProcess(AzureAdSpCredentialDeleteSettings toolSettings);
         /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAdSpCredentialDelete(Configure<AzureAdSpCredentialDeleteSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAdSpCredentialDeleteSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureAdSpCredentialListSettings toolSettings);
-        static partial void PostProcess(AzureAdSpCredentialListSettings toolSettings);
-        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAdSpCredentialList(Configure<AzureAdSpCredentialListSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAdSpCredentialListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureAdSpCredentialResetSettings toolSettings);
-        static partial void PostProcess(AzureAdSpCredentialResetSettings toolSettings);
-        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAdSpCredentialReset(Configure<AzureAdSpCredentialResetSettings> configurator = null, ProcessSettings processSettings = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAdSpCredentialResetSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
-            process.AssertZeroExitCode();
-            PostProcess(toolSettings);
-        }
-        static partial void PreProcess(AzureAdGroupMemberAddSettings toolSettings);
-        static partial void PostProcess(AzureAdGroupMemberAddSettings toolSettings);
-        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAdGroupMemberAdd(Configure<AzureAdGroupMemberAddSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAdGroupMemberAdd(Configure<AzureAdGroupMemberAddSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdGroupMemberAddSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAdGroupMemberCheckSettings toolSettings);
-        static partial void PostProcess(AzureAdGroupMemberCheckSettings toolSettings);
         /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAdGroupMemberCheck(Configure<AzureAdGroupMemberCheckSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAdGroupMemberCheck(Configure<AzureAdGroupMemberCheckSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdGroupMemberCheckSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAdGroupMemberListSettings toolSettings);
-        static partial void PostProcess(AzureAdGroupMemberListSettings toolSettings);
         /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAdGroupMemberList(Configure<AzureAdGroupMemberListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAdGroupMemberList(Configure<AzureAdGroupMemberListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdGroupMemberListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureAdGroupMemberRemoveSettings toolSettings);
-        static partial void PostProcess(AzureAdGroupMemberRemoveSettings toolSettings);
         /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureAdGroupMemberRemove(Configure<AzureAdGroupMemberRemoveSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureAdGroupMemberRemove(Configure<AzureAdGroupMemberRemoveSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAdGroupMemberRemoveSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAdSpCredentialDelete(Configure<AzureAdSpCredentialDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAdSpCredentialDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAdSpCredentialList(Configure<AzureAdSpCredentialListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAdSpCredentialListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Active Directory Graph entities needed for Role Based Access Control.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAdSpCredentialReset(Configure<AzureAdSpCredentialResetSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAdSpCredentialResetSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
         }
     }
     #region AzureAdSettings
@@ -346,7 +266,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -406,7 +326,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -454,7 +374,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -495,7 +415,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -533,7 +453,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -591,6 +511,8 @@ namespace Nuke.Azure
         public virtual string StartDate { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
+        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        public virtual string ForceString { get; internal set; }
         /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         public virtual string Remove { get; internal set; }
         /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
@@ -600,7 +522,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -624,6 +546,7 @@ namespace Nuke.Azure
               .Add("--required-resource-accesses {value}", RequiredResourceAccesses)
               .Add("--start-date {value}", StartDate)
               .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
               .Add("--debug {value}", Debug)
@@ -653,7 +576,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -689,7 +612,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -728,7 +651,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -767,7 +690,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -803,7 +726,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -838,7 +761,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -892,7 +815,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -936,7 +859,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -975,7 +898,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1012,7 +935,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1057,7 +980,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1097,7 +1020,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1136,7 +1059,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1173,7 +1096,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1183,6 +1106,158 @@ namespace Nuke.Azure
             arguments
               .Add("ad user show")
               .Add("--upn-or-object-id {value}", UpnOrObjectId)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAdGroupMemberAddSettings
+    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAdGroupMemberAddSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAd executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAdTasks.AzureAdPath;
+        /// <summary><p>Group's object id or display name(prefix also works if there is a unique match).</p></summary>
+        public virtual string Group { get; internal set; }
+        /// <summary><p>The object ID of the contact, group, user, or service principal.</p></summary>
+        public virtual string MemberId { get; internal set; }
+        /// <summary><p>Unmatched properties from the message are deserialized this collection.</p></summary>
+        public virtual string AdditionalProperties { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("ad group member add")
+              .Add("--group {value}", Group)
+              .Add("--member-id {value}", MemberId)
+              .Add("--additional-properties {value}", AdditionalProperties)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAdGroupMemberCheckSettings
+    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAdGroupMemberCheckSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAd executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAdTasks.AzureAdPath;
+        /// <summary><p>Group's object id or display name(prefix also works if there is a unique match).</p></summary>
+        public virtual string Group { get; internal set; }
+        /// <summary><p>The object ID of the contact, group, user, or service principal.</p></summary>
+        public virtual string MemberId { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("ad group member check")
+              .Add("--group {value}", Group)
+              .Add("--member-id {value}", MemberId)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAdGroupMemberListSettings
+    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAdGroupMemberListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAd executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAdTasks.AzureAdPath;
+        /// <summary><p>Group's object id or display name(prefix also works if there is a unique match).</p></summary>
+        public virtual string Group { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("ad group member list")
+              .Add("--group {value}", Group)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAdGroupMemberRemoveSettings
+    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAdGroupMemberRemoveSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAd executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAdTasks.AzureAdPath;
+        /// <summary><p>Group's object id or display name(prefix also works if there is a unique match).</p></summary>
+        public virtual string Group { get; internal set; }
+        /// <summary><p>The object ID of the contact, group, user, or service principal.</p></summary>
+        public virtual string MemberId { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("ad group member remove")
+              .Add("--group {value}", Group)
+              .Add("--member-id {value}", MemberId)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1212,7 +1287,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1251,7 +1326,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1299,7 +1374,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -1315,158 +1390,6 @@ namespace Nuke.Azure
               .Add("--keyvault {value}", Keyvault)
               .Add("--password {value}", Password, secret: true)
               .Add("--years {value}", Years)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAdGroupMemberAddSettings
-    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAdGroupMemberAddSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAd executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAdTasks.AzureAdPath;
-        /// <summary><p>Group's object id or display name(prefix also works if there is a unique match).</p></summary>
-        public virtual string Group { get; internal set; }
-        /// <summary><p>The object ID of the contact, group, user, or service principal.</p></summary>
-        public virtual string MemberId { get; internal set; }
-        /// <summary><p>Unmatched properties from the message are deserialized this collection.</p></summary>
-        public virtual string AdditionalProperties { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("ad group member add")
-              .Add("--group {value}", Group)
-              .Add("--member-id {value}", MemberId)
-              .Add("--additional-properties {value}", AdditionalProperties)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAdGroupMemberCheckSettings
-    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAdGroupMemberCheckSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAd executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAdTasks.AzureAdPath;
-        /// <summary><p>Group's object id or display name(prefix also works if there is a unique match).</p></summary>
-        public virtual string Group { get; internal set; }
-        /// <summary><p>The object ID of the contact, group, user, or service principal.</p></summary>
-        public virtual string MemberId { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("ad group member check")
-              .Add("--group {value}", Group)
-              .Add("--member-id {value}", MemberId)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAdGroupMemberListSettings
-    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAdGroupMemberListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAd executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAdTasks.AzureAdPath;
-        /// <summary><p>Group's object id or display name(prefix also works if there is a unique match).</p></summary>
-        public virtual string Group { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("ad group member list")
-              .Add("--group {value}", Group)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAdGroupMemberRemoveSettings
-    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAdGroupMemberRemoveSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAd executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAdTasks.AzureAdPath;
-        /// <summary><p>Group's object id or display name(prefix also works if there is a unique match).</p></summary>
-        public virtual string Group { get; internal set; }
-        /// <summary><p>The object ID of the contact, group, user, or service principal.</p></summary>
-        public virtual string MemberId { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("ad group member remove")
-              .Add("--group {value}", Group)
-              .Add("--member-id {value}", MemberId)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1521,7 +1444,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAdSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAdSettings SetOutput(this AzureAdSettings toolSettings, Output output)
+        public static AzureAdSettings SetOutput(this AzureAdSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1943,7 +1866,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAdAppCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAdAppCreateSettings SetOutput(this AzureAdAppCreateSettings toolSettings, Output output)
+        public static AzureAdAppCreateSettings SetOutput(this AzureAdAppCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2059,7 +1982,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAdAppDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAdAppDeleteSettings SetOutput(this AzureAdAppDeleteSettings toolSettings, Output output)
+        public static AzureAdAppDeleteSettings SetOutput(this AzureAdAppDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2229,7 +2152,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAdAppListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAdAppListSettings SetOutput(this AzureAdAppListSettings toolSettings, Output output)
+        public static AzureAdAppListSettings SetOutput(this AzureAdAppListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2345,7 +2268,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAdAppShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAdAppShowSettings SetOutput(this AzureAdAppShowSettings toolSettings, Output output)
+        public static AzureAdAppShowSettings SetOutput(this AzureAdAppShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2722,6 +2645,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region ForceString
+        /// <summary><p><em>Sets <see cref="AzureAdAppUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureAdAppUpdateSettings SetForceString(this AzureAdAppUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdAppUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureAdAppUpdateSettings ResetForceString(this AzureAdAppUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
         #region Remove
         /// <summary><p><em>Sets <see cref="AzureAdAppUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         [Pure]
@@ -2797,7 +2738,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAdAppUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAdAppUpdateSettings SetOutput(this AzureAdAppUpdateSettings toolSettings, Output output)
+        public static AzureAdAppUpdateSettings SetOutput(this AzureAdAppUpdateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -2931,7 +2872,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAdGroupCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAdGroupCreateSettings SetOutput(this AzureAdGroupCreateSettings toolSettings, Output output)
+        public static AzureAdGroupCreateSettings SetOutput(this AzureAdGroupCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3047,7 +2988,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAdGroupDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAdGroupDeleteSettings SetOutput(this AzureAdGroupDeleteSettings toolSettings, Output output)
+        public static AzureAdGroupDeleteSettings SetOutput(this AzureAdGroupDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3223,7 +3164,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAdGroupGetMemberGroupsSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAdGroupGetMemberGroupsSettings SetOutput(this AzureAdGroupGetMemberGroupsSettings toolSettings, Output output)
+        public static AzureAdGroupGetMemberGroupsSettings SetOutput(this AzureAdGroupGetMemberGroupsSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3357,7 +3298,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAdGroupListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAdGroupListSettings SetOutput(this AzureAdGroupListSettings toolSettings, Output output)
+        public static AzureAdGroupListSettings SetOutput(this AzureAdGroupListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3473,7 +3414,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAdGroupShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAdGroupShowSettings SetOutput(this AzureAdGroupShowSettings toolSettings, Output output)
+        public static AzureAdGroupShowSettings SetOutput(this AzureAdGroupShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3589,7 +3530,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAdSpCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAdSpCreateSettings SetOutput(this AzureAdSpCreateSettings toolSettings, Output output)
+        public static AzureAdSpCreateSettings SetOutput(this AzureAdSpCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -3957,7 +3898,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAdSpCreateForRbacSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAdSpCreateForRbacSettings SetOutput(this AzureAdSpCreateForRbacSettings toolSettings, Output output)
+        public static AzureAdSpCreateForRbacSettings SetOutput(this AzureAdSpCreateForRbacSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4073,7 +4014,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAdSpDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAdSpDeleteSettings SetOutput(this AzureAdSpDeleteSettings toolSettings, Output output)
+        public static AzureAdSpDeleteSettings SetOutput(this AzureAdSpDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4225,7 +4166,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAdSpListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAdSpListSettings SetOutput(this AzureAdSpListSettings toolSettings, Output output)
+        public static AzureAdSpListSettings SetOutput(this AzureAdSpListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4341,7 +4282,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAdSpShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAdSpShowSettings SetOutput(this AzureAdSpShowSettings toolSettings, Output output)
+        public static AzureAdSpShowSettings SetOutput(this AzureAdSpShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4571,7 +4512,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAdUserCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAdUserCreateSettings SetOutput(this AzureAdUserCreateSettings toolSettings, Output output)
+        public static AzureAdUserCreateSettings SetOutput(this AzureAdUserCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4687,7 +4628,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAdUserDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAdUserDeleteSettings SetOutput(this AzureAdUserDeleteSettings toolSettings, Output output)
+        public static AzureAdUserDeleteSettings SetOutput(this AzureAdUserDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4839,7 +4780,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAdUserListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAdUserListSettings SetOutput(this AzureAdUserListSettings toolSettings, Output output)
+        public static AzureAdUserListSettings SetOutput(this AzureAdUserListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -4955,7 +4896,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAdUserShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAdUserShowSettings SetOutput(this AzureAdUserShowSettings toolSettings, Output output)
+        public static AzureAdUserShowSettings SetOutput(this AzureAdUserShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -5000,6 +4941,542 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureAdUserShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureAdUserShowSettings ResetVerbose(this AzureAdUserShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAdGroupMemberAddSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAdGroupMemberAddSettingsExtensions
+    {
+        #region Group
+        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberAddSettings.Group"/>.</em></p><p>Group's object id or display name(prefix also works if there is a unique match).</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberAddSettings SetGroup(this AzureAdGroupMemberAddSettings toolSettings, string group)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Group = group;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberAddSettings.Group"/>.</em></p><p>Group's object id or display name(prefix also works if there is a unique match).</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberAddSettings ResetGroup(this AzureAdGroupMemberAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Group = null;
+            return toolSettings;
+        }
+        #endregion
+        #region MemberId
+        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberAddSettings.MemberId"/>.</em></p><p>The object ID of the contact, group, user, or service principal.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberAddSettings SetMemberId(this AzureAdGroupMemberAddSettings toolSettings, string memberId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MemberId = memberId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberAddSettings.MemberId"/>.</em></p><p>The object ID of the contact, group, user, or service principal.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberAddSettings ResetMemberId(this AzureAdGroupMemberAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MemberId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AdditionalProperties
+        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberAddSettings.AdditionalProperties"/>.</em></p><p>Unmatched properties from the message are deserialized this collection.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberAddSettings SetAdditionalProperties(this AzureAdGroupMemberAddSettings toolSettings, string additionalProperties)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AdditionalProperties = additionalProperties;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberAddSettings.AdditionalProperties"/>.</em></p><p>Unmatched properties from the message are deserialized this collection.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberAddSettings ResetAdditionalProperties(this AzureAdGroupMemberAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AdditionalProperties = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberAddSettings SetDebug(this AzureAdGroupMemberAddSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberAddSettings ResetDebug(this AzureAdGroupMemberAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberAddSettings SetHelp(this AzureAdGroupMemberAddSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberAddSettings ResetHelp(this AzureAdGroupMemberAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberAddSettings SetOutput(this AzureAdGroupMemberAddSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberAddSettings ResetOutput(this AzureAdGroupMemberAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberAddSettings SetQuery(this AzureAdGroupMemberAddSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberAddSettings ResetQuery(this AzureAdGroupMemberAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberAddSettings SetVerbose(this AzureAdGroupMemberAddSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberAddSettings ResetVerbose(this AzureAdGroupMemberAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAdGroupMemberCheckSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAdGroupMemberCheckSettingsExtensions
+    {
+        #region Group
+        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberCheckSettings.Group"/>.</em></p><p>Group's object id or display name(prefix also works if there is a unique match).</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberCheckSettings SetGroup(this AzureAdGroupMemberCheckSettings toolSettings, string group)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Group = group;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberCheckSettings.Group"/>.</em></p><p>Group's object id or display name(prefix also works if there is a unique match).</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberCheckSettings ResetGroup(this AzureAdGroupMemberCheckSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Group = null;
+            return toolSettings;
+        }
+        #endregion
+        #region MemberId
+        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberCheckSettings.MemberId"/>.</em></p><p>The object ID of the contact, group, user, or service principal.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberCheckSettings SetMemberId(this AzureAdGroupMemberCheckSettings toolSettings, string memberId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MemberId = memberId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberCheckSettings.MemberId"/>.</em></p><p>The object ID of the contact, group, user, or service principal.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberCheckSettings ResetMemberId(this AzureAdGroupMemberCheckSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MemberId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberCheckSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberCheckSettings SetDebug(this AzureAdGroupMemberCheckSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberCheckSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberCheckSettings ResetDebug(this AzureAdGroupMemberCheckSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberCheckSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberCheckSettings SetHelp(this AzureAdGroupMemberCheckSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberCheckSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberCheckSettings ResetHelp(this AzureAdGroupMemberCheckSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberCheckSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberCheckSettings SetOutput(this AzureAdGroupMemberCheckSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberCheckSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberCheckSettings ResetOutput(this AzureAdGroupMemberCheckSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberCheckSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberCheckSettings SetQuery(this AzureAdGroupMemberCheckSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberCheckSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberCheckSettings ResetQuery(this AzureAdGroupMemberCheckSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberCheckSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberCheckSettings SetVerbose(this AzureAdGroupMemberCheckSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberCheckSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberCheckSettings ResetVerbose(this AzureAdGroupMemberCheckSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAdGroupMemberListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAdGroupMemberListSettingsExtensions
+    {
+        #region Group
+        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberListSettings.Group"/>.</em></p><p>Group's object id or display name(prefix also works if there is a unique match).</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberListSettings SetGroup(this AzureAdGroupMemberListSettings toolSettings, string group)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Group = group;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberListSettings.Group"/>.</em></p><p>Group's object id or display name(prefix also works if there is a unique match).</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberListSettings ResetGroup(this AzureAdGroupMemberListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Group = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberListSettings SetDebug(this AzureAdGroupMemberListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberListSettings ResetDebug(this AzureAdGroupMemberListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberListSettings SetHelp(this AzureAdGroupMemberListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberListSettings ResetHelp(this AzureAdGroupMemberListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberListSettings SetOutput(this AzureAdGroupMemberListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberListSettings ResetOutput(this AzureAdGroupMemberListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberListSettings SetQuery(this AzureAdGroupMemberListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberListSettings ResetQuery(this AzureAdGroupMemberListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberListSettings SetVerbose(this AzureAdGroupMemberListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberListSettings ResetVerbose(this AzureAdGroupMemberListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAdGroupMemberRemoveSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAdGroupMemberRemoveSettingsExtensions
+    {
+        #region Group
+        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberRemoveSettings.Group"/>.</em></p><p>Group's object id or display name(prefix also works if there is a unique match).</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberRemoveSettings SetGroup(this AzureAdGroupMemberRemoveSettings toolSettings, string group)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Group = group;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberRemoveSettings.Group"/>.</em></p><p>Group's object id or display name(prefix also works if there is a unique match).</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberRemoveSettings ResetGroup(this AzureAdGroupMemberRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Group = null;
+            return toolSettings;
+        }
+        #endregion
+        #region MemberId
+        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberRemoveSettings.MemberId"/>.</em></p><p>The object ID of the contact, group, user, or service principal.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberRemoveSettings SetMemberId(this AzureAdGroupMemberRemoveSettings toolSettings, string memberId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MemberId = memberId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberRemoveSettings.MemberId"/>.</em></p><p>The object ID of the contact, group, user, or service principal.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberRemoveSettings ResetMemberId(this AzureAdGroupMemberRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MemberId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberRemoveSettings SetDebug(this AzureAdGroupMemberRemoveSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberRemoveSettings ResetDebug(this AzureAdGroupMemberRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberRemoveSettings SetHelp(this AzureAdGroupMemberRemoveSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberRemoveSettings ResetHelp(this AzureAdGroupMemberRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberRemoveSettings SetOutput(this AzureAdGroupMemberRemoveSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberRemoveSettings ResetOutput(this AzureAdGroupMemberRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberRemoveSettings SetQuery(this AzureAdGroupMemberRemoveSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberRemoveSettings ResetQuery(this AzureAdGroupMemberRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberRemoveSettings SetVerbose(this AzureAdGroupMemberRemoveSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAdGroupMemberRemoveSettings ResetVerbose(this AzureAdGroupMemberRemoveSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -5107,7 +5584,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAdSpCredentialDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAdSpCredentialDeleteSettings SetOutput(this AzureAdSpCredentialDeleteSettings toolSettings, Output output)
+        public static AzureAdSpCredentialDeleteSettings SetOutput(this AzureAdSpCredentialDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -5241,7 +5718,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAdSpCredentialListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAdSpCredentialListSettings SetOutput(this AzureAdSpCredentialListSettings toolSettings, Output output)
+        public static AzureAdSpCredentialListSettings SetOutput(this AzureAdSpCredentialListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -5465,7 +5942,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureAdSpCredentialResetSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAdSpCredentialResetSettings SetOutput(this AzureAdSpCredentialResetSettings toolSettings, Output output)
+        public static AzureAdSpCredentialResetSettings SetOutput(this AzureAdSpCredentialResetSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -5518,546 +5995,11 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureAdGroupMemberAddSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAdGroupMemberAddSettingsExtensions
-    {
-        #region Group
-        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberAddSettings.Group"/>.</em></p><p>Group's object id or display name(prefix also works if there is a unique match).</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberAddSettings SetGroup(this AzureAdGroupMemberAddSettings toolSettings, string group)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Group = group;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberAddSettings.Group"/>.</em></p><p>Group's object id or display name(prefix also works if there is a unique match).</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberAddSettings ResetGroup(this AzureAdGroupMemberAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Group = null;
-            return toolSettings;
-        }
-        #endregion
-        #region MemberId
-        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberAddSettings.MemberId"/>.</em></p><p>The object ID of the contact, group, user, or service principal.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberAddSettings SetMemberId(this AzureAdGroupMemberAddSettings toolSettings, string memberId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MemberId = memberId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberAddSettings.MemberId"/>.</em></p><p>The object ID of the contact, group, user, or service principal.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberAddSettings ResetMemberId(this AzureAdGroupMemberAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MemberId = null;
-            return toolSettings;
-        }
-        #endregion
-        #region AdditionalProperties
-        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberAddSettings.AdditionalProperties"/>.</em></p><p>Unmatched properties from the message are deserialized this collection.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberAddSettings SetAdditionalProperties(this AzureAdGroupMemberAddSettings toolSettings, string additionalProperties)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AdditionalProperties = additionalProperties;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberAddSettings.AdditionalProperties"/>.</em></p><p>Unmatched properties from the message are deserialized this collection.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberAddSettings ResetAdditionalProperties(this AzureAdGroupMemberAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AdditionalProperties = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberAddSettings SetDebug(this AzureAdGroupMemberAddSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberAddSettings ResetDebug(this AzureAdGroupMemberAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberAddSettings SetHelp(this AzureAdGroupMemberAddSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberAddSettings ResetHelp(this AzureAdGroupMemberAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberAddSettings SetOutput(this AzureAdGroupMemberAddSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberAddSettings ResetOutput(this AzureAdGroupMemberAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberAddSettings SetQuery(this AzureAdGroupMemberAddSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberAddSettings ResetQuery(this AzureAdGroupMemberAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberAddSettings SetVerbose(this AzureAdGroupMemberAddSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberAddSettings ResetVerbose(this AzureAdGroupMemberAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAdGroupMemberCheckSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAdGroupMemberCheckSettingsExtensions
-    {
-        #region Group
-        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberCheckSettings.Group"/>.</em></p><p>Group's object id or display name(prefix also works if there is a unique match).</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberCheckSettings SetGroup(this AzureAdGroupMemberCheckSettings toolSettings, string group)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Group = group;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberCheckSettings.Group"/>.</em></p><p>Group's object id or display name(prefix also works if there is a unique match).</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberCheckSettings ResetGroup(this AzureAdGroupMemberCheckSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Group = null;
-            return toolSettings;
-        }
-        #endregion
-        #region MemberId
-        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberCheckSettings.MemberId"/>.</em></p><p>The object ID of the contact, group, user, or service principal.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberCheckSettings SetMemberId(this AzureAdGroupMemberCheckSettings toolSettings, string memberId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MemberId = memberId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberCheckSettings.MemberId"/>.</em></p><p>The object ID of the contact, group, user, or service principal.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberCheckSettings ResetMemberId(this AzureAdGroupMemberCheckSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MemberId = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberCheckSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberCheckSettings SetDebug(this AzureAdGroupMemberCheckSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberCheckSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberCheckSettings ResetDebug(this AzureAdGroupMemberCheckSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberCheckSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberCheckSettings SetHelp(this AzureAdGroupMemberCheckSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberCheckSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberCheckSettings ResetHelp(this AzureAdGroupMemberCheckSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberCheckSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberCheckSettings SetOutput(this AzureAdGroupMemberCheckSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberCheckSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberCheckSettings ResetOutput(this AzureAdGroupMemberCheckSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberCheckSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberCheckSettings SetQuery(this AzureAdGroupMemberCheckSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberCheckSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberCheckSettings ResetQuery(this AzureAdGroupMemberCheckSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberCheckSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberCheckSettings SetVerbose(this AzureAdGroupMemberCheckSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberCheckSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberCheckSettings ResetVerbose(this AzureAdGroupMemberCheckSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAdGroupMemberListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAdGroupMemberListSettingsExtensions
-    {
-        #region Group
-        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberListSettings.Group"/>.</em></p><p>Group's object id or display name(prefix also works if there is a unique match).</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberListSettings SetGroup(this AzureAdGroupMemberListSettings toolSettings, string group)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Group = group;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberListSettings.Group"/>.</em></p><p>Group's object id or display name(prefix also works if there is a unique match).</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberListSettings ResetGroup(this AzureAdGroupMemberListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Group = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberListSettings SetDebug(this AzureAdGroupMemberListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberListSettings ResetDebug(this AzureAdGroupMemberListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberListSettings SetHelp(this AzureAdGroupMemberListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberListSettings ResetHelp(this AzureAdGroupMemberListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberListSettings SetOutput(this AzureAdGroupMemberListSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberListSettings ResetOutput(this AzureAdGroupMemberListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberListSettings SetQuery(this AzureAdGroupMemberListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberListSettings ResetQuery(this AzureAdGroupMemberListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberListSettings SetVerbose(this AzureAdGroupMemberListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberListSettings ResetVerbose(this AzureAdGroupMemberListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAdGroupMemberRemoveSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAdGroupMemberRemoveSettingsExtensions
-    {
-        #region Group
-        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberRemoveSettings.Group"/>.</em></p><p>Group's object id or display name(prefix also works if there is a unique match).</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberRemoveSettings SetGroup(this AzureAdGroupMemberRemoveSettings toolSettings, string group)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Group = group;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberRemoveSettings.Group"/>.</em></p><p>Group's object id or display name(prefix also works if there is a unique match).</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberRemoveSettings ResetGroup(this AzureAdGroupMemberRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Group = null;
-            return toolSettings;
-        }
-        #endregion
-        #region MemberId
-        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberRemoveSettings.MemberId"/>.</em></p><p>The object ID of the contact, group, user, or service principal.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberRemoveSettings SetMemberId(this AzureAdGroupMemberRemoveSettings toolSettings, string memberId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MemberId = memberId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberRemoveSettings.MemberId"/>.</em></p><p>The object ID of the contact, group, user, or service principal.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberRemoveSettings ResetMemberId(this AzureAdGroupMemberRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MemberId = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberRemoveSettings SetDebug(this AzureAdGroupMemberRemoveSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberRemoveSettings ResetDebug(this AzureAdGroupMemberRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberRemoveSettings SetHelp(this AzureAdGroupMemberRemoveSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberRemoveSettings ResetHelp(this AzureAdGroupMemberRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberRemoveSettings SetOutput(this AzureAdGroupMemberRemoveSettings toolSettings, Output output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberRemoveSettings ResetOutput(this AzureAdGroupMemberRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberRemoveSettings SetQuery(this AzureAdGroupMemberRemoveSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberRemoveSettings ResetQuery(this AzureAdGroupMemberRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAdGroupMemberRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberRemoveSettings SetVerbose(this AzureAdGroupMemberRemoveSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAdGroupMemberRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAdGroupMemberRemoveSettings ResetVerbose(this AzureAdGroupMemberRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region AdAppKeyType
     /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class AdAppKeyType : Enumeration
     {
         public static AdAppKeyType asymmetricx509cert = new AdAppKeyType { Value = "asymmetricx509cert" };
@@ -6069,6 +6011,7 @@ namespace Nuke.Azure
     /// <summary><p>Used within <see cref="AzureAdTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class AdAppKeyUsage : Enumeration
     {
         public static AdAppKeyUsage sign = new AdAppKeyUsage { Value = "sign" };

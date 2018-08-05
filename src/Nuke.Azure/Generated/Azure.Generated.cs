@@ -2,10 +2,11 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
+// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/Azure.json.
 
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.Tooling;
@@ -28,77 +29,59 @@ namespace Nuke.Azure
         /// <summary><p>Path to the Azure executable.</p></summary>
         public static string AzurePath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>General Tasks.</p></summary>
-        public static IEnumerable<string> Azure(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
+        public static IReadOnlyCollection<Output> Azure(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool logOutput = true, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzurePath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
+            var process = ProcessTasks.StartProcess(AzurePath, arguments, workingDirectory, environmentVariables, timeout, logOutput, null, outputFilter);
             process.AssertZeroExitCode();
-            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
+            return process.Output;
         }
-        static partial void PreProcess(AzureConfigureSettings toolSettings);
-        static partial void PostProcess(AzureConfigureSettings toolSettings);
         /// <summary><p>General Tasks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureConfigure(Configure<AzureConfigureSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureConfigure(Configure<AzureConfigureSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureConfigureSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureFeedbackSettings toolSettings);
-        static partial void PostProcess(AzureFeedbackSettings toolSettings);
         /// <summary><p>General Tasks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureFeedback(Configure<AzureFeedbackSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureFeedback(Configure<AzureFeedbackSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFeedbackSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureFindSettings toolSettings);
-        static partial void PostProcess(AzureFindSettings toolSettings);
         /// <summary><p>General Tasks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureFind(Configure<AzureFindSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureFind(Configure<AzureFindSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFindSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureInteractiveSettings toolSettings);
-        static partial void PostProcess(AzureInteractiveSettings toolSettings);
         /// <summary><p>General Tasks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureInteractive(Configure<AzureInteractiveSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureInteractive(Configure<AzureInteractiveSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureInteractiveSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureLoginSettings toolSettings);
-        static partial void PostProcess(AzureLoginSettings toolSettings);
         /// <summary><p>General Tasks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureLogin(Configure<AzureLoginSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureLogin(Configure<AzureLoginSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLoginSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureLogoutSettings toolSettings);
-        static partial void PostProcess(AzureLogoutSettings toolSettings);
         /// <summary><p>General Tasks.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureLogout(Configure<AzureLogoutSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureLogout(Configure<AzureLogoutSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLogoutSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
     }
     #region AzureConfigureSettings
@@ -117,7 +100,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -150,7 +133,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -186,7 +169,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -222,7 +205,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -258,6 +241,8 @@ namespace Nuke.Azure
         public virtual bool? ServicePrincipal { get; internal set; }
         /// <summary><p>The AAD tenant, must provide when using service principals.</p></summary>
         public virtual string Tenant { get; internal set; }
+        /// <summary><p>Use CLI's old authentication flow based on device code. CLI will also use this if it can't launch a browser in your behalf, e.g. in remote SSH or Cloud Shell.</p></summary>
+        public virtual string UseDeviceCode { get; internal set; }
         /// <summary><p>User name, service principal, or managed service identity ID.</p></summary>
         public virtual string Username { get; internal set; }
         /// <summary><p>Log in using the Virtual Machine's identity.</p></summary>
@@ -267,7 +252,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -280,6 +265,7 @@ namespace Nuke.Azure
               .Add("--password {value}", Password, secret: true)
               .Add("--service-principal", ServicePrincipal)
               .Add("--tenant {value}", Tenant)
+              .Add("--use-device-code {value}", UseDeviceCode)
               .Add("--username {value}", Username)
               .Add("--identity", Identity)
               .Add("--debug {value}", Debug)
@@ -307,7 +293,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -389,7 +375,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureConfigureSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureConfigureSettings SetOutput(this AzureConfigureSettings toolSettings, Output output)
+        public static AzureConfigureSettings SetOutput(this AzureConfigureSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -487,7 +473,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureFeedbackSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureFeedbackSettings SetOutput(this AzureFeedbackSettings toolSettings, Output output)
+        public static AzureFeedbackSettings SetOutput(this AzureFeedbackSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -621,7 +607,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureFindSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureFindSettings SetOutput(this AzureFindSettings toolSettings, Output output)
+        public static AzureFindSettings SetOutput(this AzureFindSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -737,7 +723,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureInteractiveSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureInteractiveSettings SetOutput(this AzureInteractiveSettings toolSettings, Output output)
+        public static AzureInteractiveSettings SetOutput(this AzureInteractiveSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -916,6 +902,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region UseDeviceCode
+        /// <summary><p><em>Sets <see cref="AzureLoginSettings.UseDeviceCode"/>.</em></p><p>Use CLI's old authentication flow based on device code. CLI will also use this if it can't launch a browser in your behalf, e.g. in remote SSH or Cloud Shell.</p></summary>
+        [Pure]
+        public static AzureLoginSettings SetUseDeviceCode(this AzureLoginSettings toolSettings, string useDeviceCode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UseDeviceCode = useDeviceCode;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLoginSettings.UseDeviceCode"/>.</em></p><p>Use CLI's old authentication flow based on device code. CLI will also use this if it can't launch a browser in your behalf, e.g. in remote SSH or Cloud Shell.</p></summary>
+        [Pure]
+        public static AzureLoginSettings ResetUseDeviceCode(this AzureLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UseDeviceCode = null;
+            return toolSettings;
+        }
+        #endregion
         #region Username
         /// <summary><p><em>Sets <see cref="AzureLoginSettings.Username"/>.</em></p><p>User name, service principal, or managed service identity ID.</p></summary>
         [Pure]
@@ -1015,7 +1019,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureLoginSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureLoginSettings SetOutput(this AzureLoginSettings toolSettings, Output output)
+        public static AzureLoginSettings SetOutput(this AzureLoginSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1131,7 +1135,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureLogoutSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureLogoutSettings SetOutput(this AzureLogoutSettings toolSettings, Output output)
+        public static AzureLogoutSettings SetOutput(this AzureLogoutSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -1188,6 +1192,7 @@ namespace Nuke.Azure
     /// <summary><p>Used within <see cref="AzureTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public partial class InteractiveStyle : Enumeration
     {
         public static InteractiveStyle bg = new InteractiveStyle { Value = "bg" };
@@ -1204,16 +1209,17 @@ namespace Nuke.Azure
         public static InteractiveStyle quiet = new InteractiveStyle { Value = "quiet" };
     }
     #endregion
-    #region Output
+    #region AzureOutput
     /// <summary><p>Used within <see cref="AzureTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
-    public partial class Output : Enumeration
+    [ExcludeFromCodeCoverage]
+    public partial class AzureOutput : Enumeration
     {
-        public static Output json = new Output { Value = "json" };
-        public static Output jsonc = new Output { Value = "jsonc" };
-        public static Output table = new Output { Value = "table" };
-        public static Output tsv = new Output { Value = "tsv" };
+        public static AzureOutput json = new AzureOutput { Value = "json" };
+        public static AzureOutput jsonc = new AzureOutput { Value = "jsonc" };
+        public static AzureOutput table = new AzureOutput { Value = "table" };
+        public static AzureOutput tsv = new AzureOutput { Value = "tsv" };
     }
     #endregion
 }

@@ -2,10 +2,11 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.5.3 [CommitSha: 0aff3c55].
+// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureFeature.json.
 
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.Tooling;
@@ -28,44 +29,35 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureFeature executable.</p></summary>
         public static string AzureFeaturePath => ToolPathResolver.GetPathExecutable("az");
         /// <summary><p>Manage resource provider features.</p></summary>
-        public static IEnumerable<string> AzureFeature(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool redirectOutput = false, Func<string, string> outputFilter = null)
+        public static IReadOnlyCollection<Output> AzureFeature(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool logOutput = true, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureFeaturePath, arguments, workingDirectory, environmentVariables, timeout, redirectOutput, outputFilter);
+            var process = ProcessTasks.StartProcess(AzureFeaturePath, arguments, workingDirectory, environmentVariables, timeout, logOutput, null, outputFilter);
             process.AssertZeroExitCode();
-            return process.HasOutput ? process.Output.Select(x => x.Text) : null;
+            return process.Output;
         }
-        static partial void PreProcess(AzureFeatureListSettings toolSettings);
-        static partial void PostProcess(AzureFeatureListSettings toolSettings);
         /// <summary><p>Manage resource provider features.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/feature?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureFeatureList(Configure<AzureFeatureListSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureFeatureList(Configure<AzureFeatureListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFeatureListSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureFeatureRegisterSettings toolSettings);
-        static partial void PostProcess(AzureFeatureRegisterSettings toolSettings);
         /// <summary><p>Manage resource provider features.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/feature?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureFeatureRegister(Configure<AzureFeatureRegisterSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureFeatureRegister(Configure<AzureFeatureRegisterSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFeatureRegisterSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
-        static partial void PreProcess(AzureFeatureShowSettings toolSettings);
-        static partial void PostProcess(AzureFeatureShowSettings toolSettings);
         /// <summary><p>Manage resource provider features.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/feature?view=azure-cli-latest">official website</a>.</p></summary>
-        public static void AzureFeatureShow(Configure<AzureFeatureShowSettings> configurator = null, ProcessSettings processSettings = null)
+        public static IReadOnlyCollection<Output> AzureFeatureShow(Configure<AzureFeatureShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureFeatureShowSettings());
-            PreProcess(toolSettings);
-            var process = ProcessTasks.StartProcess(toolSettings, processSettings);
+            var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
-            PostProcess(toolSettings);
+            return process.Output;
         }
     }
     #region AzureFeatureListSettings
@@ -84,7 +76,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -121,7 +113,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -159,7 +151,7 @@ namespace Nuke.Azure
         /// <summary><p>Show this help message and exit.</p></summary>
         public virtual string Help { get; internal set; }
         /// <summary><p>Output format.</p></summary>
-        public virtual Output Output { get; internal set; }
+        public virtual AzureOutput Output { get; internal set; }
         /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         public virtual string Query { get; internal set; }
         /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
@@ -242,7 +234,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureFeatureListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureFeatureListSettings SetOutput(this AzureFeatureListSettings toolSettings, Output output)
+        public static AzureFeatureListSettings SetOutput(this AzureFeatureListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -376,7 +368,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureFeatureRegisterSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureFeatureRegisterSettings SetOutput(this AzureFeatureRegisterSettings toolSettings, Output output)
+        public static AzureFeatureRegisterSettings SetOutput(this AzureFeatureRegisterSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
@@ -510,7 +502,7 @@ namespace Nuke.Azure
         #region Output
         /// <summary><p><em>Sets <see cref="AzureFeatureShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureFeatureShowSettings SetOutput(this AzureFeatureShowSettings toolSettings, Output output)
+        public static AzureFeatureShowSettings SetOutput(this AzureFeatureShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;

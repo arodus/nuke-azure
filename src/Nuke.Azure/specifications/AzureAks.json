@@ -6,7 +6,7 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1a38729/latest/docs-ref-autogen/aks.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/aks.yml"
   ],
   "name": "AzureAks",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest",
@@ -35,6 +35,12 @@
             "type": "string",
             "format": "--disable-browser {value}",
             "help": "Don't launch a web browser after establishing port-forwarding."
+          },
+          {
+            "name": "ListenPort",
+            "type": "string",
+            "format": "--listen-port {value}",
+            "help": "The listening port for the dashboard."
           }
         ]
       }
@@ -95,6 +101,12 @@
             "help": "Secret associated with the service principal. This argument is required if `--service-principal` is specified."
           },
           {
+            "name": "DisableRbac",
+            "type": "string",
+            "format": "--disable-rbac {value}",
+            "help": "Disable Kubernetes Role-Based Access Control."
+          },
+          {
             "name": "DnsNamePrefix",
             "type": "string",
             "format": "--dns-name-prefix {value}",
@@ -123,7 +135,7 @@
             "name": "EnableRbac",
             "type": "string",
             "format": "--enable-rbac {value}",
-            "help": "Enable Kubernetes Role-Based Access Control."
+            "help": "Enable Kubernetes Role-Based Access Control. Default: enabled."
           },
           {
             "name": "GenerateSshKeys",
@@ -177,7 +189,7 @@
             "name": "NodeOsdiskSize",
             "type": "string",
             "format": "--node-osdisk-size {value}",
-            "help": "Size in GB of the OS disk for each node in the node pool."
+            "help": "Size in GB of the OS disk for each node in the node pool. Minimum 30 GB."
           },
           {
             "name": "NodeVmSize",
@@ -225,7 +237,7 @@
             "name": "WorkspaceResourceId",
             "type": "string",
             "format": "--workspace-resource-id {value}",
-            "help": "The resource ID of an existing Log Analytics Workspace to use for storing monitoring data."
+            "help": "The resource ID of an existing Log Analytics Workspace to use for storing monitoring data. If not specified, uses the default Log Analytics Workspace if it exists, otherwise creates one."
           }
         ]
       }
@@ -258,6 +270,78 @@
             "type": "string",
             "format": "--yes {value}",
             "help": "Do not prompt for confirmation."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DisableAddons",
+      "definiteArgument": "aks disable-addons",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Addons",
+            "type": "List<string>",
+            "format": "--addons {value}",
+            "separator": ",",
+            "help": "Disable the Kubernetes addons in a comma-separated list."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the managed cluster."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "NoWait",
+            "type": "string",
+            "format": "--no-wait {value}",
+            "help": "Do not wait for the long-running operation to finish."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "EnableAddons",
+      "definiteArgument": "aks enable-addons",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Addons",
+            "type": "List<string>",
+            "format": "--addons {value}",
+            "separator": ",",
+            "help": "Enable the Kubernetes addons in a comma-separated list."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the managed cluster."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "NoWait",
+            "type": "string",
+            "format": "--no-wait {value}",
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "WorkspaceResourceId",
+            "type": "string",
+            "format": "--workspace-resource-id {value}",
+            "help": "The resource ID of an existing Log Analytics Workspace to use for storing monitoring data."
           }
         ]
       }
@@ -776,7 +860,7 @@
     },
     {
       "name": "Output",
-      "type": "Output",
+      "type": "AzureOutput",
       "format": "--output {value}",
       "help": "Output format."
     },
