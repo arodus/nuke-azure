@@ -6,8 +6,8 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/appservice.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/appservice/plan.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2c7154a/latest/docs-ref-autogen/appservice.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2c7154a/latest/docs-ref-autogen/appservice/plan.yml"
   ],
   "name": "AzureAppservice",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/appservice?view=azure-cli-latest",

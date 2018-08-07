@@ -6,10 +6,10 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/billing.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/billing/enrollment-account.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/billing/invoice.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/billing/period.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2c7154a/latest/docs-ref-autogen/billing.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2c7154a/latest/docs-ref-autogen/billing/invoice.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2c7154a/latest/docs-ref-autogen/billing/enrollment-account.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2c7154a/latest/docs-ref-autogen/billing/period.yml"
   ],
   "name": "AzureBilling",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/billing?view=azure-cli-latest",
@@ -20,25 +20,6 @@
       "postfix": "",
       "definiteArgument": "billing",
       "settingsClass": {}
-    },
-    {
-      "postfix": "EnrollmentAccountList",
-      "definiteArgument": "billing enrollment-account list",
-      "settingsClass": {}
-    },
-    {
-      "postfix": "EnrollmentAccountShow",
-      "definiteArgument": "billing enrollment-account show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the enrollment account."
-          }
-        ]
-      }
     },
     {
       "postfix": "InvoiceList",
@@ -64,6 +45,25 @@
             "type": "string",
             "format": "--name {value}",
             "help": "Name of the invoice."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "EnrollmentAccountList",
+      "definiteArgument": "billing enrollment-account list",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "EnrollmentAccountShow",
+      "definiteArgument": "billing enrollment-account show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the enrollment account."
           }
         ]
       }
