@@ -6,9 +6,9 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/role.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/role/assignment.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/role/definition.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2c7154a/latest/docs-ref-autogen/role.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2c7154a/latest/docs-ref-autogen/role/assignment.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2c7154a/latest/docs-ref-autogen/role/definition.yml"
   ],
   "name": "AzureRole",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/role?view=azure-cli-latest",
