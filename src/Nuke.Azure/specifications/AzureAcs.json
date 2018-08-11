@@ -6,9 +6,9 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/acs.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/acs/dcos.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/acs/kubernetes.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/acs.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/acs/kubernetes.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/acs/dcos.yml"
   ],
   "name": "AzureAcs",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest",
@@ -397,58 +397,6 @@
       }
     },
     {
-      "postfix": "DcosBrowse",
-      "definiteArgument": "acs dcos browse",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": ""
-          },
-          {
-            "name": "DisableBrowser",
-            "type": "string",
-            "format": "--disable-browser {value}",
-            "help": "Do not open browser after opening a proxy to the cluster web user interface."
-          },
-          {
-            "name": "SshKeyFile",
-            "type": "string",
-            "format": "--ssh-key-file {value}",
-            "help": "Path to an SSH key file to use."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DcosInstallCli",
-      "definiteArgument": "acs dcos install-cli",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ClientVersion",
-            "type": "string",
-            "format": "--client-version {value}",
-            "help": ""
-          },
-          {
-            "name": "InstallLocation",
-            "type": "string",
-            "format": "--install-location {value}",
-            "help": ""
-          }
-        ]
-      }
-    },
-    {
       "postfix": "KubernetesBrowse",
       "definiteArgument": "acs kubernetes browse",
       "settingsClass": {
@@ -515,6 +463,58 @@
     {
       "postfix": "KubernetesInstallCli",
       "definiteArgument": "acs kubernetes install-cli",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ClientVersion",
+            "type": "string",
+            "format": "--client-version {value}",
+            "help": ""
+          },
+          {
+            "name": "InstallLocation",
+            "type": "string",
+            "format": "--install-location {value}",
+            "help": ""
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DcosBrowse",
+      "definiteArgument": "acs dcos browse",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": ""
+          },
+          {
+            "name": "DisableBrowser",
+            "type": "string",
+            "format": "--disable-browser {value}",
+            "help": "Do not open browser after opening a proxy to the cluster web user interface."
+          },
+          {
+            "name": "SshKeyFile",
+            "type": "string",
+            "format": "--ssh-key-file {value}",
+            "help": "Path to an SSH key file to use."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DcosInstallCli",
+      "definiteArgument": "acs dcos install-cli",
       "settingsClass": {
         "properties": [
           {

@@ -6,7 +6,7 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/feature.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/feature.yml"
   ],
   "name": "AzureFeature",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/feature?view=azure-cli-latest",

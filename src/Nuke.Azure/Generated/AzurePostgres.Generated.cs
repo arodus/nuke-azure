@@ -44,54 +44,6 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzurePostgresDbCreate(Configure<AzurePostgresDbCreateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzurePostgresDbCreateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzurePostgresDbDelete(Configure<AzurePostgresDbDeleteSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzurePostgresDbDeleteSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzurePostgresDbList(Configure<AzurePostgresDbListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzurePostgresDbListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzurePostgresDbShow(Configure<AzurePostgresDbShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzurePostgresDbShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzurePostgresServerLogsDownload(Configure<AzurePostgresServerLogsDownloadSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzurePostgresServerLogsDownloadSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzurePostgresServerLogsList(Configure<AzurePostgresServerLogsListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzurePostgresServerLogsListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzurePostgresServerCreate(Configure<AzurePostgresServerCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePostgresServerCreateSettings());
@@ -156,25 +108,49 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzurePostgresServerConfigurationList(Configure<AzurePostgresServerConfigurationListSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzurePostgresDbCreate(Configure<AzurePostgresDbCreateSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzurePostgresServerConfigurationListSettings());
+            var toolSettings = configurator.InvokeSafe(new AzurePostgresDbCreateSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzurePostgresServerConfigurationSet(Configure<AzurePostgresServerConfigurationSetSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzurePostgresDbDelete(Configure<AzurePostgresDbDeleteSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzurePostgresServerConfigurationSetSettings());
+            var toolSettings = configurator.InvokeSafe(new AzurePostgresDbDeleteSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzurePostgresServerConfigurationShow(Configure<AzurePostgresServerConfigurationShowSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzurePostgresDbList(Configure<AzurePostgresDbListSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzurePostgresServerConfigurationShowSettings());
+            var toolSettings = configurator.InvokeSafe(new AzurePostgresDbListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzurePostgresDbShow(Configure<AzurePostgresDbShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzurePostgresDbShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzurePostgresServerLogsDownload(Configure<AzurePostgresServerLogsDownloadSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzurePostgresServerLogsDownloadSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzurePostgresServerLogsList(Configure<AzurePostgresServerLogsListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzurePostgresServerLogsListSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -215,6 +191,30 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzurePostgresServerFirewallRuleUpdate(Configure<AzurePostgresServerFirewallRuleUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzurePostgresServerFirewallRuleUpdateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzurePostgresServerConfigurationList(Configure<AzurePostgresServerConfigurationListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzurePostgresServerConfigurationListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzurePostgresServerConfigurationSet(Configure<AzurePostgresServerConfigurationSetSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzurePostgresServerConfigurationSetSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Database for PostgreSQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzurePostgresServerConfigurationShow(Configure<AzurePostgresServerConfigurationShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzurePostgresServerConfigurationShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -283,265 +283,6 @@ namespace Nuke.Azure
         {
             arguments
               .Add("postgres")
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzurePostgresDbCreateSettings
-    /// <summary><p>Used within <see cref="AzurePostgresTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzurePostgresDbCreateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzurePostgres executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
-        /// <summary><p>The name of the database.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary><p>The charset of the database.</p></summary>
-        public virtual string Charset { get; internal set; }
-        /// <summary><p>The collation of the database.</p></summary>
-        public virtual string Collation { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("postgres db create")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--charset {value}", Charset)
-              .Add("--collation {value}", Collation)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzurePostgresDbDeleteSettings
-    /// <summary><p>Used within <see cref="AzurePostgresTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzurePostgresDbDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzurePostgres executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
-        /// <summary><p>The name of the database.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary><p>Do not prompt for confirmation.</p></summary>
-        public virtual string Yes { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("postgres db delete")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--yes {value}", Yes)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzurePostgresDbListSettings
-    /// <summary><p>Used within <see cref="AzurePostgresTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzurePostgresDbListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzurePostgres executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("postgres db list")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzurePostgresDbShowSettings
-    /// <summary><p>Used within <see cref="AzurePostgresTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzurePostgresDbShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzurePostgres executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
-        /// <summary><p>The name of the database.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("postgres db show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzurePostgresServerLogsDownloadSettings
-    /// <summary><p>Used within <see cref="AzurePostgresTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzurePostgresServerLogsDownloadSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzurePostgres executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
-        /// <summary><p>Space-separated list of log filenames on the server to download.</p></summary>
-        public virtual IReadOnlyList<string> Name => NameInternal.AsReadOnly();
-        internal List<string> NameInternal { get; set; } = new List<string>();
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("postgres server-logs download")
-              .Add("--name {value}", Name, separator: ' ')
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzurePostgresServerLogsListSettings
-    /// <summary><p>Used within <see cref="AzurePostgresTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzurePostgresServerLogsListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzurePostgres executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary><p>Integer in hours to indicate file last modify time, default value is 72.</p></summary>
-        public virtual string FileLastWritten { get; internal set; }
-        /// <summary><p>The pattern that file name should match.</p></summary>
-        public virtual string FilenameContains { get; internal set; }
-        /// <summary><p>The file size limitation to filter files.</p></summary>
-        public virtual string MaxFileSize { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("postgres server-logs list")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--file-last-written {value}", FileLastWritten)
-              .Add("--filename-contains {value}", FilenameContains)
-              .Add("--max-file-size {value}", MaxFileSize)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -954,12 +695,103 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzurePostgresServerConfigurationListSettings
+    #region AzurePostgresDbCreateSettings
     /// <summary><p>Used within <see cref="AzurePostgresTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzurePostgresServerConfigurationListSettings : ToolSettings
+    public partial class AzurePostgresDbCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzurePostgres executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
+        /// <summary><p>The name of the database.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary><p>The charset of the database.</p></summary>
+        public virtual string Charset { get; internal set; }
+        /// <summary><p>The collation of the database.</p></summary>
+        public virtual string Collation { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("postgres db create")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--charset {value}", Charset)
+              .Add("--collation {value}", Collation)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzurePostgresDbDeleteSettings
+    /// <summary><p>Used within <see cref="AzurePostgresTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzurePostgresDbDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzurePostgres executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
+        /// <summary><p>The name of the database.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary><p>Do not prompt for confirmation.</p></summary>
+        public virtual string Yes { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("postgres db delete")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--yes {value}", Yes)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzurePostgresDbListSettings
+    /// <summary><p>Used within <see cref="AzurePostgresTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzurePostgresDbListSettings : ToolSettings
     {
         /// <summary><p>Path to the AzurePostgres executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
@@ -980,7 +812,7 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("postgres server configuration list")
+              .Add("postgres db list")
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--server-name {value}", ServerName)
               .Add("--debug {value}", Debug)
@@ -992,23 +824,21 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzurePostgresServerConfigurationSetSettings
+    #region AzurePostgresDbShowSettings
     /// <summary><p>Used within <see cref="AzurePostgresTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzurePostgresServerConfigurationSetSettings : ToolSettings
+    public partial class AzurePostgresDbShowSettings : ToolSettings
     {
         /// <summary><p>Path to the AzurePostgres executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
-        /// <summary><p>The name of the server configuration.</p></summary>
+        /// <summary><p>The name of the database.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of the server.</p></summary>
         public virtual string ServerName { get; internal set; }
-        /// <summary><p>Value of the configuration. If not provided, configuration value will be set to default.</p></summary>
-        public virtual string Value { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1022,11 +852,10 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("postgres server configuration set")
+              .Add("postgres db show")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--server-name {value}", ServerName)
-              .Add("--value {value}", Value)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1036,17 +865,18 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzurePostgresServerConfigurationShowSettings
+    #region AzurePostgresServerLogsDownloadSettings
     /// <summary><p>Used within <see cref="AzurePostgresTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzurePostgresServerConfigurationShowSettings : ToolSettings
+    public partial class AzurePostgresServerLogsDownloadSettings : ToolSettings
     {
         /// <summary><p>Path to the AzurePostgres executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
-        /// <summary><p>The name of the server configuration.</p></summary>
-        public virtual string Name { get; internal set; }
+        /// <summary><p>Space-separated list of log filenames on the server to download.</p></summary>
+        public virtual IReadOnlyList<string> Name => NameInternal.AsReadOnly();
+        internal List<string> NameInternal { get; set; } = new List<string>();
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of the server.</p></summary>
@@ -1064,10 +894,57 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("postgres server configuration show")
-              .Add("--name {value}", Name)
+              .Add("postgres server-logs download")
+              .Add("--name {value}", Name, separator: ' ')
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--server-name {value}", ServerName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzurePostgresServerLogsListSettings
+    /// <summary><p>Used within <see cref="AzurePostgresTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzurePostgresServerLogsListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzurePostgres executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary><p>Integer in hours to indicate file last modify time, default value is 72.</p></summary>
+        public virtual string FileLastWritten { get; internal set; }
+        /// <summary><p>The pattern that file name should match.</p></summary>
+        public virtual string FilenameContains { get; internal set; }
+        /// <summary><p>The file size limitation to filter files.</p></summary>
+        public virtual string MaxFileSize { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("postgres server-logs list")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--file-last-written {value}", FileLastWritten)
+              .Add("--filename-contains {value}", FilenameContains)
+              .Add("--max-file-size {value}", MaxFileSize)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1297,6 +1174,129 @@ namespace Nuke.Azure
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzurePostgresServerConfigurationListSettings
+    /// <summary><p>Used within <see cref="AzurePostgresTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzurePostgresServerConfigurationListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzurePostgres executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("postgres server configuration list")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzurePostgresServerConfigurationSetSettings
+    /// <summary><p>Used within <see cref="AzurePostgresTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzurePostgresServerConfigurationSetSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzurePostgres executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
+        /// <summary><p>The name of the server configuration.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary><p>Value of the configuration. If not provided, configuration value will be set to default.</p></summary>
+        public virtual string Value { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("postgres server configuration set")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--value {value}", Value)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzurePostgresServerConfigurationShowSettings
+    /// <summary><p>Used within <see cref="AzurePostgresTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzurePostgresServerConfigurationShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzurePostgres executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
+        /// <summary><p>The name of the server configuration.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("postgres server configuration show")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1628,1032 +1628,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzurePostgresSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzurePostgresSettings ResetVerbose(this AzurePostgresSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzurePostgresDbCreateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzurePostgresTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzurePostgresDbCreateSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbCreateSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
-        [Pure]
-        public static AzurePostgresDbCreateSettings SetName(this AzurePostgresDbCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbCreateSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
-        [Pure]
-        public static AzurePostgresDbCreateSettings ResetName(this AzurePostgresDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzurePostgresDbCreateSettings SetResourceGroup(this AzurePostgresDbCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzurePostgresDbCreateSettings ResetResourceGroup(this AzurePostgresDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbCreateSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzurePostgresDbCreateSettings SetServerName(this AzurePostgresDbCreateSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbCreateSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzurePostgresDbCreateSettings ResetServerName(this AzurePostgresDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Charset
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbCreateSettings.Charset"/>.</em></p><p>The charset of the database.</p></summary>
-        [Pure]
-        public static AzurePostgresDbCreateSettings SetCharset(this AzurePostgresDbCreateSettings toolSettings, string charset)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Charset = charset;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbCreateSettings.Charset"/>.</em></p><p>The charset of the database.</p></summary>
-        [Pure]
-        public static AzurePostgresDbCreateSettings ResetCharset(this AzurePostgresDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Charset = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Collation
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbCreateSettings.Collation"/>.</em></p><p>The collation of the database.</p></summary>
-        [Pure]
-        public static AzurePostgresDbCreateSettings SetCollation(this AzurePostgresDbCreateSettings toolSettings, string collation)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Collation = collation;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbCreateSettings.Collation"/>.</em></p><p>The collation of the database.</p></summary>
-        [Pure]
-        public static AzurePostgresDbCreateSettings ResetCollation(this AzurePostgresDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Collation = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzurePostgresDbCreateSettings SetDebug(this AzurePostgresDbCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzurePostgresDbCreateSettings ResetDebug(this AzurePostgresDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzurePostgresDbCreateSettings SetHelp(this AzurePostgresDbCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzurePostgresDbCreateSettings ResetHelp(this AzurePostgresDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzurePostgresDbCreateSettings SetOutput(this AzurePostgresDbCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzurePostgresDbCreateSettings ResetOutput(this AzurePostgresDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzurePostgresDbCreateSettings SetQuery(this AzurePostgresDbCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzurePostgresDbCreateSettings ResetQuery(this AzurePostgresDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzurePostgresDbCreateSettings SetVerbose(this AzurePostgresDbCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzurePostgresDbCreateSettings ResetVerbose(this AzurePostgresDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzurePostgresDbDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzurePostgresTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzurePostgresDbDeleteSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbDeleteSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
-        [Pure]
-        public static AzurePostgresDbDeleteSettings SetName(this AzurePostgresDbDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbDeleteSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
-        [Pure]
-        public static AzurePostgresDbDeleteSettings ResetName(this AzurePostgresDbDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzurePostgresDbDeleteSettings SetResourceGroup(this AzurePostgresDbDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzurePostgresDbDeleteSettings ResetResourceGroup(this AzurePostgresDbDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbDeleteSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzurePostgresDbDeleteSettings SetServerName(this AzurePostgresDbDeleteSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbDeleteSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzurePostgresDbDeleteSettings ResetServerName(this AzurePostgresDbDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Yes
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
-        [Pure]
-        public static AzurePostgresDbDeleteSettings SetYes(this AzurePostgresDbDeleteSettings toolSettings, string yes)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Yes = yes;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
-        [Pure]
-        public static AzurePostgresDbDeleteSettings ResetYes(this AzurePostgresDbDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Yes = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzurePostgresDbDeleteSettings SetDebug(this AzurePostgresDbDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzurePostgresDbDeleteSettings ResetDebug(this AzurePostgresDbDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzurePostgresDbDeleteSettings SetHelp(this AzurePostgresDbDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzurePostgresDbDeleteSettings ResetHelp(this AzurePostgresDbDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzurePostgresDbDeleteSettings SetOutput(this AzurePostgresDbDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzurePostgresDbDeleteSettings ResetOutput(this AzurePostgresDbDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzurePostgresDbDeleteSettings SetQuery(this AzurePostgresDbDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzurePostgresDbDeleteSettings ResetQuery(this AzurePostgresDbDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzurePostgresDbDeleteSettings SetVerbose(this AzurePostgresDbDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzurePostgresDbDeleteSettings ResetVerbose(this AzurePostgresDbDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzurePostgresDbListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzurePostgresTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzurePostgresDbListSettingsExtensions
-    {
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzurePostgresDbListSettings SetResourceGroup(this AzurePostgresDbListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzurePostgresDbListSettings ResetResourceGroup(this AzurePostgresDbListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzurePostgresDbListSettings SetServerName(this AzurePostgresDbListSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzurePostgresDbListSettings ResetServerName(this AzurePostgresDbListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzurePostgresDbListSettings SetDebug(this AzurePostgresDbListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzurePostgresDbListSettings ResetDebug(this AzurePostgresDbListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzurePostgresDbListSettings SetHelp(this AzurePostgresDbListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzurePostgresDbListSettings ResetHelp(this AzurePostgresDbListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzurePostgresDbListSettings SetOutput(this AzurePostgresDbListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzurePostgresDbListSettings ResetOutput(this AzurePostgresDbListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzurePostgresDbListSettings SetQuery(this AzurePostgresDbListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzurePostgresDbListSettings ResetQuery(this AzurePostgresDbListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzurePostgresDbListSettings SetVerbose(this AzurePostgresDbListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzurePostgresDbListSettings ResetVerbose(this AzurePostgresDbListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzurePostgresDbShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzurePostgresTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzurePostgresDbShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbShowSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
-        [Pure]
-        public static AzurePostgresDbShowSettings SetName(this AzurePostgresDbShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbShowSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
-        [Pure]
-        public static AzurePostgresDbShowSettings ResetName(this AzurePostgresDbShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzurePostgresDbShowSettings SetResourceGroup(this AzurePostgresDbShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzurePostgresDbShowSettings ResetResourceGroup(this AzurePostgresDbShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbShowSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzurePostgresDbShowSettings SetServerName(this AzurePostgresDbShowSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbShowSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzurePostgresDbShowSettings ResetServerName(this AzurePostgresDbShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzurePostgresDbShowSettings SetDebug(this AzurePostgresDbShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzurePostgresDbShowSettings ResetDebug(this AzurePostgresDbShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzurePostgresDbShowSettings SetHelp(this AzurePostgresDbShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzurePostgresDbShowSettings ResetHelp(this AzurePostgresDbShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzurePostgresDbShowSettings SetOutput(this AzurePostgresDbShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzurePostgresDbShowSettings ResetOutput(this AzurePostgresDbShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzurePostgresDbShowSettings SetQuery(this AzurePostgresDbShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzurePostgresDbShowSettings ResetQuery(this AzurePostgresDbShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzurePostgresDbShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzurePostgresDbShowSettings SetVerbose(this AzurePostgresDbShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresDbShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzurePostgresDbShowSettings ResetVerbose(this AzurePostgresDbShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzurePostgresServerLogsDownloadSettingsExtensions
-    /// <summary><p>Used within <see cref="AzurePostgresTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzurePostgresServerLogsDownloadSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.Name"/> to a new list.</em></p><p>Space-separated list of log filenames on the server to download.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings SetName(this AzurePostgresServerLogsDownloadSettings toolSettings, params string[] name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NameInternal = name.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.Name"/> to a new list.</em></p><p>Space-separated list of log filenames on the server to download.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings SetName(this AzurePostgresServerLogsDownloadSettings toolSettings, IEnumerable<string> name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NameInternal = name.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzurePostgresServerLogsDownloadSettings.Name"/>.</em></p><p>Space-separated list of log filenames on the server to download.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings AddName(this AzurePostgresServerLogsDownloadSettings toolSettings, params string[] name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NameInternal.AddRange(name);
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzurePostgresServerLogsDownloadSettings.Name"/>.</em></p><p>Space-separated list of log filenames on the server to download.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings AddName(this AzurePostgresServerLogsDownloadSettings toolSettings, IEnumerable<string> name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NameInternal.AddRange(name);
-            return toolSettings;
-        }
-        /// <summary><p><em>Clears <see cref="AzurePostgresServerLogsDownloadSettings.Name"/>.</em></p><p>Space-separated list of log filenames on the server to download.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings ClearName(this AzurePostgresServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NameInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzurePostgresServerLogsDownloadSettings.Name"/>.</em></p><p>Space-separated list of log filenames on the server to download.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings RemoveName(this AzurePostgresServerLogsDownloadSettings toolSettings, params string[] name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(name);
-            toolSettings.NameInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzurePostgresServerLogsDownloadSettings.Name"/>.</em></p><p>Space-separated list of log filenames on the server to download.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings RemoveName(this AzurePostgresServerLogsDownloadSettings toolSettings, IEnumerable<string> name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(name);
-            toolSettings.NameInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings SetResourceGroup(this AzurePostgresServerLogsDownloadSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsDownloadSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings ResetResourceGroup(this AzurePostgresServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings SetServerName(this AzurePostgresServerLogsDownloadSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsDownloadSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings ResetServerName(this AzurePostgresServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings SetDebug(this AzurePostgresServerLogsDownloadSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsDownloadSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings ResetDebug(this AzurePostgresServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings SetHelp(this AzurePostgresServerLogsDownloadSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsDownloadSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings ResetHelp(this AzurePostgresServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings SetOutput(this AzurePostgresServerLogsDownloadSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsDownloadSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings ResetOutput(this AzurePostgresServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings SetQuery(this AzurePostgresServerLogsDownloadSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsDownloadSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings ResetQuery(this AzurePostgresServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings SetVerbose(this AzurePostgresServerLogsDownloadSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsDownloadSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings ResetVerbose(this AzurePostgresServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzurePostgresServerLogsListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzurePostgresTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzurePostgresServerLogsListSettingsExtensions
-    {
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings SetResourceGroup(this AzurePostgresServerLogsListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings ResetResourceGroup(this AzurePostgresServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings SetServerName(this AzurePostgresServerLogsListSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings ResetServerName(this AzurePostgresServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region FileLastWritten
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsListSettings.FileLastWritten"/>.</em></p><p>Integer in hours to indicate file last modify time, default value is 72.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings SetFileLastWritten(this AzurePostgresServerLogsListSettings toolSettings, string fileLastWritten)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FileLastWritten = fileLastWritten;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsListSettings.FileLastWritten"/>.</em></p><p>Integer in hours to indicate file last modify time, default value is 72.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings ResetFileLastWritten(this AzurePostgresServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FileLastWritten = null;
-            return toolSettings;
-        }
-        #endregion
-        #region FilenameContains
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsListSettings.FilenameContains"/>.</em></p><p>The pattern that file name should match.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings SetFilenameContains(this AzurePostgresServerLogsListSettings toolSettings, string filenameContains)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FilenameContains = filenameContains;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsListSettings.FilenameContains"/>.</em></p><p>The pattern that file name should match.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings ResetFilenameContains(this AzurePostgresServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FilenameContains = null;
-            return toolSettings;
-        }
-        #endregion
-        #region MaxFileSize
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsListSettings.MaxFileSize"/>.</em></p><p>The file size limitation to filter files.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings SetMaxFileSize(this AzurePostgresServerLogsListSettings toolSettings, string maxFileSize)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MaxFileSize = maxFileSize;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsListSettings.MaxFileSize"/>.</em></p><p>The file size limitation to filter files.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings ResetMaxFileSize(this AzurePostgresServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MaxFileSize = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings SetDebug(this AzurePostgresServerLogsListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings ResetDebug(this AzurePostgresServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings SetHelp(this AzurePostgresServerLogsListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings ResetHelp(this AzurePostgresServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings SetOutput(this AzurePostgresServerLogsListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings ResetOutput(this AzurePostgresServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings SetQuery(this AzurePostgresServerLogsListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings ResetQuery(this AzurePostgresServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings SetVerbose(this AzurePostgresServerLogsListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings ResetVerbose(this AzurePostgresServerLogsListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -4328,24 +3302,42 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzurePostgresServerConfigurationListSettingsExtensions
+    #region AzurePostgresDbCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzurePostgresTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzurePostgresServerConfigurationListSettingsExtensions
+    public static partial class AzurePostgresDbCreateSettingsExtensions
     {
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbCreateSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationListSettings SetResourceGroup(this AzurePostgresServerConfigurationListSettings toolSettings, string resourceGroup)
+        public static AzurePostgresDbCreateSettings SetName(this AzurePostgresDbCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbCreateSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
+        [Pure]
+        public static AzurePostgresDbCreateSettings ResetName(this AzurePostgresDbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzurePostgresDbCreateSettings SetResourceGroup(this AzurePostgresDbCreateSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationListSettings ResetResourceGroup(this AzurePostgresServerConfigurationListSettings toolSettings)
+        public static AzurePostgresDbCreateSettings ResetResourceGroup(this AzurePostgresDbCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -4353,35 +3345,71 @@ namespace Nuke.Azure
         }
         #endregion
         #region ServerName
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbCreateSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationListSettings SetServerName(this AzurePostgresServerConfigurationListSettings toolSettings, string serverName)
+        public static AzurePostgresDbCreateSettings SetServerName(this AzurePostgresDbCreateSettings toolSettings, string serverName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ServerName = serverName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbCreateSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationListSettings ResetServerName(this AzurePostgresServerConfigurationListSettings toolSettings)
+        public static AzurePostgresDbCreateSettings ResetServerName(this AzurePostgresDbCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ServerName = null;
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region Charset
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbCreateSettings.Charset"/>.</em></p><p>The charset of the database.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationListSettings SetDebug(this AzurePostgresServerConfigurationListSettings toolSettings, string debug)
+        public static AzurePostgresDbCreateSettings SetCharset(this AzurePostgresDbCreateSettings toolSettings, string charset)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Charset = charset;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbCreateSettings.Charset"/>.</em></p><p>The charset of the database.</p></summary>
+        [Pure]
+        public static AzurePostgresDbCreateSettings ResetCharset(this AzurePostgresDbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Charset = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Collation
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbCreateSettings.Collation"/>.</em></p><p>The collation of the database.</p></summary>
+        [Pure]
+        public static AzurePostgresDbCreateSettings SetCollation(this AzurePostgresDbCreateSettings toolSettings, string collation)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Collation = collation;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbCreateSettings.Collation"/>.</em></p><p>The collation of the database.</p></summary>
+        [Pure]
+        public static AzurePostgresDbCreateSettings ResetCollation(this AzurePostgresDbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Collation = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzurePostgresDbCreateSettings SetDebug(this AzurePostgresDbCreateSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationListSettings ResetDebug(this AzurePostgresServerConfigurationListSettings toolSettings)
+        public static AzurePostgresDbCreateSettings ResetDebug(this AzurePostgresDbCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -4389,17 +3417,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationListSettings SetHelp(this AzurePostgresServerConfigurationListSettings toolSettings, string help)
+        public static AzurePostgresDbCreateSettings SetHelp(this AzurePostgresDbCreateSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationListSettings ResetHelp(this AzurePostgresServerConfigurationListSettings toolSettings)
+        public static AzurePostgresDbCreateSettings ResetHelp(this AzurePostgresDbCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -4407,17 +3435,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationListSettings SetOutput(this AzurePostgresServerConfigurationListSettings toolSettings, AzureOutput output)
+        public static AzurePostgresDbCreateSettings SetOutput(this AzurePostgresDbCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationListSettings ResetOutput(this AzurePostgresServerConfigurationListSettings toolSettings)
+        public static AzurePostgresDbCreateSettings ResetOutput(this AzurePostgresDbCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -4425,17 +3453,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationListSettings SetQuery(this AzurePostgresServerConfigurationListSettings toolSettings, string query)
+        public static AzurePostgresDbCreateSettings SetQuery(this AzurePostgresDbCreateSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationListSettings ResetQuery(this AzurePostgresServerConfigurationListSettings toolSettings)
+        public static AzurePostgresDbCreateSettings ResetQuery(this AzurePostgresDbCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -4443,17 +3471,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationListSettings SetVerbose(this AzurePostgresServerConfigurationListSettings toolSettings, string verbose)
+        public static AzurePostgresDbCreateSettings SetVerbose(this AzurePostgresDbCreateSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationListSettings ResetVerbose(this AzurePostgresServerConfigurationListSettings toolSettings)
+        public static AzurePostgresDbCreateSettings ResetVerbose(this AzurePostgresDbCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -4462,24 +3490,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzurePostgresServerConfigurationSetSettingsExtensions
+    #region AzurePostgresDbDeleteSettingsExtensions
     /// <summary><p>Used within <see cref="AzurePostgresTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzurePostgresServerConfigurationSetSettingsExtensions
+    public static partial class AzurePostgresDbDeleteSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationSetSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbDeleteSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationSetSettings SetName(this AzurePostgresServerConfigurationSetSettings toolSettings, string name)
+        public static AzurePostgresDbDeleteSettings SetName(this AzurePostgresDbDeleteSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationSetSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbDeleteSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationSetSettings ResetName(this AzurePostgresServerConfigurationSetSettings toolSettings)
+        public static AzurePostgresDbDeleteSettings ResetName(this AzurePostgresDbDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -4487,17 +3515,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationSetSettings SetResourceGroup(this AzurePostgresServerConfigurationSetSettings toolSettings, string resourceGroup)
+        public static AzurePostgresDbDeleteSettings SetResourceGroup(this AzurePostgresDbDeleteSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationSetSettings ResetResourceGroup(this AzurePostgresServerConfigurationSetSettings toolSettings)
+        public static AzurePostgresDbDeleteSettings ResetResourceGroup(this AzurePostgresDbDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -4505,53 +3533,53 @@ namespace Nuke.Azure
         }
         #endregion
         #region ServerName
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationSetSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbDeleteSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationSetSettings SetServerName(this AzurePostgresServerConfigurationSetSettings toolSettings, string serverName)
+        public static AzurePostgresDbDeleteSettings SetServerName(this AzurePostgresDbDeleteSettings toolSettings, string serverName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ServerName = serverName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationSetSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbDeleteSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationSetSettings ResetServerName(this AzurePostgresServerConfigurationSetSettings toolSettings)
+        public static AzurePostgresDbDeleteSettings ResetServerName(this AzurePostgresDbDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ServerName = null;
             return toolSettings;
         }
         #endregion
-        #region Value
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationSetSettings.Value"/>.</em></p><p>Value of the configuration. If not provided, configuration value will be set to default.</p></summary>
+        #region Yes
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationSetSettings SetValue(this AzurePostgresServerConfigurationSetSettings toolSettings, string value)
+        public static AzurePostgresDbDeleteSettings SetYes(this AzurePostgresDbDeleteSettings toolSettings, string yes)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Value = value;
+            toolSettings.Yes = yes;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationSetSettings.Value"/>.</em></p><p>Value of the configuration. If not provided, configuration value will be set to default.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationSetSettings ResetValue(this AzurePostgresServerConfigurationSetSettings toolSettings)
+        public static AzurePostgresDbDeleteSettings ResetYes(this AzurePostgresDbDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Value = null;
+            toolSettings.Yes = null;
             return toolSettings;
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationSetSettings SetDebug(this AzurePostgresServerConfigurationSetSettings toolSettings, string debug)
+        public static AzurePostgresDbDeleteSettings SetDebug(this AzurePostgresDbDeleteSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationSetSettings ResetDebug(this AzurePostgresServerConfigurationSetSettings toolSettings)
+        public static AzurePostgresDbDeleteSettings ResetDebug(this AzurePostgresDbDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -4559,17 +3587,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationSetSettings SetHelp(this AzurePostgresServerConfigurationSetSettings toolSettings, string help)
+        public static AzurePostgresDbDeleteSettings SetHelp(this AzurePostgresDbDeleteSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationSetSettings ResetHelp(this AzurePostgresServerConfigurationSetSettings toolSettings)
+        public static AzurePostgresDbDeleteSettings ResetHelp(this AzurePostgresDbDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -4577,17 +3605,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationSetSettings SetOutput(this AzurePostgresServerConfigurationSetSettings toolSettings, AzureOutput output)
+        public static AzurePostgresDbDeleteSettings SetOutput(this AzurePostgresDbDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationSetSettings ResetOutput(this AzurePostgresServerConfigurationSetSettings toolSettings)
+        public static AzurePostgresDbDeleteSettings ResetOutput(this AzurePostgresDbDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -4595,17 +3623,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationSetSettings SetQuery(this AzurePostgresServerConfigurationSetSettings toolSettings, string query)
+        public static AzurePostgresDbDeleteSettings SetQuery(this AzurePostgresDbDeleteSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationSetSettings ResetQuery(this AzurePostgresServerConfigurationSetSettings toolSettings)
+        public static AzurePostgresDbDeleteSettings ResetQuery(this AzurePostgresDbDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -4613,17 +3641,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationSetSettings SetVerbose(this AzurePostgresServerConfigurationSetSettings toolSettings, string verbose)
+        public static AzurePostgresDbDeleteSettings SetVerbose(this AzurePostgresDbDeleteSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationSetSettings ResetVerbose(this AzurePostgresServerConfigurationSetSettings toolSettings)
+        public static AzurePostgresDbDeleteSettings ResetVerbose(this AzurePostgresDbDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -4632,42 +3660,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzurePostgresServerConfigurationShowSettingsExtensions
+    #region AzurePostgresDbListSettingsExtensions
     /// <summary><p>Used within <see cref="AzurePostgresTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzurePostgresServerConfigurationShowSettingsExtensions
+    public static partial class AzurePostgresDbListSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationShowSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
-        [Pure]
-        public static AzurePostgresServerConfigurationShowSettings SetName(this AzurePostgresServerConfigurationShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationShowSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
-        [Pure]
-        public static AzurePostgresServerConfigurationShowSettings ResetName(this AzurePostgresServerConfigurationShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationShowSettings SetResourceGroup(this AzurePostgresServerConfigurationShowSettings toolSettings, string resourceGroup)
+        public static AzurePostgresDbListSettings SetResourceGroup(this AzurePostgresDbListSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationShowSettings ResetResourceGroup(this AzurePostgresServerConfigurationShowSettings toolSettings)
+        public static AzurePostgresDbListSettings ResetResourceGroup(this AzurePostgresDbListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -4675,17 +3685,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region ServerName
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationShowSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationShowSettings SetServerName(this AzurePostgresServerConfigurationShowSettings toolSettings, string serverName)
+        public static AzurePostgresDbListSettings SetServerName(this AzurePostgresDbListSettings toolSettings, string serverName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ServerName = serverName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationShowSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationShowSettings ResetServerName(this AzurePostgresServerConfigurationShowSettings toolSettings)
+        public static AzurePostgresDbListSettings ResetServerName(this AzurePostgresDbListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ServerName = null;
@@ -4693,17 +3703,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationShowSettings SetDebug(this AzurePostgresServerConfigurationShowSettings toolSettings, string debug)
+        public static AzurePostgresDbListSettings SetDebug(this AzurePostgresDbListSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationShowSettings ResetDebug(this AzurePostgresServerConfigurationShowSettings toolSettings)
+        public static AzurePostgresDbListSettings ResetDebug(this AzurePostgresDbListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -4711,17 +3721,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationShowSettings SetHelp(this AzurePostgresServerConfigurationShowSettings toolSettings, string help)
+        public static AzurePostgresDbListSettings SetHelp(this AzurePostgresDbListSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationShowSettings ResetHelp(this AzurePostgresServerConfigurationShowSettings toolSettings)
+        public static AzurePostgresDbListSettings ResetHelp(this AzurePostgresDbListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -4729,17 +3739,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationShowSettings SetOutput(this AzurePostgresServerConfigurationShowSettings toolSettings, AzureOutput output)
+        public static AzurePostgresDbListSettings SetOutput(this AzurePostgresDbListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationShowSettings ResetOutput(this AzurePostgresServerConfigurationShowSettings toolSettings)
+        public static AzurePostgresDbListSettings ResetOutput(this AzurePostgresDbListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -4747,17 +3757,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationShowSettings SetQuery(this AzurePostgresServerConfigurationShowSettings toolSettings, string query)
+        public static AzurePostgresDbListSettings SetQuery(this AzurePostgresDbListSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationShowSettings ResetQuery(this AzurePostgresServerConfigurationShowSettings toolSettings)
+        public static AzurePostgresDbListSettings ResetQuery(this AzurePostgresDbListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -4765,17 +3775,551 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationShowSettings SetVerbose(this AzurePostgresServerConfigurationShowSettings toolSettings, string verbose)
+        public static AzurePostgresDbListSettings SetVerbose(this AzurePostgresDbListSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzurePostgresServerConfigurationShowSettings ResetVerbose(this AzurePostgresServerConfigurationShowSettings toolSettings)
+        public static AzurePostgresDbListSettings ResetVerbose(this AzurePostgresDbListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzurePostgresDbShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzurePostgresTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzurePostgresDbShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbShowSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
+        [Pure]
+        public static AzurePostgresDbShowSettings SetName(this AzurePostgresDbShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbShowSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
+        [Pure]
+        public static AzurePostgresDbShowSettings ResetName(this AzurePostgresDbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzurePostgresDbShowSettings SetResourceGroup(this AzurePostgresDbShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzurePostgresDbShowSettings ResetResourceGroup(this AzurePostgresDbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbShowSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzurePostgresDbShowSettings SetServerName(this AzurePostgresDbShowSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbShowSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzurePostgresDbShowSettings ResetServerName(this AzurePostgresDbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzurePostgresDbShowSettings SetDebug(this AzurePostgresDbShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzurePostgresDbShowSettings ResetDebug(this AzurePostgresDbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzurePostgresDbShowSettings SetHelp(this AzurePostgresDbShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzurePostgresDbShowSettings ResetHelp(this AzurePostgresDbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzurePostgresDbShowSettings SetOutput(this AzurePostgresDbShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzurePostgresDbShowSettings ResetOutput(this AzurePostgresDbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzurePostgresDbShowSettings SetQuery(this AzurePostgresDbShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzurePostgresDbShowSettings ResetQuery(this AzurePostgresDbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzurePostgresDbShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzurePostgresDbShowSettings SetVerbose(this AzurePostgresDbShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresDbShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzurePostgresDbShowSettings ResetVerbose(this AzurePostgresDbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzurePostgresServerLogsDownloadSettingsExtensions
+    /// <summary><p>Used within <see cref="AzurePostgresTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzurePostgresServerLogsDownloadSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.Name"/> to a new list.</em></p><p>Space-separated list of log filenames on the server to download.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings SetName(this AzurePostgresServerLogsDownloadSettings toolSettings, params string[] name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NameInternal = name.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.Name"/> to a new list.</em></p><p>Space-separated list of log filenames on the server to download.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings SetName(this AzurePostgresServerLogsDownloadSettings toolSettings, IEnumerable<string> name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NameInternal = name.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzurePostgresServerLogsDownloadSettings.Name"/>.</em></p><p>Space-separated list of log filenames on the server to download.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings AddName(this AzurePostgresServerLogsDownloadSettings toolSettings, params string[] name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NameInternal.AddRange(name);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzurePostgresServerLogsDownloadSettings.Name"/>.</em></p><p>Space-separated list of log filenames on the server to download.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings AddName(this AzurePostgresServerLogsDownloadSettings toolSettings, IEnumerable<string> name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NameInternal.AddRange(name);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzurePostgresServerLogsDownloadSettings.Name"/>.</em></p><p>Space-separated list of log filenames on the server to download.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings ClearName(this AzurePostgresServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NameInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzurePostgresServerLogsDownloadSettings.Name"/>.</em></p><p>Space-separated list of log filenames on the server to download.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings RemoveName(this AzurePostgresServerLogsDownloadSettings toolSettings, params string[] name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(name);
+            toolSettings.NameInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzurePostgresServerLogsDownloadSettings.Name"/>.</em></p><p>Space-separated list of log filenames on the server to download.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings RemoveName(this AzurePostgresServerLogsDownloadSettings toolSettings, IEnumerable<string> name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(name);
+            toolSettings.NameInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings SetResourceGroup(this AzurePostgresServerLogsDownloadSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsDownloadSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings ResetResourceGroup(this AzurePostgresServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings SetServerName(this AzurePostgresServerLogsDownloadSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsDownloadSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings ResetServerName(this AzurePostgresServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings SetDebug(this AzurePostgresServerLogsDownloadSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsDownloadSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings ResetDebug(this AzurePostgresServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings SetHelp(this AzurePostgresServerLogsDownloadSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsDownloadSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings ResetHelp(this AzurePostgresServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings SetOutput(this AzurePostgresServerLogsDownloadSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsDownloadSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings ResetOutput(this AzurePostgresServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings SetQuery(this AzurePostgresServerLogsDownloadSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsDownloadSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings ResetQuery(this AzurePostgresServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings SetVerbose(this AzurePostgresServerLogsDownloadSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsDownloadSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings ResetVerbose(this AzurePostgresServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzurePostgresServerLogsListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzurePostgresTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzurePostgresServerLogsListSettingsExtensions
+    {
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings SetResourceGroup(this AzurePostgresServerLogsListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings ResetResourceGroup(this AzurePostgresServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings SetServerName(this AzurePostgresServerLogsListSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings ResetServerName(this AzurePostgresServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region FileLastWritten
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsListSettings.FileLastWritten"/>.</em></p><p>Integer in hours to indicate file last modify time, default value is 72.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings SetFileLastWritten(this AzurePostgresServerLogsListSettings toolSettings, string fileLastWritten)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FileLastWritten = fileLastWritten;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsListSettings.FileLastWritten"/>.</em></p><p>Integer in hours to indicate file last modify time, default value is 72.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings ResetFileLastWritten(this AzurePostgresServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FileLastWritten = null;
+            return toolSettings;
+        }
+        #endregion
+        #region FilenameContains
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsListSettings.FilenameContains"/>.</em></p><p>The pattern that file name should match.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings SetFilenameContains(this AzurePostgresServerLogsListSettings toolSettings, string filenameContains)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FilenameContains = filenameContains;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsListSettings.FilenameContains"/>.</em></p><p>The pattern that file name should match.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings ResetFilenameContains(this AzurePostgresServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FilenameContains = null;
+            return toolSettings;
+        }
+        #endregion
+        #region MaxFileSize
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsListSettings.MaxFileSize"/>.</em></p><p>The file size limitation to filter files.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings SetMaxFileSize(this AzurePostgresServerLogsListSettings toolSettings, string maxFileSize)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MaxFileSize = maxFileSize;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsListSettings.MaxFileSize"/>.</em></p><p>The file size limitation to filter files.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings ResetMaxFileSize(this AzurePostgresServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MaxFileSize = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings SetDebug(this AzurePostgresServerLogsListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings ResetDebug(this AzurePostgresServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings SetHelp(this AzurePostgresServerLogsListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings ResetHelp(this AzurePostgresServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings SetOutput(this AzurePostgresServerLogsListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings ResetOutput(this AzurePostgresServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings SetQuery(this AzurePostgresServerLogsListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings ResetQuery(this AzurePostgresServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerLogsListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings SetVerbose(this AzurePostgresServerLogsListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerLogsListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings ResetVerbose(this AzurePostgresServerLogsListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -5680,6 +5224,462 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzurePostgresServerFirewallRuleUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzurePostgresServerFirewallRuleUpdateSettings ResetVerbose(this AzurePostgresServerFirewallRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzurePostgresServerConfigurationListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzurePostgresTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzurePostgresServerConfigurationListSettingsExtensions
+    {
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationListSettings SetResourceGroup(this AzurePostgresServerConfigurationListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationListSettings ResetResourceGroup(this AzurePostgresServerConfigurationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationListSettings SetServerName(this AzurePostgresServerConfigurationListSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationListSettings ResetServerName(this AzurePostgresServerConfigurationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationListSettings SetDebug(this AzurePostgresServerConfigurationListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationListSettings ResetDebug(this AzurePostgresServerConfigurationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationListSettings SetHelp(this AzurePostgresServerConfigurationListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationListSettings ResetHelp(this AzurePostgresServerConfigurationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationListSettings SetOutput(this AzurePostgresServerConfigurationListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationListSettings ResetOutput(this AzurePostgresServerConfigurationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationListSettings SetQuery(this AzurePostgresServerConfigurationListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationListSettings ResetQuery(this AzurePostgresServerConfigurationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationListSettings SetVerbose(this AzurePostgresServerConfigurationListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationListSettings ResetVerbose(this AzurePostgresServerConfigurationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzurePostgresServerConfigurationSetSettingsExtensions
+    /// <summary><p>Used within <see cref="AzurePostgresTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzurePostgresServerConfigurationSetSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationSetSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationSetSettings SetName(this AzurePostgresServerConfigurationSetSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationSetSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationSetSettings ResetName(this AzurePostgresServerConfigurationSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationSetSettings SetResourceGroup(this AzurePostgresServerConfigurationSetSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationSetSettings ResetResourceGroup(this AzurePostgresServerConfigurationSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationSetSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationSetSettings SetServerName(this AzurePostgresServerConfigurationSetSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationSetSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationSetSettings ResetServerName(this AzurePostgresServerConfigurationSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Value
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationSetSettings.Value"/>.</em></p><p>Value of the configuration. If not provided, configuration value will be set to default.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationSetSettings SetValue(this AzurePostgresServerConfigurationSetSettings toolSettings, string value)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Value = value;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationSetSettings.Value"/>.</em></p><p>Value of the configuration. If not provided, configuration value will be set to default.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationSetSettings ResetValue(this AzurePostgresServerConfigurationSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Value = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationSetSettings SetDebug(this AzurePostgresServerConfigurationSetSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationSetSettings ResetDebug(this AzurePostgresServerConfigurationSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationSetSettings SetHelp(this AzurePostgresServerConfigurationSetSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationSetSettings ResetHelp(this AzurePostgresServerConfigurationSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationSetSettings SetOutput(this AzurePostgresServerConfigurationSetSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationSetSettings ResetOutput(this AzurePostgresServerConfigurationSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationSetSettings SetQuery(this AzurePostgresServerConfigurationSetSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationSetSettings ResetQuery(this AzurePostgresServerConfigurationSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationSetSettings SetVerbose(this AzurePostgresServerConfigurationSetSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationSetSettings ResetVerbose(this AzurePostgresServerConfigurationSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzurePostgresServerConfigurationShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzurePostgresTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzurePostgresServerConfigurationShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationShowSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationShowSettings SetName(this AzurePostgresServerConfigurationShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationShowSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationShowSettings ResetName(this AzurePostgresServerConfigurationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationShowSettings SetResourceGroup(this AzurePostgresServerConfigurationShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationShowSettings ResetResourceGroup(this AzurePostgresServerConfigurationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationShowSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationShowSettings SetServerName(this AzurePostgresServerConfigurationShowSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationShowSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationShowSettings ResetServerName(this AzurePostgresServerConfigurationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationShowSettings SetDebug(this AzurePostgresServerConfigurationShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationShowSettings ResetDebug(this AzurePostgresServerConfigurationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationShowSettings SetHelp(this AzurePostgresServerConfigurationShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationShowSettings ResetHelp(this AzurePostgresServerConfigurationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationShowSettings SetOutput(this AzurePostgresServerConfigurationShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationShowSettings ResetOutput(this AzurePostgresServerConfigurationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationShowSettings SetQuery(this AzurePostgresServerConfigurationShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationShowSettings ResetQuery(this AzurePostgresServerConfigurationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzurePostgresServerConfigurationShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationShowSettings SetVerbose(this AzurePostgresServerConfigurationShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzurePostgresServerConfigurationShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzurePostgresServerConfigurationShowSettings ResetVerbose(this AzurePostgresServerConfigurationShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
