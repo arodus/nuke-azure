@@ -6,7 +6,7 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/container.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/container.yml"
   ],
   "name": "AzureContainer",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/container?view=azure-cli-latest",
@@ -156,6 +156,14 @@
             "format": "--secrets-mount-path {value}",
             "secret": true,
             "help": "The path within the container where the secrets volume should be mounted. Must not contain colon ':'."
+          },
+          {
+            "name": "SecureEnvironmentVariables",
+            "type": "Dictionary<string,string>",
+            "format": "--secure-environment-variables {value}",
+            "itemFormat": "{key}={value}",
+            "separator": " ",
+            "help": "A list of secure environment variable for the container. Space-separated values in 'key=value' format."
           },
           {
             "name": "AzureFileVolumeAccountKey",

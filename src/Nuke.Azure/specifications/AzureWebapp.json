@@ -6,23 +6,23 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/webapp.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/webapp/auth.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/webapp/config.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/webapp/deployment.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/webapp/identity.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/webapp/log.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/webapp/traffic-routing.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/webapp/config/appsettings.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/webapp/config/backup.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/webapp/config/connection-string.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/webapp/config/container.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/webapp/config/hostname.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/webapp/config/ssl.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/webapp/deployment/container.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/webapp/deployment/slot.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/webapp/deployment/source.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/webapp/deployment/user.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/webapp.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/webapp/traffic-routing.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/webapp/log.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/webapp/identity.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/webapp/auth.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/webapp/config.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/webapp/deployment.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/webapp/config/connection-string.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/webapp/config/appsettings.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/webapp/config/container.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/webapp/config/backup.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/webapp/config/hostname.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/webapp/config/ssl.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/webapp/deployment/container.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/webapp/deployment/user.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/webapp/deployment/slot.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/webapp/deployment/source.yml"
   ],
   "name": "AzureWebapp",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest",
@@ -38,7 +38,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "ResourceGroup",
@@ -144,7 +144,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "ResourceGroup",
@@ -216,7 +216,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "ResourceGroup",
@@ -242,7 +242,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "ResourceGroup",
@@ -268,7 +268,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "ResourceGroup",
@@ -294,7 +294,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "ResourceGroup",
@@ -320,7 +320,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "ResourceGroup",
@@ -398,6 +398,314 @@
       }
     },
     {
+      "postfix": "TrafficRoutingClear",
+      "definiteArgument": "webapp traffic-routing clear",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TrafficRoutingSet",
+      "definiteArgument": "webapp traffic-routing set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Distribution",
+            "type": "string",
+            "format": "--distribution {value}",
+            "help": "Space-separated slot routings in a format of &lt;slot-name&gt;=&lt;percentage&gt; e.g. staging=50. Unused traffic percentage will go to the Production slot."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TrafficRoutingShow",
+      "definiteArgument": "webapp traffic-routing show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LogConfig",
+      "definiteArgument": "webapp log config",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ApplicationLogging",
+            "type": "bool",
+            "format": "--application-logging",
+            "help": "Configure application logging to file system."
+          },
+          {
+            "name": "DetailedErrorMessages",
+            "type": "bool",
+            "format": "--detailed-error-messages",
+            "help": "Configure detailed error messages."
+          },
+          {
+            "name": "DockerContainerLogging",
+            "type": "WebappLogConfigDockerContainerLogging",
+            "format": "--docker-container-logging {value}",
+            "help": "Configure gathering STDOUT and STDERR output from container."
+          },
+          {
+            "name": "FailedRequestTracing",
+            "type": "bool",
+            "format": "--failed-request-tracing",
+            "help": "Configure failed request tracing."
+          },
+          {
+            "name": "Level",
+            "type": "WebappLogConfigLevel",
+            "format": "--level {value}",
+            "help": "Logging level."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "WebServerLogging",
+            "type": "WebappLogConfigDockerContainerLogging",
+            "format": "--web-server-logging {value}",
+            "help": "Configure Web server logging."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LogDownload",
+      "definiteArgument": "webapp log download",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "LogFile",
+            "type": "string",
+            "format": "--log-file {value}",
+            "help": "The downloaded zipped log file path."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LogShow",
+      "definiteArgument": "webapp log show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LogTail",
+      "definiteArgument": "webapp log tail",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Provider",
+            "type": "string",
+            "format": "--provider {value}",
+            "help": "By default all live traces configured by 'az webapp log config' will be shown, but you can scope to certain providers/folders, e.g. 'application', 'http', etc. For details, check out <a href=\"https://github.com/projectkudu/kudu/wiki/Diagnostic-Log-Stream\">https://github.com/projectkudu/kudu/wiki/Diagnostic-Log-Stream</a>."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "IdentityAssign",
+      "definiteArgument": "webapp identity assign",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Role",
+            "type": "string",
+            "format": "--role {value}",
+            "help": "Role name or id the managed identity will be assigned."
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "format": "--scope {value}",
+            "help": "The scope the managed identity has access to."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "IdentityRemove",
+      "definiteArgument": "webapp identity remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "IdentityShow",
+      "definiteArgument": "webapp identity show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "AuthShow",
       "definiteArgument": "webapp auth show",
       "settingsClass": {
@@ -406,7 +714,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "ResourceGroup",
@@ -432,7 +740,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "ResourceGroup",
@@ -583,7 +891,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "ResourceGroup",
@@ -699,7 +1007,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "ResourceGroup",
@@ -725,7 +1033,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "ResourceGroup",
@@ -743,15 +1051,15 @@
       }
     },
     {
-      "postfix": "IdentityAssign",
-      "definiteArgument": "webapp identity assign",
+      "postfix": "ConfigConnectionStringDelete",
+      "definiteArgument": "webapp config connection-string delete",
       "settingsClass": {
         "properties": [
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "ResourceGroup",
@@ -760,16 +1068,10 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Role",
+            "name": "SettingNames",
             "type": "string",
-            "format": "--role {value}",
-            "help": "Role name or id the managed identity will be assigned."
-          },
-          {
-            "name": "Scope",
-            "type": "string",
-            "format": "--scope {value}",
-            "help": "The scope the managed identity has access to."
+            "format": "--setting-names {value}",
+            "help": "Space-separated connection-string names."
           },
           {
             "name": "Slot",
@@ -781,41 +1083,15 @@
       }
     },
     {
-      "postfix": "IdentityRemove",
-      "definiteArgument": "webapp identity remove",
+      "postfix": "ConfigConnectionStringList",
+      "definiteArgument": "webapp config connection-string list",
       "settingsClass": {
         "properties": [
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "IdentityShow",
-      "definiteArgument": "webapp identity show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "ResourceGroup",
@@ -833,15 +1109,21 @@
       }
     },
     {
-      "postfix": "LogConfig",
-      "definiteArgument": "webapp log config",
+      "postfix": "ConfigConnectionStringSet",
+      "definiteArgument": "webapp config connection-string set",
       "settingsClass": {
         "properties": [
+          {
+            "name": "ConnectionStringType",
+            "type": "WebappConfigConnectionStringSetConnectionStringType",
+            "format": "--connection-string-type {value}",
+            "help": "Connection string type."
+          },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "ResourceGroup",
@@ -850,34 +1132,10 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "ApplicationLogging",
-            "type": "bool",
-            "format": "--application-logging",
-            "help": "Configure application logging to file system."
-          },
-          {
-            "name": "DetailedErrorMessages",
-            "type": "bool",
-            "format": "--detailed-error-messages",
-            "help": "Configure detailed error messages."
-          },
-          {
-            "name": "DockerContainerLogging",
-            "type": "WebappLogConfigDockerContainerLogging",
-            "format": "--docker-container-logging {value}",
-            "help": "Configure gathering STDOUT and STDERR output from container."
-          },
-          {
-            "name": "FailedRequestTracing",
-            "type": "bool",
-            "format": "--failed-request-tracing",
-            "help": "Configure failed request tracing."
-          },
-          {
-            "name": "Level",
-            "type": "WebappLogConfigLevel",
-            "format": "--level {value}",
-            "help": "Logging level."
+            "name": "Settings",
+            "type": "string",
+            "format": "--settings {value}",
+            "help": "Space-separated connection-string in a format of &lt;name&gt;=&lt;value&gt;."
           },
           {
             "name": "Slot",
@@ -886,166 +1144,10 @@
             "help": "The name of the slot. Default to the productions slot if not specified."
           },
           {
-            "name": "WebServerLogging",
-            "type": "WebappLogConfigDockerContainerLogging",
-            "format": "--web-server-logging {value}",
-            "help": "Configure Web server logging."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LogDownload",
-      "definiteArgument": "webapp log download",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
+            "name": "SlotSettings",
             "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "LogFile",
-            "type": "string",
-            "format": "--log-file {value}",
-            "help": "The downloaded zipped log file path."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LogShow",
-      "definiteArgument": "webapp log show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LogTail",
-      "definiteArgument": "webapp log tail",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Provider",
-            "type": "string",
-            "format": "--provider {value}",
-            "help": "By default all live traces configured by 'az webapp log config' will be shown, but you can scope to certain providers/folders, e.g. 'application', 'http', etc. For details, check out <a href=\"https://github.com/projectkudu/kudu/wiki/Diagnostic-Log-Stream\">https://github.com/projectkudu/kudu/wiki/Diagnostic-Log-Stream</a>."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TrafficRoutingClear",
-      "definiteArgument": "webapp traffic-routing clear",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TrafficRoutingSet",
-      "definiteArgument": "webapp traffic-routing set",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Distribution",
-            "type": "string",
-            "format": "--distribution {value}",
-            "help": "Space-separated slot routings in a format of &lt;slot-name&gt;=&lt;percentage&gt; e.g. staging=50. Unused traffic percentage will go to the Production slot."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TrafficRoutingShow",
-      "definiteArgument": "webapp traffic-routing show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+            "format": "--slot-settings {value}",
+            "help": "Space-separated slot connection-string in a format of &lt;name&gt;=&lt;value&gt;."
           }
         ]
       }
@@ -1059,7 +1161,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "ResourceGroup",
@@ -1091,7 +1193,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "ResourceGroup",
@@ -1117,7 +1219,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "ResourceGroup",
@@ -1142,6 +1244,133 @@
             "type": "string",
             "format": "--slot-settings {value}",
             "help": "Space-separated slot appsettings in a format of &lt;name&gt;=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigContainerDelete",
+      "definiteArgument": "webapp config container delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigContainerSet",
+      "definiteArgument": "webapp config container set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "DockerCustomImageName",
+            "type": "string",
+            "format": "--docker-custom-image-name {value}",
+            "help": "The container custom image name and optionally the tag name."
+          },
+          {
+            "name": "DockerRegistryServerPassword",
+            "type": "string",
+            "format": "--docker-registry-server-password {value}",
+            "secret": true,
+            "help": "The container registry server password."
+          },
+          {
+            "name": "DockerRegistryServerUrl",
+            "type": "string",
+            "format": "--docker-registry-server-url {value}",
+            "help": "The container registry server url."
+          },
+          {
+            "name": "DockerRegistryServerUser",
+            "type": "string",
+            "format": "--docker-registry-server-user {value}",
+            "help": "The container registry server username."
+          },
+          {
+            "name": "EnableAppServiceStorage",
+            "type": "bool",
+            "format": "--enable-app-service-storage",
+            "help": "Enables platform storage (custom container only)."
+          },
+          {
+            "name": "MulticontainerConfigFile",
+            "type": "string",
+            "format": "--multicontainer-config-file {value}",
+            "help": "Config file for multicontainer apps."
+          },
+          {
+            "name": "MulticontainerConfigType",
+            "type": "WebappMulticontainerConfigType",
+            "format": "--multicontainer-config-type {value}",
+            "help": "Config type."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigContainerShow",
+      "definiteArgument": "webapp config container show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ShowMulticontainerConfig",
+            "type": "string",
+            "format": "--show-multicontainer-config {value}",
+            "help": "Shows decoded config if a multicontainer config is set."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "help": "The name of the slot. Default to the productions slot if not specified."
           }
         ]
       }
@@ -1403,235 +1632,6 @@
       }
     },
     {
-      "postfix": "ConfigConnectionStringDelete",
-      "definiteArgument": "webapp config connection-string delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "SettingNames",
-            "type": "string",
-            "format": "--setting-names {value}",
-            "help": "Space-separated connection-string names."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigConnectionStringList",
-      "definiteArgument": "webapp config connection-string list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigConnectionStringSet",
-      "definiteArgument": "webapp config connection-string set",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ConnectionStringType",
-            "type": "WebappConfigConnectionStringSetConnectionStringType",
-            "format": "--connection-string-type {value}",
-            "help": "Connection string type."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Settings",
-            "type": "string",
-            "format": "--settings {value}",
-            "help": "Space-separated connection-string in a format of &lt;name&gt;=&lt;value&gt;."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          },
-          {
-            "name": "SlotSettings",
-            "type": "string",
-            "format": "--slot-settings {value}",
-            "help": "Space-separated slot connection-string in a format of &lt;name&gt;=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigContainerDelete",
-      "definiteArgument": "webapp config container delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigContainerSet",
-      "definiteArgument": "webapp config container set",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "DockerCustomImageName",
-            "type": "string",
-            "format": "--docker-custom-image-name {value}",
-            "help": "The container custom image name and optionally the tag name."
-          },
-          {
-            "name": "DockerRegistryServerPassword",
-            "type": "string",
-            "format": "--docker-registry-server-password {value}",
-            "secret": true,
-            "help": "The container registry server password."
-          },
-          {
-            "name": "DockerRegistryServerUrl",
-            "type": "string",
-            "format": "--docker-registry-server-url {value}",
-            "help": "The container registry server url."
-          },
-          {
-            "name": "DockerRegistryServerUser",
-            "type": "string",
-            "format": "--docker-registry-server-user {value}",
-            "help": "The container registry server username."
-          },
-          {
-            "name": "EnableAppServiceStorage",
-            "type": "bool",
-            "format": "--enable-app-service-storage",
-            "help": "Enables platform storage (custom container only)."
-          },
-          {
-            "name": "MulticontainerConfigFile",
-            "type": "string",
-            "format": "--multicontainer-config-file {value}",
-            "help": "Config file for multicontainer apps."
-          },
-          {
-            "name": "MulticontainerConfigType",
-            "type": "WebappMulticontainerConfigType",
-            "format": "--multicontainer-config-type {value}",
-            "help": "Config type."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigContainerShow",
-      "definiteArgument": "webapp config container show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ShowMulticontainerConfig",
-            "type": "string",
-            "format": "--show-multicontainer-config {value}",
-            "help": "Shows decoded config if a multicontainer config is set."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          }
-        ]
-      }
-    },
-    {
       "postfix": "ConfigHostnameAdd",
       "definiteArgument": "webapp config hostname add",
       "settingsClass": {
@@ -1730,7 +1730,7 @@
             "name": "WebappName",
             "type": "string",
             "format": "--webapp-name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "Slot",
@@ -1756,7 +1756,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "ResourceGroup",
@@ -1828,7 +1828,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "ResourceGroup",
@@ -1867,7 +1867,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "ResourceGroup",
@@ -1893,7 +1893,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "ResourceGroup",
@@ -1919,7 +1919,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "ResourceGroup",
@@ -1935,6 +1935,32 @@
           }
         ]
       }
+    },
+    {
+      "postfix": "DeploymentUserSet",
+      "definiteArgument": "webapp deployment user set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "UserName",
+            "type": "string",
+            "format": "--user-name {value}",
+            "help": "User name."
+          },
+          {
+            "name": "Password",
+            "type": "string",
+            "format": "--password {value}",
+            "secret": true,
+            "help": "Password, will prompt if not specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentUserShow",
+      "definiteArgument": "webapp deployment user show",
+      "settingsClass": {}
     },
     {
       "postfix": "DeploymentSlotAutoSwap",
@@ -2099,7 +2125,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "RepoUrl",
@@ -2222,7 +2248,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "ResourceGroup",
@@ -2248,7 +2274,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "ResourceGroup",
@@ -2280,7 +2306,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "ResourceGroup",
@@ -2306,7 +2332,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "ResourceGroup",
@@ -2332,7 +2358,7 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the web. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+            "help": "Name of the webapp. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
           },
           {
             "name": "ResourceGroup",
@@ -2362,32 +2388,6 @@
           }
         ]
       }
-    },
-    {
-      "postfix": "DeploymentUserSet",
-      "definiteArgument": "webapp deployment user set",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "UserName",
-            "type": "string",
-            "format": "--user-name {value}",
-            "help": "User name."
-          },
-          {
-            "name": "Password",
-            "type": "string",
-            "format": "--password {value}",
-            "secret": true,
-            "help": "Password, will prompt if not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DeploymentUserShow",
-      "definiteArgument": "webapp deployment user show",
-      "settingsClass": {}
     }
   ],
   "commonTaskProperties": [
@@ -2431,6 +2431,22 @@
       ]
     },
     {
+      "name": "WebappLogConfigDockerContainerLogging",
+      "values": [
+        "filesystem",
+        "off"
+      ]
+    },
+    {
+      "name": "WebappLogConfigLevel",
+      "values": [
+        "error",
+        "information",
+        "verbose",
+        "warning"
+      ]
+    },
+    {
       "name": "WebappAuthUpdateAction",
       "values": [
         "allowanonymous",
@@ -2450,31 +2466,6 @@
       ]
     },
     {
-      "name": "WebappLogConfigDockerContainerLogging",
-      "values": [
-        "filesystem",
-        "off"
-      ]
-    },
-    {
-      "name": "WebappLogConfigLevel",
-      "values": [
-        "error",
-        "information",
-        "verbose",
-        "warning"
-      ]
-    },
-    {
-      "name": "WebappConfigBackupDbType",
-      "values": [
-        "localmysql",
-        "mysql",
-        "postgresql",
-        "sqlazure"
-      ]
-    },
-    {
       "name": "WebappConfigConnectionStringSetConnectionStringType",
       "values": [
         "apihub",
@@ -2488,6 +2479,15 @@
         "sqlazure",
         "sqlserver",
         "servicebus"
+      ]
+    },
+    {
+      "name": "WebappConfigBackupDbType",
+      "values": [
+        "localmysql",
+        "mysql",
+        "postgresql",
+        "sqlazure"
       ]
     },
     {

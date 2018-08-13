@@ -6,29 +6,29 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/dla.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/dla/account.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/dla/catalog.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/dla/job.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/dla/account/blob-storage.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/dla/account/compute-policy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/dla/account/data-lake-store.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/dla/account/firewall.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/dla/catalog/assembly.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/dla/catalog/credential.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/dla/catalog/database.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/dla/catalog/external-data-source.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/dla/catalog/package.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/dla/catalog/procedure.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/dla/catalog/schema.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/dla/catalog/table-partition.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/dla/catalog/table-stats.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/dla/catalog/table-type.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/dla/catalog/table.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/dla/catalog/tvf.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/dla/catalog/view.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/dla/job/pipeline.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/dla/job/recurrence.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/dla.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/dla/catalog.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/dla/job.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/dla/account.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/dla/job/recurrence.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/dla/job/pipeline.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/dla/catalog/view.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/dla/catalog/tvf.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/dla/catalog/credential.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/dla/catalog/schema.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/dla/catalog/table-stats.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/dla/catalog/external-data-source.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/dla/catalog/table.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/dla/catalog/table-partition.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/dla/catalog/assembly.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/dla/catalog/database.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/dla/catalog/package.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/dla/catalog/procedure.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/dla/catalog/table-type.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/dla/account/firewall.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/dla/account/compute-policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/dla/account/blob-storage.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/dla/account/data-lake-store.yml"
   ],
   "name": "AzureDla",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/dla?view=azure-cli-latest",
@@ -39,184 +39,6 @@
       "postfix": "",
       "definiteArgument": "dla",
       "settingsClass": {}
-    },
-    {
-      "postfix": "AccountCreate",
-      "definiteArgument": "dla account create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "DefaultDataLakeStore",
-            "type": "string",
-            "format": "--default-data-lake-store {value}",
-            "help": "The default Data Lake Store account to associate with the created account."
-          },
-          {
-            "name": "Location",
-            "type": "string",
-            "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
-          },
-          {
-            "name": "MaxDegreeOfParallelism",
-            "type": "string",
-            "format": "--max-degree-of-parallelism {value}",
-            "help": "The maximum degree of parallelism for this account."
-          },
-          {
-            "name": "MaxJobCount",
-            "type": "string",
-            "format": "--max-job-count {value}",
-            "help": "The maximum number of concurrent jobs for this account."
-          },
-          {
-            "name": "QueryStoreRetention",
-            "type": "string",
-            "format": "--query-store-retention {value}",
-            "help": "The number of days to retain job metadata."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Tier",
-            "type": "DlaAccountTier",
-            "format": "--tier {value}",
-            "help": "The desired commitment tier for this account to use."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountDelete",
-      "definiteArgument": "dla account delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountList",
-      "definiteArgument": "dla account list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountShow",
-      "definiteArgument": "dla account show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountUpdate",
-      "definiteArgument": "dla account update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "AllowAzureIps",
-            "type": "DlaAccountUpdateAllowAzureIps",
-            "format": "--allow-azure-ips {value}",
-            "help": "Allow or block IPs originating from Azure through the firewall."
-          },
-          {
-            "name": "FirewallState",
-            "type": "DlaAccountUpdateAllowAzureIps",
-            "format": "--firewall-state {value}",
-            "help": "Enable or disable existing firewall rules."
-          },
-          {
-            "name": "MaxDegreeOfParallelism",
-            "type": "string",
-            "format": "--max-degree-of-parallelism {value}",
-            "help": "The maximum degree of parallelism for this account."
-          },
-          {
-            "name": "MaxJobCount",
-            "type": "string",
-            "format": "--max-job-count {value}",
-            "help": "The maximum number of concurrent jobs for this account."
-          },
-          {
-            "name": "QueryStoreRetention",
-            "type": "string",
-            "format": "--query-store-retention {value}",
-            "help": "The number of days to retain job metadata."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Tier",
-            "type": "DlaAccountTier",
-            "format": "--tier {value}",
-            "help": "The desired commitment tier for this account to use."
-          }
-        ]
-      }
     },
     {
       "postfix": "Catalog",
@@ -456,46 +278,8 @@
       }
     },
     {
-      "postfix": "AccountBlobStorageAdd",
-      "definiteArgument": "dla account blob-storage add",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccessKey",
-            "type": "string",
-            "format": "--access-key {value}",
-            "help": "The access key associated with this Azure Storage account that will be used to connect to it."
-          },
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "StorageAccountName",
-            "type": "string",
-            "format": "--storage-account-name {value}",
-            "help": ""
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
-          },
-          {
-            "name": "Suffix",
-            "type": "string",
-            "format": "--suffix {value}",
-            "help": "The optional suffix for the storage account."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountBlobStorageDelete",
-      "definiteArgument": "dla account blob-storage delete",
+      "postfix": "AccountCreate",
+      "definiteArgument": "dla account create",
       "settingsClass": {
         "properties": [
           {
@@ -505,220 +289,59 @@
             "help": "Name of the Data Lake Analytics account."
           },
           {
-            "name": "StorageAccountName",
+            "name": "DefaultDataLakeStore",
             "type": "string",
-            "format": "--storage-account-name {value}",
-            "help": "The name of the Azure Storage account to remove."
+            "format": "--default-data-lake-store {value}",
+            "help": "The default Data Lake Store account to associate with the created account."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "MaxDegreeOfParallelism",
+            "type": "string",
+            "format": "--max-degree-of-parallelism {value}",
+            "help": "The maximum degree of parallelism for this account."
+          },
+          {
+            "name": "MaxJobCount",
+            "type": "string",
+            "format": "--max-job-count {value}",
+            "help": "The maximum number of concurrent jobs for this account."
+          },
+          {
+            "name": "QueryStoreRetention",
+            "type": "string",
+            "format": "--query-store-retention {value}",
+            "help": "The number of days to retain job metadata."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Tier",
+            "type": "DlaAccountTier",
+            "format": "--tier {value}",
+            "help": "The desired commitment tier for this account to use."
           }
         ]
       }
     },
     {
-      "postfix": "AccountBlobStorageList",
-      "definiteArgument": "dla account blob-storage list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "Count",
-            "type": "string",
-            "format": "--count {value}",
-            "help": "The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true."
-          },
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "help": "The OData filter. Optional."
-          },
-          {
-            "name": "Orderby",
-            "type": "List<string>",
-            "format": "--orderby {value}",
-            "separator": ",",
-            "help": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
-          },
-          {
-            "name": "Select",
-            "type": "string",
-            "format": "--select {value}",
-            "help": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional."
-          },
-          {
-            "name": "Skip",
-            "type": "string",
-            "format": "--skip {value}",
-            "help": "The number of items to skip over before returning elements."
-          },
-          {
-            "name": "Top",
-            "type": "string",
-            "format": "--top {value}",
-            "help": "Maximum number of items to return."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountBlobStorageShow",
-      "definiteArgument": "dla account blob-storage show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "StorageAccountName",
-            "type": "string",
-            "format": "--storage-account-name {value}",
-            "help": "The name of the Azure Storage account for which to retrieve the details."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountBlobStorageUpdate",
-      "definiteArgument": "dla account blob-storage update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccessKey",
-            "type": "string",
-            "format": "--access-key {value}",
-            "help": "The access key associated with this Azure Storage account that will be used to connect to it."
-          },
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "StorageAccountName",
-            "type": "string",
-            "format": "--storage-account-name {value}",
-            "help": ""
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
-          },
-          {
-            "name": "Suffix",
-            "type": "string",
-            "format": "--suffix {value}",
-            "help": "The optional suffix for the storage account."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountComputePolicyCreate",
-      "definiteArgument": "dla account compute-policy create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "ComputePolicyName",
-            "type": "string",
-            "format": "--compute-policy-name {value}",
-            "help": "The name of the compute policy to create."
-          },
-          {
-            "name": "ObjectId",
-            "type": "string",
-            "format": "--object-id {value}",
-            "help": "The Azure Active Directory object ID of the user, group, or service principal to apply the policy to."
-          },
-          {
-            "name": "ObjectType",
-            "type": "string",
-            "format": "--object-type {value}",
-            "help": "The Azure Active Directory object type associated with the supplied object ID."
-          },
-          {
-            "name": "MaxDopPerJob",
-            "type": "string",
-            "format": "--max-dop-per-job {value}",
-            "help": "The maximum degree of parallelism allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified."
-          },
-          {
-            "name": "MinPriorityPerJob",
-            "type": "string",
-            "format": "--min-priority-per-job {value}",
-            "help": "The minimum priority allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountComputePolicyDelete",
-      "definiteArgument": "dla account compute-policy delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "ComputePolicyName",
-            "type": "string",
-            "format": "--compute-policy-name {value}",
-            "help": "The name of the compute policy to delete."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountComputePolicyList",
-      "definiteArgument": "dla account compute-policy list",
+      "postfix": "AccountDelete",
+      "definiteArgument": "dla account delete",
       "settingsClass": {
         "properties": [
           {
@@ -737,277 +360,22 @@
       }
     },
     {
-      "postfix": "AccountComputePolicyShow",
-      "definiteArgument": "dla account compute-policy show",
+      "postfix": "AccountList",
+      "definiteArgument": "dla account list",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "ComputePolicyName",
-            "type": "string",
-            "format": "--compute-policy-name {value}",
-            "help": "The name of the compute policy to retrieve."
-          },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           }
         ]
       }
     },
     {
-      "postfix": "AccountComputePolicyUpdate",
-      "definiteArgument": "dla account compute-policy update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "ComputePolicyName",
-            "type": "string",
-            "format": "--compute-policy-name {value}",
-            "help": "The name of the compute policy to update."
-          },
-          {
-            "name": "MaxDopPerJob",
-            "type": "string",
-            "format": "--max-dop-per-job {value}",
-            "help": "The maximum degree of parallelism allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified."
-          },
-          {
-            "name": "MinPriorityPerJob",
-            "type": "string",
-            "format": "--min-priority-per-job {value}",
-            "help": "The minimum priority allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountDataLakeStoreAdd",
-      "definiteArgument": "dla account data-lake-store add",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "DataLakeStoreAccountName",
-            "type": "string",
-            "format": "--data-lake-store-account-name {value}",
-            "help": "The name of the Data Lake Store account to add."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
-          },
-          {
-            "name": "Suffix",
-            "type": "string",
-            "format": "--suffix {value}",
-            "help": "The optional suffix for the Data Lake Store account."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountDataLakeStoreDelete",
-      "definiteArgument": "dla account data-lake-store delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "DataLakeStoreAccountName",
-            "type": "string",
-            "format": "--data-lake-store-account-name {value}",
-            "help": "The name of the Data Lake Store account to remove."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountDataLakeStoreList",
-      "definiteArgument": "dla account data-lake-store list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "Count",
-            "type": "string",
-            "format": "--count {value}",
-            "help": "The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true."
-          },
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "help": "OData filter. Optional."
-          },
-          {
-            "name": "Orderby",
-            "type": "List<string>",
-            "format": "--orderby {value}",
-            "separator": ",",
-            "help": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
-          },
-          {
-            "name": "Select",
-            "type": "string",
-            "format": "--select {value}",
-            "help": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional."
-          },
-          {
-            "name": "Skip",
-            "type": "string",
-            "format": "--skip {value}",
-            "help": "The number of items to skip over before returning elements."
-          },
-          {
-            "name": "Top",
-            "type": "string",
-            "format": "--top {value}",
-            "help": "Maximum number of items to return."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountDataLakeStoreShow",
-      "definiteArgument": "dla account data-lake-store show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "DataLakeStoreAccountName",
-            "type": "string",
-            "format": "--data-lake-store-account-name {value}",
-            "help": "The name of the Data Lake Store account to retrieve."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountFirewallCreate",
-      "definiteArgument": "dla account firewall create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "EndIpAddress",
-            "type": "string",
-            "format": "--end-ip-address {value}",
-            "help": "The end of the valid IP range for the firewall rule."
-          },
-          {
-            "name": "FirewallRuleName",
-            "type": "string",
-            "format": "--firewall-rule-name {value}",
-            "help": "The name of the firewall rule."
-          },
-          {
-            "name": "StartIpAddress",
-            "type": "string",
-            "format": "--start-ip-address {value}",
-            "help": "The start of the valid IP range for the firewall rule."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountFirewallDelete",
-      "definiteArgument": "dla account firewall delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "FirewallRuleName",
-            "type": "string",
-            "format": "--firewall-rule-name {value}",
-            "help": "The name of the firewall rule to delete."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountFirewallList",
-      "definiteArgument": "dla account firewall list",
+      "postfix": "AccountShow",
+      "definiteArgument": "dla account show",
       "settingsClass": {
         "properties": [
           {
@@ -1026,8 +394,8 @@
       }
     },
     {
-      "postfix": "AccountFirewallShow",
-      "definiteArgument": "dla account firewall show",
+      "postfix": "AccountUpdate",
+      "definiteArgument": "dla account update",
       "settingsClass": {
         "properties": [
           {
@@ -1037,23 +405,59 @@
             "help": "Name of the Data Lake Analytics account."
           },
           {
-            "name": "FirewallRuleName",
+            "name": "AllowAzureIps",
+            "type": "DlaAccountUpdateAllowAzureIps",
+            "format": "--allow-azure-ips {value}",
+            "help": "Allow or block IPs originating from Azure through the firewall."
+          },
+          {
+            "name": "FirewallState",
+            "type": "DlaAccountUpdateAllowAzureIps",
+            "format": "--firewall-state {value}",
+            "help": "Enable or disable existing firewall rules."
+          },
+          {
+            "name": "MaxDegreeOfParallelism",
             "type": "string",
-            "format": "--firewall-rule-name {value}",
-            "help": "The name of the firewall rule to retrieve."
+            "format": "--max-degree-of-parallelism {value}",
+            "help": "The maximum degree of parallelism for this account."
+          },
+          {
+            "name": "MaxJobCount",
+            "type": "string",
+            "format": "--max-job-count {value}",
+            "help": "The maximum number of concurrent jobs for this account."
+          },
+          {
+            "name": "QueryStoreRetention",
+            "type": "string",
+            "format": "--query-store-retention {value}",
+            "help": "The number of days to retain job metadata."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
             "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Tier",
+            "type": "DlaAccountTier",
+            "format": "--tier {value}",
+            "help": "The desired commitment tier for this account to use."
           }
         ]
       }
     },
     {
-      "postfix": "AccountFirewallUpdate",
-      "definiteArgument": "dla account firewall update",
+      "postfix": "JobRecurrenceList",
+      "definiteArgument": "dla job recurrence list",
       "settingsClass": {
         "properties": [
           {
@@ -1063,35 +467,113 @@
             "help": "Name of the Data Lake Analytics account."
           },
           {
-            "name": "FirewallRuleName",
+            "name": "EndDateTime",
             "type": "string",
-            "format": "--firewall-rule-name {value}",
-            "help": "The name of the firewall rule to update."
+            "format": "--end-date-time {value}",
+            "help": "The end date for when to get the list of recurrences. The startDateTime and endDateTime can be no more than 30 days apart."
           },
           {
-            "name": "EndIpAddress",
+            "name": "StartDateTime",
             "type": "string",
-            "format": "--end-ip-address {value}",
-            "help": "The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
-          },
-          {
-            "name": "StartIpAddress",
-            "type": "string",
-            "format": "--start-ip-address {value}",
-            "help": "The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol."
+            "format": "--start-date-time {value}",
+            "help": "The start date for when to get the list of recurrences. The startDateTime and endDateTime can be no more than 30 days apart."
           }
         ]
       }
     },
     {
-      "postfix": "CatalogAssemblyList",
-      "definiteArgument": "dla catalog assembly list",
+      "postfix": "JobRecurrenceShow",
+      "definiteArgument": "dla job recurrence show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "RecurrenceIdentity",
+            "type": "string",
+            "format": "--recurrence-identity {value}",
+            "help": "Recurrence ID."
+          },
+          {
+            "name": "EndDateTime",
+            "type": "string",
+            "format": "--end-date-time {value}",
+            "help": "The end date for when to get recurrence and aggregate its data. The startDateTime and endDateTime can be no more than 30 days apart."
+          },
+          {
+            "name": "StartDateTime",
+            "type": "string",
+            "format": "--start-date-time {value}",
+            "help": "The start date for when to get the recurrence and aggregate its data. The startDateTime and endDateTime can be no more than 30 days apart."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "JobPipelineList",
+      "definiteArgument": "dla job pipeline list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "EndDateTime",
+            "type": "string",
+            "format": "--end-date-time {value}",
+            "help": "The end date for when to get the list of pipelines. The startDateTime and endDateTime can be no more than 30 days apart."
+          },
+          {
+            "name": "StartDateTime",
+            "type": "string",
+            "format": "--start-date-time {value}",
+            "help": "The start date for when to get the list of pipelines. The startDateTime and endDateTime can be no more than 30 days apart."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "JobPipelineShow",
+      "definiteArgument": "dla job pipeline show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "PipelineIdentity",
+            "type": "string",
+            "format": "--pipeline-identity {value}",
+            "help": "Pipeline ID."
+          },
+          {
+            "name": "EndDateTime",
+            "type": "string",
+            "format": "--end-date-time {value}",
+            "help": "The end date for when to get the pipeline and aggregate its data. The startDateTime and endDateTime can be no more than 30 days apart."
+          },
+          {
+            "name": "StartDateTime",
+            "type": "string",
+            "format": "--start-date-time {value}",
+            "help": "The start date for when to get the pipeline and aggregate its data. The startDateTime and endDateTime can be no more than 30 days apart."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogViewList",
+      "definiteArgument": "dla catalog view list",
       "settingsClass": {
         "properties": [
           {
@@ -1104,51 +586,20 @@
             "name": "DatabaseName",
             "type": "string",
             "format": "--database-name {value}",
-            "help": "The name of the database containing the assembly."
+            "help": "The name of the database."
           },
           {
-            "name": "Count",
+            "name": "SchemaName",
             "type": "string",
-            "format": "--count {value}",
-            "help": "The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true."
-          },
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "help": "OData filter. Optional."
-          },
-          {
-            "name": "Orderby",
-            "type": "List<string>",
-            "format": "--orderby {value}",
-            "separator": ",",
-            "help": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional."
-          },
-          {
-            "name": "Select",
-            "type": "string",
-            "format": "--select {value}",
-            "help": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional."
-          },
-          {
-            "name": "Skip",
-            "type": "string",
-            "format": "--skip {value}",
-            "help": "The number of items to skip over before returning elements."
-          },
-          {
-            "name": "Top",
-            "type": "string",
-            "format": "--top {value}",
-            "help": "Maximum number of items to return."
+            "format": "--schema-name {value}",
+            "help": "The name of the schema associated with the views to list."
           }
         ]
       }
     },
     {
-      "postfix": "CatalogAssemblyShow",
-      "definiteArgument": "dla catalog assembly show",
+      "postfix": "CatalogViewShow",
+      "definiteArgument": "dla catalog view show",
       "settingsClass": {
         "properties": [
           {
@@ -1158,16 +609,80 @@
             "help": "Name of the Data Lake Analytics account."
           },
           {
-            "name": "AssemblyName",
+            "name": "DatabaseName",
             "type": "string",
-            "format": "--assembly-name {value}",
-            "help": "The name of the assembly."
+            "format": "--database-name {value}",
+            "help": "The name of the database containing the view."
+          },
+          {
+            "name": "SchemaName",
+            "type": "string",
+            "format": "--schema-name {value}",
+            "help": "The name of the schema containing the view."
+          },
+          {
+            "name": "ViewName",
+            "type": "string",
+            "format": "--view-name {value}",
+            "help": "The name of the view."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogTvfList",
+      "definiteArgument": "dla catalog tvf list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
           },
           {
             "name": "DatabaseName",
             "type": "string",
             "format": "--database-name {value}",
-            "help": "The name of the database containing the assembly."
+            "help": "The name of the database."
+          },
+          {
+            "name": "SchemaName",
+            "type": "string",
+            "format": "--schema-name {value}",
+            "help": "The name of the schema assocated with table valued functions to list."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogTvfShow",
+      "definiteArgument": "dla catalog tvf show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "help": "The name of the database containing the table valued function."
+          },
+          {
+            "name": "SchemaName",
+            "type": "string",
+            "format": "--schema-name {value}",
+            "help": "The name of the schema containing the table valued function."
+          },
+          {
+            "name": "TableValuedFunctionName",
+            "type": "string",
+            "format": "--table-valued-function-name {value}",
+            "help": "The name of the tableValuedFunction."
           }
         ]
       }
@@ -1392,8 +907,8 @@
       }
     },
     {
-      "postfix": "CatalogDatabaseList",
-      "definiteArgument": "dla catalog database list",
+      "postfix": "CatalogSchemaList",
+      "definiteArgument": "dla catalog schema list",
       "settingsClass": {
         "properties": [
           {
@@ -1401,6 +916,12 @@
             "type": "string",
             "format": "--account {value}",
             "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "help": "The name of the database containing the schema."
           },
           {
             "name": "Count",
@@ -1443,8 +964,34 @@
       }
     },
     {
-      "postfix": "CatalogDatabaseShow",
-      "definiteArgument": "dla catalog database show",
+      "postfix": "CatalogSchemaShow",
+      "definiteArgument": "dla catalog schema show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "help": "The name of the database containing the schema."
+          },
+          {
+            "name": "SchemaName",
+            "type": "string",
+            "format": "--schema-name {value}",
+            "help": "The name of the schema."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogTableStatsList",
+      "definiteArgument": "dla catalog table-stats list",
       "settingsClass": {
         "properties": [
           {
@@ -1458,6 +1005,56 @@
             "type": "string",
             "format": "--database-name {value}",
             "help": "The name of the database."
+          },
+          {
+            "name": "SchemaName",
+            "type": "string",
+            "format": "--schema-name {value}",
+            "help": "The schema associated with the tables to list."
+          },
+          {
+            "name": "TableName",
+            "type": "string",
+            "format": "--table-name {value}",
+            "help": "The table to list statistics for. `--schema-name` must also be specified."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogTableStatsShow",
+      "definiteArgument": "dla catalog table-stats show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "help": "The name of the database containing the statistics."
+          },
+          {
+            "name": "SchemaName",
+            "type": "string",
+            "format": "--schema-name {value}",
+            "help": "The name of the schema containing the statistics."
+          },
+          {
+            "name": "StatisticsName",
+            "type": "string",
+            "format": "--statistics-name {value}",
+            "help": "The name of the table statistics."
+          },
+          {
+            "name": "TableName",
+            "type": "string",
+            "format": "--table-name {value}",
+            "help": "The name of the table containing the statistics."
           }
         ]
       }
@@ -1541,6 +1138,325 @@
             "type": "string",
             "format": "--external-data-source-name {value}",
             "help": "The name of the external data source."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogTableList",
+      "definiteArgument": "dla catalog table list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "help": "The name of the database."
+          },
+          {
+            "name": "SchemaName",
+            "type": "string",
+            "format": "--schema-name {value}",
+            "help": "The schema assocated with the tables to list."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogTableShow",
+      "definiteArgument": "dla catalog table show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "help": "The name of the database containing the table."
+          },
+          {
+            "name": "SchemaName",
+            "type": "string",
+            "format": "--schema-name {value}",
+            "help": "The name of the schema containing the table."
+          },
+          {
+            "name": "TableName",
+            "type": "string",
+            "format": "--table-name {value}",
+            "help": "The name of the table."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogTablePartitionList",
+      "definiteArgument": "dla catalog table-partition list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "help": "The name of the database containing the partitions."
+          },
+          {
+            "name": "SchemaName",
+            "type": "string",
+            "format": "--schema-name {value}",
+            "help": "The name of the schema containing the partitions."
+          },
+          {
+            "name": "TableName",
+            "type": "string",
+            "format": "--table-name {value}",
+            "help": "The name of the table containing the partitions."
+          },
+          {
+            "name": "Count",
+            "type": "string",
+            "format": "--count {value}",
+            "help": "The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "help": "OData filter. Optional."
+          },
+          {
+            "name": "Orderby",
+            "type": "List<string>",
+            "format": "--orderby {value}",
+            "separator": ",",
+            "help": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional."
+          },
+          {
+            "name": "Select",
+            "type": "string",
+            "format": "--select {value}",
+            "help": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional."
+          },
+          {
+            "name": "Skip",
+            "type": "string",
+            "format": "--skip {value}",
+            "help": "The number of items to skip over before returning elements."
+          },
+          {
+            "name": "Top",
+            "type": "string",
+            "format": "--top {value}",
+            "help": "Maximum number of items to return."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogTablePartitionShow",
+      "definiteArgument": "dla catalog table-partition show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "help": "The name of the database containing the partition."
+          },
+          {
+            "name": "PartitionName",
+            "type": "string",
+            "format": "--partition-name {value}",
+            "help": "The name of the table partition."
+          },
+          {
+            "name": "SchemaName",
+            "type": "string",
+            "format": "--schema-name {value}",
+            "help": "The name of the schema containing the partition."
+          },
+          {
+            "name": "TableName",
+            "type": "string",
+            "format": "--table-name {value}",
+            "help": "The name of the table containing the partition."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogAssemblyList",
+      "definiteArgument": "dla catalog assembly list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "help": "The name of the database containing the assembly."
+          },
+          {
+            "name": "Count",
+            "type": "string",
+            "format": "--count {value}",
+            "help": "The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "help": "OData filter. Optional."
+          },
+          {
+            "name": "Orderby",
+            "type": "List<string>",
+            "format": "--orderby {value}",
+            "separator": ",",
+            "help": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional."
+          },
+          {
+            "name": "Select",
+            "type": "string",
+            "format": "--select {value}",
+            "help": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional."
+          },
+          {
+            "name": "Skip",
+            "type": "string",
+            "format": "--skip {value}",
+            "help": "The number of items to skip over before returning elements."
+          },
+          {
+            "name": "Top",
+            "type": "string",
+            "format": "--top {value}",
+            "help": "Maximum number of items to return."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogAssemblyShow",
+      "definiteArgument": "dla catalog assembly show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "AssemblyName",
+            "type": "string",
+            "format": "--assembly-name {value}",
+            "help": "The name of the assembly."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "help": "The name of the database containing the assembly."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogDatabaseList",
+      "definiteArgument": "dla catalog database list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Count",
+            "type": "string",
+            "format": "--count {value}",
+            "help": "The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "help": "OData filter. Optional."
+          },
+          {
+            "name": "Orderby",
+            "type": "List<string>",
+            "format": "--orderby {value}",
+            "separator": ",",
+            "help": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional."
+          },
+          {
+            "name": "Select",
+            "type": "string",
+            "format": "--select {value}",
+            "help": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional."
+          },
+          {
+            "name": "Skip",
+            "type": "string",
+            "format": "--skip {value}",
+            "help": "The number of items to skip over before returning elements."
+          },
+          {
+            "name": "Top",
+            "type": "string",
+            "format": "--top {value}",
+            "help": "Maximum number of items to return."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CatalogDatabaseShow",
+      "definiteArgument": "dla catalog database show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "help": "The name of the database."
           }
         ]
       }
@@ -1736,266 +1652,6 @@
       }
     },
     {
-      "postfix": "CatalogSchemaList",
-      "definiteArgument": "dla catalog schema list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "DatabaseName",
-            "type": "string",
-            "format": "--database-name {value}",
-            "help": "The name of the database containing the schema."
-          },
-          {
-            "name": "Count",
-            "type": "string",
-            "format": "--count {value}",
-            "help": "The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true."
-          },
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "help": "OData filter. Optional."
-          },
-          {
-            "name": "Orderby",
-            "type": "List<string>",
-            "format": "--orderby {value}",
-            "separator": ",",
-            "help": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional."
-          },
-          {
-            "name": "Select",
-            "type": "string",
-            "format": "--select {value}",
-            "help": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional."
-          },
-          {
-            "name": "Skip",
-            "type": "string",
-            "format": "--skip {value}",
-            "help": "The number of items to skip over before returning elements."
-          },
-          {
-            "name": "Top",
-            "type": "string",
-            "format": "--top {value}",
-            "help": "Maximum number of items to return."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CatalogSchemaShow",
-      "definiteArgument": "dla catalog schema show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "DatabaseName",
-            "type": "string",
-            "format": "--database-name {value}",
-            "help": "The name of the database containing the schema."
-          },
-          {
-            "name": "SchemaName",
-            "type": "string",
-            "format": "--schema-name {value}",
-            "help": "The name of the schema."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CatalogTablePartitionList",
-      "definiteArgument": "dla catalog table-partition list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "DatabaseName",
-            "type": "string",
-            "format": "--database-name {value}",
-            "help": "The name of the database containing the partitions."
-          },
-          {
-            "name": "SchemaName",
-            "type": "string",
-            "format": "--schema-name {value}",
-            "help": "The name of the schema containing the partitions."
-          },
-          {
-            "name": "TableName",
-            "type": "string",
-            "format": "--table-name {value}",
-            "help": "The name of the table containing the partitions."
-          },
-          {
-            "name": "Count",
-            "type": "string",
-            "format": "--count {value}",
-            "help": "The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true."
-          },
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "help": "OData filter. Optional."
-          },
-          {
-            "name": "Orderby",
-            "type": "List<string>",
-            "format": "--orderby {value}",
-            "separator": ",",
-            "help": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional."
-          },
-          {
-            "name": "Select",
-            "type": "string",
-            "format": "--select {value}",
-            "help": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional."
-          },
-          {
-            "name": "Skip",
-            "type": "string",
-            "format": "--skip {value}",
-            "help": "The number of items to skip over before returning elements."
-          },
-          {
-            "name": "Top",
-            "type": "string",
-            "format": "--top {value}",
-            "help": "Maximum number of items to return."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CatalogTablePartitionShow",
-      "definiteArgument": "dla catalog table-partition show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "DatabaseName",
-            "type": "string",
-            "format": "--database-name {value}",
-            "help": "The name of the database containing the partition."
-          },
-          {
-            "name": "PartitionName",
-            "type": "string",
-            "format": "--partition-name {value}",
-            "help": "The name of the table partition."
-          },
-          {
-            "name": "SchemaName",
-            "type": "string",
-            "format": "--schema-name {value}",
-            "help": "The name of the schema containing the partition."
-          },
-          {
-            "name": "TableName",
-            "type": "string",
-            "format": "--table-name {value}",
-            "help": "The name of the table containing the partition."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CatalogTableStatsList",
-      "definiteArgument": "dla catalog table-stats list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "DatabaseName",
-            "type": "string",
-            "format": "--database-name {value}",
-            "help": "The name of the database."
-          },
-          {
-            "name": "SchemaName",
-            "type": "string",
-            "format": "--schema-name {value}",
-            "help": "The schema associated with the tables to list."
-          },
-          {
-            "name": "TableName",
-            "type": "string",
-            "format": "--table-name {value}",
-            "help": "The table to list statistics for. `--schema-name` must also be specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CatalogTableStatsShow",
-      "definiteArgument": "dla catalog table-stats show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Analytics account."
-          },
-          {
-            "name": "DatabaseName",
-            "type": "string",
-            "format": "--database-name {value}",
-            "help": "The name of the database containing the statistics."
-          },
-          {
-            "name": "SchemaName",
-            "type": "string",
-            "format": "--schema-name {value}",
-            "help": "The name of the schema containing the statistics."
-          },
-          {
-            "name": "StatisticsName",
-            "type": "string",
-            "format": "--statistics-name {value}",
-            "help": "The name of the table statistics."
-          },
-          {
-            "name": "TableName",
-            "type": "string",
-            "format": "--table-name {value}",
-            "help": "The name of the table containing the statistics."
-          }
-        ]
-      }
-    },
-    {
       "postfix": "CatalogTableTypeList",
       "definiteArgument": "dla catalog table-type list",
       "settingsClass": {
@@ -2091,8 +1747,8 @@
       }
     },
     {
-      "postfix": "CatalogTableList",
-      "definiteArgument": "dla catalog table list",
+      "postfix": "AccountFirewallCreate",
+      "definiteArgument": "dla account firewall create",
       "settingsClass": {
         "properties": [
           {
@@ -2102,23 +1758,35 @@
             "help": "Name of the Data Lake Analytics account."
           },
           {
-            "name": "DatabaseName",
+            "name": "EndIpAddress",
             "type": "string",
-            "format": "--database-name {value}",
-            "help": "The name of the database."
+            "format": "--end-ip-address {value}",
+            "help": "The end of the valid IP range for the firewall rule."
           },
           {
-            "name": "SchemaName",
+            "name": "FirewallRuleName",
             "type": "string",
-            "format": "--schema-name {value}",
-            "help": "The schema assocated with the tables to list."
+            "format": "--firewall-rule-name {value}",
+            "help": "The name of the firewall rule."
+          },
+          {
+            "name": "StartIpAddress",
+            "type": "string",
+            "format": "--start-ip-address {value}",
+            "help": "The start of the valid IP range for the firewall rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
           }
         ]
       }
     },
     {
-      "postfix": "CatalogTableShow",
-      "definiteArgument": "dla catalog table show",
+      "postfix": "AccountFirewallDelete",
+      "definiteArgument": "dla account firewall delete",
       "settingsClass": {
         "properties": [
           {
@@ -2128,29 +1796,23 @@
             "help": "Name of the Data Lake Analytics account."
           },
           {
-            "name": "DatabaseName",
+            "name": "FirewallRuleName",
             "type": "string",
-            "format": "--database-name {value}",
-            "help": "The name of the database containing the table."
+            "format": "--firewall-rule-name {value}",
+            "help": "The name of the firewall rule to delete."
           },
           {
-            "name": "SchemaName",
+            "name": "ResourceGroup",
             "type": "string",
-            "format": "--schema-name {value}",
-            "help": "The name of the schema containing the table."
-          },
-          {
-            "name": "TableName",
-            "type": "string",
-            "format": "--table-name {value}",
-            "help": "The name of the table."
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
           }
         ]
       }
     },
     {
-      "postfix": "CatalogTvfList",
-      "definiteArgument": "dla catalog tvf list",
+      "postfix": "AccountFirewallList",
+      "definiteArgument": "dla account firewall list",
       "settingsClass": {
         "properties": [
           {
@@ -2160,23 +1822,17 @@
             "help": "Name of the Data Lake Analytics account."
           },
           {
-            "name": "DatabaseName",
+            "name": "ResourceGroup",
             "type": "string",
-            "format": "--database-name {value}",
-            "help": "The name of the database."
-          },
-          {
-            "name": "SchemaName",
-            "type": "string",
-            "format": "--schema-name {value}",
-            "help": "The name of the schema assocated with table valued functions to list."
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
           }
         ]
       }
     },
     {
-      "postfix": "CatalogTvfShow",
-      "definiteArgument": "dla catalog tvf show",
+      "postfix": "AccountFirewallShow",
+      "definiteArgument": "dla account firewall show",
       "settingsClass": {
         "properties": [
           {
@@ -2186,29 +1842,23 @@
             "help": "Name of the Data Lake Analytics account."
           },
           {
-            "name": "DatabaseName",
+            "name": "FirewallRuleName",
             "type": "string",
-            "format": "--database-name {value}",
-            "help": "The name of the database containing the table valued function."
+            "format": "--firewall-rule-name {value}",
+            "help": "The name of the firewall rule to retrieve."
           },
           {
-            "name": "SchemaName",
+            "name": "ResourceGroup",
             "type": "string",
-            "format": "--schema-name {value}",
-            "help": "The name of the schema containing the table valued function."
-          },
-          {
-            "name": "TableValuedFunctionName",
-            "type": "string",
-            "format": "--table-valued-function-name {value}",
-            "help": "The name of the tableValuedFunction."
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
           }
         ]
       }
     },
     {
-      "postfix": "CatalogViewList",
-      "definiteArgument": "dla catalog view list",
+      "postfix": "AccountFirewallUpdate",
+      "definiteArgument": "dla account firewall update",
       "settingsClass": {
         "properties": [
           {
@@ -2218,23 +1868,35 @@
             "help": "Name of the Data Lake Analytics account."
           },
           {
-            "name": "DatabaseName",
+            "name": "FirewallRuleName",
             "type": "string",
-            "format": "--database-name {value}",
-            "help": "The name of the database."
+            "format": "--firewall-rule-name {value}",
+            "help": "The name of the firewall rule to update."
           },
           {
-            "name": "SchemaName",
+            "name": "EndIpAddress",
             "type": "string",
-            "format": "--schema-name {value}",
-            "help": "The name of the schema associated with the views to list."
+            "format": "--end-ip-address {value}",
+            "help": "The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+          },
+          {
+            "name": "StartIpAddress",
+            "type": "string",
+            "format": "--start-ip-address {value}",
+            "help": "The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol."
           }
         ]
       }
     },
     {
-      "postfix": "CatalogViewShow",
-      "definiteArgument": "dla catalog view show",
+      "postfix": "AccountComputePolicyCreate",
+      "definiteArgument": "dla account compute-policy create",
       "settingsClass": {
         "properties": [
           {
@@ -2244,29 +1906,47 @@
             "help": "Name of the Data Lake Analytics account."
           },
           {
-            "name": "DatabaseName",
+            "name": "ComputePolicyName",
             "type": "string",
-            "format": "--database-name {value}",
-            "help": "The name of the database containing the view."
+            "format": "--compute-policy-name {value}",
+            "help": "The name of the compute policy to create."
           },
           {
-            "name": "SchemaName",
+            "name": "ObjectId",
             "type": "string",
-            "format": "--schema-name {value}",
-            "help": "The name of the schema containing the view."
+            "format": "--object-id {value}",
+            "help": "The Azure Active Directory object ID of the user, group, or service principal to apply the policy to."
           },
           {
-            "name": "ViewName",
+            "name": "ObjectType",
             "type": "string",
-            "format": "--view-name {value}",
-            "help": "The name of the view."
+            "format": "--object-type {value}",
+            "help": "The Azure Active Directory object type associated with the supplied object ID."
+          },
+          {
+            "name": "MaxDopPerJob",
+            "type": "string",
+            "format": "--max-dop-per-job {value}",
+            "help": "The maximum degree of parallelism allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified."
+          },
+          {
+            "name": "MinPriorityPerJob",
+            "type": "string",
+            "format": "--min-priority-per-job {value}",
+            "help": "The minimum priority allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
           }
         ]
       }
     },
     {
-      "postfix": "JobPipelineList",
-      "definiteArgument": "dla job pipeline list",
+      "postfix": "AccountComputePolicyDelete",
+      "definiteArgument": "dla account compute-policy delete",
       "settingsClass": {
         "properties": [
           {
@@ -2276,23 +1956,23 @@
             "help": "Name of the Data Lake Analytics account."
           },
           {
-            "name": "EndDateTime",
+            "name": "ComputePolicyName",
             "type": "string",
-            "format": "--end-date-time {value}",
-            "help": "The end date for when to get the list of pipelines. The startDateTime and endDateTime can be no more than 30 days apart."
+            "format": "--compute-policy-name {value}",
+            "help": "The name of the compute policy to delete."
           },
           {
-            "name": "StartDateTime",
+            "name": "ResourceGroup",
             "type": "string",
-            "format": "--start-date-time {value}",
-            "help": "The start date for when to get the list of pipelines. The startDateTime and endDateTime can be no more than 30 days apart."
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
           }
         ]
       }
     },
     {
-      "postfix": "JobPipelineShow",
-      "definiteArgument": "dla job pipeline show",
+      "postfix": "AccountComputePolicyList",
+      "definiteArgument": "dla account compute-policy list",
       "settingsClass": {
         "properties": [
           {
@@ -2302,29 +1982,17 @@
             "help": "Name of the Data Lake Analytics account."
           },
           {
-            "name": "PipelineIdentity",
+            "name": "ResourceGroup",
             "type": "string",
-            "format": "--pipeline-identity {value}",
-            "help": "Pipeline ID."
-          },
-          {
-            "name": "EndDateTime",
-            "type": "string",
-            "format": "--end-date-time {value}",
-            "help": "The end date for when to get the pipeline and aggregate its data. The startDateTime and endDateTime can be no more than 30 days apart."
-          },
-          {
-            "name": "StartDateTime",
-            "type": "string",
-            "format": "--start-date-time {value}",
-            "help": "The start date for when to get the pipeline and aggregate its data. The startDateTime and endDateTime can be no more than 30 days apart."
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
           }
         ]
       }
     },
     {
-      "postfix": "JobRecurrenceList",
-      "definiteArgument": "dla job recurrence list",
+      "postfix": "AccountComputePolicyShow",
+      "definiteArgument": "dla account compute-policy show",
       "settingsClass": {
         "properties": [
           {
@@ -2334,23 +2002,23 @@
             "help": "Name of the Data Lake Analytics account."
           },
           {
-            "name": "EndDateTime",
+            "name": "ComputePolicyName",
             "type": "string",
-            "format": "--end-date-time {value}",
-            "help": "The end date for when to get the list of recurrences. The startDateTime and endDateTime can be no more than 30 days apart."
+            "format": "--compute-policy-name {value}",
+            "help": "The name of the compute policy to retrieve."
           },
           {
-            "name": "StartDateTime",
+            "name": "ResourceGroup",
             "type": "string",
-            "format": "--start-date-time {value}",
-            "help": "The start date for when to get the list of recurrences. The startDateTime and endDateTime can be no more than 30 days apart."
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
           }
         ]
       }
     },
     {
-      "postfix": "JobRecurrenceShow",
-      "definiteArgument": "dla job recurrence show",
+      "postfix": "AccountComputePolicyUpdate",
+      "definiteArgument": "dla account compute-policy update",
       "settingsClass": {
         "properties": [
           {
@@ -2360,22 +2028,354 @@
             "help": "Name of the Data Lake Analytics account."
           },
           {
-            "name": "RecurrenceIdentity",
+            "name": "ComputePolicyName",
             "type": "string",
-            "format": "--recurrence-identity {value}",
-            "help": "Recurrence ID."
+            "format": "--compute-policy-name {value}",
+            "help": "The name of the compute policy to update."
           },
           {
-            "name": "EndDateTime",
+            "name": "MaxDopPerJob",
             "type": "string",
-            "format": "--end-date-time {value}",
-            "help": "The end date for when to get recurrence and aggregate its data. The startDateTime and endDateTime can be no more than 30 days apart."
+            "format": "--max-dop-per-job {value}",
+            "help": "The maximum degree of parallelism allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified."
           },
           {
-            "name": "StartDateTime",
+            "name": "MinPriorityPerJob",
             "type": "string",
-            "format": "--start-date-time {value}",
-            "help": "The start date for when to get the recurrence and aggregate its data. The startDateTime and endDateTime can be no more than 30 days apart."
+            "format": "--min-priority-per-job {value}",
+            "help": "The minimum priority allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountBlobStorageAdd",
+      "definiteArgument": "dla account blob-storage add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccessKey",
+            "type": "string",
+            "format": "--access-key {value}",
+            "help": "The access key associated with this Azure Storage account that will be used to connect to it."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "StorageAccountName",
+            "type": "string",
+            "format": "--storage-account-name {value}",
+            "help": ""
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+          },
+          {
+            "name": "Suffix",
+            "type": "string",
+            "format": "--suffix {value}",
+            "help": "The optional suffix for the storage account."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountBlobStorageDelete",
+      "definiteArgument": "dla account blob-storage delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "StorageAccountName",
+            "type": "string",
+            "format": "--storage-account-name {value}",
+            "help": "The name of the Azure Storage account to remove."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountBlobStorageList",
+      "definiteArgument": "dla account blob-storage list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Count",
+            "type": "string",
+            "format": "--count {value}",
+            "help": "The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "help": "The OData filter. Optional."
+          },
+          {
+            "name": "Orderby",
+            "type": "List<string>",
+            "format": "--orderby {value}",
+            "separator": ",",
+            "help": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+          },
+          {
+            "name": "Select",
+            "type": "string",
+            "format": "--select {value}",
+            "help": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional."
+          },
+          {
+            "name": "Skip",
+            "type": "string",
+            "format": "--skip {value}",
+            "help": "The number of items to skip over before returning elements."
+          },
+          {
+            "name": "Top",
+            "type": "string",
+            "format": "--top {value}",
+            "help": "Maximum number of items to return."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountBlobStorageShow",
+      "definiteArgument": "dla account blob-storage show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "StorageAccountName",
+            "type": "string",
+            "format": "--storage-account-name {value}",
+            "help": "The name of the Azure Storage account for which to retrieve the details."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountBlobStorageUpdate",
+      "definiteArgument": "dla account blob-storage update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccessKey",
+            "type": "string",
+            "format": "--access-key {value}",
+            "help": "The access key associated with this Azure Storage account that will be used to connect to it."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "StorageAccountName",
+            "type": "string",
+            "format": "--storage-account-name {value}",
+            "help": ""
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+          },
+          {
+            "name": "Suffix",
+            "type": "string",
+            "format": "--suffix {value}",
+            "help": "The optional suffix for the storage account."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountDataLakeStoreAdd",
+      "definiteArgument": "dla account data-lake-store add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "DataLakeStoreAccountName",
+            "type": "string",
+            "format": "--data-lake-store-account-name {value}",
+            "help": "The name of the Data Lake Store account to add."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+          },
+          {
+            "name": "Suffix",
+            "type": "string",
+            "format": "--suffix {value}",
+            "help": "The optional suffix for the Data Lake Store account."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountDataLakeStoreDelete",
+      "definiteArgument": "dla account data-lake-store delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "DataLakeStoreAccountName",
+            "type": "string",
+            "format": "--data-lake-store-account-name {value}",
+            "help": "The name of the Data Lake Store account to remove."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountDataLakeStoreList",
+      "definiteArgument": "dla account data-lake-store list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "Count",
+            "type": "string",
+            "format": "--count {value}",
+            "help": "The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "help": "OData filter. Optional."
+          },
+          {
+            "name": "Orderby",
+            "type": "List<string>",
+            "format": "--orderby {value}",
+            "separator": ",",
+            "help": "OrderBy clause. One or more comma-separated expressions with an optional \"asc\" (the default) or \"desc\" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
+          },
+          {
+            "name": "Select",
+            "type": "string",
+            "format": "--select {value}",
+            "help": "OData Select statement. Limits the properties on each entry to just those requested, e.g. Categories?$select=CategoryName,Description. Optional."
+          },
+          {
+            "name": "Skip",
+            "type": "string",
+            "format": "--skip {value}",
+            "help": "The number of items to skip over before returning elements."
+          },
+          {
+            "name": "Top",
+            "type": "string",
+            "format": "--top {value}",
+            "help": "Maximum number of items to return."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountDataLakeStoreShow",
+      "definiteArgument": "dla account data-lake-store show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "help": "Name of the Data Lake Analytics account."
+          },
+          {
+            "name": "DataLakeStoreAccountName",
+            "type": "string",
+            "format": "--data-lake-store-account-name {value}",
+            "help": "The name of the Data Lake Store account to retrieve."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account."
           }
         ]
       }
@@ -2415,27 +2415,6 @@
   ],
   "enumerations": [
     {
-      "name": "DlaAccountTier",
-      "values": [
-        "commitment_100000auhours",
-        "commitment_10000auhours",
-        "commitment_1000auhours",
-        "commitment_100auhours",
-        "commitment_500000auhours",
-        "commitment_50000auhours",
-        "commitment_5000auhours",
-        "commitment_500auhours",
-        "consumption"
-      ]
-    },
-    {
-      "name": "DlaAccountUpdateAllowAzureIps",
-      "values": [
-        "disabled",
-        "enabled"
-      ]
-    },
-    {
       "name": "DlaJobListResult",
       "values": [
         "cancelled",
@@ -2465,6 +2444,27 @@
         "full",
         "semantic",
         "singlebox"
+      ]
+    },
+    {
+      "name": "DlaAccountTier",
+      "values": [
+        "commitment_100000auhours",
+        "commitment_10000auhours",
+        "commitment_1000auhours",
+        "commitment_100auhours",
+        "commitment_500000auhours",
+        "commitment_50000auhours",
+        "commitment_5000auhours",
+        "commitment_500auhours",
+        "consumption"
+      ]
+    },
+    {
+      "name": "DlaAccountUpdateAllowAzureIps",
+      "values": [
+        "disabled",
+        "enabled"
       ]
     }
   ]

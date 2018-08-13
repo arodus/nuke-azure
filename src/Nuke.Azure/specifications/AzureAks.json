@@ -6,7 +6,7 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/80196905/latest/docs-ref-autogen/aks.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/83aca23/latest/docs-ref-autogen/aks.yml"
   ],
   "name": "AzureAks",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest",
@@ -214,6 +214,12 @@
             "type": "bool",
             "format": "--service-principal",
             "help": "Service principal used for authentication to Azure APIs."
+          },
+          {
+            "name": "SkipSubnetRoleAssignment",
+            "type": "string",
+            "format": "--skip-subnet-role-assignment {value}",
+            "help": "Skip role assignment for subnet (advanced networking)."
           },
           {
             "name": "SshKeyValue",
