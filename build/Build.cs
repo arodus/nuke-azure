@@ -9,16 +9,16 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Nuke.Azure.Generator;
 using Nuke.CodeGeneration;
+using Nuke.Common;
 using Nuke.Common.Git;
+using Nuke.Common.ProjectModel;
 using Nuke.Common.Tools.DotNet;
 using Nuke.Common.Tools.GitVersion;
-using Nuke.Common;
-using Nuke.Common.ProjectModel;
-using Nuke.Common.Tools.Git;
-using Nuke.Common.Tools.Xunit;
 using Nuke.Common.Tools.OpenCover;
+using Nuke.Common.Tools.Xunit;
 using Nuke.Common.Utilities;
 using Nuke.Common.Utilities.Collections;
+using Nuke.GitHub;
 using Octokit;
 using static Nuke.Common.Tools.DotNet.DotNetTasks;
 using static Nuke.Common.IO.FileSystemTasks;
@@ -29,8 +29,7 @@ using static Nuke.Common.Tools.Xunit.XunitTasks;
 using static Nuke.Common.Tools.Git.GitTasks;
 using static Nuke.Common.ChangeLog.ChangelogTasks;
 using static RegenerateTasks;
-using static GitHubTasks;
-using Path = System.IO.Path;
+using static Nuke.GitHub.GitHubTasks;
 
 class Build : NukeBuild
 {
@@ -49,7 +48,10 @@ class Build : NukeBuild
     public Build()
     {
         LatestCliReleases = new Lazy<IReadOnlyList<Release>>(() =>
-            GetLatestReleases(c_azureRepoOwner, c_azureCliRepo, numberOfReleases: 2, token: GitHubApiKey));
+            GetReleases(x => x.SetRepositoryName(c_addonRepoName)
+                    .SetRepositoryOwner(c_addonRepoOwner)
+                    .SetToken(GitHubApiKey), maxNumberOfReleases: 10)
+                .GetAwaiter().GetResult());
     }
 
     readonly Lazy<IReadOnlyList<Release>> LatestCliReleases;
@@ -58,9 +60,8 @@ class Build : NukeBuild
     [GitRepository] readonly GitRepository GitRepository;
     [Solution] readonly Solution Solution;
 
-    [Parameter("ApiKey for the specified source.")] readonly string ApiKey;
-    [Parameter("Indicates to push to nuget.org feed.")] readonly bool NuGet;
-    [Parameter("Api key to access the github.com api. Must have permissions to create pull-requests.")] readonly string GitHubApiKey;
+    [Parameter("Api key to push packages to nuget.org.")] readonly string NugetApiKey;
+    [Parameter("Api key to access the github.")] readonly string GitHubApiKey;
 
     AbsolutePath SpecificationPath => AddonProject.Directory / "specifications";
     AbsolutePath GenerationBaseDirectory => AddonProject.Directory / "Generated";
@@ -69,14 +70,6 @@ class Build : NukeBuild
 
     Nuke.Common.ProjectModel.Project AddonProject => Solution.GetProject(c_toolNamespace);
     string ChangelogFile => RootDirectory / "CHANGELOG.md";
-
-    string Source => NuGet
-        ? "https://api.nuget.org/v3/index.json"
-        : "https://www.myget.org/F/nukebuild/api/v2/package";
-
-    string SymbolSource => NuGet
-        ? "https://nuget.smbsrc.net"
-        : "https://www.myget.org/F/nukebuild/symbols/api/v2/package";
 
     Target Clean => _ => _
         .Executes(() =>
@@ -145,7 +138,7 @@ class Build : NukeBuild
                                          MinDepthForCategory = 1,
                                          MinSubTasksForCategory = 0,
                                          SingleNamespace = true,
-                                         Reference = reference.Text,
+                                         Reference = reference.Text
                                      };
             SpecificationGenerator.GenerateSpecifications(generationSettings);
         });
@@ -182,29 +175,19 @@ class Build : NukeBuild
 
                             if (line.IndexOf("public static NetworkNsgRuleProtocol __ = new NetworkNsgRuleProtocol { Value = \"*\" };",
                                     StringComparison.Ordinal) > -1)
-                            {
                                 line = line.Replace("__", "any");
-                            }
                             else if (line.IndexOf("public static MonitorAlertUpdateOperator __ = new MonitorAlertUpdateOperator { Value = \"<\" };",
                                          StringComparison.Ordinal) > -1)
-                            {
                                 line = line.Replace("__", "SmallerThan");
-                            }
                             else if (line.IndexOf("public static MonitorAlertUpdateOperator ___ = new MonitorAlertUpdateOperator { Value = \"<=\" };",
                                          StringComparison.Ordinal) > -1)
-                            {
                                 line = line.Replace("___", "SmallerThanOrEqualTo");
-                            }
                             else if (line.IndexOf("public static MonitorAlertUpdateOperator __ = new MonitorAlertUpdateOperator { Value = \">\" };",
                                          StringComparison.Ordinal) > -1)
-                            {
                                 line = line.Replace("__", "GreaterThan");
-                            }
                             else if (line.IndexOf("public static MonitorAlertUpdateOperator ___ = new MonitorAlertUpdateOperator { Value = \">=\" };",
                                          StringComparison.Ordinal) > -1)
-                            {
                                 line = line.Replace("___", "GreatherThanOrEqualTo");
-                            }
 
                             writer.WriteLine(line);
                         }
@@ -243,7 +226,7 @@ class Build : NukeBuild
         });
 
     Target Changelog => _ => _
-        .OnlyWhen(() => InvokedTargets.Contains(nameof(Changelog)))
+        .OnlyWhen(ShouldUpdateChangelog)
         .Executes(() =>
         {
             FinalizeChangelog(ChangelogFile, GitVersion.SemVer, GitRepository);
@@ -251,19 +234,19 @@ class Build : NukeBuild
 
     Target Push => _ => _
         .DependsOn(Pack)
-        .Requires(() => ApiKey)
+        .Requires(() => NugetApiKey)
         .Requires(() => GitHasCleanWorkingCopy())
-        .Requires(() => !NuGet || Configuration.EqualsOrdinalIgnoreCase("release"))
-        .Requires(() => !NuGet || GitVersion.BranchName.Equals("master"))
+        .Requires(() => Configuration.EqualsOrdinalIgnoreCase("release"))
+        .Requires(() => IsReleaseBranch || IsMasterBranch)
         .Executes(() =>
         {
             GlobFiles(OutputDirectory, "*.nupkg")
                 .Where(x => !x.EndsWith(".symbols.nupkg")).NotEmpty()
                 .ForEach(x => DotNetNuGetPush(s => s
                     .SetTargetPath(x)
-                    .SetSource(Source)
-                    .SetSymbolSource(SymbolSource)
-                    .SetApiKey(ApiKey)));
+                    .SetSource("https://api.nuget.org/v3/index.json")
+                    .SetSymbolSource("https://www.myget.org/F/nukebuild/symbols/api/v2/package")
+                    .SetApiKey(NugetApiKey)));
         });
 
     Target Regenerate => _ => _
@@ -272,7 +255,7 @@ class Build : NukeBuild
         .OnlyWhen(() => IsUpdateAvailable($"{c_addonName} v{ParseVersion(LatestCliRelease)}", ChangelogFile))
         .WhenSkipped(DependencyBehavior.Skip)
         .DependsOn(CompilePlugin)
-        .Executes(() =>
+        .Executes(async () =>
         {
             var release = GetReleaseInformation(LatestCliReleases.Value, ParseVersion);
 
@@ -287,33 +270,97 @@ class Build : NukeBuild
             var prBody = $"Regenerate for [{versionName}]({LatestCliRelease.HtmlUrl}).\n[Changelog]({changelogUrl})";
 
             CheckoutBranchOrCreateNewFrom(branch, "master");
-
             UpdateChangeLog(ChangelogFile, versionName, changelogUrl);
-            FinalizeChangelog(ChangelogFile, GitVersion.NextSemVer(release.Bump), GitRepository);
             AddAndCommitChanges(commitMessage.ToArray(), new[] { AddonProject.Directory, ChangelogFile }, addUntracked: true);
             Git($"push --force --set-upstream origin {branch}");
-            CreatePullRequestIfNeeded(GitRepository.Identifier, branch, $"{message}", prBody, GitHubApiKey);
+
+            await CreatePullRequest(x => x
+                .SetBase("master")
+                .SetHead(branch)
+                .SetTitle(message)
+                .SetBody(prBody)
+                .SetToken(GitHubApiKey));
         });
 
     Target Release => _ => _
         .Requires(() => GitHubApiKey)
         .DependsOn(Push)
+        .After(PrepareRelease)
+        .Executes(async () =>
+        {
+            var releaseNotes = new[]
+                               {
+                                   $"- [Nuget](https://www.nuget.org/packages/{c_toolNamespace}/{GitVersion.SemVer})",
+                                   $"- [Changelog](https://github.com/{c_addonRepoOwner}/{c_addonRepoName}/blob/{GitVersion.SemVer}/CHANGELOG.md)"
+                               };
+
+            await PublishRelease(x => x.SetToken(GitHubApiKey)
+                .SetArtifactPaths(GlobFiles(OutputDirectory, "*.nupkg").ToArray())
+                .SetRepositoryName(c_addonRepoName)
+                .SetRepositoryOwner(c_addonRepoOwner)
+                .SetCommitSha("master")
+                .SetName($"NUKE {c_addonName} Addon v{GitVersion.MajorMinorPatch}")
+                .SetTag($"{GitVersion.MajorMinorPatch}")
+                .SetReleaseNotes(releaseNotes.Join("\n"))
+            );
+        });
+
+    Target PrepareRelease => _ => _
+        .Before(CompilePlugin)
+        .DependsOn(Changelog, Clean)
         .Executes(() =>
         {
-            var lastCommitMessage = GitLastCommitMessage();
+            var releaseBranch = IsReleaseBranch ? GitRepository.Branch : $"release/v{GitVersion.MajorMinorPatch}";
+            var isMasterBranch = IsMasterBranch;
 
-            var tagAnnotations = lastCommitMessage.Aggregate(string.Empty, (x, y) => $"{x} -m \"{y}\"").Trim();
-            var tagName = GitVersion.SemVer;
+            if (!isMasterBranch && !IsReleaseBranch) Git($"checkout -b {releaseBranch}");
 
-            Git($"tag -a {tagName} {tagAnnotations}");
-            Git($"push origin {tagName}");
-            var releaseMessage = new[]
-                                 {
-                                     $"- [Nuget](https://www.nuget.org/packages/{c_toolNamespace}/{tagName})",
-                                     $"- [Changelog](https://github.com/{c_addonRepoOwner}/{c_addonRepoName}/blob/{tagName}/CHANGELOG.md)"
-                                 }.JoinNewLine();
-            CreateRelease(GitRepository.Identifier, tagName, GitHubApiKey, $"{c_toolNamespace} v{tagName}", releaseMessage, !NuGet);
+            if (!GitHasCleanWorkingCopy())
+            {
+                Git($"add {ChangelogFile}");
+                Git($"commit -m \"Finalize v{GitVersion.MajorMinorPatch}\"");
+            }
+
+            if (!isMasterBranch)
+            {
+                Git("checkout master");
+                Git($"merge --no-ff --no-edit {releaseBranch}");
+                Git($"branch -D {releaseBranch}");
+            }
+
+            if (IsReleaseBranch) Git($"push origin --delete {releaseBranch}");
+            Git("push origin master");
         });
+
+    bool IsReleaseBranch => GitRepository.Branch.StartsWith("release/");
+    bool IsMasterBranch => GitRepository.Branch == "master";
+
+    bool ShouldUpdateChangelog()
+    {
+        bool TryGetChangelogSectionNotes(string tag, out string[] sectionNotes)
+        {
+            sectionNotes = new string[0];
+            try
+            {
+                sectionNotes = ExtractChangelogSectionNotes(ChangelogFile, tag).ToArray();
+                return sectionNotes.Length > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        var nextSectionAvailable = TryGetChangelogSectionNotes("vNext", out var vNextSection);
+        var semVerSectionAvailable = TryGetChangelogSectionNotes(GitVersion.MajorMinorPatch, out var semVerSection);
+        if (semVerSectionAvailable)
+        {
+            ControlFlow.Assert(!nextSectionAvailable, $"{GitVersion.MajorMinorPatch} is already in changelog.");
+            return false;
+        }
+
+        return nextSectionAvailable;
+    }
 
     Version ParseVersion(Release release) => Version.Parse(Regex.Match(release.Name, @"(?'version'(?:\d+\.){2}\d+)$").Groups["version"].Value);
 }
