@@ -71,7 +71,7 @@ internal static class RegenerateTasks
             .Take(latestReleaseSectionLine - firstVNextVersionLine)
             .Where(x => !string.IsNullOrEmpty(x))
             .Append(
-                $"- Changed supported version to [{releaseName}]({releaseUrl})");
+                $"- Changed supported version to [{releaseName}]({releaseUrl}).");
 
         var updatedChangeLog =
             changeLogLines.Take(firstVNextVersionLine)
@@ -88,11 +88,6 @@ internal static class RegenerateTasks
     public static void GitCommit(params string[] message)
     {
         GitTasks.Git($"commit {message.Aggregate(string.Empty, (x, y) => $"{x}-m \"{y}\" ").TrimEnd()}");
-    }
-
-    public static string[] GitLastCommitMessage()
-    {
-        return GitTasks.Git("log -1 --pretty=%B").Where(x => x.Type == OutputType.Std).Select(x => x.Text).ToArray();
     }
 
     public static void AddAndCommitChanges(string[] message, string[] refs, bool addUntracked = false)
@@ -123,7 +118,7 @@ internal static class RegenerateTasks
         }
     }
 
-    public  enum Bump
+    public enum Bump
     {
         Patch,
         Minor,
