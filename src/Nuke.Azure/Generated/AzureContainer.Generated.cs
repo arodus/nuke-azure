@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
+// Generated with Nuke.CodeGeneration, Version: 0.6.1 [CommitSha: 8eca516b].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureContainer.json.
 
 using JetBrains.Annotations;
@@ -188,6 +188,9 @@ namespace Nuke.Azure
         internal Dictionary<string,string> SecretsInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>The path within the container where the secrets volume should be mounted. Must not contain colon ':'.</p></summary>
         public virtual string SecretsMountPath { get; internal set; }
+        /// <summary><p>A list of secure environment variable for the container. Space-separated values in 'key=value' format.</p></summary>
+        public virtual IReadOnlyDictionary<string, string> SecureEnvironmentVariables => SecureEnvironmentVariablesInternal.AsReadOnly();
+        internal Dictionary<string,string> SecureEnvironmentVariablesInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>The storage account access key used to access the Azure File share.</p></summary>
         public virtual string AzureFileVolumeAccountKey { get; internal set; }
         /// <summary><p>The name of the storage account that contains the Azure File share.</p></summary>
@@ -246,6 +249,7 @@ namespace Nuke.Azure
               .Add("--restart-policy {value}", RestartPolicy)
               .Add("--secrets {value}", Secrets, "{key}={value}", separator: ' ')
               .Add("--secrets-mount-path {value}", SecretsMountPath, secret: true)
+              .Add("--secure-environment-variables {value}", SecureEnvironmentVariables, "{key}={value}", separator: ' ')
               .Add("--azure-file-volume-account-key {value}", AzureFileVolumeAccountKey)
               .Add("--azure-file-volume-account-name {value}", AzureFileVolumeAccountName)
               .Add("--azure-file-volume-mount-path {value}", AzureFileVolumeMountPath)
@@ -1044,6 +1048,48 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.SecretsMountPath = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SecureEnvironmentVariables
+        /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.SecureEnvironmentVariables"/> to a new dictionary.</em></p><p>A list of secure environment variable for the container. Space-separated values in 'key=value' format.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings SetSecureEnvironmentVariables(this AzureContainerCreateSettings toolSettings, IDictionary<string, string> secureEnvironmentVariables)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SecureEnvironmentVariablesInternal = secureEnvironmentVariables.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureContainerCreateSettings.SecureEnvironmentVariables"/>.</em></p><p>A list of secure environment variable for the container. Space-separated values in 'key=value' format.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings ClearSecureEnvironmentVariables(this AzureContainerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SecureEnvironmentVariablesInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds a new key-value-pair <see cref="AzureContainerCreateSettings.SecureEnvironmentVariables"/>.</em></p><p>A list of secure environment variable for the container. Space-separated values in 'key=value' format.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings AddSecureEnvironmentVariable(this AzureContainerCreateSettings toolSettings, string secureEnvironmentVariableKey, string secureEnvironmentVariableValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SecureEnvironmentVariablesInternal.Add(secureEnvironmentVariableKey, secureEnvironmentVariableValue);
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes a key-value-pair from <see cref="AzureContainerCreateSettings.SecureEnvironmentVariables"/>.</em></p><p>A list of secure environment variable for the container. Space-separated values in 'key=value' format.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings RemoveSecureEnvironmentVariable(this AzureContainerCreateSettings toolSettings, string secureEnvironmentVariableKey)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SecureEnvironmentVariablesInternal.Remove(secureEnvironmentVariableKey);
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets a key-value-pair in <see cref="AzureContainerCreateSettings.SecureEnvironmentVariables"/>.</em></p><p>A list of secure environment variable for the container. Space-separated values in 'key=value' format.</p></summary>
+        [Pure]
+        public static AzureContainerCreateSettings SetSecureEnvironmentVariable(this AzureContainerCreateSettings toolSettings, string secureEnvironmentVariableKey, string secureEnvironmentVariableValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SecureEnvironmentVariablesInternal[secureEnvironmentVariableKey] = secureEnvironmentVariableValue;
             return toolSettings;
         }
         #endregion

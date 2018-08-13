@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
+// Generated with Nuke.CodeGeneration, Version: 0.6.1 [CommitSha: 8eca516b].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureSnapshot.json.
 
 using JetBrains.Annotations;
