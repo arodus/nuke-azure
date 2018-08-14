@@ -16,7 +16,7 @@ pipeline {
         stage('Release') {
             environment {
                 GitHubApiKey = credentials('github_token_nuke_client')
-                ApiKey = credentials('nuget_token_arodus')
+                NugetApiKey = credentials('nuget_token_arodus')
             }
             steps {
                 script {

@@ -80,10 +80,16 @@ class Build : NukeBuild
             DeleteDirectories(GlobDirectories(SourceDirectory, "**/bin", "**/obj"));
             EnsureCleanDirectory(OutputDirectory);
             Logger.Info("Deleting generated files ...");
+        });
+
+    Target CleanGeneratedFiles => _ => _
+    .Executes(() => {
             DeleteDirectory(DefinitionRepositoryPath);
             DeleteDirectory(SpecificationPath);
             DeleteDirectory(GenerationBaseDirectory);
-        });
+    });
+  
+
 
     Target Restore => _ => _
         .DependsOn(Clean)
@@ -119,7 +125,7 @@ class Build : NukeBuild
         });
 
     Target Clone => _ => _
-        .DependsOn(Clean)
+        .DependsOn(CleanGeneratedFiles)
         .Executes(() =>
         {
             Git($"clone {c_azureCliDocsRepository} {DefinitionRepositoryPath}");
@@ -148,7 +154,7 @@ class Build : NukeBuild
         });
 
     Target GenerateTools => _ => _
-        .DependsOn(GenerateSpecifications)
+        .After(GenerateSpecifications)
         .Executes(() =>
         {
             GlobDirectories(SpecificationPath, "*").Concat(SpecificationPath).ForEach(directoryPath =>
@@ -204,7 +210,7 @@ class Build : NukeBuild
         });
 
     Target CompilePlugin => _ => _
-        .DependsOn(GenerateTools)
+        .DependsOn(GenerateTools, Clean)
         .Executes(() =>
         {
             DotNetRestore(s => DefaultDotNetRestore.SetProjectFile(AddonProject));
@@ -258,7 +264,7 @@ class Build : NukeBuild
         .Requires(() => LatestCliRelease != null)
         .OnlyWhen(() => IsUpdateAvailable($"{c_addonName} v{ParseVersion(LatestCliRelease)}", ChangelogFile))
         .WhenSkipped(DependencyBehavior.Skip)
-        .DependsOn(CompilePlugin)
+        .DependsOn(CompilePlugin, GenerateSpecifications)
         .Executes(async () =>
         {
             var release = GetReleaseInformation(LatestCliReleases.Value, ParseVersion);
@@ -318,13 +324,14 @@ class Build : NukeBuild
         {
             var releaseBranch = IsReleaseBranch ? GitRepository.Branch : $"release/v{GitVersion.MajorMinorPatch}";
             var isMasterBranch = IsMasterBranch;
-
+            var pushMaster = false;
             if (!isMasterBranch && !IsReleaseBranch) Git($"checkout -b {releaseBranch}");
 
             if (!GitHasCleanWorkingCopy())
             {
                 Git($"add {ChangelogFile}");
                 Git($"commit -m \"Finalize v{GitVersion.MajorMinorPatch}\"");
+                pushMaster = true;
             }
 
             if (!isMasterBranch)
@@ -332,10 +339,11 @@ class Build : NukeBuild
                 Git("checkout master");
                 Git($"merge --no-ff --no-edit {releaseBranch}");
                 Git($"branch -D {releaseBranch}");
+                pushMaster = true;
             }
 
             if (IsReleaseBranch) Git($"push origin --delete {releaseBranch}");
-            Git("push origin master");
+            if (pushMaster) Git("push origin master");
         });
 
     bool IsReleaseBranch => GitRepository.Branch.StartsWith("release/");
