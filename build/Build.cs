@@ -255,7 +255,7 @@ class Build : NukeBuild
                 .ForEach(x => DotNetNuGetPush(s => s
                     .SetTargetPath(x)
                     .SetSource("https://api.nuget.org/v3/index.json")
-                    .SetSymbolSource("https://www.myget.org/F/nukebuild/symbols/api/v2/package")
+                    .SetSymbolSource("https://nuget.smbsrc.net/")
                     .SetApiKey(NugetApiKey)));
         });
 
