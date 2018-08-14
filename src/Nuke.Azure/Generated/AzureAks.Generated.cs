@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.6.0 [CommitSha: 5a428f0d].
+// Generated with Nuke.CodeGeneration, Version: 0.6.1 [CommitSha: 8eca516b].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureAks.json.
 
 using JetBrains.Annotations;
@@ -296,6 +296,8 @@ namespace Nuke.Azure
         public virtual string ServiceCidr { get; internal set; }
         /// <summary><p>Service principal used for authentication to Azure APIs.</p></summary>
         public virtual bool? ServicePrincipal { get; internal set; }
+        /// <summary><p>Skip role assignment for subnet (advanced networking).</p></summary>
+        public virtual string SkipSubnetRoleAssignment { get; internal set; }
         /// <summary><p>Public key path or key contents to install on node VMs for SSH access. For example, 'ssh-rsa AAAAB...snip...UcyupgH azureuser@linuxvm'.</p></summary>
         public virtual string SshKeyValue { get; internal set; }
         /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
@@ -345,6 +347,7 @@ namespace Nuke.Azure
               .Add("--pod-cidr {value}", PodCidr)
               .Add("--service-cidr {value}", ServiceCidr)
               .Add("--service-principal", ServicePrincipal)
+              .Add("--skip-subnet-role-assignment {value}", SkipSubnetRoleAssignment)
               .Add("--ssh-key-value {value}", SshKeyValue)
               .Add("--tags {value}", Tags)
               .Add("--vnet-subnet-id {value}", VnetSubnetId)
@@ -1860,6 +1863,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ServicePrincipal = !toolSettings.ServicePrincipal;
+            return toolSettings;
+        }
+        #endregion
+        #region SkipSubnetRoleAssignment
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.SkipSubnetRoleAssignment"/>.</em></p><p>Skip role assignment for subnet (advanced networking).</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings SetSkipSubnetRoleAssignment(this AzureAksCreateSettings toolSettings, string skipSubnetRoleAssignment)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SkipSubnetRoleAssignment = skipSubnetRoleAssignment;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.SkipSubnetRoleAssignment"/>.</em></p><p>Skip role assignment for subnet (advanced networking).</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings ResetSkipSubnetRoleAssignment(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SkipSubnetRoleAssignment = null;
             return toolSettings;
         }
         #endregion
