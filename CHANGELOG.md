@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ## [vNext]
+
+## [0.5.0] / 2018-08-14
 - Changed supported version to [Azure CLI v2.0.42](https://docs.microsoft.com/cli/azure/release-notes-azure-cli?view=azure-cli-latest#July-26-2018).
 ## [0.4.0] / 2018-08-05
 - Changed supported version to [Azure CLI v2.0.43](https://docs.microsoft.com/en-us/cli/azure/release-notes-azure-cli?view=azure-cli-latest#july-31-2018)
@@ -70,10 +72,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 ## [0.1.0] / 2018-05-09
 - First release.
 
-[vNext]: https://github.com/nuke-build/azure/compare/0.4.0...HEAD
+[vNext]: https://github.com/nuke-build/azure/compare/0.5.0...HEAD
+[0.5.0]: https://github.com/nuke-build/azure/compare/0.4.0...0.5.0
 [0.4.0]: https://github.com/nuke-build/azure/compare/0.3.5...0.4.0
 [0.3.5]: https://github.com/nuke-build/azure/compare/0.3.3...0.3.5
 [0.3.3]: https://github.com/nuke-build/azure/compare/0.3.1...0.3.3
 [0.3.1]: https://github.com/nuke-build/azure/compare/0.2.1...0.3.1
 [0.2.1]: https://github.com/nuke-build/azure/compare/0.1.0...0.2.1
 [0.1.0]: https://github.com/nuke-build/azure/tree/0.1.0
+
