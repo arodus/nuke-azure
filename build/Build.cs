@@ -50,10 +50,9 @@ class Build : NukeBuild
         LatestCliReleases = new Lazy<IReadOnlyList<Release>>(() =>
             GetReleases(x => x.SetRepositoryName(c_azureCliRepo)
                     .SetRepositoryOwner(c_azureRepoOwner)
-                    .SetToken(GitHubApiKey), maxNumberOfReleases: 10)
+                    .SetToken(GitHubApiKey), numberOfReleases: 10)
                 .GetAwaiter().GetResult()
                 .Where(x => !x.Prerelease && x.TagName.StartsWith("azure-cli"))
-                .Take(count: 10)
                 .ToArray());
     }
 
