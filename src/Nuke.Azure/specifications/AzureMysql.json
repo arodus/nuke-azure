@@ -6,13 +6,13 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/4cf5784/latest/docs-ref-autogen/mysql.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/4cf5784/latest/docs-ref-autogen/mysql/server.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/4cf5784/latest/docs-ref-autogen/mysql/db.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/4cf5784/latest/docs-ref-autogen/mysql/server-logs.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/4cf5784/latest/docs-ref-autogen/mysql/server/firewall-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/4cf5784/latest/docs-ref-autogen/mysql/server/configuration.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/4cf5784/latest/docs-ref-autogen/mysql/server/vnet-rule.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/mysql.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/mysql/server.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/mysql/db.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/mysql/server-logs.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/mysql/server/firewall-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/mysql/server/configuration.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/mysql/server/vnet-rule.yml"
   ],
   "name": "AzureMysql",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest",
