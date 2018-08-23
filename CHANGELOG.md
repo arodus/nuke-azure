@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ## [vNext]
+
+## [0.5.2] / 2018-08-23
 - Changed argument types from `Dictionary<string, string>` to `Dictionary<string, object>`.
 - Changed type of `Settings` and `SlotSettings` in Webapp and Functions to Dictionary.
 - Changed type resolving of booleans, arguments starting with `--no-` are now also detected as booleans.
@@ -76,7 +78,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 ## [0.1.0] / 2018-05-09
 - First release.
 
-[vNext]: https://github.com/nuke-build/azure/compare/0.5.1...HEAD
+[vNext]: https://github.com/nuke-build/azure/compare/0.5.2...HEAD
+[0.5.2]: https://github.com/nuke-build/azure/compare/0.5.1...0.5.2
 [0.5.1]: https://github.com/nuke-build/azure/compare/0.5.0...0.5.1
 [0.5.0]: https://github.com/nuke-build/azure/compare/0.4.0...0.5.0
 [0.4.0]: https://github.com/nuke-build/azure/compare/0.3.5...0.4.0
