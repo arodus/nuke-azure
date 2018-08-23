@@ -70,7 +70,7 @@
           },
           {
             "name": "AzureEnvironmentVariables",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--environment-variables {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -144,7 +144,7 @@
           },
           {
             "name": "Secrets",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--secrets {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -159,7 +159,7 @@
           },
           {
             "name": "SecureEnvironmentVariables",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--secure-environment-variables {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",

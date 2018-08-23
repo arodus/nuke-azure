@@ -113,7 +113,7 @@ namespace Nuke.Azure.Generator
                 typeReference.Type = "int";
             else if (IsDictionary(summary))
             {
-                typeReference.Type = "Dictionary<string,string>";
+                typeReference.Type = "Dictionary<string, object>";
                 typeReference.ItemFormat = "{key}={value}";
                 typeReference.Separator = ' ';
             }

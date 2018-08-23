@@ -159,8 +159,8 @@ namespace Nuke.Azure
         /// <summary><p>The dns name label for container group with public IP.</p></summary>
         public virtual string DnsNameLabel { get; internal set; }
         /// <summary><p>A list of environment variable for the container. Space-separated values in 'key=value' format.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> AzureEnvironmentVariables => AzureEnvironmentVariablesInternal.AsReadOnly();
-        internal Dictionary<string,string> AzureEnvironmentVariablesInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> AzureEnvironmentVariables => AzureEnvironmentVariablesInternal.AsReadOnly();
+        internal Dictionary<string, object> AzureEnvironmentVariablesInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>The path to the input file.</p></summary>
         public virtual string File { get; internal set; }
         /// <summary><p>The container image name.</p></summary>
@@ -184,13 +184,13 @@ namespace Nuke.Azure
         /// <summary><p>Restart policy for all containers within the container group.</p></summary>
         public virtual ContainerCreateRestartPolicy RestartPolicy { get; internal set; }
         /// <summary><p>Space-separated secrets in 'key=value' format.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Secrets => SecretsInternal.AsReadOnly();
-        internal Dictionary<string,string> SecretsInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Secrets => SecretsInternal.AsReadOnly();
+        internal Dictionary<string, object> SecretsInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>The path within the container where the secrets volume should be mounted. Must not contain colon ':'.</p></summary>
         public virtual string SecretsMountPath { get; internal set; }
         /// <summary><p>A list of secure environment variable for the container. Space-separated values in 'key=value' format.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> SecureEnvironmentVariables => SecureEnvironmentVariablesInternal.AsReadOnly();
-        internal Dictionary<string,string> SecureEnvironmentVariablesInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> SecureEnvironmentVariables => SecureEnvironmentVariablesInternal.AsReadOnly();
+        internal Dictionary<string, object> SecureEnvironmentVariablesInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>The storage account access key used to access the Azure File share.</p></summary>
         public virtual string AzureFileVolumeAccountKey { get; internal set; }
         /// <summary><p>The name of the storage account that contains the Azure File share.</p></summary>
@@ -754,7 +754,7 @@ namespace Nuke.Azure
         #region AzureEnvironmentVariables
         /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.AzureEnvironmentVariables"/> to a new dictionary.</em></p><p>A list of environment variable for the container. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureContainerCreateSettings SetAzureEnvironmentVariables(this AzureContainerCreateSettings toolSettings, IDictionary<string, string> azureEnvironmentVariables)
+        public static AzureContainerCreateSettings SetAzureEnvironmentVariables(this AzureContainerCreateSettings toolSettings, IDictionary<string, object> azureEnvironmentVariables)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.AzureEnvironmentVariablesInternal = azureEnvironmentVariables.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -770,7 +770,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureContainerCreateSettings.AzureEnvironmentVariables"/>.</em></p><p>A list of environment variable for the container. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureContainerCreateSettings AddAzureEnvironmentVariable(this AzureContainerCreateSettings toolSettings, string azureEnvironmentVariableKey, string azureEnvironmentVariableValue)
+        public static AzureContainerCreateSettings AddAzureEnvironmentVariable(this AzureContainerCreateSettings toolSettings, string azureEnvironmentVariableKey, object azureEnvironmentVariableValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.AzureEnvironmentVariablesInternal.Add(azureEnvironmentVariableKey, azureEnvironmentVariableValue);
@@ -786,7 +786,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureContainerCreateSettings.AzureEnvironmentVariables"/>.</em></p><p>A list of environment variable for the container. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureContainerCreateSettings SetAzureEnvironmentVariable(this AzureContainerCreateSettings toolSettings, string azureEnvironmentVariableKey, string azureEnvironmentVariableValue)
+        public static AzureContainerCreateSettings SetAzureEnvironmentVariable(this AzureContainerCreateSettings toolSettings, string azureEnvironmentVariableKey, object azureEnvironmentVariableValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.AzureEnvironmentVariablesInternal[azureEnvironmentVariableKey] = azureEnvironmentVariableValue;
@@ -1018,7 +1018,7 @@ namespace Nuke.Azure
         #region Secrets
         /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.Secrets"/> to a new dictionary.</em></p><p>Space-separated secrets in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureContainerCreateSettings SetSecrets(this AzureContainerCreateSettings toolSettings, IDictionary<string, string> secrets)
+        public static AzureContainerCreateSettings SetSecrets(this AzureContainerCreateSettings toolSettings, IDictionary<string, object> secrets)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.SecretsInternal = secrets.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -1034,7 +1034,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureContainerCreateSettings.Secrets"/>.</em></p><p>Space-separated secrets in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureContainerCreateSettings AddSecret(this AzureContainerCreateSettings toolSettings, string secretKey, string secretValue)
+        public static AzureContainerCreateSettings AddSecret(this AzureContainerCreateSettings toolSettings, string secretKey, object secretValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.SecretsInternal.Add(secretKey, secretValue);
@@ -1050,7 +1050,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureContainerCreateSettings.Secrets"/>.</em></p><p>Space-separated secrets in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureContainerCreateSettings SetSecret(this AzureContainerCreateSettings toolSettings, string secretKey, string secretValue)
+        public static AzureContainerCreateSettings SetSecret(this AzureContainerCreateSettings toolSettings, string secretKey, object secretValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.SecretsInternal[secretKey] = secretValue;
@@ -1078,7 +1078,7 @@ namespace Nuke.Azure
         #region SecureEnvironmentVariables
         /// <summary><p><em>Sets <see cref="AzureContainerCreateSettings.SecureEnvironmentVariables"/> to a new dictionary.</em></p><p>A list of secure environment variable for the container. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureContainerCreateSettings SetSecureEnvironmentVariables(this AzureContainerCreateSettings toolSettings, IDictionary<string, string> secureEnvironmentVariables)
+        public static AzureContainerCreateSettings SetSecureEnvironmentVariables(this AzureContainerCreateSettings toolSettings, IDictionary<string, object> secureEnvironmentVariables)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.SecureEnvironmentVariablesInternal = secureEnvironmentVariables.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -1094,7 +1094,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureContainerCreateSettings.SecureEnvironmentVariables"/>.</em></p><p>A list of secure environment variable for the container. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureContainerCreateSettings AddSecureEnvironmentVariable(this AzureContainerCreateSettings toolSettings, string secureEnvironmentVariableKey, string secureEnvironmentVariableValue)
+        public static AzureContainerCreateSettings AddSecureEnvironmentVariable(this AzureContainerCreateSettings toolSettings, string secureEnvironmentVariableKey, object secureEnvironmentVariableValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.SecureEnvironmentVariablesInternal.Add(secureEnvironmentVariableKey, secureEnvironmentVariableValue);
@@ -1110,7 +1110,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureContainerCreateSettings.SecureEnvironmentVariables"/>.</em></p><p>A list of secure environment variable for the container. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureContainerCreateSettings SetSecureEnvironmentVariable(this AzureContainerCreateSettings toolSettings, string secureEnvironmentVariableKey, string secureEnvironmentVariableValue)
+        public static AzureContainerCreateSettings SetSecureEnvironmentVariable(this AzureContainerCreateSettings toolSettings, string secureEnvironmentVariableKey, object secureEnvironmentVariableValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.SecureEnvironmentVariablesInternal[secureEnvironmentVariableKey] = secureEnvironmentVariableValue;

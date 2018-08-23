@@ -11227,7 +11227,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -11401,7 +11401,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -11503,7 +11503,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -11677,7 +11677,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -11791,7 +11791,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -11977,7 +11977,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -12047,7 +12047,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -12285,7 +12285,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -12465,7 +12465,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -12567,7 +12567,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -12741,7 +12741,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -12843,7 +12843,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -13017,7 +13017,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -13219,7 +13219,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -13411,7 +13411,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -13514,7 +13514,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -13689,7 +13689,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",

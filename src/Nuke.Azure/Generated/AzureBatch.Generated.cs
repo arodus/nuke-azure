@@ -1499,8 +1499,8 @@ namespace Nuke.Azure
         /// <summary><p>A string that uniquely identifies the schedule within the account. The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters. The ID is case-preserving and case-insensitive (that is, you may not have two IDs within an account that differ only by case).</p></summary>
         public virtual string Id { get; internal set; }
         /// <summary><p>A list of name-value pairs associated with the schedule as metadata. The Batch service does not assign any meaning to metadata; it is solely for the use of user code. Space-separated values in 'key=value' format.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>The action the Batch service should take when all tasks in a job created under this schedule are in the completed state. Note that if a job contains no tasks, then all tasks are considered complete. This option is therefore most commonly used with a Job Manager task; if you want to use automatic job termination without a Job Manager, you should initially set onAllTasksComplete to noaction and update the job properties to set onAllTasksComplete to terminatejob once you have finished adding tasks. The default is noaction.</p></summary>
         public virtual BatchJobScheduleOnAllTasksComplete OnAllTasksComplete { get; internal set; }
         /// <summary><p>The priority of jobs created under this schedule. Priority values can range from -1000 to 1000, with -1000 being the lowest priority and 1000 being the highest priority. The default value is 0. This priority is used as the default for all jobs under the job schedule. You can update a job's priority after it has been created using by using the update job API.</p></summary>
@@ -1810,11 +1810,11 @@ namespace Nuke.Azure
         /// <summary><p>Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT.</p></summary>
         public virtual string AccountName { get; internal set; }
         /// <summary><p>A list of name-value pairs associated with the job schedule as metadata. If you do not specify this element, it takes the default value of an empty list; in effect, any existing metadata is deleted. Space-separated values in 'key=value' format.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>A list of name-value pairs associated with each job created under this schedule as metadata. The Batch service does not assign any meaning to metadata; it is solely for the use of user code. Space-separated values in 'key=value' format.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> JobMetadata => JobMetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> JobMetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> JobMetadata => JobMetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> JobMetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>The action the Batch service should take when all tasks in a job created under this schedule are in the completed state. Note that if a job contains no tasks, then all tasks are considered complete. This option is therefore most commonly used with a Job Manager task; if you want to use automatic job termination without a Job Manager, you should initially set onAllTasksComplete to noaction and update the job properties to set onAllTasksComplete to terminatejob once you have finished adding tasks. The default is noaction.</p></summary>
         public virtual BatchJobScheduleOnAllTasksComplete OnAllTasksComplete { get; internal set; }
         /// <summary><p>The priority of jobs created under this schedule. Priority values can range from -1000 to 1000, with -1000 being the lowest priority and 1000 being the highest priority. The default value is 0. This priority is used as the default for all jobs under the job schedule. You can update a job's priority after it has been created using by using the update job API.</p></summary>
@@ -1826,8 +1826,8 @@ namespace Nuke.Azure
         /// <summary><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
         public virtual string JobManagerTaskCommandLine { get; internal set; }
         /// <summary><p>A list of environment variable settings for the Job Manager task. Space-separated values in 'key=value' format.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> JobManagerTaskEnvironmentSettings => JobManagerTaskEnvironmentSettingsInternal.AsReadOnly();
-        internal Dictionary<string,string> JobManagerTaskEnvironmentSettingsInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> JobManagerTaskEnvironmentSettings => JobManagerTaskEnvironmentSettingsInternal.AsReadOnly();
+        internal Dictionary<string, object> JobManagerTaskEnvironmentSettingsInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</p></summary>
         public virtual string JobManagerTaskId { get; internal set; }
         /// <summary><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format.</p></summary>
@@ -1917,11 +1917,11 @@ namespace Nuke.Azure
         /// <summary><p>Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT.</p></summary>
         public virtual string AccountName { get; internal set; }
         /// <summary><p>A list of name-value pairs associated with the job schedule as metadata. If you do not specify this element, existing metadata is left unchanged. Space-separated values in 'key=value' format.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>A list of name-value pairs associated with each job created under this schedule as metadata. The Batch service does not assign any meaning to metadata; it is solely for the use of user code. Space-separated values in 'key=value' format.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> JobMetadata => JobMetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> JobMetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> JobMetadata => JobMetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> JobMetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>The action the Batch service should take when all tasks in a job created under this schedule are in the completed state. Note that if a job contains no tasks, then all tasks are considered complete. This option is therefore most commonly used with a Job Manager task; if you want to use automatic job termination without a Job Manager, you should initially set onAllTasksComplete to noaction and update the job properties to set onAllTasksComplete to terminatejob once you have finished adding tasks. The default is noaction.</p></summary>
         public virtual BatchJobScheduleOnAllTasksComplete OnAllTasksComplete { get; internal set; }
         /// <summary><p>The priority of jobs created under this schedule. Priority values can range from -1000 to 1000, with -1000 being the lowest priority and 1000 being the highest priority. The default value is 0. This priority is used as the default for all jobs under the job schedule. You can update a job's priority after it has been created using by using the update job API.</p></summary>
@@ -1933,8 +1933,8 @@ namespace Nuke.Azure
         /// <summary><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
         public virtual string JobManagerTaskCommandLine { get; internal set; }
         /// <summary><p>A list of environment variable settings for the Job Manager task. Space-separated values in 'key=value' format.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> JobManagerTaskEnvironmentSettings => JobManagerTaskEnvironmentSettingsInternal.AsReadOnly();
-        internal Dictionary<string,string> JobManagerTaskEnvironmentSettingsInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> JobManagerTaskEnvironmentSettings => JobManagerTaskEnvironmentSettingsInternal.AsReadOnly();
+        internal Dictionary<string, object> JobManagerTaskEnvironmentSettingsInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</p></summary>
         public virtual string JobManagerTaskId { get; internal set; }
         /// <summary><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format.</p></summary>
@@ -2142,8 +2142,8 @@ namespace Nuke.Azure
         /// <summary><p>A string that uniquely identifies the job within the account. The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters. The ID is case-preserving and case-insensitive (that is, you may not have two IDs within an account that differ only by case).</p></summary>
         public virtual string Id { get; internal set; }
         /// <summary><p>A list of name-value pairs associated with the job as metadata. The Batch service does not assign any meaning to metadata; it is solely for the use of user code. Space-separated values in 'key=value' format.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>The priority of the job. Priority values can range from -1000 to 1000, with -1000 being the lowest priority and 1000 being the highest priority. The default value is 0.</p></summary>
         public virtual int? Priority { get; internal set; }
         /// <summary><p>Whether tasks in the job can define dependencies on each other. The default is false. True if flag present.</p></summary>
@@ -2155,8 +2155,8 @@ namespace Nuke.Azure
         /// <summary><p>The command line of the Job Manager task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
         public virtual string JobManagerTaskCommandLine { get; internal set; }
         /// <summary><p>A list of environment variable settings for the Job Manager task. Space-separated values in 'key=value' format.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> JobManagerTaskEnvironmentSettings => JobManagerTaskEnvironmentSettingsInternal.AsReadOnly();
-        internal Dictionary<string,string> JobManagerTaskEnvironmentSettingsInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> JobManagerTaskEnvironmentSettings => JobManagerTaskEnvironmentSettingsInternal.AsReadOnly();
+        internal Dictionary<string, object> JobManagerTaskEnvironmentSettingsInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>A string that uniquely identifies the Job Manager task within the job. The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</p></summary>
         public virtual string JobManagerTaskId { get; internal set; }
         /// <summary><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format.</p></summary>
@@ -2448,8 +2448,8 @@ namespace Nuke.Azure
         /// <summary><p>Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT.</p></summary>
         public virtual string AccountName { get; internal set; }
         /// <summary><p>A list of name-value pairs associated with the job as metadata. If omitted, it takes the default value of an empty list; in effect, any existing metadata is deleted. Space-separated values in 'key=value' format.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>The action the Batch service should take when all tasks in the job are in the completed state. If omitted, the completion behavior is set to noaction. If the current value is terminatejob, this is an error because a job's completion behavior may not be changed from terminatejob to noaction. You may not change the value from terminatejob to noaction - that is, once you have engaged automatic job termination, you cannot turn it off again. If you try to do this, the request fails and Batch returns status code 400 (Bad Request) and an 'invalid property value' error response. If you do not specify this element in a PUT request, it is equivalent to passing noaction. This is an error if the current value is terminatejob.</p></summary>
         public virtual BatchJobScheduleOnAllTasksComplete OnAllTasksComplete { get; internal set; }
         /// <summary><p>The priority of the job. Priority values can range from -1000 to 1000, with -1000 being the lowest priority and 1000 being the highest priority. If omitted, it is set to the default value 0.</p></summary>
@@ -2526,8 +2526,8 @@ namespace Nuke.Azure
         /// <summary><p>Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT.</p></summary>
         public virtual string AccountName { get; internal set; }
         /// <summary><p>A list of name-value pairs associated with the job as metadata. If omitted, the existing job metadata is left unchanged. Space-separated values in 'key=value' format.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>The action the Batch service should take when all tasks in the job are in the completed state. If omitted, the completion behavior is left unchanged. You may not change the value from terminatejob to noaction - that is, once you have engaged automatic job termination, you cannot turn it off again. If you try to do this, the request fails with an 'invalid property value' error response; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</p></summary>
         public virtual BatchJobScheduleOnAllTasksComplete OnAllTasksComplete { get; internal set; }
         /// <summary><p>The priority of the job. Priority values can range from -1000 to 1000, with -1000 being the lowest priority and 1000 being the highest priority. If omitted, the priority of the job is left unchanged.</p></summary>
@@ -3035,8 +3035,8 @@ namespace Nuke.Azure
         /// <summary><p>A string that uniquely identifies the pool within the account. The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters. The ID is case-preserving and case-insensitive (that is, you may not have two pool IDs within an account that differ only by case).</p></summary>
         public virtual string Id { get; internal set; }
         /// <summary><p>A list of name-value pairs associated with the pool as metadata. The Batch service does not assign any meaning to metadata; it is solely for the use of user code. Space-separated values in 'key=value' format.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>The timeout for allocation of compute nodes to the pool. This timeout applies only to manual scaling; it has no effect when enableAutoScale is set to true. The default value is 15 minutes. The minimum value is 5 minutes. If you specify a value less than 5 minutes, the Batch service returns an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request). Expected format is an ISO-8601 duration.</p></summary>
         public virtual string ResizeTimeout { get; internal set; }
         /// <summary><p>The desired number of dedicated compute nodes in the pool. This property must not be specified if enableAutoScale is set to true. If enableAutoScale is set to false, then you must set either targetDedicatedNodes, targetLowPriorityNodes, or both.</p></summary>
@@ -3234,13 +3234,13 @@ namespace Nuke.Azure
         /// <summary><p>A list of certificates to be installed on each compute node in the pool. This list replaces any existing certificate references configured on the pool. If you specify an empty collection, any existing certificate references are removed from the pool. For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.</p></summary>
         public virtual string CertificateReferences { get; internal set; }
         /// <summary><p>A list of name-value pairs associated with the pool as metadata. This list replaces any existing metadata configured on the pool. If omitted, or if you specify an empty collection, any existing metadata is removed from the pool.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>The command line of the start task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</p></summary>
         public virtual string StartTaskCommandLine { get; internal set; }
         /// <summary><p>A list of environment variable settings for the start task. Space-separated values in 'key=value' format.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> StartTaskEnvironmentSettings => StartTaskEnvironmentSettingsInternal.AsReadOnly();
-        internal Dictionary<string,string> StartTaskEnvironmentSettingsInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> StartTaskEnvironmentSettings => StartTaskEnvironmentSettingsInternal.AsReadOnly();
+        internal Dictionary<string, object> StartTaskEnvironmentSettingsInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>The maximum number of times the task may be retried.</p></summary>
         public virtual string StartTaskMaxTaskRetryCount { get; internal set; }
         /// <summary><p>Whether the Batch service should wait for the start task to complete successfully (that is, to exit with exit code 0) before scheduling any tasks on the compute node. True if flag present, otherwise defaults to False.</p></summary>
@@ -3375,13 +3375,13 @@ namespace Nuke.Azure
         /// <summary><p>A list of certificates to be installed on each compute node in the pool. If this element is present, it replaces any existing certificate references configured on the pool. If omitted, any existing certificate references are left unchanged. For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory. Space-separated certificate thumbprints.</p></summary>
         public virtual string CertificateReferences { get; internal set; }
         /// <summary><p>A list of name-value pairs associated with the pool as metadata. If this element is present, it replaces any existing metadata configured on the pool. If you specify an empty collection, any metadata is removed from the pool. If omitted, any existing metadata is left unchanged. Space-separated values in 'key=value' format.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>The command line of the start task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (<a href="https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables">https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables</a>).</p></summary>
         public virtual string StartTaskCommandLine { get; internal set; }
         /// <summary><p>A list of environment variable settings for the start task. Space-separated values in 'key=value' format.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> StartTaskEnvironmentSettings => StartTaskEnvironmentSettingsInternal.AsReadOnly();
-        internal Dictionary<string,string> StartTaskEnvironmentSettingsInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> StartTaskEnvironmentSettings => StartTaskEnvironmentSettingsInternal.AsReadOnly();
+        internal Dictionary<string, object> StartTaskEnvironmentSettingsInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>The maximum number of times the task may be retried. The Batch service retries a task if its exit code is nonzero. Note that this value specifically controls the number of retries. The Batch service will try the task once, and may then retry up to this limit. For example, if the maximum retry count is 3, Batch tries the task up to 4 times (one initial try and 3 retries). If the maximum retry count is 0, the Batch service does not retry the task. If the maximum retry count is -1, the Batch service retries the task without limit.</p></summary>
         public virtual string StartTaskMaxTaskRetryCount { get; internal set; }
         /// <summary><p>A list of files that the Batch service will download to the compute node before running the command line. Files listed under this element are located in the task's working directory. Space-separated resource references in filename=blobsource format.</p></summary>
@@ -3516,8 +3516,8 @@ namespace Nuke.Azure
         /// <summary><p>The command line of the task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</p></summary>
         public virtual string CommandLine { get; internal set; }
         /// <summary><p>A list of environment variable settings for the task. Space-separated values in 'key=value' format.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> EnvironmentSettings => EnvironmentSettingsInternal.AsReadOnly();
-        internal Dictionary<string,string> EnvironmentSettingsInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> EnvironmentSettings => EnvironmentSettingsInternal.AsReadOnly();
+        internal Dictionary<string, object> EnvironmentSettingsInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>The file containing the task(s) to create in JSON format, if this parameter is specified, all other parameters are ignored.</p></summary>
         public virtual string JsonFile { get; internal set; }
         /// <summary><p>The maximum number of times the task may be retried. The Batch service retries a task if its exit code is nonzero. Note that this value specifically controls the number of retries for the task executable due to a nonzero exit code. The Batch service will try the task once, and may then retry up to this limit. For example, if the maximum retry count is 3, Batch tries the task up to 4 times (one initial try and 3 retries). If the maximum retry count is 0, the Batch service does not retry the task after the first attempt. If the maximum retry count is -1, the Batch service retries the task without limit. Resource files and application packages are only downloaded again if the task is retried on a new compute node.</p></summary>
@@ -8718,7 +8718,7 @@ namespace Nuke.Azure
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleCreateSettings.Metadata"/> to a new dictionary.</em></p><p>A list of name-value pairs associated with the schedule as metadata. The Batch service does not assign any meaning to metadata; it is solely for the use of user code. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobScheduleCreateSettings SetMetadata(this AzureBatchJobScheduleCreateSettings toolSettings, IDictionary<string, string> metadata)
+        public static AzureBatchJobScheduleCreateSettings SetMetadata(this AzureBatchJobScheduleCreateSettings toolSettings, IDictionary<string, object> metadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -8734,7 +8734,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureBatchJobScheduleCreateSettings.Metadata"/>.</em></p><p>A list of name-value pairs associated with the schedule as metadata. The Batch service does not assign any meaning to metadata; it is solely for the use of user code. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobScheduleCreateSettings AddMetadatum(this AzureBatchJobScheduleCreateSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureBatchJobScheduleCreateSettings AddMetadatum(this AzureBatchJobScheduleCreateSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
@@ -8750,7 +8750,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureBatchJobScheduleCreateSettings.Metadata"/>.</em></p><p>A list of name-value pairs associated with the schedule as metadata. The Batch service does not assign any meaning to metadata; it is solely for the use of user code. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobScheduleCreateSettings SetMetadatum(this AzureBatchJobScheduleCreateSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureBatchJobScheduleCreateSettings SetMetadatum(this AzureBatchJobScheduleCreateSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal[metadatumKey] = metadatumValue;
@@ -10132,7 +10132,7 @@ namespace Nuke.Azure
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleResetSettings.Metadata"/> to a new dictionary.</em></p><p>A list of name-value pairs associated with the job schedule as metadata. If you do not specify this element, it takes the default value of an empty list; in effect, any existing metadata is deleted. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobScheduleResetSettings SetMetadata(this AzureBatchJobScheduleResetSettings toolSettings, IDictionary<string, string> metadata)
+        public static AzureBatchJobScheduleResetSettings SetMetadata(this AzureBatchJobScheduleResetSettings toolSettings, IDictionary<string, object> metadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -10148,7 +10148,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureBatchJobScheduleResetSettings.Metadata"/>.</em></p><p>A list of name-value pairs associated with the job schedule as metadata. If you do not specify this element, it takes the default value of an empty list; in effect, any existing metadata is deleted. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobScheduleResetSettings AddMetadatum(this AzureBatchJobScheduleResetSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureBatchJobScheduleResetSettings AddMetadatum(this AzureBatchJobScheduleResetSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
@@ -10164,7 +10164,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureBatchJobScheduleResetSettings.Metadata"/>.</em></p><p>A list of name-value pairs associated with the job schedule as metadata. If you do not specify this element, it takes the default value of an empty list; in effect, any existing metadata is deleted. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobScheduleResetSettings SetMetadatum(this AzureBatchJobScheduleResetSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureBatchJobScheduleResetSettings SetMetadatum(this AzureBatchJobScheduleResetSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal[metadatumKey] = metadatumValue;
@@ -10174,7 +10174,7 @@ namespace Nuke.Azure
         #region JobMetadata
         /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleResetSettings.JobMetadata"/> to a new dictionary.</em></p><p>A list of name-value pairs associated with each job created under this schedule as metadata. The Batch service does not assign any meaning to metadata; it is solely for the use of user code. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobScheduleResetSettings SetJobMetadata(this AzureBatchJobScheduleResetSettings toolSettings, IDictionary<string, string> jobMetadata)
+        public static AzureBatchJobScheduleResetSettings SetJobMetadata(this AzureBatchJobScheduleResetSettings toolSettings, IDictionary<string, object> jobMetadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.JobMetadataInternal = jobMetadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -10190,7 +10190,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureBatchJobScheduleResetSettings.JobMetadata"/>.</em></p><p>A list of name-value pairs associated with each job created under this schedule as metadata. The Batch service does not assign any meaning to metadata; it is solely for the use of user code. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobScheduleResetSettings AddJobMetadatum(this AzureBatchJobScheduleResetSettings toolSettings, string jobMetadatumKey, string jobMetadatumValue)
+        public static AzureBatchJobScheduleResetSettings AddJobMetadatum(this AzureBatchJobScheduleResetSettings toolSettings, string jobMetadatumKey, object jobMetadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.JobMetadataInternal.Add(jobMetadatumKey, jobMetadatumValue);
@@ -10206,7 +10206,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureBatchJobScheduleResetSettings.JobMetadata"/>.</em></p><p>A list of name-value pairs associated with each job created under this schedule as metadata. The Batch service does not assign any meaning to metadata; it is solely for the use of user code. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobScheduleResetSettings SetJobMetadatum(this AzureBatchJobScheduleResetSettings toolSettings, string jobMetadatumKey, string jobMetadatumValue)
+        public static AzureBatchJobScheduleResetSettings SetJobMetadatum(this AzureBatchJobScheduleResetSettings toolSettings, string jobMetadatumKey, object jobMetadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.JobMetadataInternal[jobMetadatumKey] = jobMetadatumValue;
@@ -10306,7 +10306,7 @@ namespace Nuke.Azure
         #region JobManagerTaskEnvironmentSettings
         /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleResetSettings.JobManagerTaskEnvironmentSettings"/> to a new dictionary.</em></p><p>A list of environment variable settings for the Job Manager task. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobScheduleResetSettings SetJobManagerTaskEnvironmentSettings(this AzureBatchJobScheduleResetSettings toolSettings, IDictionary<string, string> jobManagerTaskEnvironmentSettings)
+        public static AzureBatchJobScheduleResetSettings SetJobManagerTaskEnvironmentSettings(this AzureBatchJobScheduleResetSettings toolSettings, IDictionary<string, object> jobManagerTaskEnvironmentSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.JobManagerTaskEnvironmentSettingsInternal = jobManagerTaskEnvironmentSettings.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -10322,7 +10322,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureBatchJobScheduleResetSettings.JobManagerTaskEnvironmentSettings"/>.</em></p><p>A list of environment variable settings for the Job Manager task. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobScheduleResetSettings AddJobManagerTaskEnvironmentSetting(this AzureBatchJobScheduleResetSettings toolSettings, string jobManagerTaskEnvironmentSettingKey, string jobManagerTaskEnvironmentSettingValue)
+        public static AzureBatchJobScheduleResetSettings AddJobManagerTaskEnvironmentSetting(this AzureBatchJobScheduleResetSettings toolSettings, string jobManagerTaskEnvironmentSettingKey, object jobManagerTaskEnvironmentSettingValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.JobManagerTaskEnvironmentSettingsInternal.Add(jobManagerTaskEnvironmentSettingKey, jobManagerTaskEnvironmentSettingValue);
@@ -10338,7 +10338,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureBatchJobScheduleResetSettings.JobManagerTaskEnvironmentSettings"/>.</em></p><p>A list of environment variable settings for the Job Manager task. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobScheduleResetSettings SetJobManagerTaskEnvironmentSetting(this AzureBatchJobScheduleResetSettings toolSettings, string jobManagerTaskEnvironmentSettingKey, string jobManagerTaskEnvironmentSettingValue)
+        public static AzureBatchJobScheduleResetSettings SetJobManagerTaskEnvironmentSetting(this AzureBatchJobScheduleResetSettings toolSettings, string jobManagerTaskEnvironmentSettingKey, object jobManagerTaskEnvironmentSettingValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.JobManagerTaskEnvironmentSettingsInternal[jobManagerTaskEnvironmentSettingKey] = jobManagerTaskEnvironmentSettingValue;
@@ -10734,7 +10734,7 @@ namespace Nuke.Azure
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleSetSettings.Metadata"/> to a new dictionary.</em></p><p>A list of name-value pairs associated with the job schedule as metadata. If you do not specify this element, existing metadata is left unchanged. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobScheduleSetSettings SetMetadata(this AzureBatchJobScheduleSetSettings toolSettings, IDictionary<string, string> metadata)
+        public static AzureBatchJobScheduleSetSettings SetMetadata(this AzureBatchJobScheduleSetSettings toolSettings, IDictionary<string, object> metadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -10750,7 +10750,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureBatchJobScheduleSetSettings.Metadata"/>.</em></p><p>A list of name-value pairs associated with the job schedule as metadata. If you do not specify this element, existing metadata is left unchanged. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobScheduleSetSettings AddMetadatum(this AzureBatchJobScheduleSetSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureBatchJobScheduleSetSettings AddMetadatum(this AzureBatchJobScheduleSetSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
@@ -10766,7 +10766,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureBatchJobScheduleSetSettings.Metadata"/>.</em></p><p>A list of name-value pairs associated with the job schedule as metadata. If you do not specify this element, existing metadata is left unchanged. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobScheduleSetSettings SetMetadatum(this AzureBatchJobScheduleSetSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureBatchJobScheduleSetSettings SetMetadatum(this AzureBatchJobScheduleSetSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal[metadatumKey] = metadatumValue;
@@ -10776,7 +10776,7 @@ namespace Nuke.Azure
         #region JobMetadata
         /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleSetSettings.JobMetadata"/> to a new dictionary.</em></p><p>A list of name-value pairs associated with each job created under this schedule as metadata. The Batch service does not assign any meaning to metadata; it is solely for the use of user code. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobScheduleSetSettings SetJobMetadata(this AzureBatchJobScheduleSetSettings toolSettings, IDictionary<string, string> jobMetadata)
+        public static AzureBatchJobScheduleSetSettings SetJobMetadata(this AzureBatchJobScheduleSetSettings toolSettings, IDictionary<string, object> jobMetadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.JobMetadataInternal = jobMetadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -10792,7 +10792,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureBatchJobScheduleSetSettings.JobMetadata"/>.</em></p><p>A list of name-value pairs associated with each job created under this schedule as metadata. The Batch service does not assign any meaning to metadata; it is solely for the use of user code. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobScheduleSetSettings AddJobMetadatum(this AzureBatchJobScheduleSetSettings toolSettings, string jobMetadatumKey, string jobMetadatumValue)
+        public static AzureBatchJobScheduleSetSettings AddJobMetadatum(this AzureBatchJobScheduleSetSettings toolSettings, string jobMetadatumKey, object jobMetadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.JobMetadataInternal.Add(jobMetadatumKey, jobMetadatumValue);
@@ -10808,7 +10808,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureBatchJobScheduleSetSettings.JobMetadata"/>.</em></p><p>A list of name-value pairs associated with each job created under this schedule as metadata. The Batch service does not assign any meaning to metadata; it is solely for the use of user code. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobScheduleSetSettings SetJobMetadatum(this AzureBatchJobScheduleSetSettings toolSettings, string jobMetadatumKey, string jobMetadatumValue)
+        public static AzureBatchJobScheduleSetSettings SetJobMetadatum(this AzureBatchJobScheduleSetSettings toolSettings, string jobMetadatumKey, object jobMetadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.JobMetadataInternal[jobMetadatumKey] = jobMetadatumValue;
@@ -10908,7 +10908,7 @@ namespace Nuke.Azure
         #region JobManagerTaskEnvironmentSettings
         /// <summary><p><em>Sets <see cref="AzureBatchJobScheduleSetSettings.JobManagerTaskEnvironmentSettings"/> to a new dictionary.</em></p><p>A list of environment variable settings for the Job Manager task. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobScheduleSetSettings SetJobManagerTaskEnvironmentSettings(this AzureBatchJobScheduleSetSettings toolSettings, IDictionary<string, string> jobManagerTaskEnvironmentSettings)
+        public static AzureBatchJobScheduleSetSettings SetJobManagerTaskEnvironmentSettings(this AzureBatchJobScheduleSetSettings toolSettings, IDictionary<string, object> jobManagerTaskEnvironmentSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.JobManagerTaskEnvironmentSettingsInternal = jobManagerTaskEnvironmentSettings.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -10924,7 +10924,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureBatchJobScheduleSetSettings.JobManagerTaskEnvironmentSettings"/>.</em></p><p>A list of environment variable settings for the Job Manager task. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobScheduleSetSettings AddJobManagerTaskEnvironmentSetting(this AzureBatchJobScheduleSetSettings toolSettings, string jobManagerTaskEnvironmentSettingKey, string jobManagerTaskEnvironmentSettingValue)
+        public static AzureBatchJobScheduleSetSettings AddJobManagerTaskEnvironmentSetting(this AzureBatchJobScheduleSetSettings toolSettings, string jobManagerTaskEnvironmentSettingKey, object jobManagerTaskEnvironmentSettingValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.JobManagerTaskEnvironmentSettingsInternal.Add(jobManagerTaskEnvironmentSettingKey, jobManagerTaskEnvironmentSettingValue);
@@ -10940,7 +10940,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureBatchJobScheduleSetSettings.JobManagerTaskEnvironmentSettings"/>.</em></p><p>A list of environment variable settings for the Job Manager task. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobScheduleSetSettings SetJobManagerTaskEnvironmentSetting(this AzureBatchJobScheduleSetSettings toolSettings, string jobManagerTaskEnvironmentSettingKey, string jobManagerTaskEnvironmentSettingValue)
+        public static AzureBatchJobScheduleSetSettings SetJobManagerTaskEnvironmentSetting(this AzureBatchJobScheduleSetSettings toolSettings, string jobManagerTaskEnvironmentSettingKey, object jobManagerTaskEnvironmentSettingValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.JobManagerTaskEnvironmentSettingsInternal[jobManagerTaskEnvironmentSettingKey] = jobManagerTaskEnvironmentSettingValue;
@@ -11856,7 +11856,7 @@ namespace Nuke.Azure
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzureBatchJobCreateSettings.Metadata"/> to a new dictionary.</em></p><p>A list of name-value pairs associated with the job as metadata. The Batch service does not assign any meaning to metadata; it is solely for the use of user code. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobCreateSettings SetMetadata(this AzureBatchJobCreateSettings toolSettings, IDictionary<string, string> metadata)
+        public static AzureBatchJobCreateSettings SetMetadata(this AzureBatchJobCreateSettings toolSettings, IDictionary<string, object> metadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -11872,7 +11872,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureBatchJobCreateSettings.Metadata"/>.</em></p><p>A list of name-value pairs associated with the job as metadata. The Batch service does not assign any meaning to metadata; it is solely for the use of user code. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobCreateSettings AddMetadatum(this AzureBatchJobCreateSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureBatchJobCreateSettings AddMetadatum(this AzureBatchJobCreateSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
@@ -11888,7 +11888,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureBatchJobCreateSettings.Metadata"/>.</em></p><p>A list of name-value pairs associated with the job as metadata. The Batch service does not assign any meaning to metadata; it is solely for the use of user code. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobCreateSettings SetMetadatum(this AzureBatchJobCreateSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureBatchJobCreateSettings SetMetadatum(this AzureBatchJobCreateSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal[metadatumKey] = metadatumValue;
@@ -11988,7 +11988,7 @@ namespace Nuke.Azure
         #region JobManagerTaskEnvironmentSettings
         /// <summary><p><em>Sets <see cref="AzureBatchJobCreateSettings.JobManagerTaskEnvironmentSettings"/> to a new dictionary.</em></p><p>A list of environment variable settings for the Job Manager task. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobCreateSettings SetJobManagerTaskEnvironmentSettings(this AzureBatchJobCreateSettings toolSettings, IDictionary<string, string> jobManagerTaskEnvironmentSettings)
+        public static AzureBatchJobCreateSettings SetJobManagerTaskEnvironmentSettings(this AzureBatchJobCreateSettings toolSettings, IDictionary<string, object> jobManagerTaskEnvironmentSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.JobManagerTaskEnvironmentSettingsInternal = jobManagerTaskEnvironmentSettings.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -12004,7 +12004,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureBatchJobCreateSettings.JobManagerTaskEnvironmentSettings"/>.</em></p><p>A list of environment variable settings for the Job Manager task. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobCreateSettings AddJobManagerTaskEnvironmentSetting(this AzureBatchJobCreateSettings toolSettings, string jobManagerTaskEnvironmentSettingKey, string jobManagerTaskEnvironmentSettingValue)
+        public static AzureBatchJobCreateSettings AddJobManagerTaskEnvironmentSetting(this AzureBatchJobCreateSettings toolSettings, string jobManagerTaskEnvironmentSettingKey, object jobManagerTaskEnvironmentSettingValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.JobManagerTaskEnvironmentSettingsInternal.Add(jobManagerTaskEnvironmentSettingKey, jobManagerTaskEnvironmentSettingValue);
@@ -12020,7 +12020,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureBatchJobCreateSettings.JobManagerTaskEnvironmentSettings"/>.</em></p><p>A list of environment variable settings for the Job Manager task. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobCreateSettings SetJobManagerTaskEnvironmentSetting(this AzureBatchJobCreateSettings toolSettings, string jobManagerTaskEnvironmentSettingKey, string jobManagerTaskEnvironmentSettingValue)
+        public static AzureBatchJobCreateSettings SetJobManagerTaskEnvironmentSetting(this AzureBatchJobCreateSettings toolSettings, string jobManagerTaskEnvironmentSettingKey, object jobManagerTaskEnvironmentSettingValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.JobManagerTaskEnvironmentSettingsInternal[jobManagerTaskEnvironmentSettingKey] = jobManagerTaskEnvironmentSettingValue;
@@ -13258,7 +13258,7 @@ namespace Nuke.Azure
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzureBatchJobResetSettings.Metadata"/> to a new dictionary.</em></p><p>A list of name-value pairs associated with the job as metadata. If omitted, it takes the default value of an empty list; in effect, any existing metadata is deleted. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobResetSettings SetMetadata(this AzureBatchJobResetSettings toolSettings, IDictionary<string, string> metadata)
+        public static AzureBatchJobResetSettings SetMetadata(this AzureBatchJobResetSettings toolSettings, IDictionary<string, object> metadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -13274,7 +13274,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureBatchJobResetSettings.Metadata"/>.</em></p><p>A list of name-value pairs associated with the job as metadata. If omitted, it takes the default value of an empty list; in effect, any existing metadata is deleted. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobResetSettings AddMetadatum(this AzureBatchJobResetSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureBatchJobResetSettings AddMetadatum(this AzureBatchJobResetSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
@@ -13290,7 +13290,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureBatchJobResetSettings.Metadata"/>.</em></p><p>A list of name-value pairs associated with the job as metadata. If omitted, it takes the default value of an empty list; in effect, any existing metadata is deleted. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobResetSettings SetMetadatum(this AzureBatchJobResetSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureBatchJobResetSettings SetMetadatum(this AzureBatchJobResetSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal[metadatumKey] = metadatumValue;
@@ -13650,7 +13650,7 @@ namespace Nuke.Azure
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzureBatchJobSetSettings.Metadata"/> to a new dictionary.</em></p><p>A list of name-value pairs associated with the job as metadata. If omitted, the existing job metadata is left unchanged. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobSetSettings SetMetadata(this AzureBatchJobSetSettings toolSettings, IDictionary<string, string> metadata)
+        public static AzureBatchJobSetSettings SetMetadata(this AzureBatchJobSetSettings toolSettings, IDictionary<string, object> metadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -13666,7 +13666,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureBatchJobSetSettings.Metadata"/>.</em></p><p>A list of name-value pairs associated with the job as metadata. If omitted, the existing job metadata is left unchanged. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobSetSettings AddMetadatum(this AzureBatchJobSetSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureBatchJobSetSettings AddMetadatum(this AzureBatchJobSetSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
@@ -13682,7 +13682,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureBatchJobSetSettings.Metadata"/>.</em></p><p>A list of name-value pairs associated with the job as metadata. If omitted, the existing job metadata is left unchanged. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchJobSetSettings SetMetadatum(this AzureBatchJobSetSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureBatchJobSetSettings SetMetadatum(this AzureBatchJobSetSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal[metadatumKey] = metadatumValue;
@@ -15906,7 +15906,7 @@ namespace Nuke.Azure
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzureBatchPoolCreateSettings.Metadata"/> to a new dictionary.</em></p><p>A list of name-value pairs associated with the pool as metadata. The Batch service does not assign any meaning to metadata; it is solely for the use of user code. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchPoolCreateSettings SetMetadata(this AzureBatchPoolCreateSettings toolSettings, IDictionary<string, string> metadata)
+        public static AzureBatchPoolCreateSettings SetMetadata(this AzureBatchPoolCreateSettings toolSettings, IDictionary<string, object> metadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -15922,7 +15922,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureBatchPoolCreateSettings.Metadata"/>.</em></p><p>A list of name-value pairs associated with the pool as metadata. The Batch service does not assign any meaning to metadata; it is solely for the use of user code. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchPoolCreateSettings AddMetadatum(this AzureBatchPoolCreateSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureBatchPoolCreateSettings AddMetadatum(this AzureBatchPoolCreateSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
@@ -15938,7 +15938,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureBatchPoolCreateSettings.Metadata"/>.</em></p><p>A list of name-value pairs associated with the pool as metadata. The Batch service does not assign any meaning to metadata; it is solely for the use of user code. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchPoolCreateSettings SetMetadatum(this AzureBatchPoolCreateSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureBatchPoolCreateSettings SetMetadatum(this AzureBatchPoolCreateSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal[metadatumKey] = metadatumValue;
@@ -16818,7 +16818,7 @@ namespace Nuke.Azure
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzureBatchPoolResetSettings.Metadata"/> to a new dictionary.</em></p><p>A list of name-value pairs associated with the pool as metadata. This list replaces any existing metadata configured on the pool. If omitted, or if you specify an empty collection, any existing metadata is removed from the pool.</p></summary>
         [Pure]
-        public static AzureBatchPoolResetSettings SetMetadata(this AzureBatchPoolResetSettings toolSettings, IDictionary<string, string> metadata)
+        public static AzureBatchPoolResetSettings SetMetadata(this AzureBatchPoolResetSettings toolSettings, IDictionary<string, object> metadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -16834,7 +16834,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureBatchPoolResetSettings.Metadata"/>.</em></p><p>A list of name-value pairs associated with the pool as metadata. This list replaces any existing metadata configured on the pool. If omitted, or if you specify an empty collection, any existing metadata is removed from the pool.</p></summary>
         [Pure]
-        public static AzureBatchPoolResetSettings AddMetadatum(this AzureBatchPoolResetSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureBatchPoolResetSettings AddMetadatum(this AzureBatchPoolResetSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
@@ -16850,7 +16850,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureBatchPoolResetSettings.Metadata"/>.</em></p><p>A list of name-value pairs associated with the pool as metadata. This list replaces any existing metadata configured on the pool. If omitted, or if you specify an empty collection, any existing metadata is removed from the pool.</p></summary>
         [Pure]
-        public static AzureBatchPoolResetSettings SetMetadatum(this AzureBatchPoolResetSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureBatchPoolResetSettings SetMetadatum(this AzureBatchPoolResetSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal[metadatumKey] = metadatumValue;
@@ -16878,7 +16878,7 @@ namespace Nuke.Azure
         #region StartTaskEnvironmentSettings
         /// <summary><p><em>Sets <see cref="AzureBatchPoolResetSettings.StartTaskEnvironmentSettings"/> to a new dictionary.</em></p><p>A list of environment variable settings for the start task. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchPoolResetSettings SetStartTaskEnvironmentSettings(this AzureBatchPoolResetSettings toolSettings, IDictionary<string, string> startTaskEnvironmentSettings)
+        public static AzureBatchPoolResetSettings SetStartTaskEnvironmentSettings(this AzureBatchPoolResetSettings toolSettings, IDictionary<string, object> startTaskEnvironmentSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.StartTaskEnvironmentSettingsInternal = startTaskEnvironmentSettings.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -16894,7 +16894,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureBatchPoolResetSettings.StartTaskEnvironmentSettings"/>.</em></p><p>A list of environment variable settings for the start task. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchPoolResetSettings AddStartTaskEnvironmentSetting(this AzureBatchPoolResetSettings toolSettings, string startTaskEnvironmentSettingKey, string startTaskEnvironmentSettingValue)
+        public static AzureBatchPoolResetSettings AddStartTaskEnvironmentSetting(this AzureBatchPoolResetSettings toolSettings, string startTaskEnvironmentSettingKey, object startTaskEnvironmentSettingValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.StartTaskEnvironmentSettingsInternal.Add(startTaskEnvironmentSettingKey, startTaskEnvironmentSettingValue);
@@ -16910,7 +16910,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureBatchPoolResetSettings.StartTaskEnvironmentSettings"/>.</em></p><p>A list of environment variable settings for the start task. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchPoolResetSettings SetStartTaskEnvironmentSetting(this AzureBatchPoolResetSettings toolSettings, string startTaskEnvironmentSettingKey, string startTaskEnvironmentSettingValue)
+        public static AzureBatchPoolResetSettings SetStartTaskEnvironmentSetting(this AzureBatchPoolResetSettings toolSettings, string startTaskEnvironmentSettingKey, object startTaskEnvironmentSettingValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.StartTaskEnvironmentSettingsInternal[startTaskEnvironmentSettingKey] = startTaskEnvironmentSettingValue;
@@ -17512,7 +17512,7 @@ namespace Nuke.Azure
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzureBatchPoolSetSettings.Metadata"/> to a new dictionary.</em></p><p>A list of name-value pairs associated with the pool as metadata. If this element is present, it replaces any existing metadata configured on the pool. If you specify an empty collection, any metadata is removed from the pool. If omitted, any existing metadata is left unchanged. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchPoolSetSettings SetMetadata(this AzureBatchPoolSetSettings toolSettings, IDictionary<string, string> metadata)
+        public static AzureBatchPoolSetSettings SetMetadata(this AzureBatchPoolSetSettings toolSettings, IDictionary<string, object> metadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -17528,7 +17528,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureBatchPoolSetSettings.Metadata"/>.</em></p><p>A list of name-value pairs associated with the pool as metadata. If this element is present, it replaces any existing metadata configured on the pool. If you specify an empty collection, any metadata is removed from the pool. If omitted, any existing metadata is left unchanged. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchPoolSetSettings AddMetadatum(this AzureBatchPoolSetSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureBatchPoolSetSettings AddMetadatum(this AzureBatchPoolSetSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
@@ -17544,7 +17544,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureBatchPoolSetSettings.Metadata"/>.</em></p><p>A list of name-value pairs associated with the pool as metadata. If this element is present, it replaces any existing metadata configured on the pool. If you specify an empty collection, any metadata is removed from the pool. If omitted, any existing metadata is left unchanged. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchPoolSetSettings SetMetadatum(this AzureBatchPoolSetSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureBatchPoolSetSettings SetMetadatum(this AzureBatchPoolSetSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal[metadatumKey] = metadatumValue;
@@ -17572,7 +17572,7 @@ namespace Nuke.Azure
         #region StartTaskEnvironmentSettings
         /// <summary><p><em>Sets <see cref="AzureBatchPoolSetSettings.StartTaskEnvironmentSettings"/> to a new dictionary.</em></p><p>A list of environment variable settings for the start task. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchPoolSetSettings SetStartTaskEnvironmentSettings(this AzureBatchPoolSetSettings toolSettings, IDictionary<string, string> startTaskEnvironmentSettings)
+        public static AzureBatchPoolSetSettings SetStartTaskEnvironmentSettings(this AzureBatchPoolSetSettings toolSettings, IDictionary<string, object> startTaskEnvironmentSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.StartTaskEnvironmentSettingsInternal = startTaskEnvironmentSettings.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -17588,7 +17588,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureBatchPoolSetSettings.StartTaskEnvironmentSettings"/>.</em></p><p>A list of environment variable settings for the start task. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchPoolSetSettings AddStartTaskEnvironmentSetting(this AzureBatchPoolSetSettings toolSettings, string startTaskEnvironmentSettingKey, string startTaskEnvironmentSettingValue)
+        public static AzureBatchPoolSetSettings AddStartTaskEnvironmentSetting(this AzureBatchPoolSetSettings toolSettings, string startTaskEnvironmentSettingKey, object startTaskEnvironmentSettingValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.StartTaskEnvironmentSettingsInternal.Add(startTaskEnvironmentSettingKey, startTaskEnvironmentSettingValue);
@@ -17604,7 +17604,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureBatchPoolSetSettings.StartTaskEnvironmentSettings"/>.</em></p><p>A list of environment variable settings for the start task. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchPoolSetSettings SetStartTaskEnvironmentSetting(this AzureBatchPoolSetSettings toolSettings, string startTaskEnvironmentSettingKey, string startTaskEnvironmentSettingValue)
+        public static AzureBatchPoolSetSettings SetStartTaskEnvironmentSetting(this AzureBatchPoolSetSettings toolSettings, string startTaskEnvironmentSettingKey, object startTaskEnvironmentSettingValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.StartTaskEnvironmentSettingsInternal[startTaskEnvironmentSettingKey] = startTaskEnvironmentSettingValue;
@@ -18188,7 +18188,7 @@ namespace Nuke.Azure
         #region EnvironmentSettings
         /// <summary><p><em>Sets <see cref="AzureBatchTaskCreateSettings.EnvironmentSettings"/> to a new dictionary.</em></p><p>A list of environment variable settings for the task. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchTaskCreateSettings SetEnvironmentSettings(this AzureBatchTaskCreateSettings toolSettings, IDictionary<string, string> environmentSettings)
+        public static AzureBatchTaskCreateSettings SetEnvironmentSettings(this AzureBatchTaskCreateSettings toolSettings, IDictionary<string, object> environmentSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.EnvironmentSettingsInternal = environmentSettings.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -18204,7 +18204,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureBatchTaskCreateSettings.EnvironmentSettings"/>.</em></p><p>A list of environment variable settings for the task. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchTaskCreateSettings AddEnvironmentSetting(this AzureBatchTaskCreateSettings toolSettings, string environmentSettingKey, string environmentSettingValue)
+        public static AzureBatchTaskCreateSettings AddEnvironmentSetting(this AzureBatchTaskCreateSettings toolSettings, string environmentSettingKey, object environmentSettingValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.EnvironmentSettingsInternal.Add(environmentSettingKey, environmentSettingValue);
@@ -18220,7 +18220,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureBatchTaskCreateSettings.EnvironmentSettings"/>.</em></p><p>A list of environment variable settings for the task. Space-separated values in 'key=value' format.</p></summary>
         [Pure]
-        public static AzureBatchTaskCreateSettings SetEnvironmentSetting(this AzureBatchTaskCreateSettings toolSettings, string environmentSettingKey, string environmentSettingValue)
+        public static AzureBatchTaskCreateSettings SetEnvironmentSetting(this AzureBatchTaskCreateSettings toolSettings, string environmentSettingKey, object environmentSettingValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.EnvironmentSettingsInternal[environmentSettingKey] = environmentSettingValue;

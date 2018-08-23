@@ -410,8 +410,8 @@ namespace Nuke.Azure
         /// <summary><p>Display name of policy definition.</p></summary>
         public virtual string DisplayName { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>Mode of the new policy definition.</p></summary>
         public virtual PolicyDefinitionCreateMode Mode { get; internal set; }
         /// <summary><p>JSON formatted string or a path to a file or uri with parameter definitions.</p></summary>
@@ -566,8 +566,8 @@ namespace Nuke.Azure
         /// <summary><p>Display name of policy definition.</p></summary>
         public virtual string DisplayName { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>JSON formatted string or a path to a file or uri with parameter definitions.</p></summary>
         public virtual string Params { get; internal set; }
         /// <summary><p>JSON formatted string or a path to a file with such content.</p></summary>
@@ -1920,7 +1920,7 @@ namespace Nuke.Azure
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzurePolicyDefinitionCreateSettings.Metadata"/> to a new dictionary.</em></p><p>Metadata in space-separated key=value pairs.</p></summary>
         [Pure]
-        public static AzurePolicyDefinitionCreateSettings SetMetadata(this AzurePolicyDefinitionCreateSettings toolSettings, IDictionary<string, string> metadata)
+        public static AzurePolicyDefinitionCreateSettings SetMetadata(this AzurePolicyDefinitionCreateSettings toolSettings, IDictionary<string, object> metadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -1936,7 +1936,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzurePolicyDefinitionCreateSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs.</p></summary>
         [Pure]
-        public static AzurePolicyDefinitionCreateSettings AddMetadatum(this AzurePolicyDefinitionCreateSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzurePolicyDefinitionCreateSettings AddMetadatum(this AzurePolicyDefinitionCreateSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
@@ -1952,7 +1952,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzurePolicyDefinitionCreateSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs.</p></summary>
         [Pure]
-        public static AzurePolicyDefinitionCreateSettings SetMetadatum(this AzurePolicyDefinitionCreateSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzurePolicyDefinitionCreateSettings SetMetadatum(this AzurePolicyDefinitionCreateSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal[metadatumKey] = metadatumValue;
@@ -2498,7 +2498,7 @@ namespace Nuke.Azure
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzurePolicyDefinitionUpdateSettings.Metadata"/> to a new dictionary.</em></p><p>Metadata in space-separated key=value pairs.</p></summary>
         [Pure]
-        public static AzurePolicyDefinitionUpdateSettings SetMetadata(this AzurePolicyDefinitionUpdateSettings toolSettings, IDictionary<string, string> metadata)
+        public static AzurePolicyDefinitionUpdateSettings SetMetadata(this AzurePolicyDefinitionUpdateSettings toolSettings, IDictionary<string, object> metadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -2514,7 +2514,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzurePolicyDefinitionUpdateSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs.</p></summary>
         [Pure]
-        public static AzurePolicyDefinitionUpdateSettings AddMetadatum(this AzurePolicyDefinitionUpdateSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzurePolicyDefinitionUpdateSettings AddMetadatum(this AzurePolicyDefinitionUpdateSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
@@ -2530,7 +2530,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzurePolicyDefinitionUpdateSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs.</p></summary>
         [Pure]
-        public static AzurePolicyDefinitionUpdateSettings SetMetadatum(this AzurePolicyDefinitionUpdateSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzurePolicyDefinitionUpdateSettings SetMetadatum(this AzurePolicyDefinitionUpdateSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal[metadatumKey] = metadatumValue;

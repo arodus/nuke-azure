@@ -1275,7 +1275,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -1583,7 +1583,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -1719,7 +1719,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -1929,7 +1929,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -2605,7 +2605,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -2931,7 +2931,7 @@
         "properties": [
           {
             "name": "Entity",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--entity {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -3063,7 +3063,7 @@
           },
           {
             "name": "Marker",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--marker {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -4005,7 +4005,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -4093,7 +4093,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -4809,7 +4809,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -5135,7 +5135,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -5521,7 +5521,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -6225,7 +6225,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -6551,7 +6551,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -7185,7 +7185,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -7677,7 +7677,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -8077,7 +8077,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -8191,7 +8191,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -8309,7 +8309,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -8465,7 +8465,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -8561,7 +8561,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -8913,7 +8913,7 @@
           },
           {
             "name": "Metadata",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",

@@ -2380,8 +2380,8 @@ namespace Nuke.Azure
         /// <summary><p>Required if the blob has an active lease.</p></summary>
         public virtual string LeaseId { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag matches the value specified.</p></summary>
@@ -2609,8 +2609,8 @@ namespace Nuke.Azure
         /// <summary><p>The max length in bytes permitted for an append blob.</p></summary>
         public virtual string MaxsizeCondition { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>Include this flag to disable progress reporting for the command.</p></summary>
         public virtual bool? NoProgress { get; internal set; }
         /// <summary><p>The socket timeout(secs), used by the service to regulate data flow.</p></summary>
@@ -2711,8 +2711,8 @@ namespace Nuke.Azure
         /// <summary><p>Maximum number of parallel connections to use when the blob size exceeds 64MB.</p></summary>
         public virtual string MaxConnections { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>Include this flag to disable progress reporting for the command.</p></summary>
         public virtual bool? NoProgress { get; internal set; }
         /// <summary><p>The pattern used for globbing files or blobs in the source. The supported patterns are '*', '?', '[seq]', and '[!seq]'.</p></summary>
@@ -2876,8 +2876,8 @@ namespace Nuke.Azure
         /// <summary><p>Throw an exception if the container already exists.</p></summary>
         public virtual string FailOnExist { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>Specifies whether data in the container may be accessed publically. By default, container data is private ("off") to the account owner. Use "blob" to allow public read access for blobs. Use "container" to allow public read and list access to the entire container.</p></summary>
         public virtual bool? PublicAccess { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
@@ -3523,8 +3523,8 @@ namespace Nuke.Azure
         /// <summary><p>Specify whether to throw an exception when the directory exists. False by default.</p></summary>
         public virtual string FailOnExist { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
@@ -3857,8 +3857,8 @@ namespace Nuke.Azure
         /// <summary><p>Path to the AzureStorage executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureStorageTasks.AzureStoragePath;
         /// <summary><p>Space-separated list of key=value pairs. Must contain a PartitionKey and a RowKey.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Entity => EntityInternal.AsReadOnly();
-        internal Dictionary<string,string> EntityInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Entity => EntityInternal.AsReadOnly();
+        internal Dictionary<string, object> EntityInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>The name of the table to insert the entity into.</p></summary>
         public virtual string TableName { get; internal set; }
         /// <summary><p>Behavior when an entity already exists for the specified PartitionKey and RowKey.</p></summary>
@@ -3976,8 +3976,8 @@ namespace Nuke.Azure
         /// <summary><p>Returns only entities that satisfy the specified filter. Note that no more than 15 discrete comparisons are permitted within a $filter string. See <a href="http://msdn.microsoft.com/en-us/library/windowsazure/dd894031.aspx">http://msdn.microsoft.com/en-us/library/windowsazure/dd894031.aspx</a> for more information on constructing filters.</p></summary>
         public virtual string Filter { get; internal set; }
         /// <summary><p>Space-separated list of key=value pairs. Must contain a nextpartitionkey and a nextrowkey.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Marker => MarkerInternal.AsReadOnly();
-        internal Dictionary<string,string> MarkerInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Marker => MarkerInternal.AsReadOnly();
+        internal Dictionary<string, object> MarkerInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>The maximum number of entities to return.</p></summary>
         public virtual string NumResults { get; internal set; }
         /// <summary><p>Space-separated list of properties to return for each entity.</p></summary>
@@ -4806,8 +4806,8 @@ namespace Nuke.Azure
         /// <summary><p>Maximum number of parallel connections to use.</p></summary>
         public virtual string MaxConnections { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>Include this flag to disable progress reporting for the command.</p></summary>
         public virtual bool? NoProgress { get; internal set; }
         /// <summary><p>The path to the file within the file share. If the file name is omitted, the source file name will be used.</p></summary>
@@ -4883,8 +4883,8 @@ namespace Nuke.Azure
         /// <summary><p>List the files and blobs to be uploaded. No actual data transfer will occur.</p></summary>
         public virtual string Dryrun { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>Include this flag to disable progress reporting for the command.</p></summary>
         public virtual bool? NoProgress { get; internal set; }
         /// <summary><p>The pattern used for file globbing. The supported patterns are '*', '?', '[seq', and '[!seq]'.</p></summary>
@@ -5579,8 +5579,8 @@ namespace Nuke.Azure
         /// <summary><p>Specifies whether to throw an exception if the queue already exists.</p></summary>
         public virtual bool? FailOnExist { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
@@ -5910,8 +5910,8 @@ namespace Nuke.Azure
         /// <summary><p>Specify whether to throw an exception when the share exists. False by default.</p></summary>
         public virtual string FailOnExist { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>Specifies the maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120).</p></summary>
         public virtual string Quota { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
@@ -6272,8 +6272,8 @@ namespace Nuke.Azure
         /// <summary><p>The file share name.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>Specifies the maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120).</p></summary>
         public virtual string Quota { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
@@ -7042,8 +7042,8 @@ namespace Nuke.Azure
         /// <summary><p>The lease ID specified for this header must match the lease ID of the destination blob. If the request does not include the lease ID or it is not valid, the operation fails with status code 412 (Precondition Failed).</p></summary>
         public virtual string DestinationLeaseId { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
         /// <summary><p>The storage account key of the source blob.</p></summary>
@@ -7289,8 +7289,8 @@ namespace Nuke.Azure
         /// <summary><p>The lease ID specified for this header must match the lease ID of the destination blob. If the request does not include the lease ID or it is not valid, the operation fails with status code 412 (Precondition Failed).</p></summary>
         public virtual string DestinationLeaseId { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
         /// <summary><p>The storage account key of the source blob.</p></summary>
@@ -7802,8 +7802,8 @@ namespace Nuke.Azure
         /// <summary><p>Required if the blob has an active lease.</p></summary>
         public virtual string LeaseId { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
         /// <summary><p>An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag matches the value specified.</p></summary>
@@ -8273,8 +8273,8 @@ namespace Nuke.Azure
         /// <summary><p>If specified, set_container_metadata only succeeds if the container's lease is active and matches this ID.</p></summary>
         public virtual string LeaseId { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
         /// <summary><p>Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').</p></summary>
@@ -8669,8 +8669,8 @@ namespace Nuke.Azure
         /// <summary><p>The file share name.</p></summary>
         public virtual string ShareName { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
@@ -8782,8 +8782,8 @@ namespace Nuke.Azure
         /// <summary><p>Name of the destination share. The share must exist.</p></summary>
         public virtual string DestinationShare { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
         /// <summary><p>The storage account key of the source blob.</p></summary>
@@ -8868,8 +8868,8 @@ namespace Nuke.Azure
         /// <summary><p>List the files and blobs to be copied. No actual data transfer will occur.</p></summary>
         public virtual string Dryrun { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>The pattern used for globbing files and blobs. The supported patterns are '*', '?', '[seq', and '[!seq]'.</p></summary>
         public virtual string Pattern { get; internal set; }
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
@@ -9003,8 +9003,8 @@ namespace Nuke.Azure
         /// <summary><p>The file share name.</p></summary>
         public virtual string ShareName { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
@@ -9108,8 +9108,8 @@ namespace Nuke.Azure
         /// <summary><p>The queue name.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
@@ -9480,8 +9480,8 @@ namespace Nuke.Azure
         /// <summary><p>The file share name.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
-        public virtual IReadOnlyDictionary<string, string> Metadata => MetadataInternal.AsReadOnly();
-        internal Dictionary<string,string> MetadataInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
+        public virtual IReadOnlyDictionary<string, object> Metadata => MetadataInternal.AsReadOnly();
+        internal Dictionary<string, object> MetadataInternal { get; set; } = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>Request timeout in seconds. Applies to each call to the service.</p></summary>
         public virtual string Timeout { get; internal set; }
         /// <summary><p>Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.</p></summary>
@@ -15410,7 +15410,7 @@ namespace Nuke.Azure
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzureStorageBlobSnapshotSettings.Metadata"/> to a new dictionary.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageBlobSnapshotSettings SetMetadata(this AzureStorageBlobSnapshotSettings toolSettings, IDictionary<string, string> metadata)
+        public static AzureStorageBlobSnapshotSettings SetMetadata(this AzureStorageBlobSnapshotSettings toolSettings, IDictionary<string, object> metadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -15426,7 +15426,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureStorageBlobSnapshotSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageBlobSnapshotSettings AddMetadatum(this AzureStorageBlobSnapshotSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageBlobSnapshotSettings AddMetadatum(this AzureStorageBlobSnapshotSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
@@ -15442,7 +15442,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureStorageBlobSnapshotSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageBlobSnapshotSettings SetMetadatum(this AzureStorageBlobSnapshotSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageBlobSnapshotSettings SetMetadatum(this AzureStorageBlobSnapshotSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal[metadatumKey] = metadatumValue;
@@ -16574,7 +16574,7 @@ namespace Nuke.Azure
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzureStorageBlobUploadSettings.Metadata"/> to a new dictionary.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageBlobUploadSettings SetMetadata(this AzureStorageBlobUploadSettings toolSettings, IDictionary<string, string> metadata)
+        public static AzureStorageBlobUploadSettings SetMetadata(this AzureStorageBlobUploadSettings toolSettings, IDictionary<string, object> metadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -16590,7 +16590,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureStorageBlobUploadSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageBlobUploadSettings AddMetadatum(this AzureStorageBlobUploadSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageBlobUploadSettings AddMetadatum(this AzureStorageBlobUploadSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
@@ -16606,7 +16606,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureStorageBlobUploadSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageBlobUploadSettings SetMetadatum(this AzureStorageBlobUploadSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageBlobUploadSettings SetMetadatum(this AzureStorageBlobUploadSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal[metadatumKey] = metadatumValue;
@@ -17122,7 +17122,7 @@ namespace Nuke.Azure
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzureStorageBlobUploadBatchSettings.Metadata"/> to a new dictionary.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageBlobUploadBatchSettings SetMetadata(this AzureStorageBlobUploadBatchSettings toolSettings, IDictionary<string, string> metadata)
+        public static AzureStorageBlobUploadBatchSettings SetMetadata(this AzureStorageBlobUploadBatchSettings toolSettings, IDictionary<string, object> metadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -17138,7 +17138,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureStorageBlobUploadBatchSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageBlobUploadBatchSettings AddMetadatum(this AzureStorageBlobUploadBatchSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageBlobUploadBatchSettings AddMetadatum(this AzureStorageBlobUploadBatchSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
@@ -17154,7 +17154,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureStorageBlobUploadBatchSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageBlobUploadBatchSettings SetMetadatum(this AzureStorageBlobUploadBatchSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageBlobUploadBatchSettings SetMetadatum(this AzureStorageBlobUploadBatchSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal[metadatumKey] = metadatumValue;
@@ -17942,7 +17942,7 @@ namespace Nuke.Azure
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzureStorageContainerCreateSettings.Metadata"/> to a new dictionary.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageContainerCreateSettings SetMetadata(this AzureStorageContainerCreateSettings toolSettings, IDictionary<string, string> metadata)
+        public static AzureStorageContainerCreateSettings SetMetadata(this AzureStorageContainerCreateSettings toolSettings, IDictionary<string, object> metadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -17958,7 +17958,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureStorageContainerCreateSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageContainerCreateSettings AddMetadatum(this AzureStorageContainerCreateSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageContainerCreateSettings AddMetadatum(this AzureStorageContainerCreateSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
@@ -17974,7 +17974,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureStorageContainerCreateSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageContainerCreateSettings SetMetadatum(this AzureStorageContainerCreateSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageContainerCreateSettings SetMetadatum(this AzureStorageContainerCreateSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal[metadatumKey] = metadatumValue;
@@ -21006,7 +21006,7 @@ namespace Nuke.Azure
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzureStorageDirectoryCreateSettings.Metadata"/> to a new dictionary.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageDirectoryCreateSettings SetMetadata(this AzureStorageDirectoryCreateSettings toolSettings, IDictionary<string, string> metadata)
+        public static AzureStorageDirectoryCreateSettings SetMetadata(this AzureStorageDirectoryCreateSettings toolSettings, IDictionary<string, object> metadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -21022,7 +21022,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureStorageDirectoryCreateSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageDirectoryCreateSettings AddMetadatum(this AzureStorageDirectoryCreateSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageDirectoryCreateSettings AddMetadatum(this AzureStorageDirectoryCreateSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
@@ -21038,7 +21038,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureStorageDirectoryCreateSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageDirectoryCreateSettings SetMetadatum(this AzureStorageDirectoryCreateSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageDirectoryCreateSettings SetMetadatum(this AzureStorageDirectoryCreateSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal[metadatumKey] = metadatumValue;
@@ -22446,7 +22446,7 @@ namespace Nuke.Azure
         #region Entity
         /// <summary><p><em>Sets <see cref="AzureStorageEntityInsertSettings.Entity"/> to a new dictionary.</em></p><p>Space-separated list of key=value pairs. Must contain a PartitionKey and a RowKey.</p></summary>
         [Pure]
-        public static AzureStorageEntityInsertSettings SetEntity(this AzureStorageEntityInsertSettings toolSettings, IDictionary<string, string> entity)
+        public static AzureStorageEntityInsertSettings SetEntity(this AzureStorageEntityInsertSettings toolSettings, IDictionary<string, object> entity)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.EntityInternal = entity.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -22462,7 +22462,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureStorageEntityInsertSettings.Entity"/>.</em></p><p>Space-separated list of key=value pairs. Must contain a PartitionKey and a RowKey.</p></summary>
         [Pure]
-        public static AzureStorageEntityInsertSettings AddEntity(this AzureStorageEntityInsertSettings toolSettings, string entityKey, string entityValue)
+        public static AzureStorageEntityInsertSettings AddEntity(this AzureStorageEntityInsertSettings toolSettings, string entityKey, object entityValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.EntityInternal.Add(entityKey, entityValue);
@@ -22478,7 +22478,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureStorageEntityInsertSettings.Entity"/>.</em></p><p>Space-separated list of key=value pairs. Must contain a PartitionKey and a RowKey.</p></summary>
         [Pure]
-        public static AzureStorageEntityInsertSettings SetEntity(this AzureStorageEntityInsertSettings toolSettings, string entityKey, string entityValue)
+        public static AzureStorageEntityInsertSettings SetEntity(this AzureStorageEntityInsertSettings toolSettings, string entityKey, object entityValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.EntityInternal[entityKey] = entityValue;
@@ -23008,7 +23008,7 @@ namespace Nuke.Azure
         #region Marker
         /// <summary><p><em>Sets <see cref="AzureStorageEntityQuerySettings.Marker"/> to a new dictionary.</em></p><p>Space-separated list of key=value pairs. Must contain a nextpartitionkey and a nextrowkey.</p></summary>
         [Pure]
-        public static AzureStorageEntityQuerySettings SetMarker(this AzureStorageEntityQuerySettings toolSettings, IDictionary<string, string> marker)
+        public static AzureStorageEntityQuerySettings SetMarker(this AzureStorageEntityQuerySettings toolSettings, IDictionary<string, object> marker)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MarkerInternal = marker.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -23024,7 +23024,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureStorageEntityQuerySettings.Marker"/>.</em></p><p>Space-separated list of key=value pairs. Must contain a nextpartitionkey and a nextrowkey.</p></summary>
         [Pure]
-        public static AzureStorageEntityQuerySettings AddMarker(this AzureStorageEntityQuerySettings toolSettings, string markerKey, string markerValue)
+        public static AzureStorageEntityQuerySettings AddMarker(this AzureStorageEntityQuerySettings toolSettings, string markerKey, object markerValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MarkerInternal.Add(markerKey, markerValue);
@@ -23040,7 +23040,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureStorageEntityQuerySettings.Marker"/>.</em></p><p>Space-separated list of key=value pairs. Must contain a nextpartitionkey and a nextrowkey.</p></summary>
         [Pure]
-        public static AzureStorageEntityQuerySettings SetMarker(this AzureStorageEntityQuerySettings toolSettings, string markerKey, string markerValue)
+        public static AzureStorageEntityQuerySettings SetMarker(this AzureStorageEntityQuerySettings toolSettings, string markerKey, object markerValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MarkerInternal[markerKey] = markerValue;
@@ -26940,7 +26940,7 @@ namespace Nuke.Azure
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzureStorageFileUploadSettings.Metadata"/> to a new dictionary.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageFileUploadSettings SetMetadata(this AzureStorageFileUploadSettings toolSettings, IDictionary<string, string> metadata)
+        public static AzureStorageFileUploadSettings SetMetadata(this AzureStorageFileUploadSettings toolSettings, IDictionary<string, object> metadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -26956,7 +26956,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureStorageFileUploadSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageFileUploadSettings AddMetadatum(this AzureStorageFileUploadSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageFileUploadSettings AddMetadatum(this AzureStorageFileUploadSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
@@ -26972,7 +26972,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureStorageFileUploadSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageFileUploadSettings SetMetadatum(this AzureStorageFileUploadSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageFileUploadSettings SetMetadatum(this AzureStorageFileUploadSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal[metadatumKey] = metadatumValue;
@@ -27320,7 +27320,7 @@ namespace Nuke.Azure
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzureStorageFileUploadBatchSettings.Metadata"/> to a new dictionary.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageFileUploadBatchSettings SetMetadata(this AzureStorageFileUploadBatchSettings toolSettings, IDictionary<string, string> metadata)
+        public static AzureStorageFileUploadBatchSettings SetMetadata(this AzureStorageFileUploadBatchSettings toolSettings, IDictionary<string, object> metadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -27336,7 +27336,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureStorageFileUploadBatchSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageFileUploadBatchSettings AddMetadatum(this AzureStorageFileUploadBatchSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageFileUploadBatchSettings AddMetadatum(this AzureStorageFileUploadBatchSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
@@ -27352,7 +27352,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureStorageFileUploadBatchSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageFileUploadBatchSettings SetMetadatum(this AzureStorageFileUploadBatchSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageFileUploadBatchSettings SetMetadatum(this AzureStorageFileUploadBatchSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal[metadatumKey] = metadatumValue;
@@ -30494,7 +30494,7 @@ namespace Nuke.Azure
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzureStorageQueueCreateSettings.Metadata"/> to a new dictionary.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageQueueCreateSettings SetMetadata(this AzureStorageQueueCreateSettings toolSettings, IDictionary<string, string> metadata)
+        public static AzureStorageQueueCreateSettings SetMetadata(this AzureStorageQueueCreateSettings toolSettings, IDictionary<string, object> metadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -30510,7 +30510,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureStorageQueueCreateSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageQueueCreateSettings AddMetadatum(this AzureStorageQueueCreateSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageQueueCreateSettings AddMetadatum(this AzureStorageQueueCreateSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
@@ -30526,7 +30526,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureStorageQueueCreateSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageQueueCreateSettings SetMetadatum(this AzureStorageQueueCreateSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageQueueCreateSettings SetMetadatum(this AzureStorageQueueCreateSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal[metadatumKey] = metadatumValue;
@@ -31958,7 +31958,7 @@ namespace Nuke.Azure
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzureStorageShareCreateSettings.Metadata"/> to a new dictionary.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageShareCreateSettings SetMetadata(this AzureStorageShareCreateSettings toolSettings, IDictionary<string, string> metadata)
+        public static AzureStorageShareCreateSettings SetMetadata(this AzureStorageShareCreateSettings toolSettings, IDictionary<string, object> metadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -31974,7 +31974,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureStorageShareCreateSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageShareCreateSettings AddMetadatum(this AzureStorageShareCreateSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageShareCreateSettings AddMetadatum(this AzureStorageShareCreateSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
@@ -31990,7 +31990,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureStorageShareCreateSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageShareCreateSettings SetMetadatum(this AzureStorageShareCreateSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageShareCreateSettings SetMetadatum(this AzureStorageShareCreateSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal[metadatumKey] = metadatumValue;
@@ -33578,7 +33578,7 @@ namespace Nuke.Azure
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzureStorageShareSnapshotSettings.Metadata"/> to a new dictionary.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageShareSnapshotSettings SetMetadata(this AzureStorageShareSnapshotSettings toolSettings, IDictionary<string, string> metadata)
+        public static AzureStorageShareSnapshotSettings SetMetadata(this AzureStorageShareSnapshotSettings toolSettings, IDictionary<string, object> metadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -33594,7 +33594,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureStorageShareSnapshotSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageShareSnapshotSettings AddMetadatum(this AzureStorageShareSnapshotSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageShareSnapshotSettings AddMetadatum(this AzureStorageShareSnapshotSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
@@ -33610,7 +33610,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureStorageShareSnapshotSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageShareSnapshotSettings SetMetadatum(this AzureStorageShareSnapshotSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageShareSnapshotSettings SetMetadatum(this AzureStorageShareSnapshotSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal[metadatumKey] = metadatumValue;
@@ -36842,7 +36842,7 @@ namespace Nuke.Azure
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzureStorageBlobCopyStartSettings.Metadata"/> to a new dictionary.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageBlobCopyStartSettings SetMetadata(this AzureStorageBlobCopyStartSettings toolSettings, IDictionary<string, string> metadata)
+        public static AzureStorageBlobCopyStartSettings SetMetadata(this AzureStorageBlobCopyStartSettings toolSettings, IDictionary<string, object> metadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -36858,7 +36858,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureStorageBlobCopyStartSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageBlobCopyStartSettings AddMetadatum(this AzureStorageBlobCopyStartSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageBlobCopyStartSettings AddMetadatum(this AzureStorageBlobCopyStartSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
@@ -36874,7 +36874,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureStorageBlobCopyStartSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageBlobCopyStartSettings SetMetadatum(this AzureStorageBlobCopyStartSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageBlobCopyStartSettings SetMetadatum(this AzureStorageBlobCopyStartSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal[metadatumKey] = metadatumValue;
@@ -38060,7 +38060,7 @@ namespace Nuke.Azure
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzureStorageBlobIncrementalCopyStartSettings.Metadata"/> to a new dictionary.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageBlobIncrementalCopyStartSettings SetMetadata(this AzureStorageBlobIncrementalCopyStartSettings toolSettings, IDictionary<string, string> metadata)
+        public static AzureStorageBlobIncrementalCopyStartSettings SetMetadata(this AzureStorageBlobIncrementalCopyStartSettings toolSettings, IDictionary<string, object> metadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -38076,7 +38076,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureStorageBlobIncrementalCopyStartSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageBlobIncrementalCopyStartSettings AddMetadatum(this AzureStorageBlobIncrementalCopyStartSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageBlobIncrementalCopyStartSettings AddMetadatum(this AzureStorageBlobIncrementalCopyStartSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
@@ -38092,7 +38092,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureStorageBlobIncrementalCopyStartSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageBlobIncrementalCopyStartSettings SetMetadatum(this AzureStorageBlobIncrementalCopyStartSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageBlobIncrementalCopyStartSettings SetMetadatum(this AzureStorageBlobIncrementalCopyStartSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal[metadatumKey] = metadatumValue;
@@ -40498,7 +40498,7 @@ namespace Nuke.Azure
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzureStorageBlobMetadataUpdateSettings.Metadata"/> to a new dictionary.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageBlobMetadataUpdateSettings SetMetadata(this AzureStorageBlobMetadataUpdateSettings toolSettings, IDictionary<string, string> metadata)
+        public static AzureStorageBlobMetadataUpdateSettings SetMetadata(this AzureStorageBlobMetadataUpdateSettings toolSettings, IDictionary<string, object> metadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -40514,7 +40514,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureStorageBlobMetadataUpdateSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageBlobMetadataUpdateSettings AddMetadatum(this AzureStorageBlobMetadataUpdateSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageBlobMetadataUpdateSettings AddMetadatum(this AzureStorageBlobMetadataUpdateSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
@@ -40530,7 +40530,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureStorageBlobMetadataUpdateSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageBlobMetadataUpdateSettings SetMetadatum(this AzureStorageBlobMetadataUpdateSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageBlobMetadataUpdateSettings SetMetadatum(this AzureStorageBlobMetadataUpdateSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal[metadatumKey] = metadatumValue;
@@ -42584,7 +42584,7 @@ namespace Nuke.Azure
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzureStorageContainerMetadataUpdateSettings.Metadata"/> to a new dictionary.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageContainerMetadataUpdateSettings SetMetadata(this AzureStorageContainerMetadataUpdateSettings toolSettings, IDictionary<string, string> metadata)
+        public static AzureStorageContainerMetadataUpdateSettings SetMetadata(this AzureStorageContainerMetadataUpdateSettings toolSettings, IDictionary<string, object> metadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -42600,7 +42600,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureStorageContainerMetadataUpdateSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageContainerMetadataUpdateSettings AddMetadatum(this AzureStorageContainerMetadataUpdateSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageContainerMetadataUpdateSettings AddMetadatum(this AzureStorageContainerMetadataUpdateSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
@@ -42616,7 +42616,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureStorageContainerMetadataUpdateSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageContainerMetadataUpdateSettings SetMetadatum(this AzureStorageContainerMetadataUpdateSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageContainerMetadataUpdateSettings SetMetadatum(this AzureStorageContainerMetadataUpdateSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal[metadatumKey] = metadatumValue;
@@ -44320,7 +44320,7 @@ namespace Nuke.Azure
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzureStorageDirectoryMetadataUpdateSettings.Metadata"/> to a new dictionary.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageDirectoryMetadataUpdateSettings SetMetadata(this AzureStorageDirectoryMetadataUpdateSettings toolSettings, IDictionary<string, string> metadata)
+        public static AzureStorageDirectoryMetadataUpdateSettings SetMetadata(this AzureStorageDirectoryMetadataUpdateSettings toolSettings, IDictionary<string, object> metadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -44336,7 +44336,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureStorageDirectoryMetadataUpdateSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageDirectoryMetadataUpdateSettings AddMetadatum(this AzureStorageDirectoryMetadataUpdateSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageDirectoryMetadataUpdateSettings AddMetadatum(this AzureStorageDirectoryMetadataUpdateSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
@@ -44352,7 +44352,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureStorageDirectoryMetadataUpdateSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageDirectoryMetadataUpdateSettings SetMetadatum(this AzureStorageDirectoryMetadataUpdateSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageDirectoryMetadataUpdateSettings SetMetadatum(this AzureStorageDirectoryMetadataUpdateSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal[metadatumKey] = metadatumValue;
@@ -44828,7 +44828,7 @@ namespace Nuke.Azure
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzureStorageFileCopyStartSettings.Metadata"/> to a new dictionary.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageFileCopyStartSettings SetMetadata(this AzureStorageFileCopyStartSettings toolSettings, IDictionary<string, string> metadata)
+        public static AzureStorageFileCopyStartSettings SetMetadata(this AzureStorageFileCopyStartSettings toolSettings, IDictionary<string, object> metadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -44844,7 +44844,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureStorageFileCopyStartSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageFileCopyStartSettings AddMetadatum(this AzureStorageFileCopyStartSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageFileCopyStartSettings AddMetadatum(this AzureStorageFileCopyStartSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
@@ -44860,7 +44860,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureStorageFileCopyStartSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageFileCopyStartSettings SetMetadatum(this AzureStorageFileCopyStartSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageFileCopyStartSettings SetMetadatum(this AzureStorageFileCopyStartSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal[metadatumKey] = metadatumValue;
@@ -45274,7 +45274,7 @@ namespace Nuke.Azure
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzureStorageFileCopyStartBatchSettings.Metadata"/> to a new dictionary.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageFileCopyStartBatchSettings SetMetadata(this AzureStorageFileCopyStartBatchSettings toolSettings, IDictionary<string, string> metadata)
+        public static AzureStorageFileCopyStartBatchSettings SetMetadata(this AzureStorageFileCopyStartBatchSettings toolSettings, IDictionary<string, object> metadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -45290,7 +45290,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureStorageFileCopyStartBatchSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageFileCopyStartBatchSettings AddMetadatum(this AzureStorageFileCopyStartBatchSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageFileCopyStartBatchSettings AddMetadatum(this AzureStorageFileCopyStartBatchSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
@@ -45306,7 +45306,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureStorageFileCopyStartBatchSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageFileCopyStartBatchSettings SetMetadatum(this AzureStorageFileCopyStartBatchSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageFileCopyStartBatchSettings SetMetadatum(this AzureStorageFileCopyStartBatchSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal[metadatumKey] = metadatumValue;
@@ -45908,7 +45908,7 @@ namespace Nuke.Azure
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzureStorageFileMetadataUpdateSettings.Metadata"/> to a new dictionary.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageFileMetadataUpdateSettings SetMetadata(this AzureStorageFileMetadataUpdateSettings toolSettings, IDictionary<string, string> metadata)
+        public static AzureStorageFileMetadataUpdateSettings SetMetadata(this AzureStorageFileMetadataUpdateSettings toolSettings, IDictionary<string, object> metadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -45924,7 +45924,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureStorageFileMetadataUpdateSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageFileMetadataUpdateSettings AddMetadatum(this AzureStorageFileMetadataUpdateSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageFileMetadataUpdateSettings AddMetadatum(this AzureStorageFileMetadataUpdateSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
@@ -45940,7 +45940,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureStorageFileMetadataUpdateSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageFileMetadataUpdateSettings SetMetadatum(this AzureStorageFileMetadataUpdateSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageFileMetadataUpdateSettings SetMetadatum(this AzureStorageFileMetadataUpdateSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal[metadatumKey] = metadatumValue;
@@ -46362,7 +46362,7 @@ namespace Nuke.Azure
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzureStorageQueueMetadataUpdateSettings.Metadata"/> to a new dictionary.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageQueueMetadataUpdateSettings SetMetadata(this AzureStorageQueueMetadataUpdateSettings toolSettings, IDictionary<string, string> metadata)
+        public static AzureStorageQueueMetadataUpdateSettings SetMetadata(this AzureStorageQueueMetadataUpdateSettings toolSettings, IDictionary<string, object> metadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -46378,7 +46378,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureStorageQueueMetadataUpdateSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageQueueMetadataUpdateSettings AddMetadatum(this AzureStorageQueueMetadataUpdateSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageQueueMetadataUpdateSettings AddMetadatum(this AzureStorageQueueMetadataUpdateSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
@@ -46394,7 +46394,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureStorageQueueMetadataUpdateSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageQueueMetadataUpdateSettings SetMetadatum(this AzureStorageQueueMetadataUpdateSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageQueueMetadataUpdateSettings SetMetadatum(this AzureStorageQueueMetadataUpdateSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal[metadatumKey] = metadatumValue;
@@ -47954,7 +47954,7 @@ namespace Nuke.Azure
         #region Metadata
         /// <summary><p><em>Sets <see cref="AzureStorageShareMetadataUpdateSettings.Metadata"/> to a new dictionary.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageShareMetadataUpdateSettings SetMetadata(this AzureStorageShareMetadataUpdateSettings toolSettings, IDictionary<string, string> metadata)
+        public static AzureStorageShareMetadataUpdateSettings SetMetadata(this AzureStorageShareMetadataUpdateSettings toolSettings, IDictionary<string, object> metadata)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal = metadata.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
@@ -47970,7 +47970,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Adds a new key-value-pair <see cref="AzureStorageShareMetadataUpdateSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageShareMetadataUpdateSettings AddMetadatum(this AzureStorageShareMetadataUpdateSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageShareMetadataUpdateSettings AddMetadatum(this AzureStorageShareMetadataUpdateSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal.Add(metadatumKey, metadatumValue);
@@ -47986,7 +47986,7 @@ namespace Nuke.Azure
         }
         /// <summary><p><em>Sets a key-value-pair in <see cref="AzureStorageShareMetadataUpdateSettings.Metadata"/>.</em></p><p>Metadata in space-separated key=value pairs. This overwrites any existing metadata.</p></summary>
         [Pure]
-        public static AzureStorageShareMetadataUpdateSettings SetMetadatum(this AzureStorageShareMetadataUpdateSettings toolSettings, string metadatumKey, string metadatumValue)
+        public static AzureStorageShareMetadataUpdateSettings SetMetadatum(this AzureStorageShareMetadataUpdateSettings toolSettings, string metadatumKey, object metadatumValue)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.MetadataInternal[metadatumKey] = metadatumValue;

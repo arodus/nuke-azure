@@ -408,7 +408,7 @@
           },
           {
             "name": "Settings",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--settings {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
@@ -416,7 +416,7 @@
           },
           {
             "name": "SlotSettings",
-            "type": "Dictionary<string,string>",
+            "type": "Dictionary<string, object>",
             "format": "--slot-settings {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
