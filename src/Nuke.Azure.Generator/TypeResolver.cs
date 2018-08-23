@@ -155,6 +155,7 @@ namespace Nuke.Azure.Generator
         private bool IsBoolFlag(Parameter parameter)
         {
             return parameter.Summary.StartsWith("Specifies whether", StringComparison.OrdinalIgnoreCase)
+                   || parameter.Name.StartsWith("--no-") //--no-wait, --no-auto-upgrade ...
                    || parameter.Summary.StartsWith("Show the")
                    || parameter.Summary == "Show public ip address, FQDN, and power states. command will run slow."
                    || parameter.Summary.IndexOf("Wheter", StringComparison.OrdinalIgnoreCase) == 0 || parameter.FormatString == "--service-principal"
