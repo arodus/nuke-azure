@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.6.1 [CommitSha: 8eca516b].
+// Generated with Nuke.CodeGeneration, Version: 0.6.2 [CommitSha: ff25463a].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureDms.json.
 
 using JetBrains.Annotations;
@@ -300,7 +300,7 @@ namespace Nuke.Azure
         /// <summary><p>The Resource ID of the VNet's Subnet you will use to connect the source and target DBs. Use "az network vnet subnet show -h" for help to get your subnet's ID.</p></summary>
         public virtual string Subnet { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
-        public virtual string NoWait { get; internal set; }
+        public virtual bool? NoWait { get; internal set; }
         /// <summary><p>A space-delimited list of tags in "tag1[=value1]" format.</p></summary>
         public virtual string Tags { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
@@ -322,7 +322,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--sku-name {value}", SkuName)
               .Add("--subnet {value}", Subnet)
-              .Add("--no-wait {value}", NoWait)
+              .Add("--no-wait", NoWait)
               .Add("--tags {value}", Tags)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -349,7 +349,7 @@ namespace Nuke.Azure
         /// <summary><p>Cancel any running tasks before deleting the service.</p></summary>
         public virtual string DeleteRunningTasks { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
-        public virtual string NoWait { get; internal set; }
+        public virtual bool? NoWait { get; internal set; }
         /// <summary><p>Do not prompt for confirmation.</p></summary>
         public virtual string Yes { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
@@ -369,7 +369,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--delete-running-tasks {value}", DeleteRunningTasks)
-              .Add("--no-wait {value}", NoWait)
+              .Add("--no-wait", NoWait)
               .Add("--yes {value}", Yes)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -499,7 +499,7 @@ namespace Nuke.Azure
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
-        public virtual string NoWait { get; internal set; }
+        public virtual bool? NoWait { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -516,7 +516,7 @@ namespace Nuke.Azure
               .Add("dms start")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--no-wait {value}", NoWait)
+              .Add("--no-wait", NoWait)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -540,7 +540,7 @@ namespace Nuke.Azure
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
-        public virtual string NoWait { get; internal set; }
+        public virtual bool? NoWait { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -557,7 +557,7 @@ namespace Nuke.Azure
               .Add("dms stop")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--no-wait {value}", NoWait)
+              .Add("--no-wait", NoWait)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1504,7 +1504,7 @@ namespace Nuke.Azure
         #region NoWait
         /// <summary><p><em>Sets <see cref="AzureDmsCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
         [Pure]
-        public static AzureDmsCreateSettings SetNoWait(this AzureDmsCreateSettings toolSettings, string noWait)
+        public static AzureDmsCreateSettings SetNoWait(this AzureDmsCreateSettings toolSettings, bool? noWait)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = noWait;
@@ -1516,6 +1516,30 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureDmsCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureDmsCreateSettings EnableNoWait(this AzureDmsCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureDmsCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureDmsCreateSettings DisableNoWait(this AzureDmsCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureDmsCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureDmsCreateSettings ToggleNoWait(this AzureDmsCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = !toolSettings.NoWait;
             return toolSettings;
         }
         #endregion
@@ -1692,7 +1716,7 @@ namespace Nuke.Azure
         #region NoWait
         /// <summary><p><em>Sets <see cref="AzureDmsDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
         [Pure]
-        public static AzureDmsDeleteSettings SetNoWait(this AzureDmsDeleteSettings toolSettings, string noWait)
+        public static AzureDmsDeleteSettings SetNoWait(this AzureDmsDeleteSettings toolSettings, bool? noWait)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = noWait;
@@ -1704,6 +1728,30 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureDmsDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureDmsDeleteSettings EnableNoWait(this AzureDmsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureDmsDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureDmsDeleteSettings DisableNoWait(this AzureDmsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureDmsDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureDmsDeleteSettings ToggleNoWait(this AzureDmsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = !toolSettings.NoWait;
             return toolSettings;
         }
         #endregion
@@ -2210,7 +2258,7 @@ namespace Nuke.Azure
         #region NoWait
         /// <summary><p><em>Sets <see cref="AzureDmsStartSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
         [Pure]
-        public static AzureDmsStartSettings SetNoWait(this AzureDmsStartSettings toolSettings, string noWait)
+        public static AzureDmsStartSettings SetNoWait(this AzureDmsStartSettings toolSettings, bool? noWait)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = noWait;
@@ -2222,6 +2270,30 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureDmsStartSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureDmsStartSettings EnableNoWait(this AzureDmsStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureDmsStartSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureDmsStartSettings DisableNoWait(this AzureDmsStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureDmsStartSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureDmsStartSettings ToggleNoWait(this AzureDmsStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = !toolSettings.NoWait;
             return toolSettings;
         }
         #endregion
@@ -2362,7 +2434,7 @@ namespace Nuke.Azure
         #region NoWait
         /// <summary><p><em>Sets <see cref="AzureDmsStopSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
         [Pure]
-        public static AzureDmsStopSettings SetNoWait(this AzureDmsStopSettings toolSettings, string noWait)
+        public static AzureDmsStopSettings SetNoWait(this AzureDmsStopSettings toolSettings, bool? noWait)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = noWait;
@@ -2374,6 +2446,30 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureDmsStopSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureDmsStopSettings EnableNoWait(this AzureDmsStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureDmsStopSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureDmsStopSettings DisableNoWait(this AzureDmsStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureDmsStopSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureDmsStopSettings ToggleNoWait(this AzureDmsStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = !toolSettings.NoWait;
             return toolSettings;
         }
         #endregion

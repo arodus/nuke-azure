@@ -6,16 +6,16 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/relay.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/relay/wcfrelay.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/relay/namespace.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/relay/hyco.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/relay/namespace/authorization-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/relay/hyco/authorization-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/relay/wcfrelay/authorization-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/relay/namespace/authorization-rule/keys.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/relay/hyco/authorization-rule/keys.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/relay/wcfrelay/authorization-rule/keys.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/relay.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/relay/hyco.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/relay/namespace.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/relay/wcfrelay.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/relay/hyco/authorization-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/relay/namespace/authorization-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/relay/wcfrelay/authorization-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/relay/hyco/authorization-rule/keys.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/relay/namespace/authorization-rule/keys.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/relay/wcfrelay/authorization-rule/keys.yml"
   ],
   "name": "AzureRelay",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest",
@@ -28,27 +28,21 @@
       "settingsClass": {}
     },
     {
-      "postfix": "WcfrelayCreate",
-      "definiteArgument": "relay wcfrelay create",
+      "postfix": "HycoCreate",
+      "definiteArgument": "relay hyco create",
       "settingsClass": {
         "properties": [
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of WCF Relay."
+            "help": "Name of Hybrid Connection."
           },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
             "help": "Name of Namespace."
-          },
-          {
-            "name": "RelayType",
-            "type": "RelayWcfrelayRelayType",
-            "format": "--relay-type {value}",
-            "help": "Relay type."
           },
           {
             "name": "ResourceGroup",
@@ -72,15 +66,15 @@
       }
     },
     {
-      "postfix": "WcfrelayDelete",
-      "definiteArgument": "relay wcfrelay delete",
+      "postfix": "HycoDelete",
+      "definiteArgument": "relay hyco delete",
       "settingsClass": {
         "properties": [
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of WCF Relay."
+            "help": "Name of Hybrid Connection."
           },
           {
             "name": "NamespaceName",
@@ -98,8 +92,8 @@
       }
     },
     {
-      "postfix": "WcfrelayList",
-      "definiteArgument": "relay wcfrelay list",
+      "postfix": "HycoList",
+      "definiteArgument": "relay hyco list",
       "settingsClass": {
         "properties": [
           {
@@ -118,15 +112,15 @@
       }
     },
     {
-      "postfix": "WcfrelayShow",
-      "definiteArgument": "relay wcfrelay show",
+      "postfix": "HycoShow",
+      "definiteArgument": "relay hyco show",
       "settingsClass": {
         "properties": [
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of WCF Relay."
+            "help": "Name of Hybrid Connection."
           },
           {
             "name": "NamespaceName",
@@ -144,15 +138,15 @@
       }
     },
     {
-      "postfix": "WcfrelayUpdate",
-      "definiteArgument": "relay wcfrelay update",
+      "postfix": "HycoUpdate",
+      "definiteArgument": "relay hyco update",
       "settingsClass": {
         "properties": [
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of WCF Relay."
+            "help": "Name of Hybrid Connection."
           },
           {
             "name": "NamespaceName",
@@ -165,12 +159,6 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "RelayType",
-            "type": "RelayWcfrelayRelayType",
-            "format": "--relay-type {value}",
-            "help": "Relay type."
           },
           {
             "name": "RequiresClientAuthorization",
@@ -180,7 +168,7 @@
           },
           {
             "name": "Status",
-            "type": "RelayWcfrelayStatus",
+            "type": "RelayHycoStatus",
             "format": "--status {value}",
             "help": "Enumerates the possible values for the status of a messaging entity."
           },
@@ -368,21 +356,27 @@
       }
     },
     {
-      "postfix": "HycoCreate",
-      "definiteArgument": "relay hyco create",
+      "postfix": "WcfrelayCreate",
+      "definiteArgument": "relay wcfrelay create",
       "settingsClass": {
         "properties": [
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of Hybrid Connection."
+            "help": "Name of WCF Relay."
           },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
             "help": "Name of Namespace."
+          },
+          {
+            "name": "RelayType",
+            "type": "RelayWcfrelayRelayType",
+            "format": "--relay-type {value}",
+            "help": "Relay type."
           },
           {
             "name": "ResourceGroup",
@@ -406,15 +400,15 @@
       }
     },
     {
-      "postfix": "HycoDelete",
-      "definiteArgument": "relay hyco delete",
+      "postfix": "WcfrelayDelete",
+      "definiteArgument": "relay wcfrelay delete",
       "settingsClass": {
         "properties": [
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of Hybrid Connection."
+            "help": "Name of WCF Relay."
           },
           {
             "name": "NamespaceName",
@@ -432,8 +426,8 @@
       }
     },
     {
-      "postfix": "HycoList",
-      "definiteArgument": "relay hyco list",
+      "postfix": "WcfrelayList",
+      "definiteArgument": "relay wcfrelay list",
       "settingsClass": {
         "properties": [
           {
@@ -452,15 +446,15 @@
       }
     },
     {
-      "postfix": "HycoShow",
-      "definiteArgument": "relay hyco show",
+      "postfix": "WcfrelayShow",
+      "definiteArgument": "relay wcfrelay show",
       "settingsClass": {
         "properties": [
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of Hybrid Connection."
+            "help": "Name of WCF Relay."
           },
           {
             "name": "NamespaceName",
@@ -478,15 +472,15 @@
       }
     },
     {
-      "postfix": "HycoUpdate",
-      "definiteArgument": "relay hyco update",
+      "postfix": "WcfrelayUpdate",
+      "definiteArgument": "relay wcfrelay update",
       "settingsClass": {
         "properties": [
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of Hybrid Connection."
+            "help": "Name of WCF Relay."
           },
           {
             "name": "NamespaceName",
@@ -499,6 +493,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "RelayType",
+            "type": "RelayWcfrelayRelayType",
+            "format": "--relay-type {value}",
+            "help": "Relay type."
           },
           {
             "name": "RequiresClientAuthorization",
@@ -508,7 +508,7 @@
           },
           {
             "name": "Status",
-            "type": "RelayWcfrelayStatus",
+            "type": "RelayHycoStatus",
             "format": "--status {value}",
             "help": "Enumerates the possible values for the status of a messaging entity."
           },
@@ -517,168 +517,6 @@
             "type": "string",
             "format": "--user-metadata {value}",
             "help": "Endpoint metadata."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NamespaceAuthorizationRuleCreate",
-      "definiteArgument": "relay namespace authorization-rule create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Namespace Authorization Rule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Rights",
-            "type": "List<RelayNamespaceAuthorizationRuleRights>",
-            "format": "--rights {value}",
-            "separator": " ",
-            "help": "Space-separated list of Authorization rule rights."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NamespaceAuthorizationRuleDelete",
-      "definiteArgument": "relay namespace authorization-rule delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Namespace Authorization Rule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NamespaceAuthorizationRuleList",
-      "definiteArgument": "relay namespace authorization-rule list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of the Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NamespaceAuthorizationRuleShow",
-      "definiteArgument": "relay namespace authorization-rule show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Namespace Authorization Rule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NamespaceAuthorizationRuleUpdate",
-      "definiteArgument": "relay namespace authorization-rule update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Namespace Authorization Rule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Rights",
-            "type": "List<RelayNamespaceAuthorizationRuleRights>",
-            "format": "--rights {value}",
-            "separator": " ",
-            "help": "Space-separated list of Authorization rule rights."
           },
           {
             "name": "Add",
@@ -738,7 +576,7 @@
           },
           {
             "name": "Rights",
-            "type": "List<RelayNamespaceAuthorizationRuleRights>",
+            "type": "List<RelayHycoAuthorizationRuleRights>",
             "format": "--rights {value}",
             "separator": " ",
             "help": "Space-separated list of Authorization rule rights."
@@ -867,7 +705,169 @@
           },
           {
             "name": "Rights",
-            "type": "List<RelayNamespaceAuthorizationRuleRights>",
+            "type": "List<RelayHycoAuthorizationRuleRights>",
+            "format": "--rights {value}",
+            "separator": " ",
+            "help": "Space-separated list of Authorization rule rights."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NamespaceAuthorizationRuleCreate",
+      "definiteArgument": "relay namespace authorization-rule create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Namespace Authorization Rule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Rights",
+            "type": "List<RelayHycoAuthorizationRuleRights>",
+            "format": "--rights {value}",
+            "separator": " ",
+            "help": "Space-separated list of Authorization rule rights."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NamespaceAuthorizationRuleDelete",
+      "definiteArgument": "relay namespace authorization-rule delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Namespace Authorization Rule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NamespaceAuthorizationRuleList",
+      "definiteArgument": "relay namespace authorization-rule list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of the Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NamespaceAuthorizationRuleShow",
+      "definiteArgument": "relay namespace authorization-rule show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Namespace Authorization Rule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NamespaceAuthorizationRuleUpdate",
+      "definiteArgument": "relay namespace authorization-rule update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Namespace Authorization Rule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Rights",
+            "type": "List<RelayHycoAuthorizationRuleRights>",
             "format": "--rights {value}",
             "separator": " ",
             "help": "Space-separated list of Authorization rule rights."
@@ -930,7 +930,7 @@
           },
           {
             "name": "Rights",
-            "type": "List<RelayNamespaceAuthorizationRuleRights>",
+            "type": "List<RelayHycoAuthorizationRuleRights>",
             "format": "--rights {value}",
             "separator": " ",
             "help": "Space-separated list of Authorization rule rights."
@@ -1059,7 +1059,7 @@
           },
           {
             "name": "Rights",
-            "type": "List<RelayNamespaceAuthorizationRuleRights>",
+            "type": "List<RelayHycoAuthorizationRuleRights>",
             "format": "--rights {value}",
             "separator": " ",
             "help": "Space-separated list of Authorization rule rights."
@@ -1087,70 +1087,6 @@
             "type": "string",
             "format": "--set {value}",
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NamespaceAuthorizationRuleKeysList",
-      "definiteArgument": "relay namespace authorization-rule keys list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Namespace Authorization Rule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NamespaceAuthorizationRuleKeysRenew",
-      "definiteArgument": "relay namespace authorization-rule keys renew",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Key",
-            "type": "RelayNamespaceAuthorizationRuleKeysKey",
-            "format": "--key {value}",
-            "help": "Specifies Primary or Secondary key needs to be reset."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Namespace Authorization Rule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "KeyValue",
-            "type": "string",
-            "format": "--key-value {value}",
-            "help": "Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType."
           }
         ]
       }
@@ -1200,7 +1136,7 @@
           },
           {
             "name": "Key",
-            "type": "RelayNamespaceAuthorizationRuleKeysKey",
+            "type": "RelayHycoAuthorizationRuleKeysKey",
             "format": "--key {value}",
             "help": "Specifies Primary or Secondary key needs to be reset."
           },
@@ -1209,6 +1145,70 @@
             "type": "string",
             "format": "--name {value}",
             "help": "Name of Hybrid Connection Authorization Rule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "KeyValue",
+            "type": "string",
+            "format": "--key-value {value}",
+            "help": "Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NamespaceAuthorizationRuleKeysList",
+      "definiteArgument": "relay namespace authorization-rule keys list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Namespace Authorization Rule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NamespaceAuthorizationRuleKeysRenew",
+      "definiteArgument": "relay namespace authorization-rule keys renew",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Key",
+            "type": "RelayHycoAuthorizationRuleKeysKey",
+            "format": "--key {value}",
+            "help": "Specifies Primary or Secondary key needs to be reset."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Namespace Authorization Rule."
           },
           {
             "name": "NamespaceName",
@@ -1270,7 +1270,7 @@
         "properties": [
           {
             "name": "Key",
-            "type": "RelayNamespaceAuthorizationRuleKeysKey",
+            "type": "RelayHycoAuthorizationRuleKeysKey",
             "format": "--key {value}",
             "help": "Specifies Primary or Secondary key needs to be reset."
           },
@@ -1342,14 +1342,7 @@
   ],
   "enumerations": [
     {
-      "name": "RelayWcfrelayRelayType",
-      "values": [
-        "http",
-        "nettcp"
-      ]
-    },
-    {
-      "name": "RelayWcfrelayStatus",
+      "name": "RelayHycoStatus",
       "values": [
         "active",
         "disabled",
@@ -1358,7 +1351,14 @@
       ]
     },
     {
-      "name": "RelayNamespaceAuthorizationRuleRights",
+      "name": "RelayWcfrelayRelayType",
+      "values": [
+        "http",
+        "nettcp"
+      ]
+    },
+    {
+      "name": "RelayHycoAuthorizationRuleRights",
       "values": [
         "listen",
         "manage",
@@ -1366,7 +1366,7 @@
       ]
     },
     {
-      "name": "RelayNamespaceAuthorizationRuleKeysKey",
+      "name": "RelayHycoAuthorizationRuleKeysKey",
       "values": [
         "primarykey",
         "secondarykey"

@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.6.1 [CommitSha: 8eca516b].
+// Generated with Nuke.CodeGeneration, Version: 0.6.2 [CommitSha: ff25463a].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureAcr.json.
 
 using JetBrains.Annotations;
@@ -116,6 +116,110 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure Container Registries for private registries within Azure.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAcrBuildTaskCreate(Configure<AzureAcrBuildTaskCreateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAcrBuildTaskCreateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Container Registries for private registries within Azure.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAcrBuildTaskDelete(Configure<AzureAcrBuildTaskDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAcrBuildTaskDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Container Registries for private registries within Azure.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAcrBuildTaskList(Configure<AzureAcrBuildTaskListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAcrBuildTaskListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Container Registries for private registries within Azure.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAcrBuildTaskListBuilds(Configure<AzureAcrBuildTaskListBuildsSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAcrBuildTaskListBuildsSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Container Registries for private registries within Azure.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAcrBuildTaskLogs(Configure<AzureAcrBuildTaskLogsSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAcrBuildTaskLogsSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Container Registries for private registries within Azure.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAcrBuildTaskRun(Configure<AzureAcrBuildTaskRunSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAcrBuildTaskRunSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Container Registries for private registries within Azure.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAcrBuildTaskShow(Configure<AzureAcrBuildTaskShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAcrBuildTaskShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Container Registries for private registries within Azure.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAcrBuildTaskShowBuild(Configure<AzureAcrBuildTaskShowBuildSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAcrBuildTaskShowBuildSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Container Registries for private registries within Azure.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAcrBuildTaskUpdate(Configure<AzureAcrBuildTaskUpdateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAcrBuildTaskUpdateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Container Registries for private registries within Azure.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAcrBuildTaskUpdateBuild(Configure<AzureAcrBuildTaskUpdateBuildSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAcrBuildTaskUpdateBuildSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Container Registries for private registries within Azure.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAcrConfig(Configure<AzureAcrConfigSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAcrConfigSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Container Registries for private registries within Azure.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAcrCredentialRenew(Configure<AzureAcrCredentialRenewSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAcrCredentialRenewSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Container Registries for private registries within Azure.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAcrCredentialShow(Configure<AzureAcrCredentialShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAcrCredentialShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Container Registries for private registries within Azure.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureAcrReplicationCreate(Configure<AzureAcrReplicationCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcrReplicationCreateSettings());
@@ -212,30 +316,6 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure Container Registries for private registries within Azure.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrCredentialRenew(Configure<AzureAcrCredentialRenewSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrCredentialRenewSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Container Registries for private registries within Azure.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrCredentialShow(Configure<AzureAcrCredentialShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrCredentialShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Container Registries for private registries within Azure.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrConfig(Configure<AzureAcrConfigSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrConfigSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Container Registries for private registries within Azure.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureAcrWebhookCreate(Configure<AzureAcrWebhookCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcrWebhookCreateSettings());
@@ -300,86 +380,6 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure Container Registries for private registries within Azure.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrBuildTaskCreate(Configure<AzureAcrBuildTaskCreateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrBuildTaskCreateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Container Registries for private registries within Azure.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrBuildTaskDelete(Configure<AzureAcrBuildTaskDeleteSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrBuildTaskDeleteSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Container Registries for private registries within Azure.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrBuildTaskList(Configure<AzureAcrBuildTaskListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrBuildTaskListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Container Registries for private registries within Azure.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrBuildTaskListBuilds(Configure<AzureAcrBuildTaskListBuildsSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrBuildTaskListBuildsSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Container Registries for private registries within Azure.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrBuildTaskLogs(Configure<AzureAcrBuildTaskLogsSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrBuildTaskLogsSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Container Registries for private registries within Azure.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrBuildTaskRun(Configure<AzureAcrBuildTaskRunSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrBuildTaskRunSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Container Registries for private registries within Azure.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrBuildTaskShow(Configure<AzureAcrBuildTaskShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrBuildTaskShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Container Registries for private registries within Azure.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrBuildTaskShowBuild(Configure<AzureAcrBuildTaskShowBuildSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrBuildTaskShowBuildSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Container Registries for private registries within Azure.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrBuildTaskUpdate(Configure<AzureAcrBuildTaskUpdateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrBuildTaskUpdateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Container Registries for private registries within Azure.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrBuildTaskUpdateBuild(Configure<AzureAcrBuildTaskUpdateBuildSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrBuildTaskUpdateBuildSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Container Registries for private registries within Azure.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureAcrConfigContentTrustShow(Configure<AzureAcrConfigContentTrustShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcrConfigContentTrustShowSettings());
@@ -414,9 +414,9 @@ namespace Nuke.Azure
         /// <summary><p>The name of the image. May include a tag in the format 'name:tag'.</p></summary>
         public virtual string Image { get; internal set; }
         /// <summary><p>Do not show logs after successfully queuing the build.</p></summary>
-        public virtual string NoLogs { get; internal set; }
+        public virtual bool? NoLogs { get; internal set; }
         /// <summary><p>Indicates whether the image built should be pushed to the registry.</p></summary>
-        public virtual string NoPush { get; internal set; }
+        public virtual bool? NoPush { get; internal set; }
         /// <summary><p>The operating system type required for the build.</p></summary>
         public virtual AcrOs Os { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
@@ -443,8 +443,8 @@ namespace Nuke.Azure
               .Add("--build-arg {value}", BuildArg)
               .Add("--file {value}", File)
               .Add("--image {value}", Image)
-              .Add("--no-logs {value}", NoLogs)
-              .Add("--no-push {value}", NoPush)
+              .Add("--no-logs", NoLogs)
+              .Add("--no-push", NoPush)
               .Add("--os {value}", Os)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--secret-build-arg {value}", SecretBuildArg, secret: true)
@@ -842,6 +842,644 @@ namespace Nuke.Azure
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcrBuildTaskCreateSettings
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcrBuildTaskCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcr executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
+        /// <summary><p>The full URL to the source code respository.</p></summary>
+        public virtual string Context { get; internal set; }
+        /// <summary><p>The access token used to access the source control provider.</p></summary>
+        public virtual string GitAccessToken { get; internal set; }
+        /// <summary><p>The name of the image. May include a tag in the format 'name:tag'.</p></summary>
+        public virtual string Image { get; internal set; }
+        /// <summary><p>The name of the build task.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        public virtual string Registry { get; internal set; }
+        /// <summary><p>The alternative name for build task. Default to the build task name.</p></summary>
+        public virtual string Alias { get; internal set; }
+        /// <summary><p>The type of the auto trigger for base image dependency updates.</p></summary>
+        public virtual AcrBuildTaskBaseImageTrigger BaseImageTrigger { get; internal set; }
+        /// <summary><p>The source control branch name.</p></summary>
+        public virtual string Branch { get; internal set; }
+        /// <summary><p>Build argument in 'name[=value]' format.</p></summary>
+        public virtual string BuildArg { get; internal set; }
+        /// <summary><p>Indicates whether the source control commit trigger is enabled.</p></summary>
+        public virtual bool? CommitTriggerEnabled { get; internal set; }
+        /// <summary><p>The CPU configuration in terms of number of cores required for the build.</p></summary>
+        public virtual string Cpu { get; internal set; }
+        /// <summary><p>The relative path of the the docker file to the source code root folder.</p></summary>
+        public virtual string File { get; internal set; }
+        /// <summary><p>Indicates whether the image cache is enabled.</p></summary>
+        public virtual bool? NoCache { get; internal set; }
+        /// <summary><p>Indicates whether the image built should be pushed to the registry.</p></summary>
+        public virtual bool? NoPush { get; internal set; }
+        /// <summary><p>The operating system type required for the build.</p></summary>
+        public virtual AcrOs Os { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Secret build argument in 'name[=value]' format.</p></summary>
+        public virtual string SecretBuildArg { get; internal set; }
+        /// <summary><p>The current status of build task.</p></summary>
+        public virtual AcrBuildTaskStatus Status { get; internal set; }
+        /// <summary><p>The build timeout in seconds.</p></summary>
+        public virtual string Timeout { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acr build-task create")
+              .Add("--context {value}", Context)
+              .Add("--git-access-token {value}", GitAccessToken)
+              .Add("--image {value}", Image)
+              .Add("--name {value}", Name)
+              .Add("--registry {value}", Registry)
+              .Add("--alias {value}", Alias)
+              .Add("--base-image-trigger {value}", BaseImageTrigger)
+              .Add("--branch {value}", Branch)
+              .Add("--build-arg {value}", BuildArg)
+              .Add("--commit-trigger-enabled", CommitTriggerEnabled)
+              .Add("--cpu {value}", Cpu)
+              .Add("--file {value}", File)
+              .Add("--no-cache", NoCache)
+              .Add("--no-push", NoPush)
+              .Add("--os {value}", Os)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--secret-build-arg {value}", SecretBuildArg, secret: true)
+              .Add("--status {value}", Status)
+              .Add("--timeout {value}", Timeout)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcrBuildTaskDeleteSettings
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcrBuildTaskDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcr executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
+        /// <summary><p>The name of the build task.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        public virtual string Registry { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acr build-task delete")
+              .Add("--name {value}", Name)
+              .Add("--registry {value}", Registry)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcrBuildTaskListSettings
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcrBuildTaskListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcr executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
+        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        public virtual string Registry { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acr build-task list")
+              .Add("--registry {value}", Registry)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcrBuildTaskListBuildsSettings
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcrBuildTaskListBuildsSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcr executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
+        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        public virtual string Registry { get; internal set; }
+        /// <summary><p>The current status of build.</p></summary>
+        public virtual AcrBuildTaskListBuildsBuildStatus BuildStatus { get; internal set; }
+        /// <summary><p>The name of the image. May include a tag in the format 'name:tag' or digest in the format 'name@digest'.</p></summary>
+        public virtual string Image { get; internal set; }
+        /// <summary><p>The name of the build task.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Limit the number of latest builds in the results.</p></summary>
+        public virtual string Top { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acr build-task list-builds")
+              .Add("--registry {value}", Registry)
+              .Add("--build-status {value}", BuildStatus)
+              .Add("--image {value}", Image)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--top {value}", Top)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcrBuildTaskLogsSettings
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcrBuildTaskLogsSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcr executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
+        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        public virtual string Registry { get; internal set; }
+        /// <summary><p>The unique build identifier.</p></summary>
+        public virtual string BuildId { get; internal set; }
+        /// <summary><p>The name of the image. May include a tag in the format 'name:tag' or digest in the format 'name@digest'.</p></summary>
+        public virtual string Image { get; internal set; }
+        /// <summary><p>The name of the build task.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acr build-task logs")
+              .Add("--registry {value}", Registry)
+              .Add("--build-id {value}", BuildId)
+              .Add("--image {value}", Image)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcrBuildTaskRunSettings
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcrBuildTaskRunSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcr executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
+        /// <summary><p>The name of the build task.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        public virtual string Registry { get; internal set; }
+        /// <summary><p>Do not show logs after successfully queuing the build.</p></summary>
+        public virtual bool? NoLogs { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acr build-task run")
+              .Add("--name {value}", Name)
+              .Add("--registry {value}", Registry)
+              .Add("--no-logs", NoLogs)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcrBuildTaskShowSettings
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcrBuildTaskShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcr executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
+        /// <summary><p>The name of the build task.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        public virtual string Registry { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Indicates whether the secure properties of a build task should be returned.</p></summary>
+        public virtual string WithSecureProperties { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acr build-task show")
+              .Add("--name {value}", Name)
+              .Add("--registry {value}", Registry)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--with-secure-properties {value}", WithSecureProperties)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcrBuildTaskShowBuildSettings
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcrBuildTaskShowBuildSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcr executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
+        /// <summary><p>The unique build identifier.</p></summary>
+        public virtual string BuildId { get; internal set; }
+        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        public virtual string Registry { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acr build-task show-build")
+              .Add("--build-id {value}", BuildId)
+              .Add("--registry {value}", Registry)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcrBuildTaskUpdateSettings
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcrBuildTaskUpdateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcr executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
+        /// <summary><p>The name of the build task.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        public virtual string Registry { get; internal set; }
+        /// <summary><p>The alternative name for build task. Default to the build task name.</p></summary>
+        public virtual string Alias { get; internal set; }
+        /// <summary><p>The type of the auto trigger for base image dependency updates.</p></summary>
+        public virtual AcrBuildTaskBaseImageTrigger BaseImageTrigger { get; internal set; }
+        /// <summary><p>The source control branch name.</p></summary>
+        public virtual string Branch { get; internal set; }
+        /// <summary><p>Build argument in 'name[=value]' format.</p></summary>
+        public virtual string BuildArg { get; internal set; }
+        /// <summary><p>Indicates whether the source control commit trigger is enabled.</p></summary>
+        public virtual bool? CommitTriggerEnabled { get; internal set; }
+        /// <summary><p>The full URL to the source code respository.</p></summary>
+        public virtual string Context { get; internal set; }
+        /// <summary><p>The CPU configuration in terms of number of cores required for the build.</p></summary>
+        public virtual string Cpu { get; internal set; }
+        /// <summary><p>The relative path of the the docker file to the source code root folder.</p></summary>
+        public virtual string File { get; internal set; }
+        /// <summary><p>The access token used to access the source control provider.</p></summary>
+        public virtual string GitAccessToken { get; internal set; }
+        /// <summary><p>The name of the image. May include a tag in the format 'name:tag'.</p></summary>
+        public virtual string Image { get; internal set; }
+        /// <summary><p>Indicates whether the image cache is enabled.</p></summary>
+        public virtual bool? NoCache { get; internal set; }
+        /// <summary><p>Indicates whether the image built should be pushed to the registry.</p></summary>
+        public virtual bool? NoPush { get; internal set; }
+        /// <summary><p>The operating system type required for the build.</p></summary>
+        public virtual AcrOs Os { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Secret build argument in 'name[=value]' format.</p></summary>
+        public virtual string SecretBuildArg { get; internal set; }
+        /// <summary><p>The current status of build task.</p></summary>
+        public virtual AcrBuildTaskStatus Status { get; internal set; }
+        /// <summary><p>The build timeout in seconds.</p></summary>
+        public virtual string Timeout { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acr build-task update")
+              .Add("--name {value}", Name)
+              .Add("--registry {value}", Registry)
+              .Add("--alias {value}", Alias)
+              .Add("--base-image-trigger {value}", BaseImageTrigger)
+              .Add("--branch {value}", Branch)
+              .Add("--build-arg {value}", BuildArg)
+              .Add("--commit-trigger-enabled", CommitTriggerEnabled)
+              .Add("--context {value}", Context)
+              .Add("--cpu {value}", Cpu)
+              .Add("--file {value}", File)
+              .Add("--git-access-token {value}", GitAccessToken)
+              .Add("--image {value}", Image)
+              .Add("--no-cache", NoCache)
+              .Add("--no-push", NoPush)
+              .Add("--os {value}", Os)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--secret-build-arg {value}", SecretBuildArg, secret: true)
+              .Add("--status {value}", Status)
+              .Add("--timeout {value}", Timeout)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcrBuildTaskUpdateBuildSettings
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcrBuildTaskUpdateBuildSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcr executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
+        /// <summary><p>The unique build identifier.</p></summary>
+        public virtual string BuildId { get; internal set; }
+        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        public virtual string Registry { get; internal set; }
+        /// <summary><p>Indicates whether the build should be archived.</p></summary>
+        public virtual bool? NoArchive { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acr build-task update-build")
+              .Add("--build-id {value}", BuildId)
+              .Add("--registry {value}", Registry)
+              .Add("--no-archive", NoArchive)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcrConfigSettings
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcrConfigSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcr executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acr config")
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcrCredentialRenewSettings
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcrCredentialRenewSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcr executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
+        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>The name of password to regenerate.</p></summary>
+        public virtual AcrCredentialRenewPasswordName PasswordName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acr credential renew")
+              .Add("--name {value}", Name)
+              .Add("--password-name {value}", PasswordName, secret: true)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcrCredentialShowSettings
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcrCredentialShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcr executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
+        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acr credential show")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1445,117 +2083,6 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureAcrCredentialRenewSettings
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcrCredentialRenewSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcr executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>The name of password to regenerate.</p></summary>
-        public virtual AcrCredentialRenewPasswordName PasswordName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acr credential renew")
-              .Add("--name {value}", Name)
-              .Add("--password-name {value}", PasswordName, secret: true)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcrCredentialShowSettings
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcrCredentialShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcr executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acr credential show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcrConfigSettings
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcrConfigSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcr executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acr config")
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
     #region AzureAcrWebhookCreateSettings
     /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
     [PublicAPI]
@@ -1583,7 +2110,7 @@ namespace Nuke.Azure
         /// <summary><p>The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means events for all repositories.</p></summary>
         public virtual string Scope { get; internal set; }
         /// <summary><p>Indicates whether the webhook is enabled.</p></summary>
-        public virtual AcrWebhookStatus Status { get; internal set; }
+        public virtual AcrBuildTaskStatus Status { get; internal set; }
         /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
@@ -1885,7 +2412,7 @@ namespace Nuke.Azure
         /// <summary><p>The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means events for all repositories.</p></summary>
         public virtual string Scope { get; internal set; }
         /// <summary><p>Indicates whether the webhook is enabled.</p></summary>
-        public virtual AcrWebhookStatus Status { get; internal set; }
+        public virtual AcrBuildTaskStatus Status { get; internal set; }
         /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
         /// <summary><p>The service URI for the webhook to post notifications.</p></summary>
@@ -1925,533 +2452,6 @@ namespace Nuke.Azure
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcrBuildTaskCreateSettings
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcrBuildTaskCreateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcr executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>The full URL to the source code respository.</p></summary>
-        public virtual string Context { get; internal set; }
-        /// <summary><p>The access token used to access the source control provider.</p></summary>
-        public virtual string GitAccessToken { get; internal set; }
-        /// <summary><p>The name of the image. May include a tag in the format 'name:tag'.</p></summary>
-        public virtual string Image { get; internal set; }
-        /// <summary><p>The name of the build task.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        public virtual string Registry { get; internal set; }
-        /// <summary><p>The alternative name for build task. Default to the build task name.</p></summary>
-        public virtual string Alias { get; internal set; }
-        /// <summary><p>The type of the auto trigger for base image dependency updates.</p></summary>
-        public virtual AcrBuildTaskBaseImageTrigger BaseImageTrigger { get; internal set; }
-        /// <summary><p>The source control branch name.</p></summary>
-        public virtual string Branch { get; internal set; }
-        /// <summary><p>Build argument in 'name[=value]' format.</p></summary>
-        public virtual string BuildArg { get; internal set; }
-        /// <summary><p>Indicates whether the source control commit trigger is enabled.</p></summary>
-        public virtual bool? CommitTriggerEnabled { get; internal set; }
-        /// <summary><p>The CPU configuration in terms of number of cores required for the build.</p></summary>
-        public virtual string Cpu { get; internal set; }
-        /// <summary><p>The relative path of the the docker file to the source code root folder.</p></summary>
-        public virtual string File { get; internal set; }
-        /// <summary><p>Indicates whether the image cache is enabled.</p></summary>
-        public virtual bool? NoCache { get; internal set; }
-        /// <summary><p>Indicates whether the image built should be pushed to the registry.</p></summary>
-        public virtual bool? NoPush { get; internal set; }
-        /// <summary><p>The operating system type required for the build.</p></summary>
-        public virtual AcrOs Os { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Secret build argument in 'name[=value]' format.</p></summary>
-        public virtual string SecretBuildArg { get; internal set; }
-        /// <summary><p>The current status of build task.</p></summary>
-        public virtual AcrWebhookStatus Status { get; internal set; }
-        /// <summary><p>The build timeout in seconds.</p></summary>
-        public virtual string Timeout { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acr build-task create")
-              .Add("--context {value}", Context)
-              .Add("--git-access-token {value}", GitAccessToken)
-              .Add("--image {value}", Image)
-              .Add("--name {value}", Name)
-              .Add("--registry {value}", Registry)
-              .Add("--alias {value}", Alias)
-              .Add("--base-image-trigger {value}", BaseImageTrigger)
-              .Add("--branch {value}", Branch)
-              .Add("--build-arg {value}", BuildArg)
-              .Add("--commit-trigger-enabled", CommitTriggerEnabled)
-              .Add("--cpu {value}", Cpu)
-              .Add("--file {value}", File)
-              .Add("--no-cache", NoCache)
-              .Add("--no-push", NoPush)
-              .Add("--os {value}", Os)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--secret-build-arg {value}", SecretBuildArg, secret: true)
-              .Add("--status {value}", Status)
-              .Add("--timeout {value}", Timeout)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcrBuildTaskDeleteSettings
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcrBuildTaskDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcr executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>The name of the build task.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        public virtual string Registry { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acr build-task delete")
-              .Add("--name {value}", Name)
-              .Add("--registry {value}", Registry)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcrBuildTaskListSettings
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcrBuildTaskListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcr executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        public virtual string Registry { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acr build-task list")
-              .Add("--registry {value}", Registry)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcrBuildTaskListBuildsSettings
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcrBuildTaskListBuildsSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcr executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        public virtual string Registry { get; internal set; }
-        /// <summary><p>The current status of build.</p></summary>
-        public virtual AcrBuildTaskListBuildsBuildStatus BuildStatus { get; internal set; }
-        /// <summary><p>The name of the image. May include a tag in the format 'name:tag' or digest in the format 'name@digest'.</p></summary>
-        public virtual string Image { get; internal set; }
-        /// <summary><p>The name of the build task.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Limit the number of latest builds in the results.</p></summary>
-        public virtual string Top { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acr build-task list-builds")
-              .Add("--registry {value}", Registry)
-              .Add("--build-status {value}", BuildStatus)
-              .Add("--image {value}", Image)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--top {value}", Top)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcrBuildTaskLogsSettings
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcrBuildTaskLogsSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcr executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        public virtual string Registry { get; internal set; }
-        /// <summary><p>The unique build identifier.</p></summary>
-        public virtual string BuildId { get; internal set; }
-        /// <summary><p>The name of the image. May include a tag in the format 'name:tag' or digest in the format 'name@digest'.</p></summary>
-        public virtual string Image { get; internal set; }
-        /// <summary><p>The name of the build task.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acr build-task logs")
-              .Add("--registry {value}", Registry)
-              .Add("--build-id {value}", BuildId)
-              .Add("--image {value}", Image)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcrBuildTaskRunSettings
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcrBuildTaskRunSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcr executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>The name of the build task.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        public virtual string Registry { get; internal set; }
-        /// <summary><p>Do not show logs after successfully queuing the build.</p></summary>
-        public virtual string NoLogs { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acr build-task run")
-              .Add("--name {value}", Name)
-              .Add("--registry {value}", Registry)
-              .Add("--no-logs {value}", NoLogs)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcrBuildTaskShowSettings
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcrBuildTaskShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcr executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>The name of the build task.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        public virtual string Registry { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Indicates whether the secure properties of a build task should be returned.</p></summary>
-        public virtual string WithSecureProperties { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acr build-task show")
-              .Add("--name {value}", Name)
-              .Add("--registry {value}", Registry)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--with-secure-properties {value}", WithSecureProperties)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcrBuildTaskShowBuildSettings
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcrBuildTaskShowBuildSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcr executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>The unique build identifier.</p></summary>
-        public virtual string BuildId { get; internal set; }
-        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        public virtual string Registry { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acr build-task show-build")
-              .Add("--build-id {value}", BuildId)
-              .Add("--registry {value}", Registry)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcrBuildTaskUpdateSettings
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcrBuildTaskUpdateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcr executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>The name of the build task.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        public virtual string Registry { get; internal set; }
-        /// <summary><p>The alternative name for build task. Default to the build task name.</p></summary>
-        public virtual string Alias { get; internal set; }
-        /// <summary><p>The type of the auto trigger for base image dependency updates.</p></summary>
-        public virtual AcrBuildTaskBaseImageTrigger BaseImageTrigger { get; internal set; }
-        /// <summary><p>The source control branch name.</p></summary>
-        public virtual string Branch { get; internal set; }
-        /// <summary><p>Build argument in 'name[=value]' format.</p></summary>
-        public virtual string BuildArg { get; internal set; }
-        /// <summary><p>Indicates whether the source control commit trigger is enabled.</p></summary>
-        public virtual bool? CommitTriggerEnabled { get; internal set; }
-        /// <summary><p>The full URL to the source code respository.</p></summary>
-        public virtual string Context { get; internal set; }
-        /// <summary><p>The CPU configuration in terms of number of cores required for the build.</p></summary>
-        public virtual string Cpu { get; internal set; }
-        /// <summary><p>The relative path of the the docker file to the source code root folder.</p></summary>
-        public virtual string File { get; internal set; }
-        /// <summary><p>The access token used to access the source control provider.</p></summary>
-        public virtual string GitAccessToken { get; internal set; }
-        /// <summary><p>The name of the image. May include a tag in the format 'name:tag'.</p></summary>
-        public virtual string Image { get; internal set; }
-        /// <summary><p>Indicates whether the image cache is enabled.</p></summary>
-        public virtual bool? NoCache { get; internal set; }
-        /// <summary><p>Indicates whether the image built should be pushed to the registry.</p></summary>
-        public virtual bool? NoPush { get; internal set; }
-        /// <summary><p>The operating system type required for the build.</p></summary>
-        public virtual AcrOs Os { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Secret build argument in 'name[=value]' format.</p></summary>
-        public virtual string SecretBuildArg { get; internal set; }
-        /// <summary><p>The current status of build task.</p></summary>
-        public virtual AcrWebhookStatus Status { get; internal set; }
-        /// <summary><p>The build timeout in seconds.</p></summary>
-        public virtual string Timeout { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acr build-task update")
-              .Add("--name {value}", Name)
-              .Add("--registry {value}", Registry)
-              .Add("--alias {value}", Alias)
-              .Add("--base-image-trigger {value}", BaseImageTrigger)
-              .Add("--branch {value}", Branch)
-              .Add("--build-arg {value}", BuildArg)
-              .Add("--commit-trigger-enabled", CommitTriggerEnabled)
-              .Add("--context {value}", Context)
-              .Add("--cpu {value}", Cpu)
-              .Add("--file {value}", File)
-              .Add("--git-access-token {value}", GitAccessToken)
-              .Add("--image {value}", Image)
-              .Add("--no-cache", NoCache)
-              .Add("--no-push", NoPush)
-              .Add("--os {value}", Os)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--secret-build-arg {value}", SecretBuildArg, secret: true)
-              .Add("--status {value}", Status)
-              .Add("--timeout {value}", Timeout)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcrBuildTaskUpdateBuildSettings
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcrBuildTaskUpdateBuildSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcr executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>The unique build identifier.</p></summary>
-        public virtual string BuildId { get; internal set; }
-        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        public virtual string Registry { get; internal set; }
-        /// <summary><p>Indicates whether the build should be archived.</p></summary>
-        public virtual bool? NoArchive { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acr build-task update-build")
-              .Add("--build-id {value}", BuildId)
-              .Add("--registry {value}", Registry)
-              .Add("--no-archive", NoArchive)
-              .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2513,7 +2513,7 @@ namespace Nuke.Azure
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Indicates whether content-trust is enabled or disabled.</p></summary>
-        public virtual AcrWebhookStatus Status { get; internal set; }
+        public virtual AcrBuildTaskStatus Status { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2621,7 +2621,7 @@ namespace Nuke.Azure
         #region NoLogs
         /// <summary><p><em>Sets <see cref="AzureAcrBuildSettings.NoLogs"/>.</em></p><p>Do not show logs after successfully queuing the build.</p></summary>
         [Pure]
-        public static AzureAcrBuildSettings SetNoLogs(this AzureAcrBuildSettings toolSettings, string noLogs)
+        public static AzureAcrBuildSettings SetNoLogs(this AzureAcrBuildSettings toolSettings, bool? noLogs)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoLogs = noLogs;
@@ -2635,11 +2635,35 @@ namespace Nuke.Azure
             toolSettings.NoLogs = null;
             return toolSettings;
         }
+        /// <summary><p><em>Enables <see cref="AzureAcrBuildSettings.NoLogs"/>.</em></p><p>Do not show logs after successfully queuing the build.</p></summary>
+        [Pure]
+        public static AzureAcrBuildSettings EnableNoLogs(this AzureAcrBuildSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoLogs = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureAcrBuildSettings.NoLogs"/>.</em></p><p>Do not show logs after successfully queuing the build.</p></summary>
+        [Pure]
+        public static AzureAcrBuildSettings DisableNoLogs(this AzureAcrBuildSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoLogs = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureAcrBuildSettings.NoLogs"/>.</em></p><p>Do not show logs after successfully queuing the build.</p></summary>
+        [Pure]
+        public static AzureAcrBuildSettings ToggleNoLogs(this AzureAcrBuildSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoLogs = !toolSettings.NoLogs;
+            return toolSettings;
+        }
         #endregion
         #region NoPush
         /// <summary><p><em>Sets <see cref="AzureAcrBuildSettings.NoPush"/>.</em></p><p>Indicates whether the image built should be pushed to the registry.</p></summary>
         [Pure]
-        public static AzureAcrBuildSettings SetNoPush(this AzureAcrBuildSettings toolSettings, string noPush)
+        public static AzureAcrBuildSettings SetNoPush(this AzureAcrBuildSettings toolSettings, bool? noPush)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoPush = noPush;
@@ -2651,6 +2675,30 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoPush = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureAcrBuildSettings.NoPush"/>.</em></p><p>Indicates whether the image built should be pushed to the registry.</p></summary>
+        [Pure]
+        public static AzureAcrBuildSettings EnableNoPush(this AzureAcrBuildSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoPush = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureAcrBuildSettings.NoPush"/>.</em></p><p>Indicates whether the image built should be pushed to the registry.</p></summary>
+        [Pure]
+        public static AzureAcrBuildSettings DisableNoPush(this AzureAcrBuildSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoPush = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureAcrBuildSettings.NoPush"/>.</em></p><p>Indicates whether the image built should be pushed to the registry.</p></summary>
+        [Pure]
+        public static AzureAcrBuildSettings ToggleNoPush(this AzureAcrBuildSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoPush = !toolSettings.NoPush;
             return toolSettings;
         }
         #endregion
@@ -4370,6 +4418,2804 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureAcrUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureAcrUpdateSettings ResetVerbose(this AzureAcrUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcrBuildTaskCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcrBuildTaskCreateSettingsExtensions
+    {
+        #region Context
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Context"/>.</em></p><p>The full URL to the source code respository.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings SetContext(this AzureAcrBuildTaskCreateSettings toolSettings, string context)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Context = context;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.Context"/>.</em></p><p>The full URL to the source code respository.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings ResetContext(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Context = null;
+            return toolSettings;
+        }
+        #endregion
+        #region GitAccessToken
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.GitAccessToken"/>.</em></p><p>The access token used to access the source control provider.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings SetGitAccessToken(this AzureAcrBuildTaskCreateSettings toolSettings, string gitAccessToken)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GitAccessToken = gitAccessToken;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.GitAccessToken"/>.</em></p><p>The access token used to access the source control provider.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings ResetGitAccessToken(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GitAccessToken = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Image
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Image"/>.</em></p><p>The name of the image. May include a tag in the format 'name:tag'.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings SetImage(this AzureAcrBuildTaskCreateSettings toolSettings, string image)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Image = image;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.Image"/>.</em></p><p>The name of the image. May include a tag in the format 'name:tag'.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings ResetImage(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Image = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Name"/>.</em></p><p>The name of the build task.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings SetName(this AzureAcrBuildTaskCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.Name"/>.</em></p><p>The name of the build task.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings ResetName(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Registry
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings SetRegistry(this AzureAcrBuildTaskCreateSettings toolSettings, string registry)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = registry;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings ResetRegistry(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Alias
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Alias"/>.</em></p><p>The alternative name for build task. Default to the build task name.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings SetAlias(this AzureAcrBuildTaskCreateSettings toolSettings, string alias)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = alias;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.Alias"/>.</em></p><p>The alternative name for build task. Default to the build task name.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings ResetAlias(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = null;
+            return toolSettings;
+        }
+        #endregion
+        #region BaseImageTrigger
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.BaseImageTrigger"/>.</em></p><p>The type of the auto trigger for base image dependency updates.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings SetBaseImageTrigger(this AzureAcrBuildTaskCreateSettings toolSettings, AcrBuildTaskBaseImageTrigger baseImageTrigger)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BaseImageTrigger = baseImageTrigger;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.BaseImageTrigger"/>.</em></p><p>The type of the auto trigger for base image dependency updates.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings ResetBaseImageTrigger(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BaseImageTrigger = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Branch
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Branch"/>.</em></p><p>The source control branch name.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings SetBranch(this AzureAcrBuildTaskCreateSettings toolSettings, string branch)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Branch = branch;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.Branch"/>.</em></p><p>The source control branch name.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings ResetBranch(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Branch = null;
+            return toolSettings;
+        }
+        #endregion
+        #region BuildArg
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.BuildArg"/>.</em></p><p>Build argument in 'name[=value]' format.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings SetBuildArg(this AzureAcrBuildTaskCreateSettings toolSettings, string buildArg)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BuildArg = buildArg;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.BuildArg"/>.</em></p><p>Build argument in 'name[=value]' format.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings ResetBuildArg(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BuildArg = null;
+            return toolSettings;
+        }
+        #endregion
+        #region CommitTriggerEnabled
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.CommitTriggerEnabled"/>.</em></p><p>Indicates whether the source control commit trigger is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings SetCommitTriggerEnabled(this AzureAcrBuildTaskCreateSettings toolSettings, bool? commitTriggerEnabled)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CommitTriggerEnabled = commitTriggerEnabled;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.CommitTriggerEnabled"/>.</em></p><p>Indicates whether the source control commit trigger is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings ResetCommitTriggerEnabled(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CommitTriggerEnabled = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureAcrBuildTaskCreateSettings.CommitTriggerEnabled"/>.</em></p><p>Indicates whether the source control commit trigger is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings EnableCommitTriggerEnabled(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CommitTriggerEnabled = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureAcrBuildTaskCreateSettings.CommitTriggerEnabled"/>.</em></p><p>Indicates whether the source control commit trigger is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings DisableCommitTriggerEnabled(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CommitTriggerEnabled = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureAcrBuildTaskCreateSettings.CommitTriggerEnabled"/>.</em></p><p>Indicates whether the source control commit trigger is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings ToggleCommitTriggerEnabled(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CommitTriggerEnabled = !toolSettings.CommitTriggerEnabled;
+            return toolSettings;
+        }
+        #endregion
+        #region Cpu
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Cpu"/>.</em></p><p>The CPU configuration in terms of number of cores required for the build.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings SetCpu(this AzureAcrBuildTaskCreateSettings toolSettings, string cpu)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Cpu = cpu;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.Cpu"/>.</em></p><p>The CPU configuration in terms of number of cores required for the build.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings ResetCpu(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Cpu = null;
+            return toolSettings;
+        }
+        #endregion
+        #region File
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.File"/>.</em></p><p>The relative path of the the docker file to the source code root folder.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings SetFile(this AzureAcrBuildTaskCreateSettings toolSettings, string file)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.File = file;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.File"/>.</em></p><p>The relative path of the the docker file to the source code root folder.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings ResetFile(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.File = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NoCache
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.NoCache"/>.</em></p><p>Indicates whether the image cache is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings SetNoCache(this AzureAcrBuildTaskCreateSettings toolSettings, bool? noCache)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoCache = noCache;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.NoCache"/>.</em></p><p>Indicates whether the image cache is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings ResetNoCache(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoCache = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureAcrBuildTaskCreateSettings.NoCache"/>.</em></p><p>Indicates whether the image cache is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings EnableNoCache(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoCache = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureAcrBuildTaskCreateSettings.NoCache"/>.</em></p><p>Indicates whether the image cache is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings DisableNoCache(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoCache = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureAcrBuildTaskCreateSettings.NoCache"/>.</em></p><p>Indicates whether the image cache is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings ToggleNoCache(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoCache = !toolSettings.NoCache;
+            return toolSettings;
+        }
+        #endregion
+        #region NoPush
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.NoPush"/>.</em></p><p>Indicates whether the image built should be pushed to the registry.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings SetNoPush(this AzureAcrBuildTaskCreateSettings toolSettings, bool? noPush)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoPush = noPush;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.NoPush"/>.</em></p><p>Indicates whether the image built should be pushed to the registry.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings ResetNoPush(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoPush = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureAcrBuildTaskCreateSettings.NoPush"/>.</em></p><p>Indicates whether the image built should be pushed to the registry.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings EnableNoPush(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoPush = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureAcrBuildTaskCreateSettings.NoPush"/>.</em></p><p>Indicates whether the image built should be pushed to the registry.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings DisableNoPush(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoPush = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureAcrBuildTaskCreateSettings.NoPush"/>.</em></p><p>Indicates whether the image built should be pushed to the registry.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings ToggleNoPush(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoPush = !toolSettings.NoPush;
+            return toolSettings;
+        }
+        #endregion
+        #region Os
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Os"/>.</em></p><p>The operating system type required for the build.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings SetOs(this AzureAcrBuildTaskCreateSettings toolSettings, AcrOs os)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Os = os;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.Os"/>.</em></p><p>The operating system type required for the build.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings ResetOs(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Os = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings SetResourceGroup(this AzureAcrBuildTaskCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings ResetResourceGroup(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SecretBuildArg
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.SecretBuildArg"/>.</em></p><p>Secret build argument in 'name[=value]' format.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings SetSecretBuildArg(this AzureAcrBuildTaskCreateSettings toolSettings, string secretBuildArg)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SecretBuildArg = secretBuildArg;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.SecretBuildArg"/>.</em></p><p>Secret build argument in 'name[=value]' format.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings ResetSecretBuildArg(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SecretBuildArg = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Status
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Status"/>.</em></p><p>The current status of build task.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings SetStatus(this AzureAcrBuildTaskCreateSettings toolSettings, AcrBuildTaskStatus status)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Status = status;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.Status"/>.</em></p><p>The current status of build task.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings ResetStatus(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Status = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Timeout
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Timeout"/>.</em></p><p>The build timeout in seconds.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings SetTimeout(this AzureAcrBuildTaskCreateSettings toolSettings, string timeout)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Timeout = timeout;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.Timeout"/>.</em></p><p>The build timeout in seconds.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings ResetTimeout(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Timeout = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings SetDebug(this AzureAcrBuildTaskCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings ResetDebug(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings SetHelp(this AzureAcrBuildTaskCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings ResetHelp(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings SetOutput(this AzureAcrBuildTaskCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings ResetOutput(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings SetQuery(this AzureAcrBuildTaskCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings ResetQuery(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings SetVerbose(this AzureAcrBuildTaskCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings ResetVerbose(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcrBuildTaskDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcrBuildTaskDeleteSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskDeleteSettings.Name"/>.</em></p><p>The name of the build task.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskDeleteSettings SetName(this AzureAcrBuildTaskDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskDeleteSettings.Name"/>.</em></p><p>The name of the build task.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskDeleteSettings ResetName(this AzureAcrBuildTaskDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Registry
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskDeleteSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskDeleteSettings SetRegistry(this AzureAcrBuildTaskDeleteSettings toolSettings, string registry)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = registry;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskDeleteSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskDeleteSettings ResetRegistry(this AzureAcrBuildTaskDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskDeleteSettings SetResourceGroup(this AzureAcrBuildTaskDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskDeleteSettings ResetResourceGroup(this AzureAcrBuildTaskDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskDeleteSettings SetDebug(this AzureAcrBuildTaskDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskDeleteSettings ResetDebug(this AzureAcrBuildTaskDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskDeleteSettings SetHelp(this AzureAcrBuildTaskDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskDeleteSettings ResetHelp(this AzureAcrBuildTaskDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskDeleteSettings SetOutput(this AzureAcrBuildTaskDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskDeleteSettings ResetOutput(this AzureAcrBuildTaskDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskDeleteSettings SetQuery(this AzureAcrBuildTaskDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskDeleteSettings ResetQuery(this AzureAcrBuildTaskDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskDeleteSettings SetVerbose(this AzureAcrBuildTaskDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskDeleteSettings ResetVerbose(this AzureAcrBuildTaskDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcrBuildTaskListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcrBuildTaskListSettingsExtensions
+    {
+        #region Registry
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListSettings SetRegistry(this AzureAcrBuildTaskListSettings toolSettings, string registry)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = registry;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListSettings ResetRegistry(this AzureAcrBuildTaskListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListSettings SetResourceGroup(this AzureAcrBuildTaskListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListSettings ResetResourceGroup(this AzureAcrBuildTaskListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListSettings SetDebug(this AzureAcrBuildTaskListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListSettings ResetDebug(this AzureAcrBuildTaskListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListSettings SetHelp(this AzureAcrBuildTaskListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListSettings ResetHelp(this AzureAcrBuildTaskListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListSettings SetOutput(this AzureAcrBuildTaskListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListSettings ResetOutput(this AzureAcrBuildTaskListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListSettings SetQuery(this AzureAcrBuildTaskListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListSettings ResetQuery(this AzureAcrBuildTaskListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListSettings SetVerbose(this AzureAcrBuildTaskListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListSettings ResetVerbose(this AzureAcrBuildTaskListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcrBuildTaskListBuildsSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcrBuildTaskListBuildsSettingsExtensions
+    {
+        #region Registry
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListBuildsSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListBuildsSettings SetRegistry(this AzureAcrBuildTaskListBuildsSettings toolSettings, string registry)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = registry;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListBuildsSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListBuildsSettings ResetRegistry(this AzureAcrBuildTaskListBuildsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = null;
+            return toolSettings;
+        }
+        #endregion
+        #region BuildStatus
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListBuildsSettings.BuildStatus"/>.</em></p><p>The current status of build.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListBuildsSettings SetBuildStatus(this AzureAcrBuildTaskListBuildsSettings toolSettings, AcrBuildTaskListBuildsBuildStatus buildStatus)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BuildStatus = buildStatus;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListBuildsSettings.BuildStatus"/>.</em></p><p>The current status of build.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListBuildsSettings ResetBuildStatus(this AzureAcrBuildTaskListBuildsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BuildStatus = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Image
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListBuildsSettings.Image"/>.</em></p><p>The name of the image. May include a tag in the format 'name:tag' or digest in the format 'name@digest'.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListBuildsSettings SetImage(this AzureAcrBuildTaskListBuildsSettings toolSettings, string image)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Image = image;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListBuildsSettings.Image"/>.</em></p><p>The name of the image. May include a tag in the format 'name:tag' or digest in the format 'name@digest'.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListBuildsSettings ResetImage(this AzureAcrBuildTaskListBuildsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Image = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListBuildsSettings.Name"/>.</em></p><p>The name of the build task.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListBuildsSettings SetName(this AzureAcrBuildTaskListBuildsSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListBuildsSettings.Name"/>.</em></p><p>The name of the build task.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListBuildsSettings ResetName(this AzureAcrBuildTaskListBuildsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListBuildsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListBuildsSettings SetResourceGroup(this AzureAcrBuildTaskListBuildsSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListBuildsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListBuildsSettings ResetResourceGroup(this AzureAcrBuildTaskListBuildsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Top
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListBuildsSettings.Top"/>.</em></p><p>Limit the number of latest builds in the results.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListBuildsSettings SetTop(this AzureAcrBuildTaskListBuildsSettings toolSettings, string top)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = top;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListBuildsSettings.Top"/>.</em></p><p>Limit the number of latest builds in the results.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListBuildsSettings ResetTop(this AzureAcrBuildTaskListBuildsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListBuildsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListBuildsSettings SetDebug(this AzureAcrBuildTaskListBuildsSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListBuildsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListBuildsSettings ResetDebug(this AzureAcrBuildTaskListBuildsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListBuildsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListBuildsSettings SetHelp(this AzureAcrBuildTaskListBuildsSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListBuildsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListBuildsSettings ResetHelp(this AzureAcrBuildTaskListBuildsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListBuildsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListBuildsSettings SetOutput(this AzureAcrBuildTaskListBuildsSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListBuildsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListBuildsSettings ResetOutput(this AzureAcrBuildTaskListBuildsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListBuildsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListBuildsSettings SetQuery(this AzureAcrBuildTaskListBuildsSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListBuildsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListBuildsSettings ResetQuery(this AzureAcrBuildTaskListBuildsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListBuildsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListBuildsSettings SetVerbose(this AzureAcrBuildTaskListBuildsSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListBuildsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListBuildsSettings ResetVerbose(this AzureAcrBuildTaskListBuildsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcrBuildTaskLogsSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcrBuildTaskLogsSettingsExtensions
+    {
+        #region Registry
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskLogsSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskLogsSettings SetRegistry(this AzureAcrBuildTaskLogsSettings toolSettings, string registry)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = registry;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskLogsSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskLogsSettings ResetRegistry(this AzureAcrBuildTaskLogsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = null;
+            return toolSettings;
+        }
+        #endregion
+        #region BuildId
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskLogsSettings.BuildId"/>.</em></p><p>The unique build identifier.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskLogsSettings SetBuildId(this AzureAcrBuildTaskLogsSettings toolSettings, string buildId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BuildId = buildId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskLogsSettings.BuildId"/>.</em></p><p>The unique build identifier.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskLogsSettings ResetBuildId(this AzureAcrBuildTaskLogsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BuildId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Image
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskLogsSettings.Image"/>.</em></p><p>The name of the image. May include a tag in the format 'name:tag' or digest in the format 'name@digest'.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskLogsSettings SetImage(this AzureAcrBuildTaskLogsSettings toolSettings, string image)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Image = image;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskLogsSettings.Image"/>.</em></p><p>The name of the image. May include a tag in the format 'name:tag' or digest in the format 'name@digest'.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskLogsSettings ResetImage(this AzureAcrBuildTaskLogsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Image = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskLogsSettings.Name"/>.</em></p><p>The name of the build task.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskLogsSettings SetName(this AzureAcrBuildTaskLogsSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskLogsSettings.Name"/>.</em></p><p>The name of the build task.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskLogsSettings ResetName(this AzureAcrBuildTaskLogsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskLogsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskLogsSettings SetResourceGroup(this AzureAcrBuildTaskLogsSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskLogsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskLogsSettings ResetResourceGroup(this AzureAcrBuildTaskLogsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskLogsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskLogsSettings SetDebug(this AzureAcrBuildTaskLogsSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskLogsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskLogsSettings ResetDebug(this AzureAcrBuildTaskLogsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskLogsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskLogsSettings SetHelp(this AzureAcrBuildTaskLogsSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskLogsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskLogsSettings ResetHelp(this AzureAcrBuildTaskLogsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskLogsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskLogsSettings SetOutput(this AzureAcrBuildTaskLogsSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskLogsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskLogsSettings ResetOutput(this AzureAcrBuildTaskLogsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskLogsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskLogsSettings SetQuery(this AzureAcrBuildTaskLogsSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskLogsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskLogsSettings ResetQuery(this AzureAcrBuildTaskLogsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskLogsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskLogsSettings SetVerbose(this AzureAcrBuildTaskLogsSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskLogsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskLogsSettings ResetVerbose(this AzureAcrBuildTaskLogsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcrBuildTaskRunSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcrBuildTaskRunSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskRunSettings.Name"/>.</em></p><p>The name of the build task.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskRunSettings SetName(this AzureAcrBuildTaskRunSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskRunSettings.Name"/>.</em></p><p>The name of the build task.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskRunSettings ResetName(this AzureAcrBuildTaskRunSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Registry
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskRunSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskRunSettings SetRegistry(this AzureAcrBuildTaskRunSettings toolSettings, string registry)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = registry;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskRunSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskRunSettings ResetRegistry(this AzureAcrBuildTaskRunSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NoLogs
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskRunSettings.NoLogs"/>.</em></p><p>Do not show logs after successfully queuing the build.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskRunSettings SetNoLogs(this AzureAcrBuildTaskRunSettings toolSettings, bool? noLogs)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoLogs = noLogs;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskRunSettings.NoLogs"/>.</em></p><p>Do not show logs after successfully queuing the build.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskRunSettings ResetNoLogs(this AzureAcrBuildTaskRunSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoLogs = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureAcrBuildTaskRunSettings.NoLogs"/>.</em></p><p>Do not show logs after successfully queuing the build.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskRunSettings EnableNoLogs(this AzureAcrBuildTaskRunSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoLogs = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureAcrBuildTaskRunSettings.NoLogs"/>.</em></p><p>Do not show logs after successfully queuing the build.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskRunSettings DisableNoLogs(this AzureAcrBuildTaskRunSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoLogs = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureAcrBuildTaskRunSettings.NoLogs"/>.</em></p><p>Do not show logs after successfully queuing the build.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskRunSettings ToggleNoLogs(this AzureAcrBuildTaskRunSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoLogs = !toolSettings.NoLogs;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskRunSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskRunSettings SetResourceGroup(this AzureAcrBuildTaskRunSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskRunSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskRunSettings ResetResourceGroup(this AzureAcrBuildTaskRunSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskRunSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskRunSettings SetDebug(this AzureAcrBuildTaskRunSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskRunSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskRunSettings ResetDebug(this AzureAcrBuildTaskRunSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskRunSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskRunSettings SetHelp(this AzureAcrBuildTaskRunSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskRunSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskRunSettings ResetHelp(this AzureAcrBuildTaskRunSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskRunSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskRunSettings SetOutput(this AzureAcrBuildTaskRunSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskRunSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskRunSettings ResetOutput(this AzureAcrBuildTaskRunSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskRunSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskRunSettings SetQuery(this AzureAcrBuildTaskRunSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskRunSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskRunSettings ResetQuery(this AzureAcrBuildTaskRunSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskRunSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskRunSettings SetVerbose(this AzureAcrBuildTaskRunSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskRunSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskRunSettings ResetVerbose(this AzureAcrBuildTaskRunSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcrBuildTaskShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcrBuildTaskShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowSettings.Name"/>.</em></p><p>The name of the build task.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowSettings SetName(this AzureAcrBuildTaskShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowSettings.Name"/>.</em></p><p>The name of the build task.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowSettings ResetName(this AzureAcrBuildTaskShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Registry
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowSettings SetRegistry(this AzureAcrBuildTaskShowSettings toolSettings, string registry)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = registry;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowSettings ResetRegistry(this AzureAcrBuildTaskShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowSettings SetResourceGroup(this AzureAcrBuildTaskShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowSettings ResetResourceGroup(this AzureAcrBuildTaskShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region WithSecureProperties
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowSettings.WithSecureProperties"/>.</em></p><p>Indicates whether the secure properties of a build task should be returned.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowSettings SetWithSecureProperties(this AzureAcrBuildTaskShowSettings toolSettings, string withSecureProperties)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WithSecureProperties = withSecureProperties;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowSettings.WithSecureProperties"/>.</em></p><p>Indicates whether the secure properties of a build task should be returned.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowSettings ResetWithSecureProperties(this AzureAcrBuildTaskShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WithSecureProperties = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowSettings SetDebug(this AzureAcrBuildTaskShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowSettings ResetDebug(this AzureAcrBuildTaskShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowSettings SetHelp(this AzureAcrBuildTaskShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowSettings ResetHelp(this AzureAcrBuildTaskShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowSettings SetOutput(this AzureAcrBuildTaskShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowSettings ResetOutput(this AzureAcrBuildTaskShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowSettings SetQuery(this AzureAcrBuildTaskShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowSettings ResetQuery(this AzureAcrBuildTaskShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowSettings SetVerbose(this AzureAcrBuildTaskShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowSettings ResetVerbose(this AzureAcrBuildTaskShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcrBuildTaskShowBuildSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcrBuildTaskShowBuildSettingsExtensions
+    {
+        #region BuildId
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowBuildSettings.BuildId"/>.</em></p><p>The unique build identifier.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowBuildSettings SetBuildId(this AzureAcrBuildTaskShowBuildSettings toolSettings, string buildId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BuildId = buildId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowBuildSettings.BuildId"/>.</em></p><p>The unique build identifier.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowBuildSettings ResetBuildId(this AzureAcrBuildTaskShowBuildSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BuildId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Registry
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowBuildSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowBuildSettings SetRegistry(this AzureAcrBuildTaskShowBuildSettings toolSettings, string registry)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = registry;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowBuildSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowBuildSettings ResetRegistry(this AzureAcrBuildTaskShowBuildSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowBuildSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowBuildSettings SetResourceGroup(this AzureAcrBuildTaskShowBuildSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowBuildSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowBuildSettings ResetResourceGroup(this AzureAcrBuildTaskShowBuildSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowBuildSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowBuildSettings SetDebug(this AzureAcrBuildTaskShowBuildSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowBuildSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowBuildSettings ResetDebug(this AzureAcrBuildTaskShowBuildSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowBuildSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowBuildSettings SetHelp(this AzureAcrBuildTaskShowBuildSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowBuildSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowBuildSettings ResetHelp(this AzureAcrBuildTaskShowBuildSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowBuildSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowBuildSettings SetOutput(this AzureAcrBuildTaskShowBuildSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowBuildSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowBuildSettings ResetOutput(this AzureAcrBuildTaskShowBuildSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowBuildSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowBuildSettings SetQuery(this AzureAcrBuildTaskShowBuildSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowBuildSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowBuildSettings ResetQuery(this AzureAcrBuildTaskShowBuildSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowBuildSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowBuildSettings SetVerbose(this AzureAcrBuildTaskShowBuildSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowBuildSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowBuildSettings ResetVerbose(this AzureAcrBuildTaskShowBuildSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcrBuildTaskUpdateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcrBuildTaskUpdateSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Name"/>.</em></p><p>The name of the build task.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings SetName(this AzureAcrBuildTaskUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.Name"/>.</em></p><p>The name of the build task.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings ResetName(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Registry
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings SetRegistry(this AzureAcrBuildTaskUpdateSettings toolSettings, string registry)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = registry;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings ResetRegistry(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Alias
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Alias"/>.</em></p><p>The alternative name for build task. Default to the build task name.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings SetAlias(this AzureAcrBuildTaskUpdateSettings toolSettings, string alias)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = alias;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.Alias"/>.</em></p><p>The alternative name for build task. Default to the build task name.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings ResetAlias(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = null;
+            return toolSettings;
+        }
+        #endregion
+        #region BaseImageTrigger
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.BaseImageTrigger"/>.</em></p><p>The type of the auto trigger for base image dependency updates.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings SetBaseImageTrigger(this AzureAcrBuildTaskUpdateSettings toolSettings, AcrBuildTaskBaseImageTrigger baseImageTrigger)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BaseImageTrigger = baseImageTrigger;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.BaseImageTrigger"/>.</em></p><p>The type of the auto trigger for base image dependency updates.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings ResetBaseImageTrigger(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BaseImageTrigger = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Branch
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Branch"/>.</em></p><p>The source control branch name.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings SetBranch(this AzureAcrBuildTaskUpdateSettings toolSettings, string branch)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Branch = branch;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.Branch"/>.</em></p><p>The source control branch name.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings ResetBranch(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Branch = null;
+            return toolSettings;
+        }
+        #endregion
+        #region BuildArg
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.BuildArg"/>.</em></p><p>Build argument in 'name[=value]' format.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings SetBuildArg(this AzureAcrBuildTaskUpdateSettings toolSettings, string buildArg)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BuildArg = buildArg;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.BuildArg"/>.</em></p><p>Build argument in 'name[=value]' format.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings ResetBuildArg(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BuildArg = null;
+            return toolSettings;
+        }
+        #endregion
+        #region CommitTriggerEnabled
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.CommitTriggerEnabled"/>.</em></p><p>Indicates whether the source control commit trigger is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings SetCommitTriggerEnabled(this AzureAcrBuildTaskUpdateSettings toolSettings, bool? commitTriggerEnabled)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CommitTriggerEnabled = commitTriggerEnabled;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.CommitTriggerEnabled"/>.</em></p><p>Indicates whether the source control commit trigger is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings ResetCommitTriggerEnabled(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CommitTriggerEnabled = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureAcrBuildTaskUpdateSettings.CommitTriggerEnabled"/>.</em></p><p>Indicates whether the source control commit trigger is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings EnableCommitTriggerEnabled(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CommitTriggerEnabled = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureAcrBuildTaskUpdateSettings.CommitTriggerEnabled"/>.</em></p><p>Indicates whether the source control commit trigger is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings DisableCommitTriggerEnabled(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CommitTriggerEnabled = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureAcrBuildTaskUpdateSettings.CommitTriggerEnabled"/>.</em></p><p>Indicates whether the source control commit trigger is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings ToggleCommitTriggerEnabled(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CommitTriggerEnabled = !toolSettings.CommitTriggerEnabled;
+            return toolSettings;
+        }
+        #endregion
+        #region Context
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Context"/>.</em></p><p>The full URL to the source code respository.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings SetContext(this AzureAcrBuildTaskUpdateSettings toolSettings, string context)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Context = context;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.Context"/>.</em></p><p>The full URL to the source code respository.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings ResetContext(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Context = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Cpu
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Cpu"/>.</em></p><p>The CPU configuration in terms of number of cores required for the build.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings SetCpu(this AzureAcrBuildTaskUpdateSettings toolSettings, string cpu)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Cpu = cpu;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.Cpu"/>.</em></p><p>The CPU configuration in terms of number of cores required for the build.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings ResetCpu(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Cpu = null;
+            return toolSettings;
+        }
+        #endregion
+        #region File
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.File"/>.</em></p><p>The relative path of the the docker file to the source code root folder.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings SetFile(this AzureAcrBuildTaskUpdateSettings toolSettings, string file)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.File = file;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.File"/>.</em></p><p>The relative path of the the docker file to the source code root folder.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings ResetFile(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.File = null;
+            return toolSettings;
+        }
+        #endregion
+        #region GitAccessToken
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.GitAccessToken"/>.</em></p><p>The access token used to access the source control provider.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings SetGitAccessToken(this AzureAcrBuildTaskUpdateSettings toolSettings, string gitAccessToken)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GitAccessToken = gitAccessToken;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.GitAccessToken"/>.</em></p><p>The access token used to access the source control provider.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings ResetGitAccessToken(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GitAccessToken = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Image
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Image"/>.</em></p><p>The name of the image. May include a tag in the format 'name:tag'.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings SetImage(this AzureAcrBuildTaskUpdateSettings toolSettings, string image)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Image = image;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.Image"/>.</em></p><p>The name of the image. May include a tag in the format 'name:tag'.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings ResetImage(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Image = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NoCache
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.NoCache"/>.</em></p><p>Indicates whether the image cache is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings SetNoCache(this AzureAcrBuildTaskUpdateSettings toolSettings, bool? noCache)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoCache = noCache;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.NoCache"/>.</em></p><p>Indicates whether the image cache is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings ResetNoCache(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoCache = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureAcrBuildTaskUpdateSettings.NoCache"/>.</em></p><p>Indicates whether the image cache is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings EnableNoCache(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoCache = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureAcrBuildTaskUpdateSettings.NoCache"/>.</em></p><p>Indicates whether the image cache is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings DisableNoCache(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoCache = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureAcrBuildTaskUpdateSettings.NoCache"/>.</em></p><p>Indicates whether the image cache is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings ToggleNoCache(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoCache = !toolSettings.NoCache;
+            return toolSettings;
+        }
+        #endregion
+        #region NoPush
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.NoPush"/>.</em></p><p>Indicates whether the image built should be pushed to the registry.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings SetNoPush(this AzureAcrBuildTaskUpdateSettings toolSettings, bool? noPush)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoPush = noPush;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.NoPush"/>.</em></p><p>Indicates whether the image built should be pushed to the registry.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings ResetNoPush(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoPush = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureAcrBuildTaskUpdateSettings.NoPush"/>.</em></p><p>Indicates whether the image built should be pushed to the registry.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings EnableNoPush(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoPush = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureAcrBuildTaskUpdateSettings.NoPush"/>.</em></p><p>Indicates whether the image built should be pushed to the registry.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings DisableNoPush(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoPush = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureAcrBuildTaskUpdateSettings.NoPush"/>.</em></p><p>Indicates whether the image built should be pushed to the registry.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings ToggleNoPush(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoPush = !toolSettings.NoPush;
+            return toolSettings;
+        }
+        #endregion
+        #region Os
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Os"/>.</em></p><p>The operating system type required for the build.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings SetOs(this AzureAcrBuildTaskUpdateSettings toolSettings, AcrOs os)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Os = os;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.Os"/>.</em></p><p>The operating system type required for the build.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings ResetOs(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Os = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings SetResourceGroup(this AzureAcrBuildTaskUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings ResetResourceGroup(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SecretBuildArg
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.SecretBuildArg"/>.</em></p><p>Secret build argument in 'name[=value]' format.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings SetSecretBuildArg(this AzureAcrBuildTaskUpdateSettings toolSettings, string secretBuildArg)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SecretBuildArg = secretBuildArg;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.SecretBuildArg"/>.</em></p><p>Secret build argument in 'name[=value]' format.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings ResetSecretBuildArg(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SecretBuildArg = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Status
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Status"/>.</em></p><p>The current status of build task.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings SetStatus(this AzureAcrBuildTaskUpdateSettings toolSettings, AcrBuildTaskStatus status)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Status = status;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.Status"/>.</em></p><p>The current status of build task.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings ResetStatus(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Status = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Timeout
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Timeout"/>.</em></p><p>The build timeout in seconds.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings SetTimeout(this AzureAcrBuildTaskUpdateSettings toolSettings, string timeout)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Timeout = timeout;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.Timeout"/>.</em></p><p>The build timeout in seconds.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings ResetTimeout(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Timeout = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings SetDebug(this AzureAcrBuildTaskUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings ResetDebug(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings SetHelp(this AzureAcrBuildTaskUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings ResetHelp(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings SetOutput(this AzureAcrBuildTaskUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings ResetOutput(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings SetQuery(this AzureAcrBuildTaskUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings ResetQuery(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings SetVerbose(this AzureAcrBuildTaskUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings ResetVerbose(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcrBuildTaskUpdateBuildSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcrBuildTaskUpdateBuildSettingsExtensions
+    {
+        #region BuildId
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateBuildSettings.BuildId"/>.</em></p><p>The unique build identifier.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateBuildSettings SetBuildId(this AzureAcrBuildTaskUpdateBuildSettings toolSettings, string buildId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BuildId = buildId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateBuildSettings.BuildId"/>.</em></p><p>The unique build identifier.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateBuildSettings ResetBuildId(this AzureAcrBuildTaskUpdateBuildSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BuildId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Registry
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateBuildSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateBuildSettings SetRegistry(this AzureAcrBuildTaskUpdateBuildSettings toolSettings, string registry)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = registry;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateBuildSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateBuildSettings ResetRegistry(this AzureAcrBuildTaskUpdateBuildSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NoArchive
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateBuildSettings.NoArchive"/>.</em></p><p>Indicates whether the build should be archived.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateBuildSettings SetNoArchive(this AzureAcrBuildTaskUpdateBuildSettings toolSettings, bool? noArchive)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoArchive = noArchive;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateBuildSettings.NoArchive"/>.</em></p><p>Indicates whether the build should be archived.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateBuildSettings ResetNoArchive(this AzureAcrBuildTaskUpdateBuildSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoArchive = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureAcrBuildTaskUpdateBuildSettings.NoArchive"/>.</em></p><p>Indicates whether the build should be archived.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateBuildSettings EnableNoArchive(this AzureAcrBuildTaskUpdateBuildSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoArchive = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureAcrBuildTaskUpdateBuildSettings.NoArchive"/>.</em></p><p>Indicates whether the build should be archived.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateBuildSettings DisableNoArchive(this AzureAcrBuildTaskUpdateBuildSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoArchive = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureAcrBuildTaskUpdateBuildSettings.NoArchive"/>.</em></p><p>Indicates whether the build should be archived.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateBuildSettings ToggleNoArchive(this AzureAcrBuildTaskUpdateBuildSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoArchive = !toolSettings.NoArchive;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateBuildSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateBuildSettings SetResourceGroup(this AzureAcrBuildTaskUpdateBuildSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateBuildSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateBuildSettings ResetResourceGroup(this AzureAcrBuildTaskUpdateBuildSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateBuildSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateBuildSettings SetDebug(this AzureAcrBuildTaskUpdateBuildSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateBuildSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateBuildSettings ResetDebug(this AzureAcrBuildTaskUpdateBuildSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateBuildSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateBuildSettings SetHelp(this AzureAcrBuildTaskUpdateBuildSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateBuildSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateBuildSettings ResetHelp(this AzureAcrBuildTaskUpdateBuildSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateBuildSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateBuildSettings SetOutput(this AzureAcrBuildTaskUpdateBuildSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateBuildSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateBuildSettings ResetOutput(this AzureAcrBuildTaskUpdateBuildSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateBuildSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateBuildSettings SetQuery(this AzureAcrBuildTaskUpdateBuildSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateBuildSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateBuildSettings ResetQuery(this AzureAcrBuildTaskUpdateBuildSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateBuildSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateBuildSettings SetVerbose(this AzureAcrBuildTaskUpdateBuildSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateBuildSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateBuildSettings ResetVerbose(this AzureAcrBuildTaskUpdateBuildSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcrConfigSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcrConfigSettingsExtensions
+    {
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrConfigSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrConfigSettings SetDebug(this AzureAcrConfigSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrConfigSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrConfigSettings ResetDebug(this AzureAcrConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcrConfigSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrConfigSettings SetHelp(this AzureAcrConfigSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrConfigSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrConfigSettings ResetHelp(this AzureAcrConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcrConfigSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrConfigSettings SetOutput(this AzureAcrConfigSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrConfigSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrConfigSettings ResetOutput(this AzureAcrConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcrConfigSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrConfigSettings SetQuery(this AzureAcrConfigSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrConfigSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrConfigSettings ResetQuery(this AzureAcrConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcrConfigSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrConfigSettings SetVerbose(this AzureAcrConfigSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrConfigSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrConfigSettings ResetVerbose(this AzureAcrConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcrCredentialRenewSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcrCredentialRenewSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialRenewSettings SetName(this AzureAcrCredentialRenewSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialRenewSettings ResetName(this AzureAcrCredentialRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region PasswordName
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.PasswordName"/>.</em></p><p>The name of password to regenerate.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialRenewSettings SetPasswordName(this AzureAcrCredentialRenewSettings toolSettings, AcrCredentialRenewPasswordName passwordName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PasswordName = passwordName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.PasswordName"/>.</em></p><p>The name of password to regenerate.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialRenewSettings ResetPasswordName(this AzureAcrCredentialRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PasswordName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialRenewSettings SetResourceGroup(this AzureAcrCredentialRenewSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialRenewSettings ResetResourceGroup(this AzureAcrCredentialRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialRenewSettings SetDebug(this AzureAcrCredentialRenewSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialRenewSettings ResetDebug(this AzureAcrCredentialRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialRenewSettings SetHelp(this AzureAcrCredentialRenewSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialRenewSettings ResetHelp(this AzureAcrCredentialRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialRenewSettings SetOutput(this AzureAcrCredentialRenewSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialRenewSettings ResetOutput(this AzureAcrCredentialRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialRenewSettings SetQuery(this AzureAcrCredentialRenewSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialRenewSettings ResetQuery(this AzureAcrCredentialRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialRenewSettings SetVerbose(this AzureAcrCredentialRenewSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialRenewSettings ResetVerbose(this AzureAcrCredentialRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcrCredentialShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcrCredentialShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialShowSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialShowSettings SetName(this AzureAcrCredentialShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialShowSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialShowSettings ResetName(this AzureAcrCredentialShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialShowSettings SetResourceGroup(this AzureAcrCredentialShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialShowSettings ResetResourceGroup(this AzureAcrCredentialShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialShowSettings SetDebug(this AzureAcrCredentialShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialShowSettings ResetDebug(this AzureAcrCredentialShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialShowSettings SetHelp(this AzureAcrCredentialShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialShowSettings ResetHelp(this AzureAcrCredentialShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialShowSettings SetOutput(this AzureAcrCredentialShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialShowSettings ResetOutput(this AzureAcrCredentialShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialShowSettings SetQuery(this AzureAcrCredentialShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialShowSettings ResetQuery(this AzureAcrCredentialShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialShowSettings SetVerbose(this AzureAcrCredentialShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialShowSettings ResetVerbose(this AzureAcrCredentialShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -6910,390 +9756,6 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureAcrCredentialRenewSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrCredentialRenewSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings SetName(this AzureAcrCredentialRenewSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings ResetName(this AzureAcrCredentialRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region PasswordName
-        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.PasswordName"/>.</em></p><p>The name of password to regenerate.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings SetPasswordName(this AzureAcrCredentialRenewSettings toolSettings, AcrCredentialRenewPasswordName passwordName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PasswordName = passwordName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.PasswordName"/>.</em></p><p>The name of password to regenerate.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings ResetPasswordName(this AzureAcrCredentialRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PasswordName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings SetResourceGroup(this AzureAcrCredentialRenewSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings ResetResourceGroup(this AzureAcrCredentialRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings SetDebug(this AzureAcrCredentialRenewSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings ResetDebug(this AzureAcrCredentialRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings SetHelp(this AzureAcrCredentialRenewSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings ResetHelp(this AzureAcrCredentialRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings SetOutput(this AzureAcrCredentialRenewSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings ResetOutput(this AzureAcrCredentialRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings SetQuery(this AzureAcrCredentialRenewSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings ResetQuery(this AzureAcrCredentialRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings SetVerbose(this AzureAcrCredentialRenewSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings ResetVerbose(this AzureAcrCredentialRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAcrCredentialShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrCredentialShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAcrCredentialShowSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialShowSettings SetName(this AzureAcrCredentialShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrCredentialShowSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialShowSettings ResetName(this AzureAcrCredentialShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAcrCredentialShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialShowSettings SetResourceGroup(this AzureAcrCredentialShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrCredentialShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialShowSettings ResetResourceGroup(this AzureAcrCredentialShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrCredentialShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialShowSettings SetDebug(this AzureAcrCredentialShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrCredentialShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialShowSettings ResetDebug(this AzureAcrCredentialShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrCredentialShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialShowSettings SetHelp(this AzureAcrCredentialShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrCredentialShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialShowSettings ResetHelp(this AzureAcrCredentialShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrCredentialShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialShowSettings SetOutput(this AzureAcrCredentialShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrCredentialShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialShowSettings ResetOutput(this AzureAcrCredentialShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrCredentialShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialShowSettings SetQuery(this AzureAcrCredentialShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrCredentialShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialShowSettings ResetQuery(this AzureAcrCredentialShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrCredentialShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialShowSettings SetVerbose(this AzureAcrCredentialShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrCredentialShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialShowSettings ResetVerbose(this AzureAcrCredentialShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAcrConfigSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrConfigSettingsExtensions
-    {
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrConfigSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrConfigSettings SetDebug(this AzureAcrConfigSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrConfigSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrConfigSettings ResetDebug(this AzureAcrConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrConfigSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrConfigSettings SetHelp(this AzureAcrConfigSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrConfigSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrConfigSettings ResetHelp(this AzureAcrConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrConfigSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrConfigSettings SetOutput(this AzureAcrConfigSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrConfigSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrConfigSettings ResetOutput(this AzureAcrConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrConfigSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrConfigSettings SetQuery(this AzureAcrConfigSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrConfigSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrConfigSettings ResetQuery(this AzureAcrConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrConfigSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrConfigSettings SetVerbose(this AzureAcrConfigSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrConfigSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrConfigSettings ResetVerbose(this AzureAcrConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region AzureAcrWebhookCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
     [PublicAPI]
@@ -7489,7 +9951,7 @@ namespace Nuke.Azure
         #region Status
         /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Status"/>.</em></p><p>Indicates whether the webhook is enabled.</p></summary>
         [Pure]
-        public static AzureAcrWebhookCreateSettings SetStatus(this AzureAcrWebhookCreateSettings toolSettings, AcrWebhookStatus status)
+        public static AzureAcrWebhookCreateSettings SetStatus(this AzureAcrWebhookCreateSettings toolSettings, AcrBuildTaskStatus status)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Status = status;
@@ -8667,7 +11129,7 @@ namespace Nuke.Azure
         #region Status
         /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Status"/>.</em></p><p>Indicates whether the webhook is enabled.</p></summary>
         [Pure]
-        public static AzureAcrWebhookUpdateSettings SetStatus(this AzureAcrWebhookUpdateSettings toolSettings, AcrWebhookStatus status)
+        public static AzureAcrWebhookUpdateSettings SetStatus(this AzureAcrWebhookUpdateSettings toolSettings, AcrBuildTaskStatus status)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Status = status;
@@ -8882,2396 +11344,6 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureAcrBuildTaskCreateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrBuildTaskCreateSettingsExtensions
-    {
-        #region Context
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Context"/>.</em></p><p>The full URL to the source code respository.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings SetContext(this AzureAcrBuildTaskCreateSettings toolSettings, string context)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Context = context;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.Context"/>.</em></p><p>The full URL to the source code respository.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings ResetContext(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Context = null;
-            return toolSettings;
-        }
-        #endregion
-        #region GitAccessToken
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.GitAccessToken"/>.</em></p><p>The access token used to access the source control provider.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings SetGitAccessToken(this AzureAcrBuildTaskCreateSettings toolSettings, string gitAccessToken)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GitAccessToken = gitAccessToken;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.GitAccessToken"/>.</em></p><p>The access token used to access the source control provider.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings ResetGitAccessToken(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GitAccessToken = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Image
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Image"/>.</em></p><p>The name of the image. May include a tag in the format 'name:tag'.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings SetImage(this AzureAcrBuildTaskCreateSettings toolSettings, string image)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Image = image;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.Image"/>.</em></p><p>The name of the image. May include a tag in the format 'name:tag'.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings ResetImage(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Image = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Name"/>.</em></p><p>The name of the build task.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings SetName(this AzureAcrBuildTaskCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.Name"/>.</em></p><p>The name of the build task.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings ResetName(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Registry
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings SetRegistry(this AzureAcrBuildTaskCreateSettings toolSettings, string registry)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = registry;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings ResetRegistry(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Alias
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Alias"/>.</em></p><p>The alternative name for build task. Default to the build task name.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings SetAlias(this AzureAcrBuildTaskCreateSettings toolSettings, string alias)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = alias;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.Alias"/>.</em></p><p>The alternative name for build task. Default to the build task name.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings ResetAlias(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = null;
-            return toolSettings;
-        }
-        #endregion
-        #region BaseImageTrigger
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.BaseImageTrigger"/>.</em></p><p>The type of the auto trigger for base image dependency updates.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings SetBaseImageTrigger(this AzureAcrBuildTaskCreateSettings toolSettings, AcrBuildTaskBaseImageTrigger baseImageTrigger)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BaseImageTrigger = baseImageTrigger;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.BaseImageTrigger"/>.</em></p><p>The type of the auto trigger for base image dependency updates.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings ResetBaseImageTrigger(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BaseImageTrigger = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Branch
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Branch"/>.</em></p><p>The source control branch name.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings SetBranch(this AzureAcrBuildTaskCreateSettings toolSettings, string branch)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Branch = branch;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.Branch"/>.</em></p><p>The source control branch name.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings ResetBranch(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Branch = null;
-            return toolSettings;
-        }
-        #endregion
-        #region BuildArg
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.BuildArg"/>.</em></p><p>Build argument in 'name[=value]' format.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings SetBuildArg(this AzureAcrBuildTaskCreateSettings toolSettings, string buildArg)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BuildArg = buildArg;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.BuildArg"/>.</em></p><p>Build argument in 'name[=value]' format.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings ResetBuildArg(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BuildArg = null;
-            return toolSettings;
-        }
-        #endregion
-        #region CommitTriggerEnabled
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.CommitTriggerEnabled"/>.</em></p><p>Indicates whether the source control commit trigger is enabled.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings SetCommitTriggerEnabled(this AzureAcrBuildTaskCreateSettings toolSettings, bool? commitTriggerEnabled)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CommitTriggerEnabled = commitTriggerEnabled;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.CommitTriggerEnabled"/>.</em></p><p>Indicates whether the source control commit trigger is enabled.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings ResetCommitTriggerEnabled(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CommitTriggerEnabled = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureAcrBuildTaskCreateSettings.CommitTriggerEnabled"/>.</em></p><p>Indicates whether the source control commit trigger is enabled.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings EnableCommitTriggerEnabled(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CommitTriggerEnabled = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureAcrBuildTaskCreateSettings.CommitTriggerEnabled"/>.</em></p><p>Indicates whether the source control commit trigger is enabled.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings DisableCommitTriggerEnabled(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CommitTriggerEnabled = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureAcrBuildTaskCreateSettings.CommitTriggerEnabled"/>.</em></p><p>Indicates whether the source control commit trigger is enabled.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings ToggleCommitTriggerEnabled(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CommitTriggerEnabled = !toolSettings.CommitTriggerEnabled;
-            return toolSettings;
-        }
-        #endregion
-        #region Cpu
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Cpu"/>.</em></p><p>The CPU configuration in terms of number of cores required for the build.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings SetCpu(this AzureAcrBuildTaskCreateSettings toolSettings, string cpu)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Cpu = cpu;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.Cpu"/>.</em></p><p>The CPU configuration in terms of number of cores required for the build.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings ResetCpu(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Cpu = null;
-            return toolSettings;
-        }
-        #endregion
-        #region File
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.File"/>.</em></p><p>The relative path of the the docker file to the source code root folder.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings SetFile(this AzureAcrBuildTaskCreateSettings toolSettings, string file)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.File = file;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.File"/>.</em></p><p>The relative path of the the docker file to the source code root folder.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings ResetFile(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.File = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NoCache
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.NoCache"/>.</em></p><p>Indicates whether the image cache is enabled.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings SetNoCache(this AzureAcrBuildTaskCreateSettings toolSettings, bool? noCache)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoCache = noCache;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.NoCache"/>.</em></p><p>Indicates whether the image cache is enabled.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings ResetNoCache(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoCache = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureAcrBuildTaskCreateSettings.NoCache"/>.</em></p><p>Indicates whether the image cache is enabled.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings EnableNoCache(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoCache = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureAcrBuildTaskCreateSettings.NoCache"/>.</em></p><p>Indicates whether the image cache is enabled.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings DisableNoCache(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoCache = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureAcrBuildTaskCreateSettings.NoCache"/>.</em></p><p>Indicates whether the image cache is enabled.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings ToggleNoCache(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoCache = !toolSettings.NoCache;
-            return toolSettings;
-        }
-        #endregion
-        #region NoPush
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.NoPush"/>.</em></p><p>Indicates whether the image built should be pushed to the registry.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings SetNoPush(this AzureAcrBuildTaskCreateSettings toolSettings, bool? noPush)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoPush = noPush;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.NoPush"/>.</em></p><p>Indicates whether the image built should be pushed to the registry.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings ResetNoPush(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoPush = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureAcrBuildTaskCreateSettings.NoPush"/>.</em></p><p>Indicates whether the image built should be pushed to the registry.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings EnableNoPush(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoPush = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureAcrBuildTaskCreateSettings.NoPush"/>.</em></p><p>Indicates whether the image built should be pushed to the registry.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings DisableNoPush(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoPush = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureAcrBuildTaskCreateSettings.NoPush"/>.</em></p><p>Indicates whether the image built should be pushed to the registry.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings ToggleNoPush(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoPush = !toolSettings.NoPush;
-            return toolSettings;
-        }
-        #endregion
-        #region Os
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Os"/>.</em></p><p>The operating system type required for the build.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings SetOs(this AzureAcrBuildTaskCreateSettings toolSettings, AcrOs os)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Os = os;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.Os"/>.</em></p><p>The operating system type required for the build.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings ResetOs(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Os = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings SetResourceGroup(this AzureAcrBuildTaskCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings ResetResourceGroup(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SecretBuildArg
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.SecretBuildArg"/>.</em></p><p>Secret build argument in 'name[=value]' format.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings SetSecretBuildArg(this AzureAcrBuildTaskCreateSettings toolSettings, string secretBuildArg)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SecretBuildArg = secretBuildArg;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.SecretBuildArg"/>.</em></p><p>Secret build argument in 'name[=value]' format.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings ResetSecretBuildArg(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SecretBuildArg = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Status
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Status"/>.</em></p><p>The current status of build task.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings SetStatus(this AzureAcrBuildTaskCreateSettings toolSettings, AcrWebhookStatus status)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Status = status;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.Status"/>.</em></p><p>The current status of build task.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings ResetStatus(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Status = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Timeout
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Timeout"/>.</em></p><p>The build timeout in seconds.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings SetTimeout(this AzureAcrBuildTaskCreateSettings toolSettings, string timeout)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Timeout = timeout;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.Timeout"/>.</em></p><p>The build timeout in seconds.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings ResetTimeout(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Timeout = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings SetDebug(this AzureAcrBuildTaskCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings ResetDebug(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings SetHelp(this AzureAcrBuildTaskCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings ResetHelp(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings SetOutput(this AzureAcrBuildTaskCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings ResetOutput(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings SetQuery(this AzureAcrBuildTaskCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings ResetQuery(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings SetVerbose(this AzureAcrBuildTaskCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskCreateSettings ResetVerbose(this AzureAcrBuildTaskCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAcrBuildTaskDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrBuildTaskDeleteSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskDeleteSettings.Name"/>.</em></p><p>The name of the build task.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskDeleteSettings SetName(this AzureAcrBuildTaskDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskDeleteSettings.Name"/>.</em></p><p>The name of the build task.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskDeleteSettings ResetName(this AzureAcrBuildTaskDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Registry
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskDeleteSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskDeleteSettings SetRegistry(this AzureAcrBuildTaskDeleteSettings toolSettings, string registry)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = registry;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskDeleteSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskDeleteSettings ResetRegistry(this AzureAcrBuildTaskDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskDeleteSettings SetResourceGroup(this AzureAcrBuildTaskDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskDeleteSettings ResetResourceGroup(this AzureAcrBuildTaskDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskDeleteSettings SetDebug(this AzureAcrBuildTaskDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskDeleteSettings ResetDebug(this AzureAcrBuildTaskDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskDeleteSettings SetHelp(this AzureAcrBuildTaskDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskDeleteSettings ResetHelp(this AzureAcrBuildTaskDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskDeleteSettings SetOutput(this AzureAcrBuildTaskDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskDeleteSettings ResetOutput(this AzureAcrBuildTaskDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskDeleteSettings SetQuery(this AzureAcrBuildTaskDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskDeleteSettings ResetQuery(this AzureAcrBuildTaskDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskDeleteSettings SetVerbose(this AzureAcrBuildTaskDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskDeleteSettings ResetVerbose(this AzureAcrBuildTaskDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAcrBuildTaskListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrBuildTaskListSettingsExtensions
-    {
-        #region Registry
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListSettings SetRegistry(this AzureAcrBuildTaskListSettings toolSettings, string registry)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = registry;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListSettings ResetRegistry(this AzureAcrBuildTaskListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListSettings SetResourceGroup(this AzureAcrBuildTaskListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListSettings ResetResourceGroup(this AzureAcrBuildTaskListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListSettings SetDebug(this AzureAcrBuildTaskListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListSettings ResetDebug(this AzureAcrBuildTaskListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListSettings SetHelp(this AzureAcrBuildTaskListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListSettings ResetHelp(this AzureAcrBuildTaskListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListSettings SetOutput(this AzureAcrBuildTaskListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListSettings ResetOutput(this AzureAcrBuildTaskListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListSettings SetQuery(this AzureAcrBuildTaskListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListSettings ResetQuery(this AzureAcrBuildTaskListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListSettings SetVerbose(this AzureAcrBuildTaskListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListSettings ResetVerbose(this AzureAcrBuildTaskListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAcrBuildTaskListBuildsSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrBuildTaskListBuildsSettingsExtensions
-    {
-        #region Registry
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListBuildsSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListBuildsSettings SetRegistry(this AzureAcrBuildTaskListBuildsSettings toolSettings, string registry)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = registry;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListBuildsSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListBuildsSettings ResetRegistry(this AzureAcrBuildTaskListBuildsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = null;
-            return toolSettings;
-        }
-        #endregion
-        #region BuildStatus
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListBuildsSettings.BuildStatus"/>.</em></p><p>The current status of build.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListBuildsSettings SetBuildStatus(this AzureAcrBuildTaskListBuildsSettings toolSettings, AcrBuildTaskListBuildsBuildStatus buildStatus)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BuildStatus = buildStatus;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListBuildsSettings.BuildStatus"/>.</em></p><p>The current status of build.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListBuildsSettings ResetBuildStatus(this AzureAcrBuildTaskListBuildsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BuildStatus = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Image
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListBuildsSettings.Image"/>.</em></p><p>The name of the image. May include a tag in the format 'name:tag' or digest in the format 'name@digest'.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListBuildsSettings SetImage(this AzureAcrBuildTaskListBuildsSettings toolSettings, string image)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Image = image;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListBuildsSettings.Image"/>.</em></p><p>The name of the image. May include a tag in the format 'name:tag' or digest in the format 'name@digest'.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListBuildsSettings ResetImage(this AzureAcrBuildTaskListBuildsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Image = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListBuildsSettings.Name"/>.</em></p><p>The name of the build task.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListBuildsSettings SetName(this AzureAcrBuildTaskListBuildsSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListBuildsSettings.Name"/>.</em></p><p>The name of the build task.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListBuildsSettings ResetName(this AzureAcrBuildTaskListBuildsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListBuildsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListBuildsSettings SetResourceGroup(this AzureAcrBuildTaskListBuildsSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListBuildsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListBuildsSettings ResetResourceGroup(this AzureAcrBuildTaskListBuildsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Top
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListBuildsSettings.Top"/>.</em></p><p>Limit the number of latest builds in the results.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListBuildsSettings SetTop(this AzureAcrBuildTaskListBuildsSettings toolSettings, string top)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Top = top;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListBuildsSettings.Top"/>.</em></p><p>Limit the number of latest builds in the results.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListBuildsSettings ResetTop(this AzureAcrBuildTaskListBuildsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Top = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListBuildsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListBuildsSettings SetDebug(this AzureAcrBuildTaskListBuildsSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListBuildsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListBuildsSettings ResetDebug(this AzureAcrBuildTaskListBuildsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListBuildsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListBuildsSettings SetHelp(this AzureAcrBuildTaskListBuildsSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListBuildsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListBuildsSettings ResetHelp(this AzureAcrBuildTaskListBuildsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListBuildsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListBuildsSettings SetOutput(this AzureAcrBuildTaskListBuildsSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListBuildsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListBuildsSettings ResetOutput(this AzureAcrBuildTaskListBuildsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListBuildsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListBuildsSettings SetQuery(this AzureAcrBuildTaskListBuildsSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListBuildsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListBuildsSettings ResetQuery(this AzureAcrBuildTaskListBuildsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListBuildsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListBuildsSettings SetVerbose(this AzureAcrBuildTaskListBuildsSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListBuildsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskListBuildsSettings ResetVerbose(this AzureAcrBuildTaskListBuildsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAcrBuildTaskLogsSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrBuildTaskLogsSettingsExtensions
-    {
-        #region Registry
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskLogsSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskLogsSettings SetRegistry(this AzureAcrBuildTaskLogsSettings toolSettings, string registry)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = registry;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskLogsSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskLogsSettings ResetRegistry(this AzureAcrBuildTaskLogsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = null;
-            return toolSettings;
-        }
-        #endregion
-        #region BuildId
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskLogsSettings.BuildId"/>.</em></p><p>The unique build identifier.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskLogsSettings SetBuildId(this AzureAcrBuildTaskLogsSettings toolSettings, string buildId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BuildId = buildId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskLogsSettings.BuildId"/>.</em></p><p>The unique build identifier.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskLogsSettings ResetBuildId(this AzureAcrBuildTaskLogsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BuildId = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Image
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskLogsSettings.Image"/>.</em></p><p>The name of the image. May include a tag in the format 'name:tag' or digest in the format 'name@digest'.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskLogsSettings SetImage(this AzureAcrBuildTaskLogsSettings toolSettings, string image)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Image = image;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskLogsSettings.Image"/>.</em></p><p>The name of the image. May include a tag in the format 'name:tag' or digest in the format 'name@digest'.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskLogsSettings ResetImage(this AzureAcrBuildTaskLogsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Image = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskLogsSettings.Name"/>.</em></p><p>The name of the build task.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskLogsSettings SetName(this AzureAcrBuildTaskLogsSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskLogsSettings.Name"/>.</em></p><p>The name of the build task.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskLogsSettings ResetName(this AzureAcrBuildTaskLogsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskLogsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskLogsSettings SetResourceGroup(this AzureAcrBuildTaskLogsSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskLogsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskLogsSettings ResetResourceGroup(this AzureAcrBuildTaskLogsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskLogsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskLogsSettings SetDebug(this AzureAcrBuildTaskLogsSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskLogsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskLogsSettings ResetDebug(this AzureAcrBuildTaskLogsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskLogsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskLogsSettings SetHelp(this AzureAcrBuildTaskLogsSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskLogsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskLogsSettings ResetHelp(this AzureAcrBuildTaskLogsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskLogsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskLogsSettings SetOutput(this AzureAcrBuildTaskLogsSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskLogsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskLogsSettings ResetOutput(this AzureAcrBuildTaskLogsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskLogsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskLogsSettings SetQuery(this AzureAcrBuildTaskLogsSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskLogsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskLogsSettings ResetQuery(this AzureAcrBuildTaskLogsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskLogsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskLogsSettings SetVerbose(this AzureAcrBuildTaskLogsSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskLogsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskLogsSettings ResetVerbose(this AzureAcrBuildTaskLogsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAcrBuildTaskRunSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrBuildTaskRunSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskRunSettings.Name"/>.</em></p><p>The name of the build task.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskRunSettings SetName(this AzureAcrBuildTaskRunSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskRunSettings.Name"/>.</em></p><p>The name of the build task.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskRunSettings ResetName(this AzureAcrBuildTaskRunSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Registry
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskRunSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskRunSettings SetRegistry(this AzureAcrBuildTaskRunSettings toolSettings, string registry)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = registry;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskRunSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskRunSettings ResetRegistry(this AzureAcrBuildTaskRunSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NoLogs
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskRunSettings.NoLogs"/>.</em></p><p>Do not show logs after successfully queuing the build.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskRunSettings SetNoLogs(this AzureAcrBuildTaskRunSettings toolSettings, string noLogs)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoLogs = noLogs;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskRunSettings.NoLogs"/>.</em></p><p>Do not show logs after successfully queuing the build.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskRunSettings ResetNoLogs(this AzureAcrBuildTaskRunSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoLogs = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskRunSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskRunSettings SetResourceGroup(this AzureAcrBuildTaskRunSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskRunSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskRunSettings ResetResourceGroup(this AzureAcrBuildTaskRunSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskRunSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskRunSettings SetDebug(this AzureAcrBuildTaskRunSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskRunSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskRunSettings ResetDebug(this AzureAcrBuildTaskRunSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskRunSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskRunSettings SetHelp(this AzureAcrBuildTaskRunSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskRunSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskRunSettings ResetHelp(this AzureAcrBuildTaskRunSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskRunSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskRunSettings SetOutput(this AzureAcrBuildTaskRunSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskRunSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskRunSettings ResetOutput(this AzureAcrBuildTaskRunSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskRunSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskRunSettings SetQuery(this AzureAcrBuildTaskRunSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskRunSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskRunSettings ResetQuery(this AzureAcrBuildTaskRunSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskRunSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskRunSettings SetVerbose(this AzureAcrBuildTaskRunSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskRunSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskRunSettings ResetVerbose(this AzureAcrBuildTaskRunSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAcrBuildTaskShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrBuildTaskShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowSettings.Name"/>.</em></p><p>The name of the build task.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowSettings SetName(this AzureAcrBuildTaskShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowSettings.Name"/>.</em></p><p>The name of the build task.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowSettings ResetName(this AzureAcrBuildTaskShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Registry
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowSettings SetRegistry(this AzureAcrBuildTaskShowSettings toolSettings, string registry)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = registry;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowSettings ResetRegistry(this AzureAcrBuildTaskShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowSettings SetResourceGroup(this AzureAcrBuildTaskShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowSettings ResetResourceGroup(this AzureAcrBuildTaskShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region WithSecureProperties
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowSettings.WithSecureProperties"/>.</em></p><p>Indicates whether the secure properties of a build task should be returned.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowSettings SetWithSecureProperties(this AzureAcrBuildTaskShowSettings toolSettings, string withSecureProperties)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WithSecureProperties = withSecureProperties;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowSettings.WithSecureProperties"/>.</em></p><p>Indicates whether the secure properties of a build task should be returned.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowSettings ResetWithSecureProperties(this AzureAcrBuildTaskShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WithSecureProperties = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowSettings SetDebug(this AzureAcrBuildTaskShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowSettings ResetDebug(this AzureAcrBuildTaskShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowSettings SetHelp(this AzureAcrBuildTaskShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowSettings ResetHelp(this AzureAcrBuildTaskShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowSettings SetOutput(this AzureAcrBuildTaskShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowSettings ResetOutput(this AzureAcrBuildTaskShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowSettings SetQuery(this AzureAcrBuildTaskShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowSettings ResetQuery(this AzureAcrBuildTaskShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowSettings SetVerbose(this AzureAcrBuildTaskShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowSettings ResetVerbose(this AzureAcrBuildTaskShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAcrBuildTaskShowBuildSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrBuildTaskShowBuildSettingsExtensions
-    {
-        #region BuildId
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowBuildSettings.BuildId"/>.</em></p><p>The unique build identifier.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowBuildSettings SetBuildId(this AzureAcrBuildTaskShowBuildSettings toolSettings, string buildId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BuildId = buildId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowBuildSettings.BuildId"/>.</em></p><p>The unique build identifier.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowBuildSettings ResetBuildId(this AzureAcrBuildTaskShowBuildSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BuildId = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Registry
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowBuildSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowBuildSettings SetRegistry(this AzureAcrBuildTaskShowBuildSettings toolSettings, string registry)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = registry;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowBuildSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowBuildSettings ResetRegistry(this AzureAcrBuildTaskShowBuildSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowBuildSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowBuildSettings SetResourceGroup(this AzureAcrBuildTaskShowBuildSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowBuildSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowBuildSettings ResetResourceGroup(this AzureAcrBuildTaskShowBuildSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowBuildSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowBuildSettings SetDebug(this AzureAcrBuildTaskShowBuildSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowBuildSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowBuildSettings ResetDebug(this AzureAcrBuildTaskShowBuildSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowBuildSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowBuildSettings SetHelp(this AzureAcrBuildTaskShowBuildSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowBuildSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowBuildSettings ResetHelp(this AzureAcrBuildTaskShowBuildSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowBuildSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowBuildSettings SetOutput(this AzureAcrBuildTaskShowBuildSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowBuildSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowBuildSettings ResetOutput(this AzureAcrBuildTaskShowBuildSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowBuildSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowBuildSettings SetQuery(this AzureAcrBuildTaskShowBuildSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowBuildSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowBuildSettings ResetQuery(this AzureAcrBuildTaskShowBuildSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowBuildSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowBuildSettings SetVerbose(this AzureAcrBuildTaskShowBuildSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowBuildSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskShowBuildSettings ResetVerbose(this AzureAcrBuildTaskShowBuildSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAcrBuildTaskUpdateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrBuildTaskUpdateSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Name"/>.</em></p><p>The name of the build task.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings SetName(this AzureAcrBuildTaskUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.Name"/>.</em></p><p>The name of the build task.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings ResetName(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Registry
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings SetRegistry(this AzureAcrBuildTaskUpdateSettings toolSettings, string registry)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = registry;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings ResetRegistry(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Alias
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Alias"/>.</em></p><p>The alternative name for build task. Default to the build task name.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings SetAlias(this AzureAcrBuildTaskUpdateSettings toolSettings, string alias)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = alias;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.Alias"/>.</em></p><p>The alternative name for build task. Default to the build task name.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings ResetAlias(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = null;
-            return toolSettings;
-        }
-        #endregion
-        #region BaseImageTrigger
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.BaseImageTrigger"/>.</em></p><p>The type of the auto trigger for base image dependency updates.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings SetBaseImageTrigger(this AzureAcrBuildTaskUpdateSettings toolSettings, AcrBuildTaskBaseImageTrigger baseImageTrigger)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BaseImageTrigger = baseImageTrigger;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.BaseImageTrigger"/>.</em></p><p>The type of the auto trigger for base image dependency updates.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings ResetBaseImageTrigger(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BaseImageTrigger = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Branch
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Branch"/>.</em></p><p>The source control branch name.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings SetBranch(this AzureAcrBuildTaskUpdateSettings toolSettings, string branch)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Branch = branch;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.Branch"/>.</em></p><p>The source control branch name.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings ResetBranch(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Branch = null;
-            return toolSettings;
-        }
-        #endregion
-        #region BuildArg
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.BuildArg"/>.</em></p><p>Build argument in 'name[=value]' format.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings SetBuildArg(this AzureAcrBuildTaskUpdateSettings toolSettings, string buildArg)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BuildArg = buildArg;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.BuildArg"/>.</em></p><p>Build argument in 'name[=value]' format.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings ResetBuildArg(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BuildArg = null;
-            return toolSettings;
-        }
-        #endregion
-        #region CommitTriggerEnabled
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.CommitTriggerEnabled"/>.</em></p><p>Indicates whether the source control commit trigger is enabled.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings SetCommitTriggerEnabled(this AzureAcrBuildTaskUpdateSettings toolSettings, bool? commitTriggerEnabled)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CommitTriggerEnabled = commitTriggerEnabled;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.CommitTriggerEnabled"/>.</em></p><p>Indicates whether the source control commit trigger is enabled.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings ResetCommitTriggerEnabled(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CommitTriggerEnabled = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureAcrBuildTaskUpdateSettings.CommitTriggerEnabled"/>.</em></p><p>Indicates whether the source control commit trigger is enabled.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings EnableCommitTriggerEnabled(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CommitTriggerEnabled = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureAcrBuildTaskUpdateSettings.CommitTriggerEnabled"/>.</em></p><p>Indicates whether the source control commit trigger is enabled.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings DisableCommitTriggerEnabled(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CommitTriggerEnabled = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureAcrBuildTaskUpdateSettings.CommitTriggerEnabled"/>.</em></p><p>Indicates whether the source control commit trigger is enabled.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings ToggleCommitTriggerEnabled(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CommitTriggerEnabled = !toolSettings.CommitTriggerEnabled;
-            return toolSettings;
-        }
-        #endregion
-        #region Context
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Context"/>.</em></p><p>The full URL to the source code respository.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings SetContext(this AzureAcrBuildTaskUpdateSettings toolSettings, string context)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Context = context;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.Context"/>.</em></p><p>The full URL to the source code respository.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings ResetContext(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Context = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Cpu
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Cpu"/>.</em></p><p>The CPU configuration in terms of number of cores required for the build.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings SetCpu(this AzureAcrBuildTaskUpdateSettings toolSettings, string cpu)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Cpu = cpu;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.Cpu"/>.</em></p><p>The CPU configuration in terms of number of cores required for the build.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings ResetCpu(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Cpu = null;
-            return toolSettings;
-        }
-        #endregion
-        #region File
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.File"/>.</em></p><p>The relative path of the the docker file to the source code root folder.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings SetFile(this AzureAcrBuildTaskUpdateSettings toolSettings, string file)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.File = file;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.File"/>.</em></p><p>The relative path of the the docker file to the source code root folder.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings ResetFile(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.File = null;
-            return toolSettings;
-        }
-        #endregion
-        #region GitAccessToken
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.GitAccessToken"/>.</em></p><p>The access token used to access the source control provider.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings SetGitAccessToken(this AzureAcrBuildTaskUpdateSettings toolSettings, string gitAccessToken)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GitAccessToken = gitAccessToken;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.GitAccessToken"/>.</em></p><p>The access token used to access the source control provider.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings ResetGitAccessToken(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GitAccessToken = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Image
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Image"/>.</em></p><p>The name of the image. May include a tag in the format 'name:tag'.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings SetImage(this AzureAcrBuildTaskUpdateSettings toolSettings, string image)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Image = image;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.Image"/>.</em></p><p>The name of the image. May include a tag in the format 'name:tag'.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings ResetImage(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Image = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NoCache
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.NoCache"/>.</em></p><p>Indicates whether the image cache is enabled.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings SetNoCache(this AzureAcrBuildTaskUpdateSettings toolSettings, bool? noCache)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoCache = noCache;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.NoCache"/>.</em></p><p>Indicates whether the image cache is enabled.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings ResetNoCache(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoCache = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureAcrBuildTaskUpdateSettings.NoCache"/>.</em></p><p>Indicates whether the image cache is enabled.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings EnableNoCache(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoCache = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureAcrBuildTaskUpdateSettings.NoCache"/>.</em></p><p>Indicates whether the image cache is enabled.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings DisableNoCache(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoCache = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureAcrBuildTaskUpdateSettings.NoCache"/>.</em></p><p>Indicates whether the image cache is enabled.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings ToggleNoCache(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoCache = !toolSettings.NoCache;
-            return toolSettings;
-        }
-        #endregion
-        #region NoPush
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.NoPush"/>.</em></p><p>Indicates whether the image built should be pushed to the registry.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings SetNoPush(this AzureAcrBuildTaskUpdateSettings toolSettings, bool? noPush)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoPush = noPush;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.NoPush"/>.</em></p><p>Indicates whether the image built should be pushed to the registry.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings ResetNoPush(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoPush = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureAcrBuildTaskUpdateSettings.NoPush"/>.</em></p><p>Indicates whether the image built should be pushed to the registry.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings EnableNoPush(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoPush = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureAcrBuildTaskUpdateSettings.NoPush"/>.</em></p><p>Indicates whether the image built should be pushed to the registry.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings DisableNoPush(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoPush = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureAcrBuildTaskUpdateSettings.NoPush"/>.</em></p><p>Indicates whether the image built should be pushed to the registry.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings ToggleNoPush(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoPush = !toolSettings.NoPush;
-            return toolSettings;
-        }
-        #endregion
-        #region Os
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Os"/>.</em></p><p>The operating system type required for the build.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings SetOs(this AzureAcrBuildTaskUpdateSettings toolSettings, AcrOs os)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Os = os;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.Os"/>.</em></p><p>The operating system type required for the build.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings ResetOs(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Os = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings SetResourceGroup(this AzureAcrBuildTaskUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings ResetResourceGroup(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SecretBuildArg
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.SecretBuildArg"/>.</em></p><p>Secret build argument in 'name[=value]' format.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings SetSecretBuildArg(this AzureAcrBuildTaskUpdateSettings toolSettings, string secretBuildArg)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SecretBuildArg = secretBuildArg;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.SecretBuildArg"/>.</em></p><p>Secret build argument in 'name[=value]' format.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings ResetSecretBuildArg(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SecretBuildArg = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Status
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Status"/>.</em></p><p>The current status of build task.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings SetStatus(this AzureAcrBuildTaskUpdateSettings toolSettings, AcrWebhookStatus status)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Status = status;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.Status"/>.</em></p><p>The current status of build task.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings ResetStatus(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Status = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Timeout
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Timeout"/>.</em></p><p>The build timeout in seconds.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings SetTimeout(this AzureAcrBuildTaskUpdateSettings toolSettings, string timeout)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Timeout = timeout;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.Timeout"/>.</em></p><p>The build timeout in seconds.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings ResetTimeout(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Timeout = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings SetDebug(this AzureAcrBuildTaskUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings ResetDebug(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings SetHelp(this AzureAcrBuildTaskUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings ResetHelp(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings SetOutput(this AzureAcrBuildTaskUpdateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings ResetOutput(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings SetQuery(this AzureAcrBuildTaskUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings ResetQuery(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings SetVerbose(this AzureAcrBuildTaskUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateSettings ResetVerbose(this AzureAcrBuildTaskUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAcrBuildTaskUpdateBuildSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrBuildTaskUpdateBuildSettingsExtensions
-    {
-        #region BuildId
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateBuildSettings.BuildId"/>.</em></p><p>The unique build identifier.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateBuildSettings SetBuildId(this AzureAcrBuildTaskUpdateBuildSettings toolSettings, string buildId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BuildId = buildId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateBuildSettings.BuildId"/>.</em></p><p>The unique build identifier.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateBuildSettings ResetBuildId(this AzureAcrBuildTaskUpdateBuildSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BuildId = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Registry
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateBuildSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateBuildSettings SetRegistry(this AzureAcrBuildTaskUpdateBuildSettings toolSettings, string registry)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = registry;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateBuildSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateBuildSettings ResetRegistry(this AzureAcrBuildTaskUpdateBuildSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NoArchive
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateBuildSettings.NoArchive"/>.</em></p><p>Indicates whether the build should be archived.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateBuildSettings SetNoArchive(this AzureAcrBuildTaskUpdateBuildSettings toolSettings, bool? noArchive)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoArchive = noArchive;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateBuildSettings.NoArchive"/>.</em></p><p>Indicates whether the build should be archived.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateBuildSettings ResetNoArchive(this AzureAcrBuildTaskUpdateBuildSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoArchive = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureAcrBuildTaskUpdateBuildSettings.NoArchive"/>.</em></p><p>Indicates whether the build should be archived.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateBuildSettings EnableNoArchive(this AzureAcrBuildTaskUpdateBuildSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoArchive = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureAcrBuildTaskUpdateBuildSettings.NoArchive"/>.</em></p><p>Indicates whether the build should be archived.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateBuildSettings DisableNoArchive(this AzureAcrBuildTaskUpdateBuildSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoArchive = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureAcrBuildTaskUpdateBuildSettings.NoArchive"/>.</em></p><p>Indicates whether the build should be archived.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateBuildSettings ToggleNoArchive(this AzureAcrBuildTaskUpdateBuildSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoArchive = !toolSettings.NoArchive;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateBuildSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateBuildSettings SetResourceGroup(this AzureAcrBuildTaskUpdateBuildSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateBuildSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateBuildSettings ResetResourceGroup(this AzureAcrBuildTaskUpdateBuildSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateBuildSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateBuildSettings SetDebug(this AzureAcrBuildTaskUpdateBuildSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateBuildSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateBuildSettings ResetDebug(this AzureAcrBuildTaskUpdateBuildSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateBuildSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateBuildSettings SetHelp(this AzureAcrBuildTaskUpdateBuildSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateBuildSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateBuildSettings ResetHelp(this AzureAcrBuildTaskUpdateBuildSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateBuildSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateBuildSettings SetOutput(this AzureAcrBuildTaskUpdateBuildSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateBuildSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateBuildSettings ResetOutput(this AzureAcrBuildTaskUpdateBuildSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateBuildSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateBuildSettings SetQuery(this AzureAcrBuildTaskUpdateBuildSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateBuildSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateBuildSettings ResetQuery(this AzureAcrBuildTaskUpdateBuildSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateBuildSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateBuildSettings SetVerbose(this AzureAcrBuildTaskUpdateBuildSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateBuildSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrBuildTaskUpdateBuildSettings ResetVerbose(this AzureAcrBuildTaskUpdateBuildSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region AzureAcrConfigContentTrustShowSettingsExtensions
     /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
     [PublicAPI]
@@ -11451,7 +11523,7 @@ namespace Nuke.Azure
         #region Status
         /// <summary><p><em>Sets <see cref="AzureAcrConfigContentTrustUpdateSettings.Status"/>.</em></p><p>Indicates whether content-trust is enabled or disabled.</p></summary>
         [Pure]
-        public static AzureAcrConfigContentTrustUpdateSettings SetStatus(this AzureAcrConfigContentTrustUpdateSettings toolSettings, AcrWebhookStatus status)
+        public static AzureAcrConfigContentTrustUpdateSettings SetStatus(this AzureAcrConfigContentTrustUpdateSettings toolSettings, AcrBuildTaskStatus status)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Status = status;
@@ -11582,51 +11654,6 @@ namespace Nuke.Azure
         public static AcrSku standard = new AcrSku { Value = "standard" };
     }
     #endregion
-    #region AcrRepositoryOrderby
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [Serializable]
-    [ExcludeFromCodeCoverage]
-    public partial class AcrRepositoryOrderby : Enumeration
-    {
-        public static AcrRepositoryOrderby time_asc = new AcrRepositoryOrderby { Value = "time_asc" };
-        public static AcrRepositoryOrderby time_desc = new AcrRepositoryOrderby { Value = "time_desc" };
-    }
-    #endregion
-    #region AcrCredentialRenewPasswordName
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [Serializable]
-    [ExcludeFromCodeCoverage]
-    public partial class AcrCredentialRenewPasswordName : Enumeration
-    {
-        public static AcrCredentialRenewPasswordName password = new AcrCredentialRenewPasswordName { Value = "password" };
-        public static AcrCredentialRenewPasswordName password2 = new AcrCredentialRenewPasswordName { Value = "password2" };
-    }
-    #endregion
-    #region AcrWebhookActions
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [Serializable]
-    [ExcludeFromCodeCoverage]
-    public partial class AcrWebhookActions : Enumeration
-    {
-        public static AcrWebhookActions delete = new AcrWebhookActions { Value = "delete" };
-        public static AcrWebhookActions push = new AcrWebhookActions { Value = "push" };
-        public static AcrWebhookActions quarantine = new AcrWebhookActions { Value = "quarantine" };
-    }
-    #endregion
-    #region AcrWebhookStatus
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [Serializable]
-    [ExcludeFromCodeCoverage]
-    public partial class AcrWebhookStatus : Enumeration
-    {
-        public static AcrWebhookStatus disabled = new AcrWebhookStatus { Value = "disabled" };
-        public static AcrWebhookStatus enabled = new AcrWebhookStatus { Value = "enabled" };
-    }
-    #endregion
     #region AcrBuildTaskBaseImageTrigger
     /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
     [PublicAPI]
@@ -11637,6 +11664,17 @@ namespace Nuke.Azure
         public static AcrBuildTaskBaseImageTrigger all = new AcrBuildTaskBaseImageTrigger { Value = "all" };
         public static AcrBuildTaskBaseImageTrigger none = new AcrBuildTaskBaseImageTrigger { Value = "none" };
         public static AcrBuildTaskBaseImageTrigger runtime = new AcrBuildTaskBaseImageTrigger { Value = "runtime" };
+    }
+    #endregion
+    #region AcrBuildTaskStatus
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [Serializable]
+    [ExcludeFromCodeCoverage]
+    public partial class AcrBuildTaskStatus : Enumeration
+    {
+        public static AcrBuildTaskStatus disabled = new AcrBuildTaskStatus { Value = "disabled" };
+        public static AcrBuildTaskStatus enabled = new AcrBuildTaskStatus { Value = "enabled" };
     }
     #endregion
     #region AcrBuildTaskListBuildsBuildStatus
@@ -11654,6 +11692,40 @@ namespace Nuke.Azure
         public static AcrBuildTaskListBuildsBuildStatus started = new AcrBuildTaskListBuildsBuildStatus { Value = "started" };
         public static AcrBuildTaskListBuildsBuildStatus succeeded = new AcrBuildTaskListBuildsBuildStatus { Value = "succeeded" };
         public static AcrBuildTaskListBuildsBuildStatus timeout = new AcrBuildTaskListBuildsBuildStatus { Value = "timeout" };
+    }
+    #endregion
+    #region AcrCredentialRenewPasswordName
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [Serializable]
+    [ExcludeFromCodeCoverage]
+    public partial class AcrCredentialRenewPasswordName : Enumeration
+    {
+        public static AcrCredentialRenewPasswordName password = new AcrCredentialRenewPasswordName { Value = "password" };
+        public static AcrCredentialRenewPasswordName password2 = new AcrCredentialRenewPasswordName { Value = "password2" };
+    }
+    #endregion
+    #region AcrRepositoryOrderby
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [Serializable]
+    [ExcludeFromCodeCoverage]
+    public partial class AcrRepositoryOrderby : Enumeration
+    {
+        public static AcrRepositoryOrderby time_asc = new AcrRepositoryOrderby { Value = "time_asc" };
+        public static AcrRepositoryOrderby time_desc = new AcrRepositoryOrderby { Value = "time_desc" };
+    }
+    #endregion
+    #region AcrWebhookActions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [Serializable]
+    [ExcludeFromCodeCoverage]
+    public partial class AcrWebhookActions : Enumeration
+    {
+        public static AcrWebhookActions delete = new AcrWebhookActions { Value = "delete" };
+        public static AcrWebhookActions push = new AcrWebhookActions { Value = "push" };
+        public static AcrWebhookActions quarantine = new AcrWebhookActions { Value = "quarantine" };
     }
     #endregion
 }

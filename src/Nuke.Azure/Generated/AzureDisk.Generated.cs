@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.6.1 [CommitSha: 8eca516b].
+// Generated with Nuke.CodeGeneration, Version: 0.6.2 [CommitSha: ff25463a].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureDisk.json.
 
 using JetBrains.Annotations;
@@ -116,7 +116,7 @@ namespace Nuke.Azure
         /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
-        public virtual string NoWait { get; internal set; }
+        public virtual bool? NoWait { get; internal set; }
         /// <summary><p>Size in GB.</p></summary>
         public virtual string SizeGb { get; internal set; }
         /// <summary><p>Underlying storage SKU.</p></summary>
@@ -146,7 +146,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--location {value}", Location)
-              .Add("--no-wait {value}", NoWait)
+              .Add("--no-wait", NoWait)
               .Add("--size-gb {value}", SizeGb)
               .Add("--sku {value}", Sku)
               .Add("--source {value}", Source)
@@ -176,7 +176,7 @@ namespace Nuke.Azure
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
-        public virtual string NoWait { get; internal set; }
+        public virtual bool? NoWait { get; internal set; }
         /// <summary><p>Do not prompt for confirmation.</p></summary>
         public virtual string Yes { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
@@ -195,7 +195,7 @@ namespace Nuke.Azure
               .Add("disk delete")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--no-wait {value}", NoWait)
+              .Add("--no-wait", NoWait)
               .Add("--yes {value}", Yes)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -372,7 +372,7 @@ namespace Nuke.Azure
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
-        public virtual string NoWait { get; internal set; }
+        public virtual bool? NoWait { get; internal set; }
         /// <summary><p>Size in GB.</p></summary>
         public virtual string SizeGb { get; internal set; }
         /// <summary><p>Underlying storage SKU.</p></summary>
@@ -401,7 +401,7 @@ namespace Nuke.Azure
               .Add("disk update")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--no-wait {value}", NoWait)
+              .Add("--no-wait", NoWait)
               .Add("--size-gb {value}", SizeGb)
               .Add("--sku {value}", Sku)
               .Add("--add {value}", Add)
@@ -539,7 +539,7 @@ namespace Nuke.Azure
         #region NoWait
         /// <summary><p><em>Sets <see cref="AzureDiskCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
         [Pure]
-        public static AzureDiskCreateSettings SetNoWait(this AzureDiskCreateSettings toolSettings, string noWait)
+        public static AzureDiskCreateSettings SetNoWait(this AzureDiskCreateSettings toolSettings, bool? noWait)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = noWait;
@@ -551,6 +551,30 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureDiskCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureDiskCreateSettings EnableNoWait(this AzureDiskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureDiskCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureDiskCreateSettings DisableNoWait(this AzureDiskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureDiskCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureDiskCreateSettings ToggleNoWait(this AzureDiskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = !toolSettings.NoWait;
             return toolSettings;
         }
         #endregion
@@ -799,7 +823,7 @@ namespace Nuke.Azure
         #region NoWait
         /// <summary><p><em>Sets <see cref="AzureDiskDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
         [Pure]
-        public static AzureDiskDeleteSettings SetNoWait(this AzureDiskDeleteSettings toolSettings, string noWait)
+        public static AzureDiskDeleteSettings SetNoWait(this AzureDiskDeleteSettings toolSettings, bool? noWait)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = noWait;
@@ -811,6 +835,30 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureDiskDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureDiskDeleteSettings EnableNoWait(this AzureDiskDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureDiskDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureDiskDeleteSettings DisableNoWait(this AzureDiskDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureDiskDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureDiskDeleteSettings ToggleNoWait(this AzureDiskDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = !toolSettings.NoWait;
             return toolSettings;
         }
         #endregion
@@ -1505,7 +1553,7 @@ namespace Nuke.Azure
         #region NoWait
         /// <summary><p><em>Sets <see cref="AzureDiskUpdateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
         [Pure]
-        public static AzureDiskUpdateSettings SetNoWait(this AzureDiskUpdateSettings toolSettings, string noWait)
+        public static AzureDiskUpdateSettings SetNoWait(this AzureDiskUpdateSettings toolSettings, bool? noWait)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = noWait;
@@ -1517,6 +1565,30 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureDiskUpdateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureDiskUpdateSettings EnableNoWait(this AzureDiskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureDiskUpdateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureDiskUpdateSettings DisableNoWait(this AzureDiskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureDiskUpdateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureDiskUpdateSettings ToggleNoWait(this AzureDiskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = !toolSettings.NoWait;
             return toolSettings;
         }
         #endregion

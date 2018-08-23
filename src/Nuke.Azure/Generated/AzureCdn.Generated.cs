@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.6.1 [CommitSha: 8eca516b].
+// Generated with Nuke.CodeGeneration, Version: 0.6.2 [CommitSha: ff25463a].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureCdn.json.
 
 using JetBrains.Annotations;
@@ -52,17 +52,49 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureCdnOriginList(Configure<AzureCdnOriginListSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureCdnCustomDomainCreate(Configure<AzureCdnCustomDomainCreateSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureCdnOriginListSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureCdnCustomDomainCreateSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureCdnOriginShow(Configure<AzureCdnOriginShowSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureCdnCustomDomainDelete(Configure<AzureCdnCustomDomainDeleteSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureCdnOriginShowSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureCdnCustomDomainDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureCdnCustomDomainDisableHttps(Configure<AzureCdnCustomDomainDisableHttpsSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureCdnCustomDomainDisableHttpsSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureCdnCustomDomainEnableHttps(Configure<AzureCdnCustomDomainEnableHttpsSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureCdnCustomDomainEnableHttpsSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureCdnCustomDomainList(Configure<AzureCdnCustomDomainListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureCdnCustomDomainListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureCdnCustomDomainShow(Configure<AzureCdnCustomDomainShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureCdnCustomDomainShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -156,6 +188,22 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureCdnOriginList(Configure<AzureCdnOriginListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureCdnOriginListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureCdnOriginShow(Configure<AzureCdnOriginShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureCdnOriginShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureCdnProfileCreate(Configure<AzureCdnProfileCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCdnProfileCreateSettings());
@@ -199,54 +247,6 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureCdnProfileUsage(Configure<AzureCdnProfileUsageSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCdnProfileUsageSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureCdnCustomDomainCreate(Configure<AzureCdnCustomDomainCreateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureCdnCustomDomainCreateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureCdnCustomDomainDelete(Configure<AzureCdnCustomDomainDeleteSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureCdnCustomDomainDeleteSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureCdnCustomDomainDisableHttps(Configure<AzureCdnCustomDomainDisableHttpsSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureCdnCustomDomainDisableHttpsSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureCdnCustomDomainEnableHttps(Configure<AzureCdnCustomDomainEnableHttpsSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureCdnCustomDomainEnableHttpsSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureCdnCustomDomainList(Configure<AzureCdnCustomDomainListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureCdnCustomDomainListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Content Delivery Networks (CDNs).</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureCdnCustomDomainShow(Configure<AzureCdnCustomDomainShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureCdnCustomDomainShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -319,21 +319,29 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureCdnOriginListSettings
+    #region AzureCdnCustomDomainCreateSettings
     /// <summary><p>Used within <see cref="AzureCdnTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureCdnOriginListSettings : ToolSettings
+    public partial class AzureCdnCustomDomainCreateSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureCdn executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureCdnTasks.AzureCdnPath;
         /// <summary><p>Name of the endpoint under the profile which is unique globally.</p></summary>
         public virtual string EndpointName { get; internal set; }
+        /// <summary><p>The host name of the custom domain. Must be a domain name.</p></summary>
+        public virtual string Hostname { get; internal set; }
+        /// <summary><p>Name of the custom domain.</p></summary>
+        public virtual string Name { get; internal set; }
         /// <summary><p>Name of the CDN profile which is unique within the resource group.</p></summary>
         public virtual string ProfileName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        public virtual string Location { get; internal set; }
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        public virtual string Tags { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -347,10 +355,14 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("cdn origin list")
+              .Add("cdn custom-domain create")
               .Add("--endpoint-name {value}", EndpointName)
+              .Add("--hostname {value}", Hostname)
+              .Add("--name {value}", Name)
               .Add("--profile-name {value}", ProfileName)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--location {value}", Location)
+              .Add("--tags {value}", Tags)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -360,18 +372,18 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureCdnOriginShowSettings
+    #region AzureCdnCustomDomainDeleteSettings
     /// <summary><p>Used within <see cref="AzureCdnTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureCdnOriginShowSettings : ToolSettings
+    public partial class AzureCdnCustomDomainDeleteSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureCdn executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureCdnTasks.AzureCdnPath;
         /// <summary><p>Name of the endpoint under the profile which is unique globally.</p></summary>
         public virtual string EndpointName { get; internal set; }
-        /// <summary><p>Name of the origin which is unique within the endpoint.</p></summary>
+        /// <summary><p>Name of the custom domain.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of the CDN profile which is unique within the resource group.</p></summary>
         public virtual string ProfileName { get; internal set; }
@@ -390,7 +402,180 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("cdn origin show")
+              .Add("cdn custom-domain delete")
+              .Add("--endpoint-name {value}", EndpointName)
+              .Add("--name {value}", Name)
+              .Add("--profile-name {value}", ProfileName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureCdnCustomDomainDisableHttpsSettings
+    /// <summary><p>Used within <see cref="AzureCdnTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureCdnCustomDomainDisableHttpsSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureCdn executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureCdnTasks.AzureCdnPath;
+        /// <summary><p>Name of the endpoint under the profile which is unique globally.</p></summary>
+        public virtual string EndpointName { get; internal set; }
+        /// <summary><p>Name of the custom domain.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of the CDN profile which is unique within the resource group.</p></summary>
+        public virtual string ProfileName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("cdn custom-domain disable-https")
+              .Add("--endpoint-name {value}", EndpointName)
+              .Add("--name {value}", Name)
+              .Add("--profile-name {value}", ProfileName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureCdnCustomDomainEnableHttpsSettings
+    /// <summary><p>Used within <see cref="AzureCdnTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureCdnCustomDomainEnableHttpsSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureCdn executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureCdnTasks.AzureCdnPath;
+        /// <summary><p>Name of the endpoint under the profile which is unique globally.</p></summary>
+        public virtual string EndpointName { get; internal set; }
+        /// <summary><p>Name of the custom domain.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of the CDN profile which is unique within the resource group.</p></summary>
+        public virtual string ProfileName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("cdn custom-domain enable-https")
+              .Add("--endpoint-name {value}", EndpointName)
+              .Add("--name {value}", Name)
+              .Add("--profile-name {value}", ProfileName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureCdnCustomDomainListSettings
+    /// <summary><p>Used within <see cref="AzureCdnTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureCdnCustomDomainListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureCdn executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureCdnTasks.AzureCdnPath;
+        /// <summary><p>Name of the endpoint under the profile which is unique globally.</p></summary>
+        public virtual string EndpointName { get; internal set; }
+        /// <summary><p>Name of the CDN profile which is unique within the resource group.</p></summary>
+        public virtual string ProfileName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("cdn custom-domain list")
+              .Add("--endpoint-name {value}", EndpointName)
+              .Add("--profile-name {value}", ProfileName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureCdnCustomDomainShowSettings
+    /// <summary><p>Used within <see cref="AzureCdnTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureCdnCustomDomainShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureCdn executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureCdnTasks.AzureCdnPath;
+        /// <summary><p>Name of the endpoint under the profile which is unique globally.</p></summary>
+        public virtual string EndpointName { get; internal set; }
+        /// <summary><p>Name of the custom domain.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of the CDN profile which is unique within the resource group.</p></summary>
+        public virtual string ProfileName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("cdn custom-domain show")
               .Add("--endpoint-name {value}", EndpointName)
               .Add("--name {value}", Name)
               .Add("--profile-name {value}", ProfileName)
@@ -918,6 +1103,91 @@ namespace Nuke.Azure
         }
     }
     #endregion
+    #region AzureCdnOriginListSettings
+    /// <summary><p>Used within <see cref="AzureCdnTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureCdnOriginListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureCdn executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureCdnTasks.AzureCdnPath;
+        /// <summary><p>Name of the endpoint under the profile which is unique globally.</p></summary>
+        public virtual string EndpointName { get; internal set; }
+        /// <summary><p>Name of the CDN profile which is unique within the resource group.</p></summary>
+        public virtual string ProfileName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("cdn origin list")
+              .Add("--endpoint-name {value}", EndpointName)
+              .Add("--profile-name {value}", ProfileName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureCdnOriginShowSettings
+    /// <summary><p>Used within <see cref="AzureCdnTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureCdnOriginShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureCdn executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureCdnTasks.AzureCdnPath;
+        /// <summary><p>Name of the endpoint under the profile which is unique globally.</p></summary>
+        public virtual string EndpointName { get; internal set; }
+        /// <summary><p>Name of the origin which is unique within the endpoint.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of the CDN profile which is unique within the resource group.</p></summary>
+        public virtual string ProfileName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("cdn origin show")
+              .Add("--endpoint-name {value}", EndpointName)
+              .Add("--name {value}", Name)
+              .Add("--profile-name {value}", ProfileName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
     #region AzureCdnProfileCreateSettings
     /// <summary><p>Used within <see cref="AzureCdnTasks"/>.</p></summary>
     [PublicAPI]
@@ -1167,276 +1437,6 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureCdnCustomDomainCreateSettings
-    /// <summary><p>Used within <see cref="AzureCdnTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureCdnCustomDomainCreateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureCdn executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureCdnTasks.AzureCdnPath;
-        /// <summary><p>Name of the endpoint under the profile which is unique globally.</p></summary>
-        public virtual string EndpointName { get; internal set; }
-        /// <summary><p>The host name of the custom domain. Must be a domain name.</p></summary>
-        public virtual string Hostname { get; internal set; }
-        /// <summary><p>Name of the custom domain.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of the CDN profile which is unique within the resource group.</p></summary>
-        public virtual string ProfileName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        public virtual string Location { get; internal set; }
-        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        public virtual string Tags { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("cdn custom-domain create")
-              .Add("--endpoint-name {value}", EndpointName)
-              .Add("--hostname {value}", Hostname)
-              .Add("--name {value}", Name)
-              .Add("--profile-name {value}", ProfileName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--location {value}", Location)
-              .Add("--tags {value}", Tags)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureCdnCustomDomainDeleteSettings
-    /// <summary><p>Used within <see cref="AzureCdnTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureCdnCustomDomainDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureCdn executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureCdnTasks.AzureCdnPath;
-        /// <summary><p>Name of the endpoint under the profile which is unique globally.</p></summary>
-        public virtual string EndpointName { get; internal set; }
-        /// <summary><p>Name of the custom domain.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of the CDN profile which is unique within the resource group.</p></summary>
-        public virtual string ProfileName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("cdn custom-domain delete")
-              .Add("--endpoint-name {value}", EndpointName)
-              .Add("--name {value}", Name)
-              .Add("--profile-name {value}", ProfileName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureCdnCustomDomainDisableHttpsSettings
-    /// <summary><p>Used within <see cref="AzureCdnTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureCdnCustomDomainDisableHttpsSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureCdn executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureCdnTasks.AzureCdnPath;
-        /// <summary><p>Name of the endpoint under the profile which is unique globally.</p></summary>
-        public virtual string EndpointName { get; internal set; }
-        /// <summary><p>Name of the custom domain.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of the CDN profile which is unique within the resource group.</p></summary>
-        public virtual string ProfileName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("cdn custom-domain disable-https")
-              .Add("--endpoint-name {value}", EndpointName)
-              .Add("--name {value}", Name)
-              .Add("--profile-name {value}", ProfileName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureCdnCustomDomainEnableHttpsSettings
-    /// <summary><p>Used within <see cref="AzureCdnTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureCdnCustomDomainEnableHttpsSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureCdn executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureCdnTasks.AzureCdnPath;
-        /// <summary><p>Name of the endpoint under the profile which is unique globally.</p></summary>
-        public virtual string EndpointName { get; internal set; }
-        /// <summary><p>Name of the custom domain.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of the CDN profile which is unique within the resource group.</p></summary>
-        public virtual string ProfileName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("cdn custom-domain enable-https")
-              .Add("--endpoint-name {value}", EndpointName)
-              .Add("--name {value}", Name)
-              .Add("--profile-name {value}", ProfileName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureCdnCustomDomainListSettings
-    /// <summary><p>Used within <see cref="AzureCdnTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureCdnCustomDomainListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureCdn executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureCdnTasks.AzureCdnPath;
-        /// <summary><p>Name of the endpoint under the profile which is unique globally.</p></summary>
-        public virtual string EndpointName { get; internal set; }
-        /// <summary><p>Name of the CDN profile which is unique within the resource group.</p></summary>
-        public virtual string ProfileName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("cdn custom-domain list")
-              .Add("--endpoint-name {value}", EndpointName)
-              .Add("--profile-name {value}", ProfileName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureCdnCustomDomainShowSettings
-    /// <summary><p>Used within <see cref="AzureCdnTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureCdnCustomDomainShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureCdn executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureCdnTasks.AzureCdnPath;
-        /// <summary><p>Name of the endpoint under the profile which is unique globally.</p></summary>
-        public virtual string EndpointName { get; internal set; }
-        /// <summary><p>Name of the custom domain.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of the CDN profile which is unique within the resource group.</p></summary>
-        public virtual string ProfileName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("cdn custom-domain show")
-              .Add("--endpoint-name {value}", EndpointName)
-              .Add("--name {value}", Name)
-              .Add("--profile-name {value}", ProfileName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
     #region AzureCdnNameExistsSettingsExtensions
     /// <summary><p>Used within <see cref="AzureCdnTasks"/>.</p></summary>
     [PublicAPI]
@@ -1651,42 +1651,78 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureCdnOriginListSettingsExtensions
+    #region AzureCdnCustomDomainCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureCdnTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureCdnOriginListSettingsExtensions
+    public static partial class AzureCdnCustomDomainCreateSettingsExtensions
     {
         #region EndpointName
-        /// <summary><p><em>Sets <see cref="AzureCdnOriginListSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainCreateSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
         [Pure]
-        public static AzureCdnOriginListSettings SetEndpointName(this AzureCdnOriginListSettings toolSettings, string endpointName)
+        public static AzureCdnCustomDomainCreateSettings SetEndpointName(this AzureCdnCustomDomainCreateSettings toolSettings, string endpointName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.EndpointName = endpointName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureCdnOriginListSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainCreateSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
         [Pure]
-        public static AzureCdnOriginListSettings ResetEndpointName(this AzureCdnOriginListSettings toolSettings)
+        public static AzureCdnCustomDomainCreateSettings ResetEndpointName(this AzureCdnCustomDomainCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.EndpointName = null;
             return toolSettings;
         }
         #endregion
-        #region ProfileName
-        /// <summary><p><em>Sets <see cref="AzureCdnOriginListSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
+        #region Hostname
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainCreateSettings.Hostname"/>.</em></p><p>The host name of the custom domain. Must be a domain name.</p></summary>
         [Pure]
-        public static AzureCdnOriginListSettings SetProfileName(this AzureCdnOriginListSettings toolSettings, string profileName)
+        public static AzureCdnCustomDomainCreateSettings SetHostname(this AzureCdnCustomDomainCreateSettings toolSettings, string hostname)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Hostname = hostname;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainCreateSettings.Hostname"/>.</em></p><p>The host name of the custom domain. Must be a domain name.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainCreateSettings ResetHostname(this AzureCdnCustomDomainCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Hostname = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainCreateSettings.Name"/>.</em></p><p>Name of the custom domain.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainCreateSettings SetName(this AzureCdnCustomDomainCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainCreateSettings.Name"/>.</em></p><p>Name of the custom domain.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainCreateSettings ResetName(this AzureCdnCustomDomainCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ProfileName
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainCreateSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainCreateSettings SetProfileName(this AzureCdnCustomDomainCreateSettings toolSettings, string profileName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ProfileName = profileName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureCdnOriginListSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainCreateSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
         [Pure]
-        public static AzureCdnOriginListSettings ResetProfileName(this AzureCdnOriginListSettings toolSettings)
+        public static AzureCdnCustomDomainCreateSettings ResetProfileName(this AzureCdnCustomDomainCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ProfileName = null;
@@ -1694,35 +1730,71 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureCdnOriginListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureCdnOriginListSettings SetResourceGroup(this AzureCdnOriginListSettings toolSettings, string resourceGroup)
+        public static AzureCdnCustomDomainCreateSettings SetResourceGroup(this AzureCdnCustomDomainCreateSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureCdnOriginListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureCdnOriginListSettings ResetResourceGroup(this AzureCdnOriginListSettings toolSettings)
+        public static AzureCdnCustomDomainCreateSettings ResetResourceGroup(this AzureCdnCustomDomainCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureCdnOriginListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region Location
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureCdnOriginListSettings SetDebug(this AzureCdnOriginListSettings toolSettings, string debug)
+        public static AzureCdnCustomDomainCreateSettings SetLocation(this AzureCdnCustomDomainCreateSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainCreateSettings ResetLocation(this AzureCdnCustomDomainCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tags
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainCreateSettings SetTags(this AzureCdnCustomDomainCreateSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainCreateSettings ResetTags(this AzureCdnCustomDomainCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainCreateSettings SetDebug(this AzureCdnCustomDomainCreateSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureCdnOriginListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureCdnOriginListSettings ResetDebug(this AzureCdnOriginListSettings toolSettings)
+        public static AzureCdnCustomDomainCreateSettings ResetDebug(this AzureCdnCustomDomainCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -1730,17 +1802,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureCdnOriginListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureCdnOriginListSettings SetHelp(this AzureCdnOriginListSettings toolSettings, string help)
+        public static AzureCdnCustomDomainCreateSettings SetHelp(this AzureCdnCustomDomainCreateSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureCdnOriginListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureCdnOriginListSettings ResetHelp(this AzureCdnOriginListSettings toolSettings)
+        public static AzureCdnCustomDomainCreateSettings ResetHelp(this AzureCdnCustomDomainCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -1748,17 +1820,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureCdnOriginListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCdnOriginListSettings SetOutput(this AzureCdnOriginListSettings toolSettings, AzureOutput output)
+        public static AzureCdnCustomDomainCreateSettings SetOutput(this AzureCdnCustomDomainCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureCdnOriginListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCdnOriginListSettings ResetOutput(this AzureCdnOriginListSettings toolSettings)
+        public static AzureCdnCustomDomainCreateSettings ResetOutput(this AzureCdnCustomDomainCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -1766,17 +1838,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureCdnOriginListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureCdnOriginListSettings SetQuery(this AzureCdnOriginListSettings toolSettings, string query)
+        public static AzureCdnCustomDomainCreateSettings SetQuery(this AzureCdnCustomDomainCreateSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureCdnOriginListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureCdnOriginListSettings ResetQuery(this AzureCdnOriginListSettings toolSettings)
+        public static AzureCdnCustomDomainCreateSettings ResetQuery(this AzureCdnCustomDomainCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -1784,17 +1856,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureCdnOriginListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureCdnOriginListSettings SetVerbose(this AzureCdnOriginListSettings toolSettings, string verbose)
+        public static AzureCdnCustomDomainCreateSettings SetVerbose(this AzureCdnCustomDomainCreateSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureCdnOriginListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureCdnOriginListSettings ResetVerbose(this AzureCdnOriginListSettings toolSettings)
+        public static AzureCdnCustomDomainCreateSettings ResetVerbose(this AzureCdnCustomDomainCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -1803,24 +1875,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureCdnOriginShowSettingsExtensions
+    #region AzureCdnCustomDomainDeleteSettingsExtensions
     /// <summary><p>Used within <see cref="AzureCdnTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureCdnOriginShowSettingsExtensions
+    public static partial class AzureCdnCustomDomainDeleteSettingsExtensions
     {
         #region EndpointName
-        /// <summary><p><em>Sets <see cref="AzureCdnOriginShowSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDeleteSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
         [Pure]
-        public static AzureCdnOriginShowSettings SetEndpointName(this AzureCdnOriginShowSettings toolSettings, string endpointName)
+        public static AzureCdnCustomDomainDeleteSettings SetEndpointName(this AzureCdnCustomDomainDeleteSettings toolSettings, string endpointName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.EndpointName = endpointName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureCdnOriginShowSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDeleteSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
         [Pure]
-        public static AzureCdnOriginShowSettings ResetEndpointName(this AzureCdnOriginShowSettings toolSettings)
+        public static AzureCdnCustomDomainDeleteSettings ResetEndpointName(this AzureCdnCustomDomainDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.EndpointName = null;
@@ -1828,17 +1900,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureCdnOriginShowSettings.Name"/>.</em></p><p>Name of the origin which is unique within the endpoint.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDeleteSettings.Name"/>.</em></p><p>Name of the custom domain.</p></summary>
         [Pure]
-        public static AzureCdnOriginShowSettings SetName(this AzureCdnOriginShowSettings toolSettings, string name)
+        public static AzureCdnCustomDomainDeleteSettings SetName(this AzureCdnCustomDomainDeleteSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureCdnOriginShowSettings.Name"/>.</em></p><p>Name of the origin which is unique within the endpoint.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDeleteSettings.Name"/>.</em></p><p>Name of the custom domain.</p></summary>
         [Pure]
-        public static AzureCdnOriginShowSettings ResetName(this AzureCdnOriginShowSettings toolSettings)
+        public static AzureCdnCustomDomainDeleteSettings ResetName(this AzureCdnCustomDomainDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -1846,17 +1918,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region ProfileName
-        /// <summary><p><em>Sets <see cref="AzureCdnOriginShowSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDeleteSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
         [Pure]
-        public static AzureCdnOriginShowSettings SetProfileName(this AzureCdnOriginShowSettings toolSettings, string profileName)
+        public static AzureCdnCustomDomainDeleteSettings SetProfileName(this AzureCdnCustomDomainDeleteSettings toolSettings, string profileName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ProfileName = profileName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureCdnOriginShowSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDeleteSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
         [Pure]
-        public static AzureCdnOriginShowSettings ResetProfileName(this AzureCdnOriginShowSettings toolSettings)
+        public static AzureCdnCustomDomainDeleteSettings ResetProfileName(this AzureCdnCustomDomainDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ProfileName = null;
@@ -1864,17 +1936,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureCdnOriginShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureCdnOriginShowSettings SetResourceGroup(this AzureCdnOriginShowSettings toolSettings, string resourceGroup)
+        public static AzureCdnCustomDomainDeleteSettings SetResourceGroup(this AzureCdnCustomDomainDeleteSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureCdnOriginShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureCdnOriginShowSettings ResetResourceGroup(this AzureCdnOriginShowSettings toolSettings)
+        public static AzureCdnCustomDomainDeleteSettings ResetResourceGroup(this AzureCdnCustomDomainDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -1882,17 +1954,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureCdnOriginShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureCdnOriginShowSettings SetDebug(this AzureCdnOriginShowSettings toolSettings, string debug)
+        public static AzureCdnCustomDomainDeleteSettings SetDebug(this AzureCdnCustomDomainDeleteSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureCdnOriginShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureCdnOriginShowSettings ResetDebug(this AzureCdnOriginShowSettings toolSettings)
+        public static AzureCdnCustomDomainDeleteSettings ResetDebug(this AzureCdnCustomDomainDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -1900,17 +1972,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureCdnOriginShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureCdnOriginShowSettings SetHelp(this AzureCdnOriginShowSettings toolSettings, string help)
+        public static AzureCdnCustomDomainDeleteSettings SetHelp(this AzureCdnCustomDomainDeleteSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureCdnOriginShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureCdnOriginShowSettings ResetHelp(this AzureCdnOriginShowSettings toolSettings)
+        public static AzureCdnCustomDomainDeleteSettings ResetHelp(this AzureCdnCustomDomainDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -1918,17 +1990,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureCdnOriginShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCdnOriginShowSettings SetOutput(this AzureCdnOriginShowSettings toolSettings, AzureOutput output)
+        public static AzureCdnCustomDomainDeleteSettings SetOutput(this AzureCdnCustomDomainDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureCdnOriginShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureCdnOriginShowSettings ResetOutput(this AzureCdnOriginShowSettings toolSettings)
+        public static AzureCdnCustomDomainDeleteSettings ResetOutput(this AzureCdnCustomDomainDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -1936,17 +2008,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureCdnOriginShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureCdnOriginShowSettings SetQuery(this AzureCdnOriginShowSettings toolSettings, string query)
+        public static AzureCdnCustomDomainDeleteSettings SetQuery(this AzureCdnCustomDomainDeleteSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureCdnOriginShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureCdnOriginShowSettings ResetQuery(this AzureCdnOriginShowSettings toolSettings)
+        public static AzureCdnCustomDomainDeleteSettings ResetQuery(this AzureCdnCustomDomainDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -1954,17 +2026,679 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureCdnOriginShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureCdnOriginShowSettings SetVerbose(this AzureCdnOriginShowSettings toolSettings, string verbose)
+        public static AzureCdnCustomDomainDeleteSettings SetVerbose(this AzureCdnCustomDomainDeleteSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureCdnOriginShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureCdnOriginShowSettings ResetVerbose(this AzureCdnOriginShowSettings toolSettings)
+        public static AzureCdnCustomDomainDeleteSettings ResetVerbose(this AzureCdnCustomDomainDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureCdnCustomDomainDisableHttpsSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureCdnTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureCdnCustomDomainDisableHttpsSettingsExtensions
+    {
+        #region EndpointName
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDisableHttpsSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainDisableHttpsSettings SetEndpointName(this AzureCdnCustomDomainDisableHttpsSettings toolSettings, string endpointName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointName = endpointName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDisableHttpsSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainDisableHttpsSettings ResetEndpointName(this AzureCdnCustomDomainDisableHttpsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDisableHttpsSettings.Name"/>.</em></p><p>Name of the custom domain.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainDisableHttpsSettings SetName(this AzureCdnCustomDomainDisableHttpsSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDisableHttpsSettings.Name"/>.</em></p><p>Name of the custom domain.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainDisableHttpsSettings ResetName(this AzureCdnCustomDomainDisableHttpsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ProfileName
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDisableHttpsSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainDisableHttpsSettings SetProfileName(this AzureCdnCustomDomainDisableHttpsSettings toolSettings, string profileName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ProfileName = profileName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDisableHttpsSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainDisableHttpsSettings ResetProfileName(this AzureCdnCustomDomainDisableHttpsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ProfileName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDisableHttpsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainDisableHttpsSettings SetResourceGroup(this AzureCdnCustomDomainDisableHttpsSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDisableHttpsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainDisableHttpsSettings ResetResourceGroup(this AzureCdnCustomDomainDisableHttpsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDisableHttpsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainDisableHttpsSettings SetDebug(this AzureCdnCustomDomainDisableHttpsSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDisableHttpsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainDisableHttpsSettings ResetDebug(this AzureCdnCustomDomainDisableHttpsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDisableHttpsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainDisableHttpsSettings SetHelp(this AzureCdnCustomDomainDisableHttpsSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDisableHttpsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainDisableHttpsSettings ResetHelp(this AzureCdnCustomDomainDisableHttpsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDisableHttpsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainDisableHttpsSettings SetOutput(this AzureCdnCustomDomainDisableHttpsSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDisableHttpsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainDisableHttpsSettings ResetOutput(this AzureCdnCustomDomainDisableHttpsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDisableHttpsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainDisableHttpsSettings SetQuery(this AzureCdnCustomDomainDisableHttpsSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDisableHttpsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainDisableHttpsSettings ResetQuery(this AzureCdnCustomDomainDisableHttpsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDisableHttpsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainDisableHttpsSettings SetVerbose(this AzureCdnCustomDomainDisableHttpsSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDisableHttpsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainDisableHttpsSettings ResetVerbose(this AzureCdnCustomDomainDisableHttpsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureCdnCustomDomainEnableHttpsSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureCdnTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureCdnCustomDomainEnableHttpsSettingsExtensions
+    {
+        #region EndpointName
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainEnableHttpsSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainEnableHttpsSettings SetEndpointName(this AzureCdnCustomDomainEnableHttpsSettings toolSettings, string endpointName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointName = endpointName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainEnableHttpsSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainEnableHttpsSettings ResetEndpointName(this AzureCdnCustomDomainEnableHttpsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainEnableHttpsSettings.Name"/>.</em></p><p>Name of the custom domain.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainEnableHttpsSettings SetName(this AzureCdnCustomDomainEnableHttpsSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainEnableHttpsSettings.Name"/>.</em></p><p>Name of the custom domain.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainEnableHttpsSettings ResetName(this AzureCdnCustomDomainEnableHttpsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ProfileName
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainEnableHttpsSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainEnableHttpsSettings SetProfileName(this AzureCdnCustomDomainEnableHttpsSettings toolSettings, string profileName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ProfileName = profileName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainEnableHttpsSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainEnableHttpsSettings ResetProfileName(this AzureCdnCustomDomainEnableHttpsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ProfileName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainEnableHttpsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainEnableHttpsSettings SetResourceGroup(this AzureCdnCustomDomainEnableHttpsSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainEnableHttpsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainEnableHttpsSettings ResetResourceGroup(this AzureCdnCustomDomainEnableHttpsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainEnableHttpsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainEnableHttpsSettings SetDebug(this AzureCdnCustomDomainEnableHttpsSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainEnableHttpsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainEnableHttpsSettings ResetDebug(this AzureCdnCustomDomainEnableHttpsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainEnableHttpsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainEnableHttpsSettings SetHelp(this AzureCdnCustomDomainEnableHttpsSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainEnableHttpsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainEnableHttpsSettings ResetHelp(this AzureCdnCustomDomainEnableHttpsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainEnableHttpsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainEnableHttpsSettings SetOutput(this AzureCdnCustomDomainEnableHttpsSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainEnableHttpsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainEnableHttpsSettings ResetOutput(this AzureCdnCustomDomainEnableHttpsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainEnableHttpsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainEnableHttpsSettings SetQuery(this AzureCdnCustomDomainEnableHttpsSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainEnableHttpsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainEnableHttpsSettings ResetQuery(this AzureCdnCustomDomainEnableHttpsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainEnableHttpsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainEnableHttpsSettings SetVerbose(this AzureCdnCustomDomainEnableHttpsSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainEnableHttpsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainEnableHttpsSettings ResetVerbose(this AzureCdnCustomDomainEnableHttpsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureCdnCustomDomainListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureCdnTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureCdnCustomDomainListSettingsExtensions
+    {
+        #region EndpointName
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainListSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainListSettings SetEndpointName(this AzureCdnCustomDomainListSettings toolSettings, string endpointName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointName = endpointName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainListSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainListSettings ResetEndpointName(this AzureCdnCustomDomainListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ProfileName
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainListSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainListSettings SetProfileName(this AzureCdnCustomDomainListSettings toolSettings, string profileName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ProfileName = profileName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainListSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainListSettings ResetProfileName(this AzureCdnCustomDomainListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ProfileName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainListSettings SetResourceGroup(this AzureCdnCustomDomainListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainListSettings ResetResourceGroup(this AzureCdnCustomDomainListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainListSettings SetDebug(this AzureCdnCustomDomainListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainListSettings ResetDebug(this AzureCdnCustomDomainListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainListSettings SetHelp(this AzureCdnCustomDomainListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainListSettings ResetHelp(this AzureCdnCustomDomainListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainListSettings SetOutput(this AzureCdnCustomDomainListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainListSettings ResetOutput(this AzureCdnCustomDomainListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainListSettings SetQuery(this AzureCdnCustomDomainListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainListSettings ResetQuery(this AzureCdnCustomDomainListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainListSettings SetVerbose(this AzureCdnCustomDomainListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainListSettings ResetVerbose(this AzureCdnCustomDomainListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureCdnCustomDomainShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureCdnTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureCdnCustomDomainShowSettingsExtensions
+    {
+        #region EndpointName
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainShowSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainShowSettings SetEndpointName(this AzureCdnCustomDomainShowSettings toolSettings, string endpointName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointName = endpointName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainShowSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainShowSettings ResetEndpointName(this AzureCdnCustomDomainShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainShowSettings.Name"/>.</em></p><p>Name of the custom domain.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainShowSettings SetName(this AzureCdnCustomDomainShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainShowSettings.Name"/>.</em></p><p>Name of the custom domain.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainShowSettings ResetName(this AzureCdnCustomDomainShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ProfileName
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainShowSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainShowSettings SetProfileName(this AzureCdnCustomDomainShowSettings toolSettings, string profileName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ProfileName = profileName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainShowSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainShowSettings ResetProfileName(this AzureCdnCustomDomainShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ProfileName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainShowSettings SetResourceGroup(this AzureCdnCustomDomainShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainShowSettings ResetResourceGroup(this AzureCdnCustomDomainShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainShowSettings SetDebug(this AzureCdnCustomDomainShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainShowSettings ResetDebug(this AzureCdnCustomDomainShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainShowSettings SetHelp(this AzureCdnCustomDomainShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainShowSettings ResetHelp(this AzureCdnCustomDomainShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainShowSettings SetOutput(this AzureCdnCustomDomainShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainShowSettings ResetOutput(this AzureCdnCustomDomainShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainShowSettings SetQuery(this AzureCdnCustomDomainShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainShowSettings ResetQuery(this AzureCdnCustomDomainShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainShowSettings SetVerbose(this AzureCdnCustomDomainShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureCdnCustomDomainShowSettings ResetVerbose(this AzureCdnCustomDomainShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -4167,6 +4901,328 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureCdnOriginListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureCdnTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureCdnOriginListSettingsExtensions
+    {
+        #region EndpointName
+        /// <summary><p><em>Sets <see cref="AzureCdnOriginListSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
+        [Pure]
+        public static AzureCdnOriginListSettings SetEndpointName(this AzureCdnOriginListSettings toolSettings, string endpointName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointName = endpointName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnOriginListSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
+        [Pure]
+        public static AzureCdnOriginListSettings ResetEndpointName(this AzureCdnOriginListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ProfileName
+        /// <summary><p><em>Sets <see cref="AzureCdnOriginListSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
+        [Pure]
+        public static AzureCdnOriginListSettings SetProfileName(this AzureCdnOriginListSettings toolSettings, string profileName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ProfileName = profileName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnOriginListSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
+        [Pure]
+        public static AzureCdnOriginListSettings ResetProfileName(this AzureCdnOriginListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ProfileName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureCdnOriginListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureCdnOriginListSettings SetResourceGroup(this AzureCdnOriginListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnOriginListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureCdnOriginListSettings ResetResourceGroup(this AzureCdnOriginListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureCdnOriginListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureCdnOriginListSettings SetDebug(this AzureCdnOriginListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnOriginListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureCdnOriginListSettings ResetDebug(this AzureCdnOriginListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureCdnOriginListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureCdnOriginListSettings SetHelp(this AzureCdnOriginListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnOriginListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureCdnOriginListSettings ResetHelp(this AzureCdnOriginListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureCdnOriginListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureCdnOriginListSettings SetOutput(this AzureCdnOriginListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnOriginListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureCdnOriginListSettings ResetOutput(this AzureCdnOriginListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureCdnOriginListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureCdnOriginListSettings SetQuery(this AzureCdnOriginListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnOriginListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureCdnOriginListSettings ResetQuery(this AzureCdnOriginListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureCdnOriginListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureCdnOriginListSettings SetVerbose(this AzureCdnOriginListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnOriginListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureCdnOriginListSettings ResetVerbose(this AzureCdnOriginListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureCdnOriginShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureCdnTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureCdnOriginShowSettingsExtensions
+    {
+        #region EndpointName
+        /// <summary><p><em>Sets <see cref="AzureCdnOriginShowSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
+        [Pure]
+        public static AzureCdnOriginShowSettings SetEndpointName(this AzureCdnOriginShowSettings toolSettings, string endpointName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointName = endpointName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnOriginShowSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
+        [Pure]
+        public static AzureCdnOriginShowSettings ResetEndpointName(this AzureCdnOriginShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureCdnOriginShowSettings.Name"/>.</em></p><p>Name of the origin which is unique within the endpoint.</p></summary>
+        [Pure]
+        public static AzureCdnOriginShowSettings SetName(this AzureCdnOriginShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnOriginShowSettings.Name"/>.</em></p><p>Name of the origin which is unique within the endpoint.</p></summary>
+        [Pure]
+        public static AzureCdnOriginShowSettings ResetName(this AzureCdnOriginShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ProfileName
+        /// <summary><p><em>Sets <see cref="AzureCdnOriginShowSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
+        [Pure]
+        public static AzureCdnOriginShowSettings SetProfileName(this AzureCdnOriginShowSettings toolSettings, string profileName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ProfileName = profileName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnOriginShowSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
+        [Pure]
+        public static AzureCdnOriginShowSettings ResetProfileName(this AzureCdnOriginShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ProfileName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureCdnOriginShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureCdnOriginShowSettings SetResourceGroup(this AzureCdnOriginShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnOriginShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureCdnOriginShowSettings ResetResourceGroup(this AzureCdnOriginShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureCdnOriginShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureCdnOriginShowSettings SetDebug(this AzureCdnOriginShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnOriginShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureCdnOriginShowSettings ResetDebug(this AzureCdnOriginShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureCdnOriginShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureCdnOriginShowSettings SetHelp(this AzureCdnOriginShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnOriginShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureCdnOriginShowSettings ResetHelp(this AzureCdnOriginShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureCdnOriginShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureCdnOriginShowSettings SetOutput(this AzureCdnOriginShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnOriginShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureCdnOriginShowSettings ResetOutput(this AzureCdnOriginShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureCdnOriginShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureCdnOriginShowSettings SetQuery(this AzureCdnOriginShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnOriginShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureCdnOriginShowSettings ResetQuery(this AzureCdnOriginShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureCdnOriginShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureCdnOriginShowSettings SetVerbose(this AzureCdnOriginShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCdnOriginShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureCdnOriginShowSettings ResetVerbose(this AzureCdnOriginShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureCdnProfileCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureCdnTasks"/>.</p></summary>
     [PublicAPI]
@@ -5089,1062 +6145,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureCdnProfileUsageSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureCdnProfileUsageSettings ResetVerbose(this AzureCdnProfileUsageSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureCdnCustomDomainCreateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureCdnTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureCdnCustomDomainCreateSettingsExtensions
-    {
-        #region EndpointName
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainCreateSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainCreateSettings SetEndpointName(this AzureCdnCustomDomainCreateSettings toolSettings, string endpointName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndpointName = endpointName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainCreateSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainCreateSettings ResetEndpointName(this AzureCdnCustomDomainCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndpointName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Hostname
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainCreateSettings.Hostname"/>.</em></p><p>The host name of the custom domain. Must be a domain name.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainCreateSettings SetHostname(this AzureCdnCustomDomainCreateSettings toolSettings, string hostname)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Hostname = hostname;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainCreateSettings.Hostname"/>.</em></p><p>The host name of the custom domain. Must be a domain name.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainCreateSettings ResetHostname(this AzureCdnCustomDomainCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Hostname = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainCreateSettings.Name"/>.</em></p><p>Name of the custom domain.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainCreateSettings SetName(this AzureCdnCustomDomainCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainCreateSettings.Name"/>.</em></p><p>Name of the custom domain.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainCreateSettings ResetName(this AzureCdnCustomDomainCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ProfileName
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainCreateSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainCreateSettings SetProfileName(this AzureCdnCustomDomainCreateSettings toolSettings, string profileName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ProfileName = profileName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainCreateSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainCreateSettings ResetProfileName(this AzureCdnCustomDomainCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ProfileName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainCreateSettings SetResourceGroup(this AzureCdnCustomDomainCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainCreateSettings ResetResourceGroup(this AzureCdnCustomDomainCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Location
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainCreateSettings SetLocation(this AzureCdnCustomDomainCreateSettings toolSettings, string location)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = location;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainCreateSettings ResetLocation(this AzureCdnCustomDomainCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Tags
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainCreateSettings SetTags(this AzureCdnCustomDomainCreateSettings toolSettings, string tags)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = tags;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainCreateSettings ResetTags(this AzureCdnCustomDomainCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainCreateSettings SetDebug(this AzureCdnCustomDomainCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainCreateSettings ResetDebug(this AzureCdnCustomDomainCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainCreateSettings SetHelp(this AzureCdnCustomDomainCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainCreateSettings ResetHelp(this AzureCdnCustomDomainCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainCreateSettings SetOutput(this AzureCdnCustomDomainCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainCreateSettings ResetOutput(this AzureCdnCustomDomainCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainCreateSettings SetQuery(this AzureCdnCustomDomainCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainCreateSettings ResetQuery(this AzureCdnCustomDomainCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainCreateSettings SetVerbose(this AzureCdnCustomDomainCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainCreateSettings ResetVerbose(this AzureCdnCustomDomainCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureCdnCustomDomainDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureCdnTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureCdnCustomDomainDeleteSettingsExtensions
-    {
-        #region EndpointName
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDeleteSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDeleteSettings SetEndpointName(this AzureCdnCustomDomainDeleteSettings toolSettings, string endpointName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndpointName = endpointName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDeleteSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDeleteSettings ResetEndpointName(this AzureCdnCustomDomainDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndpointName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDeleteSettings.Name"/>.</em></p><p>Name of the custom domain.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDeleteSettings SetName(this AzureCdnCustomDomainDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDeleteSettings.Name"/>.</em></p><p>Name of the custom domain.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDeleteSettings ResetName(this AzureCdnCustomDomainDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ProfileName
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDeleteSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDeleteSettings SetProfileName(this AzureCdnCustomDomainDeleteSettings toolSettings, string profileName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ProfileName = profileName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDeleteSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDeleteSettings ResetProfileName(this AzureCdnCustomDomainDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ProfileName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDeleteSettings SetResourceGroup(this AzureCdnCustomDomainDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDeleteSettings ResetResourceGroup(this AzureCdnCustomDomainDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDeleteSettings SetDebug(this AzureCdnCustomDomainDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDeleteSettings ResetDebug(this AzureCdnCustomDomainDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDeleteSettings SetHelp(this AzureCdnCustomDomainDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDeleteSettings ResetHelp(this AzureCdnCustomDomainDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDeleteSettings SetOutput(this AzureCdnCustomDomainDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDeleteSettings ResetOutput(this AzureCdnCustomDomainDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDeleteSettings SetQuery(this AzureCdnCustomDomainDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDeleteSettings ResetQuery(this AzureCdnCustomDomainDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDeleteSettings SetVerbose(this AzureCdnCustomDomainDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDeleteSettings ResetVerbose(this AzureCdnCustomDomainDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureCdnCustomDomainDisableHttpsSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureCdnTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureCdnCustomDomainDisableHttpsSettingsExtensions
-    {
-        #region EndpointName
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDisableHttpsSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDisableHttpsSettings SetEndpointName(this AzureCdnCustomDomainDisableHttpsSettings toolSettings, string endpointName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndpointName = endpointName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDisableHttpsSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDisableHttpsSettings ResetEndpointName(this AzureCdnCustomDomainDisableHttpsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndpointName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDisableHttpsSettings.Name"/>.</em></p><p>Name of the custom domain.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDisableHttpsSettings SetName(this AzureCdnCustomDomainDisableHttpsSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDisableHttpsSettings.Name"/>.</em></p><p>Name of the custom domain.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDisableHttpsSettings ResetName(this AzureCdnCustomDomainDisableHttpsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ProfileName
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDisableHttpsSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDisableHttpsSettings SetProfileName(this AzureCdnCustomDomainDisableHttpsSettings toolSettings, string profileName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ProfileName = profileName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDisableHttpsSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDisableHttpsSettings ResetProfileName(this AzureCdnCustomDomainDisableHttpsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ProfileName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDisableHttpsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDisableHttpsSettings SetResourceGroup(this AzureCdnCustomDomainDisableHttpsSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDisableHttpsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDisableHttpsSettings ResetResourceGroup(this AzureCdnCustomDomainDisableHttpsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDisableHttpsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDisableHttpsSettings SetDebug(this AzureCdnCustomDomainDisableHttpsSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDisableHttpsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDisableHttpsSettings ResetDebug(this AzureCdnCustomDomainDisableHttpsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDisableHttpsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDisableHttpsSettings SetHelp(this AzureCdnCustomDomainDisableHttpsSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDisableHttpsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDisableHttpsSettings ResetHelp(this AzureCdnCustomDomainDisableHttpsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDisableHttpsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDisableHttpsSettings SetOutput(this AzureCdnCustomDomainDisableHttpsSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDisableHttpsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDisableHttpsSettings ResetOutput(this AzureCdnCustomDomainDisableHttpsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDisableHttpsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDisableHttpsSettings SetQuery(this AzureCdnCustomDomainDisableHttpsSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDisableHttpsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDisableHttpsSettings ResetQuery(this AzureCdnCustomDomainDisableHttpsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainDisableHttpsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDisableHttpsSettings SetVerbose(this AzureCdnCustomDomainDisableHttpsSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainDisableHttpsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainDisableHttpsSettings ResetVerbose(this AzureCdnCustomDomainDisableHttpsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureCdnCustomDomainEnableHttpsSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureCdnTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureCdnCustomDomainEnableHttpsSettingsExtensions
-    {
-        #region EndpointName
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainEnableHttpsSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainEnableHttpsSettings SetEndpointName(this AzureCdnCustomDomainEnableHttpsSettings toolSettings, string endpointName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndpointName = endpointName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainEnableHttpsSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainEnableHttpsSettings ResetEndpointName(this AzureCdnCustomDomainEnableHttpsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndpointName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainEnableHttpsSettings.Name"/>.</em></p><p>Name of the custom domain.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainEnableHttpsSettings SetName(this AzureCdnCustomDomainEnableHttpsSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainEnableHttpsSettings.Name"/>.</em></p><p>Name of the custom domain.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainEnableHttpsSettings ResetName(this AzureCdnCustomDomainEnableHttpsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ProfileName
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainEnableHttpsSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainEnableHttpsSettings SetProfileName(this AzureCdnCustomDomainEnableHttpsSettings toolSettings, string profileName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ProfileName = profileName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainEnableHttpsSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainEnableHttpsSettings ResetProfileName(this AzureCdnCustomDomainEnableHttpsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ProfileName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainEnableHttpsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainEnableHttpsSettings SetResourceGroup(this AzureCdnCustomDomainEnableHttpsSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainEnableHttpsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainEnableHttpsSettings ResetResourceGroup(this AzureCdnCustomDomainEnableHttpsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainEnableHttpsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainEnableHttpsSettings SetDebug(this AzureCdnCustomDomainEnableHttpsSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainEnableHttpsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainEnableHttpsSettings ResetDebug(this AzureCdnCustomDomainEnableHttpsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainEnableHttpsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainEnableHttpsSettings SetHelp(this AzureCdnCustomDomainEnableHttpsSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainEnableHttpsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainEnableHttpsSettings ResetHelp(this AzureCdnCustomDomainEnableHttpsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainEnableHttpsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainEnableHttpsSettings SetOutput(this AzureCdnCustomDomainEnableHttpsSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainEnableHttpsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainEnableHttpsSettings ResetOutput(this AzureCdnCustomDomainEnableHttpsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainEnableHttpsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainEnableHttpsSettings SetQuery(this AzureCdnCustomDomainEnableHttpsSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainEnableHttpsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainEnableHttpsSettings ResetQuery(this AzureCdnCustomDomainEnableHttpsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainEnableHttpsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainEnableHttpsSettings SetVerbose(this AzureCdnCustomDomainEnableHttpsSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainEnableHttpsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainEnableHttpsSettings ResetVerbose(this AzureCdnCustomDomainEnableHttpsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureCdnCustomDomainListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureCdnTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureCdnCustomDomainListSettingsExtensions
-    {
-        #region EndpointName
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainListSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainListSettings SetEndpointName(this AzureCdnCustomDomainListSettings toolSettings, string endpointName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndpointName = endpointName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainListSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainListSettings ResetEndpointName(this AzureCdnCustomDomainListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndpointName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ProfileName
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainListSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainListSettings SetProfileName(this AzureCdnCustomDomainListSettings toolSettings, string profileName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ProfileName = profileName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainListSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainListSettings ResetProfileName(this AzureCdnCustomDomainListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ProfileName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainListSettings SetResourceGroup(this AzureCdnCustomDomainListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainListSettings ResetResourceGroup(this AzureCdnCustomDomainListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainListSettings SetDebug(this AzureCdnCustomDomainListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainListSettings ResetDebug(this AzureCdnCustomDomainListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainListSettings SetHelp(this AzureCdnCustomDomainListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainListSettings ResetHelp(this AzureCdnCustomDomainListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainListSettings SetOutput(this AzureCdnCustomDomainListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainListSettings ResetOutput(this AzureCdnCustomDomainListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainListSettings SetQuery(this AzureCdnCustomDomainListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainListSettings ResetQuery(this AzureCdnCustomDomainListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainListSettings SetVerbose(this AzureCdnCustomDomainListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainListSettings ResetVerbose(this AzureCdnCustomDomainListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureCdnCustomDomainShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureCdnTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureCdnCustomDomainShowSettingsExtensions
-    {
-        #region EndpointName
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainShowSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainShowSettings SetEndpointName(this AzureCdnCustomDomainShowSettings toolSettings, string endpointName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndpointName = endpointName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainShowSettings.EndpointName"/>.</em></p><p>Name of the endpoint under the profile which is unique globally.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainShowSettings ResetEndpointName(this AzureCdnCustomDomainShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndpointName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainShowSettings.Name"/>.</em></p><p>Name of the custom domain.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainShowSettings SetName(this AzureCdnCustomDomainShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainShowSettings.Name"/>.</em></p><p>Name of the custom domain.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainShowSettings ResetName(this AzureCdnCustomDomainShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ProfileName
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainShowSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainShowSettings SetProfileName(this AzureCdnCustomDomainShowSettings toolSettings, string profileName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ProfileName = profileName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainShowSettings.ProfileName"/>.</em></p><p>Name of the CDN profile which is unique within the resource group.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainShowSettings ResetProfileName(this AzureCdnCustomDomainShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ProfileName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainShowSettings SetResourceGroup(this AzureCdnCustomDomainShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainShowSettings ResetResourceGroup(this AzureCdnCustomDomainShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainShowSettings SetDebug(this AzureCdnCustomDomainShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainShowSettings ResetDebug(this AzureCdnCustomDomainShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainShowSettings SetHelp(this AzureCdnCustomDomainShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainShowSettings ResetHelp(this AzureCdnCustomDomainShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainShowSettings SetOutput(this AzureCdnCustomDomainShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainShowSettings ResetOutput(this AzureCdnCustomDomainShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainShowSettings SetQuery(this AzureCdnCustomDomainShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainShowSettings ResetQuery(this AzureCdnCustomDomainShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureCdnCustomDomainShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainShowSettings SetVerbose(this AzureCdnCustomDomainShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCdnCustomDomainShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureCdnCustomDomainShowSettings ResetVerbose(this AzureCdnCustomDomainShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

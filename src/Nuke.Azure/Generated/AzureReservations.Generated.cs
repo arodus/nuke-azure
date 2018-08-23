@@ -2,7 +2,7 @@
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
-// Generated with Nuke.CodeGeneration, Version: 0.6.1 [CommitSha: 8eca516b].
+// Generated with Nuke.CodeGeneration, Version: 0.6.2 [CommitSha: ff25463a].
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureReservations.json.
 
 using JetBrains.Annotations;
@@ -44,9 +44,33 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure Reservations.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reservations?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureReservationsCatalogShow(Configure<AzureReservationsCatalogShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureReservationsCatalogShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Reservations.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reservations?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureReservationsReservationOrderIdList(Configure<AzureReservationsReservationOrderIdListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureReservationsReservationOrderIdListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Reservations.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reservations?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureReservationsReservationOrderList(Configure<AzureReservationsReservationOrderListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureReservationsReservationOrderListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Reservations.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reservations?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureReservationsReservationOrderShow(Configure<AzureReservationsReservationOrderShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureReservationsReservationOrderShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -99,30 +123,6 @@ namespace Nuke.Azure
             process.AssertZeroExitCode();
             return process.Output;
         }
-        /// <summary><p>Manage Azure Reservations.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reservations?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureReservationsCatalogShow(Configure<AzureReservationsCatalogShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureReservationsCatalogShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Reservations.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reservations?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureReservationsReservationOrderList(Configure<AzureReservationsReservationOrderListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureReservationsReservationOrderListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Reservations.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reservations?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureReservationsReservationOrderShow(Configure<AzureReservationsReservationOrderShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureReservationsReservationOrderShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
     }
     #region AzureReservationsSettings
     /// <summary><p>Used within <see cref="AzureReservationsTasks"/>.</p></summary>
@@ -147,6 +147,47 @@ namespace Nuke.Azure
         {
             arguments
               .Add("reservations")
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureReservationsCatalogShowSettings
+    /// <summary><p>Used within <see cref="AzureReservationsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureReservationsCatalogShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureReservations executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureReservationsTasks.AzureReservationsPath;
+        /// <summary><p>Type of the resource for which the skus should be provided.</p></summary>
+        public virtual ReservationsCatalogShowReservedResourceType ReservedResourceType { get; internal set; }
+        /// <summary><p>Id of the subscription to get the catalog for.</p></summary>
+        public virtual string SubscriptionId { get; internal set; }
+        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        public virtual string Location { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("reservations catalog show")
+              .Add("--reserved-resource-type {value}", ReservedResourceType)
+              .Add("--subscription-id {value}", SubscriptionId)
+              .Add("--location {value}", Location)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -182,6 +223,73 @@ namespace Nuke.Azure
             arguments
               .Add("reservations reservation-order-id list")
               .Add("--subscription-id {value}", SubscriptionId)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureReservationsReservationOrderListSettings
+    /// <summary><p>Used within <see cref="AzureReservationsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureReservationsReservationOrderListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureReservations executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureReservationsTasks.AzureReservationsPath;
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("reservations reservation-order list")
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureReservationsReservationOrderShowSettings
+    /// <summary><p>Used within <see cref="AzureReservationsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureReservationsReservationOrderShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureReservations executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureReservationsTasks.AzureReservationsPath;
+        /// <summary><p>Id of reservation order to look up.</p></summary>
+        public virtual string ReservationOrderId { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("reservations reservation-order show")
+              .Add("--reservation-order-id {value}", ReservationOrderId)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -434,114 +542,6 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureReservationsCatalogShowSettings
-    /// <summary><p>Used within <see cref="AzureReservationsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureReservationsCatalogShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureReservations executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureReservationsTasks.AzureReservationsPath;
-        /// <summary><p>Type of the resource for which the skus should be provided.</p></summary>
-        public virtual ReservationsCatalogShowReservedResourceType ReservedResourceType { get; internal set; }
-        /// <summary><p>Id of the subscription to get the catalog for.</p></summary>
-        public virtual string SubscriptionId { get; internal set; }
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        public virtual string Location { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("reservations catalog show")
-              .Add("--reserved-resource-type {value}", ReservedResourceType)
-              .Add("--subscription-id {value}", SubscriptionId)
-              .Add("--location {value}", Location)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureReservationsReservationOrderListSettings
-    /// <summary><p>Used within <see cref="AzureReservationsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureReservationsReservationOrderListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureReservations executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureReservationsTasks.AzureReservationsPath;
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("reservations reservation-order list")
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureReservationsReservationOrderShowSettings
-    /// <summary><p>Used within <see cref="AzureReservationsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureReservationsReservationOrderShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureReservations executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureReservationsTasks.AzureReservationsPath;
-        /// <summary><p>Id of reservation order to look up.</p></summary>
-        public virtual string ReservationOrderId { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("reservations reservation-order show")
-              .Add("--reservation-order-id {value}", ReservationOrderId)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
     #region AzureReservationsSettingsExtensions
     /// <summary><p>Used within <see cref="AzureReservationsTasks"/>.</p></summary>
     [PublicAPI]
@@ -632,6 +632,158 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureReservationsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureReservationsSettings ResetVerbose(this AzureReservationsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureReservationsCatalogShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureReservationsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureReservationsCatalogShowSettingsExtensions
+    {
+        #region ReservedResourceType
+        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.ReservedResourceType"/>.</em></p><p>Type of the resource for which the skus should be provided.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings SetReservedResourceType(this AzureReservationsCatalogShowSettings toolSettings, ReservationsCatalogShowReservedResourceType reservedResourceType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ReservedResourceType = reservedResourceType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.ReservedResourceType"/>.</em></p><p>Type of the resource for which the skus should be provided.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings ResetReservedResourceType(this AzureReservationsCatalogShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ReservedResourceType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SubscriptionId
+        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.SubscriptionId"/>.</em></p><p>Id of the subscription to get the catalog for.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings SetSubscriptionId(this AzureReservationsCatalogShowSettings toolSettings, string subscriptionId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SubscriptionId = subscriptionId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.SubscriptionId"/>.</em></p><p>Id of the subscription to get the catalog for.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings ResetSubscriptionId(this AzureReservationsCatalogShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SubscriptionId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Location
+        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings SetLocation(this AzureReservationsCatalogShowSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings ResetLocation(this AzureReservationsCatalogShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings SetDebug(this AzureReservationsCatalogShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings ResetDebug(this AzureReservationsCatalogShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings SetHelp(this AzureReservationsCatalogShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings ResetHelp(this AzureReservationsCatalogShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings SetOutput(this AzureReservationsCatalogShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings ResetOutput(this AzureReservationsCatalogShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings SetQuery(this AzureReservationsCatalogShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings ResetQuery(this AzureReservationsCatalogShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings SetVerbose(this AzureReservationsCatalogShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings ResetVerbose(this AzureReservationsCatalogShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -748,6 +900,220 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureReservationsReservationOrderIdListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureReservationsReservationOrderIdListSettings ResetVerbose(this AzureReservationsReservationOrderIdListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureReservationsReservationOrderListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureReservationsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureReservationsReservationOrderListSettingsExtensions
+    {
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureReservationsReservationOrderListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationOrderListSettings SetDebug(this AzureReservationsReservationOrderListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsReservationOrderListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationOrderListSettings ResetDebug(this AzureReservationsReservationOrderListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureReservationsReservationOrderListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationOrderListSettings SetHelp(this AzureReservationsReservationOrderListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsReservationOrderListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationOrderListSettings ResetHelp(this AzureReservationsReservationOrderListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureReservationsReservationOrderListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationOrderListSettings SetOutput(this AzureReservationsReservationOrderListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsReservationOrderListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationOrderListSettings ResetOutput(this AzureReservationsReservationOrderListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureReservationsReservationOrderListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationOrderListSettings SetQuery(this AzureReservationsReservationOrderListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsReservationOrderListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationOrderListSettings ResetQuery(this AzureReservationsReservationOrderListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureReservationsReservationOrderListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationOrderListSettings SetVerbose(this AzureReservationsReservationOrderListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsReservationOrderListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationOrderListSettings ResetVerbose(this AzureReservationsReservationOrderListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureReservationsReservationOrderShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureReservationsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureReservationsReservationOrderShowSettingsExtensions
+    {
+        #region ReservationOrderId
+        /// <summary><p><em>Sets <see cref="AzureReservationsReservationOrderShowSettings.ReservationOrderId"/>.</em></p><p>Id of reservation order to look up.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationOrderShowSettings SetReservationOrderId(this AzureReservationsReservationOrderShowSettings toolSettings, string reservationOrderId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ReservationOrderId = reservationOrderId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsReservationOrderShowSettings.ReservationOrderId"/>.</em></p><p>Id of reservation order to look up.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationOrderShowSettings ResetReservationOrderId(this AzureReservationsReservationOrderShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ReservationOrderId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureReservationsReservationOrderShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationOrderShowSettings SetDebug(this AzureReservationsReservationOrderShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsReservationOrderShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationOrderShowSettings ResetDebug(this AzureReservationsReservationOrderShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureReservationsReservationOrderShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationOrderShowSettings SetHelp(this AzureReservationsReservationOrderShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsReservationOrderShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationOrderShowSettings ResetHelp(this AzureReservationsReservationOrderShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureReservationsReservationOrderShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationOrderShowSettings SetOutput(this AzureReservationsReservationOrderShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsReservationOrderShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationOrderShowSettings ResetOutput(this AzureReservationsReservationOrderShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureReservationsReservationOrderShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationOrderShowSettings SetQuery(this AzureReservationsReservationOrderShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsReservationOrderShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationOrderShowSettings ResetQuery(this AzureReservationsReservationOrderShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureReservationsReservationOrderShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationOrderShowSettings SetVerbose(this AzureReservationsReservationOrderShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsReservationOrderShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationOrderShowSettings ResetVerbose(this AzureReservationsReservationOrderShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -1650,370 +2016,16 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureReservationsCatalogShowSettingsExtensions
+    #region ReservationsCatalogShowReservedResourceType
     /// <summary><p>Used within <see cref="AzureReservationsTasks"/>.</p></summary>
     [PublicAPI]
+    [Serializable]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureReservationsCatalogShowSettingsExtensions
+    public partial class ReservationsCatalogShowReservedResourceType : Enumeration
     {
-        #region ReservedResourceType
-        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.ReservedResourceType"/>.</em></p><p>Type of the resource for which the skus should be provided.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings SetReservedResourceType(this AzureReservationsCatalogShowSettings toolSettings, ReservationsCatalogShowReservedResourceType reservedResourceType)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ReservedResourceType = reservedResourceType;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.ReservedResourceType"/>.</em></p><p>Type of the resource for which the skus should be provided.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings ResetReservedResourceType(this AzureReservationsCatalogShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ReservedResourceType = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SubscriptionId
-        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.SubscriptionId"/>.</em></p><p>Id of the subscription to get the catalog for.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings SetSubscriptionId(this AzureReservationsCatalogShowSettings toolSettings, string subscriptionId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SubscriptionId = subscriptionId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.SubscriptionId"/>.</em></p><p>Id of the subscription to get the catalog for.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings ResetSubscriptionId(this AzureReservationsCatalogShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SubscriptionId = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Location
-        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings SetLocation(this AzureReservationsCatalogShowSettings toolSettings, string location)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = location;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings ResetLocation(this AzureReservationsCatalogShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings SetDebug(this AzureReservationsCatalogShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings ResetDebug(this AzureReservationsCatalogShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings SetHelp(this AzureReservationsCatalogShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings ResetHelp(this AzureReservationsCatalogShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings SetOutput(this AzureReservationsCatalogShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings ResetOutput(this AzureReservationsCatalogShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings SetQuery(this AzureReservationsCatalogShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings ResetQuery(this AzureReservationsCatalogShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings SetVerbose(this AzureReservationsCatalogShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings ResetVerbose(this AzureReservationsCatalogShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureReservationsReservationOrderListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureReservationsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureReservationsReservationOrderListSettingsExtensions
-    {
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureReservationsReservationOrderListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureReservationsReservationOrderListSettings SetDebug(this AzureReservationsReservationOrderListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureReservationsReservationOrderListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureReservationsReservationOrderListSettings ResetDebug(this AzureReservationsReservationOrderListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureReservationsReservationOrderListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureReservationsReservationOrderListSettings SetHelp(this AzureReservationsReservationOrderListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureReservationsReservationOrderListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureReservationsReservationOrderListSettings ResetHelp(this AzureReservationsReservationOrderListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureReservationsReservationOrderListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureReservationsReservationOrderListSettings SetOutput(this AzureReservationsReservationOrderListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureReservationsReservationOrderListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureReservationsReservationOrderListSettings ResetOutput(this AzureReservationsReservationOrderListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureReservationsReservationOrderListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureReservationsReservationOrderListSettings SetQuery(this AzureReservationsReservationOrderListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureReservationsReservationOrderListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureReservationsReservationOrderListSettings ResetQuery(this AzureReservationsReservationOrderListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureReservationsReservationOrderListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureReservationsReservationOrderListSettings SetVerbose(this AzureReservationsReservationOrderListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureReservationsReservationOrderListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureReservationsReservationOrderListSettings ResetVerbose(this AzureReservationsReservationOrderListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureReservationsReservationOrderShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureReservationsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureReservationsReservationOrderShowSettingsExtensions
-    {
-        #region ReservationOrderId
-        /// <summary><p><em>Sets <see cref="AzureReservationsReservationOrderShowSettings.ReservationOrderId"/>.</em></p><p>Id of reservation order to look up.</p></summary>
-        [Pure]
-        public static AzureReservationsReservationOrderShowSettings SetReservationOrderId(this AzureReservationsReservationOrderShowSettings toolSettings, string reservationOrderId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ReservationOrderId = reservationOrderId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureReservationsReservationOrderShowSettings.ReservationOrderId"/>.</em></p><p>Id of reservation order to look up.</p></summary>
-        [Pure]
-        public static AzureReservationsReservationOrderShowSettings ResetReservationOrderId(this AzureReservationsReservationOrderShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ReservationOrderId = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureReservationsReservationOrderShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureReservationsReservationOrderShowSettings SetDebug(this AzureReservationsReservationOrderShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureReservationsReservationOrderShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureReservationsReservationOrderShowSettings ResetDebug(this AzureReservationsReservationOrderShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureReservationsReservationOrderShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureReservationsReservationOrderShowSettings SetHelp(this AzureReservationsReservationOrderShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureReservationsReservationOrderShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureReservationsReservationOrderShowSettings ResetHelp(this AzureReservationsReservationOrderShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureReservationsReservationOrderShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureReservationsReservationOrderShowSettings SetOutput(this AzureReservationsReservationOrderShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureReservationsReservationOrderShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureReservationsReservationOrderShowSettings ResetOutput(this AzureReservationsReservationOrderShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureReservationsReservationOrderShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureReservationsReservationOrderShowSettings SetQuery(this AzureReservationsReservationOrderShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureReservationsReservationOrderShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureReservationsReservationOrderShowSettings ResetQuery(this AzureReservationsReservationOrderShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureReservationsReservationOrderShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureReservationsReservationOrderShowSettings SetVerbose(this AzureReservationsReservationOrderShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureReservationsReservationOrderShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureReservationsReservationOrderShowSettings ResetVerbose(this AzureReservationsReservationOrderShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
+        public static ReservationsCatalogShowReservedResourceType sqldatabases = new ReservationsCatalogShowReservedResourceType { Value = "sqldatabases" };
+        public static ReservationsCatalogShowReservedResourceType suselinux = new ReservationsCatalogShowReservedResourceType { Value = "suselinux" };
+        public static ReservationsCatalogShowReservedResourceType virtualmachines = new ReservationsCatalogShowReservedResourceType { Value = "virtualmachines" };
     }
     #endregion
     #region ReservationsReservationUpdateAppliedScopeType
@@ -2037,18 +2049,6 @@ namespace Nuke.Azure
         public static ReservationsReservationUpdateInstanceFlexibility notsupported = new ReservationsReservationUpdateInstanceFlexibility { Value = "notsupported" };
         public static ReservationsReservationUpdateInstanceFlexibility off = new ReservationsReservationUpdateInstanceFlexibility { Value = "off" };
         public static ReservationsReservationUpdateInstanceFlexibility on = new ReservationsReservationUpdateInstanceFlexibility { Value = "on" };
-    }
-    #endregion
-    #region ReservationsCatalogShowReservedResourceType
-    /// <summary><p>Used within <see cref="AzureReservationsTasks"/>.</p></summary>
-    [PublicAPI]
-    [Serializable]
-    [ExcludeFromCodeCoverage]
-    public partial class ReservationsCatalogShowReservedResourceType : Enumeration
-    {
-        public static ReservationsCatalogShowReservedResourceType sqldatabases = new ReservationsCatalogShowReservedResourceType { Value = "sqldatabases" };
-        public static ReservationsCatalogShowReservedResourceType suselinux = new ReservationsCatalogShowReservedResourceType { Value = "suselinux" };
-        public static ReservationsCatalogShowReservedResourceType virtualmachines = new ReservationsCatalogShowReservedResourceType { Value = "virtualmachines" };
     }
     #endregion
 }

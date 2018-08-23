@@ -6,15 +6,15 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/vmss.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/vmss/disk.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/vmss/diagnostics.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/vmss/identity.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/vmss/rolling-upgrade.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/vmss/nic.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/vmss/extension.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/vmss/encryption.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/vmss/extension/image.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/vmss.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/vmss/diagnostics.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/vmss/disk.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/vmss/encryption.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/vmss/extension.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/vmss/identity.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/vmss/nic.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/vmss/rolling-upgrade.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/vmss/extension/image.yml"
   ],
   "name": "AzureVmss",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/vmss?view=azure-cli-latest",
@@ -88,8 +88,8 @@
           },
           {
             "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
+            "type": "bool",
+            "format": "--no-wait",
             "help": "Do not wait for the long-running operation to finish."
           },
           {
@@ -437,8 +437,8 @@
           },
           {
             "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
+            "type": "bool",
+            "format": "--no-wait",
             "help": "Do not wait for the long-running operation to finish."
           }
         ]
@@ -463,8 +463,8 @@
           },
           {
             "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
+            "type": "bool",
+            "format": "--no-wait",
             "help": "Do not wait for the long-running operation to finish."
           }
         ]
@@ -496,8 +496,8 @@
           },
           {
             "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
+            "type": "bool",
+            "format": "--no-wait",
             "help": "Do not wait for the long-running operation to finish."
           }
         ]
@@ -693,8 +693,8 @@
           },
           {
             "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
+            "type": "bool",
+            "format": "--no-wait",
             "help": "Do not wait for the long-running operation to finish."
           }
         ]
@@ -726,8 +726,8 @@
           },
           {
             "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
+            "type": "bool",
+            "format": "--no-wait",
             "help": "Do not wait for the long-running operation to finish."
           }
         ]
@@ -758,8 +758,8 @@
           },
           {
             "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
+            "type": "bool",
+            "format": "--no-wait",
             "help": "Do not wait for the long-running operation to finish."
           }
         ]
@@ -817,8 +817,8 @@
           },
           {
             "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
+            "type": "bool",
+            "format": "--no-wait",
             "help": "Do not wait for the long-running operation to finish."
           }
         ]
@@ -850,8 +850,8 @@
           },
           {
             "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
+            "type": "bool",
+            "format": "--no-wait",
             "help": "Do not wait for the long-running operation to finish."
           }
         ]
@@ -882,8 +882,8 @@
           },
           {
             "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
+            "type": "bool",
+            "format": "--no-wait",
             "help": "Do not wait for the long-running operation to finish."
           },
           {
@@ -939,8 +939,8 @@
           },
           {
             "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
+            "type": "bool",
+            "format": "--no-wait",
             "help": "Do not wait for the long-running operation to finish."
           }
         ]
@@ -1004,6 +1004,64 @@
             "type": "string",
             "format": "--updated {value}",
             "help": "Wait until updated with provisioningState at 'Succeeded'."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DiagnosticsGetDefaultConfig",
+      "definiteArgument": "vmss diagnostics get-default-config",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "IsWindowsOs",
+            "type": "string",
+            "format": "--is-windows-os {value}",
+            "help": "For Windows VMs."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DiagnosticsSet",
+      "definiteArgument": "vmss diagnostics set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Settings",
+            "type": "string",
+            "format": "--settings {value}",
+            "help": "Json string or a file path, which defines data to be collected."
+          },
+          {
+            "name": "VmssName",
+            "type": "string",
+            "format": "--vmss-name {value}",
+            "help": "Scale set name."
+          },
+          {
+            "name": "NoAutoUpgrade",
+            "type": "bool",
+            "format": "--no-auto-upgrade",
+            "help": "By doing this, extension system will not pick the highest minor version for the specified version number, and will not auto update to the latest build/revision number on any scale set updates in future."
+          },
+          {
+            "name": "ProtectedSettings",
+            "type": "string",
+            "format": "--protected-settings {value}",
+            "help": "Json string or a file path containing private configurations such as storage account keys, etc."
+          },
+          {
+            "name": "Version",
+            "type": "string",
+            "format": "--version {value}",
+            "help": "Version of the diagnostics extension. Will use the latest if not specfied."
           }
         ]
       }
@@ -1086,438 +1144,6 @@
             "type": "string",
             "format": "--instance-id {value}",
             "help": "Scale set VM instance id."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DiagnosticsGetDefaultConfig",
-      "definiteArgument": "vmss diagnostics get-default-config",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "IsWindowsOs",
-            "type": "string",
-            "format": "--is-windows-os {value}",
-            "help": "For Windows VMs."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DiagnosticsSet",
-      "definiteArgument": "vmss diagnostics set",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Settings",
-            "type": "string",
-            "format": "--settings {value}",
-            "help": "Json string or a file path, which defines data to be collected."
-          },
-          {
-            "name": "VmssName",
-            "type": "string",
-            "format": "--vmss-name {value}",
-            "help": "Scale set name."
-          },
-          {
-            "name": "NoAutoUpgrade",
-            "type": "string",
-            "format": "--no-auto-upgrade {value}",
-            "help": "By doing this, extension system will not pick the highest minor version for the specified version number, and will not auto update to the latest build/revision number on any scale set updates in future."
-          },
-          {
-            "name": "ProtectedSettings",
-            "type": "string",
-            "format": "--protected-settings {value}",
-            "help": "Json string or a file path containing private configurations such as storage account keys, etc."
-          },
-          {
-            "name": "Version",
-            "type": "string",
-            "format": "--version {value}",
-            "help": "Version of the diagnostics extension. Will use the latest if not specfied."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "IdentityAssign",
-      "definiteArgument": "vmss identity assign",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Identities",
-            "type": "string",
-            "format": "--identities {value}",
-            "help": "The identities to assign."
-          },
-          {
-            "name": "Role",
-            "type": "string",
-            "format": "--role {value}",
-            "help": "Role name or id the system assigned identity will have."
-          },
-          {
-            "name": "Scope",
-            "type": "string",
-            "format": "--scope {value}",
-            "help": "Scope that the system assigned identity can access."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "IdentityRemove",
-      "definiteArgument": "vmss identity remove",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Identities",
-            "type": "string",
-            "format": "--identities {value}",
-            "help": "Space-separated identities to remove. Use '[system]' to refer system assigned identity."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "IdentityShow",
-      "definiteArgument": "vmss identity show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "RollingUpgradeCancel",
-      "definiteArgument": "vmss rolling-upgrade cancel",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "RollingUpgradeGetLatest",
-      "definiteArgument": "vmss rolling-upgrade get-latest",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "RollingUpgradeStart",
-      "definiteArgument": "vmss rolling-upgrade start",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NicList",
-      "definiteArgument": "vmss nic list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "VmssName",
-            "type": "string",
-            "format": "--vmss-name {value}",
-            "help": "Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NicListVmNics",
-      "definiteArgument": "vmss nic list-vm-nics",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "InstanceId",
-            "type": "string",
-            "format": "--instance-id {value}",
-            "help": "The virtual machine index."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "VmssName",
-            "type": "string",
-            "format": "--vmss-name {value}",
-            "help": "Scale set name."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NicShow",
-      "definiteArgument": "vmss nic show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "InstanceId",
-            "type": "string",
-            "format": "--instance-id {value}",
-            "help": "The virtual machine index."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The network interface (NIC)."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "VmssName",
-            "type": "string",
-            "format": "--vmss-name {value}",
-            "help": "Scale set name."
-          },
-          {
-            "name": "Expand",
-            "type": "string",
-            "format": "--expand {value}",
-            "help": "Expands referenced resources."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ExtensionDelete",
-      "definiteArgument": "vmss extension delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the extension."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "VmssName",
-            "type": "string",
-            "format": "--vmss-name {value}",
-            "help": "Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
-            "help": "Do not wait for the long-running operation to finish."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ExtensionList",
-      "definiteArgument": "vmss extension list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "VmssName",
-            "type": "string",
-            "format": "--vmss-name {value}",
-            "help": "Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ExtensionSet",
-      "definiteArgument": "vmss extension set",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the extension."
-          },
-          {
-            "name": "Publisher",
-            "type": "string",
-            "format": "--publisher {value}",
-            "help": "The name of the extension publisher."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "VmssName",
-            "type": "string",
-            "format": "--vmss-name {value}",
-            "help": "Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ForceUpdate",
-            "type": "string",
-            "format": "--force-update {value}",
-            "help": "Force to update even if the extension configuration has not changed."
-          },
-          {
-            "name": "NoAutoUpgrade",
-            "type": "string",
-            "format": "--no-auto-upgrade {value}",
-            "help": "By doing this, extension system will not pick the highest minor version for the specified version number, and will not auto update to the latest build/revision number on any scale set updates in future."
-          },
-          {
-            "name": "NoWait",
-            "type": "string",
-            "format": "--no-wait {value}",
-            "help": "Do not wait for the long-running operation to finish."
-          },
-          {
-            "name": "ProtectedSettings",
-            "type": "string",
-            "format": "--protected-settings {value}",
-            "help": "Protected settings in JSON format for sensitive information like credentials. A JSON file path is also accepted."
-          },
-          {
-            "name": "Settings",
-            "type": "string",
-            "format": "--settings {value}",
-            "help": "Extension settings in JSON format. A JSON file path is also accepted."
-          },
-          {
-            "name": "Version",
-            "type": "string",
-            "format": "--version {value}",
-            "help": "The version of the extension."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ExtensionShow",
-      "definiteArgument": "vmss extension show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the extension."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "VmssName",
-            "type": "string",
-            "format": "--vmss-name {value}",
-            "help": "Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`."
           }
         ]
       }
@@ -1613,6 +1239,380 @@
     {
       "postfix": "EncryptionShow",
       "definiteArgument": "vmss encryption show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ExtensionDelete",
+      "definiteArgument": "vmss extension delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the extension."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "VmssName",
+            "type": "string",
+            "format": "--vmss-name {value}",
+            "help": "Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "help": "Do not wait for the long-running operation to finish."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ExtensionList",
+      "definiteArgument": "vmss extension list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "VmssName",
+            "type": "string",
+            "format": "--vmss-name {value}",
+            "help": "Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ExtensionSet",
+      "definiteArgument": "vmss extension set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the extension."
+          },
+          {
+            "name": "Publisher",
+            "type": "string",
+            "format": "--publisher {value}",
+            "help": "The name of the extension publisher."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "VmssName",
+            "type": "string",
+            "format": "--vmss-name {value}",
+            "help": "Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ForceUpdate",
+            "type": "string",
+            "format": "--force-update {value}",
+            "help": "Force to update even if the extension configuration has not changed."
+          },
+          {
+            "name": "NoAutoUpgrade",
+            "type": "bool",
+            "format": "--no-auto-upgrade",
+            "help": "By doing this, extension system will not pick the highest minor version for the specified version number, and will not auto update to the latest build/revision number on any scale set updates in future."
+          },
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "ProtectedSettings",
+            "type": "string",
+            "format": "--protected-settings {value}",
+            "help": "Protected settings in JSON format for sensitive information like credentials. A JSON file path is also accepted."
+          },
+          {
+            "name": "Settings",
+            "type": "string",
+            "format": "--settings {value}",
+            "help": "Extension settings in JSON format. A JSON file path is also accepted."
+          },
+          {
+            "name": "Version",
+            "type": "string",
+            "format": "--version {value}",
+            "help": "The version of the extension."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ExtensionShow",
+      "definiteArgument": "vmss extension show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the extension."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "VmssName",
+            "type": "string",
+            "format": "--vmss-name {value}",
+            "help": "Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "IdentityAssign",
+      "definiteArgument": "vmss identity assign",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Identities",
+            "type": "string",
+            "format": "--identities {value}",
+            "help": "The identities to assign."
+          },
+          {
+            "name": "Role",
+            "type": "string",
+            "format": "--role {value}",
+            "help": "Role name or id the system assigned identity will have."
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "format": "--scope {value}",
+            "help": "Scope that the system assigned identity can access."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "IdentityRemove",
+      "definiteArgument": "vmss identity remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Identities",
+            "type": "string",
+            "format": "--identities {value}",
+            "help": "Space-separated identities to remove. Use '[system]' to refer system assigned identity."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "IdentityShow",
+      "definiteArgument": "vmss identity show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NicList",
+      "definiteArgument": "vmss nic list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "VmssName",
+            "type": "string",
+            "format": "--vmss-name {value}",
+            "help": "Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NicListVmNics",
+      "definiteArgument": "vmss nic list-vm-nics",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "InstanceId",
+            "type": "string",
+            "format": "--instance-id {value}",
+            "help": "The virtual machine index."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "VmssName",
+            "type": "string",
+            "format": "--vmss-name {value}",
+            "help": "Scale set name."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NicShow",
+      "definiteArgument": "vmss nic show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "InstanceId",
+            "type": "string",
+            "format": "--instance-id {value}",
+            "help": "The virtual machine index."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The network interface (NIC)."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "VmssName",
+            "type": "string",
+            "format": "--vmss-name {value}",
+            "help": "Scale set name."
+          },
+          {
+            "name": "Expand",
+            "type": "string",
+            "format": "--expand {value}",
+            "help": "Expands referenced resources."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RollingUpgradeCancel",
+      "definiteArgument": "vmss rolling-upgrade cancel",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RollingUpgradeGetLatest",
+      "definiteArgument": "vmss rolling-upgrade get-latest",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Scale set name. You can configure the default using `az configure --defaults vmss=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RollingUpgradeStart",
+      "definiteArgument": "vmss rolling-upgrade start",
       "settingsClass": {
         "properties": [
           {

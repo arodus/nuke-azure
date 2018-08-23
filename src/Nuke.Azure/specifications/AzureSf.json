@@ -6,18 +6,18 @@
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sf.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sf/application.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sf/cluster.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sf/application/certificate.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sf/cluster/client-certificate.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sf/cluster/upgrade-type.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sf/cluster/node.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sf/cluster/certificate.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sf/cluster/setting.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sf/cluster/reliability.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sf/cluster/node-type.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/1328202/latest/docs-ref-autogen/sf/cluster/durability.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sf.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sf/application.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sf/cluster.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sf/application/certificate.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sf/cluster/certificate.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sf/cluster/client-certificate.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sf/cluster/durability.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sf/cluster/node-type.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sf/cluster/node.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sf/cluster/reliability.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sf/cluster/setting.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/13282021/latest/docs-ref-autogen/sf/cluster/upgrade-type.yml"
   ],
   "name": "AzureSf",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest",
@@ -246,6 +246,96 @@
       }
     },
     {
+      "postfix": "ClusterCertificateAdd",
+      "definiteArgument": "sf cluster certificate add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ClusterName",
+            "type": "string",
+            "format": "--cluster-name {value}",
+            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "The resource group name."
+          },
+          {
+            "name": "CertificateFile",
+            "type": "string",
+            "format": "--certificate-file {value}",
+            "help": "The existing certificate file path for the primary cluster certificate."
+          },
+          {
+            "name": "CertificateOutputFolder",
+            "type": "string",
+            "format": "--certificate-output-folder {value}",
+            "help": "The folder of the new certificate file to be created."
+          },
+          {
+            "name": "CertificatePassword",
+            "type": "string",
+            "format": "--certificate-password {value}",
+            "secret": true,
+            "help": "The password of the certificate file."
+          },
+          {
+            "name": "CertificateSubjectName",
+            "type": "string",
+            "format": "--certificate-subject-name {value}",
+            "help": "The subject name of the certificate to be created."
+          },
+          {
+            "name": "SecretIdentifier",
+            "type": "string",
+            "format": "--secret-identifier {value}",
+            "secret": true,
+            "help": "The existing Azure key vault secret URL."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Azure key vault name, it not given it will be the cluster resource group name."
+          },
+          {
+            "name": "VaultResourceGroup",
+            "type": "string",
+            "format": "--vault-resource-group {value}",
+            "help": "Key vault resource group name,if not given it will be cluster resource group name."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ClusterCertificateRemove",
+      "definiteArgument": "sf cluster certificate remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ClusterName",
+            "type": "string",
+            "format": "--cluster-name {value}",
+            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "The resource group name."
+          },
+          {
+            "name": "Thumbprint",
+            "type": "string",
+            "format": "--thumbprint {value}",
+            "help": "The cluster certificate thumbprint to be removed."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "ClusterClientCertificateAdd",
       "definiteArgument": "sf cluster client-certificate add",
       "settingsClass": {
@@ -353,8 +443,8 @@
       }
     },
     {
-      "postfix": "ClusterUpgradeTypeSet",
-      "definiteArgument": "sf cluster upgrade-type set",
+      "postfix": "ClusterDurabilityUpdate",
+      "definiteArgument": "sf cluster durability update",
       "settingsClass": {
         "properties": [
           {
@@ -364,22 +454,85 @@
             "help": "Specify the name of the cluster, if not given it will be same as resource group name."
           },
           {
+            "name": "DurabilityLevel",
+            "type": "SfClusterDurabilityUpdateDurabilityLevel",
+            "format": "--durability-level {value}",
+            "help": "Durability level."
+          },
+          {
+            "name": "NodeType",
+            "type": "string",
+            "format": "--node-type {value}",
+            "help": "The Node type name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "The resource group name."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ClusterNodeTypeAdd",
+      "definiteArgument": "sf cluster node-type add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Capacity",
+            "type": "string",
+            "format": "--capacity {value}",
+            "help": ""
+          },
+          {
+            "name": "ClusterName",
+            "type": "string",
+            "format": "--cluster-name {value}",
+            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
+          },
+          {
+            "name": "NodeType",
+            "type": "string",
+            "format": "--node-type {value}",
+            "help": "The Node type name."
+          },
+          {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
             "help": "The resource group name."
           },
           {
-            "name": "UpgradeMode",
-            "type": "SfClusterUpgradeTypeSetUpgradeMode",
-            "format": "--upgrade-mode {value}",
-            "help": "Cluster upgrade mode."
+            "name": "VmPassword",
+            "type": "string",
+            "format": "--vm-password {value}",
+            "secret": true,
+            "help": "The password of the Vm."
           },
           {
-            "name": "Version",
+            "name": "VmUserName",
             "type": "string",
-            "format": "--version {value}",
-            "help": "Cluster code version."
+            "format": "--vm-user-name {value}",
+            "help": "The user name for logging to Vm. Default will be adminuser."
+          },
+          {
+            "name": "DurabilityLevel",
+            "type": "string",
+            "format": "--durability-level {value}",
+            "help": ""
+          },
+          {
+            "name": "VmSku",
+            "type": "string",
+            "format": "--vm-sku {value}",
+            "help": "The Vm Sku."
+          },
+          {
+            "name": "VmTier",
+            "type": "string",
+            "format": "--vm-tier {value}",
+            "help": ""
           }
         ]
       }
@@ -449,8 +602,8 @@
       }
     },
     {
-      "postfix": "ClusterCertificateAdd",
-      "definiteArgument": "sf cluster certificate add",
+      "postfix": "ClusterReliabilityUpdate",
+      "definiteArgument": "sf cluster reliability update",
       "settingsClass": {
         "properties": [
           {
@@ -460,68 +613,10 @@
             "help": "Specify the name of the cluster, if not given it will be same as resource group name."
           },
           {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "The resource group name."
-          },
-          {
-            "name": "CertificateFile",
-            "type": "string",
-            "format": "--certificate-file {value}",
-            "help": "The existing certificate file path for the primary cluster certificate."
-          },
-          {
-            "name": "CertificateOutputFolder",
-            "type": "string",
-            "format": "--certificate-output-folder {value}",
-            "help": "The folder of the new certificate file to be created."
-          },
-          {
-            "name": "CertificatePassword",
-            "type": "string",
-            "format": "--certificate-password {value}",
-            "secret": true,
-            "help": "The password of the certificate file."
-          },
-          {
-            "name": "CertificateSubjectName",
-            "type": "string",
-            "format": "--certificate-subject-name {value}",
-            "help": "The subject name of the certificate to be created."
-          },
-          {
-            "name": "SecretIdentifier",
-            "type": "string",
-            "format": "--secret-identifier {value}",
-            "secret": true,
-            "help": "The existing Azure key vault secret URL."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Azure key vault name, it not given it will be the cluster resource group name."
-          },
-          {
-            "name": "VaultResourceGroup",
-            "type": "string",
-            "format": "--vault-resource-group {value}",
-            "help": "Key vault resource group name,if not given it will be cluster resource group name."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ClusterCertificateRemove",
-      "definiteArgument": "sf cluster certificate remove",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ClusterName",
-            "type": "string",
-            "format": "--cluster-name {value}",
-            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
+            "name": "ReliabilityLevel",
+            "type": "SfClusterDurabilityUpdateDurabilityLevel",
+            "format": "--reliability-level {value}",
+            "help": "Durability level."
           },
           {
             "name": "ResourceGroup",
@@ -530,10 +625,10 @@
             "help": "The resource group name."
           },
           {
-            "name": "Thumbprint",
+            "name": "AutoAddNode",
             "type": "string",
-            "format": "--thumbprint {value}",
-            "help": "The cluster certificate thumbprint to be removed."
+            "format": "--auto-add-node {value}",
+            "help": "Add node count automatically when changing reliability."
           }
         ]
       }
@@ -621,8 +716,8 @@
       }
     },
     {
-      "postfix": "ClusterReliabilityUpdate",
-      "definiteArgument": "sf cluster reliability update",
+      "postfix": "ClusterUpgradeTypeSet",
+      "definiteArgument": "sf cluster upgrade-type set",
       "settingsClass": {
         "properties": [
           {
@@ -632,117 +727,22 @@
             "help": "Specify the name of the cluster, if not given it will be same as resource group name."
           },
           {
-            "name": "ReliabilityLevel",
-            "type": "SfClusterReliabilityUpdateReliabilityLevel",
-            "format": "--reliability-level {value}",
-            "help": "Durability level."
-          },
-          {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
             "help": "The resource group name."
           },
           {
-            "name": "AutoAddNode",
-            "type": "string",
-            "format": "--auto-add-node {value}",
-            "help": "Add node count automatically when changing reliability."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ClusterNodeTypeAdd",
-      "definiteArgument": "sf cluster node-type add",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Capacity",
-            "type": "string",
-            "format": "--capacity {value}",
-            "help": ""
+            "name": "UpgradeMode",
+            "type": "SfClusterUpgradeTypeSetUpgradeMode",
+            "format": "--upgrade-mode {value}",
+            "help": "Cluster upgrade mode."
           },
           {
-            "name": "ClusterName",
+            "name": "Version",
             "type": "string",
-            "format": "--cluster-name {value}",
-            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
-          },
-          {
-            "name": "NodeType",
-            "type": "string",
-            "format": "--node-type {value}",
-            "help": "The Node type name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "The resource group name."
-          },
-          {
-            "name": "VmPassword",
-            "type": "string",
-            "format": "--vm-password {value}",
-            "secret": true,
-            "help": "The password of the Vm."
-          },
-          {
-            "name": "VmUserName",
-            "type": "string",
-            "format": "--vm-user-name {value}",
-            "help": "The user name for logging to Vm. Default will be adminuser."
-          },
-          {
-            "name": "DurabilityLevel",
-            "type": "string",
-            "format": "--durability-level {value}",
-            "help": ""
-          },
-          {
-            "name": "VmSku",
-            "type": "string",
-            "format": "--vm-sku {value}",
-            "help": "The Vm Sku."
-          },
-          {
-            "name": "VmTier",
-            "type": "string",
-            "format": "--vm-tier {value}",
-            "help": ""
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ClusterDurabilityUpdate",
-      "definiteArgument": "sf cluster durability update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ClusterName",
-            "type": "string",
-            "format": "--cluster-name {value}",
-            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
-          },
-          {
-            "name": "DurabilityLevel",
-            "type": "SfClusterReliabilityUpdateReliabilityLevel",
-            "format": "--durability-level {value}",
-            "help": "Durability level."
-          },
-          {
-            "name": "NodeType",
-            "type": "string",
-            "format": "--node-type {value}",
-            "help": "The Node type name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "The resource group name."
+            "format": "--version {value}",
+            "help": "Cluster code version."
           }
         ]
       }
@@ -791,18 +791,18 @@
       ]
     },
     {
-      "name": "SfClusterUpgradeTypeSetUpgradeMode",
-      "values": [
-        "automatic",
-        "manual"
-      ]
-    },
-    {
-      "name": "SfClusterReliabilityUpdateReliabilityLevel",
+      "name": "SfClusterDurabilityUpdateDurabilityLevel",
       "values": [
         "bronze",
         "gold",
         "silver"
+      ]
+    },
+    {
+      "name": "SfClusterUpgradeTypeSetUpgradeMode",
+      "values": [
+        "automatic",
+        "manual"
       ]
     }
   ]
