@@ -4,7 +4,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ## [vNext]
-
+- Changed argument types from `Dictionary<string, string>` to `Dictionary<string, object>`.
+- Changed type of `Settings` and `SlotSettings` in Webapp and Functions to Dictionary.
+- Changed type resolving of booleans, arguments starting with `--no-` are now also detected as booleans.
 ## [0.5.1] / 2018-08-22
 - Changed supported version to [Azure CLI v2.0.44](https://docs.microsoft.com/cli/azure/release-notes-azure-cli?view=azure-cli-latest#August-15-2018).
 ## [0.5.0] / 2018-08-14
