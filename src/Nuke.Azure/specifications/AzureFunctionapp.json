@@ -408,14 +408,18 @@
           },
           {
             "name": "Settings",
-            "type": "string",
+            "type": "Dictionary<string,string>",
             "format": "--settings {value}",
+            "itemFormat": "{key}={value}",
+            "separator": " ",
             "help": "Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;."
           },
           {
             "name": "SlotSettings",
-            "type": "string",
+            "type": "Dictionary<string,string>",
             "format": "--slot-settings {value}",
+            "itemFormat": "{key}={value}",
+            "separator": " ",
             "help": "Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;."
           }
         ]

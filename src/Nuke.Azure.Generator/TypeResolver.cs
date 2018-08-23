@@ -183,7 +183,8 @@ namespace Nuke.Azure.Generator
             return summary.IndexOf("Space-separated list of key=value pairs", StringComparison.OrdinalIgnoreCase) >= 0
                    || summary.IndexOf("in space-separated key=value pairs", StringComparison.OrdinalIgnoreCase) >= 0
                    || summary.EndsWith(" in 'key=value' format.", StringComparison.OrdinalIgnoreCase)
-                   || summary.IndexOf("A list of name-value pairs", StringComparison.OrdinalIgnoreCase) == 0;
+                   || summary.IndexOf("A list of name-value pairs", StringComparison.OrdinalIgnoreCase) == 0
+                   || summary.StartsWith("Space-separated") && summary.EndsWith("in a format of <name>=<value>.");
         }
 
         private bool IsCommaSeparatedList(string summary)

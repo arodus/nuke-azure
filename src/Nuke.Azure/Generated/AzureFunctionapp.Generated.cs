@@ -965,9 +965,11 @@ namespace Nuke.Azure
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
-        public virtual string Settings { get; internal set; }
+        public virtual IReadOnlyDictionary<string, string> Settings => SettingsInternal.AsReadOnly();
+        internal Dictionary<string,string> SettingsInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
-        public virtual string SlotSettings { get; internal set; }
+        public virtual IReadOnlyDictionary<string, string> SlotSettings => SlotSettingsInternal.AsReadOnly();
+        internal Dictionary<string,string> SlotSettingsInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -984,8 +986,8 @@ namespace Nuke.Azure
               .Add("functionapp config appsettings set")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--settings {value}", Settings)
-              .Add("--slot-settings {value}", SlotSettings)
+              .Add("--settings {value}", Settings, "{key}={value}", separator: ' ')
+              .Add("--slot-settings {value}", SlotSettings, "{key}={value}", separator: ' ')
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -4088,38 +4090,86 @@ namespace Nuke.Azure
         }
         #endregion
         #region Settings
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Settings"/>.</em></p><p>Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Settings"/> to a new dictionary.</em></p><p>Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings SetSettings(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string settings)
+        public static AzureFunctionappConfigAppsettingsSetSettings SetSettings(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, IDictionary<string, string> settings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Settings = settings;
+            toolSettings.SettingsInternal = settings.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsSetSettings.Settings"/>.</em></p><p>Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        /// <summary><p><em>Clears <see cref="AzureFunctionappConfigAppsettingsSetSettings.Settings"/>.</em></p><p>Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings ResetSettings(this AzureFunctionappConfigAppsettingsSetSettings toolSettings)
+        public static AzureFunctionappConfigAppsettingsSetSettings ClearSettings(this AzureFunctionappConfigAppsettingsSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Settings = null;
+            toolSettings.SettingsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds a new key-value-pair <see cref="AzureFunctionappConfigAppsettingsSetSettings.Settings"/>.</em></p><p>Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings AddSetting(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string settingKey, string settingValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingsInternal.Add(settingKey, settingValue);
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes a key-value-pair from <see cref="AzureFunctionappConfigAppsettingsSetSettings.Settings"/>.</em></p><p>Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings RemoveSetting(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string settingKey)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingsInternal.Remove(settingKey);
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets a key-value-pair in <see cref="AzureFunctionappConfigAppsettingsSetSettings.Settings"/>.</em></p><p>Space-separated app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings SetSetting(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string settingKey, string settingValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingsInternal[settingKey] = settingValue;
             return toolSettings;
         }
         #endregion
         #region SlotSettings
-        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureFunctionappConfigAppsettingsSetSettings.SlotSettings"/> to a new dictionary.</em></p><p>Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings SetSlotSettings(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string slotSettings)
+        public static AzureFunctionappConfigAppsettingsSetSettings SetSlotSettings(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, IDictionary<string, string> slotSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.SlotSettings = slotSettings;
+            toolSettings.SlotSettingsInternal = slotSettings.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureFunctionappConfigAppsettingsSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        /// <summary><p><em>Clears <see cref="AzureFunctionappConfigAppsettingsSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
         [Pure]
-        public static AzureFunctionappConfigAppsettingsSetSettings ResetSlotSettings(this AzureFunctionappConfigAppsettingsSetSettings toolSettings)
+        public static AzureFunctionappConfigAppsettingsSetSettings ClearSlotSettings(this AzureFunctionappConfigAppsettingsSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.SlotSettings = null;
+            toolSettings.SlotSettingsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds a new key-value-pair <see cref="AzureFunctionappConfigAppsettingsSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings AddSlotSetting(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string slotSettingKey, string slotSettingValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SlotSettingsInternal.Add(slotSettingKey, slotSettingValue);
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes a key-value-pair from <see cref="AzureFunctionappConfigAppsettingsSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings RemoveSlotSetting(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string slotSettingKey)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SlotSettingsInternal.Remove(slotSettingKey);
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets a key-value-pair in <see cref="AzureFunctionappConfigAppsettingsSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot app settings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureFunctionappConfigAppsettingsSetSettings SetSlotSetting(this AzureFunctionappConfigAppsettingsSetSettings toolSettings, string slotSettingKey, string slotSettingValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SlotSettingsInternal[slotSettingKey] = slotSettingValue;
             return toolSettings;
         }
         #endregion

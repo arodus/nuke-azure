@@ -1855,11 +1855,13 @@ namespace Nuke.Azure
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Space-separated appsettings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
-        public virtual string Settings { get; internal set; }
+        public virtual IReadOnlyDictionary<string, string> Settings => SettingsInternal.AsReadOnly();
+        internal Dictionary<string,string> SettingsInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         public virtual string Slot { get; internal set; }
         /// <summary><p>Space-separated slot appsettings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
-        public virtual string SlotSettings { get; internal set; }
+        public virtual IReadOnlyDictionary<string, string> SlotSettings => SlotSettingsInternal.AsReadOnly();
+        internal Dictionary<string,string> SlotSettingsInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1876,9 +1878,9 @@ namespace Nuke.Azure
               .Add("webapp config appsettings set")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--settings {value}", Settings)
+              .Add("--settings {value}", Settings, "{key}={value}", separator: ' ')
               .Add("--slot {value}", Slot)
-              .Add("--slot-settings {value}", SlotSettings)
+              .Add("--slot-settings {value}", SlotSettings, "{key}={value}", separator: ' ')
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2257,11 +2259,13 @@ namespace Nuke.Azure
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Space-separated connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
-        public virtual string Settings { get; internal set; }
+        public virtual IReadOnlyDictionary<string, string> Settings => SettingsInternal.AsReadOnly();
+        internal Dictionary<string,string> SettingsInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>The name of the slot. Default to the productions slot if not specified.</p></summary>
         public virtual string Slot { get; internal set; }
         /// <summary><p>Space-separated slot connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
-        public virtual string SlotSettings { get; internal set; }
+        public virtual IReadOnlyDictionary<string, string> SlotSettings => SlotSettingsInternal.AsReadOnly();
+        internal Dictionary<string,string> SlotSettingsInternal { get; set; } = new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2279,9 +2283,9 @@ namespace Nuke.Azure
               .Add("--connection-string-type {value}", ConnectionStringType)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--settings {value}", Settings)
+              .Add("--settings {value}", Settings, "{key}={value}", separator: ' ')
               .Add("--slot {value}", Slot)
-              .Add("--slot-settings {value}", SlotSettings)
+              .Add("--slot-settings {value}", SlotSettings, "{key}={value}", separator: ' ')
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -9188,20 +9192,44 @@ namespace Nuke.Azure
         }
         #endregion
         #region Settings
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigAppsettingsSetSettings.Settings"/>.</em></p><p>Space-separated appsettings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigAppsettingsSetSettings.Settings"/> to a new dictionary.</em></p><p>Space-separated appsettings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
         [Pure]
-        public static AzureWebappConfigAppsettingsSetSettings SetSettings(this AzureWebappConfigAppsettingsSetSettings toolSettings, string settings)
+        public static AzureWebappConfigAppsettingsSetSettings SetSettings(this AzureWebappConfigAppsettingsSetSettings toolSettings, IDictionary<string, string> settings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Settings = settings;
+            toolSettings.SettingsInternal = settings.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigAppsettingsSetSettings.Settings"/>.</em></p><p>Space-separated appsettings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        /// <summary><p><em>Clears <see cref="AzureWebappConfigAppsettingsSetSettings.Settings"/>.</em></p><p>Space-separated appsettings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
         [Pure]
-        public static AzureWebappConfigAppsettingsSetSettings ResetSettings(this AzureWebappConfigAppsettingsSetSettings toolSettings)
+        public static AzureWebappConfigAppsettingsSetSettings ClearSettings(this AzureWebappConfigAppsettingsSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Settings = null;
+            toolSettings.SettingsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds a new key-value-pair <see cref="AzureWebappConfigAppsettingsSetSettings.Settings"/>.</em></p><p>Space-separated appsettings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureWebappConfigAppsettingsSetSettings AddSetting(this AzureWebappConfigAppsettingsSetSettings toolSettings, string settingKey, string settingValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingsInternal.Add(settingKey, settingValue);
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes a key-value-pair from <see cref="AzureWebappConfigAppsettingsSetSettings.Settings"/>.</em></p><p>Space-separated appsettings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureWebappConfigAppsettingsSetSettings RemoveSetting(this AzureWebappConfigAppsettingsSetSettings toolSettings, string settingKey)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingsInternal.Remove(settingKey);
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets a key-value-pair in <see cref="AzureWebappConfigAppsettingsSetSettings.Settings"/>.</em></p><p>Space-separated appsettings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureWebappConfigAppsettingsSetSettings SetSetting(this AzureWebappConfigAppsettingsSetSettings toolSettings, string settingKey, string settingValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingsInternal[settingKey] = settingValue;
             return toolSettings;
         }
         #endregion
@@ -9224,20 +9252,44 @@ namespace Nuke.Azure
         }
         #endregion
         #region SlotSettings
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigAppsettingsSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot appsettings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigAppsettingsSetSettings.SlotSettings"/> to a new dictionary.</em></p><p>Space-separated slot appsettings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
         [Pure]
-        public static AzureWebappConfigAppsettingsSetSettings SetSlotSettings(this AzureWebappConfigAppsettingsSetSettings toolSettings, string slotSettings)
+        public static AzureWebappConfigAppsettingsSetSettings SetSlotSettings(this AzureWebappConfigAppsettingsSetSettings toolSettings, IDictionary<string, string> slotSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.SlotSettings = slotSettings;
+            toolSettings.SlotSettingsInternal = slotSettings.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigAppsettingsSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot appsettings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        /// <summary><p><em>Clears <see cref="AzureWebappConfigAppsettingsSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot appsettings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
         [Pure]
-        public static AzureWebappConfigAppsettingsSetSettings ResetSlotSettings(this AzureWebappConfigAppsettingsSetSettings toolSettings)
+        public static AzureWebappConfigAppsettingsSetSettings ClearSlotSettings(this AzureWebappConfigAppsettingsSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.SlotSettings = null;
+            toolSettings.SlotSettingsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds a new key-value-pair <see cref="AzureWebappConfigAppsettingsSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot appsettings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureWebappConfigAppsettingsSetSettings AddSlotSetting(this AzureWebappConfigAppsettingsSetSettings toolSettings, string slotSettingKey, string slotSettingValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SlotSettingsInternal.Add(slotSettingKey, slotSettingValue);
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes a key-value-pair from <see cref="AzureWebappConfigAppsettingsSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot appsettings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureWebappConfigAppsettingsSetSettings RemoveSlotSetting(this AzureWebappConfigAppsettingsSetSettings toolSettings, string slotSettingKey)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SlotSettingsInternal.Remove(slotSettingKey);
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets a key-value-pair in <see cref="AzureWebappConfigAppsettingsSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot appsettings in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureWebappConfigAppsettingsSetSettings SetSlotSetting(this AzureWebappConfigAppsettingsSetSettings toolSettings, string slotSettingKey, string slotSettingValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SlotSettingsInternal[slotSettingKey] = slotSettingValue;
             return toolSettings;
         }
         #endregion
@@ -10878,20 +10930,44 @@ namespace Nuke.Azure
         }
         #endregion
         #region Settings
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringSetSettings.Settings"/>.</em></p><p>Space-separated connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringSetSettings.Settings"/> to a new dictionary.</em></p><p>Space-separated connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings SetSettings(this AzureWebappConfigConnectionStringSetSettings toolSettings, string settings)
+        public static AzureWebappConfigConnectionStringSetSettings SetSettings(this AzureWebappConfigConnectionStringSetSettings toolSettings, IDictionary<string, string> settings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Settings = settings;
+            toolSettings.SettingsInternal = settings.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringSetSettings.Settings"/>.</em></p><p>Space-separated connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        /// <summary><p><em>Clears <see cref="AzureWebappConfigConnectionStringSetSettings.Settings"/>.</em></p><p>Space-separated connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings ResetSettings(this AzureWebappConfigConnectionStringSetSettings toolSettings)
+        public static AzureWebappConfigConnectionStringSetSettings ClearSettings(this AzureWebappConfigConnectionStringSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Settings = null;
+            toolSettings.SettingsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds a new key-value-pair <see cref="AzureWebappConfigConnectionStringSetSettings.Settings"/>.</em></p><p>Space-separated connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings AddSetting(this AzureWebappConfigConnectionStringSetSettings toolSettings, string settingKey, string settingValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingsInternal.Add(settingKey, settingValue);
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes a key-value-pair from <see cref="AzureWebappConfigConnectionStringSetSettings.Settings"/>.</em></p><p>Space-separated connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings RemoveSetting(this AzureWebappConfigConnectionStringSetSettings toolSettings, string settingKey)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingsInternal.Remove(settingKey);
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets a key-value-pair in <see cref="AzureWebappConfigConnectionStringSetSettings.Settings"/>.</em></p><p>Space-separated connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings SetSetting(this AzureWebappConfigConnectionStringSetSettings toolSettings, string settingKey, string settingValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SettingsInternal[settingKey] = settingValue;
             return toolSettings;
         }
         #endregion
@@ -10914,20 +10990,44 @@ namespace Nuke.Azure
         }
         #endregion
         #region SlotSettings
-        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureWebappConfigConnectionStringSetSettings.SlotSettings"/> to a new dictionary.</em></p><p>Space-separated slot connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings SetSlotSettings(this AzureWebappConfigConnectionStringSetSettings toolSettings, string slotSettings)
+        public static AzureWebappConfigConnectionStringSetSettings SetSlotSettings(this AzureWebappConfigConnectionStringSetSettings toolSettings, IDictionary<string, string> slotSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.SlotSettings = slotSettings;
+            toolSettings.SlotSettingsInternal = slotSettings.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureWebappConfigConnectionStringSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        /// <summary><p><em>Clears <see cref="AzureWebappConfigConnectionStringSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
         [Pure]
-        public static AzureWebappConfigConnectionStringSetSettings ResetSlotSettings(this AzureWebappConfigConnectionStringSetSettings toolSettings)
+        public static AzureWebappConfigConnectionStringSetSettings ClearSlotSettings(this AzureWebappConfigConnectionStringSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.SlotSettings = null;
+            toolSettings.SlotSettingsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds a new key-value-pair <see cref="AzureWebappConfigConnectionStringSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings AddSlotSetting(this AzureWebappConfigConnectionStringSetSettings toolSettings, string slotSettingKey, string slotSettingValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SlotSettingsInternal.Add(slotSettingKey, slotSettingValue);
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes a key-value-pair from <see cref="AzureWebappConfigConnectionStringSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings RemoveSlotSetting(this AzureWebappConfigConnectionStringSetSettings toolSettings, string slotSettingKey)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SlotSettingsInternal.Remove(slotSettingKey);
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets a key-value-pair in <see cref="AzureWebappConfigConnectionStringSetSettings.SlotSettings"/>.</em></p><p>Space-separated slot connection-string in a format of &lt;name&gt;=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureWebappConfigConnectionStringSetSettings SetSlotSetting(this AzureWebappConfigConnectionStringSetSettings toolSettings, string slotSettingKey, string slotSettingValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SlotSettingsInternal[slotSettingKey] = slotSettingValue;
             return toolSettings;
         }
         #endregion

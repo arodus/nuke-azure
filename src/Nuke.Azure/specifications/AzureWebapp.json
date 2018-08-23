@@ -1127,8 +1127,10 @@
           },
           {
             "name": "Settings",
-            "type": "string",
+            "type": "Dictionary<string,string>",
             "format": "--settings {value}",
+            "itemFormat": "{key}={value}",
+            "separator": " ",
             "help": "Space-separated appsettings in a format of &lt;name&gt;=&lt;value&gt;."
           },
           {
@@ -1139,8 +1141,10 @@
           },
           {
             "name": "SlotSettings",
-            "type": "string",
+            "type": "Dictionary<string,string>",
             "format": "--slot-settings {value}",
+            "itemFormat": "{key}={value}",
+            "separator": " ",
             "help": "Space-separated slot appsettings in a format of &lt;name&gt;=&lt;value&gt;."
           }
         ]
@@ -1485,8 +1489,10 @@
           },
           {
             "name": "Settings",
-            "type": "string",
+            "type": "Dictionary<string,string>",
             "format": "--settings {value}",
+            "itemFormat": "{key}={value}",
+            "separator": " ",
             "help": "Space-separated connection-string in a format of &lt;name&gt;=&lt;value&gt;."
           },
           {
@@ -1497,8 +1503,10 @@
           },
           {
             "name": "SlotSettings",
-            "type": "string",
+            "type": "Dictionary<string,string>",
             "format": "--slot-settings {value}",
+            "itemFormat": "{key}={value}",
+            "separator": " ",
             "help": "Space-separated slot connection-string in a format of &lt;name&gt;=&lt;value&gt;."
           }
         ]
